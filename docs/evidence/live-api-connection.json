@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-29T14:50:17.640012+00:00",
+  "mode": "live",
+  "api_base": "https://bouldy-api.onrender.com",
+  "adapter_origin": "http://127.0.0.1:8081",
+  "login": {
+    "http_status": 200,
+    "destination": "/",
+    "credential_returned": true
+  },
+  "reads": [
+    {
+      "path": "/api/identity",
+      "status": 200,
+      "cache_control": "no-store, private",
+      "user_validated": true
+    },
+    {
+      "path": "/api/snapshot?view=home",
+      "status": 200,
+      "cache_control": "no-store, private",
+      "user_validated": true,
+      "gym_count": 5,
+      "session_count": 11
+    },
+    {
+      "path": "/api/snapshot?view=gyms",
+      "status": 200,
+      "cache_control": "no-store, private",
+      "user_validated": true,
+      "gym_count": 5
+    },
+    {
+      "path": "/api/snapshot?view=journal",
+      "status": 200,
+      "cache_control": "no-store, private",
+      "user_validated": true,
+      "gym_count": 5,
+      "session_count": 11
+    }
+  ],
+  "production_record_writes": 0,
+  "note": "Login credential kept in memory only; no response bodies or account records persisted. Earlier direct login returned 500, but current adapter and native sign-in succeeded; cause of transient upstream failure unproven.",
+  "fixture_credential_status": 401
+}
