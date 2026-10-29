@@ -1,0 +1,16 @@
+{
+  "scope": "Fixture Android native route-render smoke only; not all states/visual/motion/physical/release acceptance",
+  "cases": [
+    {
+      "route": "/",
+      "expected": [
+        "KEEP\nSHOWING UP."
+      ],
+      "passed": false,
+      "xml": "01.xml",
+      "screenshot": "01.png"
+    }
+  ],
+  "passed": false,
+  "error": "Missing expected settled route content: /"
+}

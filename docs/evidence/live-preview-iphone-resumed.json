@@ -1,0 +1,13 @@
+{
+  "observedAt": "2026-10-29T14:21:37.712085+00:00",
+  "device": "iPhone 17 Pro",
+  "runtime": "iOS26.2",
+  "surface": "Device Hub",
+  "screen": "Signed-in Home; sample-climber; Android Test Wall; five sessions / three gyms",
+  "androidStopped": true,
+  "metroPort": 8081,
+  "fixturePort": 4010,
+  "restoredFixtureSnapshot": "docs/evidence/android-final-fixture-state.json",
+  "retainedWrites": 16,
+  "scope": "CUA accessibility observation and HTTP startup checks only; no full iOS regression acceptance"
+}

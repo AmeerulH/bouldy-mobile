@@ -1,0 +1,7 @@
+{"text": "", "content-desc": "Home", "class": "android.view.View", "clickable": "false", "bounds": "[0,72][1080,1776]", "focused": "false", "password": "false"}
+{"text": "Messages", "content-desc": "Messages", "class": "android.widget.TextView", "clickable": "true", "bounds": "[242,1311][441,1494]", "focused": "false", "password": "false"}
+{"text": "Chrome", "content-desc": "Chrome", "class": "android.widget.TextView", "clickable": "true", "bounds": "[640,1311][839,1494]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Search", "class": "android.widget.FrameLayout", "clickable": "true", "bounds": "[66,1557][1014,1746]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Voice search", "class": "android.widget.ImageView", "clickable": "true", "bounds": "[852,1557][1014,1746]", "focused": "false", "password": "false"}
+{"text": "Screenshot", "content-desc": "", "class": "android.widget.Button", "clickable": "true", "bounds": "[189,1608][556,1752]", "focused": "false", "password": "false"}
+{"text": "Select", "content-desc": "", "class": "android.widget.Button", "clickable": "true", "bounds": "[619,1608][890,1752]", "focused": "false", "password": "false"}

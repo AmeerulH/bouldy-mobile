@@ -1,0 +1,18 @@
+{"text": "", "content-desc": "Tools", "class": "android.widget.ImageView", "clickable": "false", "bounds": "[915,87][993,165]", "focused": "false", "password": "false"}
+{"text": "Tools", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[913,234][995,273]", "focused": "false", "password": "false"}
+{"text": "Sample journal \u00b7 local preview", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,96][1020,144]", "focused": "false", "password": "false"}
+{"text": "Bouldy", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,507][1020,567]", "focused": "false", "password": "false"}
+{"text": "THIS PAGE COULDN'T LOAD.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,627][1020,823]", "focused": "false", "password": "false"}
+{"text": "The climbing data didn't come through. Reload to try again.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,883][1020,1027]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Reload page", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1087][1020,1231]", "focused": "false", "password": "false"}
+{"text": "Reload page", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[412,1129][668,1189]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Home", "class": "android.view.View", "clickable": "true", "bounds": "[0,1594][216,1752]", "focused": "false", "password": "false"}
+{"text": "Home", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[62,1684][153,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Explore", "class": "android.view.View", "clickable": "true", "bounds": "[216,1594][432,1752]", "focused": "false", "password": "false"}
+{"text": "Explore", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[265,1684][382,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Sessions", "class": "android.view.View", "clickable": "true", "bounds": "[432,1594][648,1752]", "focused": "false", "password": "false"}
+{"text": "Sessions", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[470,1684][610,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Gyms", "class": "android.view.View", "clickable": "true", "bounds": "[648,1594][864,1752]", "focused": "false", "password": "false"}
+{"text": "Gyms", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[712,1684][800,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "You", "class": "android.view.View", "clickable": "true", "bounds": "[864,1594][1080,1752]", "focused": "false", "password": "false"}
+{"text": "You", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[944,1684][1000,1734]", "focused": "false", "password": "false"}

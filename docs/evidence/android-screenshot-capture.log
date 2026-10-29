@@ -1,0 +1,33 @@
+CAPTURED /: 3 frames
+CAPTURED /sessions: 4 frames
+CAPTURED /sessions/3: 5 frames
+CAPTURED /routes/11: 3 frames
+CAPTURED /gyms: 2 frames
+CAPTURED /gyms/1: 4 frames
+CAPTURED /gyms/1/routes/new: 4 frames
+CAPTURED /gyms/1/routes/11/edit: 5 frames
+CAPTURED /sessions/3/routes/new: 4 frames
+CAPTURED /climbs: 2 frames
+CAPTURED /explore: 3 frames
+CAPTURED /explore/feed: 3 frames
+CAPTURED /explore/climbers: 3 frames
+CAPTURED /explore/leaderboards: 4 frames
+CAPTURED /explore/challenges: 3 frames
+CAPTURED /explore/groups: 3 frames
+CAPTURED /profile: 4 frames
+CAPTURED /profile/edit: 3 frames
+CAPTURED /profile/public: 3 frames
+CAPTURED /profile/privacy: 3 frames
+CAPTURED /routes/11/beta: 3 frames
+CAPTURED /history: 4 frames
+ERROR: could not get idle state.
+ERROR: could not get idle state.
+ERROR: could not get idle state.
+ERROR: could not get idle state.
+ERROR: could not get idle state.
+Gallery source: /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/docs/screenshots/android/20261029T045007Z
+Traceback (most recent call last):
+  File "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/tests/android/capture-pages.py", line 37, in <module>
+    else:raise AssertionError('Expected page missing: '+path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected page missing: /loading-preview

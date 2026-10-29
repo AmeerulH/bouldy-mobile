@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-29",
+  "sourcePageRoutes": 27,
+  "productRoutes": 24,
+  "aliasRoutes": 1,
+  "originalDevelopmentRoutes": 2,
+  "globalStateRows": 2,
+  "targetFilesPresent": true,
+  "missingRegisteredTargets": [],
+  "sourceComponentDispositions": 31,
+  "sourceCommands": 11,
+  "additionalDevelopmentCatalogue": "/component-preview (20 source story groups; no mutation commands in demos)",
+  "skeletonGeometries": 9,
+  "plannedChildCopyMatches": "8/8 exact except import mapping",
+  "acceptance": "OPEN for every row; file presence/export/HTTP success does not prove visual, state or logic equivalence across platforms",
+  "routes": [
+    {
+      "id": "S01",
+      "route": "/welcome",
+      "target": "src/app/(auth)/welcome.tsx"
+    },
+    {
+      "id": "S02",
+      "route": "/login",
+      "target": "src/app/(auth)/login.tsx"
+    },
+    {
+      "id": "S03",
+      "route": "/signup",
+      "target": "src/app/(auth)/signup.tsx"
+    },
+    {
+      "id": "S04",
+      "route": "/",
+      "target": "src/app/(app)/index.tsx"
+    },
+    {
+      "id": "S05",
+      "route": "/gyms",
+      "target": "src/app/(app)/gyms/index.tsx"
+    },
+    {
+      "id": "S06",
+      "route": "/gyms/[id]",
+      "target": "src/app/(app)/gyms/[id].tsx"
+    },
+    {
+      "id": "S07",
+      "route": "/gyms/[id]/routes/new",
+      "target": "src/app/(app)/gyms/[id]/routes/new.tsx"
+    },
+    {
+      "id": "S08",
+      "route": "/gyms/[id]/routes/[routeId]/edit",
+      "target": "src/app/(app)/gyms/[id]/routes/[routeId]/edit.tsx"
+    },
+    {
+      "id": "S09",
+      "route": "/sessions",
+      "target": "src/app/(app)/sessions/index.tsx"
+    },
+    {
+      "id": "S10",
+      "route": "/sessions/[id]",
+      "target": "src/app/(app)/sessions/[id].tsx"
+    },
+    {
+      "id": "S11",
+      "route": "/sessions/[id]/routes/new",
+      "target": "src/app/(app)/sessions/[id]/routes/new.tsx"
+    },
+    {
+      "id": "S12",
+      "route": "/climbs",
+      "target": "src/app/(app)/climbs.tsx"
+    },
+    {
+      "id": "S13",
+      "route": "/routes/[id]",
+      "target": "src/app/(app)/routes/[id].tsx"
+    },
+    {
+      "id": "S14",
+      "route": "/profile",
+      "target": "src/app/(app)/profile/index.tsx"
+    },
+    {
+      "id": "S15",
+      "route": "/explore",
+      "target": "src/app/(app)/explore/index.tsx"
+    },
+    {
+      "id": "S16",
+      "route": "/explore/feed",
+      "target": "src/app/(app)/explore/feed.tsx"
+    },
+    {
+      "id": "S17",
+      "route": "/explore/climbers",
+      "target": "src/app/(app)/explore/climbers.tsx"
+    },
+    {
+      "id": "S18",
+      "route": "/explore/leaderboards",
+      "target": "src/app/(app)/explore/leaderboards.tsx"
+    },
+    {
+      "id": "S19",
+      "route": "/explore/challenges",
+      "target": "src/app/(app)/explore/challenges.tsx"
+    },
+    {
+      "id": "S20",
+      "route": "/explore/groups",
+      "target": "src/app/(app)/explore/groups.tsx"
+    },
+    {
+      "id": "S21",
+      "route": "/profile/edit",
+      "target": "src/app/(app)/profile/edit.tsx"
+    },
+    {
+      "id": "S22",
+      "route": "/profile/public",
+      "target": "src/app/(app)/profile/public.tsx"
+    },
+    {
+      "id": "S23",
+      "route": "/profile/privacy",
+      "target": "src/app/(app)/profile/privacy.tsx"
+    },
+    {
+      "id": "S24",
+      "route": "/routes/[id]/beta",
+      "target": "src/app/(app)/routes/[id]/beta.tsx"
+    },
+    {
+      "id": "S25",
+      "route": "/history",
+      "target": "src/app/(app)/history.tsx"
+    },
+    {
+      "id": "S26",
+      "route": "/brand-preview",
+      "target": "src/app/(auth)/brand-preview.tsx"
+    },
+    {
+      "id": "S27",
+      "route": "/loading-preview",
+      "target": "src/app/(app)/loading-preview.tsx"
+    },
+    {
+      "id": "G01",
+      "route": "unknown route / invalid resource",
+      "target": "src/app/+not-found.tsx; src/components/not-found.tsx; src/components/error-boundary.tsx"
+    },
+    {
+      "id": "G02",
+      "route": "authenticated route failure",
+      "target": "src/components/error-boundary.tsx; src/features/app-error.tsx"
+    }
+  ]
+}

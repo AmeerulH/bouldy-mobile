@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-28T18:03:46.572Z",
+  "surfaces": {
+    "web": {
+      "url": "http://127.0.0.1:8081/welcome",
+      "status": 200
+    },
+    "adapter": {
+      "url": "http://127.0.0.1:8081/api/identity",
+      "status": 401
+    },
+    "fixture": {
+      "url": "http://127.0.0.1:4010/gyms/",
+      "status": 200
+    }
+  }
+}

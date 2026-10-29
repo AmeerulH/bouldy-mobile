@@ -1,0 +1,22 @@
+{"text": "", "content-desc": "Tools", "class": "android.widget.ImageView", "clickable": "false", "bounds": "[915,87][993,165]", "focused": "false", "password": "false"}
+{"text": "Sample journal \u00b7 local preview", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,96][1020,144]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Session", "class": "android.view.View", "clickable": "true", "bounds": "[60,188][1020,320]", "focused": "false", "password": "false"}
+{"text": "Session", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[144,224][304,284]", "focused": "false", "password": "false"}
+{"text": "YOUR ROUTE HISTORY", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,399][1020,507]", "focused": "false", "password": "false"}
+{"text": "V3 \u00b7 RED", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[300,642][1020,732]", "focused": "false", "password": "false"}
+{"text": "The patient heel hook", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[300,756][1020,816]", "focused": "false", "password": "false"}
+{"text": "Sample Boulder Club", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[300,828][1020,876]", "focused": "false", "password": "false"}
+{"text": "8 tries across 2 visits", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[120,1071][960,1131]", "focused": "false", "password": "false"}
+{"text": "A send is recorded in your journal.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[120,1155][960,1227]", "focused": "false", "password": "false"}
+{"text": "VISIT BY VISIT", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1359][1020,1431]", "focused": "false", "password": "false"}
+{"text": "Each entry is a session summary, not a timeline of individual tries. Visits on the same date have no recorded order.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1455][1020,1567]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Home", "class": "android.view.View", "clickable": "true", "bounds": "[0,1594][216,1752]", "focused": "false", "password": "false"}
+{"text": "Home", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[62,1684][153,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Explore", "class": "android.view.View", "clickable": "true", "bounds": "[216,1594][432,1752]", "focused": "false", "password": "false"}
+{"text": "Explore", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[265,1684][382,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Sessions", "class": "android.view.View", "clickable": "true", "bounds": "[432,1594][648,1752]", "focused": "false", "password": "false"}
+{"text": "Sessions", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[470,1684][610,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Gyms", "class": "android.view.View", "clickable": "true", "bounds": "[648,1594][864,1752]", "focused": "false", "password": "false"}
+{"text": "Gyms", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[712,1684][800,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "You", "class": "android.view.View", "clickable": "true", "bounds": "[864,1594][1080,1752]", "focused": "false", "password": "false"}
+{"text": "You", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[944,1684][1000,1734]", "focused": "false", "password": "false"}

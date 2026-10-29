@@ -1,0 +1,535 @@
+{
+  "date": "2026-10-24",
+  "workspace": "Ameerul Zul Hadi's Notion",
+  "planningPage": {
+    "id": "40376faa-3b39-812b-bf6a-ecd14595fe63",
+    "url": "https://app.notion.com/p/40376faa3b39812bbf6aecd14595fe63?pvs=204"
+  },
+  "database": {
+    "id": "4b6c2168-a8ab-4728-9704-a345a3ae239c",
+    "url": "https://app.notion.com/p/4b6c2168a8ab47289704a345a3ae239c?pvs=204",
+    "dataSourceId": "58d423be-a9b9-4b16-aa7a-a7c399eb1d8f"
+  },
+  "verifiedCounts": {
+    "total": 76,
+    "decisions": 17,
+    "FE": 35,
+    "BE": 28,
+    "dependencies": 79,
+    "priorities": {
+      "P1 - Highest": 23,
+      "P2 - High": 23,
+      "P3 - Medium": 20,
+      "P4 - Explore": 10
+    }
+  },
+  "sources": [
+    {
+      "title": "Consolidated Feedback and Priorities",
+      "id": "40376faa-3b39-81a1-a65d-ea660e5c3433"
+    },
+    {
+      "title": "Attributed Tester Feedback",
+      "id": "40376faa-3b39-81c8-b5b7-fb15637ed009"
+    },
+    {
+      "title": "Earlier Engineering Foundations",
+      "id": "40376faa-3b39-8147-acba-eb71b806d9d2"
+    }
+  ],
+  "views": [
+    {
+      "name": "All tasks",
+      "url": "view://418bdeb8-bcaf-480f-978f-860146d61042",
+      "type": "table"
+    },
+    {
+      "name": "Kanban",
+      "url": "view://40376faa-3b39-817b-b5de-000c7b7b71e7",
+      "type": "board"
+    },
+    {
+      "name": "Frontend",
+      "url": "view://40376faa-3b39-81b7-9d95-000ccec290ee",
+      "type": "board"
+    },
+    {
+      "name": "Backend",
+      "url": "view://40376faa-3b39-812d-be1f-000ce573c0ef",
+      "type": "board"
+    },
+    {
+      "name": "Priorities",
+      "url": "view://40376faa-3b39-81cb-9825-000c2123478f",
+      "type": "board"
+    },
+    {
+      "name": "Decisions",
+      "url": "view://40376faa-3b39-8187-a0ad-000c8aa5d5a4",
+      "type": "board"
+    },
+    {
+      "name": "FE - existing API candidates",
+      "url": "view://40376faa-3b39-8157-8352-000cb1e49e39",
+      "type": "table"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "40376faa-3b39-81c9-9195-f5ed0b92d18c",
+      "url": "https://app.notion.com/p/40376faa3b3981c99195f5ed0b92d18c?pvs=204",
+      "taskId": "BLY-001",
+      "name": "Agree primary audience and Bouldy’s core promise"
+    },
+    {
+      "id": "40376faa-3b39-81aa-858f-c808c7baec52",
+      "url": "https://app.notion.com/p/40376faa3b3981aa858fc808c7baec52?pvs=204",
+      "taskId": "BLY-002",
+      "name": "Map a simpler session-to-progress journey"
+    },
+    {
+      "id": "40376faa-3b39-81de-9cfc-c641cfbcd0d3",
+      "url": "https://app.notion.com/p/40376faa3b3981de9cfcc641cfbcd0d3?pvs=204",
+      "taskId": "BLY-003",
+      "name": "Implement the agreed navigation and page consolidation"
+    },
+    {
+      "id": "40376faa-3b39-81b5-b728-c51483b53671",
+      "url": "https://app.notion.com/p/40376faa3b3981b5b728c51483b53671?pvs=204",
+      "taskId": "BLY-004",
+      "name": "Write the glossary and staged onboarding content"
+    },
+    {
+      "id": "40376faa-3b39-813c-ae7a-d08ba787653e",
+      "url": "https://app.notion.com/p/40376faa3b39813cae7ad08ba787653e?pvs=204",
+      "taskId": "BLY-005",
+      "name": "Build revisitable post-signup onboarding"
+    },
+    {
+      "id": "40376faa-3b39-8159-aaa7-fd86af88b9c2",
+      "url": "https://app.notion.com/p/40376faa3b398159aaa7fd86af88b9c2?pvs=204",
+      "taskId": "BLY-006",
+      "name": "Add guidance before the first session"
+    },
+    {
+      "id": "40376faa-3b39-81d4-b5e8-e8b5d7de2fb8",
+      "url": "https://app.notion.com/p/40376faa3b3981d4b5e8e8b5d7de2fb8?pvs=204",
+      "taskId": "BLY-007",
+      "name": "Add profile-based help and next-step guidance"
+    },
+    {
+      "id": "40376faa-3b39-8115-9624-c9b854429b8c",
+      "url": "https://app.notion.com/p/40376faa3b3981159624c9b854429b8c?pvs=204",
+      "taskId": "BLY-008",
+      "name": "Persist onboarding state when cross-device behaviour is required"
+    },
+    {
+      "id": "40376faa-3b39-81e2-ab9e-dde6c66e066a",
+      "url": "https://app.notion.com/p/40376faa3b3981e2ab9edde6c66e066a?pvs=204",
+      "taskId": "BLY-009",
+      "name": "Reproduce the hard-to-find Send action and extra logging steps"
+    },
+    {
+      "id": "40376faa-3b39-813a-b6ce-cd578f97f1cf",
+      "url": "https://app.notion.com/p/40376faa3b39813ab6cecd578f97f1cf?pvs=204",
+      "taskId": "BLY-010",
+      "name": "Expose Send beside +1 in the agreed route list"
+    },
+    {
+      "id": "40376faa-3b39-8187-8d1a-c3cc7b4b4eba",
+      "url": "https://app.notion.com/p/40376faa3b3981878d1ac3cc7b4b4eba?pvs=204",
+      "taskId": "BLY-011",
+      "name": "Prompt to continue unfinished projects at session start"
+    },
+    {
+      "id": "40376faa-3b39-8169-8096-e9889dd29fb5",
+      "url": "https://app.notion.com/p/40376faa3b3981698096e9889dd29fb5?pvs=204",
+      "taskId": "BLY-012",
+      "name": "Define the consolidated list and suggested-route experience"
+    },
+    {
+      "id": "40376faa-3b39-813e-81d3-f9dd77197748",
+      "url": "https://app.notion.com/p/40376faa3b39813e81d3f9dd77197748?pvs=204",
+      "taskId": "BLY-013",
+      "name": "Build the agreed consolidated route-selection view"
+    },
+    {
+      "id": "40376faa-3b39-81b9-a7dd-c8ab38da9e6c",
+      "url": "https://app.notion.com/p/40376faa3b3981b9a7ddc8ab38da9e6c?pvs=204",
+      "taskId": "BLY-014",
+      "name": "Agree admin and climber permissions"
+    },
+    {
+      "id": "40376faa-3b39-81be-b455-d64ddf0bef63",
+      "url": "https://app.notion.com/p/40376faa3b3981beb455d64ddf0bef63?pvs=204",
+      "taskId": "BLY-015",
+      "name": "Enforce gym and route management permissions"
+    },
+    {
+      "id": "40376faa-3b39-8164-ae31-c7e669256b07",
+      "url": "https://app.notion.com/p/40376faa3b398164ae31c7e669256b07?pvs=204",
+      "taskId": "BLY-016",
+      "name": "Restrict Add gym and management controls by capability"
+    },
+    {
+      "id": "40376faa-3b39-816d-a9b4-ea7fd1ca7332",
+      "url": "https://app.notion.com/p/40376faa3b39816da9b4ea7fd1ca7332?pvs=204",
+      "taskId": "BLY-017",
+      "name": "Provide an admin-managed custom colour catalogue"
+    },
+    {
+      "id": "40376faa-3b39-8120-b141-dd6276f5ad19",
+      "url": "https://app.notion.com/p/40376faa3b398120b141dd6276f5ad19?pvs=204",
+      "taskId": "BLY-018",
+      "name": "Add the admin custom-colour selector and management UI"
+    },
+    {
+      "id": "40376faa-3b39-8165-b5c4-d6f6b7fc9e95",
+      "url": "https://app.notion.com/p/40376faa3b398165b5c4d6f6b7fc9e95?pvs=204",
+      "taskId": "BLY-019",
+      "name": "Define goals and meaningful progress measures"
+    },
+    {
+      "id": "40376faa-3b39-8125-b19b-faaf2991d755",
+      "url": "https://app.notion.com/p/40376faa3b398125b19bfaaf2991d755?pvs=204",
+      "taskId": "BLY-020",
+      "name": "Store owner goals and agreed progress settings"
+    },
+    {
+      "id": "40376faa-3b39-8153-a5ab-e1c69f0ebef1",
+      "url": "https://app.notion.com/p/40376faa3b398153a5abe1c69f0ebef1?pvs=204",
+      "taskId": "BLY-021",
+      "name": "Build the goal selector and personal goal view"
+    },
+    {
+      "id": "40376faa-3b39-8199-9d93-f8fde6f57721",
+      "url": "https://app.notion.com/p/40376faa3b3981999d93f8fde6f57721?pvs=204",
+      "taskId": "BLY-022",
+      "name": "Provide scoped progress summaries and paginated history"
+    },
+    {
+      "id": "40376faa-3b39-8115-bb36-c7c9de2ae355",
+      "url": "https://app.notion.com/p/40376faa3b398115bb36c7c9de2ae355?pvs=204",
+      "taskId": "BLY-023",
+      "name": "Build the personal dashboard and progression graphs"
+    },
+    {
+      "id": "40376faa-3b39-817a-8661-dbf4efb4c8ee",
+      "url": "https://app.notion.com/p/40376faa3b39817a8661dbf4efb4c8ee?pvs=204",
+      "taskId": "BLY-024",
+      "name": "Show a clear end-of-session summary"
+    },
+    {
+      "id": "40376faa-3b39-81a6-b49d-ffcd97973c20",
+      "url": "https://app.notion.com/p/40376faa3b3981a6b49dffcd97973c20?pvs=204",
+      "taskId": "BLY-025",
+      "name": "Define what a climb rating measures"
+    },
+    {
+      "id": "40376faa-3b39-81a3-8487-f59dfa977c2b",
+      "url": "https://app.notion.com/p/40376faa3b3981a38487f59dfa977c2b?pvs=204",
+      "taskId": "BLY-026",
+      "name": "Persist the agreed climb feedback or ratings"
+    },
+    {
+      "id": "40376faa-3b39-812e-b41f-f75dda5c551e",
+      "url": "https://app.notion.com/p/40376faa3b39812eb41ff75dda5c551e?pvs=204",
+      "taskId": "BLY-027",
+      "name": "Add post-climb rating controls"
+    },
+    {
+      "id": "40376faa-3b39-81ef-83b9-d053b468818a",
+      "url": "https://app.notion.com/p/40376faa3b3981ef83b9d053b468818a?pvs=204",
+      "taskId": "BLY-028",
+      "name": "Scope the first photo feature and media ownership"
+    },
+    {
+      "id": "40376faa-3b39-814c-8310-cb2651fefc06",
+      "url": "https://app.notion.com/p/40376faa3b39814c8310cb2651fefc06?pvs=204",
+      "taskId": "BLY-029",
+      "name": "Provide persistent authorised photo storage and metadata"
+    },
+    {
+      "id": "40376faa-3b39-810b-946c-fdb09ea75d9e",
+      "url": "https://app.notion.com/p/40376faa3b39810b946cfdb09ea75d9e?pvs=204",
+      "taskId": "BLY-030",
+      "name": "Attach and view photos during session logging"
+    },
+    {
+      "id": "40376faa-3b39-8155-9134-d312b6b4b109",
+      "url": "https://app.notion.com/p/40376faa3b3981559134d312b6b4b109?pvs=204",
+      "taskId": "BLY-031",
+      "name": "Assess video upload as a separate media delivery"
+    },
+    {
+      "id": "40376faa-3b39-81be-9778-f10d73ce5e08",
+      "url": "https://app.notion.com/p/40376faa3b3981be9778f10d73ce5e08?pvs=204",
+      "taskId": "BLY-032",
+      "name": "Provide reliable gym location and directory data"
+    },
+    {
+      "id": "40376faa-3b39-813b-8b63-d1eeee6d8a65",
+      "url": "https://app.notion.com/p/40376faa3b39813b8b63d1eeee6d8a65?pvs=204",
+      "taskId": "BLY-033",
+      "name": "Build gym finder and nearby-gym selection"
+    },
+    {
+      "id": "40376faa-3b39-81d9-bd9d-f14dec34d1da",
+      "url": "https://app.notion.com/p/40376faa3b3981d9bd9df14dec34d1da?pvs=204",
+      "taskId": "BLY-034",
+      "name": "Define the first PWA release scope"
+    },
+    {
+      "id": "40376faa-3b39-8131-bb63-f24b27833621",
+      "url": "https://app.notion.com/p/40376faa3b398131bb63f24b27833621?pvs=204",
+      "taskId": "BLY-035",
+      "name": "Deliver the agreed installable PWA experience"
+    },
+    {
+      "id": "40376faa-3b39-8191-9695-d5467a6b92b0",
+      "url": "https://app.notion.com/p/40376faa3b3981919695d5467a6b92b0?pvs=204",
+      "taskId": "BLY-036",
+      "name": "Investigate offline logging and safe synchronisation"
+    },
+    {
+      "id": "40376faa-3b39-813e-9e68-cb71564ea72e",
+      "url": "https://app.notion.com/p/40376faa3b39813e9e68cb71564ea72e?pvs=204",
+      "taskId": "BLY-037",
+      "name": "Agree public identity, sharing and comparison rules"
+    },
+    {
+      "id": "40376faa-3b39-8114-b9ca-ea16e3229099",
+      "url": "https://app.notion.com/p/40376faa3b398114b9caea16e3229099?pvs=204",
+      "taskId": "BLY-038",
+      "name": "Provide editable owner profiles and privacy-safe public discovery"
+    },
+    {
+      "id": "40376faa-3b39-8183-a48e-ea906ad0445e",
+      "url": "https://app.notion.com/p/40376faa3b398183a48eea906ad0445e?pvs=204",
+      "taskId": "BLY-039",
+      "name": "Build profile editing, public profiles and climber search"
+    },
+    {
+      "id": "40376faa-3b39-81e9-b161-d4bbcbfc01cc",
+      "url": "https://app.notion.com/p/40376faa3b3981e9b161d4bbcbfc01cc?pvs=204",
+      "taskId": "BLY-040",
+      "name": "Provide a visibility-filtered climber activity feed"
+    },
+    {
+      "id": "40376faa-3b39-814e-bf89-caf540f015ae",
+      "url": "https://app.notion.com/p/40376faa3b39814ebf89caf540f015ae?pvs=204",
+      "taskId": "BLY-041",
+      "name": "Build the climber activity feed"
+    },
+    {
+      "id": "40376faa-3b39-8194-a8e0-d16b50bd9029",
+      "url": "https://app.notion.com/p/40376faa3b398194a8e0d16b50bd9029?pvs=204",
+      "taskId": "BLY-042",
+      "name": "Agree scoring and fair ranking eligibility"
+    },
+    {
+      "id": "40376faa-3b39-8174-96ab-d0fefcc59a90",
+      "url": "https://app.notion.com/p/40376faa3b39817496abd0fefcc59a90?pvs=204",
+      "taskId": "BLY-043",
+      "name": "Build authoritative scoring and gym-first ranking queries"
+    },
+    {
+      "id": "40376faa-3b39-81b2-9cb2-eaddcc4fff20",
+      "url": "https://app.notion.com/p/40376faa3b3981b29cb2eaddcc4fff20?pvs=204",
+      "taskId": "BLY-044",
+      "name": "Build rankings and clear score explanations"
+    },
+    {
+      "id": "40376faa-3b39-8198-ad75-f4ee7fe3da11",
+      "url": "https://app.notion.com/p/40376faa3b398198ad75f4ee7fe3da11?pvs=204",
+      "taskId": "BLY-045",
+      "name": "Provide managed gym grades and approved ranking mappings"
+    },
+    {
+      "id": "40376faa-3b39-81e0-9a23-d9593c905480",
+      "url": "https://app.notion.com/p/40376faa3b3981e09a23d9593c905480?pvs=204",
+      "taskId": "BLY-046",
+      "name": "Define climbing buddies, group membership and planned visits"
+    },
+    {
+      "id": "40376faa-3b39-8177-967e-e6f46751fb0b",
+      "url": "https://app.notion.com/p/40376faa3b398177967ee6f46751fb0b?pvs=204",
+      "taskId": "BLY-047",
+      "name": "Provide approved session plans and group membership"
+    },
+    {
+      "id": "40376faa-3b39-810d-acd1-e2041ca6014c",
+      "url": "https://app.notion.com/p/40376faa3b39810dacd1e2041ca6014c?pvs=204",
+      "taskId": "BLY-048",
+      "name": "Build planned sessions and climbing-buddy/group flows"
+    },
+    {
+      "id": "40376faa-3b39-8191-ae00-d8dce84cbdd2",
+      "url": "https://app.notion.com/p/40376faa3b398191ae00d8dce84cbdd2?pvs=204",
+      "taskId": "BLY-049",
+      "name": "Define competition-news sources and editorial ownership"
+    },
+    {
+      "id": "40376faa-3b39-8154-bd9c-edc90597c623",
+      "url": "https://app.notion.com/p/40376faa3b398154bd9cedc90597c623?pvs=204",
+      "taskId": "BLY-050",
+      "name": "Deliver the agreed competition-news listing"
+    },
+    {
+      "id": "40376faa-3b39-8159-b8b6-ddc57d014dcd",
+      "url": "https://app.notion.com/p/40376faa3b398159b8b6ddc57d014dcd?pvs=204",
+      "taskId": "BLY-051",
+      "name": "Check Instagram/video embedding feasibility"
+    },
+    {
+      "id": "40376faa-3b39-8135-96f1-e5674fa0434b",
+      "url": "https://app.notion.com/p/40376faa3b39813596f1e5674fa0434b?pvs=204",
+      "taskId": "BLY-052",
+      "name": "Persist approved route beta links and attribution"
+    },
+    {
+      "id": "40376faa-3b39-819d-ad69-f0d85799b01b",
+      "url": "https://app.notion.com/p/40376faa3b39819dad69f0d85799b01b?pvs=204",
+      "taskId": "BLY-053",
+      "name": "Display approved beta embeds with a useful fallback"
+    },
+    {
+      "id": "40376faa-3b39-811a-8954-f1970e1eb89e",
+      "url": "https://app.notion.com/p/40376faa3b39811a8954f1970e1eb89e?pvs=204",
+      "taskId": "BLY-054",
+      "name": "Explore themes and configurable dashboard scope"
+    },
+    {
+      "id": "40376faa-3b39-8189-a8fe-c44246f07ffd",
+      "url": "https://app.notion.com/p/40376faa3b398189a8fec44246f07ffd?pvs=204",
+      "taskId": "BLY-055",
+      "name": "Implement selected themes and dashboard preferences"
+    },
+    {
+      "id": "40376faa-3b39-812e-a39d-e819b9e877ed",
+      "url": "https://app.notion.com/p/40376faa3b39812ea39de819b9e877ed?pvs=204",
+      "taskId": "BLY-056",
+      "name": "Choose voice recording versus note transcription"
+    },
+    {
+      "id": "40376faa-3b39-81e5-aefd-e9c8aaad5d61",
+      "url": "https://app.notion.com/p/40376faa3b3981e5aefde9c8aaad5d61?pvs=204",
+      "taskId": "BLY-057",
+      "name": "Define QR/NFC and location-assisted session start"
+    },
+    {
+      "id": "40376faa-3b39-8104-8a24-ccb0cc22fb37",
+      "url": "https://app.notion.com/p/40376faa3b3981048a24ccb0cc22fb37?pvs=204",
+      "taskId": "BLY-058",
+      "name": "Assess phone-number signup and recovery"
+    },
+    {
+      "id": "40376faa-3b39-81a1-9248-fe61f4c0e1ad",
+      "url": "https://app.notion.com/p/40376faa3b3981a19248fe61f4c0e1ad?pvs=204",
+      "taskId": "BLY-059",
+      "name": "Assess sports-watch and health-app integration"
+    },
+    {
+      "id": "40376faa-3b39-8146-a3f7-feed2a915264",
+      "url": "https://app.notion.com/p/40376faa3b398146a3f7feed2a915264?pvs=204",
+      "taskId": "BLY-060",
+      "name": "Clarify expansion beyond climbing and “alternatives”"
+    },
+    {
+      "id": "40376faa-3b39-81ef-a897-c78ea3cb7825",
+      "url": "https://app.notion.com/p/40376faa3b3981efa897c78ea3cb7825?pvs=204",
+      "taskId": "BLY-061",
+      "name": "Define cancellation without accidental history loss"
+    },
+    {
+      "id": "40376faa-3b39-8103-8e31-dfc681c18891",
+      "url": "https://app.notion.com/p/40376faa3b3981038e31dfc681c18891?pvs=204",
+      "taskId": "BLY-062",
+      "name": "Provide the approved cancel/abandon-session behaviour"
+    },
+    {
+      "id": "40376faa-3b39-81ee-88ed-ca5a4e819945",
+      "url": "https://app.notion.com/p/40376faa3b3981ee88edca5a4e819945?pvs=204",
+      "taskId": "BLY-063",
+      "name": "Add a clear cancel-session journey"
+    },
+    {
+      "id": "40376faa-3b39-81c4-9ce1-dc8405916773",
+      "url": "https://app.notion.com/p/40376faa3b3981c49ce1dc8405916773?pvs=204",
+      "taskId": "BLY-064",
+      "name": "Define the private route-list ownership model"
+    },
+    {
+      "id": "40376faa-3b39-81c0-ab53-deb05004b627",
+      "url": "https://app.notion.com/p/40376faa3b3981c0ab53deb05004b627?pvs=204",
+      "taskId": "BLY-065",
+      "name": "Provide private route collections under the agreed model"
+    },
+    {
+      "id": "40376faa-3b39-8192-bf2d-d2a6470acc8d",
+      "url": "https://app.notion.com/p/40376faa3b398192bf2dd2a6470acc8d?pvs=204",
+      "taskId": "BLY-066",
+      "name": "Build the private route-list experience"
+    },
+    {
+      "id": "40376faa-3b39-81ae-8625-dda4d2b8e82a",
+      "url": "https://app.notion.com/p/40376faa3b3981ae8625dda4d2b8e82a?pvs=204",
+      "taskId": "BLY-067",
+      "name": "Scope homepage promotions and content ownership"
+    },
+    {
+      "id": "40376faa-3b39-8125-9f37-eb67cd322ae4",
+      "url": "https://app.notion.com/p/40376faa3b3981259f37eb67cd322ae4?pvs=204",
+      "taskId": "BLY-068",
+      "name": "Define marketing contact collection as a separate proposal"
+    },
+    {
+      "id": "40376faa-3b39-8199-95a3-da1f9e002f39",
+      "url": "https://app.notion.com/p/40376faa3b39819995a3da1f9e002f39?pvs=204",
+      "taskId": "BLY-069",
+      "name": "Audit and enforce attempt integrity, retries and flash validation"
+    },
+    {
+      "id": "40376faa-3b39-8197-b284-d26a28d407b4",
+      "url": "https://app.notion.com/p/40376faa3b398197b284d26a28d407b4?pvs=204",
+      "taskId": "BLY-070",
+      "name": "Define explicit session lifecycle and trustworthy result timing"
+    },
+    {
+      "id": "40376faa-3b39-8173-af34-ddc26ccb6451",
+      "url": "https://app.notion.com/p/40376faa3b398173af34ddc26ccb6451?pvs=204",
+      "taskId": "BLY-071",
+      "name": "Protect retired routes and historical references"
+    },
+    {
+      "id": "40376faa-3b39-8152-b958-ec01f200489b",
+      "url": "https://app.notion.com/p/40376faa3b398152b958ec01f200489b?pvs=204",
+      "taskId": "BLY-072",
+      "name": "Clarify descriptions and the removed-route button"
+    },
+    {
+      "id": "40376faa-3b39-81d3-9b78-ea89c3b64201",
+      "url": "https://app.notion.com/p/40376faa3b3981d39b78ea89c3b64201?pvs=204",
+      "taskId": "BLY-073",
+      "name": "Clarify the map-style partner or route view"
+    },
+    {
+      "id": "40376faa-3b39-81ad-aaf8-c2e1d7f6c346",
+      "url": "https://app.notion.com/p/40376faa3b3981adaaf8c2e1d7f6c346?pvs=204",
+      "taskId": "BLY-074",
+      "name": "Validate the revised journey with representative testers"
+    },
+    {
+      "id": "40376faa-3b39-8162-82c0-f975351e9371",
+      "url": "https://app.notion.com/p/40376faa3b39816282c0f975351e9371?pvs=204",
+      "taskId": "BLY-075",
+      "name": "Define personal diary and richer route context"
+    },
+    {
+      "id": "40376faa-3b39-8156-b3ad-cd2c20ea32e5",
+      "url": "https://app.notion.com/p/40376faa3b398156b3adcd2c20ea32e5?pvs=204",
+      "taskId": "BLY-076",
+      "name": "Define per-climb comparison with other users"
+    }
+  ]
+}

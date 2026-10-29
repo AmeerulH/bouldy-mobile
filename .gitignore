@@ -1,0 +1,13 @@
+node_modules/
+.expo/
+dist/
+.env*
+!.env.example
+*.tsbuildinfo
+.DS_Store
+reference/toolchains/
+
+# Generated native/web output and preserved-source caches
+dist-native/
+**/.next/
+**/.vercel/

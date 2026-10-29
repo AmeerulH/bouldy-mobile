@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-29",
+  "mode": "Expo Go 58.0.7 development, fixture-only",
+  "device": "iPhone 17 Pro",
+  "runtime": "iOS 26.2",
+  "logicalSize": {
+    "width": 402,
+    "height": 874
+  },
+  "observed": [
+    "welcome render",
+    "login and Home",
+    "session routes and SVGs",
+    "native font weights after name identity fix",
+    "source loading status",
+    "+1 today 2 to 3; earlier 4 unchanged",
+    "Send changes result without increment",
+    "close/reopen route sheet",
+    "failed note retains draft; unchanged saved record and counts",
+    "background/resume retains note draft",
+    "note recovery save and success snackbar",
+    "history 7 tries across 2 visits",
+    "uncovered history after modal focus fix",
+    "full Expo Go process terminate/relaunch restored validated user and updated Home without login",
+    "expired fixture while app backgrounded caused Welcome on native resume",
+    "font bold weights visible after identity fix; status bar contrast corrected",
+    "fresh login/session/sheet/history sequence after final exports: old modal dismissed and history unobscured; 7 tries across 2 visits and saved note visible"
+  ],
+  "pending": [
+    "header drag delivery/dismissal",
+    "Android runtime",
+    "physical/release builds",
+    "matching screenshots and full motion/reduced motion/keyboard matrix"
+  ],
+  "visualParityAccepted": false,
+  "productionWrites": false,
+  "evidence": "CUA Device Hub screenshots/accessibility states in this conversation; adjacent fixture JSON snapshots",
+  "fixtureRestoredToNormal": true,
+  "verification": {
+    "lint": "pass",
+    "typecheck": "pass",
+    "unitAdapterTests": "40/40 pass",
+    "webServerExport": "pass",
+    "iosAndroidBundleExport": "pass",
+    "expoDoctor": "20/20 pass",
+    "expoCompatibility": "pass",
+    "localProductionHttpSmoke": "pass",
+    "selectedBundleMarkerScan": "14 bundles, no hits",
+    "sourcePreservation": "271/271 hashes and complete Git status unchanged",
+    "browserE2E": "not rerun; automation tool rejected localhost access"
+  },
+  "handoff": {
+    "fixture": "normal, changes preserved",
+    "preview": "http://localhost:8081/welcome",
+    "native": "Device Hub compact iPhone 17 Pro, iOS 26.2, signed in on route history",
+    "metro": "IPv4 127.0.0.1:8081",
+    "fixtureApi": "127.0.0.1:4010",
+    "temporaryProductionServer": "stopped"
+  }
+}

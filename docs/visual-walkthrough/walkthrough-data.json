@@ -1,0 +1,1292 @@
+{
+  "title": "Bouldy: visual app walkthrough",
+  "date": "24 October 2026",
+  "source": "Current local frontend, sample data at 390 x 844. Production behaviour is not verified. Planned flows are discussion proposals.",
+  "items": [
+    {
+      "id": "welcome",
+      "title": "Welcome",
+      "group": "Getting started",
+      "path": "/welcome",
+      "job": "Introduce Bouldy and give a new or returning climber a clear way in.",
+      "actions": [
+        "Open Log in",
+        "Open Sign up"
+      ],
+      "flows": [
+        {
+          "label": "Returning climber",
+          "steps": [
+            "Welcome",
+            "Log in",
+            "Home"
+          ]
+        },
+        {
+          "label": "New climber",
+          "steps": [
+            "Welcome",
+            "Sign up",
+            "Home"
+          ]
+        }
+      ],
+      "rule": "Signing in is required to open the journal. A successful sign-up also signs the user in.",
+      "question": "Does this explain why a climber should use Bouldy?",
+      "images": [
+        "welcome"
+      ],
+      "status": "Current UI",
+      "number": 1
+    },
+    {
+      "id": "login",
+      "title": "Log in",
+      "group": "Getting started",
+      "path": "/login",
+      "job": "Return to your own climbing journal.",
+      "actions": [
+        "Enter email and password",
+        "Submit or switch to Sign up"
+      ],
+      "flows": [
+        {
+          "label": "Success",
+          "steps": [
+            "Enter details",
+            "Log in",
+            "Home"
+          ]
+        },
+        {
+          "label": "Failure",
+          "steps": [
+            "Submit",
+            "Read error",
+            "Correct and retry"
+          ]
+        }
+      ],
+      "rule": "There is no password-reset or OTP screen in this frontend. An error keeps the user on Log in.",
+      "question": "What account-recovery journey must we add before a wider release?",
+      "images": [
+        "login",
+        "login-error"
+      ],
+      "status": "Current UI",
+      "number": 2
+    },
+    {
+      "id": "signup",
+      "title": "Create an account",
+      "group": "Getting started",
+      "path": "/signup",
+      "job": "Create a climbing identity and begin a personal journal.",
+      "actions": [
+        "Choose a username",
+        "Enter email and password",
+        "Optionally add current grade"
+      ],
+      "flows": [
+        {
+          "label": "Success",
+          "steps": [
+            "Enter details",
+            "Create account",
+            "Home"
+          ]
+        },
+        {
+          "label": "Failure",
+          "steps": [
+            "Submit",
+            "Read error",
+            "Correct and retry"
+          ]
+        }
+      ],
+      "rule": "Current grade is optional free text. The current flow does not ask for a preferred gym.",
+      "question": "Should onboarding explain grades, privacy or gym selection?",
+      "images": [
+        "signup"
+      ],
+      "status": "Current UI",
+      "number": 3
+    },
+    {
+      "id": "home",
+      "title": "Home",
+      "group": "Home",
+      "path": "/",
+      "job": "See a personal climbing snapshot and choose the next action.",
+      "actions": [
+        "Review sends, flashes and gyms",
+        "Open a recent session",
+        "Start another session through Gyms"
+      ],
+      "flows": [
+        {
+          "label": "Go climbing",
+          "steps": [
+            "Home",
+            "Choose a gym",
+            "Start session"
+          ]
+        },
+        {
+          "label": "Look back",
+          "steps": [
+            "Home",
+            "Recent session",
+            "Session review"
+          ]
+        }
+      ],
+      "rule": "These are journal summaries. Missing history must not be shown as a trustworthy zero.",
+      "question": "What is the single most useful thing to see when opening Bouldy?",
+      "images": [
+        "home"
+      ],
+      "status": "Current UI",
+      "number": 4
+    },
+    {
+      "id": "gyms",
+      "title": "Choose a gym",
+      "group": "Gyms and routes",
+      "path": "/gyms",
+      "job": "Find a wall and start a visit.",
+      "actions": [
+        "Open a gym",
+        "Start a session from a gym row",
+        "Open Add gym"
+      ],
+      "flows": [
+        {
+          "label": "Browse first",
+          "steps": [
+            "Gyms",
+            "Gym detail",
+            "Start session"
+          ]
+        },
+        {
+          "label": "Quick start",
+          "steps": [
+            "Gyms",
+            "Start session",
+            "Live session"
+          ]
+        }
+      ],
+      "rule": "Gyms and routes are shared records; their permission model still needs team agreement.",
+      "question": "How should users find the right gym as this list grows?",
+      "images": [
+        "gyms"
+      ],
+      "status": "Current UI",
+      "number": 5
+    },
+    {
+      "id": "add-gym",
+      "title": "Add a gym",
+      "group": "Gyms and routes",
+      "path": "/gyms?sheet=add-gym",
+      "job": "Add a missing gym without leaving the list.",
+      "actions": [
+        "Enter gym name and location",
+        "Save or close the bottom sheet"
+      ],
+      "flows": [
+        {
+          "label": "Save",
+          "steps": [
+            "Gyms",
+            "Add gym sheet",
+            "Save",
+            "Gym list"
+          ]
+        },
+        {
+          "label": "Error",
+          "steps": [
+            "Save",
+            "Inline error",
+            "Correct and retry"
+          ]
+        }
+      ],
+      "rule": "This is a short task in a bottom sheet. Duplicate-gym prevention and who may create records need decisions.",
+      "question": "Can any climber add a gym, or should submissions be reviewed?",
+      "images": [
+        "add-gym"
+      ],
+      "status": "Current UI",
+      "number": 6
+    },
+    {
+      "id": "gym",
+      "title": "Gym and route browser",
+      "group": "Gyms and routes",
+      "path": "/gyms/[id]",
+      "job": "Recognise routes on the wall and start climbing.",
+      "actions": [
+        "Search by route details",
+        "Browse grade groups",
+        "Filter colour or wall",
+        "Add or edit a route",
+        "Start a session"
+      ],
+      "flows": [
+        {
+          "label": "Climb",
+          "steps": [
+            "Gym detail",
+            "Start a session",
+            "Live route log"
+          ]
+        },
+        {
+          "label": "Maintain routes",
+          "steps": [
+            "Choose route",
+            "Edit route",
+            "Save",
+            "Gym detail"
+          ]
+        }
+      ],
+      "rule": "Only active routes appear for new climbing. The gym leaderboard link opens a planned page.",
+      "question": "Which route details do climbers need to identify a line reliably?",
+      "images": [
+        "gym"
+      ],
+      "status": "Current UI",
+      "number": 7
+    },
+    {
+      "id": "filters",
+      "title": "Find the right route",
+      "group": "Gyms and routes",
+      "path": "Gym, session and Climbs route browsers",
+      "job": "Reduce a busy wall to a manageable set of routes.",
+      "actions": [
+        "Type a search",
+        "Pick a grade",
+        "Open Filters",
+        "Filter by available colour, wall, status or gym"
+      ],
+      "flows": [
+        {
+          "label": "Narrow the list",
+          "steps": [
+            "Route list",
+            "Search / grade",
+            "Filters sheet",
+            "Matching routes"
+          ]
+        },
+        {
+          "label": "Reset",
+          "steps": [
+            "Filtered list",
+            "Clear filters",
+            "Full list"
+          ]
+        }
+      ],
+      "rule": "Available filters depend on the screen and data. URL/session memory keeps the browsing context after logging.",
+      "question": "Are grade, colour and wall enough, or do we need route numbers or photos?",
+      "images": [
+        "filters"
+      ],
+      "status": "Current UI",
+      "number": 8
+    },
+    {
+      "id": "add-route",
+      "title": "Add a route at a gym",
+      "group": "Gyms and routes",
+      "path": "/gyms/[id]/routes/new",
+      "job": "Create the shared route record that future sessions will use.",
+      "actions": [
+        "Enter gym grade",
+        "Choose hold colour and styles",
+        "Add route name, wall and setter",
+        "Save using the sticky action"
+      ],
+      "flows": [
+        {
+          "label": "Save",
+          "steps": [
+            "Gym detail",
+            "Add route page",
+            "Save",
+            "Gym route list"
+          ]
+        },
+        {
+          "label": "Error",
+          "steps": [
+            "Save",
+            "Form error",
+            "Correct and retry"
+          ]
+        }
+      ],
+      "rule": "This is a full-screen form. Competition classification is labelled coming soon; it is not a working switch.",
+      "question": "Which fields are essential, and who should be allowed to create routes?",
+      "images": [
+        "add-route",
+        "add-route-bottom"
+      ],
+      "status": "Current UI",
+      "number": 9
+    },
+    {
+      "id": "edit-route",
+      "title": "Edit a route",
+      "group": "Gyms and routes",
+      "path": "/gyms/[id]/routes/[routeId]/edit",
+      "job": "Correct a shared active route without crowding the list.",
+      "actions": [
+        "Review existing route details",
+        "Change grade, colour, wall, styles, name or setter",
+        "Save or go back",
+        "Open planned Beta page"
+      ],
+      "flows": [
+        {
+          "label": "Save",
+          "steps": [
+            "Gym route row",
+            "Edit page",
+            "Save",
+            "Gym detail"
+          ]
+        },
+        {
+          "label": "Back",
+          "steps": [
+            "Edit page",
+            "Back",
+            "Gym detail"
+          ]
+        }
+      ],
+      "rule": "The editor accepts active routes belonging to this gym. Retired-route history remains readable. Closing the form does not save edits.",
+      "question": "Who can edit shared information, and how should incorrect edits be handled?",
+      "images": [
+        "edit-route",
+        "edit-route-bottom"
+      ],
+      "status": "Current UI",
+      "number": 10
+    },
+    {
+      "id": "session-add-route",
+      "title": "Add a route while climbing",
+      "group": "Climbing session",
+      "path": "/sessions/[id]/routes/new",
+      "job": "Record a missing route and return to the active visit.",
+      "actions": [
+        "Open Add route in a live session",
+        "Complete the shared route form",
+        "Save and return to the same session"
+      ],
+      "flows": [
+        {
+          "label": "Save",
+          "steps": [
+            "Live session",
+            "Add route page",
+            "Save",
+            "Same session"
+          ]
+        }
+      ],
+      "rule": "The route belongs to the gym, not only this session. A completed session cannot use this add-route journey.",
+      "question": "Should the new route be ready for an immediate first log?",
+      "images": [
+        "session-add-route"
+      ],
+      "status": "Current UI",
+      "number": 11
+    },
+    {
+      "id": "sessions",
+      "title": "Session journal",
+      "group": "Journal and progress",
+      "path": "/sessions",
+      "job": "Review visits over time and resume the latest climbing context.",
+      "actions": [
+        "Review the featured latest session",
+        "Open a dated session",
+        "Show earlier months",
+        "Switch to Climbs"
+      ],
+      "flows": [
+        {
+          "label": "Review",
+          "steps": [
+            "Sessions",
+            "Choose a visit",
+            "Session detail"
+          ]
+        },
+        {
+          "label": "Change view",
+          "steps": [
+            "Sessions",
+            "Climbs switch",
+            "Climbs collection"
+          ]
+        }
+      ],
+      "rule": "Sessions are grouped by month with progressive reveal. /history redirects here.",
+      "question": "What helps someone understand whether their climbing is improving?",
+      "images": [
+        "sessions",
+        "sessions-bottom"
+      ],
+      "status": "Current UI",
+      "number": 12
+    },
+    {
+      "id": "session",
+      "title": "Live session",
+      "group": "Climbing session",
+      "path": "/sessions/[id] (live)",
+      "job": "Log climbing quickly between tries.",
+      "actions": [
+        "Use +1 on a route row",
+        "Open a route action sheet",
+        "Browse Today and grade groups",
+        "Add a missing route",
+        "End the session"
+      ],
+      "flows": [
+        {
+          "label": "Try a route",
+          "steps": [
+            "Find route",
+            "+1 try",
+            "Today count updates",
+            "Try again"
+          ]
+        },
+        {
+          "label": "Finish a route",
+          "steps": [
+            "Open route sheet",
+            "Sent / eligible Flash",
+            "Completed route"
+          ]
+        }
+      ],
+      "rule": "Today and earlier visits stay separate. Routes already tried are projects or repeats; a new visit does not reset lifetime flash eligibility.",
+      "question": "Can this be used with one hand between climbs?",
+      "images": [
+        "session",
+        "session-bottom"
+      ],
+      "status": "Current UI",
+      "number": 13
+    },
+    {
+      "id": "route-sheet",
+      "title": "Route actions and continuing projects",
+      "group": "Climbing session",
+      "path": "/sessions/[id]?sheet=route-[routeId]",
+      "job": "See previous effort and act on the route without losing the session.",
+      "actions": [
+        "Compare Today with Earlier visits",
+        "Add a try or mark Sent",
+        "Correct an existing log",
+        "Read/write a private note",
+        "Open route history"
+      ],
+      "flows": [
+        {
+          "label": "Continue",
+          "steps": [
+            "Earlier 4 tries",
+            "Today 2 tries",
+            "Route history totals 6"
+          ]
+        },
+        {
+          "label": "Complete",
+          "steps": [
+            "Existing project",
+            "Sent",
+            "Result saved in this visit"
+          ]
+        }
+      ],
+      "rule": "Sent changes the current outcome without adding an extra try to an existing log. If this is today's first try, Sent creates one try. Earlier sessions are not rewritten.",
+      "question": "Do users understand today's count versus their total effort?",
+      "images": [
+        "route-sheet"
+      ],
+      "status": "Current UI",
+      "number": 14
+    },
+    {
+      "id": "flash-sheet",
+      "title": "First-try Flash",
+      "group": "Climbing session",
+      "path": "New-to-you route sheet",
+      "job": "Record a first-ever successful try when complete journal history supports it.",
+      "actions": [
+        "Open a route never tried before",
+        "Choose Flash if successful",
+        "Or log +1 for an unsuccessful try"
+      ],
+      "flows": [
+        {
+          "label": "First ever success",
+          "steps": [
+            "New to you",
+            "Flash",
+            "1 try + Flash"
+          ]
+        },
+        {
+          "label": "Previous effort",
+          "steps": [
+            "Earlier tries exist",
+            "Sent available",
+            "Flash not offered"
+          ]
+        }
+      ],
+      "rule": "Unavailable or conflicting history suppresses Flash. These FE safeguards do not replace backend enforcement.",
+      "question": "Should flash mean first ever try, and how do we explain that consistently?",
+      "images": [
+        "flash-sheet"
+      ],
+      "status": "Current UI",
+      "number": 15
+    },
+    {
+      "id": "correction",
+      "title": "Correct a live route log",
+      "group": "Climbing session",
+      "path": "Route sheet > Correct this log",
+      "job": "Fix a mistaken attempt count or result.",
+      "actions": [
+        "Expand Correct this log",
+        "Change result or count",
+        "Save correction"
+      ],
+      "flows": [
+        {
+          "label": "Correct",
+          "steps": [
+            "Route sheet",
+            "Edit count / result",
+            "Save",
+            "Recalculated journal"
+          ]
+        }
+      ],
+      "rule": "Correction edits the recorded summary; it does not add a physical try. Result/count correction is not available after a session ends.",
+      "question": "Should ended sessions allow corrections? If so, what rules should apply?",
+      "images": [
+        "correction"
+      ],
+      "status": "Current UI",
+      "number": 16
+    },
+    {
+      "id": "note",
+      "title": "Private route notes",
+      "group": "Journal and progress",
+      "path": "Route sheet or route history > note editor",
+      "job": "Remember beta or how a route felt for the next visit.",
+      "actions": [
+        "Add or edit a note",
+        "Save independently of the climb result",
+        "Cancel without changing the saved note"
+      ],
+      "flows": [
+        {
+          "label": "Save",
+          "steps": [
+            "Log exists",
+            "Write note",
+            "Save",
+            "Private note"
+          ]
+        },
+        {
+          "label": "Failure",
+          "steps": [
+            "Save fails",
+            "Draft remains",
+            "Retry or cancel"
+          ]
+        }
+      ],
+      "rule": "This is plain private text attached to the visit's route log. It is not a public review, felt-grade rating or session-wide note.",
+      "question": "What do climbers actually want to remember after a try?",
+      "images": [
+        "note"
+      ],
+      "status": "Current UI",
+      "number": 17
+    },
+    {
+      "id": "end-session",
+      "title": "End a session",
+      "group": "Climbing session",
+      "path": "/sessions/[id]?sheet=end-session",
+      "job": "Finish the visit and record its length.",
+      "actions": [
+        "Open End session",
+        "Confirm session length in minutes",
+        "Submit or close the sheet"
+      ],
+      "flows": [
+        {
+          "label": "Finish",
+          "steps": [
+            "Live session",
+            "End-session sheet",
+            "Confirm minutes",
+            "Session journal"
+          ]
+        }
+      ],
+      "rule": "The current interface uses a positive duration to identify an ended session. An explicit lifecycle/timer is separate backend work.",
+      "question": "Do we need automatic timing, manual length, or both?",
+      "images": [
+        "end-session"
+      ],
+      "status": "Current UI",
+      "number": 18
+    },
+    {
+      "id": "completed-session",
+      "title": "Completed session review",
+      "group": "Journal and progress",
+      "path": "/sessions/[id] (completed)",
+      "job": "Look back at what was logged during one visit.",
+      "actions": [
+        "Review visit duration and results",
+        "Browse only routes logged that visit",
+        "Open route details and private notes",
+        "Return to Sessions"
+      ],
+      "flows": [
+        {
+          "label": "Review",
+          "steps": [
+            "Session journal",
+            "Completed visit",
+            "Route sheet",
+            "Route history"
+          ]
+        }
+      ],
+      "rule": "No new attempts, route creation or result/count corrections are offered here. Private notes remain editable. Retired logged routes remain visible.",
+      "question": "Which post-session summary would be worth revisiting or sharing later?",
+      "images": [
+        "completed-session"
+      ],
+      "status": "Current UI",
+      "number": 19
+    },
+    {
+      "id": "climbs",
+      "title": "Climbs collection",
+      "group": "Journal and progress",
+      "path": "/climbs",
+      "job": "See the routes you have ever logged, grouped by gym and grade.",
+      "actions": [
+        "Switch from Sessions",
+        "Choose a gym",
+        "Search/filter and browse grades",
+        "Open one route's history"
+      ],
+      "flows": [
+        {
+          "label": "Drill down",
+          "steps": [
+            "Sessions",
+            "Climbs",
+            "Choose gym",
+            "Route history"
+          ]
+        }
+      ],
+      "rule": "Best result, total tries and visits are derived from owned journal records. Grades are grouped within each gym.",
+      "question": "Is a route collection or a visit diary the more useful default?",
+      "images": [
+        "climbs",
+        "climbs-gym"
+      ],
+      "status": "Current UI",
+      "number": 20
+    },
+    {
+      "id": "history",
+      "title": "Your route history",
+      "group": "Journal and progress",
+      "path": "/routes/[id]",
+      "job": "Understand work on one stable route across multiple visits.",
+      "actions": [
+        "Read total tries and send status",
+        "Review each dated visit",
+        "Edit private notes",
+        "Return to a source session"
+      ],
+      "flows": [
+        {
+          "label": "Look back",
+          "steps": [
+            "Route sheet / Climbs",
+            "Route history",
+            "Choose date",
+            "Source session"
+          ]
+        }
+      ],
+      "rule": "Entries are session summaries, not a per-try timeline. The exact ordering of visits on the same date is unknown.",
+      "question": "Which progress details are missing: felt grade, first-send date or something else?",
+      "images": [
+        "history"
+      ],
+      "status": "Current UI",
+      "number": 21
+    },
+    {
+      "id": "retired-history",
+      "title": "History after a wall reset",
+      "group": "Journal and progress",
+      "path": "/routes/[id] (retired route)",
+      "job": "Keep a climber's effort visible after the physical route disappears.",
+      "actions": [
+        "View the retired label",
+        "Review old logs and private notes",
+        "Open the original visit"
+      ],
+      "flows": [
+        {
+          "label": "Reset boundary",
+          "steps": [
+            "Old route retired",
+            "History preserved",
+            "New route gets new ID"
+          ]
+        }
+      ],
+      "rule": "A similar name, colour or grade does not make a new wall-set the old route. Historical counts must stay attached to the old ID.",
+      "question": "Who tells Bouldy when a wall is reset, and who retires the routes?",
+      "images": [
+        "retired-history"
+      ],
+      "status": "Current UI",
+      "number": 22
+    },
+    {
+      "id": "profile",
+      "title": "You: personal account",
+      "group": "You and privacy",
+      "path": "/profile",
+      "job": "Review your own identity, activity and places you climb.",
+      "actions": [
+        "Read account details and current grade",
+        "Review personal totals and visited gyms",
+        "Open planned profile/privacy screens",
+        "Open journal or log out"
+      ],
+      "flows": [
+        {
+          "label": "Personal progress",
+          "steps": [
+            "You",
+            "Visited gym",
+            "Gym routes"
+          ]
+        },
+        {
+          "label": "Sign out",
+          "steps": [
+            "You",
+            "Log out",
+            "Welcome"
+          ]
+        }
+      ],
+      "rule": "Email is shown only on this owner screen. Profile editing, public profile and privacy settings are placeholder destinations.",
+      "question": "What should belong to a private account versus a public climbing identity?",
+      "images": [
+        "profile",
+        "profile-bottom"
+      ],
+      "status": "Current UI",
+      "number": 23
+    },
+    {
+      "id": "explore",
+      "title": "Explore: community menu",
+      "group": "Community roadmap",
+      "path": "/explore",
+      "job": "Show the planned community directions without inventing social activity.",
+      "actions": [
+        "Open feed, climber search, rankings, challenges or groups plans",
+        "Return to your working session journal"
+      ],
+      "flows": [
+        {
+          "label": "Today",
+          "steps": [
+            "Explore",
+            "Choose feature",
+            "Planned page"
+          ]
+        },
+        {
+          "label": "Return",
+          "steps": [
+            "Explore",
+            "Open your sessions",
+            "Personal journal"
+          ]
+        }
+      ],
+      "rule": "The menu is built; the community services behind it are not. There are no real social metrics or fake rows.",
+      "question": "Which one community feature would make the journal more valuable?",
+      "images": [
+        "explore",
+        "explore-bottom"
+      ],
+      "status": "Menu + planned features",
+      "number": 24
+    },
+    {
+      "id": "edit-profile",
+      "title": "Edit profile",
+      "group": "You and privacy",
+      "path": "/profile/edit",
+      "job": "Proposed: edit a climbing display name, bio and profile photo.",
+      "actions": [
+        "Today: read the plan and return to the parent screen",
+        "Future journey below is a proposal, not a working control"
+      ],
+      "flows": [
+        {
+          "label": "Current",
+          "steps": [
+            "Parent screen",
+            "Planned page",
+            "Back"
+          ]
+        },
+        {
+          "label": "Proposed",
+          "steps": [
+            "You",
+            "Edit fields",
+            "Save profile"
+          ]
+        }
+      ],
+      "rule": "Needs owner profile fields, validation and update APIs; avatars also need media storage.",
+      "question": "Which identity fields are essential for the first release?",
+      "images": [
+        "edit-profile"
+      ],
+      "status": "Planned placeholder",
+      "number": 25
+    },
+    {
+      "id": "public-profile",
+      "title": "Public profile",
+      "group": "You and privacy",
+      "path": "/profile/public",
+      "job": "Proposed: control the identity and selected statistics other climbers see.",
+      "actions": [
+        "Today: read the plan and return to the parent screen",
+        "Future journey below is a proposal, not a working control"
+      ],
+      "flows": [
+        {
+          "label": "Current",
+          "steps": [
+            "Parent screen",
+            "Planned page",
+            "Back"
+          ]
+        },
+        {
+          "label": "Proposed",
+          "steps": [
+            "Opt in",
+            "Public identity",
+            "Allowed statistics"
+          ]
+        }
+      ],
+      "rule": "Needs a separate public response and enforceable visibility rules. Do not expose the owner email or private notes.",
+      "question": "Should profiles be discoverable, link-only or private by default?",
+      "images": [
+        "public-profile"
+      ],
+      "status": "Planned placeholder",
+      "number": 26
+    },
+    {
+      "id": "privacy",
+      "title": "Privacy and sharing",
+      "group": "You and privacy",
+      "path": "/profile/privacy",
+      "job": "Proposed: choose discoverability, ranking participation and sharing.",
+      "actions": [
+        "Today: read the plan and return to the parent screen",
+        "Future journey below is a proposal, not a working control"
+      ],
+      "flows": [
+        {
+          "label": "Current",
+          "steps": [
+            "Parent screen",
+            "Planned page",
+            "Back"
+          ]
+        },
+        {
+          "label": "Proposed",
+          "steps": [
+            "Choose visibility",
+            "Save settings",
+            "API enforces choice"
+          ]
+        }
+      ],
+      "rule": "Needs stored visibility settings and backend enforcement, plus blocking/reporting decisions.",
+      "question": "Which privacy choices must exist before the first social feature?",
+      "images": [
+        "privacy"
+      ],
+      "status": "Planned placeholder",
+      "number": 27
+    },
+    {
+      "id": "feed",
+      "title": "Climbers' sessions",
+      "group": "Community roadmap",
+      "path": "/explore/feed",
+      "job": "Proposed: see sessions friends deliberately share.",
+      "actions": [
+        "Today: read the plan and return to the parent screen",
+        "Future journey below is a proposal, not a working control"
+      ],
+      "flows": [
+        {
+          "label": "Current",
+          "steps": [
+            "Parent screen",
+            "Planned page",
+            "Back"
+          ]
+        },
+        {
+          "label": "Proposed",
+          "steps": [
+            "Choose sharing",
+            "Publish session",
+            "Friends see feed"
+          ]
+        }
+      ],
+      "rule": "Needs sharing/follow relationships, privacy filtering and a feed service. Private journals must not become public automatically.",
+      "question": "Would users want a feed, or simpler links to share a session?",
+      "images": [
+        "feed"
+      ],
+      "status": "Planned placeholder",
+      "number": 28
+    },
+    {
+      "id": "climbers",
+      "title": "Find climbers",
+      "group": "Community roadmap",
+      "path": "/explore/climbers",
+      "job": "Proposed: find opted-in climbers and open their public identity.",
+      "actions": [
+        "Today: read the plan and return to the parent screen",
+        "Future journey below is a proposal, not a working control"
+      ],
+      "flows": [
+        {
+          "label": "Current",
+          "steps": [
+            "Parent screen",
+            "Planned page",
+            "Back"
+          ]
+        },
+        {
+          "label": "Proposed",
+          "steps": [
+            "Search",
+            "Matching public users",
+            "Public profile"
+          ]
+        }
+      ],
+      "rule": "Needs visibility-filtered search and public-profile APIs; no user search works here yet.",
+      "question": "How should people find friends without exposing private accounts?",
+      "images": [
+        "climbers"
+      ],
+      "status": "Planned placeholder",
+      "number": 29
+    },
+    {
+      "id": "leaderboards",
+      "title": "Leaderboards and points",
+      "group": "Community roadmap",
+      "path": "/explore/leaderboards",
+      "job": "Proposed: compare results fairly, starting within a gym.",
+      "actions": [
+        "Today: read the plan and return to the parent screen",
+        "Future journey below is a proposal, not a working control"
+      ],
+      "flows": [
+        {
+          "label": "Current",
+          "steps": [
+            "Parent screen",
+            "Planned page",
+            "Back"
+          ]
+        },
+        {
+          "label": "Proposed",
+          "steps": [
+            "Opt in",
+            "Choose gym / period",
+            "Standings + score"
+          ]
+        }
+      ],
+      "rule": "Needs scoring, eligibility, periods, ties, trusted result timing and ranking APIs. Global comparison additionally needs defensible gym-grade mapping.",
+      "question": "What behaviour should points reward, and is competition a priority now?",
+      "images": [
+        "leaderboards"
+      ],
+      "status": "Planned placeholder",
+      "number": 30
+    },
+    {
+      "id": "challenges",
+      "title": "Challenges",
+      "group": "Community roadmap",
+      "path": "/explore/challenges",
+      "job": "Proposed: join a goal with clear rules and a time window.",
+      "actions": [
+        "Today: read the plan and return to the parent screen",
+        "Future journey below is a proposal, not a working control"
+      ],
+      "flows": [
+        {
+          "label": "Current",
+          "steps": [
+            "Parent screen",
+            "Planned page",
+            "Back"
+          ]
+        },
+        {
+          "label": "Proposed",
+          "steps": [
+            "Choose challenge",
+            "Join",
+            "Log normally",
+            "Track progress"
+          ]
+        }
+      ],
+      "rule": "Needs challenge definitions, joins, progress, time windows and verification/reset rules. Gym-run challenges may need operator tools.",
+      "question": "What is the smallest challenge people would actually join?",
+      "images": [
+        "challenges"
+      ],
+      "status": "Planned placeholder",
+      "number": 31
+    },
+    {
+      "id": "groups",
+      "title": "Groups and leagues",
+      "group": "Community roadmap",
+      "path": "/explore/groups",
+      "job": "Proposed: climb with a private crew and compare across a season.",
+      "actions": [
+        "Today: read the plan and return to the parent screen",
+        "Future journey below is a proposal, not a working control"
+      ],
+      "flows": [
+        {
+          "label": "Current",
+          "steps": [
+            "Parent screen",
+            "Planned page",
+            "Back"
+          ]
+        },
+        {
+          "label": "Proposed",
+          "steps": [
+            "Create group",
+            "Invite friends",
+            "Join season",
+            "Standings"
+          ]
+        }
+      ],
+      "rule": "Needs membership, invitation permissions, roles, seasons and private standings.",
+      "question": "Do we want informal groups first, or competitive leagues?",
+      "images": [
+        "groups"
+      ],
+      "status": "Planned placeholder",
+      "number": 32
+    },
+    {
+      "id": "beta",
+      "title": "Route photos and beta videos",
+      "group": "Community roadmap",
+      "path": "/routes/[id]/beta",
+      "job": "Proposed: recognise a line and reveal climbing beta when wanted.",
+      "actions": [
+        "Today: read the plan and return to the parent screen",
+        "Future journey below is a proposal, not a working control"
+      ],
+      "flows": [
+        {
+          "label": "Current",
+          "steps": [
+            "Parent screen",
+            "Planned page",
+            "Back"
+          ]
+        },
+        {
+          "label": "Proposed",
+          "steps": [
+            "Choose route",
+            "View photo",
+            "Reveal beta",
+            "Credit / report"
+          ]
+        }
+      ],
+      "rule": "Needs authorised persistent media storage, upload/link policy, processing, attribution and moderation. No upload or playback flow is implemented here.",
+      "question": "Would one route photo or saved video links solve most of the immediate need?",
+      "images": [
+        "beta"
+      ],
+      "status": "Planned placeholder",
+      "number": 33
+    },
+    {
+      "id": "partial-history",
+      "title": "Missing data and recovery",
+      "group": "Supporting states",
+      "path": "Owner journal/history when a read fails",
+      "job": "Show what is known without inventing totals.",
+      "actions": [
+        "Read available records",
+        "See an unavailable total",
+        "Retry by reopening the view"
+      ],
+      "flows": [
+        {
+          "label": "Read failure",
+          "steps": [
+            "Some visits fail",
+            "Total unavailable",
+            "Retry"
+          ]
+        },
+        {
+          "label": "Integrity conflict",
+          "steps": [
+            "Conflicting logs",
+            "Explain ambiguity",
+            "Review source records"
+          ]
+        }
+      ],
+      "rule": "A failed request is not an empty session. Duplicate records also make totals uncertain and may pause logging. The capture shows a sample read failure, not a production outage.",
+      "question": "What information and recovery action should a climber see when saving or loading fails?",
+      "images": [
+        "partial-history"
+      ],
+      "status": "Current UI",
+      "number": 34
+    },
+    {
+      "id": "empty-climbs",
+      "title": "First-use empty state",
+      "group": "Supporting states",
+      "path": "/climbs with no owned logs",
+      "job": "Explain how a new climber can build their journal.",
+      "actions": [
+        "Read what will appear here",
+        "Choose a gym",
+        "Log the first route"
+      ],
+      "flows": [
+        {
+          "label": "First use",
+          "steps": [
+            "No climbs yet",
+            "Choose gym",
+            "Start session",
+            "First log"
+          ]
+        }
+      ],
+      "rule": "This is a deliberately empty sample account state, not failed history.",
+      "question": "Should first use guide people into one simple logged route?",
+      "images": [
+        "empty-climbs"
+      ],
+      "status": "Current UI",
+      "number": 35
+    },
+    {
+      "id": "not-found",
+      "title": "Missing page",
+      "group": "Supporting states",
+      "path": "Unknown URL",
+      "job": "Give a useful way back from an invalid link.",
+      "actions": [
+        "Read the missing-page message",
+        "Follow the Home link"
+      ],
+      "flows": [
+        {
+          "label": "Recovery",
+          "steps": [
+            "Unknown URL",
+            "404",
+            "Home / Welcome"
+          ]
+        }
+      ],
+      "rule": "Home resolves according to sign-in state. /history is a compatibility redirect, not a separate page.",
+      "question": "Where might shared or old links break, and how should we recover?",
+      "images": [
+        "not-found"
+      ],
+      "status": "Current UI",
+      "number": 36
+    }
+  ]
+}

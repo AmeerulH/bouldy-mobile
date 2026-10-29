@@ -1,0 +1,31 @@
+{
+  "updatedDate": "2026-10-28",
+  "status": "Planning complete; migration implementation not started",
+  "planningPage": {
+    "id": "40776faa-3b39-8162-89e3-c6985884558e",
+    "url": "https://app.notion.com/p/40776faa3b39816289e3c6985884558e?pvs=204"
+  },
+  "specificationPage": {
+    "id": "40776faa-3b39-81a9-b8b4-f75df22781cd",
+    "url": "https://app.notion.com/p/40776faa3b3981a9b8b4f75df22781cd?pvs=204"
+  },
+  "parityRegisterPage": {
+    "id": "40776faa-3b39-8172-9c3b-d0a37ef2b7a3",
+    "url": "https://app.notion.com/p/40776faa3b3981729c3bd0a37ef2b7a3?pvs=204"
+  },
+  "agentHandoffPage": {
+    "id": "40776faa-3b39-81c0-9fad-d67d4f57e945",
+    "url": "https://app.notion.com/p/40776faa3b3981c09fadd67d4f57e945?pvs=204"
+  },
+  "trackingCard": {
+    "taskId": "BLY-077",
+    "id": "40676faa-3b39-8127-a698-d570e7631e24",
+    "url": "https://app.notion.com/p/40676faa3b398127a698d570e7631e24?pvs=204",
+    "name": "Migrate Bouldy 1:1 to React Native in a new app repository",
+    "priority": "P1 - Highest"
+  },
+  "supersededPwaFirstPlan": {
+    "id": "40676faa-3b39-8125-ba0b-ffaa3df5c550",
+    "url": "https://app.notion.com/p/40676faa3b398125ba0bffaa3df5c550?pvs=204"
+  }
+}

@@ -1,0 +1,12 @@
+id,sourceExport,source,line,target,contract,navigation,status
+A01,loginAction,lib/actions.ts,32,src/server/commands/login.ts,Email in OAuth username; retain errors; establish platform session,Home /; same auth screens on failure,Not started
+A02,signupAction,lib/actions.ts,52,src/server/commands/signup.ts,"Same fields, required checks, optional grade; register then login",Home /; same signup errors,Not started
+A03,logoutAction,lib/actions.ts,80,src/server/commands/logout.ts,Clear platform credentials and account-scoped cached data,Welcome /welcome,Not started
+A04,startSessionAction,lib/actions.ts,85,src/server/commands/startSession.ts,Positive gym ID; current authenticated user; current UTC date; duration 0,New session /sessions/:id,Not started
+A05,addGymAction,lib/actions.ts,112,src/server/commands/addGym.ts,Trim name/location; exact required copy; no admin-only redesign,Same sheet on error; close and show success on /gyms,Not started
+A06,addRouteAction,lib/actions.ts,133,src/server/commands/addRoute.ts,"Same grade/name/colour validation, deduplicated allowlisted styles, UTC set_date",Parent gym/session on success; same full-screen form on error,Not started
+A07,editRouteAction,lib/actions.ts,184,src/server/commands/editRoute.ts,"Validate route/gym; preserve same-gym check, fields, style filtering",Parent gym on success; edit form on error,Not started
+A08,logAttemptAction,lib/actions.ts,220,src/server/commands/logAttempt.ts,"Re-read session/route/current logs; active/same gym, duplicates, stale IDs, flash/zone guards; preserve exact count rules",Replace sheet after success; anchor route; error reopens affected route sheet,Not started
+A09,correctAttemptAction,lib/actions.ts,268,src/server/commands/correctAttempt.ts,"Positive count, flash exactly 1 and lifetime checks, same session, duplicate/Zone restrictions; never increments",Same sheet on error; success closes and shows correction snackbar,Not started
+A10,endSessionAction,lib/actions.ts,328,src/server/commands/endSession.ts,Same duration rule: positive supplied value else 1; current UI default 60; no actual timer,Session journal on success; same end-session sheet on failure,Not started
+A11,saveAttemptNoteAction,lib/actions.ts,346,src/server/commands/saveAttemptNote.ts,"Same session/attempt verification; PATCH notes only, allow empty text; preserve draft on failure",Stay in context; close editor on success and show saved snackbar,Not started

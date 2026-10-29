@@ -1,0 +1,121 @@
+{
+  "scope": "Isolated fixture data faults and completed visit. Actual raw Android viewport/scroll captures. Scenario flags never reset/delete records.",
+  "states": [
+    {
+      "name": "completed-session",
+      "scenario": "normal",
+      "route": "/sessions/102",
+      "frames": [
+        "states/completed-session/01.png",
+        "states/completed-session/02.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\nSessions\n\n\n\nSessions\n\n\nANDROID TEST WALL\n\nComplete\n2026-10-29\n\nTHIS VISIT\n1 ROUTE\n60 min\n\n1\n\u26a1 1\nSends\nFlashes\nLogged this visit\nSESSION REVIEW\n\nGrade, name or wall\n\n\n\n\n\nFilter\n\n\n\nFilter\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\n\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\nSessions\n\n\n\nSessions\n\n\n\n\n1\n\u26a1 1\nSends\nFlashes\nLogged this visit\nSESSION REVIEW\n\nGrade, name or wall\n\n\n\n\n\nFilter\n\n\n\nFilter\nV2, 1 route \u00b7 1 sent\nV2\n1 route \u00b7 1 sent\n\n\nV2, Session Blue\n\n\n\nV2\nBlue\nSession Blue\nFlashed\n\n\u26a1 Flash\nBack to sessions\nBack to sessions\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\n\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n"
+    },
+    {
+      "name": "empty-home",
+      "scenario": "empty",
+      "route": "/",
+      "frames": [
+        "states/empty-home/01.png",
+        "states/empty-home/02.png",
+        "states/empty-home/03.png",
+        "states/empty-home/04.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\n\n\n\n\nbouldy.\nGood to see you, sample-climber.\nKEEP\nSHOWING UP.\n\n\n\n\nYOUR CLIMBING LOG\nYOUR NEXT SESSION STARTS HERE.\nPick a gym, log the routes you try, and build a history worth returning to.\nStart a session\nStart a session\n\nHome\n\n\n\nHome\n\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\n\n\nYOUR NEXT SESSION STARTS HERE.\nPick a gym, log the routes you try, and build a history worth returning to.\nStart a session\nStart a session\nYOUR PROGRESS\nAll time\n\n\n0\nSessions\n\n0\nSends\n\n0\nFlashes\n\n0\nGyms\nRECENT SESSIONS\nNo sessions yet. Start at a gym and your climbing story will show up here.\n\nHome\n\n\n\nHome\n\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\n\n\nYOUR NEXT SESSION STARTS HERE.\nPick a gym, log the routes you try, and build a history worth returning to.\nStart a session\nStart a session\nYOUR PROGRESS\nAll time\n\n\n0\nSessions\n\n0\nSends\n\n0\nFlashes\n\n0\nGyms\nRECENT SESSIONS\nNo sessions yet. Start at a gym and your climbing story will show up here.\n\nHome\n\n\n\nHome\n\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\n\n\nYOUR NEXT SESSION STARTS HERE.\nPick a gym, log the routes you try, and build a history worth returning to.\nStart a session\nStart a session\nYOUR PROGRESS\nAll time\n\n\n0\nSessions\n\n0\nSends\n\n0\nFlashes\n\n0\nGyms\nRECENT SESSIONS\nNo sessions yet. Start at a gym and your climbing story will show up here.\n\nHome\n\n\n\nHome\n\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n"
+    },
+    {
+      "name": "empty-sessions",
+      "scenario": "empty",
+      "route": "/sessions",
+      "frames": [
+        "states/empty-sessions/01.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\n\nEvery attempt has a place.\nSESSIONS\n\nB\nCLIMB\nLOG\nIMPROVE\n\nSessions\nSessions\nClimbs\nClimbs\n\nYOUR JOURNAL IS READY.\nYour completed sessions, sends, and flashes will collect here after your first climb.\nChoose a gym\nChoose a gym\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\n\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n"
+    },
+    {
+      "name": "empty-climbs",
+      "scenario": "empty",
+      "route": "/climbs",
+      "frames": [
+        "states/empty-climbs/01.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\n\nEvery route you've logged.\nCLIMBS\n\nSessions\nSessions\nClimbs\nClimbs\n\nNO CLIMBS YET\nEach route you log collects here, grouped by gym and grade, with your best result.\nChoose a gym\nChoose a gym\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\n\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n"
+    },
+    {
+      "name": "empty-gyms",
+      "scenario": "empty-gyms",
+      "route": "/gyms",
+      "frames": [
+        "states/empty-gyms/01.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\n\nChoose your wall.\nGYMS\n+ Add gym\n+ Add gym\nALL GYMS\n0 total\nAdd the first gym and you\u2019ll be ready to start your first session.\nView your session journal\nView your session journal\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\n\nYou\n\n\n\n\nYou\n"
+    },
+    {
+      "name": "unavailable-home",
+      "scenario": "unavailable",
+      "route": "/",
+      "frames": [
+        "states/unavailable-home/01.png",
+        "states/unavailable-home/02.png",
+        "states/unavailable-home/03.png",
+        "states/unavailable-home/04.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\n\n\n\n\nbouldy.\nGood to see you, sample-climber.\nKEEP\nSHOWING UP.\n\n\n\nSome journal data could not be loaded. \ufffc\nTry again\nTry again\n\nYOUR CLIMBING LOG\nYOUR JOURNAL IS UNAVAILABLE.\nPick a gym, log the routes you try, and build a history worth returning to.\nStart a session\n\nHome\n\n\n\nHome\n\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\n\n\nYOUR CLIMBING LOG\nYOUR JOURNAL IS UNAVAILABLE.\nPick a gym, log the routes you try, and build a history worth returning to.\nStart a session\nStart a session\nYOUR PROGRESS\nAll time\n\n\n\u2014\nSessions\n\n\u2014\nSends\n\n\u2014\nFlashes\n\n\u2014\nGyms\nRECENT SESSIONS\nYour sessions could not be loaded. Try again above.\n\nHome\n\n\n\nHome\n\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\n\n\nYOUR JOURNAL IS UNAVAILABLE.\nPick a gym, log the routes you try, and build a history worth returning to.\nStart a session\nStart a session\nYOUR PROGRESS\nAll time\n\n\n\u2014\nSessions\n\n\u2014\nSends\n\n\u2014\nFlashes\n\n\u2014\nGyms\nRECENT SESSIONS\nYour sessions could not be loaded. Try again above.\n\nHome\n\n\n\nHome\n\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\n\n\nYOUR JOURNAL IS UNAVAILABLE.\nPick a gym, log the routes you try, and build a history worth returning to.\nStart a session\nStart a session\nYOUR PROGRESS\nAll time\n\n\n\u2014\nSessions\n\n\u2014\nSends\n\n\u2014\nFlashes\n\n\u2014\nGyms\nRECENT SESSIONS\nYour sessions could not be loaded. Try again above.\n\nHome\n\n\n\nHome\n\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n"
+    },
+    {
+      "name": "partial-history",
+      "scenario": "partial",
+      "route": "/routes/11",
+      "frames": [
+        "states/partial-history/01.png",
+        "states/partial-history/02.png",
+        "states/partial-history/03.png",
+        "states/partial-history/04.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\nSessions\n\n\n\nSessions\n\n\nYOUR ROUTE HISTORY\n\n\n\n\nV3 \u00b7 RED\nThe patient heel hook\nSample Boulder Club\n\nTotal unavailable\nA send is recorded in your journal.\n\nSome visits could not be loaded. Available records are shown below; the total is unavailable.\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\nSessions\n\n\n\nSessions\n\n\n\nTotal unavailable\nA send is recorded in your journal.\n\nSome visits could not be loaded. Available records are shown below; the total is unavailable.\nVISIT BY VISIT\nEach entry is a session summary, not a timeline of individual tries. Visits on the same date have no recorded order.\n\n\n24 Oct 2026\n24 Oct 2026\n\nSend\n4 tries \u00b7 Session in progress\n\nPrivate note \u00b7 only you\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\nSessions\n\n\n\nSessions\n\n\n\nSome visits could not be loaded. Available records are shown below; the total is unavailable.\nVISIT BY VISIT\nEach entry is a session summary, not a timeline of individual tries. Visits on the same date have no recorded order.\n\n\n24 Oct 2026\n24 Oct 2026\n\nSend\n4 tries \u00b7 Session in progress\n\nPrivate note \u00b7 only you\nAndroid emulator note.\nEdit note\nEdit note\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\nSessions\n\n\n\nSessions\n\n\n\nSome visits could not be loaded. Available records are shown below; the total is unavailable.\nVISIT BY VISIT\nEach entry is a session summary, not a timeline of individual tries. Visits on the same date have no recorded order.\n\n\n24 Oct 2026\n24 Oct 2026\n\nSend\n4 tries \u00b7 Session in progress\n\nPrivate note \u00b7 only you\nAndroid emulator note.\nEdit note\nEdit note\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n"
+    },
+    {
+      "name": "duplicate-log",
+      "scenario": "duplicate",
+      "route": "/sessions/3",
+      "frames": [
+        "states/duplicate-log/01.png",
+        "states/duplicate-log/02.png",
+        "states/duplicate-log/03.png",
+        "states/duplicate-log/04.png",
+        "states/duplicate-log/05.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\nSessions\n\n\n\nSessions\n\n\nSAMPLE BOULDER CLUB\n\nLive session\n2026-10-24\n\nTODAY'S LOG\n2 ROUTES\nStill climbing\n\n\u2014\n\u26a1 \u2014\nSends\nFlashes\n6 routes at Sample Boulder Club\nROUTE LOG\n+ Add route\n+ Add route\n\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\n\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\nSessions\n\n\n\nSessions\n\n\n\n\n\u2014\n\u26a1 \u2014\nSends\nFlashes\n6 routes at Sample Boulder Club\nROUTE LOG\n+ Add route\n+ Add route\n\nGrade, name or wall\n\n\n\n\n\nFilter\n\n\n\nFilter\n\n\nAll\nAll\nV1, 1 route\nV1\n1\nV2, 2 routes\nV2\n2\nV3, 1 route\nV3\n1\nV4, 1 route\nV4\n1\nV5, 1 route\nV5\n\nTODAY\n2 routes\n\n\nV3, The patient heel hook\n\n\n\nV3\nred\nThe patient heel hook\nConflicting logs\n\n\nV2, A clean finish\n\n\n\nV2\nblue\nA clean finish\n\n\u26a1 Flash\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\n\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\nSessions\n\n\n\nSessions\n\n\n\nTODAY\n2 routes\n\n\nV3, The patient heel hook\n\n\n\nV3\nred\nThe patient heel hook\nConflicting logs\n\n\nV2, A clean finish\n\n\n\nV2\nblue\nA clean finish\nFlashed\n\n\u26a1 Flash\nALL ROUTES BY GRADE\nV1, 1 route \u00b7 1 sent\nV1\n1 route \u00b7 1 sent\n\n\n\n\n\nV1, First steps\n\n\n\nV1\nyellow\nFirst steps\nSent before\nLog a try on V1 First steps\n+1\nV2, 1 route \u00b7 0 sent\nV2\n1 route \u00b7 0 sent\n\n\n\n\n\nV2, A little reach\n\n\n\nV2\npurple\nLog a try on V2 A little reach\n+1\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\n\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\nSessions\n\n\n\nSessions\n\n\nV1, 1 route \u00b7 1 sent\n\n\nV1, First steps\n\n\n\nV1\nyellow\nFirst steps\nSent before\nLog a try on V1 First steps\n+1\nV2, 1 route \u00b7 0 sent\nV2\n1 route \u00b7 0 sent\n\n\n\n\n\nV2, A little reach\n\n\n\nV2\npurple\nA little reach\nSlab \u00b7 Balance\nLog a try on V2 A little reach\n+1\nV4, 1 route \u00b7 0 sent\nV4\n1 route \u00b7 0 sent\n\n\n\n\n\nV4, Fresh wall\n\n\n\nV4\ngreen\nFresh wall\nOverhang \u00b7 Power\nLog a try on V4 Fresh wall\n+1\nV5, 1 route \u00b7 0 sent\nV5\n1 route \u00b7 0 sent\n\n\n\n\n\nV5, Keep the tension\n\n\n\nV5\nblack\nKeep the tension\nLog a try on V5 Keep the tension\n+1\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\n\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\nSessions\n\n\n\nSessions\n\n\nV2, 1 route \u00b7 0 sent\nV2\n\n\nV2, A little reach\n\n\n\nV2\npurple\nA little reach\nSlab \u00b7 Balance\nLog a try on V2 A little reach\n+1\nV4, 1 route \u00b7 0 sent\nV4\n1 route \u00b7 0 sent\n\n\n\n\n\nV4, Fresh wall\n\n\n\nV4\ngreen\nFresh wall\nOverhang \u00b7 Power\nLog a try on V4 Fresh wall\n+1\nV5, 1 route \u00b7 0 sent\nV5\n1 route \u00b7 0 sent\n\n\n\n\n\nV5, Keep the tension\n\n\n\nV5\nblack\nKeep the tension\nOverhang \u00b7 Core\nLog a try on V5 Keep the tension\n+1\nEnd session\nEnd session\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\n\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n"
+    },
+    {
+      "name": "not-found",
+      "scenario": "normal",
+      "route": "/not-a-bouldy-route",
+      "frames": [
+        "states/not-found/01.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbouldy.\n4\n\n\n\n\n4\nLooks like this one was reset.\nTHAT ROUTE IS OFF THE WALL.\nThe page may have moved, retired, or never existed. Head back and pick up where you left off.\nBack to Bouldy\nBack to Bouldy\n"
+    },
+    {
+      "name": "private-read-error",
+      "scenario": "foreign-journal",
+      "route": "/profile",
+      "frames": [
+        "states/private-read-error/01.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\nSample journal \u00b7 local preview\n\n\n\n\n\n\n\n\nBouldy\nTHIS PAGE COULDN'T LOAD.\nThe climbing data didn't come through. Reload to try again.\nReload page\nReload page\n\nHome\n\n\n\nHome\nExplore\n\n\n\n\nExplore\nSessions\n\n\n\n\nSessions\nGyms\n\n\n\n\nGyms\nYou\n\n\n\n\nYou\n\n"
+    }
+  ],
+  "writesUnchanged": true,
+  "passed": true
+}

@@ -1,0 +1,7 @@
+{
+  "before": "android-retest-ui/110-error-retry-before.xml",
+  "after": "android-retest-ui/111-error-retry-success.xml",
+  "recovered": true,
+  "fixtureWritesUnchanged": 15,
+  "scope": "Same native error page, explicit Reload page after restoring fixture availability"
+}

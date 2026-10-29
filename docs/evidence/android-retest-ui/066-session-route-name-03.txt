@@ -1,0 +1,24 @@
+{"text": "", "content-desc": "Tools", "class": "android.widget.ImageView", "clickable": "false", "bounds": "[915,87][993,165]", "focused": "false", "password": "false"}
+{"text": "Sample journal \u00b7 local preview", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,96][1020,144]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Session", "class": "android.view.View", "clickable": "true", "bounds": "[60,188][1020,320]", "focused": "false", "password": "false"}
+{"text": "Session", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[144,224][304,284]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Brown", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[60,339][282,439]", "focused": "false", "password": "false"}
+{"text": "Brown", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[116,364][226,412]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Transparent", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[306,339][528,439]", "focused": "false", "password": "false"}
+{"text": "Transparent", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[321,364][513,412]", "focused": "false", "password": "false"}
+{"text": "Wall / area", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,499][522,559]", "focused": "false", "password": "false"}
+{"text": "Main style", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[558,499][1020,559]", "focused": "false", "password": "false"}
+{"text": "Optional", "content-desc": "Wall / area", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,577][522,721]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Main style, Not recorded", "class": "android.view.View", "clickable": "true", "bounds": "[558,577][1020,721]", "focused": "false", "password": "false"}
+{"text": "Not recorded", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[603,613][890,685]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Add more styles, +", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,808][1020,940]", "focused": "false", "password": "false"}
+{"text": "Add more styles", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,844][386,904]", "focused": "false", "password": "false"}
+{"text": "+", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[989,838][1020,910]", "focused": "false", "password": "false"}
+{"text": "Route name", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1078][1020,1138]", "focused": "false", "password": "false"}
+{"text": "e.g. Red Horizon", "content-desc": "Route name", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,1156][1020,1300]", "focused": "false", "password": "false"}
+{"text": "Setter", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1348][1020,1408]", "focused": "false", "password": "false"}
+{"text": "Optional", "content-desc": "Setter", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,1426][1020,1557]", "focused": "false", "password": "false"}
+{"text": "Competition route", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,1669][981,1557]", "focused": "false", "password": "false"}
+{"text": "Coming soon. Once the gym can mark a route as a comp route, Zone will appear in its session log.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,1741][981,1557]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Add route", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1596][1020,1740]", "focused": "false", "password": "false"}
+{"text": "Add route", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[439,1638][641,1698]", "focused": "false", "password": "false"}

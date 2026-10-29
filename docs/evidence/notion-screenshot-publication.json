@@ -1,0 +1,2238 @@
+{
+  "root": {
+    "id": "40876faa-3b39-8109-83cd-d8e80fb4d41a",
+    "url": "https://app.notion.com/p/40876faa3b39810983cdd8e80fb4d41a"
+  },
+  "categories": [
+    {
+      "id": "40876faa-3b39-8181-a226-fd4479dad25f",
+      "url": "https://app.notion.com/p/40876faa3b398181a226fd4479dad25f",
+      "title": "Page-by-page screenshot index"
+    },
+    {
+      "id": "40876faa-3b39-8153-a5e4-dfce3836222e",
+      "url": "https://app.notion.com/p/40876faa3b398153a5e4dfce3836222e",
+      "title": "Feature screenshot index"
+    },
+    {
+      "id": "40876faa-3b39-81b5-a9cf-ec6fb0b3b78a",
+      "url": "https://app.notion.com/p/40876faa3b3981b5a9cfec6fb0b3b78a",
+      "title": "Empty, error and completed-state index"
+    }
+  ],
+  "publishedPages": [
+    {
+      "title": "01 \u2014 Welcome",
+      "route": "/welcome",
+      "kind": "Page",
+      "frames": [
+        "welcome/01.png",
+        "welcome/02.png"
+      ],
+      "index": 1,
+      "category": 0,
+      "id": "40876faa-3b39-8144-a8a6-ff44169b8028",
+      "url": "https://app.notion.com/p/40876faa3b398144a8a6ff44169b8028?pvs=204",
+      "properties": {
+        "title": "01 \u2014 Welcome"
+      }
+    },
+    {
+      "title": "02 \u2014 Login",
+      "route": "/login",
+      "kind": "Page",
+      "frames": [
+        "login/01.png",
+        "login/02.png"
+      ],
+      "index": 2,
+      "category": 0,
+      "id": "40876faa-3b39-8174-aff0-fda1ff6713bf",
+      "url": "https://app.notion.com/p/40876faa3b398174aff0fda1ff6713bf?pvs=204",
+      "properties": {
+        "title": "02 \u2014 Login"
+      }
+    },
+    {
+      "title": "03 \u2014 Signup",
+      "route": "/signup",
+      "kind": "Page",
+      "frames": [
+        "signup/01.png",
+        "signup/02.png"
+      ],
+      "index": 3,
+      "category": 0,
+      "id": "40876faa-3b39-8119-9cbc-d6be1eb2b116",
+      "url": "https://app.notion.com/p/40876faa3b3981199cbcd6be1eb2b116?pvs=204",
+      "properties": {
+        "title": "03 \u2014 Signup"
+      }
+    },
+    {
+      "title": "04 \u2014 Home",
+      "route": "/",
+      "kind": "Page",
+      "frames": [
+        "home/01.png",
+        "home/02.png",
+        "home/03.png"
+      ],
+      "index": 4,
+      "category": 0,
+      "id": "40876faa-3b39-81e7-aee7-c8b8906f5371",
+      "url": "https://app.notion.com/p/40876faa3b3981e7aee7c8b8906f5371?pvs=204",
+      "properties": {
+        "title": "04 \u2014 Home"
+      }
+    },
+    {
+      "title": "05 \u2014 Gyms",
+      "route": "/gyms",
+      "kind": "Page",
+      "frames": [
+        "gyms/01.png",
+        "gyms/02.png"
+      ],
+      "index": 5,
+      "category": 0,
+      "id": "40876faa-3b39-8103-b96b-f71811db966f",
+      "url": "https://app.notion.com/p/40876faa3b398103b96bf71811db966f?pvs=204",
+      "properties": {
+        "title": "05 \u2014 Gyms"
+      }
+    },
+    {
+      "title": "06 \u2014 Gym detail",
+      "route": "/gyms/1",
+      "kind": "Page",
+      "frames": [
+        "gyms-1/01.png",
+        "gyms-1/02.png",
+        "gyms-1/03.png",
+        "gyms-1/04.png"
+      ],
+      "index": 6,
+      "category": 0,
+      "id": "40876faa-3b39-814d-b29c-f844471ad044",
+      "url": "https://app.notion.com/p/40876faa3b39814db29cf844471ad044?pvs=204",
+      "properties": {
+        "title": "06 \u2014 Gym detail"
+      }
+    },
+    {
+      "title": "07 \u2014 Add gym route",
+      "route": "/gyms/1/routes/new",
+      "kind": "Page",
+      "frames": [
+        "gyms-1-routes-new/01.png",
+        "gyms-1-routes-new/02.png",
+        "gyms-1-routes-new/03.png",
+        "gyms-1-routes-new/04.png"
+      ],
+      "index": 7,
+      "category": 0,
+      "id": "40876faa-3b39-818d-b060-d539333ed459",
+      "url": "https://app.notion.com/p/40876faa3b39818db060d539333ed459?pvs=204",
+      "properties": {
+        "title": "07 \u2014 Add gym route"
+      }
+    },
+    {
+      "title": "08 \u2014 Edit route",
+      "route": "/gyms/1/routes/11/edit",
+      "kind": "Page",
+      "frames": [
+        "gyms-1-routes-11-edit/01.png",
+        "gyms-1-routes-11-edit/02.png",
+        "gyms-1-routes-11-edit/03.png",
+        "gyms-1-routes-11-edit/04.png",
+        "gyms-1-routes-11-edit/05.png"
+      ],
+      "index": 8,
+      "category": 0,
+      "id": "40876faa-3b39-819c-8119-d0f0b9168d2f",
+      "url": "https://app.notion.com/p/40876faa3b39819c8119d0f0b9168d2f?pvs=204",
+      "properties": {
+        "title": "08 \u2014 Edit route"
+      }
+    },
+    {
+      "title": "09 \u2014 Session journal",
+      "route": "/sessions",
+      "kind": "Page",
+      "frames": [
+        "sessions/01.png",
+        "sessions/02.png",
+        "sessions/03.png",
+        "sessions/04.png"
+      ],
+      "index": 9,
+      "category": 0,
+      "id": "40876faa-3b39-81c0-ab0b-e3e6c389d462",
+      "url": "https://app.notion.com/p/40876faa3b3981c0ab0be3e6c389d462?pvs=204",
+      "properties": {
+        "title": "09 \u2014 Session journal"
+      }
+    },
+    {
+      "title": "10 \u2014 Session detail",
+      "route": "/sessions/3",
+      "kind": "Page",
+      "frames": [
+        "sessions-3/01.png",
+        "sessions-3/02.png",
+        "sessions-3/03.png",
+        "sessions-3/04.png",
+        "sessions-3/05.png"
+      ],
+      "index": 10,
+      "category": 0,
+      "id": "40876faa-3b39-81c0-8f36-dd88f3c44f47",
+      "url": "https://app.notion.com/p/40876faa3b3981c08f36dd88f3c44f47?pvs=204",
+      "properties": {
+        "title": "10 \u2014 Session detail"
+      }
+    },
+    {
+      "title": "11 \u2014 Add session route",
+      "route": "/sessions/3/routes/new",
+      "kind": "Page",
+      "frames": [
+        "sessions-3-routes-new/01.png",
+        "sessions-3-routes-new/02.png",
+        "sessions-3-routes-new/03.png",
+        "sessions-3-routes-new/04.png"
+      ],
+      "index": 11,
+      "category": 0,
+      "id": "40876faa-3b39-81c1-bdc6-e72290e24128",
+      "url": "https://app.notion.com/p/40876faa3b3981c1bdc6e72290e24128?pvs=204",
+      "properties": {
+        "title": "11 \u2014 Add session route"
+      }
+    },
+    {
+      "title": "12 \u2014 Climbs collection",
+      "route": "/climbs",
+      "kind": "Page",
+      "frames": [
+        "climbs/01.png",
+        "climbs/02.png"
+      ],
+      "index": 12,
+      "category": 0,
+      "id": "40876faa-3b39-811d-9240-fc0a1e11f391",
+      "url": "https://app.notion.com/p/40876faa3b39811d9240fc0a1e11f391?pvs=204",
+      "properties": {
+        "title": "12 \u2014 Climbs collection"
+      }
+    },
+    {
+      "title": "13 \u2014 Owner route history",
+      "route": "/routes/11",
+      "kind": "Page",
+      "frames": [
+        "routes-11/01.png",
+        "routes-11/02.png",
+        "routes-11/03.png"
+      ],
+      "index": 13,
+      "category": 0,
+      "id": "40876faa-3b39-813c-9364-ce9a370e95e7",
+      "url": "https://app.notion.com/p/40876faa3b39813c9364ce9a370e95e7?pvs=204",
+      "properties": {
+        "title": "13 \u2014 Owner route history"
+      }
+    },
+    {
+      "title": "14 \u2014 Owner profile",
+      "route": "/profile",
+      "kind": "Page",
+      "frames": [
+        "profile/01.png",
+        "profile/02.png",
+        "profile/03.png",
+        "profile/04.png"
+      ],
+      "index": 14,
+      "category": 0,
+      "id": "40876faa-3b39-812a-986c-cd33d6f48dfe",
+      "url": "https://app.notion.com/p/40876faa3b39812a986ccd33d6f48dfe?pvs=204",
+      "properties": {
+        "title": "14 \u2014 Owner profile"
+      }
+    },
+    {
+      "title": "15 \u2014 Explore hub",
+      "route": "/explore",
+      "kind": "Source planned page",
+      "frames": [
+        "explore/01.png",
+        "explore/02.png",
+        "explore/03.png"
+      ],
+      "index": 15,
+      "category": 0,
+      "id": "40876faa-3b39-8193-96a2-cde3820e7164",
+      "url": "https://app.notion.com/p/40876faa3b39819396a2cde3820e7164?pvs=204",
+      "properties": {
+        "title": "15 \u2014 Explore hub"
+      }
+    },
+    {
+      "title": "16 \u2014 Climbers sessions",
+      "route": "/explore/feed",
+      "kind": "Source planned page",
+      "frames": [
+        "explore-feed/01.png",
+        "explore-feed/02.png",
+        "explore-feed/03.png"
+      ],
+      "index": 16,
+      "category": 0,
+      "id": "40876faa-3b39-814d-990d-fc3e64e41e6b",
+      "url": "https://app.notion.com/p/40876faa3b39814d990dfc3e64e41e6b?pvs=204",
+      "properties": {
+        "title": "16 \u2014 Climbers sessions"
+      }
+    },
+    {
+      "title": "17 \u2014 Find climbers",
+      "route": "/explore/climbers",
+      "kind": "Source planned page",
+      "frames": [
+        "explore-climbers/01.png",
+        "explore-climbers/02.png",
+        "explore-climbers/03.png"
+      ],
+      "index": 17,
+      "category": 0,
+      "id": "40876faa-3b39-8170-8f57-e1459a7a4c27",
+      "url": "https://app.notion.com/p/40876faa3b3981708f57e1459a7a4c27?pvs=204",
+      "properties": {
+        "title": "17 \u2014 Find climbers"
+      }
+    },
+    {
+      "title": "18 \u2014 Leaderboards",
+      "route": "/explore/leaderboards",
+      "kind": "Source planned page",
+      "frames": [
+        "explore-leaderboards/01.png",
+        "explore-leaderboards/02.png",
+        "explore-leaderboards/03.png",
+        "explore-leaderboards/04.png"
+      ],
+      "index": 18,
+      "category": 0,
+      "id": "40876faa-3b39-8146-8487-ead672ac3c22",
+      "url": "https://app.notion.com/p/40876faa3b3981468487ead672ac3c22?pvs=204",
+      "properties": {
+        "title": "18 \u2014 Leaderboards"
+      }
+    },
+    {
+      "title": "19 \u2014 Challenges",
+      "route": "/explore/challenges",
+      "kind": "Source planned page",
+      "frames": [
+        "explore-challenges/01.png",
+        "explore-challenges/02.png",
+        "explore-challenges/03.png"
+      ],
+      "index": 19,
+      "category": 0,
+      "id": "40876faa-3b39-8149-a64f-f0da674770c6",
+      "url": "https://app.notion.com/p/40876faa3b398149a64ff0da674770c6?pvs=204",
+      "properties": {
+        "title": "19 \u2014 Challenges"
+      }
+    },
+    {
+      "title": "20 \u2014 Groups and leagues",
+      "route": "/explore/groups",
+      "kind": "Source planned page",
+      "frames": [
+        "explore-groups/01.png",
+        "explore-groups/02.png",
+        "explore-groups/03.png"
+      ],
+      "index": 20,
+      "category": 0,
+      "id": "40876faa-3b39-81c1-aa0e-d7d403db2f08",
+      "url": "https://app.notion.com/p/40876faa3b3981c1aa0ed7d403db2f08?pvs=204",
+      "properties": {
+        "title": "20 \u2014 Groups and leagues"
+      }
+    },
+    {
+      "title": "21 \u2014 Edit profile",
+      "route": "/profile/edit",
+      "kind": "Source planned page",
+      "frames": [
+        "profile-edit/01.png",
+        "profile-edit/02.png",
+        "profile-edit/03.png"
+      ],
+      "index": 21,
+      "category": 0,
+      "id": "40876faa-3b39-81df-ad47-f8db4ce7ebd5",
+      "url": "https://app.notion.com/p/40876faa3b3981dfad47f8db4ce7ebd5?pvs=204",
+      "properties": {
+        "title": "21 \u2014 Edit profile"
+      }
+    },
+    {
+      "title": "22 \u2014 Public profile",
+      "route": "/profile/public",
+      "kind": "Source planned page",
+      "frames": [
+        "profile-public/01.png",
+        "profile-public/02.png",
+        "profile-public/03.png"
+      ],
+      "index": 22,
+      "category": 0,
+      "id": "40876faa-3b39-8190-8fd3-ce81f15b95a6",
+      "url": "https://app.notion.com/p/40876faa3b3981908fd3ce81f15b95a6?pvs=204",
+      "properties": {
+        "title": "22 \u2014 Public profile"
+      }
+    },
+    {
+      "title": "23 \u2014 Privacy",
+      "route": "/profile/privacy",
+      "kind": "Source planned page",
+      "frames": [
+        "profile-privacy/01.png",
+        "profile-privacy/02.png",
+        "profile-privacy/03.png"
+      ],
+      "index": 23,
+      "category": 0,
+      "id": "40876faa-3b39-81a1-8df5-eff7ceba5f25",
+      "url": "https://app.notion.com/p/40876faa3b3981a18df5eff7ceba5f25?pvs=204",
+      "properties": {
+        "title": "23 \u2014 Privacy"
+      }
+    },
+    {
+      "title": "24 \u2014 Route beta",
+      "route": "/routes/11/beta",
+      "kind": "Source planned page",
+      "frames": [
+        "routes-11-beta/01.png",
+        "routes-11-beta/02.png",
+        "routes-11-beta/03.png"
+      ],
+      "index": 24,
+      "category": 0,
+      "id": "40876faa-3b39-8108-9b2f-fce050197acd",
+      "url": "https://app.notion.com/p/40876faa3b3981089b2ffce050197acd?pvs=204",
+      "properties": {
+        "title": "24 \u2014 Route beta"
+      }
+    },
+    {
+      "title": "25 \u2014 Legacy history alias",
+      "route": "/history",
+      "kind": "Page",
+      "frames": [
+        "history/01.png",
+        "history/02.png",
+        "history/03.png",
+        "history/04.png"
+      ],
+      "index": 25,
+      "category": 0,
+      "id": "40876faa-3b39-81e2-87b7-e9c1a6ea6455",
+      "url": "https://app.notion.com/p/40876faa3b3981e287b7e9c1a6ea6455?pvs=204",
+      "properties": {
+        "title": "25 \u2014 Legacy history alias"
+      }
+    },
+    {
+      "title": "26 \u2014 Brand preview",
+      "route": "/brand-preview",
+      "kind": "Development only",
+      "frames": [
+        "brand-preview/01.png",
+        "brand-preview/02.png",
+        "brand-preview/03.png",
+        "brand-preview/04.png",
+        "brand-preview/05.png"
+      ],
+      "index": 26,
+      "category": 0,
+      "id": "40876faa-3b39-8179-88b0-f21764f79318",
+      "url": "https://app.notion.com/p/40876faa3b39817988b0f21764f79318?pvs=204",
+      "properties": {
+        "title": "26 \u2014 Brand preview"
+      }
+    },
+    {
+      "title": "27 \u2014 Loading preview",
+      "route": "/loading-preview",
+      "kind": "Development only",
+      "frames": [
+        "loading-preview/01.png",
+        "loading-preview/02.png",
+        "loading-preview/03.png"
+      ],
+      "index": 27,
+      "category": 0,
+      "id": "40876faa-3b39-8103-974d-d6f4ada8e444",
+      "url": "https://app.notion.com/p/40876faa3b398103974dd6f4ada8e444?pvs=204",
+      "properties": {
+        "title": "27 \u2014 Loading preview"
+      }
+    },
+    {
+      "title": "28 \u2014 Component catalogue",
+      "route": "/component-preview",
+      "kind": "Development catalogue",
+      "frames": [
+        "component-preview/01.png",
+        "component-preview/02.png",
+        "component-preview/03.png",
+        "component-preview/04.png",
+        "component-preview/05.png",
+        "component-preview/06.png",
+        "component-preview/07.png",
+        "component-preview/08.png",
+        "component-preview/09.png",
+        "component-preview/10.png",
+        "component-preview/11.png",
+        "component-preview/12.png",
+        "component-preview/13.png",
+        "component-preview/14.png",
+        "component-preview/15.png",
+        "component-preview/16.png",
+        "component-preview/17.png",
+        "component-preview/18.png",
+        "component-preview/19.png",
+        "component-preview/20.png",
+        "component-preview/21.png",
+        "component-preview/22.png",
+        "component-preview/23.png",
+        "component-preview/24.png"
+      ],
+      "index": 28,
+      "category": 0,
+      "id": "40876faa-3b39-818d-839a-db3d3461efcb",
+      "url": "https://app.notion.com/p/40876faa3b39818d839adb3d3461efcb?pvs=204",
+      "properties": {
+        "title": "28 \u2014 Component catalogue"
+      }
+    },
+    {
+      "title": "01 \u2014 Route sheet / existing project",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/015-sheet.png",
+        "features/019-sent-sheet.png"
+      ],
+      "index": 1,
+      "category": 1,
+      "id": "40876faa-3b39-8190-b403-dac5f0ef2290",
+      "url": "https://app.notion.com/p/40876faa3b398190b403dac5f0ef2290?pvs=204",
+      "properties": {
+        "title": "01 \u2014 Route sheet / existing project"
+      }
+    },
+    {
+      "title": "02 \u2014 Attempt increment / Send anchor",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/010-plus-one.png",
+        "features/032-anchor-regression.png"
+      ],
+      "index": 2,
+      "category": 1,
+      "id": "40876faa-3b39-813f-a723-c79adb492e0c",
+      "url": "https://app.notion.com/p/40876faa3b39813fa723c79adb492e0c?pvs=204",
+      "properties": {
+        "title": "02 \u2014 Attempt increment / Send anchor"
+      }
+    },
+    {
+      "title": "03 \u2014 Correction and native result menu",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/020-correction.png",
+        "features/021-result-picker.png",
+        "features/023-correction-bottom.png"
+      ],
+      "index": 3,
+      "category": 1,
+      "id": "40876faa-3b39-81ca-9f8f-d5a9aafd7d1c",
+      "url": "https://app.notion.com/p/40876faa3b3981ca9f8fd5a9aafd7d1c?pvs=204",
+      "properties": {
+        "title": "03 \u2014 Correction and native result menu"
+      }
+    },
+    {
+      "title": "04 \u2014 First-lifetime Flash",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/069-flash-sheet.png",
+        "features/070-flash-saved.png"
+      ],
+      "index": 4,
+      "category": 1,
+      "id": "40876faa-3b39-8120-8194-dda327966b9e",
+      "url": "https://app.notion.com/p/40876faa3b3981208194dda327966b9e?pvs=204",
+      "properties": {
+        "title": "04 \u2014 First-lifetime Flash"
+      }
+    },
+    {
+      "title": "05 \u2014 Private note editor / simulated failed save",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/027-note-draft.png",
+        "features/028-note-failed.png",
+        "features/030-resumed-draft.png",
+        "features/031-note-saved.png"
+      ],
+      "index": 5,
+      "category": 1,
+      "id": "40876faa-3b39-811f-8522-d43123a549a1",
+      "url": "https://app.notion.com/p/40876faa3b39811f8522d43123a549a1?pvs=204",
+      "properties": {
+        "title": "05 \u2014 Private note editor / simulated failed save"
+      }
+    },
+    {
+      "title": "06 \u2014 History private-note sheet / cancel",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/100-history-note-modal.png",
+        "features/101-history-note-draft.png",
+        "features/102-history-note-cancelled.png"
+      ],
+      "index": 6,
+      "category": 1,
+      "id": "40876faa-3b39-8147-aa69-caf01564969a",
+      "url": "https://app.notion.com/p/40876faa3b398147aa69caf01564969a?pvs=204",
+      "properties": {
+        "title": "06 \u2014 History private-note sheet / cancel"
+      }
+    },
+    {
+      "title": "07 \u2014 Completed visit note add / clear",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/103-completed-sheet.png",
+        "features/104-completed-note-editor.png",
+        "features/106-completed-note-saved.png",
+        "features/108-completed-note-empty.png",
+        "features/109-completed-note-cleared.png"
+      ],
+      "index": 7,
+      "category": 1,
+      "id": "40876faa-3b39-81fa-af26-d3805092f561",
+      "url": "https://app.notion.com/p/40876faa3b3981faaf26d3805092f561?pvs=204",
+      "properties": {
+        "title": "07 \u2014 Completed visit note add / clear"
+      }
+    },
+    {
+      "title": "08 \u2014 Filters and dependent result count",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/087-filter-clear-before.png",
+        "features/081-filter-verified.png",
+        "features/088-filter-clear-fixed.png"
+      ],
+      "index": 8,
+      "category": 1,
+      "id": "40876faa-3b39-8170-8c25-c263188bb4db",
+      "url": "https://app.notion.com/p/40876faa3b3981708c25c263188bb4db?pvs=204",
+      "properties": {
+        "title": "08 \u2014 Filters and dependent result count"
+      }
+    },
+    {
+      "title": "09 \u2014 Route search / no match / clear",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/091-search-no-match-fixed.png",
+        "features/092-search-clear-fixed.png"
+      ],
+      "index": 9,
+      "category": 1,
+      "id": "40876faa-3b39-81b4-bff5-f38621425330",
+      "url": "https://app.notion.com/p/40876faa3b3981b4bff5f38621425330?pvs=204",
+      "properties": {
+        "title": "09 \u2014 Route search / no match / clear"
+      }
+    },
+    {
+      "title": "10 \u2014 Add gym / required validation / success",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/037-add-gym.png",
+        "features/042-gym-required-error.png",
+        "features/043-gym-filled.png",
+        "features/044-gym-created.png"
+      ],
+      "index": 10,
+      "category": 1,
+      "id": "40876faa-3b39-814b-a8c5-e91f7f1369f6",
+      "url": "https://app.notion.com/p/40876faa3b39814ba8c5e91f7f1369f6?pvs=204",
+      "properties": {
+        "title": "10 \u2014 Add gym / required validation / success"
+      }
+    },
+    {
+      "title": "11 \u2014 Route colour grid / style selection",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/046-route-colours.png",
+        "features/054-style-retest-picker.png",
+        "features/055-style-retest-after.png",
+        "features/056-extra-styles.png"
+      ],
+      "index": 11,
+      "category": 1,
+      "id": "40876faa-3b39-81d4-af39-ed58b0b22a84",
+      "url": "https://app.notion.com/p/40876faa3b3981d4af39ed58b0b22a84?pvs=204",
+      "properties": {
+        "title": "11 \u2014 Route colour grid / style selection"
+      }
+    },
+    {
+      "title": "12 \u2014 Add route fields / create",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/057-route-name.png",
+        "features/058-route-ready.png",
+        "features/059-route-created.png"
+      ],
+      "index": 12,
+      "category": 1,
+      "id": "40876faa-3b39-81eb-87c1-d69760b0622a",
+      "url": "https://app.notion.com/p/40876faa3b3981eb87c1d69760b0622a?pvs=204",
+      "properties": {
+        "title": "12 \u2014 Add route fields / create"
+      }
+    },
+    {
+      "title": "13 \u2014 Edit route / preserve fields",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/060-edit-route-01.png",
+        "features/060-edit-route-02.png",
+        "features/060-edit-route-03.png",
+        "features/060-edit-route-04.png",
+        "features/060-edit-route-05.png",
+        "features/061-edit-filled.png",
+        "features/062-route-edited.png"
+      ],
+      "index": 13,
+      "category": 1,
+      "id": "40876faa-3b39-8115-8c5c-eab6c2a7ff30",
+      "url": "https://app.notion.com/p/40876faa3b3981158c5ceab6c2a7ff30?pvs=204",
+      "properties": {
+        "title": "13 \u2014 Edit route / preserve fields"
+      }
+    },
+    {
+      "title": "14 \u2014 Start session / add route in session",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/063-session-started.png",
+        "features/064-session-add-route.png",
+        "features/067-session-route-ready.png",
+        "features/068-session-route-created.png"
+      ],
+      "index": 14,
+      "category": 1,
+      "id": "40876faa-3b39-8173-a4ee-d2645a0af933",
+      "url": "https://app.notion.com/p/40876faa3b398173a4eed2645a0af933?pvs=204",
+      "properties": {
+        "title": "14 \u2014 Start session / add route in session"
+      }
+    },
+    {
+      "title": "15 \u2014 End session / completed visit",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/071-end-session.png",
+        "features/073-completed-session.png"
+      ],
+      "index": 15,
+      "category": 1,
+      "id": "40876faa-3b39-8171-8e7b-c022d58089dc",
+      "url": "https://app.notion.com/p/40876faa3b3981718e7bc022d58089dc?pvs=204",
+      "properties": {
+        "title": "15 \u2014 End session / completed visit"
+      }
+    },
+    {
+      "title": "16 \u2014 Private read error / explicit recovery",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/110-error-retry-before.png",
+        "features/111-error-retry-success.png"
+      ],
+      "index": 16,
+      "category": 1,
+      "id": "40876faa-3b39-8103-bb06-d3b3797c3e8c",
+      "url": "https://app.notion.com/p/40876faa3b398103bb06d3b3797c3e8c?pvs=204",
+      "properties": {
+        "title": "16 \u2014 Private read error / explicit recovery"
+      }
+    },
+    {
+      "title": "17 \u2014 Logout / signed-out state",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/112-logout-before.png",
+        "features/113-logout-welcome.png"
+      ],
+      "index": 17,
+      "category": 1,
+      "id": "40876faa-3b39-814f-9384-c4a57a830c99",
+      "url": "https://app.notion.com/p/40876faa3b39814f9384c4a57a830c99?pvs=204",
+      "properties": {
+        "title": "17 \u2014 Logout / signed-out state"
+      }
+    },
+    {
+      "title": "18 \u2014 Login required validation",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/120-login-required.png"
+      ],
+      "index": 18,
+      "category": 1,
+      "id": "40876faa-3b39-81bd-bfda-fe068df82d39",
+      "url": "https://app.notion.com/p/40876faa3b3981bdbfdafe068df82d39?pvs=204",
+      "properties": {
+        "title": "18 \u2014 Login required validation"
+      }
+    },
+    {
+      "title": "19 \u2014 Signup required validation",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/124-signup-required.png"
+      ],
+      "index": 19,
+      "category": 1,
+      "id": "40876faa-3b39-81ed-8b9a-fb84e9b8f804",
+      "url": "https://app.notion.com/p/40876faa3b3981ed8b9afb84e9b8f804?pvs=204",
+      "properties": {
+        "title": "19 \u2014 Signup required validation"
+      }
+    },
+    {
+      "title": "20 \u2014 Synthetic signup / register-login completion",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/128-signup-success.png"
+      ],
+      "index": 20,
+      "category": 1,
+      "id": "40876faa-3b39-81e6-bf20-e59c7aa65a9c",
+      "url": "https://app.notion.com/p/40876faa3b3981e6bf20e59c7aa65a9c?pvs=204",
+      "properties": {
+        "title": "20 \u2014 Synthetic signup / register-login completion"
+      }
+    },
+    {
+      "title": "21 \u2014 Expired identity on foreground return",
+      "route": "",
+      "kind": "Feature",
+      "frames": [
+        "features/131-expired-welcome.png"
+      ],
+      "index": 21,
+      "category": 1,
+      "id": "40876faa-3b39-814f-8b08-fcff83da7137",
+      "url": "https://app.notion.com/p/40876faa3b39814f8b08fcff83da7137?pvs=204",
+      "properties": {
+        "title": "21 \u2014 Expired identity on foreground return"
+      }
+    },
+    {
+      "title": "01 \u2014 Completed Session",
+      "route": "/sessions/102",
+      "kind": "Fixture state",
+      "frames": [
+        "states/completed-session/01.png",
+        "states/completed-session/02.png"
+      ],
+      "index": 1,
+      "category": 2,
+      "id": "40876faa-3b39-81d3-8bb6-fcd173ebff12",
+      "url": "https://app.notion.com/p/40876faa3b3981d38bb6fcd173ebff12?pvs=204",
+      "properties": {
+        "title": "01 \u2014 Completed Session"
+      }
+    },
+    {
+      "title": "02 \u2014 Empty Home",
+      "route": "/",
+      "kind": "Fixture state",
+      "frames": [
+        "states/empty-home/01.png",
+        "states/empty-home/02.png",
+        "states/empty-home/03.png",
+        "states/empty-home/04.png"
+      ],
+      "index": 2,
+      "category": 2,
+      "id": "40876faa-3b39-8183-b8bd-fb745ef56710",
+      "url": "https://app.notion.com/p/40876faa3b398183b8bdfb745ef56710?pvs=204",
+      "properties": {
+        "title": "02 \u2014 Empty Home"
+      }
+    },
+    {
+      "title": "03 \u2014 Empty Sessions",
+      "route": "/sessions",
+      "kind": "Fixture state",
+      "frames": [
+        "states/empty-sessions/01.png"
+      ],
+      "index": 3,
+      "category": 2,
+      "id": "40876faa-3b39-8120-a102-dfe3acb83bf6",
+      "url": "https://app.notion.com/p/40876faa3b398120a102dfe3acb83bf6?pvs=204",
+      "properties": {
+        "title": "03 \u2014 Empty Sessions"
+      }
+    },
+    {
+      "title": "04 \u2014 Empty Climbs",
+      "route": "/climbs",
+      "kind": "Fixture state",
+      "frames": [
+        "states/empty-climbs/01.png"
+      ],
+      "index": 4,
+      "category": 2,
+      "id": "40876faa-3b39-81a2-ae50-cb27d5bdeffa",
+      "url": "https://app.notion.com/p/40876faa3b3981a2ae50cb27d5bdeffa?pvs=204",
+      "properties": {
+        "title": "04 \u2014 Empty Climbs"
+      }
+    },
+    {
+      "title": "05 \u2014 Empty Gyms",
+      "route": "/gyms",
+      "kind": "Fixture state",
+      "frames": [
+        "states/empty-gyms/01.png"
+      ],
+      "index": 5,
+      "category": 2,
+      "id": "40876faa-3b39-81e1-9771-eab750274880",
+      "url": "https://app.notion.com/p/40876faa3b3981e19771eab750274880?pvs=204",
+      "properties": {
+        "title": "05 \u2014 Empty Gyms"
+      }
+    },
+    {
+      "title": "06 \u2014 Unavailable Home",
+      "route": "/",
+      "kind": "Fixture state",
+      "frames": [
+        "states/unavailable-home/01.png",
+        "states/unavailable-home/02.png",
+        "states/unavailable-home/03.png",
+        "states/unavailable-home/04.png"
+      ],
+      "index": 6,
+      "category": 2,
+      "id": "40876faa-3b39-81a9-b531-f45090a92a38",
+      "url": "https://app.notion.com/p/40876faa3b3981a9b531f45090a92a38?pvs=204",
+      "properties": {
+        "title": "06 \u2014 Unavailable Home"
+      }
+    },
+    {
+      "title": "07 \u2014 Partial History",
+      "route": "/routes/11",
+      "kind": "Fixture state",
+      "frames": [
+        "states/partial-history/01.png",
+        "states/partial-history/02.png",
+        "states/partial-history/03.png",
+        "states/partial-history/04.png"
+      ],
+      "index": 7,
+      "category": 2,
+      "id": "40876faa-3b39-810f-b6b0-f11d3dc157c2",
+      "url": "https://app.notion.com/p/40876faa3b39810fb6b0f11d3dc157c2?pvs=204",
+      "properties": {
+        "title": "07 \u2014 Partial History"
+      }
+    },
+    {
+      "title": "08 \u2014 Duplicate Log",
+      "route": "/sessions/3",
+      "kind": "Fixture state",
+      "frames": [
+        "states/duplicate-log/01.png",
+        "states/duplicate-log/02.png",
+        "states/duplicate-log/03.png",
+        "states/duplicate-log/04.png",
+        "states/duplicate-log/05.png"
+      ],
+      "index": 8,
+      "category": 2,
+      "id": "40876faa-3b39-81eb-b7c1-d766b182dc94",
+      "url": "https://app.notion.com/p/40876faa3b3981ebb7c1d766b182dc94?pvs=204",
+      "properties": {
+        "title": "08 \u2014 Duplicate Log"
+      }
+    },
+    {
+      "title": "09 \u2014 Not Found",
+      "route": "/not-a-bouldy-route",
+      "kind": "Fixture state",
+      "frames": [
+        "states/not-found/01.png"
+      ],
+      "index": 9,
+      "category": 2,
+      "id": "40876faa-3b39-8117-98be-e42c8d677a33",
+      "url": "https://app.notion.com/p/40876faa3b39811798bee42c8d677a33?pvs=204",
+      "properties": {
+        "title": "09 \u2014 Not Found"
+      }
+    },
+    {
+      "title": "10 \u2014 Private Read Error",
+      "route": "/profile",
+      "kind": "Fixture state",
+      "frames": [
+        "states/private-read-error/01.png"
+      ],
+      "index": 10,
+      "category": 2,
+      "id": "40876faa-3b39-8113-ace5-f2140d6fcc82",
+      "url": "https://app.notion.com/p/40876faa3b398113ace5f2140d6fcc82?pvs=204",
+      "properties": {
+        "title": "10 \u2014 Private Read Error"
+      }
+    }
+  ],
+  "uploads": {
+    "welcome/01.png": {
+      "file_upload_id": "40876faa-3b39-8134-a429-00b205293430",
+      "filename": "bouldy-android-welcome-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8134-a429-00b205293430",
+      "status": "uploaded"
+    },
+    "welcome/02.png": {
+      "file_upload_id": "40876faa-3b39-8158-a048-00b26fd5c585",
+      "filename": "bouldy-android-welcome-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-8158-a048-00b26fd5c585",
+      "status": "uploaded"
+    },
+    "login/01.png": {
+      "file_upload_id": "40876faa-3b39-8144-8201-00b22d62992f",
+      "filename": "bouldy-android-login-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8144-8201-00b22d62992f",
+      "status": "uploaded"
+    },
+    "login/02.png": {
+      "file_upload_id": "40876faa-3b39-819d-890c-00b206a77e0a",
+      "filename": "bouldy-android-login-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-819d-890c-00b206a77e0a",
+      "status": "uploaded"
+    },
+    "signup/01.png": {
+      "file_upload_id": "40876faa-3b39-81d3-a05b-00b26ed234a1",
+      "filename": "bouldy-android-signup-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81d3-a05b-00b26ed234a1",
+      "status": "uploaded"
+    },
+    "signup/02.png": {
+      "file_upload_id": "40876faa-3b39-81d1-879d-00b2629e9ba1",
+      "filename": "bouldy-android-signup-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-81d1-879d-00b2629e9ba1",
+      "status": "uploaded"
+    },
+    "home/02.png": {
+      "file_upload_id": "40876faa-3b39-815e-af54-00b2fffe7cf6",
+      "filename": "bouldy-android-home-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-815e-af54-00b2fffe7cf6",
+      "status": "uploaded"
+    },
+    "home/03.png": {
+      "file_upload_id": "40876faa-3b39-81df-9853-00b29840bd92",
+      "filename": "bouldy-android-home-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-81df-9853-00b29840bd92",
+      "status": "uploaded"
+    },
+    "home/01.png": {
+      "file_upload_id": "40876faa-3b39-813b-8fb9-00b29e4d344d",
+      "filename": "bouldy-android-home-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-813b-8fb9-00b29e4d344d",
+      "status": "uploaded"
+    },
+    "gyms/01.png": {
+      "file_upload_id": "40876faa-3b39-810b-ab08-00b244669559",
+      "filename": "bouldy-android-gyms-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-810b-ab08-00b244669559",
+      "status": "uploaded"
+    },
+    "gyms/02.png": {
+      "file_upload_id": "40876faa-3b39-81ab-8a23-00b296977295",
+      "filename": "bouldy-android-gyms-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-81ab-8a23-00b296977295",
+      "status": "uploaded"
+    },
+    "gyms-1/01.png": {
+      "file_upload_id": "40876faa-3b39-8166-a160-00b22535d62a",
+      "filename": "bouldy-android-gyms-1-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8166-a160-00b22535d62a",
+      "status": "uploaded"
+    },
+    "gyms-1/02.png": {
+      "file_upload_id": "40876faa-3b39-8175-9619-00b20d96a285",
+      "filename": "bouldy-android-gyms-1-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-8175-9619-00b20d96a285",
+      "status": "uploaded"
+    },
+    "gyms-1/03.png": {
+      "file_upload_id": "40876faa-3b39-81fb-ae1a-00b26c831ecb",
+      "filename": "bouldy-android-gyms-1-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-81fb-ae1a-00b26c831ecb",
+      "status": "uploaded"
+    },
+    "gyms-1/04.png": {
+      "file_upload_id": "40876faa-3b39-8101-94c2-00b2d146c01e",
+      "filename": "bouldy-android-gyms-1-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-8101-94c2-00b2d146c01e",
+      "status": "uploaded"
+    },
+    "gyms-1-routes-new/01.png": {
+      "file_upload_id": "40876faa-3b39-81c6-b840-00b2dd564c87",
+      "filename": "bouldy-android-gyms-1-routes-new-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81c6-b840-00b2dd564c87",
+      "status": "uploaded"
+    },
+    "gyms-1-routes-new/02.png": {
+      "file_upload_id": "40876faa-3b39-819a-b104-00b271ef9250",
+      "filename": "bouldy-android-gyms-1-routes-new-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-819a-b104-00b271ef9250",
+      "status": "uploaded"
+    },
+    "gyms-1-routes-new/03.png": {
+      "file_upload_id": "40876faa-3b39-8180-b36b-00b267b7cdbc",
+      "filename": "bouldy-android-gyms-1-routes-new-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8180-b36b-00b267b7cdbc",
+      "status": "uploaded"
+    },
+    "gyms-1-routes-new/04.png": {
+      "file_upload_id": "40876faa-3b39-8149-b5da-00b27b3f1d1e",
+      "filename": "bouldy-android-gyms-1-routes-new-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-8149-b5da-00b27b3f1d1e",
+      "status": "uploaded"
+    },
+    "gyms-1-routes-11-edit/01.png": {
+      "file_upload_id": "40876faa-3b39-8143-80e5-00b26209fc34",
+      "filename": "bouldy-android-gyms-1-routes-11-edit-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8143-80e5-00b26209fc34",
+      "status": "uploaded"
+    },
+    "gyms-1-routes-11-edit/02.png": {
+      "file_upload_id": "40876faa-3b39-8164-8705-00b23f76a6a5",
+      "filename": "bouldy-android-gyms-1-routes-11-edit-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-8164-8705-00b23f76a6a5",
+      "status": "uploaded"
+    },
+    "gyms-1-routes-11-edit/03.png": {
+      "file_upload_id": "40876faa-3b39-8107-9199-00b2b73a62f0",
+      "filename": "bouldy-android-gyms-1-routes-11-edit-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8107-9199-00b2b73a62f0",
+      "status": "uploaded"
+    },
+    "gyms-1-routes-11-edit/04.png": {
+      "file_upload_id": "40876faa-3b39-8107-a6d1-00b2d66bd768",
+      "filename": "bouldy-android-gyms-1-routes-11-edit-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-8107-a6d1-00b2d66bd768",
+      "status": "uploaded"
+    },
+    "gyms-1-routes-11-edit/05.png": {
+      "file_upload_id": "40876faa-3b39-814f-8810-00b27bcb0ad6",
+      "filename": "bouldy-android-gyms-1-routes-11-edit-05.png",
+      "markdown_source": "file-upload://40876faa-3b39-814f-8810-00b27bcb0ad6",
+      "status": "uploaded"
+    },
+    "sessions/01.png": {
+      "file_upload_id": "40876faa-3b39-8147-9ec9-00b282ef76ca",
+      "filename": "bouldy-android-sessions-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8147-9ec9-00b282ef76ca",
+      "status": "uploaded"
+    },
+    "sessions/02.png": {
+      "file_upload_id": "40876faa-3b39-811d-a02e-00b2075462a2",
+      "filename": "bouldy-android-sessions-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-811d-a02e-00b2075462a2",
+      "status": "uploaded"
+    },
+    "sessions/03.png": {
+      "file_upload_id": "40876faa-3b39-8133-af72-00b2f8d5bfa9",
+      "filename": "bouldy-android-sessions-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8133-af72-00b2f8d5bfa9",
+      "status": "uploaded"
+    },
+    "sessions/04.png": {
+      "file_upload_id": "40876faa-3b39-8112-80a3-00b28d6f1f87",
+      "filename": "bouldy-android-sessions-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-8112-80a3-00b28d6f1f87",
+      "status": "uploaded"
+    },
+    "sessions-3/01.png": {
+      "file_upload_id": "40876faa-3b39-8147-a088-00b239e445c9",
+      "filename": "bouldy-android-sessions-3-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8147-a088-00b239e445c9",
+      "status": "uploaded"
+    },
+    "sessions-3/02.png": {
+      "file_upload_id": "40876faa-3b39-81c9-80b0-00b2a87b5c5b",
+      "filename": "bouldy-android-sessions-3-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-81c9-80b0-00b2a87b5c5b",
+      "status": "uploaded"
+    },
+    "sessions-3/03.png": {
+      "file_upload_id": "40876faa-3b39-8185-9cc7-00b2de669b0d",
+      "filename": "bouldy-android-sessions-3-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8185-9cc7-00b2de669b0d",
+      "status": "uploaded"
+    },
+    "sessions-3/04.png": {
+      "file_upload_id": "40876faa-3b39-8127-bbaa-00b21a3c8a48",
+      "filename": "bouldy-android-sessions-3-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-8127-bbaa-00b21a3c8a48",
+      "status": "uploaded"
+    },
+    "sessions-3/05.png": {
+      "file_upload_id": "40876faa-3b39-81cb-932a-00b20db47dc8",
+      "filename": "bouldy-android-sessions-3-05.png",
+      "markdown_source": "file-upload://40876faa-3b39-81cb-932a-00b20db47dc8",
+      "status": "uploaded"
+    },
+    "sessions-3-routes-new/01.png": {
+      "file_upload_id": "40876faa-3b39-8148-9eab-00b269454e46",
+      "filename": "bouldy-android-sessions-3-routes-new-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8148-9eab-00b269454e46",
+      "status": "uploaded"
+    },
+    "sessions-3-routes-new/02.png": {
+      "file_upload_id": "40876faa-3b39-81ce-bfab-00b213d0531c",
+      "filename": "bouldy-android-sessions-3-routes-new-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-81ce-bfab-00b213d0531c",
+      "status": "uploaded"
+    },
+    "sessions-3-routes-new/03.png": {
+      "file_upload_id": "40876faa-3b39-81d8-b066-00b2e4be7788",
+      "filename": "bouldy-android-sessions-3-routes-new-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-81d8-b066-00b2e4be7788",
+      "status": "uploaded"
+    },
+    "sessions-3-routes-new/04.png": {
+      "file_upload_id": "40876faa-3b39-81da-b445-00b2af2959ca",
+      "filename": "bouldy-android-sessions-3-routes-new-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-81da-b445-00b2af2959ca",
+      "status": "uploaded"
+    },
+    "climbs/01.png": {
+      "file_upload_id": "40876faa-3b39-8114-ad08-00b218a6f39f",
+      "filename": "bouldy-android-climbs-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8114-ad08-00b218a6f39f",
+      "status": "uploaded"
+    },
+    "climbs/02.png": {
+      "file_upload_id": "40876faa-3b39-8174-a40c-00b22ac368f2",
+      "filename": "bouldy-android-climbs-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-8174-a40c-00b22ac368f2",
+      "status": "uploaded"
+    },
+    "routes-11/01.png": {
+      "file_upload_id": "40876faa-3b39-81a0-939b-00b2a228d89b",
+      "filename": "bouldy-android-routes-11-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81a0-939b-00b2a228d89b",
+      "status": "uploaded"
+    },
+    "routes-11/02.png": {
+      "file_upload_id": "40876faa-3b39-819f-9114-00b2e621c24d",
+      "filename": "bouldy-android-routes-11-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-819f-9114-00b2e621c24d",
+      "status": "uploaded"
+    },
+    "routes-11/03.png": {
+      "file_upload_id": "40876faa-3b39-81f6-ad64-00b2e2593ce3",
+      "filename": "bouldy-android-routes-11-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-81f6-ad64-00b2e2593ce3",
+      "status": "uploaded"
+    },
+    "profile/01.png": {
+      "file_upload_id": "40876faa-3b39-81c7-9f24-00b299baad72",
+      "filename": "bouldy-android-profile-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81c7-9f24-00b299baad72",
+      "status": "uploaded"
+    },
+    "profile/02.png": {
+      "file_upload_id": "40876faa-3b39-811d-8f19-00b2e7107a6d",
+      "filename": "bouldy-android-profile-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-811d-8f19-00b2e7107a6d",
+      "status": "uploaded"
+    },
+    "profile/03.png": {
+      "file_upload_id": "40876faa-3b39-81b5-8976-00b22363866b",
+      "filename": "bouldy-android-profile-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-81b5-8976-00b22363866b",
+      "status": "uploaded"
+    },
+    "profile/04.png": {
+      "file_upload_id": "40876faa-3b39-8109-b3b1-00b278b1b926",
+      "filename": "bouldy-android-profile-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-8109-b3b1-00b278b1b926",
+      "status": "uploaded"
+    },
+    "explore/01.png": {
+      "file_upload_id": "40876faa-3b39-81de-9448-00b2e084eb45",
+      "filename": "bouldy-android-explore-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81de-9448-00b2e084eb45",
+      "status": "uploaded"
+    },
+    "explore/02.png": {
+      "file_upload_id": "40876faa-3b39-8102-9e7f-00b2ac4bf291",
+      "filename": "bouldy-android-explore-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-8102-9e7f-00b2ac4bf291",
+      "status": "uploaded"
+    },
+    "explore/03.png": {
+      "file_upload_id": "40876faa-3b39-8129-9148-00b2289eb739",
+      "filename": "bouldy-android-explore-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8129-9148-00b2289eb739",
+      "status": "uploaded"
+    },
+    "explore-feed/01.png": {
+      "file_upload_id": "40876faa-3b39-81ef-8ad3-00b21e84f5c8",
+      "filename": "bouldy-android-explore-feed-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81ef-8ad3-00b21e84f5c8",
+      "status": "uploaded"
+    },
+    "explore-feed/02.png": {
+      "file_upload_id": "40876faa-3b39-81a3-aa5b-00b2b8dcd517",
+      "filename": "bouldy-android-explore-feed-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-81a3-aa5b-00b2b8dcd517",
+      "status": "uploaded"
+    },
+    "explore-feed/03.png": {
+      "file_upload_id": "40876faa-3b39-813c-9a1f-00b2802f1eba",
+      "filename": "bouldy-android-explore-feed-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-813c-9a1f-00b2802f1eba",
+      "status": "uploaded"
+    },
+    "explore-climbers/01.png": {
+      "file_upload_id": "40876faa-3b39-8104-95a2-00b27f8e41cb",
+      "filename": "bouldy-android-explore-climbers-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8104-95a2-00b27f8e41cb",
+      "status": "uploaded"
+    },
+    "explore-climbers/02.png": {
+      "file_upload_id": "40876faa-3b39-819a-afd7-00b25c8130f0",
+      "filename": "bouldy-android-explore-climbers-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-819a-afd7-00b25c8130f0",
+      "status": "uploaded"
+    },
+    "explore-climbers/03.png": {
+      "file_upload_id": "40876faa-3b39-816a-bd08-00b2ce57cd4e",
+      "filename": "bouldy-android-explore-climbers-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-816a-bd08-00b2ce57cd4e",
+      "status": "uploaded"
+    },
+    "explore-leaderboards/01.png": {
+      "file_upload_id": "40876faa-3b39-8127-937e-00b2fdc02dd1",
+      "filename": "bouldy-android-explore-leaderboards-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8127-937e-00b2fdc02dd1",
+      "status": "uploaded"
+    },
+    "explore-leaderboards/02.png": {
+      "file_upload_id": "40876faa-3b39-812b-9aae-00b2244b52f3",
+      "filename": "bouldy-android-explore-leaderboards-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-812b-9aae-00b2244b52f3",
+      "status": "uploaded"
+    },
+    "explore-leaderboards/03.png": {
+      "file_upload_id": "40876faa-3b39-8118-9964-00b2ed2b9857",
+      "filename": "bouldy-android-explore-leaderboards-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8118-9964-00b2ed2b9857",
+      "status": "uploaded"
+    },
+    "explore-leaderboards/04.png": {
+      "file_upload_id": "40876faa-3b39-8198-b457-00b2454aed44",
+      "filename": "bouldy-android-explore-leaderboards-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-8198-b457-00b2454aed44",
+      "status": "uploaded"
+    },
+    "explore-challenges/01.png": {
+      "file_upload_id": "40876faa-3b39-81a5-8e2d-00b240c7e76d",
+      "filename": "bouldy-android-explore-challenges-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81a5-8e2d-00b240c7e76d",
+      "status": "uploaded"
+    },
+    "explore-challenges/02.png": {
+      "file_upload_id": "40876faa-3b39-81ad-a3f4-00b2e443f06a",
+      "filename": "bouldy-android-explore-challenges-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-81ad-a3f4-00b2e443f06a",
+      "status": "uploaded"
+    },
+    "explore-challenges/03.png": {
+      "file_upload_id": "40876faa-3b39-81f6-8e80-00b23f3536f1",
+      "filename": "bouldy-android-explore-challenges-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-81f6-8e80-00b23f3536f1",
+      "status": "uploaded"
+    },
+    "explore-groups/01.png": {
+      "file_upload_id": "40876faa-3b39-810d-99ea-00b28251d523",
+      "filename": "bouldy-android-explore-groups-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-810d-99ea-00b28251d523",
+      "status": "uploaded"
+    },
+    "explore-groups/02.png": {
+      "file_upload_id": "40876faa-3b39-811b-895f-00b2d9698bf3",
+      "filename": "bouldy-android-explore-groups-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-811b-895f-00b2d9698bf3",
+      "status": "uploaded"
+    },
+    "explore-groups/03.png": {
+      "file_upload_id": "40876faa-3b39-8132-9854-00b2174a72fa",
+      "filename": "bouldy-android-explore-groups-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8132-9854-00b2174a72fa",
+      "status": "uploaded"
+    },
+    "profile-edit/01.png": {
+      "file_upload_id": "40876faa-3b39-8184-bc16-00b2c671125f",
+      "filename": "bouldy-android-profile-edit-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8184-bc16-00b2c671125f",
+      "status": "uploaded"
+    },
+    "profile-edit/02.png": {
+      "file_upload_id": "40876faa-3b39-817f-b338-00b2bd701151",
+      "filename": "bouldy-android-profile-edit-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-817f-b338-00b2bd701151",
+      "status": "uploaded"
+    },
+    "profile-edit/03.png": {
+      "file_upload_id": "40876faa-3b39-8105-b9f2-00b2e9ac6471",
+      "filename": "bouldy-android-profile-edit-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8105-b9f2-00b2e9ac6471",
+      "status": "uploaded"
+    },
+    "profile-public/01.png": {
+      "file_upload_id": "40876faa-3b39-8113-90c2-00b2b8eee072",
+      "filename": "bouldy-android-profile-public-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8113-90c2-00b2b8eee072",
+      "status": "uploaded"
+    },
+    "profile-public/02.png": {
+      "file_upload_id": "40876faa-3b39-8101-9409-00b2d96878b0",
+      "filename": "bouldy-android-profile-public-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-8101-9409-00b2d96878b0",
+      "status": "uploaded"
+    },
+    "profile-public/03.png": {
+      "file_upload_id": "40876faa-3b39-81ff-9fd3-00b2518d18bc",
+      "filename": "bouldy-android-profile-public-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-81ff-9fd3-00b2518d18bc",
+      "status": "uploaded"
+    },
+    "profile-privacy/01.png": {
+      "file_upload_id": "40876faa-3b39-8171-85fb-00b2193f9d73",
+      "filename": "bouldy-android-profile-privacy-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8171-85fb-00b2193f9d73",
+      "status": "uploaded"
+    },
+    "profile-privacy/02.png": {
+      "file_upload_id": "40876faa-3b39-817d-a28b-00b2445b3f6d",
+      "filename": "bouldy-android-profile-privacy-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-817d-a28b-00b2445b3f6d",
+      "status": "uploaded"
+    },
+    "profile-privacy/03.png": {
+      "file_upload_id": "40876faa-3b39-81fb-b7af-00b219e544b7",
+      "filename": "bouldy-android-profile-privacy-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-81fb-b7af-00b219e544b7",
+      "status": "uploaded"
+    },
+    "routes-11-beta/01.png": {
+      "file_upload_id": "40876faa-3b39-81bc-b546-00b2b508b18f",
+      "filename": "bouldy-android-routes-11-beta-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81bc-b546-00b2b508b18f",
+      "status": "uploaded"
+    },
+    "routes-11-beta/02.png": {
+      "file_upload_id": "40876faa-3b39-81ac-a469-00b2b49f829b",
+      "filename": "bouldy-android-routes-11-beta-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-81ac-a469-00b2b49f829b",
+      "status": "uploaded"
+    },
+    "routes-11-beta/03.png": {
+      "file_upload_id": "40876faa-3b39-8196-9507-00b2007db588",
+      "filename": "bouldy-android-routes-11-beta-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8196-9507-00b2007db588",
+      "status": "uploaded"
+    },
+    "history/01.png": {
+      "file_upload_id": "40876faa-3b39-81e9-90fb-00b24b00e237",
+      "filename": "bouldy-android-history-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81e9-90fb-00b24b00e237",
+      "status": "uploaded"
+    },
+    "history/02.png": {
+      "file_upload_id": "40876faa-3b39-812e-a2a8-00b2c50fff02",
+      "filename": "bouldy-android-history-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-812e-a2a8-00b2c50fff02",
+      "status": "uploaded"
+    },
+    "history/03.png": {
+      "file_upload_id": "40876faa-3b39-81e0-a166-00b2f637e398",
+      "filename": "bouldy-android-history-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-81e0-a166-00b2f637e398",
+      "status": "uploaded"
+    },
+    "history/04.png": {
+      "file_upload_id": "40876faa-3b39-818e-af5e-00b28e45192d",
+      "filename": "bouldy-android-history-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-818e-af5e-00b28e45192d",
+      "status": "uploaded"
+    },
+    "brand-preview/01.png": {
+      "file_upload_id": "40876faa-3b39-81e0-9af9-00b2c603fd15",
+      "filename": "bouldy-android-brand-preview-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81e0-9af9-00b2c603fd15",
+      "status": "uploaded"
+    },
+    "brand-preview/02.png": {
+      "file_upload_id": "40876faa-3b39-8153-a790-00b2eefa8c7b",
+      "filename": "bouldy-android-brand-preview-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-8153-a790-00b2eefa8c7b",
+      "status": "uploaded"
+    },
+    "brand-preview/03.png": {
+      "file_upload_id": "40876faa-3b39-8137-8b9f-00b2b6e3c5b2",
+      "filename": "bouldy-android-brand-preview-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8137-8b9f-00b2b6e3c5b2",
+      "status": "uploaded"
+    },
+    "brand-preview/04.png": {
+      "file_upload_id": "40876faa-3b39-8132-92ee-00b221c2c4bf",
+      "filename": "bouldy-android-brand-preview-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-8132-92ee-00b221c2c4bf",
+      "status": "uploaded"
+    },
+    "brand-preview/05.png": {
+      "file_upload_id": "40876faa-3b39-8105-a538-00b2fae39dd7",
+      "filename": "bouldy-android-brand-preview-05.png",
+      "markdown_source": "file-upload://40876faa-3b39-8105-a538-00b2fae39dd7",
+      "status": "uploaded"
+    },
+    "loading-preview/01.png": {
+      "file_upload_id": "40876faa-3b39-81f8-a419-00b2ba8b81a9",
+      "filename": "bouldy-android-loading-preview-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81f8-a419-00b2ba8b81a9",
+      "status": "uploaded"
+    },
+    "loading-preview/02.png": {
+      "file_upload_id": "40876faa-3b39-8128-b35d-00b27b32f257",
+      "filename": "bouldy-android-loading-preview-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-8128-b35d-00b27b32f257",
+      "status": "uploaded"
+    },
+    "loading-preview/03.png": {
+      "file_upload_id": "40876faa-3b39-819c-8817-00b2171a5e49",
+      "filename": "bouldy-android-loading-preview-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-819c-8817-00b2171a5e49",
+      "status": "uploaded"
+    },
+    "component-preview/01.png": {
+      "file_upload_id": "40876faa-3b39-8161-aee2-00b24a0b8485",
+      "filename": "bouldy-android-component-preview-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8161-aee2-00b24a0b8485",
+      "status": "uploaded"
+    },
+    "component-preview/02.png": {
+      "file_upload_id": "40876faa-3b39-81a4-9785-00b2fd76c383",
+      "filename": "bouldy-android-component-preview-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-81a4-9785-00b2fd76c383",
+      "status": "uploaded"
+    },
+    "component-preview/03.png": {
+      "file_upload_id": "40876faa-3b39-8160-88e5-00b2b499769f",
+      "filename": "bouldy-android-component-preview-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8160-88e5-00b2b499769f",
+      "status": "uploaded"
+    },
+    "component-preview/04.png": {
+      "file_upload_id": "40876faa-3b39-8128-9531-00b2321c8c2b",
+      "filename": "bouldy-android-component-preview-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-8128-9531-00b2321c8c2b",
+      "status": "uploaded"
+    },
+    "component-preview/05.png": {
+      "file_upload_id": "40876faa-3b39-8176-a54b-00b220615222",
+      "filename": "bouldy-android-component-preview-05.png",
+      "markdown_source": "file-upload://40876faa-3b39-8176-a54b-00b220615222",
+      "status": "uploaded"
+    },
+    "component-preview/06.png": {
+      "file_upload_id": "40876faa-3b39-81a3-9712-00b2423a83e8",
+      "filename": "bouldy-android-component-preview-06.png",
+      "markdown_source": "file-upload://40876faa-3b39-81a3-9712-00b2423a83e8",
+      "status": "uploaded"
+    },
+    "component-preview/07.png": {
+      "file_upload_id": "40876faa-3b39-819d-ace3-00b2cb698b69",
+      "filename": "bouldy-android-component-preview-07.png",
+      "markdown_source": "file-upload://40876faa-3b39-819d-ace3-00b2cb698b69",
+      "status": "uploaded"
+    },
+    "component-preview/08.png": {
+      "file_upload_id": "40876faa-3b39-81cf-bc1d-00b2d48ae7f2",
+      "filename": "bouldy-android-component-preview-08.png",
+      "markdown_source": "file-upload://40876faa-3b39-81cf-bc1d-00b2d48ae7f2",
+      "status": "uploaded"
+    },
+    "component-preview/09.png": {
+      "file_upload_id": "40876faa-3b39-813f-887c-00b2cab21b26",
+      "filename": "bouldy-android-component-preview-09.png",
+      "markdown_source": "file-upload://40876faa-3b39-813f-887c-00b2cab21b26",
+      "status": "uploaded"
+    },
+    "component-preview/10.png": {
+      "file_upload_id": "40876faa-3b39-8111-a784-00b22773612b",
+      "filename": "bouldy-android-component-preview-10.png",
+      "markdown_source": "file-upload://40876faa-3b39-8111-a784-00b22773612b",
+      "status": "uploaded"
+    },
+    "component-preview/11.png": {
+      "file_upload_id": "40876faa-3b39-815a-b86d-00b2375ee9d4",
+      "filename": "bouldy-android-component-preview-11.png",
+      "markdown_source": "file-upload://40876faa-3b39-815a-b86d-00b2375ee9d4",
+      "status": "uploaded"
+    },
+    "component-preview/12.png": {
+      "file_upload_id": "40876faa-3b39-81a9-af70-00b263acce05",
+      "filename": "bouldy-android-component-preview-12.png",
+      "markdown_source": "file-upload://40876faa-3b39-81a9-af70-00b263acce05",
+      "status": "uploaded"
+    },
+    "component-preview/13.png": {
+      "file_upload_id": "40876faa-3b39-8175-b694-00b23b08a8c0",
+      "filename": "bouldy-android-component-preview-13.png",
+      "markdown_source": "file-upload://40876faa-3b39-8175-b694-00b23b08a8c0",
+      "status": "uploaded"
+    },
+    "component-preview/14.png": {
+      "file_upload_id": "40876faa-3b39-8170-a18d-00b268e44c88",
+      "filename": "bouldy-android-component-preview-14.png",
+      "markdown_source": "file-upload://40876faa-3b39-8170-a18d-00b268e44c88",
+      "status": "uploaded"
+    },
+    "component-preview/15.png": {
+      "file_upload_id": "40876faa-3b39-81fc-a527-00b27ee59acc",
+      "filename": "bouldy-android-component-preview-15.png",
+      "markdown_source": "file-upload://40876faa-3b39-81fc-a527-00b27ee59acc",
+      "status": "uploaded"
+    },
+    "component-preview/16.png": {
+      "file_upload_id": "40876faa-3b39-81bf-95b2-00b2c0f09646",
+      "filename": "bouldy-android-component-preview-16.png",
+      "markdown_source": "file-upload://40876faa-3b39-81bf-95b2-00b2c0f09646",
+      "status": "uploaded"
+    },
+    "component-preview/17.png": {
+      "file_upload_id": "40876faa-3b39-81da-a6df-00b2ba7fb2f7",
+      "filename": "bouldy-android-component-preview-17.png",
+      "markdown_source": "file-upload://40876faa-3b39-81da-a6df-00b2ba7fb2f7",
+      "status": "uploaded"
+    },
+    "component-preview/18.png": {
+      "file_upload_id": "40876faa-3b39-81be-bb94-00b2f5241755",
+      "filename": "bouldy-android-component-preview-18.png",
+      "markdown_source": "file-upload://40876faa-3b39-81be-bb94-00b2f5241755",
+      "status": "uploaded"
+    },
+    "component-preview/19.png": {
+      "file_upload_id": "40876faa-3b39-81b3-8304-00b26e6676c0",
+      "filename": "bouldy-android-component-preview-19.png",
+      "markdown_source": "file-upload://40876faa-3b39-81b3-8304-00b26e6676c0",
+      "status": "uploaded"
+    },
+    "component-preview/20.png": {
+      "file_upload_id": "40876faa-3b39-81d2-9e2e-00b28d401e20",
+      "filename": "bouldy-android-component-preview-20.png",
+      "markdown_source": "file-upload://40876faa-3b39-81d2-9e2e-00b28d401e20",
+      "status": "uploaded"
+    },
+    "component-preview/21.png": {
+      "file_upload_id": "40876faa-3b39-815e-abed-00b2f2639183",
+      "filename": "bouldy-android-component-preview-21.png",
+      "markdown_source": "file-upload://40876faa-3b39-815e-abed-00b2f2639183",
+      "status": "uploaded"
+    },
+    "component-preview/22.png": {
+      "file_upload_id": "40876faa-3b39-8173-8f2f-00b25d5fd3fb",
+      "filename": "bouldy-android-component-preview-22.png",
+      "markdown_source": "file-upload://40876faa-3b39-8173-8f2f-00b25d5fd3fb",
+      "status": "uploaded"
+    },
+    "component-preview/23.png": {
+      "file_upload_id": "40876faa-3b39-8157-a1b7-00b2c5b79828",
+      "filename": "bouldy-android-component-preview-23.png",
+      "markdown_source": "file-upload://40876faa-3b39-8157-a1b7-00b2c5b79828",
+      "status": "uploaded"
+    },
+    "component-preview/24.png": {
+      "file_upload_id": "40876faa-3b39-8194-af83-00b2dbf20f20",
+      "filename": "bouldy-android-component-preview-24.png",
+      "markdown_source": "file-upload://40876faa-3b39-8194-af83-00b2dbf20f20",
+      "status": "uploaded"
+    },
+    "features/015-sheet.png": {
+      "file_upload_id": "40876faa-3b39-8142-91d2-00b2e2680086",
+      "filename": "bouldy-android-features-015-sheet.png",
+      "markdown_source": "file-upload://40876faa-3b39-8142-91d2-00b2e2680086",
+      "status": "uploaded"
+    },
+    "features/019-sent-sheet.png": {
+      "file_upload_id": "40876faa-3b39-81df-b651-00b2119a3ce1",
+      "filename": "bouldy-android-features-019-sent-sheet.png",
+      "markdown_source": "file-upload://40876faa-3b39-81df-b651-00b2119a3ce1",
+      "status": "uploaded"
+    },
+    "features/010-plus-one.png": {
+      "file_upload_id": "40876faa-3b39-81ae-9938-00b2050b4a4f",
+      "filename": "bouldy-android-features-010-plus-one.png",
+      "markdown_source": "file-upload://40876faa-3b39-81ae-9938-00b2050b4a4f",
+      "status": "uploaded"
+    },
+    "features/032-anchor-regression.png": {
+      "file_upload_id": "40876faa-3b39-818a-ba66-00b2d7ff3584",
+      "filename": "bouldy-android-features-032-anchor-regression.png",
+      "markdown_source": "file-upload://40876faa-3b39-818a-ba66-00b2d7ff3584",
+      "status": "uploaded"
+    },
+    "features/020-correction.png": {
+      "file_upload_id": "40876faa-3b39-8191-89f3-00b2e3b7a232",
+      "filename": "bouldy-android-features-020-correction.png",
+      "markdown_source": "file-upload://40876faa-3b39-8191-89f3-00b2e3b7a232",
+      "status": "uploaded"
+    },
+    "features/021-result-picker.png": {
+      "file_upload_id": "40876faa-3b39-8158-8180-00b29788d69f",
+      "filename": "bouldy-android-features-021-result-picker.png",
+      "markdown_source": "file-upload://40876faa-3b39-8158-8180-00b29788d69f",
+      "status": "uploaded"
+    },
+    "features/023-correction-bottom.png": {
+      "file_upload_id": "40876faa-3b39-8179-b964-00b23950f0c5",
+      "filename": "bouldy-android-features-023-correction-bottom.png",
+      "markdown_source": "file-upload://40876faa-3b39-8179-b964-00b23950f0c5",
+      "status": "uploaded"
+    },
+    "features/069-flash-sheet.png": {
+      "file_upload_id": "40876faa-3b39-815f-a411-00b2f944d061",
+      "filename": "bouldy-android-features-069-flash-sheet.png",
+      "markdown_source": "file-upload://40876faa-3b39-815f-a411-00b2f944d061",
+      "status": "uploaded"
+    },
+    "features/070-flash-saved.png": {
+      "file_upload_id": "40876faa-3b39-81d2-82f1-00b2fa077ae2",
+      "filename": "bouldy-android-features-070-flash-saved.png",
+      "markdown_source": "file-upload://40876faa-3b39-81d2-82f1-00b2fa077ae2",
+      "status": "uploaded"
+    },
+    "features/027-note-draft.png": {
+      "file_upload_id": "40876faa-3b39-81d7-92fb-00b2d565f434",
+      "filename": "bouldy-android-features-027-note-draft.png",
+      "markdown_source": "file-upload://40876faa-3b39-81d7-92fb-00b2d565f434",
+      "status": "uploaded"
+    },
+    "features/028-note-failed.png": {
+      "file_upload_id": "40876faa-3b39-81a7-b84a-00b2982ac3b7",
+      "filename": "bouldy-android-features-028-note-failed.png",
+      "markdown_source": "file-upload://40876faa-3b39-81a7-b84a-00b2982ac3b7",
+      "status": "uploaded"
+    },
+    "features/030-resumed-draft.png": {
+      "file_upload_id": "40876faa-3b39-8166-be33-00b27268fe47",
+      "filename": "bouldy-android-features-030-resumed-draft.png",
+      "markdown_source": "file-upload://40876faa-3b39-8166-be33-00b27268fe47",
+      "status": "uploaded"
+    },
+    "features/031-note-saved.png": {
+      "file_upload_id": "40876faa-3b39-81e0-962c-00b2bcb506e8",
+      "filename": "bouldy-android-features-031-note-saved.png",
+      "markdown_source": "file-upload://40876faa-3b39-81e0-962c-00b2bcb506e8",
+      "status": "uploaded"
+    },
+    "features/100-history-note-modal.png": {
+      "file_upload_id": "40876faa-3b39-81a2-a8e7-00b2a68af48f",
+      "filename": "bouldy-android-features-100-history-note-modal.png",
+      "markdown_source": "file-upload://40876faa-3b39-81a2-a8e7-00b2a68af48f",
+      "status": "uploaded"
+    },
+    "features/101-history-note-draft.png": {
+      "file_upload_id": "40876faa-3b39-8191-9eba-00b2eb151783",
+      "filename": "bouldy-android-features-101-history-note-draft.png",
+      "markdown_source": "file-upload://40876faa-3b39-8191-9eba-00b2eb151783",
+      "status": "uploaded"
+    },
+    "features/102-history-note-cancelled.png": {
+      "file_upload_id": "40876faa-3b39-8151-95ff-00b2e677cd15",
+      "filename": "bouldy-android-features-102-history-note-cancelled.png",
+      "markdown_source": "file-upload://40876faa-3b39-8151-95ff-00b2e677cd15",
+      "status": "uploaded"
+    },
+    "features/103-completed-sheet.png": {
+      "file_upload_id": "40876faa-3b39-8100-853c-00b2bed5238f",
+      "filename": "bouldy-android-features-103-completed-sheet.png",
+      "markdown_source": "file-upload://40876faa-3b39-8100-853c-00b2bed5238f",
+      "status": "uploaded"
+    },
+    "features/104-completed-note-editor.png": {
+      "file_upload_id": "40876faa-3b39-81eb-8399-00b2db49ab4e",
+      "filename": "bouldy-android-features-104-completed-note-editor.png",
+      "markdown_source": "file-upload://40876faa-3b39-81eb-8399-00b2db49ab4e",
+      "status": "uploaded"
+    },
+    "features/106-completed-note-saved.png": {
+      "file_upload_id": "40876faa-3b39-81c1-b0d0-00b2c25c26c9",
+      "filename": "bouldy-android-features-106-completed-note-saved.png",
+      "markdown_source": "file-upload://40876faa-3b39-81c1-b0d0-00b2c25c26c9",
+      "status": "uploaded"
+    },
+    "features/108-completed-note-empty.png": {
+      "file_upload_id": "40876faa-3b39-8141-a89e-00b2a9924832",
+      "filename": "bouldy-android-features-108-completed-note-empty.png",
+      "markdown_source": "file-upload://40876faa-3b39-8141-a89e-00b2a9924832",
+      "status": "uploaded"
+    },
+    "features/109-completed-note-cleared.png": {
+      "file_upload_id": "40876faa-3b39-81be-ab9b-00b26334d049",
+      "filename": "bouldy-android-features-109-completed-note-cleared.png",
+      "markdown_source": "file-upload://40876faa-3b39-81be-ab9b-00b26334d049",
+      "status": "uploaded"
+    },
+    "features/087-filter-clear-before.png": {
+      "file_upload_id": "40876faa-3b39-819f-9acc-00b2cca7eff8",
+      "filename": "bouldy-android-features-087-filter-clear-before.png",
+      "markdown_source": "file-upload://40876faa-3b39-819f-9acc-00b2cca7eff8",
+      "status": "uploaded"
+    },
+    "features/081-filter-verified.png": {
+      "file_upload_id": "40876faa-3b39-8139-80d9-00b2df0c307c",
+      "filename": "bouldy-android-features-081-filter-verified.png",
+      "markdown_source": "file-upload://40876faa-3b39-8139-80d9-00b2df0c307c",
+      "status": "uploaded"
+    },
+    "features/088-filter-clear-fixed.png": {
+      "file_upload_id": "40876faa-3b39-8121-820f-00b2c9cc8d62",
+      "filename": "bouldy-android-features-088-filter-clear-fixed.png",
+      "markdown_source": "file-upload://40876faa-3b39-8121-820f-00b2c9cc8d62",
+      "status": "uploaded"
+    },
+    "features/091-search-no-match-fixed.png": {
+      "file_upload_id": "40876faa-3b39-81af-b443-00b2cdab5f6f",
+      "filename": "bouldy-android-features-091-search-no-match-fixed.png",
+      "markdown_source": "file-upload://40876faa-3b39-81af-b443-00b2cdab5f6f",
+      "status": "uploaded"
+    },
+    "features/092-search-clear-fixed.png": {
+      "file_upload_id": "40876faa-3b39-8114-b6e5-00b200a5f51c",
+      "filename": "bouldy-android-features-092-search-clear-fixed.png",
+      "markdown_source": "file-upload://40876faa-3b39-8114-b6e5-00b200a5f51c",
+      "status": "uploaded"
+    },
+    "features/037-add-gym.png": {
+      "file_upload_id": "40876faa-3b39-814b-a30b-00b2fc5e53f8",
+      "filename": "bouldy-android-features-037-add-gym.png",
+      "markdown_source": "file-upload://40876faa-3b39-814b-a30b-00b2fc5e53f8",
+      "status": "uploaded"
+    },
+    "features/042-gym-required-error.png": {
+      "file_upload_id": "40876faa-3b39-811e-b21f-00b2a8a9cfe4",
+      "filename": "bouldy-android-features-042-gym-required-error.png",
+      "markdown_source": "file-upload://40876faa-3b39-811e-b21f-00b2a8a9cfe4",
+      "status": "uploaded"
+    },
+    "features/043-gym-filled.png": {
+      "file_upload_id": "40876faa-3b39-8172-b01a-00b2a4be00f8",
+      "filename": "bouldy-android-features-043-gym-filled.png",
+      "markdown_source": "file-upload://40876faa-3b39-8172-b01a-00b2a4be00f8",
+      "status": "uploaded"
+    },
+    "features/044-gym-created.png": {
+      "file_upload_id": "40876faa-3b39-8102-a61b-00b245afedce",
+      "filename": "bouldy-android-features-044-gym-created.png",
+      "markdown_source": "file-upload://40876faa-3b39-8102-a61b-00b245afedce",
+      "status": "uploaded"
+    },
+    "features/046-route-colours.png": {
+      "file_upload_id": "40876faa-3b39-81d1-b15b-00b2cb4338d4",
+      "filename": "bouldy-android-features-046-route-colours.png",
+      "markdown_source": "file-upload://40876faa-3b39-81d1-b15b-00b2cb4338d4",
+      "status": "uploaded"
+    },
+    "features/054-style-retest-picker.png": {
+      "file_upload_id": "40876faa-3b39-81b5-957b-00b24fb134b6",
+      "filename": "bouldy-android-features-054-style-retest-picker.png",
+      "markdown_source": "file-upload://40876faa-3b39-81b5-957b-00b24fb134b6",
+      "status": "uploaded"
+    },
+    "features/055-style-retest-after.png": {
+      "file_upload_id": "40876faa-3b39-81b6-a1fc-00b235db588c",
+      "filename": "bouldy-android-features-055-style-retest-after.png",
+      "markdown_source": "file-upload://40876faa-3b39-81b6-a1fc-00b235db588c",
+      "status": "uploaded"
+    },
+    "features/056-extra-styles.png": {
+      "file_upload_id": "40876faa-3b39-8164-ba2d-00b2ac14e50b",
+      "filename": "bouldy-android-features-056-extra-styles.png",
+      "markdown_source": "file-upload://40876faa-3b39-8164-ba2d-00b2ac14e50b",
+      "status": "uploaded"
+    },
+    "features/057-route-name.png": {
+      "file_upload_id": "40876faa-3b39-814b-b605-00b28cf7b990",
+      "filename": "bouldy-android-features-057-route-name.png",
+      "markdown_source": "file-upload://40876faa-3b39-814b-b605-00b28cf7b990",
+      "status": "uploaded"
+    },
+    "features/058-route-ready.png": {
+      "file_upload_id": "40876faa-3b39-8112-aa2a-00b20d163e71",
+      "filename": "bouldy-android-features-058-route-ready.png",
+      "markdown_source": "file-upload://40876faa-3b39-8112-aa2a-00b20d163e71",
+      "status": "uploaded"
+    },
+    "features/059-route-created.png": {
+      "file_upload_id": "40876faa-3b39-810f-bfcd-00b28bfe4823",
+      "filename": "bouldy-android-features-059-route-created.png",
+      "markdown_source": "file-upload://40876faa-3b39-810f-bfcd-00b28bfe4823",
+      "status": "uploaded"
+    },
+    "features/060-edit-route-01.png": {
+      "file_upload_id": "40876faa-3b39-813e-8dfc-00b23db58a13",
+      "filename": "bouldy-android-features-060-edit-route-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-813e-8dfc-00b23db58a13",
+      "status": "uploaded"
+    },
+    "features/060-edit-route-02.png": {
+      "file_upload_id": "40876faa-3b39-81e1-a192-00b249d67adf",
+      "filename": "bouldy-android-features-060-edit-route-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-81e1-a192-00b249d67adf",
+      "status": "uploaded"
+    },
+    "features/060-edit-route-03.png": {
+      "file_upload_id": "40876faa-3b39-8101-8b20-00b261ad40b1",
+      "filename": "bouldy-android-features-060-edit-route-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8101-8b20-00b261ad40b1",
+      "status": "uploaded"
+    },
+    "features/060-edit-route-04.png": {
+      "file_upload_id": "40876faa-3b39-81a4-b88b-00b21b4658fc",
+      "filename": "bouldy-android-features-060-edit-route-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-81a4-b88b-00b21b4658fc",
+      "status": "uploaded"
+    },
+    "features/060-edit-route-05.png": {
+      "file_upload_id": "40876faa-3b39-8151-924c-00b2fa8e72ea",
+      "filename": "bouldy-android-features-060-edit-route-05.png",
+      "markdown_source": "file-upload://40876faa-3b39-8151-924c-00b2fa8e72ea",
+      "status": "uploaded"
+    },
+    "features/061-edit-filled.png": {
+      "file_upload_id": "40876faa-3b39-81f8-8c8e-00b2f08a790b",
+      "filename": "bouldy-android-features-061-edit-filled.png",
+      "markdown_source": "file-upload://40876faa-3b39-81f8-8c8e-00b2f08a790b",
+      "status": "uploaded"
+    },
+    "features/062-route-edited.png": {
+      "file_upload_id": "40876faa-3b39-8116-8d38-00b2194ea0f1",
+      "filename": "bouldy-android-features-062-route-edited.png",
+      "markdown_source": "file-upload://40876faa-3b39-8116-8d38-00b2194ea0f1",
+      "status": "uploaded"
+    },
+    "features/063-session-started.png": {
+      "file_upload_id": "40876faa-3b39-8112-874c-00b2edd2b115",
+      "filename": "bouldy-android-features-063-session-started.png",
+      "markdown_source": "file-upload://40876faa-3b39-8112-874c-00b2edd2b115",
+      "status": "uploaded"
+    },
+    "features/064-session-add-route.png": {
+      "file_upload_id": "40876faa-3b39-8143-80d4-00b2665cacc5",
+      "filename": "bouldy-android-features-064-session-add-route.png",
+      "markdown_source": "file-upload://40876faa-3b39-8143-80d4-00b2665cacc5",
+      "status": "uploaded"
+    },
+    "features/067-session-route-ready.png": {
+      "file_upload_id": "40876faa-3b39-815b-8622-00b2937e2666",
+      "filename": "bouldy-android-features-067-session-route-ready.png",
+      "markdown_source": "file-upload://40876faa-3b39-815b-8622-00b2937e2666",
+      "status": "uploaded"
+    },
+    "features/068-session-route-created.png": {
+      "file_upload_id": "40876faa-3b39-81df-9497-00b2124af68f",
+      "filename": "bouldy-android-features-068-session-route-created.png",
+      "markdown_source": "file-upload://40876faa-3b39-81df-9497-00b2124af68f",
+      "status": "uploaded"
+    },
+    "features/071-end-session.png": {
+      "file_upload_id": "40876faa-3b39-814d-be7d-00b2807892d2",
+      "filename": "bouldy-android-features-071-end-session.png",
+      "markdown_source": "file-upload://40876faa-3b39-814d-be7d-00b2807892d2",
+      "status": "uploaded"
+    },
+    "features/073-completed-session.png": {
+      "file_upload_id": "40876faa-3b39-8193-a1ae-00b261661441",
+      "filename": "bouldy-android-features-073-completed-session.png",
+      "markdown_source": "file-upload://40876faa-3b39-8193-a1ae-00b261661441",
+      "status": "uploaded"
+    },
+    "features/110-error-retry-before.png": {
+      "file_upload_id": "40876faa-3b39-81d2-99c9-00b2e3df7bfd",
+      "filename": "bouldy-android-features-110-error-retry-before.png",
+      "markdown_source": "file-upload://40876faa-3b39-81d2-99c9-00b2e3df7bfd",
+      "status": "uploaded"
+    },
+    "features/111-error-retry-success.png": {
+      "file_upload_id": "40876faa-3b39-811e-a3aa-00b2f78603c0",
+      "filename": "bouldy-android-features-111-error-retry-success.png",
+      "markdown_source": "file-upload://40876faa-3b39-811e-a3aa-00b2f78603c0",
+      "status": "uploaded"
+    },
+    "features/112-logout-before.png": {
+      "file_upload_id": "40876faa-3b39-81bb-8237-00b2111cf0f8",
+      "filename": "bouldy-android-features-112-logout-before.png",
+      "markdown_source": "file-upload://40876faa-3b39-81bb-8237-00b2111cf0f8",
+      "status": "uploaded"
+    },
+    "features/113-logout-welcome.png": {
+      "file_upload_id": "40876faa-3b39-81ee-9e52-00b21b5b4090",
+      "filename": "bouldy-android-features-113-logout-welcome.png",
+      "markdown_source": "file-upload://40876faa-3b39-81ee-9e52-00b21b5b4090",
+      "status": "uploaded"
+    },
+    "features/120-login-required.png": {
+      "file_upload_id": "40876faa-3b39-81af-9b17-00b2511df7b0",
+      "filename": "bouldy-android-features-120-login-required.png",
+      "markdown_source": "file-upload://40876faa-3b39-81af-9b17-00b2511df7b0",
+      "status": "uploaded"
+    },
+    "features/124-signup-required.png": {
+      "file_upload_id": "40876faa-3b39-81b0-953f-00b2318d560e",
+      "filename": "bouldy-android-features-124-signup-required.png",
+      "markdown_source": "file-upload://40876faa-3b39-81b0-953f-00b2318d560e",
+      "status": "uploaded"
+    },
+    "features/128-signup-success.png": {
+      "file_upload_id": "40876faa-3b39-81f7-a9f5-00b2f53f5e4b",
+      "filename": "bouldy-android-features-128-signup-success.png",
+      "markdown_source": "file-upload://40876faa-3b39-81f7-a9f5-00b2f53f5e4b",
+      "status": "uploaded"
+    },
+    "features/131-expired-welcome.png": {
+      "file_upload_id": "40876faa-3b39-8127-8c83-00b20560fc10",
+      "filename": "bouldy-android-features-131-expired-welcome.png",
+      "markdown_source": "file-upload://40876faa-3b39-8127-8c83-00b20560fc10",
+      "status": "uploaded"
+    },
+    "states/completed-session/01.png": {
+      "file_upload_id": "40876faa-3b39-8170-8a94-00b23e0316e0",
+      "filename": "bouldy-android-states-completed-session-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8170-8a94-00b23e0316e0",
+      "status": "uploaded"
+    },
+    "states/completed-session/02.png": {
+      "file_upload_id": "40876faa-3b39-81fb-88da-00b27373653d",
+      "filename": "bouldy-android-states-completed-session-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-81fb-88da-00b27373653d",
+      "status": "uploaded"
+    },
+    "states/empty-home/01.png": {
+      "file_upload_id": "40876faa-3b39-81fd-b18f-00b2fc1e5e16",
+      "filename": "bouldy-android-states-empty-home-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81fd-b18f-00b2fc1e5e16",
+      "status": "uploaded"
+    },
+    "states/empty-home/02.png": {
+      "file_upload_id": "40876faa-3b39-810a-8b5f-00b2c98a7df4",
+      "filename": "bouldy-android-states-empty-home-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-810a-8b5f-00b2c98a7df4",
+      "status": "uploaded"
+    },
+    "states/empty-home/03.png": {
+      "file_upload_id": "40876faa-3b39-814d-bb00-00b2e4752f71",
+      "filename": "bouldy-android-states-empty-home-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-814d-bb00-00b2e4752f71",
+      "status": "uploaded"
+    },
+    "states/empty-home/04.png": {
+      "file_upload_id": "40876faa-3b39-810c-a69b-00b20034b7bc",
+      "filename": "bouldy-android-states-empty-home-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-810c-a69b-00b20034b7bc",
+      "status": "uploaded"
+    },
+    "states/empty-sessions/01.png": {
+      "file_upload_id": "40876faa-3b39-8165-ae7a-00b2259658d7",
+      "filename": "bouldy-android-states-empty-sessions-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8165-ae7a-00b2259658d7",
+      "status": "uploaded"
+    },
+    "states/empty-climbs/01.png": {
+      "file_upload_id": "40876faa-3b39-81d8-b606-00b2a0f59051",
+      "filename": "bouldy-android-states-empty-climbs-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81d8-b606-00b2a0f59051",
+      "status": "uploaded"
+    },
+    "states/empty-gyms/01.png": {
+      "file_upload_id": "40876faa-3b39-817e-9e34-00b26f500340",
+      "filename": "bouldy-android-states-empty-gyms-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-817e-9e34-00b26f500340",
+      "status": "uploaded"
+    },
+    "states/unavailable-home/01.png": {
+      "file_upload_id": "40876faa-3b39-8103-948f-00b22e8db8e3",
+      "filename": "bouldy-android-states-unavailable-home-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8103-948f-00b22e8db8e3",
+      "status": "uploaded"
+    },
+    "states/unavailable-home/02.png": {
+      "file_upload_id": "40876faa-3b39-8183-b488-00b252843bd9",
+      "filename": "bouldy-android-states-unavailable-home-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-8183-b488-00b252843bd9",
+      "status": "uploaded"
+    },
+    "states/unavailable-home/03.png": {
+      "file_upload_id": "40876faa-3b39-8152-af53-00b280d003a4",
+      "filename": "bouldy-android-states-unavailable-home-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8152-af53-00b280d003a4",
+      "status": "uploaded"
+    },
+    "states/unavailable-home/04.png": {
+      "file_upload_id": "40876faa-3b39-81d8-b537-00b27c2e1bb2",
+      "filename": "bouldy-android-states-unavailable-home-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-81d8-b537-00b27c2e1bb2",
+      "status": "uploaded"
+    },
+    "states/partial-history/01.png": {
+      "file_upload_id": "40876faa-3b39-815a-ac0e-00b278f73efe",
+      "filename": "bouldy-android-states-partial-history-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-815a-ac0e-00b278f73efe",
+      "status": "uploaded"
+    },
+    "states/partial-history/02.png": {
+      "file_upload_id": "40876faa-3b39-81dd-96e4-00b2f37b9a55",
+      "filename": "bouldy-android-states-partial-history-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-81dd-96e4-00b2f37b9a55",
+      "status": "uploaded"
+    },
+    "states/partial-history/03.png": {
+      "file_upload_id": "40876faa-3b39-8107-9070-00b2a682503b",
+      "filename": "bouldy-android-states-partial-history-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-8107-9070-00b2a682503b",
+      "status": "uploaded"
+    },
+    "states/partial-history/04.png": {
+      "file_upload_id": "40876faa-3b39-815c-847c-00b2a8d4c9b4",
+      "filename": "bouldy-android-states-partial-history-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-815c-847c-00b2a8d4c9b4",
+      "status": "uploaded"
+    },
+    "states/duplicate-log/01.png": {
+      "file_upload_id": "40876faa-3b39-812e-89c0-00b2d5150ba2",
+      "filename": "bouldy-android-states-duplicate-log-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-812e-89c0-00b2d5150ba2",
+      "status": "uploaded"
+    },
+    "states/duplicate-log/02.png": {
+      "file_upload_id": "40876faa-3b39-8165-b138-00b2f4201178",
+      "filename": "bouldy-android-states-duplicate-log-02.png",
+      "markdown_source": "file-upload://40876faa-3b39-8165-b138-00b2f4201178",
+      "status": "uploaded"
+    },
+    "states/duplicate-log/03.png": {
+      "file_upload_id": "40876faa-3b39-810e-aaf5-00b2022fa02f",
+      "filename": "bouldy-android-states-duplicate-log-03.png",
+      "markdown_source": "file-upload://40876faa-3b39-810e-aaf5-00b2022fa02f",
+      "status": "uploaded"
+    },
+    "states/duplicate-log/04.png": {
+      "file_upload_id": "40876faa-3b39-818d-87d5-00b2976848cb",
+      "filename": "bouldy-android-states-duplicate-log-04.png",
+      "markdown_source": "file-upload://40876faa-3b39-818d-87d5-00b2976848cb",
+      "status": "uploaded"
+    },
+    "states/duplicate-log/05.png": {
+      "file_upload_id": "40876faa-3b39-81b3-a02d-00b249df29a9",
+      "filename": "bouldy-android-states-duplicate-log-05.png",
+      "markdown_source": "file-upload://40876faa-3b39-81b3-a02d-00b249df29a9",
+      "status": "uploaded"
+    },
+    "states/not-found/01.png": {
+      "file_upload_id": "40876faa-3b39-8145-a42f-00b293e9166b",
+      "filename": "bouldy-android-states-not-found-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-8145-a42f-00b293e9166b",
+      "status": "uploaded"
+    },
+    "states/private-read-error/01.png": {
+      "file_upload_id": "40876faa-3b39-81f6-8397-00b2326d039d",
+      "filename": "bouldy-android-states-private-read-error-01.png",
+      "markdown_source": "file-upload://40876faa-3b39-81f6-8397-00b2326d039d",
+      "status": "uploaded"
+    }
+  },
+  "complete": true,
+  "replacedExpiredUploads": [
+    {
+      "file_upload_id": "40876faa-3b39-81dc-b99b-00b2654e93ba",
+      "markdown_source": "file-upload://40876faa-3b39-81dc-b99b-00b2654e93ba",
+      "status": "uploaded"
+    }
+  ],
+  "lastResolvedError": "Initial Home test upload expired before attachment; page creation was explicitly rejected, no Home page created. Re-uploading this one image.",
+  "verified": {
+    "galleriesReadBack": 59,
+    "imageBlocks": 195,
+    "downloadedOriginals": 195,
+    "allOriginalSHA256Match": true,
+    "readbackEvidence": "docs/evidence/notion-screenshot-readback.json",
+    "fileEvidence": "docs/evidence/notion-screenshot-file-verification.json",
+    "rootQuickLinksAdded": true,
+    "planningStatusUpdated": true,
+    "checkedAt": "2026-10-29T10:09:56.356466+00:00"
+  }
+}

@@ -1,0 +1,1855 @@
+{
+  "schemaVersion": 1,
+  "preparedDate": "2026-10-28",
+  "status": "Plan only; native migration not started",
+  "sourceRoot": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-web",
+  "head": "5467a433ea6699c1206b6e9019430fccff693918",
+  "sourceAuthority": "Current local working tree, including local implemented features; hashes supersede stale prose. Preserve unrelated work.",
+  "proposedTargetRoot": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile",
+  "targetCreated": false,
+  "counts": {
+    "pageRoutes": 27,
+    "functionalScreens": 14,
+    "plannedScreens": 10,
+    "redirects": 1,
+    "devPreviews": 2,
+    "globalStates": 2,
+    "loadingBoundaries": 19,
+    "componentModules": 31,
+    "storyFiles": 20,
+    "serverActions": 11,
+    "apiHelpers": 19,
+    "logicTestFiles": 2,
+    "logicTests": 10,
+    "walkthroughScreenshots": 44,
+    "publicAssets": 24
+  },
+  "screens": [
+    {
+      "id": "S01",
+      "route": "/welcome",
+      "title": "Welcome",
+      "currentStatus": "Functional",
+      "source": "app/(auth)/welcome/page.tsx",
+      "target": "src/app/(auth)/welcome.tsx",
+      "contract": "Full-height dark welcome, exact holds, text and signup/login links",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/welcome.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S02",
+      "route": "/login",
+      "title": "Login",
+      "currentStatus": "Functional",
+      "source": "app/(auth)/login/page.tsx",
+      "target": "src/app/(auth)/login.tsx",
+      "contract": "Email/password, exact validation and errors, pending label, signup link, Meet Bouldy",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/login.png",
+        "docs/visual-walkthrough/screenshots/login-error.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S03",
+      "route": "/signup",
+      "title": "Signup",
+      "currentStatus": "Functional",
+      "source": "app/(auth)/signup/page.tsx",
+      "target": "src/app/(auth)/signup.tsx",
+      "contract": "Username/email/password/optional current grade; register then login; no new onboarding",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/signup.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S04",
+      "route": "/",
+      "title": "Home",
+      "currentStatus": "Functional",
+      "source": "app/(app)/page.tsx",
+      "target": "src/app/(app)/index.tsx",
+      "contract": "Last session, actual summaries, recent three sessions, empty/partial/unavailable states",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/home.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S05",
+      "route": "/gyms",
+      "title": "Gyms",
+      "currentStatus": "Functional",
+      "source": "app/(app)/gyms/page.tsx",
+      "target": "src/app/(app)/gyms.tsx",
+      "contract": "Current Add gym sheet remains visible; list/detail/Start and empty/error states",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/gyms.png",
+        "docs/visual-walkthrough/screenshots/add-gym.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S06",
+      "route": "/gyms/[id]",
+      "title": "Gym detail",
+      "currentStatus": "Functional",
+      "source": "app/(app)/gyms/[id]/page.tsx",
+      "target": "src/app/(app)/gyms/[id].tsx",
+      "contract": "Active routes, grade/search/filter browser, Start, add/edit links and planned leaderboard",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/gym.png",
+        "docs/visual-walkthrough/screenshots/filters.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S07",
+      "route": "/gyms/[id]/routes/new",
+      "title": "Add gym route",
+      "currentStatus": "Functional",
+      "source": "app/(app)/gyms/[id]/routes/new/page.tsx",
+      "target": "src/app/(app)/gyms/[id]/routes/new.tsx",
+      "contract": "Exact long form, 14-colour grid, main/multiple styles, preview and sticky Add route; parent gym",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/add-route.png",
+        "docs/visual-walkthrough/screenshots/add-route-bottom.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S08",
+      "route": "/gyms/[id]/routes/[routeId]/edit",
+      "title": "Edit route",
+      "currentStatus": "Functional",
+      "source": "app/(app)/gyms/[id]/routes/[routeId]/edit/page.tsx",
+      "target": "src/app/(app)/gyms/[id]/routes/[routeId]/edit.tsx",
+      "contract": "Exact form populated from active same-gym route, beta link, sticky Save; invalid/retired guards",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/edit-route.png",
+        "docs/visual-walkthrough/screenshots/edit-route-bottom.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S09",
+      "route": "/sessions",
+      "title": "Session journal",
+      "currentStatus": "Functional",
+      "source": "app/(app)/sessions/page.tsx",
+      "target": "src/app/(app)/sessions.tsx",
+      "contract": "Featured latest visit, live/completed actions, Sessions/Climbs switch; three-month increments",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/sessions.png",
+        "docs/visual-walkthrough/screenshots/sessions-bottom.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S10",
+      "route": "/sessions/[id]",
+      "title": "Session detail",
+      "currentStatus": "Functional",
+      "source": "app/(app)/sessions/[id]/page.tsx",
+      "target": "src/app/(app)/sessions/[id].tsx",
+      "contract": "Live/completed layouts, route sheet, +1/Flash/Sent/Zone gating, correction, notes, end sheet",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/session.png",
+        "docs/visual-walkthrough/screenshots/session-bottom.png",
+        "docs/visual-walkthrough/screenshots/route-sheet.png",
+        "docs/visual-walkthrough/screenshots/flash-sheet.png",
+        "docs/visual-walkthrough/screenshots/correction.png",
+        "docs/visual-walkthrough/screenshots/note.png",
+        "docs/visual-walkthrough/screenshots/end-session.png",
+        "docs/visual-walkthrough/screenshots/completed-session.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S11",
+      "route": "/sessions/[id]/routes/new",
+      "title": "Add session route",
+      "currentStatus": "Functional",
+      "source": "app/(app)/sessions/[id]/routes/new/page.tsx",
+      "target": "src/app/(app)/sessions/[id]/routes/new.tsx",
+      "contract": "Same route form returns to session; adding does not log an attempt; completed-session guard",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/session-add-route.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S12",
+      "route": "/climbs",
+      "title": "Climbs collection",
+      "currentStatus": "Functional",
+      "source": "app/(app)/climbs/page.tsx",
+      "target": "src/app/(app)/climbs.tsx",
+      "contract": "Best-result ordering; gym then grade drill-in, tries/visits and filters; no matches vs empty",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/climbs.png",
+        "docs/visual-walkthrough/screenshots/climbs-gym.png",
+        "docs/visual-walkthrough/screenshots/empty-climbs.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S13",
+      "route": "/routes/[id]",
+      "title": "Owner route history",
+      "currentStatus": "Functional",
+      "source": "app/(app)/routes/[id]/page.tsx",
+      "target": "src/app/(app)/routes/[id].tsx",
+      "contract": "Per-visit records, retired route, partial/duplicate warnings, private notes, from-context links",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/history.png",
+        "docs/visual-walkthrough/screenshots/retired-history.png",
+        "docs/visual-walkthrough/screenshots/partial-history.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S14",
+      "route": "/profile",
+      "title": "Owner profile",
+      "currentStatus": "Functional",
+      "source": "app/(app)/profile/page.tsx",
+      "target": "src/app/(app)/profile.tsx",
+      "contract": "Read-only account/grade, real summaries, visited gyms, planned links, journal and logout",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/profile.png",
+        "docs/visual-walkthrough/screenshots/profile-bottom.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S15",
+      "route": "/explore",
+      "title": "Explore hub",
+      "currentStatus": "Planned UI",
+      "source": "app/(app)/explore/page.tsx",
+      "target": "src/app/(app)/explore.tsx",
+      "contract": "Exact planned groups, wording and links; no real feed or social functions",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/explore.png",
+        "docs/visual-walkthrough/screenshots/explore-bottom.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S16",
+      "route": "/explore/feed",
+      "title": "Climbers sessions",
+      "currentStatus": "Planned UI",
+      "source": "app/(app)/explore/feed/page.tsx",
+      "target": "src/app/(app)/explore/feed.tsx",
+      "contract": "Exact UnderConstruction content and related links; no invented activity",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/feed.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S17",
+      "route": "/explore/climbers",
+      "title": "Find climbers",
+      "currentStatus": "Planned UI",
+      "source": "app/(app)/explore/climbers/page.tsx",
+      "target": "src/app/(app)/explore/climbers.tsx",
+      "contract": "Exact UnderConstruction copy, blockers and links; no search implementation",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/climbers.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S18",
+      "route": "/explore/leaderboards",
+      "title": "Leaderboards",
+      "currentStatus": "Planned UI",
+      "source": "app/(app)/explore/leaderboards/page.tsx",
+      "target": "src/app/(app)/explore/leaderboards.tsx",
+      "contract": "Exact UnderConstruction copy; no scores or rankings implementation",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/leaderboards.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S19",
+      "route": "/explore/challenges",
+      "title": "Challenges",
+      "currentStatus": "Planned UI",
+      "source": "app/(app)/explore/challenges/page.tsx",
+      "target": "src/app/(app)/explore/challenges.tsx",
+      "contract": "Exact UnderConstruction copy; no challenge feature implementation",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/challenges.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S20",
+      "route": "/explore/groups",
+      "title": "Groups and leagues",
+      "currentStatus": "Planned UI",
+      "source": "app/(app)/explore/groups/page.tsx",
+      "target": "src/app/(app)/explore/groups.tsx",
+      "contract": "Exact UnderConstruction copy; no group feature implementation",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/groups.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S21",
+      "route": "/profile/edit",
+      "title": "Edit profile",
+      "currentStatus": "Planned UI",
+      "source": "app/(app)/profile/edit/page.tsx",
+      "target": "src/app/(app)/profile/edit.tsx",
+      "contract": "Exact planned display-name/bio/photo page; keep read-only capability boundary",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/edit-profile.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S22",
+      "route": "/profile/public",
+      "title": "Public profile",
+      "currentStatus": "Planned UI",
+      "source": "app/(app)/profile/public/page.tsx",
+      "target": "src/app/(app)/profile/public.tsx",
+      "contract": "Exact private/planned preview wording; no public account data",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/public-profile.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S23",
+      "route": "/profile/privacy",
+      "title": "Privacy",
+      "currentStatus": "Planned UI",
+      "source": "app/(app)/profile/privacy/page.tsx",
+      "target": "src/app/(app)/profile/privacy.tsx",
+      "contract": "Exact planned privacy controls explanation; no new toggle behaviour",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/privacy.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S24",
+      "route": "/routes/[id]/beta",
+      "title": "Route beta",
+      "currentStatus": "Planned UI",
+      "source": "app/(app)/routes/[id]/beta/page.tsx",
+      "target": "src/app/(app)/routes/[id]/beta.tsx",
+      "contract": "Load genuine route header, validate route ID, preserve planned media copy and back link",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/beta.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S25",
+      "route": "/history",
+      "title": "Legacy history alias",
+      "currentStatus": "Redirect",
+      "source": "app/(app)/history/page.tsx",
+      "target": "src/app/(app)/history.tsx",
+      "contract": "Replace to /sessions; no additional screen or history entry",
+      "screenshots": [],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S26",
+      "route": "/brand-preview",
+      "title": "Brand preview",
+      "currentStatus": "Development only",
+      "source": "app/(auth)/brand-preview/page.tsx",
+      "target": "src/app/(auth)/brand-preview.tsx",
+      "contract": "Preserve development reference; unavailable in production",
+      "screenshots": [],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "S27",
+      "route": "/loading-preview",
+      "title": "Loading preview",
+      "currentStatus": "Development only",
+      "source": "app/(app)/loading-preview/page.tsx",
+      "target": "src/app/(app)/loading-preview.tsx",
+      "contract": "Preserve motifs/skeleton reference; unavailable in production",
+      "screenshots": [],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "G01",
+      "route": "unknown route / invalid resource",
+      "title": "Branded not found",
+      "currentStatus": "Global state",
+      "source": "app/not-found.tsx",
+      "target": "src/app/+not-found.tsx",
+      "contract": "Same 404 hold artwork, copy and Back to Bouldy; auth resolves / to Home or Welcome",
+      "screenshots": [
+        "docs/visual-walkthrough/screenshots/not-found.png"
+      ],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    },
+    {
+      "id": "G02",
+      "route": "authenticated route failure",
+      "title": "App error boundary",
+      "currentStatus": "Global state",
+      "source": "app/(app)/error.tsx",
+      "target": "src/features/errors/AppError.tsx",
+      "contract": "Exact page error and Reload page pending state; no new dialog or silent empty result",
+      "screenshots": [],
+      "migrationStatus": "Not started",
+      "verification": "Not run"
+    }
+  ],
+  "actions": [
+    {
+      "id": "A01",
+      "sourceExport": "loginAction",
+      "source": "lib/actions.ts",
+      "line": 32,
+      "target": "src/server/commands/login.ts",
+      "clientHook": "src/features/*/mutations (typed outcome; exact UI)",
+      "contract": "Email in OAuth username; retain errors; establish platform session",
+      "navigation": "Home /; same auth screens on failure",
+      "status": "Not started"
+    },
+    {
+      "id": "A02",
+      "sourceExport": "signupAction",
+      "source": "lib/actions.ts",
+      "line": 52,
+      "target": "src/server/commands/signup.ts",
+      "clientHook": "src/features/*/mutations (typed outcome; exact UI)",
+      "contract": "Same fields, required checks, optional grade; register then login",
+      "navigation": "Home /; same signup errors",
+      "status": "Not started"
+    },
+    {
+      "id": "A03",
+      "sourceExport": "logoutAction",
+      "source": "lib/actions.ts",
+      "line": 80,
+      "target": "src/server/commands/logout.ts",
+      "clientHook": "src/features/*/mutations (typed outcome; exact UI)",
+      "contract": "Clear platform credentials and account-scoped cached data",
+      "navigation": "Welcome /welcome",
+      "status": "Not started"
+    },
+    {
+      "id": "A04",
+      "sourceExport": "startSessionAction",
+      "source": "lib/actions.ts",
+      "line": 85,
+      "target": "src/server/commands/startSession.ts",
+      "clientHook": "src/features/*/mutations (typed outcome; exact UI)",
+      "contract": "Positive gym ID; current authenticated user; current UTC date; duration 0",
+      "navigation": "New session /sessions/:id",
+      "status": "Not started"
+    },
+    {
+      "id": "A05",
+      "sourceExport": "addGymAction",
+      "source": "lib/actions.ts",
+      "line": 112,
+      "target": "src/server/commands/addGym.ts",
+      "clientHook": "src/features/*/mutations (typed outcome; exact UI)",
+      "contract": "Trim name/location; exact required copy; no admin-only redesign",
+      "navigation": "Same sheet on error; close and show success on /gyms",
+      "status": "Not started"
+    },
+    {
+      "id": "A06",
+      "sourceExport": "addRouteAction",
+      "source": "lib/actions.ts",
+      "line": 133,
+      "target": "src/server/commands/addRoute.ts",
+      "clientHook": "src/features/*/mutations (typed outcome; exact UI)",
+      "contract": "Same grade/name/colour validation, deduplicated allowlisted styles, UTC set_date",
+      "navigation": "Parent gym/session on success; same full-screen form on error",
+      "status": "Not started"
+    },
+    {
+      "id": "A07",
+      "sourceExport": "editRouteAction",
+      "source": "lib/actions.ts",
+      "line": 184,
+      "target": "src/server/commands/editRoute.ts",
+      "clientHook": "src/features/*/mutations (typed outcome; exact UI)",
+      "contract": "Validate route/gym; preserve same-gym check, fields, style filtering",
+      "navigation": "Parent gym on success; edit form on error",
+      "status": "Not started"
+    },
+    {
+      "id": "A08",
+      "sourceExport": "logAttemptAction",
+      "source": "lib/actions.ts",
+      "line": 220,
+      "target": "src/server/commands/logAttempt.ts",
+      "clientHook": "src/features/*/mutations (typed outcome; exact UI)",
+      "contract": "Re-read session/route/current logs; active/same gym, duplicates, stale IDs, flash/zone guards; preserve exact count rules",
+      "navigation": "Replace sheet after success; anchor route; error reopens affected route sheet",
+      "status": "Not started"
+    },
+    {
+      "id": "A09",
+      "sourceExport": "correctAttemptAction",
+      "source": "lib/actions.ts",
+      "line": 268,
+      "target": "src/server/commands/correctAttempt.ts",
+      "clientHook": "src/features/*/mutations (typed outcome; exact UI)",
+      "contract": "Positive count, flash exactly 1 and lifetime checks, same session, duplicate/Zone restrictions; never increments",
+      "navigation": "Same sheet on error; success closes and shows correction snackbar",
+      "status": "Not started"
+    },
+    {
+      "id": "A10",
+      "sourceExport": "endSessionAction",
+      "source": "lib/actions.ts",
+      "line": 328,
+      "target": "src/server/commands/endSession.ts",
+      "clientHook": "src/features/*/mutations (typed outcome; exact UI)",
+      "contract": "Same duration rule: positive supplied value else 1; current UI default 60; no actual timer",
+      "navigation": "Session journal on success; same end-session sheet on failure",
+      "status": "Not started"
+    },
+    {
+      "id": "A11",
+      "sourceExport": "saveAttemptNoteAction",
+      "source": "lib/actions.ts",
+      "line": 346,
+      "target": "src/server/commands/saveAttemptNote.ts",
+      "clientHook": "src/features/*/mutations (typed outcome; exact UI)",
+      "contract": "Same session/attempt verification; PATCH notes only, allow empty text; preserve draft on failure",
+      "navigation": "Stay in context; close editor on success and show saved snackbar",
+      "status": "Not started"
+    }
+  ],
+  "components": [
+    {
+      "source": "components/app-shell.tsx",
+      "target": "src/components/app-shell.tsx",
+      "contract": "Port layout/layers/430px canvas; safe areas; overlay outside page transform.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/attempt-note.tsx",
+      "target": "src/components/attempt-note.tsx",
+      "contract": "Inline editor inside route sheet; standalone note sheet in history; failure preserves draft.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/auth-heading.tsx",
+      "target": "src/components/auth-heading.tsx",
+      "contract": "Same words, layout and holds for login/signup.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/bottom-nav.tsx",
+      "target": "src/components/bottom-nav.tsx",
+      "contract": "Custom identical five-tab bar; never substitute system tabs; hide only on current form paths.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/bouldy-loader.tsx",
+      "target": "src/components/bouldy-loader.tsx",
+      "contract": "Port ascent/traverse/hold variants and reduced motion.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/brand-wordmark.tsx",
+      "target": "src/components/brand-wordmark.tsx",
+      "contract": "Same Bolt B SVG, Bouldy typography and compact variant.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/journal-switch.tsx",
+      "target": "src/components/journal-switch.tsx",
+      "contract": "Same Sessions/Climbs segment appearance and navigation.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/journal-warning.tsx",
+      "target": "src/components/journal-warning.tsx",
+      "contract": "Same incomplete-data wording, retry link and warning appearance.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/kokonutui/slide-text-button.tsx",
+      "target": "src/components/kokonutui/slide-text-button.tsx",
+      "contract": "Preserve link wording and web hover/focus text slide; tap navigates without extra step.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/month-groups.tsx",
+      "target": "src/components/month-groups.tsx",
+      "contract": "Same 3-month reveal step and sticky headings, not infinite scrolling.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/page-loader.tsx",
+      "target": "src/components/page-loader.tsx",
+      "contract": "Same loading labels; 8-second patience label.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/page-motion.tsx",
+      "target": "src/components/page-motion.tsx",
+      "contract": "Preserve measured directional translation/fade and deliberate tab swipe thresholds; disable duplicate navigator animation.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/page-skeleton.tsx",
+      "target": "src/components/page-skeleton.tsx",
+      "contract": "All 9 geometry variants; 19 loading boundaries plus layout loading.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/result-badge.tsx",
+      "target": "src/components/result-badge.tsx",
+      "contract": "Same labels/colours including legacy Zone.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/route-browser.tsx",
+      "target": "src/components/route-browser.tsx",
+      "contract": "Extract portable filters/grouping without changing behaviour; replace ReactNode rows with same row renderers.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/route-form-screen.tsx",
+      "target": "src/components/route-form-screen.tsx",
+      "contract": "Exact pushed header and form layout; no tabs, sticky save supplied by form.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/route-form.tsx",
+      "target": "src/components/route-form.tsx",
+      "contract": "Same field order, controlled preview, 14 colours, style expansion, selected values and planned comp block.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/route-hold.tsx",
+      "target": "src/components/route-hold.tsx",
+      "contract": "Preserve 14 colour map, grey fallback, blue triangle name rule and local SVG paths.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/route-loading-overlay.tsx",
+      "target": "src/components/route-loading-overlay.tsx",
+      "contract": "Replace click interception with navigation lifecycle; retain destination skeleton, layout and exit conditions.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/route-mark.tsx",
+      "target": "src/components/route-mark.tsx",
+      "contract": "Dormant/isolated component; retain in catalogue, do not expose as new app feature.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/route-rows.tsx",
+      "target": "src/components/route-rows.tsx",
+      "contract": "Gym/session/climb row variants; exact metadata, badges and trailing +1.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/submit-button.tsx",
+      "target": "src/components/submit-button.tsx",
+      "contract": "Same per-button spinner, retained label space, disabled state and pending copy.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/theme-switcher.tsx",
+      "target": "src/components/theme-switcher.tsx",
+      "contract": "Unmounted dev-only accent preview; preserve reference, do not ship theme selection as a new feature.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/ui/bottom-sheet.tsx",
+      "target": "src/components/ui/bottom-sheet.tsx",
+      "contract": "Identical panel/backdrop/handle/close; URL/state adapter; Back closes before leaving; no added detents.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/ui/button.ts",
+      "target": "src/components/ui/button.ts",
+      "contract": "Replace Tailwind class utility with identical style tokens and variant/size contracts.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/ui/feedback-message.tsx",
+      "target": "src/components/ui/feedback-message.tsx",
+      "contract": "Same inline errors/warnings and announcements; never convert errors to transient toast.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/ui/form-field.tsx",
+      "target": "src/components/ui/form-field.tsx",
+      "contract": "Same Input/Select/Textarea labels, values, validation and closed appearance; keyboard/autofill adapters.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/ui/screen-header.tsx",
+      "target": "src/components/ui/screen-header.tsx",
+      "contract": "Same 56px header, back chevron and explicit parent destination.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/ui/section-heading.tsx",
+      "target": "src/components/ui/section-heading.tsx",
+      "contract": "Same type, spacing and optional aside.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/ui/snackbar.tsx",
+      "target": "src/components/ui/snackbar.tsx",
+      "contract": "Same top overlay, 5s lifetime, tap dismissal, 260ms entry/180ms exit; consume notice once.",
+      "status": "Not started"
+    },
+    {
+      "source": "components/under-construction.tsx",
+      "target": "src/components/under-construction.tsx",
+      "contract": "Same placeholder template, per-route copy, holds and related links.",
+      "status": "Not started"
+    }
+  ],
+  "apiHelpers": [
+    {
+      "name": "registerUser",
+      "source": "lib/api.ts",
+      "line": 115,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "loginUser",
+      "source": "lib/api.ts",
+      "line": 124,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "getMe",
+      "source": "lib/api.ts",
+      "line": 138,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "getGyms",
+      "source": "lib/api.ts",
+      "line": 142,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "getGym",
+      "source": "lib/api.ts",
+      "line": 142,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "getRoutes",
+      "source": "lib/api.ts",
+      "line": 150,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "getGymRoutes",
+      "source": "lib/api.ts",
+      "line": 154,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "createGym",
+      "source": "lib/api.ts",
+      "line": 168,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "createRoute",
+      "source": "lib/api.ts",
+      "line": 175,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "getRoute",
+      "source": "lib/api.ts",
+      "line": 150,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "updateRoute",
+      "source": "lib/api.ts",
+      "line": 192,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "listSessions",
+      "source": "lib/api.ts",
+      "line": 199,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "createSession",
+      "source": "lib/api.ts",
+      "line": 203,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "getSession",
+      "source": "lib/api.ts",
+      "line": 218,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "updateSession",
+      "source": "lib/api.ts",
+      "line": 222,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "getSessionAttempts",
+      "source": "lib/api.ts",
+      "line": 230,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "getAttempt",
+      "source": "lib/api.ts",
+      "line": 237,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "createAttempt",
+      "source": "lib/api.ts",
+      "line": 241,
+      "target": "src/server/fastapi/client.ts"
+    },
+    {
+      "name": "updateAttempt",
+      "source": "lib/api.ts",
+      "line": 253,
+      "target": "src/server/fastapi/client.ts"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": ".storybook/main.ts",
+      "sha256": "b67420470eaef6945e1da98d3854d8b31a8fb4611254f0c0dbbca70c169ad07c",
+      "bytes": 371
+    },
+    {
+      "path": ".storybook/preview.tsx",
+      "sha256": "a05bc52c44f646776da9d04b789c1d9ba1a7c0becb56b152319c82abad468e59",
+      "bytes": 915
+    },
+    {
+      "path": ".storybook/storybook.css",
+      "sha256": "523f6ba1f5fafcfbcdc1c2ce96bc6fec884b9464a6881d310be496a2219ca6ec",
+      "bytes": 389
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "1c90bb0b29e0fbb8200b002bb9aeef4f08a3da323ce1f9169f880edc89222e68",
+      "bytes": 3117
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "9f0d79bc28154b1a7043a55c95e49396724af81ee48fbde361242d251a449d7a",
+      "bytes": 15370
+    },
+    {
+      "path": "MASTER_SPEC.md",
+      "sha256": "eb406c3d655f68a01f2c8f10e5abc57ba3717ec8efd0d0edca7866532263d419",
+      "bytes": 38840
+    },
+    {
+      "path": "PRODUCT.md",
+      "sha256": "81fe8f3898c54567bc485675fd5bf69c718d43f13939add72a5ce32f8edb581f",
+      "bytes": 2515
+    },
+    {
+      "path": "README.md",
+      "sha256": "a9d5c75e2a9a17c393ec128ef5e7ae126eee2fda6948304cba040236d79f9b77",
+      "bytes": 4190
+    },
+    {
+      "path": "app/(app)/climbs/loading.tsx",
+      "sha256": "50f62950651a850bf496b278498f24b89e0b06b31ff62884748e884b566521d9",
+      "bytes": 136
+    },
+    {
+      "path": "app/(app)/climbs/page.tsx",
+      "sha256": "7e2f9cff72738f8e1092cb67a0048ea98b9ffff6c420c034e5e5b57081ce9b04",
+      "bytes": 4469
+    },
+    {
+      "path": "app/(app)/error.tsx",
+      "sha256": "c857d256858ba6eb20c93cccb864bd0904eb091499582a8f2defabf60e1a765c",
+      "bytes": 1362
+    },
+    {
+      "path": "app/(app)/explore/challenges/page.tsx",
+      "sha256": "f08f00cd0a95392db0f06f27a07391975e4df0adf4173a07be66485b413ab7e8",
+      "bytes": 1070
+    },
+    {
+      "path": "app/(app)/explore/climbers/page.tsx",
+      "sha256": "c684b896b2c8b6a0b684b07bd8acd02ab743bae1b214264eb9ecaa827b2f478b",
+      "bytes": 1031
+    },
+    {
+      "path": "app/(app)/explore/feed/page.tsx",
+      "sha256": "ee1eeac11d2985b9e83b39a70e258b2f47d5228b10969d58ba3f00d80a1d58a5",
+      "bytes": 1032
+    },
+    {
+      "path": "app/(app)/explore/groups/page.tsx",
+      "sha256": "4d8d3522028346e2263a1c2605bd3bda47b7e974660ffd40ce60f35ca2d817f0",
+      "bytes": 999
+    },
+    {
+      "path": "app/(app)/explore/leaderboards/page.tsx",
+      "sha256": "28920777806f171db929de26dbcdd7c733a30e677c5c77c73a38026caffb722b",
+      "bytes": 1176
+    },
+    {
+      "path": "app/(app)/explore/loading.tsx",
+      "sha256": "2571e950311ef2e4ca7f065d9fae70d3abd79ab55075b4ee5667e1ccebb5bbc4",
+      "bytes": 141
+    },
+    {
+      "path": "app/(app)/explore/page.tsx",
+      "sha256": "22d05c44a4fdfe0d82a06c979d328c345bf25113ec6464f2ab102c4fd38922e9",
+      "bytes": 2850
+    },
+    {
+      "path": "app/(app)/gyms/[id]/page.tsx",
+      "sha256": "0fb6012c964613f5f7de43788339dda6cd0ac37a2cbca95366c08d1eec92148e",
+      "bytes": 3603
+    },
+    {
+      "path": "app/(app)/gyms/[id]/routes/[routeId]/edit/loading.tsx",
+      "sha256": "47e35010d99c55b57f0aec2cce56882f8414ae5fe429d8ee670bb8da17426b9c",
+      "bytes": 134
+    },
+    {
+      "path": "app/(app)/gyms/[id]/routes/[routeId]/edit/page.tsx",
+      "sha256": "b3d3eabd7e6a5df9cb64d31f9027e5904f07284d15576d3f4cdba955b3ded0d2",
+      "bytes": 1896
+    },
+    {
+      "path": "app/(app)/gyms/[id]/routes/new/loading.tsx",
+      "sha256": "47e35010d99c55b57f0aec2cce56882f8414ae5fe429d8ee670bb8da17426b9c",
+      "bytes": 134
+    },
+    {
+      "path": "app/(app)/gyms/[id]/routes/new/page.tsx",
+      "sha256": "0977ae53638499fc8d365d62072391827897ebf1492755be7c42cfb1dafece69",
+      "bytes": 1016
+    },
+    {
+      "path": "app/(app)/gyms/loading.tsx",
+      "sha256": "1f59966b312803d1c5ad42dc432f0af6fd3b363bbc5ee3809509241889a45647",
+      "bytes": 134
+    },
+    {
+      "path": "app/(app)/gyms/page.tsx",
+      "sha256": "895a64ca2860e14787eded4d78bc583339c3351f7e2cab314827b60d74d3bd4d",
+      "bytes": 3938
+    },
+    {
+      "path": "app/(app)/history/loading.tsx",
+      "sha256": "073ab337e67b5bf37c2e017a2046ee487b4682e770b5a962d9d754e7b03d79ff",
+      "bytes": 138
+    },
+    {
+      "path": "app/(app)/history/page.tsx",
+      "sha256": "5babda5a2e0f9bca938bf0b5d9bfb020ecb53f82390772fd69af1426fe3f3abe",
+      "bytes": 116
+    },
+    {
+      "path": "app/(app)/layout.tsx",
+      "sha256": "125bde7c16575fa2aa865b95745eeb8a855789206f57276acab6967fd9f36909",
+      "bytes": 803
+    },
+    {
+      "path": "app/(app)/loading-preview/page.tsx",
+      "sha256": "bedd73484b3a734047ca2b030fdca8af8bbd1ce33d14da401efdba992c126f1c",
+      "bytes": 1588
+    },
+    {
+      "path": "app/(app)/loading.tsx",
+      "sha256": "f37cdf9c8931b0cc2f3a2b747d3165bf0ddbce3196af20833b4d94547c63c253",
+      "bytes": 140
+    },
+    {
+      "path": "app/(app)/page.tsx",
+      "sha256": "5e08fa100f328f00b80fa7c9f5d583b16efb0049de0d1e7124a484ee2dfcde6b",
+      "bytes": 8576
+    },
+    {
+      "path": "app/(app)/profile/edit/loading.tsx",
+      "sha256": "2571e950311ef2e4ca7f065d9fae70d3abd79ab55075b4ee5667e1ccebb5bbc4",
+      "bytes": 141
+    },
+    {
+      "path": "app/(app)/profile/edit/page.tsx",
+      "sha256": "80ad27c11e690c888cb615c397d1079daeb46fbab886c783cd8316513fd3f6e3",
+      "bytes": 841
+    },
+    {
+      "path": "app/(app)/profile/loading.tsx",
+      "sha256": "7b308af57539ae9bc07cd8d04f4044b06795394e704cbbbb8c041ba727656a4d",
+      "bytes": 134
+    },
+    {
+      "path": "app/(app)/profile/page.tsx",
+      "sha256": "aae271c3a70d478bc483dd249d1d6dd9f94c4d8ff037547ffbff2949cdbbb798",
+      "bytes": 4824
+    },
+    {
+      "path": "app/(app)/profile/privacy/loading.tsx",
+      "sha256": "2571e950311ef2e4ca7f065d9fae70d3abd79ab55075b4ee5667e1ccebb5bbc4",
+      "bytes": 141
+    },
+    {
+      "path": "app/(app)/profile/privacy/page.tsx",
+      "sha256": "39fda6821ba73de222412ab43adb71e54912ddc93717b75d077cfd75b08d341a",
+      "bytes": 849
+    },
+    {
+      "path": "app/(app)/profile/public/loading.tsx",
+      "sha256": "2571e950311ef2e4ca7f065d9fae70d3abd79ab55075b4ee5667e1ccebb5bbc4",
+      "bytes": 141
+    },
+    {
+      "path": "app/(app)/profile/public/page.tsx",
+      "sha256": "bc92acde1c8e0160aa85825a2ab9888e1075602a0645c10b2feaaa5faef1de38",
+      "bytes": 862
+    },
+    {
+      "path": "app/(app)/routes/[id]/beta/loading.tsx",
+      "sha256": "2571e950311ef2e4ca7f065d9fae70d3abd79ab55075b4ee5667e1ccebb5bbc4",
+      "bytes": 141
+    },
+    {
+      "path": "app/(app)/routes/[id]/beta/page.tsx",
+      "sha256": "abae6e03e93e839febaf1abe1e21a96218993a46745aa59ad6a9f3be39daa122",
+      "bytes": 1879
+    },
+    {
+      "path": "app/(app)/routes/[id]/loading.tsx",
+      "sha256": "7b308af57539ae9bc07cd8d04f4044b06795394e704cbbbb8c041ba727656a4d",
+      "bytes": 134
+    },
+    {
+      "path": "app/(app)/routes/[id]/page.tsx",
+      "sha256": "e222f5d68074ee6c299d059e0518bd9eb71290fb43508d1efe07122cab45a1b4",
+      "bytes": 4922
+    },
+    {
+      "path": "app/(app)/sessions/[id]/loading.tsx",
+      "sha256": "ac048e72087edef036b120c94df41a950f6c631f2fe276cf078a9c9d784c7b1f",
+      "bytes": 137
+    },
+    {
+      "path": "app/(app)/sessions/[id]/page.tsx",
+      "sha256": "03179e392d9900e0dec22be4bc778808bc7f90743f3da625d9ce515a88824004",
+      "bytes": 17681
+    },
+    {
+      "path": "app/(app)/sessions/[id]/routes/new/loading.tsx",
+      "sha256": "47e35010d99c55b57f0aec2cce56882f8414ae5fe429d8ee670bb8da17426b9c",
+      "bytes": 134
+    },
+    {
+      "path": "app/(app)/sessions/[id]/routes/new/page.tsx",
+      "sha256": "085f315ed719ecc055571640f760411919171328dc6646911bef13d240fd7f42",
+      "bytes": 1401
+    },
+    {
+      "path": "app/(app)/sessions/loading.tsx",
+      "sha256": "073ab337e67b5bf37c2e017a2046ee487b4682e770b5a962d9d754e7b03d79ff",
+      "bytes": 138
+    },
+    {
+      "path": "app/(app)/sessions/page.tsx",
+      "sha256": "8c31c8d72f4bf39c2c35ee82688c2143836afd7f892bc2505b8271bed47e9da1",
+      "bytes": 10754
+    },
+    {
+      "path": "app/(auth)/brand-preview/page.tsx",
+      "sha256": "3539941f30bdf712673ea65c5998d903acc40731c05632965da6a2bd6d6c3122",
+      "bytes": 2599
+    },
+    {
+      "path": "app/(auth)/layout.tsx",
+      "sha256": "4f7313df2f6434b98ed5fc0433cbdab89d7c143d6cdafab9b167e34595b8c803",
+      "bytes": 212
+    },
+    {
+      "path": "app/(auth)/loading.tsx",
+      "sha256": "2460413190b8d3377eaf546d67cf03ca3e252d46f8b98cd360df49e58bc9ee95",
+      "bytes": 151
+    },
+    {
+      "path": "app/(auth)/login/loading.tsx",
+      "sha256": "6fb222c169313f2efecb2ae9e22965a301f02a79948e91623e3849d8dff4abf7",
+      "bytes": 135
+    },
+    {
+      "path": "app/(auth)/login/page.tsx",
+      "sha256": "f0741b5262c305c03e6d502d7d0143c5c910be69a3caa2e460ca19adedb83882",
+      "bytes": 1550
+    },
+    {
+      "path": "app/(auth)/signup/loading.tsx",
+      "sha256": "23724e28bc8c9949df4d9f18b2517f501316341d84b0cbfc3e8e110479aab3c9",
+      "bytes": 136
+    },
+    {
+      "path": "app/(auth)/signup/page.tsx",
+      "sha256": "2a8dac26edb60291a5c9023a83581e608fe5c381a5dd26c7a03132ca2041be40",
+      "bytes": 1680
+    },
+    {
+      "path": "app/(auth)/welcome/page.tsx",
+      "sha256": "c221cd8700cf70dcd5fad440e0995beae5d82b980eb3026b98a553a11f29762e",
+      "bytes": 1292
+    },
+    {
+      "path": "app/favicon.ico",
+      "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932",
+      "bytes": 25931
+    },
+    {
+      "path": "app/globals.css",
+      "sha256": "f08f14656368eac4063bb3ce51e79933f45204aa2b61f120834d290343a21dcc",
+      "bytes": 15679
+    },
+    {
+      "path": "app/icon.svg",
+      "sha256": "46ca2e9ec08c8d8973a442f90dcde4aa985a14d41fc34692a20599e0358c38da",
+      "bytes": 354
+    },
+    {
+      "path": "app/layout.tsx",
+      "sha256": "72c4ef7fa647cf53bc2c5c23f81b2604966e1996aa92f4d9e7cf92c6d1d6fa61",
+      "bytes": 1142
+    },
+    {
+      "path": "app/not-found.tsx",
+      "sha256": "5ae8bb4b2fd66afa234dd7968567d6891d8436776273814a36a1d2dbf023335e",
+      "bytes": 879
+    },
+    {
+      "path": "components/app-shell.tsx",
+      "sha256": "65534f23d563b311853583e8c2115bc8dc474ae48d62c3b65682189a7ebfc474",
+      "bytes": 762
+    },
+    {
+      "path": "components/attempt-note.tsx",
+      "sha256": "3359c94386f2135a259824351065495f6477f058b0c28e43879866edd0c01f29",
+      "bytes": 3701
+    },
+    {
+      "path": "components/auth-heading.stories.tsx",
+      "sha256": "ce7560ddfddd1b9b87a1a1b92f485546f977f9e631ec57f688f451c067964d00",
+      "bytes": 471
+    },
+    {
+      "path": "components/auth-heading.tsx",
+      "sha256": "5f8a12122c565fe9cdd3d3ef8e3f0777a01c04832a02716a620ce2979787717b",
+      "bytes": 855
+    },
+    {
+      "path": "components/bottom-nav.stories.tsx",
+      "sha256": "406d498c41a57ddc06a140c15b141778dbfee5d944d6a92b61b37e38c6ee981d",
+      "bytes": 946
+    },
+    {
+      "path": "components/bottom-nav.tsx",
+      "sha256": "effe77e98670b1e3d7dca7ddf564add3fb1ea1438c7b6acfa0bb6d3627860734",
+      "bytes": 2567
+    },
+    {
+      "path": "components/bouldy-loader.stories.tsx",
+      "sha256": "c10344c6a2d6d3bef0280632a1d27fef1a42f57a22f5193a7820a1e35d5caf36",
+      "bytes": 681
+    },
+    {
+      "path": "components/bouldy-loader.tsx",
+      "sha256": "1cf37f3ce396284432a93b673fcb439f8f9243c51ac5b63469636142237a0fcb",
+      "bytes": 852
+    },
+    {
+      "path": "components/brand-wordmark.stories.tsx",
+      "sha256": "bcb8938117c4c644457962022bff79165d6a1cda257c70c33b081c0b331a5923",
+      "bytes": 478
+    },
+    {
+      "path": "components/brand-wordmark.tsx",
+      "sha256": "fbe3076bf8f442bc3961bc66fec3783335596a845aede217705772cf9df68a6d",
+      "bytes": 563
+    },
+    {
+      "path": "components/journal-switch.stories.tsx",
+      "sha256": "e7d115a5a90d50db8456cbdf0a2d98f32df2d93435a10e1f3960344800176130",
+      "bytes": 982
+    },
+    {
+      "path": "components/journal-switch.tsx",
+      "sha256": "eb04ac9179deb73447c29cef9f6b56d687039ec51019b2853339393dde0bc336",
+      "bytes": 942
+    },
+    {
+      "path": "components/journal-warning.tsx",
+      "sha256": "ba8fb48ba7aae17062337c8667ce4dd39cbd40093f2274ba296599bd6d7697ba",
+      "bytes": 537
+    },
+    {
+      "path": "components/kokonutui/slide-text-button.tsx",
+      "sha256": "65e9405daad2b3cf18e6bae27762a7b0c38fb57450461d3bd452c606e8cdbd5e",
+      "bytes": 1107
+    },
+    {
+      "path": "components/month-groups.tsx",
+      "sha256": "328bb2e19000b5fb027ea8ccb0293b1bb4408d5e8ca1efaebddc48a963c7dfe1",
+      "bytes": 1372
+    },
+    {
+      "path": "components/page-loader.stories.tsx",
+      "sha256": "358f2b65ec6d6b7065f5d07db48c734cf9fcdee0eea29a4a987d3ab3fa8d3006",
+      "bytes": 515
+    },
+    {
+      "path": "components/page-loader.tsx",
+      "sha256": "eca6550cb88673337dc85aef7ec285470d9d96c736357f5eda4dbf4687fc17d5",
+      "bytes": 996
+    },
+    {
+      "path": "components/page-motion.tsx",
+      "sha256": "3dc9db96094e12023a8b0270df4948cb88adc55588e6d2ed5ec06c12ec318ea6",
+      "bytes": 2849
+    },
+    {
+      "path": "components/page-skeleton.stories.tsx",
+      "sha256": "d2738d253840871324e94e6051b5921dc3ad638f670a4421b359fc34f68d514f",
+      "bytes": 949
+    },
+    {
+      "path": "components/page-skeleton.tsx",
+      "sha256": "28e5b44e313bff8df2a7b2e9303aaf0bb0cd6e8828420e26a90cb3275c64e675",
+      "bytes": 6682
+    },
+    {
+      "path": "components/result-badge.tsx",
+      "sha256": "ac474c306db50d315c4f1115b8b7dfad562e825a2475c87503074916ba626688",
+      "bytes": 742
+    },
+    {
+      "path": "components/route-browser.stories.tsx",
+      "sha256": "5041e74c2c5fcab656648489d0d2bdfdb4cbc460efcac9c607b89570789e1f91",
+      "bytes": 3411
+    },
+    {
+      "path": "components/route-browser.tsx",
+      "sha256": "fd8f9fed502eafa0a17f85d3fdaf22d952e3b03dd47934f92b347f4135d242ae",
+      "bytes": 21762
+    },
+    {
+      "path": "components/route-form-screen.tsx",
+      "sha256": "6f959379db5e57b19e5de53063f99a88990e3a77580f1a590de325b7fbba1fb4",
+      "bytes": 1037
+    },
+    {
+      "path": "components/route-form.stories.tsx",
+      "sha256": "3447bd3d68befcfb77dac47893bed4b96916f1bec5c0307852a69da103b529ab",
+      "bytes": 1140
+    },
+    {
+      "path": "components/route-form.tsx",
+      "sha256": "2410d7a09404f28a026b4fee6320072da0351e2e7ee0ef4eef7685da34a3c445",
+      "bytes": 5913
+    },
+    {
+      "path": "components/route-hold.stories.tsx",
+      "sha256": "b72157482d11deb8fc4966ed14dffeaf8cf44358c56b6502e3b660681f58f794",
+      "bytes": 948
+    },
+    {
+      "path": "components/route-hold.tsx",
+      "sha256": "f8a9d70e01ab459a6d6ec1e5fa9332e06d04bf1e35f1fc4eee6e740f406e1db9",
+      "bytes": 1233
+    },
+    {
+      "path": "components/route-loading-overlay.tsx",
+      "sha256": "a404e5bb9ce7cecc1f6209332b4370948787345ecf4304a36c22d1db0ec5de77",
+      "bytes": 2760
+    },
+    {
+      "path": "components/route-mark.stories.tsx",
+      "sha256": "a5635e16e5c88ba8dcecc5eabcaf3da98cff8ab1de60dd9ef14a8547894ba9c3",
+      "bytes": 503
+    },
+    {
+      "path": "components/route-mark.tsx",
+      "sha256": "62549ff6e13a080673f6c4fd185745ff9d6eb902b342511eeae15630f12ee4f5",
+      "bytes": 827
+    },
+    {
+      "path": "components/route-rows.tsx",
+      "sha256": "9a64d6eb1db79c8ad3b438ca3eaddc2be10bedec82738f8ab637e8e9efcf2989",
+      "bytes": 5218
+    },
+    {
+      "path": "components/submit-button.stories.tsx",
+      "sha256": "dd08c04ea106c415a6736de3b539b01ca93fc454158adff019175f28cf1141b9",
+      "bytes": 605
+    },
+    {
+      "path": "components/submit-button.tsx",
+      "sha256": "07782bef6894acf14bb438dc87ea279de5ceb65b46bd4d2a73fbaea3a0f37b91",
+      "bytes": 870
+    },
+    {
+      "path": "components/theme-switcher.tsx",
+      "sha256": "27e7f2b92cf0429b8d092478e425951fa6280390e4b5affb330773edade670f6",
+      "bytes": 2176
+    },
+    {
+      "path": "components/ui/bottom-sheet.stories.tsx",
+      "sha256": "d74a4e8d3a3e8d18c1cbbea5576090af3e6f2e0a88c3109f819fa0907724d860",
+      "bytes": 1498
+    },
+    {
+      "path": "components/ui/bottom-sheet.tsx",
+      "sha256": "8f795e5355233aeff92acfe9217ce0db0fef6064d691c20250ff2358b4c67610",
+      "bytes": 4966
+    },
+    {
+      "path": "components/ui/button.stories.tsx",
+      "sha256": "8055d8d5ded6772907c521de7450f63e4aa8e26b70638b36660b498a5a390b0a",
+      "bytes": 1151
+    },
+    {
+      "path": "components/ui/button.ts",
+      "sha256": "f4dcdc089d24a64cddad24f25e416b9f180ab1f9014e88e303c9a5f8d64557a8",
+      "bytes": 914
+    },
+    {
+      "path": "components/ui/feedback-message.stories.tsx",
+      "sha256": "a8d55371e7394851e77cf4387293db885bdd3552aa5fe7fa616520db46874815",
+      "bytes": 664
+    },
+    {
+      "path": "components/ui/feedback-message.tsx",
+      "sha256": "a64c20c56a15a8e28ebb0c7dc067ce7ba9f6208ca930cbc75ce1f6164f610d37",
+      "bytes": 530
+    },
+    {
+      "path": "components/ui/form-field.stories.tsx",
+      "sha256": "ea21b0169b23813af6206516294816f42fbeca3c5dfb53e8f8aa86dcc33ae0bd",
+      "bytes": 912
+    },
+    {
+      "path": "components/ui/form-field.tsx",
+      "sha256": "181a6a27c21e47fa16ab24b0d59dcf1acc9065aba431b21ae2e63130ef233581",
+      "bytes": 2321
+    },
+    {
+      "path": "components/ui/screen-header.stories.tsx",
+      "sha256": "ac65e2b6938fd7cc48b635498a793fba254f5f3a92b62015eb9b7e2498d06d6a",
+      "bytes": 553
+    },
+    {
+      "path": "components/ui/screen-header.tsx",
+      "sha256": "2622363ac85ca8e8e32ffb7e4b37a9fa495b8e21f8d02e68a37dabbfe4bf53e1",
+      "bytes": 1075
+    },
+    {
+      "path": "components/ui/section-heading.stories.tsx",
+      "sha256": "3e3f8ec948242dab173115ab42d753d52cb72f912cbd5bbfd96a0802fbab267c",
+      "bytes": 557
+    },
+    {
+      "path": "components/ui/section-heading.tsx",
+      "sha256": "cb4e0a28311b070f6142adda9af35e1d05fbca90b14073b4e4c562b76a663521",
+      "bytes": 499
+    },
+    {
+      "path": "components/ui/snackbar.stories.tsx",
+      "sha256": "82fb3e4ec4767875bc0ac45cebc99c8cef3fbaeab5a536d19c4cf1c4f45624c0",
+      "bytes": 812
+    },
+    {
+      "path": "components/ui/snackbar.tsx",
+      "sha256": "4b08a051929a9b3235b6665ec958bfcad01636ceef8bac17c6d9dd99c75d3a18",
+      "bytes": 3369
+    },
+    {
+      "path": "components/under-construction.stories.tsx",
+      "sha256": "cfcc3d3e7d0e72fca6f45a69a7aacbe5abbf41731be4eb781d779ed2ec21ce28",
+      "bytes": 1025
+    },
+    {
+      "path": "components/under-construction.tsx",
+      "sha256": "34f83ab25b05e94e629b2c7c3f3d997439dff62726113a79766ffb2d51daf9ea",
+      "bytes": 4341
+    },
+    {
+      "path": "docs/BACKEND_SPEC.md",
+      "sha256": "fceddaead41f029bf3c518eb5ad28cee94b3f09f150a2e4f299781b023797274",
+      "bytes": 8782
+    },
+    {
+      "path": "docs/FE_LOCAL_HANDOFF.md",
+      "sha256": "fd97c86ee65c95078a4229f510d6d6a61f6123719c97c08e43eb1cdc09784ef3",
+      "bytes": 11478
+    },
+    {
+      "path": "docs/FRONTEND_SPEC.md",
+      "sha256": "4138f15430c4d0d1b5413d25c7cbd1cbf13fb4e20be4079eff6a6ff4cd3cc2fe",
+      "bytes": 14040
+    },
+    {
+      "path": "eslint.config.mjs",
+      "sha256": "870f1adccecf3051cbcd9fd307cef51d7633cf510979c181a81f4b1797273493",
+      "bytes": 465
+    },
+    {
+      "path": "lib/actions.ts",
+      "sha256": "b28890b579913d77eabcc89e2babcb931113719269a8fec2c94b40ae1ea16153",
+      "bytes": 15204
+    },
+    {
+      "path": "lib/api.ts",
+      "sha256": "ecf0f6d66e2f6e5213ce754e394284935444a1c229172a067b7a77ccc875363e",
+      "bytes": 6863
+    },
+    {
+      "path": "lib/journal-summary.ts",
+      "sha256": "136f05c48515674a41dac164287520b2abd4a6ef55dc663dc6a0d6b5d20d0c65",
+      "bytes": 2186
+    },
+    {
+      "path": "lib/journal.ts",
+      "sha256": "bb13c42cf66fabe432c0fd84524f134e19af1c9f9361b5799c46e20c06398bd3",
+      "bytes": 1325
+    },
+    {
+      "path": "lib/route-grades.ts",
+      "sha256": "060dd2086b3cafde2a0f522c8be17c94d44fb44945f82d10829df37a3f0b4dc4",
+      "bytes": 1232
+    },
+    {
+      "path": "lib/route-options.ts",
+      "sha256": "9725d3c113b07d5b39c2b44213245e29b41d219ab677a4b69bf173e9e2cfe4c2",
+      "bytes": 649
+    },
+    {
+      "path": "lib/session.ts",
+      "sha256": "d745e373b95ea3f86c663133c86fa35197d93cee4c503c51b60cc8186fef5b0e",
+      "bytes": 996
+    },
+    {
+      "path": "lib/utils.ts",
+      "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+      "bytes": 169
+    },
+    {
+      "path": "next.config.ts",
+      "sha256": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc",
+      "bytes": 133
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "090efe459f88c35043c4ee363d6b7f4655d7549d8d1241a5d1ede079a2699a82",
+      "bytes": 356442
+    },
+    {
+      "path": "package.json",
+      "sha256": "297a7a2cd39b88121659d9492c07282e9527c7a7b74b8272bce7191904baf9de",
+      "bytes": 845
+    },
+    {
+      "path": "postcss.config.mjs",
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "bytes": 94
+    },
+    {
+      "path": "proxy.ts",
+      "sha256": "8bd9dc7837fef19b8d5f3d13e1fe6fbaeaa0c10c6f464dc9a08912e4b5845999",
+      "bytes": 1113
+    },
+    {
+      "path": "public/brand/bolt-b.svg",
+      "sha256": "891a6dc408f92588120b9da3b0038fd2ec5ad3bd7788b65fec1e88310b36a15d",
+      "bytes": 440
+    },
+    {
+      "path": "public/brand/proposals/bolt-b.svg",
+      "sha256": "1a3f910b72f75b9f7f5086dca0693d5e6ff71fd911adf791f1f0af8daa10f409",
+      "bytes": 451
+    },
+    {
+      "path": "public/brand/proposals/crux.svg",
+      "sha256": "a4e593441aef21b3122a5c977a4942928c82b05f08a57176b513edd5b1981871",
+      "bytes": 397
+    },
+    {
+      "path": "public/brand/proposals/three-moves.svg",
+      "sha256": "aaead27b3ece5d430c8d311c5ff733fbc9f4858ad54fb9f58c4ad9b1c67deaea",
+      "bytes": 589
+    },
+    {
+      "path": "public/file.svg",
+      "sha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4",
+      "bytes": 391
+    },
+    {
+      "path": "public/globe.svg",
+      "sha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf",
+      "bytes": 1035
+    },
+    {
+      "path": "public/next.svg",
+      "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc",
+      "bytes": 1375
+    },
+    {
+      "path": "public/route-holds/black.svg",
+      "sha256": "f69a6b1df3c1652dda74b892d4a1702ce1bc8c6713e4e352d2fda2ab0973ed92",
+      "bytes": 1485
+    },
+    {
+      "path": "public/route-holds/blue-triangle.svg",
+      "sha256": "b2ebd82181ee60893a03bfcc40f4de1e8b1890aafb3bd82eeb1ae7d8e60892f6",
+      "bytes": 1528
+    },
+    {
+      "path": "public/route-holds/blue.svg",
+      "sha256": "4df062a6cdca9672ff320bd8426d1ff723dbeefe0b3fe1c011caa9334ec95f0e",
+      "bytes": 1522
+    },
+    {
+      "path": "public/route-holds/brown.svg",
+      "sha256": "95b7cca57a75edf71a3c3bd242d7d4fc938965d6582338ca0a49270b479cf708",
+      "bytes": 1435
+    },
+    {
+      "path": "public/route-holds/green.svg",
+      "sha256": "b58698c8e18dc138772a77d348a10c5be68f9b920fb3489e24edc04d3d5d66ee",
+      "bytes": 1515
+    },
+    {
+      "path": "public/route-holds/grey.svg",
+      "sha256": "43f892dc3f41c29ce1f4dac9c99943421449fef3478fbdee7f42d84e3524c96f",
+      "bytes": 1435
+    },
+    {
+      "path": "public/route-holds/mint.svg",
+      "sha256": "fb2a77c4c81e509aa160a9556c03c7b36155799beb61a90663c97f009b319dc5",
+      "bytes": 1434
+    },
+    {
+      "path": "public/route-holds/orange.svg",
+      "sha256": "26b2653ac86af4f1d78c144f3ca51763a696bcc7494c1ab3bcd02461a4a4be3b",
+      "bytes": 1457
+    },
+    {
+      "path": "public/route-holds/pink.svg",
+      "sha256": "744c2f77fff1ebfa845c63607d2bba596bc1bda8929fa773db1a5c9049ee017e",
+      "bytes": 1445
+    },
+    {
+      "path": "public/route-holds/purple.svg",
+      "sha256": "fad6fae897efb63d2efb653801697d267ea3f8e5b28f4c16670e380c7c10a149",
+      "bytes": 1460
+    },
+    {
+      "path": "public/route-holds/red.svg",
+      "sha256": "bb94030c1196bf15662d40d9ec068286db1a506ca915555ac76951c899b3abeb",
+      "bytes": 1564
+    },
+    {
+      "path": "public/route-holds/teal.svg",
+      "sha256": "662d6ccc6bf59aedd24fa379fe9432f34741f74f1a285520be1ce59acb2edeca",
+      "bytes": 1435
+    },
+    {
+      "path": "public/route-holds/transparent.svg",
+      "sha256": "98f07911f562517a0599b7375d89763edc59ce9eae845393738296c3eba19ba9",
+      "bytes": 1539
+    },
+    {
+      "path": "public/route-holds/white.svg",
+      "sha256": "b6382b964af0ec03357c4dad3d24e0d20e2eda877a9df37a16d36138f93fc3a4",
+      "bytes": 1488
+    },
+    {
+      "path": "public/route-holds/yellow.svg",
+      "sha256": "5d63dcfe5d826953f976c860e518b22fc089ad1524a981c6d2d4bffe31731642",
+      "bytes": 1498
+    },
+    {
+      "path": "public/vercel.svg",
+      "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4",
+      "bytes": 128
+    },
+    {
+      "path": "public/window.svg",
+      "sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1",
+      "bytes": 385
+    },
+    {
+      "path": "tests/journal-summary.test.mjs",
+      "sha256": "96319c806c4acf8686b0caaf31b5597684b13704ea554a3b8d5462ff687507f2",
+      "bytes": 2415
+    },
+    {
+      "path": "tests/route-grades.test.mjs",
+      "sha256": "89c404bdec8deff6a9ae9624ddcb67a1792fd181b98cd31588dab3580b47dbed",
+      "bytes": 1063
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "be18523b23b78b6e1a876ddd107d330f0168bddf09d751b57e0b5edce69c66f3",
+      "bytes": 666
+    }
+  ],
+  "referenceScreenshots": {
+    "capturedDate": "2026-10-24",
+    "viewport": "390x844",
+    "reducedMotion": true,
+    "authority": "Historical sample-data captures; recapture/freeze before implementation. Not production verification.",
+    "files": [
+      {
+        "path": "docs/visual-walkthrough/screenshots/add-gym.png",
+        "sha256": "703c33300b1ff56524dca29549314ae845eba0f54b2a7050eb1957a3d8fb40c5"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/add-route-bottom.png",
+        "sha256": "2eb55cfcaa49484120f39f9d3976a6029eb23449ec950525085923c13734fd5e"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/add-route.png",
+        "sha256": "46cc283441bb293fea46fa6f1362bfbd663380e95bf6333d68746d3fc8f065ed"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/beta.png",
+        "sha256": "b8b9d9193cd694f07bc0679a67df2a1094f1d6ff99f95c5c0e9fc73bfed85c82"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/challenges.png",
+        "sha256": "b666026151f62fc56c95610087139546f8a1d625de8e0c8acceffee9e378a467"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/climbers.png",
+        "sha256": "517c8bee0414627413db10ab7dd97e5a223318e19f71525f6dfbca83f5b11ca5"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/climbs-gym.png",
+        "sha256": "cfda5d982bd108ffebe273e12ac29d92af95065c2e1e0b3ad2c1d8bf292fcc05"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/climbs.png",
+        "sha256": "a06f4e5f6834f384e1584f23fd9c01747a710e79cf726654e6d494d10b983cba"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/completed-session.png",
+        "sha256": "71e051436fa419f4092209caa023e09d95e1f2f6c89334fda8205e63952807a2"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/correction.png",
+        "sha256": "93cef25955bec189b090570ea95d102bbbd502e8d6500e742000be1a90b078ad"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/edit-profile.png",
+        "sha256": "1a5ee69dca88d745f69abb5c74df59aa45fcd44a4ffe3a9b1cafff94bf4b3786"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/edit-route-bottom.png",
+        "sha256": "32ba26f51f08e402ad8e80c11a95f00db46f4cc2aa5e3381b7c7c0af7156ba4a"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/edit-route.png",
+        "sha256": "70ccf2c30bc4cae95ff3d078ddbd0ac58889e82b4a11771a931b6038e17f050b"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/empty-climbs.png",
+        "sha256": "0fd5f082e2505c96c0cd92e1593e3d8b38c296e35c211a5b0734df3cbdc2cc6a"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/end-session.png",
+        "sha256": "01122cec7554b51d51273be1599dea6b3b853b6ff5daff3ed3197dd383bbae51"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/explore-bottom.png",
+        "sha256": "e4f0710fd8a4b69b657b842d386226adb729a40f7bb55509817a432bcef93bc8"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/explore.png",
+        "sha256": "dad85b105d83d3c6204439c7d5cb2bdf41ac03d218e1c311fce20038d8e3974d"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/feed.png",
+        "sha256": "17d2f8d76c5af35255e3f151600b0f4e59f3791f598333a70b639ff9a701eee1"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/filters.png",
+        "sha256": "161ecc633f288698b277bff939c5dc1025ce75176fcaf7f30e33aa3e87ad82b8"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/flash-sheet.png",
+        "sha256": "12dea2687948b86b8b02aa88a253aa9fd7251f695ddce3be3c5645c50509ff11"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/groups.png",
+        "sha256": "d465074c1b7dd36bdd70e8ce82c13296cd0691908e0926d8e589d862c75e341a"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/gym.png",
+        "sha256": "d63e428a74e5eef1bff2d2fbbdde28171f4006196ca74bbebb0ec332e63b6610"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/gyms.png",
+        "sha256": "2778f17966187210df7e8661376049d4b290dfeb4e27b8e689221def6a763c6b"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/history.png",
+        "sha256": "38357fc3a8c259113db5b134727d9b2a9541b73dbf37b7cd14d5757fcc877f76"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/home.png",
+        "sha256": "10bfeb3b22121217e267491f9a4d1eacd20623ca464a209f3d30df4834727d71"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/leaderboards.png",
+        "sha256": "6363eb8bb85de82c352a064fff97353618fafdaf2cd204d9f818a8e10d0ba3bf"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/login-error.png",
+        "sha256": "bef0c101f486aa40bfb87438dbb86ff13a0121808c77212d3a8a77f52965d312"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/login.png",
+        "sha256": "77300b98ecea77bccf5e64890b0100482746360237181fbb8a55952f63b53a6c"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/not-found.png",
+        "sha256": "36652922ddfca91c09f78e68c491f86ba7060282b01ec875b0bd074affa8414a"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/note.png",
+        "sha256": "913deb8fc855833b74996ac8a97f8411003cd94f70098894d853daa2a08b850d"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/partial-history.png",
+        "sha256": "c65333167551aac160ea56945cd20600604d5ac1ae5fffbf168d656d419ce25a"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/privacy.png",
+        "sha256": "b9d82ff8f9189d8e6acc8d11126db4eaee2fc25a2c4d6a542209d1aa182d9076"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/profile-bottom.png",
+        "sha256": "e601c2f5e7c247ffad58e223d760bcc3af5c3338194c02289516f2938250475e"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/profile.png",
+        "sha256": "7af310dbcffd97919a028808ba4c10360205799cedf8bd72c1911f3ee490fa82"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/public-profile.png",
+        "sha256": "86798d12663ec2f43c0afadeedb783ffee8e3cef12656e8e9aef0a630019f370"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/retired-history.png",
+        "sha256": "a4fd137069a6650e0e1dd53f71d396406d4c1a70f5c9279866a67393ca338e44"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/route-sheet.png",
+        "sha256": "46be3575f3d60913dca5315a644091336552b093154feebf391202a56d1b14ee"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/session-add-route.png",
+        "sha256": "7e9bacb103655790ae6754cdf09747108bb2422af351e54dae7c5c508e2a0b61"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/session-bottom.png",
+        "sha256": "b3fb75ceef14f2279495d096cc2d39a57567913646c4157edcc17495ed3534cd"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/session.png",
+        "sha256": "ecdba23cc2eff49e99b7161f985c171056935a6503eec80e8c4553fa778c8d2b"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/sessions-bottom.png",
+        "sha256": "c2a50611454fe1f6d50bf84b0fbb2d6f9507ed7387d5a1592a06bb73833949e9"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/sessions.png",
+        "sha256": "fae269261e990d27722a948c71eedb4900fd1553f10b2fba166e5c0210dbda85"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/signup.png",
+        "sha256": "7fdf4e121dd588a8392436d286f10bdc5f70b440643e455c22bff4e44e99be55"
+      },
+      {
+        "path": "docs/visual-walkthrough/screenshots/welcome.png",
+        "sha256": "30b5470ace37c0b1bdf8e57c15174e3a345b61fd59b798ffabe2f5522ab06925"
+      }
+    ]
+  },
+  "referenceFixture": {
+    "path": "docs/migration/reference-fixtures/sample-api.cjs.reference.txt",
+    "sha256": "367333eb55963e0bc657830c6dc04826637d6e4fd73867e7b8594c6d144738b5",
+    "status": "Archived local-only sample fixture, not a complete backend or security emulator; not started during planning"
+  },
+  "openapi": {
+    "path": "docs/migration/openapi-2026-10-28.json",
+    "url": "https://bouldy-api.onrender.com/openapi.json",
+    "sha256": "073cd4de93a157b3cfbfa98bfa6f4ecfc922ae66890698a7400da8f018a782b2",
+    "scope": "Read-only public schema fetch; no authenticated requests or writes"
+  }
+}

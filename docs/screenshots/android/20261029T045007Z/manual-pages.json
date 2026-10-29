@@ -1,0 +1,46 @@
+{
+  "scope": "Animation catalogues captured from actual adb framebuffer; normal animations left running. UIAutomator cannot obtain idle hierarchies for these views, so title/footer were visually inspected. Screenshots are unedited; no browser workarounds.",
+  "pages": [
+    {
+      "route": "/loading-preview",
+      "frames": [
+        "loading-preview/01.png",
+        "loading-preview/02.png",
+        "loading-preview/03.png"
+      ],
+      "bottomReached": true,
+      "verification": "Visible loader variants, page skeleton accordion titles, normal-motion frames"
+    },
+    {
+      "route": "/component-preview",
+      "frames": [
+        "component-preview/01.png",
+        "component-preview/02.png",
+        "component-preview/03.png",
+        "component-preview/04.png",
+        "component-preview/05.png",
+        "component-preview/06.png",
+        "component-preview/07.png",
+        "component-preview/08.png",
+        "component-preview/09.png",
+        "component-preview/10.png",
+        "component-preview/11.png",
+        "component-preview/12.png",
+        "component-preview/13.png",
+        "component-preview/14.png",
+        "component-preview/15.png",
+        "component-preview/16.png",
+        "component-preview/17.png",
+        "component-preview/18.png",
+        "component-preview/19.png",
+        "component-preview/20.png",
+        "component-preview/21.png",
+        "component-preview/22.png",
+        "component-preview/23.png",
+        "component-preview/24.png"
+      ],
+      "bottomReached": true,
+      "verification": "First title and final ThemeSwitcher reference paragraph visually inspected; 20 source story groups represented"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+getpwuid_r did not find a match for uid 501
+Timestamp               Ty Process[PID:TID]
+2026-10-28 23:32:17.196 Df SpringBoard[98794:166fe67] [com.apple.FrontBoard:Common] [FBSystemService][0x6571] Received request to open "host.exp.Exponent" with url "exp:<private>" from lsd:98979 on behalf of CoreSimulatorBr:98827.
+2026-10-28 23:32:24.783 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Workspace] Received trusted open application request for "host.exp.Exponent" from <FBProcess: 0x7041c0a5c0; osservice<com.apple.CoreSimulator.bridge>:98827(v6982E3)>.
+2026-10-28 23:32:26.819 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Icon] Allowing tap for icon view 'host.exp.Exponent'
+2026-10-28 23:32:26.998 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Icon] <SBIconView:0x7044915000 [<SBLeafIcon:0x600000ef6f80 [host.exp.Exponent]>]> Touches began with event: <UITouchesEvent: 0x6000000dc1e0> timestamp: 1.67713e+06 touches: {(
+    <UITouch: 0x70409d8a50> type: Direct; phase: Began; is pointer: NO; tap count: 1; force: 0.000; window: <SBHomeScreenWindow: 0x7040c6c980; HomeScreen-0x7040c6c980-13; baseClass = UIWindow; frame = (0 0; 402 874); clipsToBounds = YES; opaque = NO; gestureRecognizers = <NSArray: 0x600003003300>; layer = <UIWindowLayer: 0x6000025c2b80>>; responder: <SBIconView: 0x7044915000; frame: {{215.66666666666666, 190.33333333333334}, {64, 78}}; icon: <SBApplicationIcon: 0x600000ef6f80; nodeID: host.exp.Exponent; bundleID: host.exp.Exponent>; location: SBIconLocationRoot; isTouchDownInIcon: YES; contentVisibility: "visible (transitioning)">; location in window: {245, 218.33333333333331}; previous location in window: {245, 218.33333333333331}; location in view: {29.333333333333343, 27.999999999999972}; previous location in view: {29.333333333333343, 27.9999999999999, tap gesture: <decode: missing data>
+2026-10-28 23:32:26.998 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Icon] Icon touch began: <SBIconView: 0x7044915000; frame: {{215.66666666666666, 190.33333333333334}, {64, 78}}; icon: <SBApplicationIcon: 0x600000ef6f80; nodeID: host.exp.Exponent; bundleID: host.exp.Exponent>; location: SBIconLocationRoot; isTouchDownInIcon: YES; contentVisibility: "visible (transitioning)">
+2026-10-28 23:32:27.021 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Common] No default launch images found for host.exp.Exponent, pre-warming SplashBoard under the expectation it will be required.
+2026-10-28 23:32:27.040 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Icon] Allowing tap for icon view 'host.exp.Exponent'
+2026-10-28 23:32:27.052 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Icon] <SBIconView:0x7044915000 [<SBLeafIcon:0x600000ef6f80 [host.exp.Exponent]>]> Handle tap: modifiers: 0, delegate: 0x704691b400, window: 0x7040c6c980
+2026-10-28 23:32:27.056 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Icon] Icon tapped: <SBIconView: 0x7044915000; frame: {{215.66666666666666, 190.33333333333334}, {64, 78}}; icon: <SBApplicationIcon: 0x600000ef6f80; nodeID: host.exp.Exponent; bundleID: host.exp.Exponent>; location: SBIconLocationRoot; isHighlighted: YES; isTouchDownInIcon: YES; contentVisibility: "visible (transitioning)">
+2026-10-28 23:32:27.068 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Icon] Telling delegate to launch with actions: <SBIconView: 0x7044915000; frame: {{215.66666666666666, 190.33333333333334}, {64, 78}}; icon: <SBApplicationIcon: 0x600000ef6f80; nodeID: host.exp.Exponent; bundleID: host.exp.Exponent>; location: SBIconLocationRoot; isHighlighted: YES; isTouchDownInIcon: YES; contentVisibility: "visible (transitioning)"> modifierFlags: 0
+2026-10-28 23:32:27.948 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Icon] Initiating launch from icon view: <SBIconView: 0x7044915000; frame: {{215.66666666666666, 190.33333333333334}, {64, 78}}; icon: <SBApplicationIcon: 0x600000ef6f80; nodeID: host.exp.Exponent; bundleID: host.exp.Exponent>; location: SBIconLocationRoot; isHighlighted: YES; isTouchDownInIcon: YES; contentVisibility: "visible (transitioning)">
+2026-10-28 23:32:27.970 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Icon] Launching application host.exp.Exponent from icon <SBApplicationIcon: 0x600000ef6f80; nodeID: host.exp.Exponent; bundleID: host.exp.Exponent>, location: SBIconLocationRoot
+2026-10-28 23:32:27.977 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:UIController] Activate application <SBApplication: 0x6000000c7840; host.exp.Exponent> {
+} from icon <SBApplicationIcon: 0x600000ef6f80; nodeID: host.exp.Exponent; bundleID: host.exp.Exponent> location SBIconLocationRoot
+2026-10-28 23:32:28.114 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:TraitsArbiter] [SwitcherOrientation] outSwitcherOrientation: portrait (1), outElementsOrientations: {
+    "sceneID:host.exp.Exponent-default" = 1;
+}
+2026-10-28 23:32:29.703 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:AppSwitcher] [Main (EmbeddedDisplay)] dispatch event:
+<SBTransitionSwitcherModifierEvent: 0x705c90df40; type: MainTransition; transitionID: 4A35D44F-CDA1-4BCC-AFA0-7A0B361F89C6; phase: Prepare; animated: YES; fromAppLayout: 0x0; toAppLayout: <SBAppLayout: 0x6000011e6180; primary: host.exp.Exponent:default; environment: main>; fromEnvironmentMode: home-screen; toEnvironmentMode: application; fromSpaceConfiguration: undefined; toSpaceConfiguration: full; pendingTermination: {(
+)}; morphingPIPLayoutRole: undefined; previousDesktopItems: {(
+)}>
+2026-10-28 23:32:30.003 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:AppSwitcher] [Main (EmbeddedDisplay)] handle response:
+<SBSwitcherModifierEventResponse: 0x6000032a3090> {
+    <SBSwitcherModifierEventResponse: 0x6000032a3060> {
+	    <SBSwitcherModifierEventResponse: 0x6000032aaee0> {
+		    <SBTimerEventSwitcherEventResponse: 0x6000032aa8b0; delay: 0.240000; reason: kSBTransitionModifierInvalidateAsyncRenderingReason>;
+		    <SBInvalidateAdjustedAppLayoutsSwitcherEventResponse: 0x6000032aa6d0>;
+		};
+	    <SBTimerEventSwitcherEventResponse: 0x6000032a3240; delay: 0.060000; reason: kSBFullScreenToHomeCornerRadiusDelayReason>;
+	};
+    <SBSwitcherModifierEventResponse: 0x6000032aaeb0> {
+	    <SBUpdateLayoutSwitcherEventResponse: 0x6000025db0c0; updateVisibleItems; layout; style; mode: None>;
+	    <SBRequestFolderSnapshotsSwitcherEventResponse: 0x6000032a3390; snapshotRequested: YES>;
+	    <SBIconOverlayVisibilitySwitcherEventResponse: 0x6000025dac00; visible: YES; appLayout: <SBAppLayout: 0x6000011e6180; primary: host.exp.Exponent:default; environment: main>>;
+	    <SBIconViewVisibilitySwitcher
+2026-10-28 23:32:32.849 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:AppSwitcher] [Main (EmbeddedDisplay)] dispatch event:
+<SBTransitionSwitcherModifierEvent: 0x705b00c300; type: MainTransition; transitionID: 4A35D44F-CDA1-4BCC-AFA0-7A0B361F89C6; phase: Animate; animated: YES; fromAppLayout: 0x0; toAppLayout: <SBAppLayout: 0x6000011e6180; primary: host.exp.Exponent:default; environment: main>; fromEnvironmentMode: home-screen; toEnvironmentMode: application; fromSpaceConfiguration: undefined; toSpaceConfiguration: full; pendingTermination: {(
+)}; morphingPIPLayoutRole: undefined; previousDesktopItems: {(
+)}>
+2026-10-28 23:32:32.974 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Common] Returning cached initialization context for host.exp.Exponent
+2026-10-28 23:32:32.978 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:AppSwitcher] [Main (EmbeddedDisplay)] dispatch event:
+<SBSceneReadySwitcherModifierEvent: 0x600003296d60; type: SceneReady; appLayout: <SBAppLayout: 0x6000011e6180; primary: host.exp.Exponent:default; environment: main> {
+    configuration = full;
+    environment = main;
+    centerConfiguration = undefined;
+    preferredDisplayOrdinal = 0;
+    continuousExposeIdentifier = host.exp.Exponent;
+    layoutItems = {
+        primary = <SBDisplayItem: 0x6000025a4980; type: App; bundleIdentifier: host.exp.Exponent; uniqueIdentifier: sceneID:host.exp.Exponent-default>;
+    }
+}>
+2026-10-28 23:32:33.087 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Icon] Icon touch canceled (tap gesture may still succeed): <SBIconView: 0x7044915000; frame: {{215.66666666666666, 190.33333333333334}, {64, 78}}; icon: <SBApplicationIcon: 0x600000ef6f80; nodeID: host.exp.Exponent; bundleID: host.exp.Exponent>; location: SBIconLocationRoot; allIconElementsButLabelHidden: YES; pauseReasons: "content visibility"; contentVisibility: hidden>
+2026-10-28 23:32:33.868 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:AppSwitcher] [Main (EmbeddedDisplay)] dispatch event:
+<SBTransitionSwitcherModifierEvent: 0x7042a147a0; type: MainTransition; transitionID: 4A35D44F-CDA1-4BCC-AFA0-7A0B361F89C6; phase: Complete; animated: YES; fromAppLayout: 0x0; toAppLayout: <SBAppLayout: 0x6000011e6180; primary: host.exp.Exponent:default; environment: main>; fromEnvironmentMode: home-screen; toEnvironmentMode: application; fromSpaceConfiguration: undefined; toSpaceConfiguration: full; pendingTermination: {(
+)}; morphingPIPLayoutRole: undefined; previousDesktopItems: {(
+)}>
+2026-10-28 23:32:33.872 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:AppSwitcher] [Main (EmbeddedDisplay)] handle response:
+<SBSwitcherModifierEventResponse: 0x6000032fcdb0> {
+    <SBPreemptAnimationSwitcherEventResponse: 0x6000032b6220>;
+    <SBSwitcherModifierEventResponse: 0x6000032fcf30> {
+	    <SBInvalidateAdjustedAppLayoutsSwitcherEventResponse: 0x6000032b4db0>;
+	    <SBSwitcherModifierEventResponse: 0x6000032b4390> {
+		    <SBRequestFolderSnapshotsSwitcherEventResponse: 0x6000032b4420; snapshotRequested: NO>;
+		    <SBIconOverlayVisibilitySwitcherEventResponse: 0x600002a2d3c0; visible: NO; appLayout: <SBAppLayout: 0x6000011e6180; primary: host.exp.Exponent:default; environment: main>>;
+		    <SBIconViewVisibilitySwitcherEventResponse: 0x600001f20a00; visible: YES; animationSettings: 0x0; appLayout: <SBAppLayout: 0x6000011e6180; primary: host.exp.Exponent:default; environment: main>>;
+		    <SBMatchMoveToIconViewSwitcherEventResponse: 0x600001b549c0; active: NO; appLayout: <SBAppLayout: 0x6000011e6180; primary: host.exp.Exponent:default; environment: main>>;
+		};
+	};
+}
+2026-10-28 23:32:33.918 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:TraitsArbiter] [SwitcherOrientation] outSwitcherOrientation: portrait (1), outElementsOrientations: {
+    "sceneID:host.exp.Exponent-default" = 1;
+}
+2026-10-28 23:32:33.921 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Transaction] Running <SBAppToAppWorkspaceTransaction: 0x705ad3db70> for transition request:
+<SBMainWorkspaceTransitionRequest: 0x600000e86260; eventLabel: SBUIApplicationIconLaunchEventLabel; display: Main; source: HomeScreen> {
+    applicationContext = <SBWorkspaceApplicationSceneTransitionContext: 0x7040cc0f80; background: NO> entities = {
+        SBLayoutRolePrimary = <SBDeviceApplicationSceneEntity: 0x600001f1c4b0; ID: sceneID:host.exp.Exponent-default; layoutRole: primary>;
+    };
+}
+2026-10-28 23:32:33.936 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Common] Returning cached initialization context for host.exp.Exponent
+2026-10-28 23:32:33.936 Df SpringBoard[98794:166fe67] [com.apple.FrontBoard:Process] Asked to bootstrap a new process with identity: app<host.exp.Exponent((null))>
+2026-10-28 23:32:33.975 Df SpringBoard[98794:166b894] [com.apple.SplashBoard:Capture] Synchronously generating image for request: <XBLaunchStateRequest: 0x6000017e6a00; groupID: host.exp.Exponent - {DEFAULT GROUP}; statusBar: normal; refSize: {402, 874}; orientation: Portrait; userInterfaceStyle: Light>
+2026-10-28 23:32:36.112 E  SpringBoard[98794:166ff9c] [com.apple.SplashBoard:Capture] Request to splashboardd has timed out -- invalidating the connection for host.exp.Exponent.
+2026-10-28 23:32:36.113 E  SpringBoard[98794:166b894] [com.apple.SplashBoard:Capture] Snapshot generation resulted in an error with code: 8 for app bundleID: host.exp.Exponent
+2026-10-28 23:32:36.257 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:TraitsArbiter] [DeviceSceneHandle] Did set interfaceOrientation[1] on scene with identifier[sceneID:host.exp.Exponent-default]
+2026-10-28 23:32:36.260 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:ContinuitySession] modifying scene setting userInterfaceStyle to Light displayIdentity: Main forSceneManagers: Main <SBDeviceApplicationSceneHandle: 0x7042c122b0; sceneID: sceneID:host.exp.Exponent-default; scenePointer: 0x0>
+2026-10-28 23:32:36.270 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:Common] No capture application found for the host.exp.Exponent, launchCameraCapture: NO, isCaptureApplication: NO
+2026-10-28 23:32:36.303 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:AppSwitcher] [Main (EmbeddedDisplay)] dispatch event:
+<SBTransitionSwitcherModifierEvent: 0x705c91e2d0; type: MainTransition; transitionID: 12CD523D-68CE-4242-B6EF-E8D5C6C00C79; phase: Prepare; animated: YES; pendingTermination: {(
+)}; activating: <SBAppLayout: 0x6000011e6180; primary: host.exp.Exponent:default; environment: main>; morphingPIPLayoutRole: undefined; previousDesktopItems: {(
+)}>
+2026-10-28 23:32:36.304 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:AppSwitcher] [Main (EmbeddedDisplay)] dispatch event:
+<SBTransitionSwitcherModifierEvent: 0x705b024810; type: MainTransition; transitionID: 12CD523D-68CE-4242-B6EF-E8D5C6C00C79; phase: Animate; animated: YES; pendingTermination: {(
+)}; activating: <SBAppLayout: 0x6000011e6180; primary: host.exp.Exponent:default; environment: main>; morphingPIPLayoutRole: undefined; previousDesktopItems: {(
+)}>
+2026-10-28 23:32:36.435 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:AppSwitcher] [Main (EmbeddedDisplay)] dispatch event:
+<SBSceneReadySwitcherModifierEvent: 0x6000032f8330; type: SceneReady; appLayout: <SBAppLayout: 0x6000011e6180; primary: host.exp.Exponent:default; environment: main> {
+    configuration = full;
+    environment = main;
+    centerConfiguration = undefined;
+    preferredDisplayOrdinal = 0;
+    continuousExposeIdentifier = host.exp.Exponent;
+    layoutItems = {
+        primary = <SBDisplayItem: 0x6000025a4980; type: App; bundleIdentifier: host.exp.Exponent; uniqueIdentifier: sceneID:host.exp.Exponent-default>;
+    }
+}>
+2026-10-28 23:32:36.436 Df SpringBoard[98794:166b894] [com.apple.FrontBoard:Process] Asked to bootstrap a new process with identity: app<host.exp.Exponent((null))>
+2026-10-28 23:32:36.436 Df SpringBoard[98794:166b894] [com.apple.FrontBoard:Process] Did not create a new process: A pending process for app<host.exp.Exponent((null))> already exists.
+2026-10-28 23:32:36.735 Df SpringBoard[98794:166b894] [com.apple.SpringBoard:AppSwitcher] [Main (EmbeddedDisplay)] dispatch event:
+<SBTransitionSwitcherModifierEvent: 0x7041aa1750; type: MainTransition; transitionID: 12CD523D-68CE-4242-B6EF-E8D5C6C00C79; phase: Complete; animated: YES; pendingTermination: {(
+)}; activating: <SBAppLayout: 0x6000011e6180; primary: host.exp.Exponent:default; environment: main>; morphingPIPLayoutRole: undefined; previousDesktopItems: {(
+)}>
+2026-10-28 23:32:42.498 Df SpringBoard[98794:166d7a7] [com.apple.SplashBoard:SnapshotReaper] <XBApplicationSnapshotManifestImpl: 0x60000113af00> [host.exp.Exponent] Reaping invalid snapshot <XBApplicationSnapshot: 0x705ad3c6b0; …2F43B465883B> [host.exp.Exponent]
+ invalidReason: expired. expirationDate: 0001-01-01 00:00:00 +0000; how long ago (seconds): 63928971162.492058
+2026-10-28 23:32:42.524 Df SpringBoard[98794:166d7a7] [com.apple.SplashBoard:FileManifest] <XBApplicationSnapshotManifestImpl: 0x60000113af00> [host.exp.Exponent] Deleting snapshot <XBApplicationSnapshot: 0x705ad3c6b0; …2F43B465883B> [host.exp.Exponent] for reason: _contentType: GeneratedDefault(1)
+2026-10-28 23:32:42.563 Df SpringBoard[98794:166d7a7] [com.apple.SplashBoard:FileManifest] <XBApplicationSnapshotManifestImpl: 0x60000113af00> [host.exp.Exponent] We don't have any snapshots, so we're clearing our manifest data.
+2026-10-28 23:32:43.662 Df SpringBoard[98794:166ff9c] [com.apple.SplashBoard:FileManifest] <XBApplicationSnapshotManifestImpl: 0x60000113af00> [host.exp.Exponent] We don't have any snapshots, so we're clearing our manifest data.

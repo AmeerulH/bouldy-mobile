@@ -1,0 +1,358 @@
+[
+  {
+    "path": "docs/evidence/source-current/home-320.png",
+    "sha256": "12570ed7f910f95e7bac6d600b4d63204b35d09871c9b348fb23bcc4795cbfbd"
+  },
+  {
+    "path": "docs/evidence/source-current/feed.png",
+    "sha256": "17d2f8d76c5af35255e3f151600b0f4e59f3791f598333a70b639ff9a701eee1"
+  },
+  {
+    "path": "docs/evidence/source-current/climbs.png",
+    "sha256": "a06f4e5f6834f384e1584f23fd9c01747a710e79cf726654e6d494d10b983cba"
+  },
+  {
+    "path": "docs/evidence/source-current/attempt-error.png",
+    "sha256": "5d9fa6f987e8c93489cdf154c8000b1dcff42907b69445144844d759e4fb38d7"
+  },
+  {
+    "path": "docs/evidence/source-current/session-390.png",
+    "sha256": "ecdba23cc2eff49e99b7161f985c171056935a6503eec80e8c4553fa778c8d2b"
+  },
+  {
+    "path": "docs/evidence/source-current/login-error.png",
+    "sha256": "07b680b3120ad2f144032984bee669e7478cea52b11d5fc6696503f09eb1dfed"
+  },
+  {
+    "path": "docs/evidence/source-current/session-1440.png",
+    "sha256": "d7200de4dc5402c332d30856ee8c92ad0f826e3988dd7c9875efe66409132b76"
+  },
+  {
+    "path": "docs/evidence/source-current/edit-route-bottom.png",
+    "sha256": "32ba26f51f08e402ad8e80c11a95f00db46f4cc2aa5e3381b7c7c0af7156ba4a"
+  },
+  {
+    "path": "docs/evidence/source-current/welcome-390.png",
+    "sha256": "30b5470ace37c0b1bdf8e57c15174e3a345b61fd59b798ffabe2f5522ab06925"
+  },
+  {
+    "path": "docs/evidence/source-current/filters.png",
+    "sha256": "279c340425d19f9b124dbe5c7e59f2dc8a605461bb649cdb00bb079a8e82f386"
+  },
+  {
+    "path": "docs/evidence/source-current/sessions-bottom.png",
+    "sha256": "c2a50611454fe1f6d50bf84b0fbb2d6f9507ed7387d5a1592a06bb73833949e9"
+  },
+  {
+    "path": "docs/evidence/source-current/login.png",
+    "sha256": "77300b98ecea77bccf5e64890b0100482746360237181fbb8a55952f63b53a6c"
+  },
+  {
+    "path": "docs/evidence/source-current/welcome-430.png",
+    "sha256": "dc4487526dac8b44a5904e036b7eb4b0928e3c0077c56b55de71c361855689da"
+  },
+  {
+    "path": "docs/evidence/source-current/note.png",
+    "sha256": "913deb8fc855833b74996ac8a97f8411003cd94f70098894d853daa2a08b850d"
+  },
+  {
+    "path": "docs/evidence/source-current/completed-session.png",
+    "sha256": "71e051436fa419f4092209caa023e09d95e1f2f6c89334fda8205e63952807a2"
+  },
+  {
+    "path": "docs/evidence/source-current/empty-climbs.png",
+    "sha256": "0fd5f082e2505c96c0cd92e1593e3d8b38c296e35c211a5b0734df3cbdc2cc6a"
+  },
+  {
+    "path": "docs/evidence/source-current/public-profile.png",
+    "sha256": "86798d12663ec2f43c0afadeedb783ffee8e3cef12656e8e9aef0a630019f370"
+  },
+  {
+    "path": "docs/evidence/source-current/sessions.png",
+    "sha256": "fae269261e990d27722a948c71eedb4900fd1553f10b2fba166e5c0210dbda85"
+  },
+  {
+    "path": "docs/evidence/source-current/route-sheet.png",
+    "sha256": "46be3575f3d60913dca5315a644091336552b093154feebf391202a56d1b14ee"
+  },
+  {
+    "path": "docs/evidence/source-current/session-430.png",
+    "sha256": "3644a041a8a86e0c484efa69ef1b567337d3e451648d16b386ed0b4e8dd5665a"
+  },
+  {
+    "path": "docs/evidence/source-current/climbers.png",
+    "sha256": "517c8bee0414627413db10ab7dd97e5a223318e19f71525f6dfbca83f5b11ca5"
+  },
+  {
+    "path": "docs/evidence/source-current/session.png",
+    "sha256": "ecdba23cc2eff49e99b7161f985c171056935a6503eec80e8c4553fa778c8d2b"
+  },
+  {
+    "path": "docs/evidence/source-current/home-430.png",
+    "sha256": "c7e46fac1c816a87defd895a44cbbce3a972b0d771c3537315e662811b6e75d8"
+  },
+  {
+    "path": "docs/evidence/source-current/welcome-1440.png",
+    "sha256": "4b6d3525d6d3fc7f7a79fed09d0998f6453f4b0d634fba05766c9fe8c122a0e8"
+  },
+  {
+    "path": "docs/evidence/source-current/add-gym.png",
+    "sha256": "703c33300b1ff56524dca29549314ae845eba0f54b2a7050eb1957a3d8fb40c5"
+  },
+  {
+    "path": "docs/evidence/source-current/explore-bottom.png",
+    "sha256": "e4f0710fd8a4b69b657b842d386226adb729a40f7bb55509817a432bcef93bc8"
+  },
+  {
+    "path": "docs/evidence/source-current/challenges.png",
+    "sha256": "b666026151f62fc56c95610087139546f8a1d625de8e0c8acceffee9e378a467"
+  },
+  {
+    "path": "docs/evidence/source-current/duplicate-session.png",
+    "sha256": "0d2d264a9ef7f13d4e006c40bf43ab6f9cbf4053514f1e9fb29dc81ab80ddc0d"
+  },
+  {
+    "path": "docs/evidence/source-current/home.png",
+    "sha256": "10bfeb3b22121217e267491f9a4d1eacd20623ca464a209f3d30df4834727d71"
+  },
+  {
+    "path": "docs/evidence/source-current/gym.png",
+    "sha256": "d63e428a74e5eef1bff2d2fbbdde28171f4006196ca74bbebb0ec332e63b6610"
+  },
+  {
+    "path": "docs/evidence/source-current/welcome-320.png",
+    "sha256": "244f5a80964892f8c5d80c7de96b2fac410102d403d0fb256134170df170459b"
+  },
+  {
+    "path": "docs/evidence/source-current/retired-history.png",
+    "sha256": "a4fd137069a6650e0e1dd53f71d396406d4c1a70f5c9279866a67393ca338e44"
+  },
+  {
+    "path": "docs/evidence/source-current/gyms.png",
+    "sha256": "2778f17966187210df7e8661376049d4b290dfeb4e27b8e689221def6a763c6b"
+  },
+  {
+    "path": "docs/evidence/source-current/session-320.png",
+    "sha256": "fb1a37a21a07adb282c41519c5cea97fbecb131ead1e9c8fc75bc2d5deb9d149"
+  },
+  {
+    "path": "docs/evidence/source-current/login-1440.png",
+    "sha256": "1fe467869eb735b1c6cbc095aeddcc80f3ffe05ffb21ce0db834a07b90a1af49"
+  },
+  {
+    "path": "docs/evidence/source-current/add-route.png",
+    "sha256": "46cc283441bb293fea46fa6f1362bfbd663380e95bf6333d68746d3fc8f065ed"
+  },
+  {
+    "path": "docs/evidence/source-current/add-route-bottom.png",
+    "sha256": "2eb55cfcaa49484120f39f9d3976a6029eb23449ec950525085923c13734fd5e"
+  },
+  {
+    "path": "docs/evidence/source-current/home-390.png",
+    "sha256": "10bfeb3b22121217e267491f9a4d1eacd20623ca464a209f3d30df4834727d71"
+  },
+  {
+    "path": "docs/evidence/source-current/privacy.png",
+    "sha256": "b9d82ff8f9189d8e6acc8d11126db4eaee2fc25a2c4d6a542209d1aa182d9076"
+  },
+  {
+    "path": "docs/evidence/source-current/partial-history.png",
+    "sha256": "f885a8e9e0c25f60f470e85bd0a8093d8e44b3025b03098434fc494ec4e86757"
+  },
+  {
+    "path": "docs/evidence/source-current/edit-route.png",
+    "sha256": "70ccf2c30bc4cae95ff3d078ddbd0ac58889e82b4a11771a931b6038e17f050b"
+  },
+  {
+    "path": "docs/evidence/source-current/climbs-gym.png",
+    "sha256": "cfda5d982bd108ffebe273e12ac29d92af95065c2e1e0b3ad2c1d8bf292fcc05"
+  },
+  {
+    "path": "docs/evidence/source-current/login-390.png",
+    "sha256": "77300b98ecea77bccf5e64890b0100482746360237181fbb8a55952f63b53a6c"
+  },
+  {
+    "path": "docs/evidence/source-current/history.png",
+    "sha256": "4eac9f2ac550ba0bc1f0b4555fa8a69bdce2c7ac4660f84267474d0cd234c0af"
+  },
+  {
+    "path": "docs/evidence/source-current/unavailable-home.png",
+    "sha256": "f70dd7e98fa0fb2ca74de017bd76e95f18ba92e7699a8511fe27a5e31c03172b"
+  },
+  {
+    "path": "docs/evidence/source-current/session-add-route.png",
+    "sha256": "7e9bacb103655790ae6754cdf09747108bb2422af351e54dae7c5c508e2a0b61"
+  },
+  {
+    "path": "docs/evidence/source-current/leaderboards.png",
+    "sha256": "6363eb8bb85de82c352a064fff97353618fafdaf2cd204d9f818a8e10d0ba3bf"
+  },
+  {
+    "path": "docs/evidence/source-current/profile-bottom.png",
+    "sha256": "e601c2f5e7c247ffad58e223d760bcc3af5c3338194c02289516f2938250475e"
+  },
+  {
+    "path": "docs/evidence/source-current/home-1440.png",
+    "sha256": "ce3f9a3d9392f2561bb7ebe8d146cf9579efe34b5e5be21e18c56e09480eef34"
+  },
+  {
+    "path": "docs/evidence/source-current/route-sheet-430.png",
+    "sha256": "df375c1fac4e6b2a8c1038caf3f755678c3398e03e961fe8f912b255fbc38082"
+  },
+  {
+    "path": "docs/evidence/source-current/edit-profile.png",
+    "sha256": "1a5ee69dca88d745f69abb5c74df59aa45fcd44a4ffe3a9b1cafff94bf4b3786"
+  },
+  {
+    "path": "docs/evidence/source-current/signup.png",
+    "sha256": "7fdf4e121dd588a8392436d286f10bdc5f70b440643e455c22bff4e44e99be55"
+  },
+  {
+    "path": "docs/evidence/source-current/route-sheet-390.png",
+    "sha256": "46be3575f3d60913dca5315a644091336552b093154feebf391202a56d1b14ee"
+  },
+  {
+    "path": "docs/evidence/source-current/flash-sheet.png",
+    "sha256": "1b7820e1ad4f15716aa7472c58f4b87cf18c5ffd320904319da9f097b1fe0e46"
+  },
+  {
+    "path": "docs/evidence/source-current/profile.png",
+    "sha256": "7af310dbcffd97919a028808ba4c10360205799cedf8bd72c1911f3ee490fa82"
+  },
+  {
+    "path": "docs/evidence/source-current/login-430.png",
+    "sha256": "9c945567f99c85e40c5692d5fcd8def18c59b332163ff42677a46c17b54c6185"
+  },
+  {
+    "path": "docs/evidence/source-current/beta.png",
+    "sha256": "b8b9d9193cd694f07bc0679a67df2a1094f1d6ff99f95c5c0e9fc73bfed85c82"
+  },
+  {
+    "path": "docs/evidence/source-current/empty-home.png",
+    "sha256": "104f8f09e9f8459393a783bb3820c98661d1cd44d1369dc9be2bb976dab8f824"
+  },
+  {
+    "path": "docs/evidence/source-current/session-bottom.png",
+    "sha256": "b3fb75ceef14f2279495d096cc2d39a57567913646c4157edcc17495ed3534cd"
+  },
+  {
+    "path": "docs/evidence/source-current/route-sheet-320.png",
+    "sha256": "de884071a14779bd40b493b524d58f870ff9e52de65f1c609bfa8a521d9e9a82"
+  },
+  {
+    "path": "docs/evidence/source-current/not-found.png",
+    "sha256": "36652922ddfca91c09f78e68c491f86ba7060282b01ec875b0bd074affa8414a"
+  },
+  {
+    "path": "docs/evidence/source-current/groups.png",
+    "sha256": "d465074c1b7dd36bdd70e8ce82c13296cd0691908e0926d8e589d862c75e341a"
+  },
+  {
+    "path": "docs/evidence/source-current/explore.png",
+    "sha256": "dad85b105d83d3c6204439c7d5cb2bdf41ac03d218e1c311fce20038d8e3974d"
+  },
+  {
+    "path": "docs/evidence/source-current/end-session.png",
+    "sha256": "01122cec7554b51d51273be1599dea6b3b853b6ff5daff3ed3197dd383bbae51"
+  },
+  {
+    "path": "docs/evidence/source-current/login-320.png",
+    "sha256": "304d02d2abe194c6ea8b6a1c8a8f0fef5f7ed4d4160c091573b64f1cec0351cf"
+  },
+  {
+    "path": "docs/evidence/source-current/correction.png",
+    "sha256": "93cef25955bec189b090570ea95d102bbbd502e8d6500e742000be1a90b078ad"
+  },
+  {
+    "path": "docs/evidence/source-current/welcome.png",
+    "sha256": "30b5470ace37c0b1bdf8e57c15174e3a345b61fd59b798ffabe2f5522ab06925"
+  },
+  {
+    "path": "docs/evidence/source-current/expired.png",
+    "sha256": "eae67999183a5b5d6fef540eb32f7a24247e74817a4e162a2d4c47b2eee6714d"
+  },
+  {
+    "path": "docs/evidence/source-current/route-sheet-1440.png",
+    "sha256": "90b59781a8c606174a1631068a151836742d78cadedadc2645cec6bafaa7c0e6"
+  },
+  {
+    "path": "docs/evidence/target-current/home-320.png",
+    "sha256": "0d13284e87645939b2b6e6d97a2acb9e2ace400ec1eb4a29a27e6b249098124e"
+  },
+  {
+    "path": "docs/evidence/target-current/session-390.png",
+    "sha256": "e1a4ade5c0a15488c01e925c1bbb57131122a8df7e5f817a6d731edbcfbae498"
+  },
+  {
+    "path": "docs/evidence/target-current/session-1440.png",
+    "sha256": "db65999b4469ca60266b244946b0fdf50f303888800379dda2c83cc7d038300d"
+  },
+  {
+    "path": "docs/evidence/target-current/welcome-390.png",
+    "sha256": "00263a67ddb1750fe578cc1cd8fd40d08fbb7270aa3d1bee3583bfa81dd7d998"
+  },
+  {
+    "path": "docs/evidence/target-current/welcome-430.png",
+    "sha256": "b18c822fa4cae187e4238d9bf8da073a86bf5728fed5041a4c5da52ca70d37b9"
+  },
+  {
+    "path": "docs/evidence/target-current/session-430.png",
+    "sha256": "3dc21a990f3b9d231e4eba7aaf2c83df9c36b7aef42e32d2ab0657c26239dea4"
+  },
+  {
+    "path": "docs/evidence/target-current/home-430.png",
+    "sha256": "d097c1e1e425dd49997310dd9cd5974b96ae52f3833d791692f879e70156ab68"
+  },
+  {
+    "path": "docs/evidence/target-current/welcome-1440.png",
+    "sha256": "11efa333991084e9dcd309342e5a13ae5442d4b86c167c168ef46b42d97a99eb"
+  },
+  {
+    "path": "docs/evidence/target-current/welcome-320.png",
+    "sha256": "4c9ee6df9c84ff47f0b4de051d5f125a16e882a8d4a66cf4e989e4801646e7ca"
+  },
+  {
+    "path": "docs/evidence/target-current/session-320.png",
+    "sha256": "24d1b403511b8d1bfb638e609440e08709feb588bb5506cdca1e81c731d0788b"
+  },
+  {
+    "path": "docs/evidence/target-current/login-1440.png",
+    "sha256": "eeda5a7da17a1ad0ee709a6d67ca2500107007cc69b1bf70d307fef37bb93d1c"
+  },
+  {
+    "path": "docs/evidence/target-current/home-390.png",
+    "sha256": "e9c43a8204c92915f15486dd68c23a032f75a21917ee064ead56b9a57f8448c5"
+  },
+  {
+    "path": "docs/evidence/target-current/login-390.png",
+    "sha256": "6e5d1043fdf0e372bb4f6ed5f467bbcc0180881586bca34b01a37d3adaa43e6b"
+  },
+  {
+    "path": "docs/evidence/target-current/home-1440.png",
+    "sha256": "1eb698ac133d681de150393e339c881e641d498e6fdfe561f445181069a01a4b"
+  },
+  {
+    "path": "docs/evidence/target-current/route-sheet-430.png",
+    "sha256": "cbf890d3985b3103da79902c11aefec2581f7e2b07c869caa39723b0c15583e7"
+  },
+  {
+    "path": "docs/evidence/target-current/route-sheet-390.png",
+    "sha256": "88cf07915bf880da2ecca05697cac3859c33831a769faf00f14c4eb36d813719"
+  },
+  {
+    "path": "docs/evidence/target-current/login-430.png",
+    "sha256": "b1832276c6fec3208d71f8a7cf819273a1dbf377f6440ae67ebf3447f00986f0"
+  },
+  {
+    "path": "docs/evidence/target-current/route-sheet-320.png",
+    "sha256": "7870b5110c8a754388f794cfe978ae99f99c5627f74f8789cadf56e8be56d6c2"
+  },
+  {
+    "path": "docs/evidence/target-current/login-320.png",
+    "sha256": "4de1ecbbb7ffeef9788bd5844dc678b73dc5e32eda21e0e0ebf7da5f58867374"
+  },
+  {
+    "path": "docs/evidence/target-current/route-sheet-1440.png",
+    "sha256": "99091ba1a7b9855cff4723a7dcf7f9d078e364aa75e7e1fbbc6d6efa4da6ba78"
+  }
+]

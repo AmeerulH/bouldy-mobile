@@ -1,0 +1,10 @@
+{"text": "", "content-desc": "Dismiss Private note", "class": "android.view.ViewGroup", "clickable": "true", "bounds": "[0,72][1080,1776]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Private note", "class": "android.view.ViewGroup", "clickable": "false", "bounds": "[0,744][1080,1776]", "focused": "false", "password": "false"}
+{"text": "PRIVATE NOTE", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,822][888,894]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Close Private note", "class": "android.widget.Button", "clickable": "true", "bounds": "[912,792][1044,924]", "focused": "false", "password": "false"}
+{"text": "Your note", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,942][1020,1002]", "focused": "false", "password": "false"}
+{"text": "Android emulator note. discarded", "content-desc": "Your note", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,1020][1020,1356]", "focused": "true", "password": "false"}
+{"text": "", "content-desc": "Save note", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1392][1020,1536]", "focused": "false", "password": "false"}
+{"text": "Save note", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[437,1434][643,1494]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Cancel", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1560][1020,1704]", "focused": "false", "password": "false"}
+{"text": "Cancel", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[470,1602][611,1662]", "focused": "false", "password": "false"}

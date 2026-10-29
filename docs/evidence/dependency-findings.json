@@ -1,0 +1,2214 @@
+{
+  "coverage": {
+    "criteria": {
+      "advisories": {
+        "assessed_clean": 24,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "archived": {
+        "assessed_clean": 24,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "binary_artifacts": {
+        "assessed_clean": 5,
+        "assessed_flagged": 14,
+        "unassessable": 5
+      },
+      "code_review": {
+        "assessed_clean": 19,
+        "assessed_flagged": 0,
+        "unassessable": 5
+      },
+      "dangerous_workflow": {
+        "assessed_clean": 19,
+        "assessed_flagged": 0,
+        "unassessable": 5
+      },
+      "deprecated": {
+        "assessed_clean": 24,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "downloads": {
+        "assessed_clean": 24,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "install_script": {
+        "assessed_clean": 24,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "provenance": {
+        "assessed_clean": 24,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "publisher_concentration": {
+        "assessed_clean": 3,
+        "assessed_flagged": 2,
+        "unassessable": 19
+      },
+      "security_policy": {
+        "assessed_clean": 24,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "staleness": {
+        "assessed_clean": 24,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "token_permissions": {
+        "assessed_clean": 19,
+        "assessed_flagged": 0,
+        "unassessable": 5
+      }
+    },
+    "total_dependencies": 24
+  },
+  "dependencies": [
+    {
+      "dev": true,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "@playwright/test",
+      "non_registry_reason": null,
+      "repo": "github.com/microsoft/playwright",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 6/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 6
+        },
+        "code_review": {
+          "detail": "Code-Review scores 9/10",
+          "state": "assessed_clean",
+          "value": 9
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "69,157,992 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 69157992
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "pavelfeldman",
+            "yurys",
+            "dgozman-ms",
+            "microsoft-oss-releases",
+            "microsoft1es"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T09:39:29Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "1.58.2",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": true,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "publisher_concentration"
+      ],
+      "name": "@types/node",
+      "non_registry_reason": null,
+      "repo": "github.com/DefinitelyTyped/DefinitelyTyped",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "code_review": {
+          "detail": "Code-Review scores 9/10",
+          "state": "assessed_clean",
+          "value": 9
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "404,009,479 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 404009479
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "no publish provenance",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "publisher_concentration": {
+          "detail": "single human publisher (types) of 1 listed",
+          "state": "assessed_flagged",
+          "value": [
+            "types"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T09:38:46Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "24.10.1",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": true,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "publisher_concentration"
+      ],
+      "name": "@types/react",
+      "non_registry_reason": null,
+      "repo": "github.com/DefinitelyTyped/DefinitelyTyped",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "code_review": {
+          "detail": "Code-Review scores 9/10",
+          "state": "assessed_clean",
+          "value": 9
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "149,013,762 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 149013762
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "no publish provenance",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "publisher_concentration": {
+          "detail": "single human publisher (types) of 1 listed",
+          "state": "assessed_flagged",
+          "value": [
+            "types"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T09:38:46Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "19.2.14",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": true,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [],
+      "name": "eslint",
+      "non_registry_reason": null,
+      "repo": "github.com/eslint/eslint",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "code_review": {
+          "detail": "Code-Review scores 7/10",
+          "state": "assessed_clean",
+          "value": 7
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "135,596,137 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 135596137
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "no publish provenance",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "publisher_concentration": {
+          "detail": "2 human publishers hold publish rights",
+          "state": "assessed_clean",
+          "value": [
+            "openjsfoundation",
+            "eslintbot"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 1 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-26T20:08:25Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "9.39.1",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": true,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "eslint-config-expo",
+      "non_registry_reason": null,
+      "repo": "github.com/expo/expo",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 0/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 0
+        },
+        "code_review": {
+          "detail": "Code-Review scores 9/10",
+          "state": "assessed_clean",
+          "value": 9
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "2,469,504 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 2469504
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "ide",
+            "brentvatne",
+            "expoadmin",
+            "exponent",
+            "bycedric",
+            "kudochien",
+            "alanhughes",
+            "tsapeta",
+            "expo-bot",
+            "philpl",
+            "ccheever",
+            "szdziedzic",
+            "wschurman"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T10:09:03Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "58.0.0",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "expo",
+      "non_registry_reason": null,
+      "repo": "github.com/expo/expo",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 0/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 0
+        },
+        "code_review": {
+          "detail": "Code-Review scores 9/10",
+          "state": "assessed_clean",
+          "value": 9
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "10,273,164 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 10273164
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "ide",
+            "brentvatne",
+            "expoadmin",
+            "exponent",
+            "bycedric",
+            "kudochien",
+            "alanhughes",
+            "tsapeta",
+            "expo-bot",
+            "philpl",
+            "ccheever",
+            "szdziedzic",
+            "wschurman"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T10:09:03Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "58.0.20",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "expo-constants",
+      "non_registry_reason": null,
+      "repo": "github.com/expo/expo",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 0/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 0
+        },
+        "code_review": {
+          "detail": "Code-Review scores 9/10",
+          "state": "assessed_clean",
+          "value": 9
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "10,959,259 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 10959259
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "ide",
+            "brentvatne",
+            "expoadmin",
+            "exponent",
+            "bycedric",
+            "kudochien",
+            "alanhughes",
+            "tsapeta",
+            "expo-bot",
+            "philpl",
+            "ccheever",
+            "szdziedzic",
+            "wschurman"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T10:09:03Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "58.0.13",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "expo-font",
+      "non_registry_reason": null,
+      "repo": "github.com/expo/expo",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 0/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 0
+        },
+        "code_review": {
+          "detail": "Code-Review scores 9/10",
+          "state": "assessed_clean",
+          "value": 9
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "9,836,626 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 9836626
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "ide",
+            "brentvatne",
+            "expoadmin",
+            "exponent",
+            "bycedric",
+            "kudochien",
+            "alanhughes",
+            "tsapeta",
+            "expo-bot",
+            "philpl",
+            "ccheever",
+            "szdziedzic",
+            "wschurman"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T10:09:03Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "58.0.10",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "expo-image",
+      "non_registry_reason": null,
+      "repo": "github.com/expo/expo",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 0/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 0
+        },
+        "code_review": {
+          "detail": "Code-Review scores 9/10",
+          "state": "assessed_clean",
+          "value": 9
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "4,539,240 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 4539240
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "ide",
+            "brentvatne",
+            "expoadmin",
+            "exponent",
+            "bycedric",
+            "kudochien",
+            "alanhughes",
+            "tsapeta",
+            "expo-bot",
+            "philpl",
+            "ccheever",
+            "szdziedzic",
+            "wschurman"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T10:09:03Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "58.0.17",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "expo-linking",
+      "non_registry_reason": null,
+      "repo": "github.com/expo/expo",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 0/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 0
+        },
+        "code_review": {
+          "detail": "Code-Review scores 9/10",
+          "state": "assessed_clean",
+          "value": 9
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "8,163,517 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 8163517
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "ide",
+            "brentvatne",
+            "expoadmin",
+            "exponent",
+            "bycedric",
+            "kudochien",
+            "alanhughes",
+            "tsapeta",
+            "expo-bot",
+            "philpl",
+            "ccheever",
+            "szdziedzic",
+            "wschurman"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T10:09:03Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "58.0.14",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "expo-router",
+      "non_registry_reason": null,
+      "repo": "github.com/expo/expo",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 0/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 0
+        },
+        "code_review": {
+          "detail": "Code-Review scores 9/10",
+          "state": "assessed_clean",
+          "value": 9
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "6,974,632 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 6974632
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "ide",
+            "brentvatne",
+            "expoadmin",
+            "exponent",
+            "bycedric",
+            "kudochien",
+            "alanhughes",
+            "tsapeta",
+            "expo-bot",
+            "philpl",
+            "ccheever",
+            "szdziedzic",
+            "wschurman"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T10:09:03Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "58.0.27",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "expo-secure-store",
+      "non_registry_reason": null,
+      "repo": "github.com/expo/expo",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 0/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 0
+        },
+        "code_review": {
+          "detail": "Code-Review scores 9/10",
+          "state": "assessed_clean",
+          "value": 9
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "6,452,455 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 6452455
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "ide",
+            "brentvatne",
+            "expoadmin",
+            "exponent",
+            "bycedric",
+            "kudochien",
+            "alanhughes",
+            "tsapeta",
+            "expo-bot",
+            "philpl",
+            "ccheever",
+            "szdziedzic",
+            "wschurman"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T10:09:03Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "58.0.2",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "expo-status-bar",
+      "non_registry_reason": null,
+      "repo": "github.com/expo/expo",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 0/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 0
+        },
+        "code_review": {
+          "detail": "Code-Review scores 9/10",
+          "state": "assessed_clean",
+          "value": 9
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "7,689,769 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 7689769
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "ide",
+            "brentvatne",
+            "expoadmin",
+            "exponent",
+            "bycedric",
+            "kudochien",
+            "alanhughes",
+            "tsapeta",
+            "expo-bot",
+            "philpl",
+            "ccheever",
+            "szdziedzic",
+            "wschurman"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T10:09:03Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "58.0.4",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [],
+      "name": "react",
+      "non_registry_reason": null,
+      "repo": "github.com/react/react",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "code_review": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "dangerous_workflow": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "165,732,882 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 165732882
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "fb",
+            "react-bot"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-27T15:08:39Z"
+        },
+        "token_permissions": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        }
+      },
+      "version": "19.3.0",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [],
+      "name": "react-dom",
+      "non_registry_reason": null,
+      "repo": "github.com/react/react",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "code_review": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "dangerous_workflow": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "155,665,230 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 155665230
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "fb",
+            "react-bot"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-27T15:08:39Z"
+        },
+        "token_permissions": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        }
+      },
+      "version": "19.3.0",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [],
+      "name": "react-native",
+      "non_registry_reason": null,
+      "repo": "github.com/react/react-native",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "code_review": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "dangerous_workflow": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "13,054,365 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 13054365
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "react-native-bot",
+            "fb",
+            "lunaleaps",
+            "eliwhite",
+            "cortinico",
+            "fkgozali"
+          ]
+        },
+        "security_policy": {
+          "detail": "no security policy found",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T09:42:58Z"
+        },
+        "token_permissions": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        }
+      },
+      "version": "0.88.0",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "react-native-gesture-handler",
+      "non_registry_reason": null,
+      "repo": "github.com/software-mansion/react-native-gesture-handler",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 8/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 8
+        },
+        "code_review": {
+          "detail": "Code-Review scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "8,373,286 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 8373286
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "m-bert",
+            "swm-bot"
+          ]
+        },
+        "security_policy": {
+          "detail": "no security policy found",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-27T14:58:25Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "3.3.0",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "react-native-reanimated",
+      "non_registry_reason": null,
+      "repo": "github.com/software-mansion/react-native-reanimated",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 6/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 6
+        },
+        "code_review": {
+          "detail": "Code-Review scores 4/10",
+          "state": "assessed_clean",
+          "value": 4
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "8,559,417 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 8559417
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "piaskowyk",
+            "tjzel",
+            "swm-bot"
+          ]
+        },
+        "security_policy": {
+          "detail": "no security policy found",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T10:17:26Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "4.7.1",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [],
+      "name": "react-native-safe-area-context",
+      "non_registry_reason": null,
+      "repo": "github.com/appandflow/react-native-safe-area-context",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "code_review": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "dangerous_workflow": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "9,762,808 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 9762808
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "janicduplessis",
+            "melvalesca"
+          ]
+        },
+        "security_policy": {
+          "detail": "no security policy found",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-27T21:57:31Z"
+        },
+        "token_permissions": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        }
+      },
+      "version": "5.10.1",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "react-native-screens",
+      "non_registry_reason": null,
+      "repo": "github.com/software-mansion/react-native-screens",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 7/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 7
+        },
+        "code_review": {
+          "detail": "Code-Review scores 4/10",
+          "state": "assessed_clean",
+          "value": 4
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "9,080,437 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 9080437
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "kkafar",
+            "swm-bot"
+          ]
+        },
+        "security_policy": {
+          "detail": "no security policy found",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T10:12:07Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "4.30.0",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [],
+      "name": "react-native-svg",
+      "non_registry_reason": null,
+      "repo": "github.com/software-mansion/react-native-svg",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "code_review": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "dangerous_workflow": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "7,746,178 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 7746178
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "jake7",
+            "swm-bot"
+          ]
+        },
+        "security_policy": {
+          "detail": "no security policy found",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "staleness": {
+          "detail": "pushed 2 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-25T21:01:27Z"
+        },
+        "token_permissions": {
+          "detail": "OpenSSF Scorecard has no report for this repository",
+          "state": "unassessable",
+          "value": null
+        }
+      },
+      "version": "15.16.0",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [],
+      "name": "react-native-web",
+      "non_registry_reason": null,
+      "repo": "github.com/necolas/react-native-web",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "code_review": {
+          "detail": "Code-Review scores 5/10",
+          "state": "assessed_clean",
+          "value": 5
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "6,639,816 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 6639816
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "no publish provenance",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "publisher_concentration": {
+          "detail": "3 human publishers hold publish rights",
+          "state": "assessed_clean",
+          "value": [
+            "necolas",
+            "brentvatne",
+            "zoontek"
+          ]
+        },
+        "security_policy": {
+          "detail": "no security policy found",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T08:49:25Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "0.21.4",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "binary_artifacts"
+      ],
+      "name": "react-native-worklets",
+      "non_registry_reason": null,
+      "repo": "github.com/software-mansion/react-native-reanimated",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 6/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 6
+        },
+        "code_review": {
+          "detail": "Code-Review scores 4/10",
+          "state": "assessed_clean",
+          "value": 4
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "8,056,498 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 8056498
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "publishes with provenance",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "publisher_concentration": {
+          "detail": "publishes from CI with provenance, so the effective publisher set is whoever can merge to the release branch \u2014 not externally observable",
+          "state": "unassessable",
+          "value": [
+            "tjzel",
+            "swm-bot"
+          ]
+        },
+        "security_policy": {
+          "detail": "no security policy found",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T10:17:26Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "0.13.0",
+      "version_source": "manifest-pin"
+    },
+    {
+      "dev": true,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [],
+      "name": "typescript",
+      "non_registry_reason": null,
+      "repo": "github.com/microsoft/TypeScript",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "code_review": {
+          "detail": "Code-Review scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "267,244,286 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 267244286
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "no publish provenance",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "publisher_concentration": {
+          "detail": "6 human publishers hold publish rights",
+          "state": "assessed_clean",
+          "value": [
+            "microsoft1es",
+            "typescript-bot",
+            "weswigham",
+            "andrewbranch",
+            "typescript-deploys",
+            "microsoft-oss-releases",
+            "jakebailey"
+          ]
+        },
+        "security_policy": {
+          "detail": "publishes a security policy",
+          "state": "assessed_clean",
+          "value": true
+        },
+        "staleness": {
+          "detail": "pushed 0 days ago",
+          "state": "assessed_clean",
+          "value": "2026-10-28T07:09:33Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        }
+      },
+      "version": "5.9.3",
+      "version_source": "manifest-pin"
+    }
+  ],
+  "ecosystems": {
+    "npm": 24
+  },
+  "notes": [
+    "gh is not authenticated. GitHub allows 60 requests/hour unauthenticated against 5000 authenticated, so repository signals may be unassessable.",
+    "Repository-level criteria (archived, maintenance activity, security policy, and the Scorecard checks) describe the source repository rather than the package. 24 dependencies resolve to 13 distinct repositories, so one repository can appear as several findings. Shared: github.com/DefinitelyTyped/DefinitelyTyped, github.com/expo/expo, github.com/react/react, github.com/software-mansion/react-native-reanimated",
+    "Optional tooling detected: npm. Not installed, so not used: bundler-audit, cargo-audit, osv-scanner, pip-audit.",
+    "Every criterion except advisories applies to direct dependencies only. The 784 registry-verified packages resolved by package-lock.json were checked for known advisories at their locked versions, and for nothing else.",
+    "HTTP sources: 59 fetched, 90 served from cache (oldest 0.1h old), 0 refetched as stale, 0 unavailable offline, 0 errors."
+  ],
+  "scan": {
+    "commit": null,
+    "manifests": [
+      "package.json",
+      "package-lock.json"
+    ],
+    "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile",
+    "scanned_at": "2026-10-28T10:21:45+00:00",
+    "subject": "bouldy-mobile"
+  },
+  "target": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile",
+  "transitive": {
+    "checked": 784,
+    "examined": true,
+    "excluded_direct": 24,
+    "flagged": [
+      {
+        "advisories": [
+          "GHSA-gcqx-w48m-w2h4"
+        ],
+        "dev": false,
+        "ecosystem": "npm",
+        "name": "deepmerge",
+        "version": "4.3.1"
+      },
+      {
+        "advisories": [
+          "GHSA-mrhx-c7xc-m3w5"
+        ],
+        "dev": false,
+        "ecosystem": "npm",
+        "name": "zod",
+        "version": "3.25.76"
+      }
+    ],
+    "lockfile_entries": 808,
+    "reason": null,
+    "sources": [
+      "package-lock.json"
+    ],
+    "total": 784,
+    "unverifiable": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Bouldy",
+    "slug": "bouldy-mobile",
+    "scheme": "bouldy",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "web": {
+      "bundler": "metro",
+      "output": "server",
+      "favicon": "./assets/source/icon.svg"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-secure-store",
+      "expo-image"
+    ],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "icon": "./assets/app/icon.png"
+  }
+}

@@ -1,0 +1,6 @@
+FAIL /
+Evidence: /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/docs/evidence/android-route-smoke-20261029T042647Z
+Traceback (most recent call last):
+  File "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/tests/android/route-smoke.py", line 74, in <module>
+    assert ok, 'Missing expected settled route content: ' + path
+AssertionError: Missing expected settled route content: /

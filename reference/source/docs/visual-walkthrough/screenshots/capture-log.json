@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-24",
+  "source": "Current local frontend rendered against isolated sample API; no production verification",
+  "viewport": "390x844",
+  "pages": [
+    {
+      "name": "welcome",
+      "path": "/welcome"
+    },
+    {
+      "name": "login",
+      "path": "/login"
+    },
+    {
+      "name": "signup",
+      "path": "/signup"
+    },
+    {
+      "name": "home",
+      "path": "/"
+    },
+    {
+      "name": "gyms",
+      "path": "/gyms"
+    },
+    {
+      "name": "add-gym",
+      "path": "/gyms?sheet=add-gym"
+    },
+    {
+      "name": "gym",
+      "path": "/gyms/1"
+    },
+    {
+      "name": "filters",
+      "path": "/gyms/1?sheet=route-filters"
+    },
+    {
+      "name": "add-route",
+      "path": "/gyms/1/routes/new"
+    },
+    {
+      "name": "edit-route",
+      "path": "/gyms/1/routes/11/edit"
+    },
+    {
+      "name": "session-add-route",
+      "path": "/sessions/3/routes/new"
+    },
+    {
+      "name": "sessions",
+      "path": "/sessions"
+    },
+    {
+      "name": "session",
+      "path": "/sessions/3"
+    },
+    {
+      "name": "route-sheet",
+      "path": "/sessions/3?sheet=route-11"
+    },
+    {
+      "name": "flash-sheet",
+      "path": "/sessions/3?sheet=route-14"
+    },
+    {
+      "name": "end-session",
+      "path": "/sessions/3?sheet=end-session"
+    },
+    {
+      "name": "completed-session",
+      "path": "/sessions/2"
+    },
+    {
+      "name": "climbs",
+      "path": "/climbs"
+    },
+    {
+      "name": "history",
+      "path": "/routes/11?from=3"
+    },
+    {
+      "name": "retired-history",
+      "path": "/routes/13"
+    },
+    {
+      "name": "profile",
+      "path": "/profile"
+    },
+    {
+      "name": "edit-profile",
+      "path": "/profile/edit"
+    },
+    {
+      "name": "public-profile",
+      "path": "/profile/public"
+    },
+    {
+      "name": "privacy",
+      "path": "/profile/privacy"
+    },
+    {
+      "name": "explore",
+      "path": "/explore"
+    },
+    {
+      "name": "feed",
+      "path": "/explore/feed"
+    },
+    {
+      "name": "climbers",
+      "path": "/explore/climbers"
+    },
+    {
+      "name": "leaderboards",
+      "path": "/explore/leaderboards"
+    },
+    {
+      "name": "challenges",
+      "path": "/explore/challenges"
+    },
+    {
+      "name": "groups",
+      "path": "/explore/groups"
+    },
+    {
+      "name": "beta",
+      "path": "/routes/11/beta"
+    },
+    {
+      "name": "not-found",
+      "path": "/does-not-exist"
+    }
+  ],
+  "errors": []
+}

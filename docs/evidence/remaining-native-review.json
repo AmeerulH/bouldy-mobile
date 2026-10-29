@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-29",
+  "scope": "Observed native Expo Go fixture execution; conversation screenshots/AX evidence, not stored PNG goldens or visual acceptance",
+  "ios": {
+    "device": "iPhone 17 Pro",
+    "logicalSize": "402x874",
+    "runtime": "iOS 26.2",
+    "host": "Device Hub",
+    "expoGo": "58.0.7",
+    "observed": [
+      "Explore hub and five original planned children",
+      "Profile account, journal summaries, visited gyms and three original planned children",
+      "Climbs gym-first collection, gym drilldown, retired route and history with from=climbs",
+      "Beta planned page with matching route identity through Edit route",
+      "Peer-tab swipe Explore to Sessions",
+      "Fast Add gym header drag dismissed after absolute-distance activation fix",
+      "Profile logout to Welcome, then synthetic login to Home"
+    ],
+    "sheetFix": "Native recognizer translation resets on activation; strict source >80px distance now uses begin/final absoluteY. Temporary diagnostics removed.",
+    "lastObservedScreen": "Explore, signed into retained synthetic fixture; fresh AX/screenshot after final exports",
+    "notAccepted": [
+      "all error/empty/partial/loading combinations",
+      "matching source/new image comparisons",
+      "exact three-platform motion/gesture matrix",
+      "software keyboard/focus/safe-area matrix",
+      "anchor scroll runtime matrix",
+      "development catalogue runtime matrix",
+      "standalone/release/physical-device performance"
+    ]
+  },
+  "android": {
+    "avd": "Bouldy_Migration_API31",
+    "systemImage": "Existing API31 Google APIs ARM64",
+    "emulatorBooted": true,
+    "adbConnected": true,
+    "expoGo": "58.0.5 download completed; install failed INSTALL_FAILED_INSUFFICIENT_STORAGE",
+    "appExecuted": false,
+    "storage": "Existing image /data filesystem ~775MB, ~302MB free; requested 4GB virtual data partition did not resize filesystem",
+    "resizeFailure": "Existing SDK e2fsck/resize2fs helpers exit 137; emulator reports failed launch",
+    "preservation": "Only separate migration AVD config changed; original config saved; no wipe, deletion, runtime removal or protection bypass; emulator stopped and AVD retained",
+    "toolchain": "Legacy Java8/build-tools31; no accepted SDK licences directory found. User-managed modern SDK/JDK/licence setup needed."
+  },
+  "browser": "Fresh CUA localhost attach rejected by prior URL policy; no alternate browser/automation workaround. Export HTTP smoke and worker VM tests only.",
+  "writes": "No production account or record writes. Synthetic legacy fixture data retained; tests start fresh enhanced fixtures on4012."
+}

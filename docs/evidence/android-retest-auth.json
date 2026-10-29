@@ -1,0 +1,33 @@
+{
+  "scope": "Android Expo Go with synthetic loopback fixture; fixture identity is constant, not proof of real new-account persistence",
+  "loginRequired": true,
+  "signupRequired": true,
+  "syntheticSignupHome": true,
+  "registrations": [
+    {
+      "username": "android-review",
+      "email": "android-review@example.test"
+    }
+  ],
+  "writes": [
+    "/attempts/31",
+    "/attempts/31",
+    "/attempts/31",
+    "/attempts/31",
+    "/attempts/31",
+    "/attempts/31",
+    "/gyms/",
+    "/routes/",
+    "/routes/101",
+    "/sessions/",
+    "/routes/",
+    "/sessions/102/attempts",
+    "/sessions/102",
+    "/attempts/104",
+    "/attempts/104",
+    "/auth/register"
+  ],
+  "passwordsRecorded": false,
+  "foregroundExpiryWelcome": true,
+  "scenarioRestored": "normal"
+}

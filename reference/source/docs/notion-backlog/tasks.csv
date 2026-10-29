@@ -1,0 +1,1152 @@
+Name,Task ID,Status,Priority,Team,Type,Workstream,Readiness,Approval,Effort,Feedback,Dependencies,Description
+Agree primary audience and Bouldy’s core promise,BLY-001,Needs decision,P1 - Highest,Product,Decision,"T1 - Journey, T2 - Onboarding",Product decision,Proposed,Not estimated,"S9, S16; R1/R4: Zebo’s audience counterpoint; onboarding friction from Alif, Bryan, Yenni and Wei; Afina on extra steps.",,"## Outcome
+Resolve the beginner-focus question and distinguish people new to climbing from people new to Bouldy. Define the value that makes logging worthwhile.
+## Done when
+- [ ] Primary user and product promise recorded
+- [ ] First-release inclusions and exclusions agreed
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S9, S16; R1/R4: Zebo’s audience counterpoint; onboarding friction from Alif, Bryan, Yenni and Wei; Afina on extra steps.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Map a simpler session-to-progress journey,BLY-002,Backlog,P1 - Highest,"Product, Design",Design,T1 - Journey,Needs design,Proposed,Not estimated,"S8, S9, S15, S25; R1/R4: Alif, Wei, Bryan, Afina. Preserve the categorisation Zebo likes.",BLY-001,"## Outcome
+Design a clear path from opening Bouldy to gym selection, logging, session review and returning to a project. Reconsider Sessions versus Climbs.
+## Done when
+- [ ] Journey and page responsibilities documented
+- [ ] Unnecessary steps identified
+- [ ] Design reviewed with a newcomer
+## Dependencies
+- BLY-001
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S8, S9, S15, S25; R1/R4: Alif, Wei, Bryan, Afina. Preserve the categorisation Zebo likes.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Implement the agreed navigation and page consolidation,BLY-003,Backlog,P1 - Highest,FE,Improvement,T1 - Journey,Needs design,Proposed,Not estimated,"S8, S9, S15, S25; R1/R4.",BLY-002,"## Outcome
+Apply the approved journey without adding unrelated screens or changing the established visual identity.
+## Done when
+- [ ] Navigation matches reviewed journey
+- [ ] Next actions are clear
+- [ ] Phone and keyboard flow verified
+## Dependencies
+- BLY-002
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S8, S9, S15, S25; R1/R4.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Write the glossary and staged onboarding content,BLY-004,Backlog,P1 - Highest,"Content, Design, Product",Task,T2 - Onboarding,Needs content,Proposed,Not estimated,"S2-S5, S26, S28; R1/R9: Alif and Bryan; Yenni/Wei friction.",BLY-001,"## Outcome
+Explain Bouldy’s purpose, climbing jargon, grades, sends/flashes, route colours and the next steps. Separate signup guidance from first-session guidance.
+## Done when
+- [ ] Signup and first-session content agreed
+- [ ] Glossary uses plain language
+- [ ] Colour is supported by descriptions
+## Dependencies
+- BLY-001
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S2-S5, S26, S28; R1/R9: Alif and Bryan; Yenni/Wei friction.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Build revisitable post-signup onboarding,BLY-005,Backlog,P1 - Highest,FE,Feature,T2 - Onboarding,Needs content,Proposed,Not estimated,S2-S4; R1: Alif and Bryan.,BLY-004,"## Outcome
+Introduce the app after signup and allow the guide to be opened again later. Do not assume cross-device completion is available.
+## Done when
+- [ ] Approved tutorial is shown after signup
+- [ ] Skip/revisit behaviour agreed and works
+- [ ] No jargon is left unexplained
+## Dependencies
+- BLY-004
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S2-S4; R1: Alif and Bryan.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Add guidance before the first session,BLY-006,Backlog,P1 - Highest,FE,Feature,T2 - Onboarding,Needs content,Proposed,Not estimated,"S5, S25; R1/R4.",BLY-004,"## Outcome
+Explain what a user can do and where to press before their first logging experience.
+## Done when
+- [ ] Guide follows approved scope
+- [ ] User can reach route logging
+- [ ] Repeat/skip behaviour is explicit
+## Dependencies
+- BLY-004
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S5, S25; R1/R4.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Add profile-based help and next-step guidance,BLY-007,Backlog,P1 - Highest,FE,Feature,T2 - Onboarding,Needs content,Proposed,Not estimated,S26; R1.,BLY-004,"## Outcome
+Provide a reusable glossary, tutorial entry and practical next steps from the profile.
+## Done when
+- [ ] Help is easy to find
+- [ ] Guides can be revisited
+- [ ] Links match the actual journey
+## Dependencies
+- BLY-004
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S26; R1.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Persist onboarding state when cross-device behaviour is required,BLY-008,Backlog,P2 - High,BE,Feature,T2 - Onboarding,Product decision,Proposed,Not estimated,"T2 dependency: persistence is conditional, not required for a content-only guide.",BLY-004,"## Outcome
+Define and implement owner-scoped onboarding completion/preferences only if the team chooses durable state. Avoid inventing completion history.
+## Done when
+- [ ] Approved state contract documented
+- [ ] Old accounts remain compatible
+- [ ] Owner-only reads and updates verified
+## Dependencies
+- BLY-004
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+T2 dependency: persistence is conditional, not required for a content-only guide.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Reproduce the hard-to-find Send action and extra logging steps,BLY-009,Backlog,P1 - Highest,"FE, QA",Bug,T3 - Session flow,Verify behaviour,Proposed,Not estimated,"S11, S25; R4: Wei and Afina. Reported UX issue, not a confirmed missing backend function.",,"## Outcome
+Observe the current +1, route sheet and completion journey. Distinguish an unavailable action from an existing action that testers cannot discover.
+## Done when
+- [ ] Current steps and discovery failure recorded
+- [ ] Root cause or design issue identified
+- [ ] Smallest needed change proposed
+## Report status
+Reported usability problem; reproduce the current behaviour before deciding that a code fix is needed. No confirmed root cause is asserted.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S11, S25; R4: Wei and Afina. Reported UX issue, not a confirmed missing backend function.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Expose Send beside +1 in the agreed route list,BLY-010,Backlog,P1 - Highest,FE,Improvement,T3 - Session flow,Existing API candidate,Proposed,Not estimated,S11; R4: Wei.,"BLY-002, BLY-009","## Outcome
+Make successful completion direct while preserving current-visit counts and lifetime flash meaning.
+## Done when
+- [ ] Send is discoverable beside +1
+- [ ] Existing log is not incremented by completion
+- [ ] First-try-today and error states remain accurate
+## Dependencies
+- BLY-002
+- BLY-009
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S11; R4: Wei.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Prompt to continue unfinished projects at session start,BLY-011,Backlog,P1 - Highest,FE,Feature,T3 - Session flow,Existing API candidate,Proposed,Not estimated,"S14; R4: Wei. Existing read aggregation is a candidate, not a new deployment verification.",BLY-002,"## Outcome
+Offer active unfinished routes without copying previous counts into today’s log or creating placeholder attempts.
+## Done when
+- [ ] Previous and today counts remain separate
+- [ ] Retired/sent routes are handled correctly
+- [ ] Incomplete history is explained
+## Dependencies
+- BLY-002
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S14; R4: Wei. Existing read aggregation is a candidate, not a new deployment verification.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Define the consolidated list and suggested-route experience,BLY-012,Needs decision,P1 - Highest,"Product, Design",Decision,T3 - Session flow,Product decision,Proposed,Not estimated,S29 has ambiguous gyms/routes wording; R5/R10 adds context and map ideas.,,"## Outcome
+Clarify whether the feedback means all routes at the chosen gym, nearby gyms, personalised suggestions or a combination.
+## Done when
+- [ ] Meaning of the list agreed
+- [ ] Source and ranking of any suggestions agreed
+- [ ] Link with private route lists recorded
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S29 has ambiguous gyms/routes wording; R5/R10 adds context and map ideas.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Build the agreed consolidated route-selection view,BLY-013,Backlog,P2 - High,FE,Improvement,T3 - Session flow,Needs design,Proposed,Not estimated,"S28, S29; R5/R9/R10.","BLY-002, BLY-012","## Outcome
+Implement the selected route-list structure, descriptions and entry points. Recommendations requiring new data remain gated.
+## Done when
+- [ ] Approved list is easy to scan
+- [ ] Route identity uses more than colour
+- [ ] Search/filter and empty/error states work
+## Dependencies
+- BLY-002
+- BLY-012
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S28, S29; R5/R9/R10.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Agree admin and climber permissions,BLY-014,Needs decision,P1 - Highest,Product,Decision,T4 - Admin,Product decision,Proposed,Not estimated,"S13, S24; R7: Wei specifically requests removing Add gym for normal users.",,"## Outcome
+Separate admin management from normal gym selection; decide who may add/edit/retire routes and manage custom colours, including existing records.
+## Done when
+- [ ] Admin role boundaries agreed
+- [ ] Normal users retain a gym-selection path
+- [ ] Legacy ownership treatment documented
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S13, S24; R7: Wei specifically requests removing Add gym for normal users.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Enforce gym and route management permissions,BLY-015,Backlog,P1 - Highest,BE,Task,"T4 - Admin, F1 - Permissions",Backend foundation,Proposed,Not estimated,F1 (3 Oct brief); T4; S13/S24; R7.,BLY-014,"## Outcome
+Recheck the current API and implement agreed authentication, ownership/roles and capability/error responses for shared gym/route writes.
+## Done when
+- [ ] Unauthorized direct writes fail
+- [ ] Authorized and cross-gym cases covered
+- [ ] FE receives usable capabilities/errors
+## Dependencies
+- BLY-014
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b398147acbaeb71b806d9d2?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+F1 (3 Oct brief); T4; S13/S24; R7.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Restrict Add gym and management controls by capability,BLY-016,Backlog,P1 - Highest,FE,Improvement,T4 - Admin,Needs BE contract,Proposed,Not estimated,S13; R7: Wei. Hiding controls alone is not authorization.,"BLY-014, BLY-015","## Outcome
+Hide or disable management for regular climbers while retaining approved gym selection and route browsing.
+## Done when
+- [ ] UI follows backend capabilities
+- [ ] Normal-user journey remains usable
+- [ ] Permission errors are explained
+## Dependencies
+- BLY-014
+- BLY-015
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S13; R7: Wei. Hiding controls alone is not authorization.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Provide an admin-managed custom colour catalogue,BLY-017,Backlog,P2 - High,BE,Feature,T4 - Admin,Needs BE contract,Proposed,Not estimated,S24; related to S28/R9 colour confusion.,BLY-014,"## Outcome
+Agree and persist valid custom colour identifiers/labels while preserving unknown or historic values.
+## Done when
+- [ ] Admin-only writes enforced
+- [ ] Validation and fallback documented
+- [ ] Old route colours still render
+## Dependencies
+- BLY-014
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S24; related to S28/R9 colour confusion.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Add the admin custom-colour selector and management UI,BLY-018,Backlog,P2 - High,FE,Feature,T4 - Admin,Needs BE contract,Proposed,Not estimated,S24/S28; R9: Bryan.,BLY-017,"## Outcome
+Use the agreed catalogue in route identification and admin forms without relying on colour alone.
+## Done when
+- [ ] Admin can manage approved options
+- [ ] Regular users cannot manage the catalogue
+- [ ] Descriptions and unknown-colour fallback work
+## Dependencies
+- BLY-017
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S24/S28; R9: Bryan.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Define goals and meaningful progress measures,BLY-019,Needs decision,P1 - Highest,"Product, Design",Decision,T5 - Progress,Product decision,Proposed,Not estimated,S16/S17/S21; R3: Yenni and Alif.,BLY-001,"## Outcome
+Choose goals and metrics: hours, sends, grades, attempts per project, personal improvement and what ideal climb time means.
+## Done when
+- [ ] Goal choices agreed
+- [ ] Metrics and grade meanings documented
+- [ ] Personal and social comparisons separated
+## Dependencies
+- BLY-001
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S16/S17/S21; R3: Yenni and Alif.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Store owner goals and agreed progress settings,BLY-020,Backlog,P2 - High,BE,Feature,T5 - Progress,Needs BE contract,Proposed,Not estimated,S16; R1/R3: signup goals and goal selector.,BLY-019,"## Outcome
+Provide validated owner-scoped goal persistence with a documented compatible contract.
+## Done when
+- [ ] Goals persist across devices
+- [ ] Update validation and ownership enforced
+- [ ] Existing users have an honest unset state
+## Dependencies
+- BLY-019
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S16; R1/R3: signup goals and goal selector.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Build the goal selector and personal goal view,BLY-021,Backlog,P2 - High,FE,Feature,T5 - Progress,Needs BE contract,Proposed,Not estimated,S16/S26; R3: Yenni; R1: Alif.,"BLY-020, BLY-004","## Outcome
+Let users choose or revise agreed goals and see relevant next steps.
+## Done when
+- [ ] Goal changes persist
+- [ ] Unset and error states work
+- [ ] Onboarding and profile entries are connected
+## Dependencies
+- BLY-020
+- BLY-004
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S16/S26; R3: Yenni; R1: Alif.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Provide scoped progress summaries and paginated history,BLY-022,Backlog,P2 - High,BE,Task,"T5 - Progress, F5 - Aggregates",Backend foundation,Proposed,Not estimated,F5; S17/S21; R3. Fresh API/schema review required.,"BLY-019, BLY-069","## Outcome
+Build or verify owner-filtered aggregates for hours, sends, project attempts and personal progress without per-session request growth.
+## Done when
+- [ ] Summary reconciles with source records
+- [ ] Pagination and uncertainty defined
+- [ ] Privacy and measured query performance verified
+## Dependencies
+- BLY-019
+- BLY-069
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b398147acbaeb71b806d9d2?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+F5; S17/S21; R3. Fresh API/schema review required.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Build the personal dashboard and progression graphs,BLY-023,Backlog,P2 - High,FE,Feature,T5 - Progress,Needs BE contract,Proposed,Not estimated,S8/S16/S17/S21; R3: Yenni and Alif.,"BLY-019, BLY-022","## Outcome
+Show agreed hours, sends, grade progress and attempts per project using reliable data.
+## Done when
+- [ ] Charts are labelled with periods/units
+- [ ] Earlier and current effort compare honestly
+- [ ] Missing history is not treated as zero
+## Dependencies
+- BLY-019
+- BLY-022
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S8/S16/S17/S21; R3: Yenni and Alif.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Show a clear end-of-session summary,BLY-024,Backlog,P1 - Highest,FE,Feature,T6 - Summary and rating,Existing API candidate,Proposed,Not estimated,S17/S31; R3: Bryan. New rating fields are separate.,BLY-002,"## Outcome
+Make the visit’s date, duration, climbs, outcomes and next steps easy to review. Scope the first version to existing reliable fields.
+## Done when
+- [ ] Summary appears after ending a session
+- [ ] Counts reconcile with the visit
+- [ ] Date/duration and incomplete data are clear
+## Dependencies
+- BLY-002
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S17/S31; R3: Bryan. New rating fields are separate.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Define what a climb rating measures,BLY-025,Needs decision,P2 - High,Product,Decision,T6 - Summary and rating,Product decision,Proposed,Not estimated,S10; R3: Alif.,,"## Outcome
+Choose difficulty, enjoyment, route quality or another measure; decide route-versus-session scope and private-versus-shared visibility.
+## Done when
+- [ ] Meaning, scale and ownership agreed
+- [ ] Visibility rules recorded
+- [ ] Rating is not confused with gym grade
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S10; R3: Alif.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Persist the agreed climb feedback or ratings,BLY-026,Backlog,P2 - High,BE,Feature,T6 - Summary and rating,Needs BE contract,Proposed,Not estimated,S10; earlier P7-B.,BLY-025,"## Outcome
+Implement validated owner feedback and any approved shared response separately from notes.
+## Done when
+- [ ] Approved field/scale persists
+- [ ] Ownership and visibility enforced
+- [ ] Historic logs stay compatible
+## Dependencies
+- BLY-025
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S10; earlier P7-B.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Add post-climb rating controls,BLY-027,Backlog,P2 - High,FE,Feature,T6 - Summary and rating,Needs BE contract,Proposed,Not estimated,S10; R3: Alif.,BLY-026,"## Outcome
+Offer the agreed optional rating without changing the send, count or existing note.
+## Done when
+- [ ] Optional/skipped rating is clear
+- [ ] Saved values survive reload
+- [ ] Validation and retry work
+## Dependencies
+- BLY-026
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S10; R3: Alif.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Scope the first photo feature and media ownership,BLY-028,Needs decision,P1 - Highest,Product,Decision,T7 - Media and diary,Product decision,Proposed,Not estimated,S1; R5/R6: Zebo wants photos ASAP; Afina wants route context.,,"## Outcome
+Decide whether photos attach to shared routes, personal logs or sessions, who can see them, and the smallest useful photo-first delivery.
+## Done when
+- [ ] First photo use case agreed
+- [ ] Owner/visibility rules documented
+- [ ] Video is scoped separately
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S1; R5/R6: Zebo wants photos ASAP; Afina wants route context.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Provide persistent authorised photo storage and metadata,BLY-029,Backlog,P2 - High,BE,Feature,T7 - Media and diary,Needs BE contract,Proposed,Not estimated,Earlier P4; S1; R5/R6.,"BLY-028, BLY-015","## Outcome
+Implement the approved upload, asset/record linkage, access and deletion lifecycle with durable storage.
+## Done when
+- [ ] Uploads are authorised and durable
+- [ ] Metadata matches approved scope
+- [ ] Failure and deletion lifecycle defined
+## Dependencies
+- BLY-028
+- BLY-015
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+Earlier P4; S1; R5/R6.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Attach and view photos during session logging,BLY-030,Backlog,P2 - High,FE,Feature,T7 - Media and diary,Needs BE contract,Proposed,Not estimated,S1; R5/R6: Zebo; R5: Afina.,BLY-029,"## Outcome
+Provide selection, preview, upload progress/retry and viewing for the approved photo use case.
+## Done when
+- [ ] Photo survives reload and another session
+- [ ] Progress and upload errors are usable
+- [ ] Climb results remain independent of upload failure
+## Dependencies
+- BLY-029
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S1; R5/R6: Zebo; R5: Afina.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Assess video upload as a separate media delivery,BLY-031,Backlog,P3 - Medium,"FE, BE, Product",Research,T7 - Media and diary,Research,Proposed,Not estimated,S1; R5: Bryan/Afina; related to T13.,BLY-028,"## Outcome
+Compare saved links with hosted video, including playback, processing, ownership and moderation needs.
+## Done when
+- [ ] Options and dependencies recorded
+- [ ] Useful first video scope proposed
+- [ ] No preview-only upload is presented as persisted
+## Dependencies
+- BLY-028
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S1; R5: Bryan/Afina; related to T13.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Provide reliable gym location and directory data,BLY-032,Backlog,P2 - High,BE,Task,T8 - Gym discovery,Needs BE contract,Proposed,Not estimated,"S12/S32; R4/R11: Alif, Bryan and Aisyah.",BLY-014,"## Outcome
+Check existing gym data, then define coordinates/search data needed for a locator and nearby selection.
+## Done when
+- [ ] Coordinate source and maintenance owner agreed
+- [ ] Directory/search contract documented
+- [ ] Missing locations are handled
+## Dependencies
+- BLY-014
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S12/S32; R4/R11: Alif, Bryan and Aisyah.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Build gym finder and nearby-gym selection,BLY-033,Backlog,P2 - High,FE,Feature,T8 - Gym discovery,Needs BE contract,Proposed,Not estimated,S12/S32; R11: Aisyah; R4: Alif/Bryan.,"BLY-032, BLY-002","## Outcome
+Offer gym discovery and optional nearby sorting with a usable manual selection path.
+## Done when
+- [ ] Gym can be selected without location access
+- [ ] Nearby ordering uses trusted data
+- [ ] Management remains separated from discovery
+## Dependencies
+- BLY-032
+- BLY-002
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S12/S32; R11: Aisyah; R4: Alif/Bryan.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Define the first PWA release scope,BLY-034,Backlog,P2 - High,"FE, Product, Platform",Research,T9 - PWA,Research,Proposed,Not estimated,S19.,,"## Outcome
+Separate installation/launch behaviour from offline logging, sync and notifications, and check required platforms.
+## Done when
+- [ ] First PWA acceptance scope agreed
+- [ ] Platform limitations documented
+- [ ] Offline and notification scope explicitly included or deferred
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S19.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Deliver the agreed installable PWA experience,BLY-035,Backlog,P2 - High,"FE, Platform",Task,T9 - PWA,Needs design,Proposed,Not estimated,S19; platform verification required.,BLY-034,"## Outcome
+Implement and verify the approved installation/launch scope without claiming offline data support unless separately delivered.
+## Done when
+- [ ] Manifest/icons/launch experience checked
+- [ ] Target-device installation verified
+- [ ] Update and unsupported-platform behaviour documented
+## Dependencies
+- BLY-034
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S19; platform verification required.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Investigate offline logging and safe synchronisation,BLY-036,Backlog,P3 - Medium,"FE, BE, Platform",Research,T9 - PWA,Research,Proposed,Not estimated,T9 extended capability; not implied by installability.,"BLY-034, BLY-069","## Outcome
+Explore retained drafts, retries, conflict handling and privacy before any offline commitment.
+## Done when
+- [ ] Offline data boundary agreed
+- [ ] Conflict/retry approach proposed
+- [ ] Dependencies and device tests identified
+## Dependencies
+- BLY-034
+- BLY-069
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+T9 extended capability; not implied by installability.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+"Agree public identity, sharing and comparison rules",BLY-037,Needs decision,P3 - Medium,Product,Decision,T10 - Community and rankings,Product decision,Proposed,Not estimated,S6/S8; R2/R3: Alif and Zebo; earlier P1/P8/P9.,BLY-001,"## Outcome
+Define feed audience, opt-in discovery, profile fields, shared metrics and what stays private.
+## Done when
+- [ ] Shared data allowlist recorded
+- [ ] Private email/notes separated
+- [ ] Audience and account controls agreed
+## Dependencies
+- BLY-001
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S6/S8; R2/R3: Alif and Zebo; earlier P1/P8/P9.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Provide editable owner profiles and privacy-safe public discovery,BLY-038,Backlog,P3 - Medium,BE,Feature,T10 - Community and rankings,Needs BE contract,Proposed,Not estimated,Earlier P1-B/P8/P9; R2/R3.,BLY-037,"## Outcome
+Implement approved identity updates, visibility, user search and public statistics without exposing raw journals.
+## Done when
+- [ ] Owner editing and validation work
+- [ ] Search respects discoverability
+- [ ] Public response excludes private account/note fields
+## Dependencies
+- BLY-037
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+Earlier P1-B/P8/P9; R2/R3.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+"Build profile editing, public profiles and climber search",BLY-039,Backlog,P3 - Medium,FE,Feature,T10 - Community and rankings,Needs BE contract,Proposed,Not estimated,Earlier P1/P8/P9; S6; R2.,BLY-038,"## Outcome
+Replace relevant placeholders using approved APIs and visible privacy controls.
+## Done when
+- [ ] Editing persists
+- [ ] Search/profile visibility matches API
+- [ ] Private/public identity is understandable
+## Dependencies
+- BLY-038
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+Earlier P1/P8/P9; S6; R2.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Provide a visibility-filtered climber activity feed,BLY-040,Backlog,P3 - Medium,BE,Feature,T10 - Community and rankings,Needs BE contract,Proposed,Not estimated,S6; R2: Alif wants common ground and common climbs.,"BLY-037, BLY-038","## Outcome
+Implement approved shared-session activity with pagination and privacy filtering.
+## Done when
+- [ ] Only permitted activity appears
+- [ ] Pagination and deletion/correction behaviour defined
+- [ ] Private journal data remains owner-only
+## Dependencies
+- BLY-037
+- BLY-038
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S6; R2: Alif wants common ground and common climbs.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Build the climber activity feed,BLY-041,Backlog,P3 - Medium,FE,Feature,T10 - Community and rankings,Needs BE contract,Proposed,Not estimated,S6; R2: Alif.,BLY-040,"## Outcome
+Present real allowed activity and routes with clear entry points into shared profiles or climbs.
+## Done when
+- [ ] Uses real shared data
+- [ ] Loading/empty/error states work
+- [ ] Users understand what they are sharing
+## Dependencies
+- BLY-040
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S6; R2: Alif.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Agree scoring and fair ranking eligibility,BLY-042,Needs decision,P3 - Medium,Product,Decision,T10 - Community and rankings,Product decision,Proposed,Not estimated,R2: Zebo leaderboard; R3: Alif per-climb comparison; earlier P3/P6/P10.,BLY-037,"## Outcome
+Define gym-first metrics, periods, ties, verification labels, corrections and when cross-gym comparison is defensible.
+## Done when
+- [ ] Rules and periods agreed
+- [ ] Self-reported results are labelled
+- [ ] Unknown grade mappings and old timing have a policy
+## Dependencies
+- BLY-037
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R2: Zebo leaderboard; R3: Alif per-climb comparison; earlier P3/P6/P10.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Build authoritative scoring and gym-first ranking queries,BLY-043,Backlog,P3 - Medium,BE,Feature,T10 - Community and rankings,Needs BE contract,Proposed,Not estimated,Earlier P3a/P3b/P6; R2/R3.,"BLY-042, BLY-045, BLY-069, BLY-070, BLY-071","## Outcome
+Implement approved rules, auditable corrections, eligible timing and privacy-safe standings; global ranks remain gated on mappings.
+## Done when
+- [ ] Scores reconcile with rules
+- [ ] Ties/pagination/own rank work
+- [ ] Privacy and retry/correction behaviour verified
+## Dependencies
+- BLY-042
+- BLY-045
+- BLY-069
+- BLY-070
+- BLY-071
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+Earlier P3a/P3b/P6; R2/R3.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Build rankings and clear score explanations,BLY-044,Backlog,P3 - Medium,FE,Feature,T10 - Community and rankings,Needs BE contract,Proposed,Not estimated,R2: Zebo; earlier P3a/P3b/P6.,BLY-043,"## Outcome
+Integrate gym-first rankings, selected periods and the user’s rank, explaining eligibility and scoring.
+## Done when
+- [ ] Standings match server scope
+- [ ] Rules and verification labels visible
+- [ ] No invented points for unmapped grades
+## Dependencies
+- BLY-043
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R2: Zebo; earlier P3a/P3b/P6.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Provide managed gym grades and approved ranking mappings,BLY-045,Backlog,P3 - Medium,BE,Task,T10 - Community and rankings,Needs BE contract,Proposed,Not estimated,Earlier P10; S28; R9: Bryan colour confusion.,"BLY-014, BLY-042","## Outcome
+Retain gym grade labels and separate physical hold colour from grading/circuit meaning; implement reviewed mappings only when agreed.
+## Done when
+- [ ] Catalog ownership and validation defined
+- [ ] Historic/free-text grades remain usable
+- [ ] Unknown mappings do not invent equivalence
+## Dependencies
+- BLY-014
+- BLY-042
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+Earlier P10; S28; R9: Bryan colour confusion.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+"Define climbing buddies, group membership and planned visits",BLY-046,Needs decision,P3 - Medium,Product,Decision,T11 - Buddies and groups,Product decision,Proposed,Not estimated,S20; R2: Yenni wants beginner buddies; earlier P3c.,BLY-037,"## Outcome
+Agree who sees a planned session, who may join, how invites work and whether informal groups or leagues come first.
+## Done when
+- [ ] First social use case selected
+- [ ] Joining/leaving/cancellation rules documented
+- [ ] Privacy and season scope agreed
+## Dependencies
+- BLY-037
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S20; R2: Yenni wants beginner buddies; earlier P3c.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Provide approved session plans and group membership,BLY-047,Backlog,P3 - Medium,BE,Feature,T11 - Buddies and groups,Needs BE contract,Proposed,Not estimated,S20; R2: Yenni; earlier P3c.,"BLY-046, BLY-038","## Outcome
+Implement the selected first social model, invitation roles and visibility; avoid bundling every league feature into one release.
+## Done when
+- [ ] Plans/membership persist
+- [ ] Non-members cannot access private records
+- [ ] Changes and cancellations have clear behaviour
+## Dependencies
+- BLY-046
+- BLY-038
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S20; R2: Yenni; earlier P3c.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Build planned sessions and climbing-buddy/group flows,BLY-048,Backlog,P3 - Medium,FE,Feature,T11 - Buddies and groups,Needs BE contract,Proposed,Not estimated,S20; R2: Yenni.,BLY-047,"## Outcome
+Let people discover or join the approved shared climbing plans and manage their participation.
+## Done when
+- [ ] Create/join/leave flows work
+- [ ] Audience and timing are clear
+- [ ] No fake members or standings
+## Dependencies
+- BLY-047
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S20; R2: Yenni.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Define competition-news sources and editorial ownership,BLY-049,Needs decision,P3 - Medium,"Product, Content",Decision,T12 - Competition news,Product decision,Proposed,Not estimated,S18; R2: Yenni.,,"## Outcome
+Choose event scope, regions, source/editor and whether news belongs in the activity feed or a separate destination.
+## Done when
+- [ ] Source and owner agreed
+- [ ] Event date/location fields agreed
+- [ ] Outdated listing treatment defined
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S18; R2: Yenni.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Deliver the agreed competition-news listing,BLY-050,Backlog,P3 - Medium,"FE, BE, Content",Feature,T12 - Competition news,Product decision,Proposed,Not estimated,S18; R2: Yenni. Split FE/BE implementation further after source selection.,BLY-049,"## Outcome
+Implement event storage/content source and a readable event listing according to the selected editorial scope.
+## Done when
+- [ ] Listings have maintained sources and dates
+- [ ] Users can find relevant competitions
+- [ ] Empty/error/outdated states are clear
+## Dependencies
+- BLY-049
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S18; R2: Yenni. Split FE/BE implementation further after source selection.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Check Instagram/video embedding feasibility,BLY-051,Backlog,P3 - Medium,"FE, BE",Research,T13 - Instagram beta,Research,Proposed,Not estimated,S30; R5: Bryan. Feasibility not yet established.,,"## Outcome
+Investigate supported embedding, access, attribution, unavailable clips and a link fallback.
+## Done when
+- [ ] Current platform constraints verified
+- [ ] Persisted-link requirements identified
+- [ ] Recommended first beta scope documented
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S30; R5: Bryan. Feasibility not yet established.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Persist approved route beta links and attribution,BLY-052,Backlog,P3 - Medium,BE,Feature,T13 - Instagram beta,Needs BE contract,Proposed,Not estimated,S30; R5: Bryan; earlier P5.,"BLY-051, BLY-037","## Outcome
+Provide authorised route/media-link records and approved report/remove behaviour.
+## Done when
+- [ ] Links and attribution persist
+- [ ] Route linkage and access are validated
+- [ ] Removed/private-source fallback is supported
+## Dependencies
+- BLY-051
+- BLY-037
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S30; R5: Bryan; earlier P5.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Display approved beta embeds with a useful fallback,BLY-053,Backlog,P3 - Medium,FE,Feature,T13 - Instagram beta,Needs BE contract,Proposed,Not estimated,S30; R5: Bryan.,BLY-052,"## Outcome
+Let climbers choose to reveal route beta, with attribution and unavailable-source handling.
+## Done when
+- [ ] Embeds follow current supported approach
+- [ ] Fallback link is clear
+- [ ] Beta can stay hidden until requested
+## Dependencies
+- BLY-052
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S30; R5: Bryan.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Explore themes and configurable dashboard scope,BLY-054,Backlog,P4 - Explore,"Design, Product",Design,T14 - Themes,Needs design,Proposed,Not estimated,S23; R8: Yenni. No replacement design approved.,,"## Outcome
+Assess colour choices, a possible vintage option and which dashboard elements can vary without confusing navigation.
+## Done when
+- [ ] Theme options proposed within brand
+- [ ] Layout versus colour scope separated
+- [ ] Readability/accessibility reviewed
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S23; R8: Yenni. No replacement design approved.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Implement selected themes and dashboard preferences,BLY-055,Backlog,P4 - Explore,FE,Improvement,T14 - Themes,Needs design,Proposed,Not estimated,"S23; R8: Yenni. BE persistence, if selected, must be separately scoped.",BLY-054,"## Outcome
+Implement approved visual choices; determine whether preference persistence can remain local or needs a separate server contract.
+## Done when
+- [ ] Chosen theme is consistent across screens
+- [ ] Preference storage behaviour is explicit
+- [ ] Contrast and core navigation preserved
+## Dependencies
+- BLY-054
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S23; R8: Yenni. BE persistence, if selected, must be separately scoped.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Choose voice recording versus note transcription,BLY-056,Backlog,P4 - Explore,"FE, BE, Product",Research,T15 - Voice notes,Research,Proposed,Not estimated,S27; R5: Bryan. Afina’s diary requirement is also captured in BLY-075.,,"## Outcome
+Clarify audio storage versus speech-to-text, note types, supported languages/devices and a typed alternative.
+## Done when
+- [ ] Recording/transcription scope selected
+- [ ] Service/device dependencies recorded
+- [ ] Privacy, editing and failure behaviour described
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S27; R5: Bryan. Afina’s diary requirement is also captured in BLY-075.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Define QR/NFC and location-assisted session start,BLY-057,Backlog,P4 - Explore,"FE, BE, Product",Research,T16 - QR and NFC,Research,Proposed,Not estimated,S7; R4: Alif; Bryan also mentions geolocation.,,"## Outcome
+Choose whether a scan identifies a gym, a route or a check-in point; separate tagged identity from device geolocation.
+## Done when
+- [ ] Target scan journey agreed
+- [ ] Tag operations and API dependencies recorded
+- [ ] Manual fallback remains clear
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S7; R4: Alif; Bryan also mentions geolocation.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Assess phone-number signup and recovery,BLY-058,Backlog,P4 - Explore,"FE, BE, Product",Research,T17 - Phone signup,Research,Proposed,Not estimated,S33; not the same as Aisyah’s marketing request in T23.,,"## Outcome
+Investigate verification, account linking, recovery, provider requirements and cost before changing authentication.
+## Done when
+- [ ] User benefit and account-linking rules agreed
+- [ ] Provider/platform feasibility recorded
+- [ ] Marketing contacts remain a separate scope
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S33; not the same as Aisyah’s marketing request in T23.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Assess sports-watch and health-app integration,BLY-059,Backlog,P4 - Explore,"FE, BE, Platform",Research,T18 - Health and watches,Research,Proposed,Not estimated,S22; R8: Yenni.,,"## Outcome
+Choose target platforms, read/write data and user benefit, then assess permissions, supported delivery platform and maintenance.
+## Done when
+- [ ] Candidate apps/watches named
+- [ ] Supported integration path verified
+- [ ] Smallest useful scope and dependencies recorded
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S22; R8: Yenni.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Clarify expansion beyond climbing and “alternatives”,BLY-060,Needs decision,P4 - Explore,Product,Decision,T19 - Strategy,Product decision,Proposed,Not estimated,S34; R11: Aisyah’s wording is unresolved.,BLY-001,"## Outcome
+Keep other climbing disciplines, other sports and Aisyah’s unspecified alternatives as separate strategy questions.
+## Done when
+- [ ] Meaning of alternatives clarified
+- [ ] Evidence for expansion documented
+- [ ] Core climbing scope remains explicit
+## Dependencies
+- BLY-001
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S34; R11: Aisyah’s wording is unresolved.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Define cancellation without accidental history loss,BLY-061,Needs decision,P1 - Highest,Product,Decision,T20 - Cancel session,Product decision,Proposed,Not estimated,R4: Aisyah. Missing cancellation is a feature request; effort is not yet known.,,"## Outcome
+Distinguish abandoning an empty session, undoing a start, finishing early and discarding saved logs.
+## Done when
+- [ ] Behaviour for empty/logged sessions agreed
+- [ ] History retention/recovery policy recorded
+- [ ] API need identified
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R4: Aisyah. Missing cancellation is a feature request; effort is not yet known.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Provide the approved cancel/abandon-session behaviour,BLY-062,Backlog,P1 - Highest,BE,Feature,T20 - Cancel session,Needs BE contract,Proposed,Not estimated,R4: Aisyah. No deletion is authorised by creating this task.,"BLY-061, BLY-070","## Outcome
+Recheck available API operations and implement only the chosen owner-scoped cancellation semantics.
+## Done when
+- [ ] Owner checks enforced
+- [ ] Existing logs follow agreed retention rules
+- [ ] Compatibility and retry behaviour documented
+## Dependencies
+- BLY-061
+- BLY-070
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R4: Aisyah. No deletion is authorised by creating this task.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Add a clear cancel-session journey,BLY-063,Backlog,P1 - Highest,FE,Feature,T20 - Cancel session,Needs BE contract,Proposed,Not estimated,R4: Aisyah.,"BLY-061, BLY-062","## Outcome
+Expose the approved cancel or abandon action separately from End session, with accurate consequences and recovery.
+## Done when
+- [ ] User can leave an accidental session
+- [ ] Saved-log consequences are clear
+- [ ] Failure does not misleadingly remove history
+## Dependencies
+- BLY-061
+- BLY-062
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R4: Aisyah.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Define the private route-list ownership model,BLY-064,Needs decision,P2 - High,Product,Decision,T21 - Private routes,Product decision,Proposed,Not estimated,R7: Wei; supplied summary lists private routes as high demand.,,"## Outcome
+Choose saved routes from a shared catalogue, private route creation or both, and how it differs from the current Climbs collection.
+## Done when
+- [ ] Ownership model chosen
+- [ ] Saving/removal/history rules agreed
+- [ ] Relationship with projects and gym catalogue recorded
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R7: Wei; supplied summary lists private routes as high demand.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Provide private route collections under the agreed model,BLY-065,Backlog,P2 - High,BE,Feature,T21 - Private routes,Needs BE contract,Proposed,Not estimated,R7: Wei; S29 connection depends on clarification.,"BLY-064, BLY-071","## Outcome
+Implement owner-scoped collection/route relationships and enforce the selected privacy and lifecycle rules.
+## Done when
+- [ ] Collections persist and remain owner-scoped
+- [ ] Shared/private records are distinguished
+- [ ] Removing a saved item preserves historical logs
+## Dependencies
+- BLY-064
+- BLY-071
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R7: Wei; S29 connection depends on clarification.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Build the private route-list experience,BLY-066,Backlog,P2 - High,FE,Feature,T21 - Private routes,Needs BE contract,Proposed,Not estimated,R7: Wei; related to S29.,"BLY-065, BLY-012","## Outcome
+Let users save, browse and manage the approved private collection without confusing it with shared gym administration.
+## Done when
+- [ ] Collection ownership is clear
+- [ ] Save/remove/browse flows work
+- [ ] History and continued projects stay reachable
+## Dependencies
+- BLY-065
+- BLY-012
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R7: Wei; related to S29.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Scope homepage promotions and content ownership,BLY-067,Needs decision,P4 - Explore,"Product, Content",Decision,T22 - Promotions,Product decision,Proposed,Not estimated,R11: Aisyah.,,"## Outcome
+Clarify the promotion audience, content source, editorial owner and user action before altering Home priorities.
+## Done when
+- [ ] Promotion purpose and owner agreed
+- [ ] Content/update process chosen
+- [ ] Core session entry remains prominent
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R11: Aisyah.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Define marketing contact collection as a separate proposal,BLY-068,Needs decision,P4 - Explore,Product,Decision,T23 - Marketing contacts,Product decision,Proposed,Not estimated,R11: Aisyah; separate from S33 / T17.,,"## Outcome
+Clarify the offer, purpose, user choice, handling and value of collecting phone numbers for cross-selling. Do not conflate it with login.
+## Done when
+- [ ] Purpose and choice model documented
+- [ ] Authentication remains a separate scope
+- [ ] No collection starts without an approved proposal
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R11: Aisyah; separate from S33 / T17.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+"Audit and enforce attempt integrity, retries and flash validation",BLY-069,Backlog,P1 - Highest,BE,Task,F2 - Attempt integrity,Backend foundation,Proposed,Not estimated,F2 from the earlier BE brief; important for reliable counts and future rankings. No fresh backend vulnerability is asserted.,,"## Outcome
+Recheck actual constraints, duplicates and update paths. Define safe repair, session-route uniqueness, atomic/versioned writes and lifetime eligibility.
+## Done when
+- [ ] Audit and migration plan reviewed
+- [ ] Retries/concurrent distinct tries behave correctly
+- [ ] Merged updates and lifetime flash rules validated
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b398147acbaeb71b806d9d2?pvs=204""/>
+F2 from the earlier BE brief; important for reliable counts and future rankings. No fresh backend vulnerability is asserted.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Define explicit session lifecycle and trustworthy result timing,BLY-070,Backlog,P2 - High,BE,Task,F3 - Session lifecycle,Backend foundation,Proposed,Not estimated,F3; dependencies for cancellation and competitive periods.,,"## Outcome
+Replace duration-only lifecycle assumptions with compatible status/timing where approved; preserve uncertainty in older records.
+## Done when
+- [ ] Lifecycle contract agreed
+- [ ] Old sessions remain readable
+- [ ] Server-owned timing and legacy policy documented
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b398147acbaeb71b806d9d2?pvs=204""/>
+F3; dependencies for cancellation and competitive periods.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Protect retired routes and historical references,BLY-071,Backlog,P1 - Highest,BE,Task,F4 - Route lifecycle,Backend foundation,Proposed,Not estimated,F4; S28/R9 route-context connection; no destructive operation is authorised.,,"## Outcome
+Recheck retirement, deletion and gym reassignment rules so wall resets preserve past effort.
+## Done when
+- [ ] Referenced routes remain readable
+- [ ] New wall sets get distinct IDs
+- [ ] Invalid moves/deletes receive clear handling
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b398147acbaeb71b806d9d2?pvs=204""/>
+F4; S28/R9 route-context connection; no destructive operation is authorised.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Clarify descriptions and the removed-route button,BLY-072,Needs decision,P2 - High,"Product, Design",Decision,T3 - Session flow,Product decision,Proposed,Not estimated,R9: Bryan; keep the wording open until clarified.,,"## Outcome
+Ask what Bryan means by describing removed routes: viewing old context, adding a description, reporting a removal or another action.
+## Done when
+- [ ] Requested action clarified
+- [ ] Visible historical metadata agreed
+- [ ] Retirement and deletion remain distinct
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R9: Bryan; keep the wording open until clarified.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Clarify the map-style partner or route view,BLY-073,Backlog,P4 - Explore,"Product, Design",Research,"T3 - Session flow, T11 - Buddies and groups",Research,Proposed,Not estimated,R10: Afina; related to S29.,,"## Outcome
+Explore whether Afina means a wall/route map, a partner map or a combined view, and which user problem it solves.
+## Done when
+- [ ] Meaning of map/partner view clarified
+- [ ] Small concept and data needs documented
+- [ ] No unapproved location sharing assumed
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R10: Afina; related to S29.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Validate the revised journey with representative testers,BLY-074,Backlog,P1 - Highest,"QA, Product",Verification,"T1 - Journey, T2 - Onboarding, T3 - Session flow, T6 - Summary and rating",Verify behaviour,Proposed,Not estimated,Original usability feedback across S2-S5/S8/S25; R1/R4. Review is not pre-completed.,"BLY-003, BLY-005, BLY-006, BLY-010, BLY-024, BLY-063","## Outcome
+After the relevant changes, observe signup/help, gym selection, logging, Send, cancellation and review with the agreed audience.
+## Done when
+- [ ] Tester can complete the core loop
+- [ ] Remaining friction is recorded with evidence
+- [ ] No planned feature is presented as working
+## Dependencies
+- BLY-003
+- BLY-005
+- BLY-006
+- BLY-010
+- BLY-024
+- BLY-063
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+Original usability feedback across S2-S5/S8/S25; R1/R4. Review is not pre-completed.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Define personal diary and richer route context,BLY-075,Needs decision,P2 - High,"Product, Design",Decision,"T7 - Media and diary, T15 - Voice notes",Product decision,Proposed,Not estimated,R5: Afina; related to S1/S27/S28 and Bryan’s descriptions.,,"## Outcome
+Clarify Afina’s diary need: typed visit reflections, route descriptions, photos or a combined private journal; avoid turning it into public reviews by default.
+## Done when
+- [ ] Diary entry scope agreed
+- [ ] Links to route/session history defined
+- [ ] Private diary and shared beta separated
+## Decision record
+Capture the chosen rule, reasons, exclusions and any resulting changes to scope. This card does not preselect an answer.
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+R5: Afina; related to S1/S27/S28 and Bryan’s descriptions.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."
+Define per-climb comparison with other users,BLY-076,Backlog,P3 - Medium,"Product, FE, BE",Research,T10 - Community and rankings,Research,Proposed,Not estimated,S8; R3: Alif. Comparison is distinct from a global score board.,"BLY-037, BLY-042","## Outcome
+Clarify which metrics and comparison group answer Alif’s request, without exposing raw private journals or equating unrelated routes.
+## Done when
+- [ ] Meaningful per-route metrics agreed
+- [ ] Visibility/participation rules documented
+- [ ] Relationship to leaderboards and personal history defined
+## Dependencies
+- BLY-037
+- BLY-042
+## Source
+<mention-page url=""https://app.notion.com/p/40376faa3b3981a1a65dea660e5c3433?pvs=204""/>
+<mention-page url=""https://app.notion.com/p/40376faa3b3981c8b5b7fb15637ed009?pvs=204""/>
+S8; R3: Alif. Comparison is distinct from a global score board.
+Feedback date: <date start=""2026-10-24"" />. Earlier foundations, where referenced, were checked on <date start=""2026-10-03"" /> and require a fresh contract check.
+## Planning boundary
+Proposed backlog item. Scope, effort and ownership must be agreed before work starts. No implementation, production verification or delivery date is implied."

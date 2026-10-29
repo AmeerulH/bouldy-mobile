@@ -1,0 +1,50 @@
+diff --git a/AGENTS.md b/AGENTS.md
+index 45d07d0..90e2f13 100644
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -16,3 +16,15 @@ Before changing the product, read `README.md` → `MASTER_SPEC.md` → the relev
+ - This checkout contains the Next.js frontend, not the FastAPI backend. Verify server contracts against the live OpenAPI schema and backend source before changing assumptions. Never invent a backend field or persist future features only in the browser while labelling them complete.
+ - Preserve route history through wall resets, protect session/attempt ownership server-side, and keep the phone-oriented UX on desktop as well as mobile.
+ - Keep the master spec and relevant focused spec synchronized with any product flow, route, API contract, or architecture change. Do not add credentials or test-account passwords to documentation.
++
++## Quality gates
++
++The skills named below are installed globally in `~/.agents/skills`. If one is unavailable, still follow the intent of the gate.
++
++- **Before saying a change is done**, run `npm run lint`, `npx tsc --noEmit`, `node --test tests/*.test.mjs` (Node 22.18+) and `npm run build`, and report the actual output (`verification-before-completion`).
++- **Bugs and failing checks:** find and state the root cause before changing code (`systematic-debugging`).
++- **Before a PR or merge:** review the branch diff with `find-bugs` and `code-review`.
++- **Security-sensitive changes** also get `differential-review` or `security-review`: `proxy.ts`, sign-in and session or token handling, anything that forwards requests or headers to the FastAPI backend, rendering user-entered text such as notes and route names, and `NEXT_PUBLIC_` variables. Ownership is enforced by the backend; the UI hiding an action is never the protection.
++- **API contract changes:** check them with `api-and-interface-design` against the live OpenAPI schema before touching `lib/api.ts` or `lib/actions.ts`.
++- **New pure logic** in `lib/` (grades, journal summaries, filters) gets a `node:test` case in `tests/`; use `tdd` for anything non-trivial.
++- **New dependencies:** run `supply-chain-risk-auditor` before adding one.
+diff --git a/MASTER_SPEC.md b/MASTER_SPEC.md
+index c9c4e60..2b72668 100644
+--- a/MASTER_SPEC.md
++++ b/MASTER_SPEC.md
+@@ -66,6 +66,10 @@ The current five-tab experience is **Home** (real-data summary), **Explore** (pl
+ 
+ The product should not rush to a global rank based on incomparable gym grades or unchecked self-reported sends. A gym-local, time-bounded, transparent leaderboard is a possible first experiment, **not** a committed implementation.
+ 
++### Planned platform migration — 28 October 2026
++
++The user selected native/mobile-first delivery through a separate React Native + Expo application repository, with replacement web/PWA output from that same codebase. The [migration specification](./docs/REACT_NATIVE_MIGRATION_SPEC.md) requires one-for-one preservation of the current UI, flows, wording, screens and logic. This direction supersedes the earlier PWA-first delivery proposal; it does not implement any product-backlog features or change the current Next.js runtime. See the [parity register](./docs/migration/PARITY_REGISTER.md) and [agent handoff](./docs/migration/IMPLEMENTATION_HANDOFF.md). The source repo remains intact until verified replacement and retirement gates pass. No target repo or migration implementation has been created.
++
+ ### Planned backend contract — do not fake persistence
+ 
+ These are intended features, but the current frontend must label them as unavailable or local-only until the API contract lands.
+diff --git a/README.md b/README.md
+index a41d8d2..60f3492 100644
+--- a/README.md
++++ b/README.md
+@@ -20,6 +20,10 @@ The frontend lives in this repository and is deployed at [bouldy.vercel.app](htt
+ 
+ These briefs split the 1 October 2026 feasibility report into team backlogs, checked against source/contracts on 3 October 2026. Proposed features and rules remain recommendations, not shipped functionality.
+ 
++## Planned React Native migration
++
++The [1:1 migration specification](./docs/REACT_NATIVE_MIGRATION_SPEC.md) plans a separate React Native + Expo application repository for iOS/Android and replacement web/PWA delivery. The current UI, flows, copy and logic are fixed references; this is not a redesign. The [parity register](./docs/migration/PARITY_REGISTER.md) and [agent handoff with Notion links](./docs/migration/IMPLEMENTATION_HANDOFF.md) cover the complete current implementation. Planning only: no new application repo or migration code exists, and this repository remains the source and rollback reference.
++
+ ## Current user journey
+ 
+ Sign up or log in → choose or add a gym → start a session → browse active routes → log attempts, a send, or a first-try flash → end the session → review the journal and Home summary. Routes should be **retired**, not deleted, when a gym resets its wall; historic attempts must remain readable.

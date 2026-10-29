@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-29T14:32:58.421689+00:00",
+  "sourceFiles": 271,
+  "mismatches": [],
+  "sourceHead": "5467a433ea6699c1206b6e9019430fccff693918",
+  "sourceStatusUnchanged": true,
+  "sourceStatus": " M AGENTS.md\n M MASTER_SPEC.md\n M README.md\n?? .impeccable/review/\n?? docs/REACT_NATIVE_MIGRATION_SPEC.md\n?? docs/TEAM_BRAINSTORM_SESSION.md\n?? docs/TEAM_FEEDBACK_PRIORITIES.md\n?? docs/TESTER_FEEDBACK_2026-10-24.md\n?? docs/migration/\n?? docs/notion-backlog/\n?? docs/visual-walkthrough/\n?? output/\n",
+  "targetRepository": "https://github.com/AmeerulH/bouldy-mobile",
+  "visibility": "public",
+  "publicationBranch": "main",
+  "fullParityAcceptance": "OPEN",
+  "selectedCredentialScan": "github-publication-secret-scan.json"
+}

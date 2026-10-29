@@ -1,0 +1,12 @@
+5467a433ea6699c1206b6e9019430fccff693918 feat: route browsing, Climbs collection and snackbars
+e5379d8d929a4f368cafcb680032f7dab753a060 feat: journal improvements and mobile-native flows
+507a313b2e2e338e87273c138302b8bcb54d288c docs: establish Bouldy product and architecture specs
+fea77c2a0d82cf1e074ce17031894f243eebd49d feat: refine route logging and gym editing
+aaaddd7a29b6c66156ef7d696b3a5b25df0b658d feat: add Bouldy Storybook
+011884a1d772ec9b7c1dacb8f0881115cb36ebd4 feat: establish Bouldy design system
+5ed0e916d45202d0c48dbecb75806ce9ad296502 Enhance loading states and navigation experience
+814758a2544a998c6ed71b0b1665a64c653f9e26 feat: build mobile climbing journal
+27bd128a9d7513a569fdc8d458b6ead6c87a49c7 Replace header nav pills with a bottom tab bar
+3f2100c0df617b9969193911a720b9a2dfd3be1c Add gym select, session, and history screens
+c6c34537af9a8747c4afb025434e3a9cac145634 Add auth: sign up, log in, log out against the live Bouldy API
+0eb3f2e46c7dcbc556a40b5d283eac4659d945af Scaffold Bouldy web: Next.js app shell, mobile-locked layout, accent theme tokens

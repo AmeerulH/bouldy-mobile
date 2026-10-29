@@ -1,0 +1,122 @@
+{
+  "writes": [
+    "/attempts/31",
+    "/attempts/31",
+    "/attempts/31",
+    "/sessions/",
+    "/gyms/",
+    "/routes/",
+    "/routes/102",
+    "/sessions/",
+    "/routes/",
+    "/sessions/103/attempts"
+  ],
+  "attempts": [
+    {
+      "id": 31,
+      "session_id": 3,
+      "route_id": 11,
+      "num_attempts": 3,
+      "result": "send",
+      "notes": "Native test draft - keep the left heel high."
+    },
+    {
+      "id": 32,
+      "session_id": 3,
+      "route_id": 12,
+      "num_attempts": 1,
+      "result": "flash",
+      "notes": null
+    },
+    {
+      "id": 23,
+      "session_id": 2,
+      "route_id": 11,
+      "num_attempts": 4,
+      "result": "project",
+      "notes": "Try the heel hook next visit."
+    },
+    {
+      "id": 24,
+      "session_id": 2,
+      "route_id": 15,
+      "num_attempts": 2,
+      "result": "send",
+      "notes": null
+    },
+    {
+      "id": 11,
+      "session_id": 1,
+      "route_id": 21,
+      "num_attempts": 3,
+      "result": "send",
+      "notes": "Commit to the side pull."
+    },
+    {
+      "id": 41,
+      "session_id": 4,
+      "route_id": 13,
+      "num_attempts": 3,
+      "result": "project",
+      "notes": "The route has since been retired."
+    },
+    {
+      "id": 105,
+      "session_id": 103,
+      "notes": null,
+      "route_id": 104,
+      "num_attempts": 1,
+      "result": "project"
+    }
+  ],
+  "sessions": [
+    {
+      "id": 103,
+      "notes": null,
+      "user_id": 1,
+      "gym_id": 101,
+      "session_date": "2026-10-28",
+      "duration_minutes": 0
+    },
+    {
+      "id": 100,
+      "notes": null,
+      "user_id": 1,
+      "gym_id": 1,
+      "session_date": "2026-10-28",
+      "duration_minutes": 0
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "gym_id": 1,
+      "session_date": "2026-10-24",
+      "duration_minutes": 0,
+      "notes": null
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "gym_id": 1,
+      "session_date": "2026-10-20",
+      "duration_minutes": 75,
+      "notes": null
+    },
+    {
+      "id": 1,
+      "user_id": 1,
+      "gym_id": 2,
+      "session_date": "2026-09-28",
+      "duration_minutes": 60,
+      "notes": null
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "gym_id": 1,
+      "session_date": "2026-10-13",
+      "duration_minutes": 90,
+      "notes": null
+    }
+  ]
+}

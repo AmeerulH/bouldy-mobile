@@ -1,0 +1,38 @@
+{"text": "", "content-desc": "Tools", "class": "android.widget.ImageView", "clickable": "false", "bounds": "[915,87][993,165]", "focused": "false", "password": "false"}
+{"text": "Sample journal \u00b7 local preview", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,96][1020,144]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Android Test Wall", "class": "android.view.View", "clickable": "true", "bounds": "[60,188][1020,320]", "focused": "false", "password": "false"}
+{"text": "Android Test Wall", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[144,224][495,284]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Crimps", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,339][261,178]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Slopers", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[285,339][495,178]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Pinches", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[519,339][734,178]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Jugs", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[758,339][922,178]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Pockets", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,339][279,304]", "focused": "false", "password": "false"}
+{"text": "Pockets", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,339][240,277]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Dyno", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[303,339][469,304]", "focused": "false", "password": "false"}
+{"text": "Dyno", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[342,339][430,277]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Deadpoint", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[493,339][751,304]", "focused": "false", "password": "false"}
+{"text": "Deadpoint", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[532,339][712,277]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Static", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[775,339][956,304]", "focused": "false", "password": "false"}
+{"text": "Static", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[814,339][917,277]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Coordination", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,339][360,430]", "focused": "false", "password": "false"}
+{"text": "Coordination", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,355][321,403]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Compression", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[384,339][689,430]", "focused": "false", "password": "false"}
+{"text": "Compression", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[423,355][650,403]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Balance", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[713,339][931,430]", "focused": "false", "password": "false"}
+{"text": "Balance", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[752,355][892,403]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Mantle", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,454][259,556]", "focused": "false", "password": "false"}
+{"text": "Mantle", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,481][220,529]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Heel Hook", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[283,454][539,556]", "focused": "false", "password": "false"}
+{"text": "Heel Hook", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[322,481][500,529]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Toe Hook", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[563,454][802,556]", "focused": "false", "password": "false"}
+{"text": "Toe Hook", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[602,481][763,529]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Gaston", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,580][262,682]", "focused": "false", "password": "false"}
+{"text": "Gaston", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,607][223,655]", "focused": "false", "password": "false"}
+{"text": "Route name", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,856][1020,916]", "focused": "false", "password": "false"}
+{"text": "Android Foothold", "content-desc": "Route name", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,934][1020,1078]", "focused": "false", "password": "false"}
+{"text": "Setter", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1126][1020,1186]", "focused": "false", "password": "false"}
+{"text": "Optional", "content-desc": "Setter", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,1204][1020,1348]", "focused": "false", "password": "false"}
+{"text": "Competition route", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,1447][981,1507]", "focused": "false", "password": "false"}
+{"text": "Coming soon. Once the gym can mark a route as a comp route, Zone will appear in its session log.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,1519][981,1557]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Save route", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1596][1020,1740]", "focused": "false", "password": "false"}
+{"text": "Save route", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[429,1638][651,1698]", "focused": "false", "password": "false"}

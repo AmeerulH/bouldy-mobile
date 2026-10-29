@@ -1,0 +1,15 @@
+{
+  "entryCount": 59,
+  "screenshots": 195,
+  "localLinksChecked": 390,
+  "brokenLinks": [],
+  "kinds": {
+    "Page": 15,
+    "Source planned page": 10,
+    "Development only": 2,
+    "Development catalogue": 1,
+    "Fixture state": 10,
+    "Feature": 21
+  },
+  "scope": "Static HTML/PNG/link validation. Selected raw PNGs viewed. Gallery not rendered in a browser due existing browser-control restriction."
+}

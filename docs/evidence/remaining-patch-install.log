@@ -1,0 +1,39 @@
+› Installing 6 other packages using npm
+› Using 58.0.21 instead of ~58.0.21 for expo, 58.0.28 instead of ~58.0.28 for expo-router, 58.0.11 instead of ~58.0.11 for expo-font, 58.0.18 instead of ~58.0.18 for expo-image, 58.0.14 instead of ~58.0.14 for expo-constants, and 58.0.15 instead of ~58.0.15 for expo-linking because these versions was explicitly provided. Packages excluded from dependency validation should be listed in expo.install.exclude in package.json. Learn more: https://docs.expo.dev/more/expo-cli/#configuring-dependency-validation
+> npm install --ignore-scripts
+
+added 13 packages, changed 19 packages, and audited 822 packages in 16s
+
+173 packages are looking for funding
+  run `npm fund` for details
+
+8 vulnerabilities (5 low, 3 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+› Running npx expo install under the updated expo version
+> expo install expo-router@58.0.28 expo-font@58.0.11 expo-image@58.0.18 expo-constants@58.0.14 expo-linking@58.0.15 -- --ignore-scripts
+› Installing 5 other packages using npm
+› Using 58.0.28 instead of ~58.0.28 for expo-router, 58.0.11 instead of ~58.0.11 for expo-font, 58.0.18 instead of ~58.0.18 for expo-image, 58.0.14 instead of ~58.0.14 for expo-constants, and 58.0.15 instead of ~58.0.15 for expo-linking because these versions was explicitly provided. Packages excluded from dependency validation should be listed in expo.install.exclude in package.json. Learn more: https://docs.expo.dev/more/expo-cli/#configuring-dependency-validation
+> npm install --ignore-scripts
+
+added 1 package, removed 3 packages, changed 5 packages, and audited 820 packages in 8s
+
+173 packages are looking for funding
+  run `npm fund` for details
+
+8 vulnerabilities (5 low, 3 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+› Added config plugin: expo-image

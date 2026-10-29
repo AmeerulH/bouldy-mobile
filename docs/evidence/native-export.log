@@ -1,0 +1,73 @@
+
+> bouldy-mobile@0.1.0 export:native
+> expo export --platform ios --platform android --output-dir dist-native
+
+Using src/app as the root directory for Expo Router.
+Starting Metro Bundler
+
+| (node:55778) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:55778) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:55778) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:55778) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:55778) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:55778) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+iOS Bundled 13263ms node_modules/expo-router/entry.js (1348 modules)
+Android Bundled 16298ms node_modules/expo-router/entry.js (1345 modules)
+
+› Assets (58):
+assets/fonts/BarlowCondensed-600.ttf (36KB)
+assets/fonts/BarlowCondensed-700.ttf (36KB)
+assets/fonts/BarlowCondensed-800.ttf (36KB)
+assets/fonts/Geist-400.ttf (32KB)
+assets/fonts/Geist-500.ttf (32KB)
+assets/fonts/Geist-600.ttf (32KB)
+assets/fonts/Geist-700.ttf (32KB)
+assets/fonts/Geist-800.ttf (32KB)
+assets/fonts/GeistMono-400.ttf (21KB)
+assets/source/brand/bolt-b.svg (440B)
+assets/source/route-holds/black.svg (1.5KB)
+assets/source/route-holds/blue-triangle.svg (1.5KB)
+assets/source/route-holds/blue.svg (1.5KB)
+assets/source/route-holds/brown.svg (1.4KB)
+assets/source/route-holds/green.svg (1.5KB)
+assets/source/route-holds/grey.svg (1.4KB)
+assets/source/route-holds/mint.svg (1.4KB)
+assets/source/route-holds/orange.svg (1.5KB)
+assets/source/route-holds/pink.svg (1.4KB)
+assets/source/route-holds/purple.svg (1.5KB)
+assets/source/route-holds/red.svg (1.6KB)
+assets/source/route-holds/teal.svg (1.4KB)
+assets/source/route-holds/transparent.svg (1.5KB)
+assets/source/route-holds/white.svg (1.5KB)
+assets/source/route-holds/yellow.svg (1.5KB)
+node_modules/expo-router/assets/arrow_down.png (9.5KB)
+node_modules/expo-router/assets/arrow_right.xml (307B)
+node_modules/expo-router/assets/checkmark.xml (312B)
+node_modules/expo-router/assets/error.png (469B)
+node_modules/expo-router/assets/file.png (138B)
+node_modules/expo-router/assets/forward.png (188B)
+node_modules/expo-router/assets/pkg.png (364B)
+node_modules/expo-router/assets/react-navigation/elements/back-icon-mask.png (653B)
+node_modules/expo-router/assets/react-navigation/elements/back-icon.png (8 variations | 359B)
+node_modules/expo-router/assets/react-navigation/elements/clear-icon.png (4 variations | 425B)
+node_modules/expo-router/assets/react-navigation/elements/close-icon.png (4 variations | 235B)
+node_modules/expo-router/assets/react-navigation/elements/search-icon.png (7 variations | 592B)
+node_modules/expo-router/assets/sitemap.png (465B)
+node_modules/expo-router/assets/unmatched.png (4.8KB)
+
+› ios bundles (1):
+_expo/static/js/ios/entry-b2dcf0ec6cbdd6d5ed0a158e2256195c.hbc (2.9MB)
+
+› android bundles (1):
+_expo/static/js/android/entry-442fd52510a78d3627b23c4391f91a36.hbc (2.8MB)
+
+› Files (1):
+metadata.json (6.5KB)
+
+Exported: dist-native

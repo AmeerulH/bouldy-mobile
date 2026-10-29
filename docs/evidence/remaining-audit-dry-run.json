@@ -1,0 +1,521 @@
+add @expo/cli 58.1.17
+add mime-db 1.52.0
+add negotiator 0.6.3
+add mime-types 2.1.35
+add @react-native/debugger-shell 0.88.1
+add @react-native/debugger-frontend 0.88.1
+add zod 3.25.76
+add semver 7.8.5
+add accepts 1.3.8
+add @react-native/js-polyfills 0.88.1
+add @react-native/dev-middleware 0.88.1
+add ws 7.5.13
+add @react-native/asset-utils 0.88.1
+add ws 8.22.0
+add @expo/ws-tunnel 2.0.1
+add expo-constants 58.0.14
+add expo-font 58.0.11
+add @expo/router-server 58.0.19
+change expo-modules-autolinking 58.0.15 => 58.0.16
+remove zod 3.25.76
+remove ws 8.22.0
+remove semver 7.8.5
+remove negotiator 0.6.3
+remove mime-types 2.1.35
+remove mime-db 1.52.0
+remove accepts 1.3.8
+remove @expo/ws-tunnel 2.0.1
+remove @expo/cli 58.1.16
+remove @expo/router-server 58.0.18
+change @expo/require-utils 58.0.4 => 58.0.5
+change @expo/prebuild-config 58.0.16 => 58.0.17
+add @react-native/normalize-colors 0.88.1
+change @expo/metro-config 58.0.18 => 58.0.19
+add @react-native/js-polyfills 0.88.1
+change @expo/local-build-cache-provider 58.0.8 => 58.0.9
+change @expo/inline-modules 0.2.7 => 0.2.8
+change @expo/image-utils 0.12.5 => 0.12.6
+change @expo/config-plugins 58.0.10 => 58.0.11
+change @expo/config 58.0.8 => 58.0.9
+{
+  "add": [
+    {
+      "name": "@expo/cli",
+      "version": "58.1.17",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli"
+    },
+    {
+      "name": "mime-db",
+      "version": "1.52.0",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/mime-db"
+    },
+    {
+      "name": "negotiator",
+      "version": "0.6.3",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/negotiator"
+    },
+    {
+      "name": "mime-types",
+      "version": "2.1.35",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/mime-types"
+    },
+    {
+      "name": "@react-native/debugger-shell",
+      "version": "0.88.1",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/@react-native/debugger-shell"
+    },
+    {
+      "name": "@react-native/debugger-frontend",
+      "version": "0.88.1",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/@react-native/debugger-frontend"
+    },
+    {
+      "name": "zod",
+      "version": "3.25.76",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/zod"
+    },
+    {
+      "name": "semver",
+      "version": "7.8.5",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/semver"
+    },
+    {
+      "name": "accepts",
+      "version": "1.3.8",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/accepts"
+    },
+    {
+      "name": "@react-native/js-polyfills",
+      "version": "0.88.1",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/@react-native/js-polyfills"
+    },
+    {
+      "name": "@react-native/dev-middleware",
+      "version": "0.88.1",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/@react-native/dev-middleware"
+    },
+    {
+      "name": "ws",
+      "version": "7.5.13",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/@react-native/dev-middleware/node_modules/ws"
+    },
+    {
+      "name": "@react-native/asset-utils",
+      "version": "0.88.1",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/@react-native/asset-utils"
+    },
+    {
+      "name": "ws",
+      "version": "8.22.0",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/ws"
+    },
+    {
+      "name": "@expo/ws-tunnel",
+      "version": "2.0.1",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/@expo/ws-tunnel"
+    },
+    {
+      "name": "expo-constants",
+      "version": "58.0.14",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/expo-constants"
+    },
+    {
+      "name": "expo-font",
+      "version": "58.0.11",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/expo-font"
+    },
+    {
+      "name": "@expo/router-server",
+      "version": "58.0.19",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/cli/node_modules/@expo/router-server"
+    },
+    {
+      "name": "@react-native/normalize-colors",
+      "version": "0.88.1",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/prebuild-config/node_modules/@react-native/normalize-colors"
+    },
+    {
+      "name": "@react-native/js-polyfills",
+      "version": "0.88.1",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/metro-config/node_modules/@react-native/js-polyfills"
+    }
+  ],
+  "added": 20,
+  "audited": 819,
+  "change": [
+    {
+      "from": {
+        "name": "expo-modules-autolinking",
+        "version": "58.0.15",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/expo-modules-autolinking"
+      },
+      "to": {
+        "name": "expo-modules-autolinking",
+        "version": "58.0.16",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/expo-modules-autolinking"
+      }
+    },
+    {
+      "from": {
+        "name": "@expo/require-utils",
+        "version": "58.0.4",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/require-utils"
+      },
+      "to": {
+        "name": "@expo/require-utils",
+        "version": "58.0.5",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/require-utils"
+      }
+    },
+    {
+      "from": {
+        "name": "@expo/prebuild-config",
+        "version": "58.0.16",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/prebuild-config"
+      },
+      "to": {
+        "name": "@expo/prebuild-config",
+        "version": "58.0.17",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/prebuild-config"
+      }
+    },
+    {
+      "from": {
+        "name": "@expo/metro-config",
+        "version": "58.0.18",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/metro-config"
+      },
+      "to": {
+        "name": "@expo/metro-config",
+        "version": "58.0.19",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/metro-config"
+      }
+    },
+    {
+      "from": {
+        "name": "@expo/local-build-cache-provider",
+        "version": "58.0.8",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/local-build-cache-provider"
+      },
+      "to": {
+        "name": "@expo/local-build-cache-provider",
+        "version": "58.0.9",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/local-build-cache-provider"
+      }
+    },
+    {
+      "from": {
+        "name": "@expo/inline-modules",
+        "version": "0.2.7",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/inline-modules"
+      },
+      "to": {
+        "name": "@expo/inline-modules",
+        "version": "0.2.8",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/inline-modules"
+      }
+    },
+    {
+      "from": {
+        "name": "@expo/image-utils",
+        "version": "0.12.5",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/image-utils"
+      },
+      "to": {
+        "name": "@expo/image-utils",
+        "version": "0.12.6",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/image-utils"
+      }
+    },
+    {
+      "from": {
+        "name": "@expo/config-plugins",
+        "version": "58.0.10",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/config-plugins"
+      },
+      "to": {
+        "name": "@expo/config-plugins",
+        "version": "58.0.11",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/config-plugins"
+      }
+    },
+    {
+      "from": {
+        "name": "@expo/config",
+        "version": "58.0.8",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/config"
+      },
+      "to": {
+        "name": "@expo/config",
+        "version": "58.0.9",
+        "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/@expo/config"
+      }
+    }
+  ],
+  "changed": 9,
+  "funding": 173,
+  "remove": [
+    {
+      "name": "zod",
+      "version": "3.25.76",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/expo/node_modules/zod"
+    },
+    {
+      "name": "ws",
+      "version": "8.22.0",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/expo/node_modules/ws"
+    },
+    {
+      "name": "semver",
+      "version": "7.8.5",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/expo/node_modules/semver"
+    },
+    {
+      "name": "negotiator",
+      "version": "0.6.3",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/expo/node_modules/negotiator"
+    },
+    {
+      "name": "mime-types",
+      "version": "2.1.35",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/expo/node_modules/mime-types"
+    },
+    {
+      "name": "mime-db",
+      "version": "1.52.0",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/expo/node_modules/mime-db"
+    },
+    {
+      "name": "accepts",
+      "version": "1.3.8",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/expo/node_modules/accepts"
+    },
+    {
+      "name": "@expo/ws-tunnel",
+      "version": "2.0.1",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/expo/node_modules/@expo/ws-tunnel"
+    },
+    {
+      "name": "@expo/cli",
+      "version": "58.1.16",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/expo/node_modules/@expo/cli"
+    },
+    {
+      "name": "@expo/router-server",
+      "version": "58.0.18",
+      "path": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server"
+    }
+  ],
+  "removed": 10,
+  "audit": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {
+      "@expo/cli": {
+        "name": "@expo/cli",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          "@expo/config",
+          "@expo/metro-config",
+          "@expo/prebuild-config",
+          "zod"
+        ],
+        "effects": [
+          "expo"
+        ],
+        "range": ">=0.19.0-canary-20240625-2333e70",
+        "nodes": [
+          ""
+        ],
+        "fixAvailable": {
+          "name": "expo",
+          "version": "51.0.39",
+          "isSemVerMajor": true
+        }
+      },
+      "@expo/config": {
+        "name": "@expo/config",
+        "severity": "low",
+        "isDirect": false,
+        "via": [
+          "deepmerge"
+        ],
+        "effects": [
+          "@expo/cli",
+          "@expo/local-build-cache-provider",
+          "@expo/metro-config",
+          "@expo/prebuild-config",
+          "expo"
+        ],
+        "range": ">=9.1.0-canary-20240628-1ba8152",
+        "nodes": [
+          "",
+          "node_modules/@expo/config"
+        ],
+        "fixAvailable": {
+          "name": "expo",
+          "version": "51.0.39",
+          "isSemVerMajor": true
+        }
+      },
+      "@expo/local-build-cache-provider": {
+        "name": "@expo/local-build-cache-provider",
+        "severity": "low",
+        "isDirect": false,
+        "via": [
+          "@expo/config"
+        ],
+        "effects": [
+          "expo"
+        ],
+        "range": "*",
+        "nodes": [
+          ""
+        ],
+        "fixAvailable": {
+          "name": "expo",
+          "version": "51.0.39",
+          "isSemVerMajor": true
+        }
+      },
+      "@expo/metro-config": {
+        "name": "@expo/metro-config",
+        "severity": "low",
+        "isDirect": false,
+        "via": [
+          "@expo/config"
+        ],
+        "effects": [],
+        "range": ">=0.19.0-canary-20240625-2333e70",
+        "nodes": [
+          "",
+          "node_modules/@expo/metro-config"
+        ],
+        "fixAvailable": true
+      },
+      "@expo/prebuild-config": {
+        "name": "@expo/prebuild-config",
+        "severity": "low",
+        "isDirect": false,
+        "via": [
+          "@expo/config"
+        ],
+        "effects": [],
+        "range": ">=7.1.0-canary-20240904-69100c1",
+        "nodes": [
+          ""
+        ],
+        "fixAvailable": true
+      },
+      "deepmerge": {
+        "name": "deepmerge",
+        "severity": "low",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1243505,
+            "name": "deepmerge",
+            "dependency": "deepmerge",
+            "title": "deepmerge mergeObject() allows prototype poisoning of returned objects",
+            "url": "https://github.com/advisories/GHSA-gcqx-w48m-w2h4",
+            "severity": "low",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+            },
+            "range": ">=4.2.0 <=4.3.1"
+          }
+        ],
+        "effects": [
+          "@expo/config"
+        ],
+        "range": ">=4.2.0",
+        "nodes": [
+          "node_modules/deepmerge"
+        ],
+        "fixAvailable": {
+          "name": "expo",
+          "version": "51.0.39",
+          "isSemVerMajor": true
+        }
+      },
+      "expo": {
+        "name": "expo",
+        "severity": "high",
+        "isDirect": true,
+        "via": [
+          "@expo/cli",
+          "@expo/config",
+          "@expo/local-build-cache-provider",
+          "@expo/metro-config"
+        ],
+        "effects": [],
+        "range": ">=52.0.0-canary-20240625-2333e70",
+        "nodes": [
+          "node_modules/expo"
+        ],
+        "fixAvailable": {
+          "name": "expo",
+          "version": "51.0.39",
+          "isSemVerMajor": true
+        }
+      },
+      "zod": {
+        "name": "zod",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1243066,
+            "name": "zod",
+            "dependency": "zod",
+            "title": "Zod can exhaust memory while validating oversized constrained collections",
+            "url": "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5",
+            "severity": "high",
+            "cwe": [
+              "CWE-770"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<4.6.6"
+          }
+        ],
+        "effects": [
+          "@expo/cli"
+        ],
+        "range": "<4.6.6",
+        "nodes": [
+          ""
+        ],
+        "fixAvailable": {
+          "name": "expo",
+          "version": "51.0.39",
+          "isSemVerMajor": true
+        }
+      }
+    },
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 5,
+        "moderate": 0,
+        "high": 3,
+        "critical": 0,
+        "total": 8
+      },
+      "dependencies": {
+        "prod": 566,
+        "dev": 232,
+        "optional": 6,
+        "peer": 23,
+        "peerOptional": 0,
+        "total": 818
+      }
+    }
+  }
+}

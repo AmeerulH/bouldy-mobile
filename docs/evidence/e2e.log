@@ -1,0 +1,19 @@
+
+> bouldy-mobile@0.1.0 test:e2e
+> playwright test
+
+
+Running 6 tests using 1 worker
+
+(node:55218) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55218) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/foundation.spec.mjs:7:1 › login, current visit +1, Send without increment, saved history and browser restart (17.7s)
+  ✓  2 tests/e2e/foundation.spec.mjs:17:1 › failed attempt stays in route sheet; failed note keeps draft and changes no counts (3.8s)
+  ✓  3 tests/e2e/foundation.spec.mjs:21:1 › sheet Back, close, Escape and cold-link dismissal preserve session destination (6.2s)
+  ✓  4 tests/e2e/foundation.spec.mjs:25:1 › partial and duplicate history retain uncertainty; expiry returns to Welcome (5.2s)
+  ✓  5 tests/e2e/foundation.spec.mjs:28:1 › final matched viewport captures of the foundation (25.1s)
+  ✓  6 tests/e2e/foundation.spec.mjs:36:1 › filters restore after a saved try and clear when authentication ends (4.4s)
+
+  6 passed (1.1m)

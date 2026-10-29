@@ -1,0 +1,417 @@
+[
+  {
+    "id": "welcome",
+    "path": "/welcome",
+    "url": "http://localhost:3100/welcome",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/welcome.png"
+  },
+  {
+    "id": "login",
+    "path": "/login",
+    "url": "http://localhost:3100/login",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/login.png"
+  },
+  {
+    "id": "login-error",
+    "path": "/login",
+    "url": "http://localhost:3100/login?error=Incorrect%20email%20or%20password",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/login-error.png"
+  },
+  {
+    "id": "signup",
+    "path": "/signup",
+    "url": "http://localhost:3100/signup",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/signup.png"
+  },
+  {
+    "id": "home",
+    "path": "/",
+    "url": "http://localhost:3100/",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/home.png"
+  },
+  {
+    "id": "gyms",
+    "path": "/gyms",
+    "url": "http://localhost:3100/gyms",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/gyms.png"
+  },
+  {
+    "id": "add-gym",
+    "path": "/gyms?sheet=add-gym",
+    "url": "http://localhost:3100/gyms?sheet=add-gym",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/add-gym.png"
+  },
+  {
+    "id": "gym",
+    "path": "/gyms/1",
+    "url": "http://localhost:3100/gyms/1",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/gym.png"
+  },
+  {
+    "id": "filters",
+    "path": "/sessions/3?sheet=route-filters",
+    "url": "http://localhost:3100/sessions/3?sheet=route-filters",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/filters.png"
+  },
+  {
+    "id": "add-route",
+    "path": "/gyms/1/routes/new",
+    "url": "http://localhost:3100/gyms/1/routes/new",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/add-route.png"
+  },
+  {
+    "id": "add-route-bottom",
+    "path": "/gyms/1/routes/new",
+    "url": "http://localhost:3100/gyms/1/routes/new",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/add-route-bottom.png"
+  },
+  {
+    "id": "edit-route",
+    "path": "/gyms/1/routes/11/edit",
+    "url": "http://localhost:3100/gyms/1/routes/11/edit",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/edit-route.png"
+  },
+  {
+    "id": "edit-route-bottom",
+    "path": "/gyms/1/routes/11/edit",
+    "url": "http://localhost:3100/gyms/1/routes/11/edit",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/edit-route-bottom.png"
+  },
+  {
+    "id": "session-add-route",
+    "path": "/sessions/3/routes/new",
+    "url": "http://localhost:3100/sessions/3/routes/new",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/session-add-route.png"
+  },
+  {
+    "id": "sessions",
+    "path": "/sessions",
+    "url": "http://localhost:3100/sessions",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/sessions.png"
+  },
+  {
+    "id": "sessions-bottom",
+    "path": "/sessions",
+    "url": "http://localhost:3100/sessions",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/sessions-bottom.png"
+  },
+  {
+    "id": "session",
+    "path": "/sessions/3",
+    "url": "http://localhost:3100/sessions/3",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/session.png"
+  },
+  {
+    "id": "session-bottom",
+    "path": "/sessions/3",
+    "url": "http://localhost:3100/sessions/3",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/session-bottom.png"
+  },
+  {
+    "id": "route-sheet",
+    "path": "/sessions/3?sheet=route-11",
+    "url": "http://localhost:3100/sessions/3?sheet=route-11",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/route-sheet.png"
+  },
+  {
+    "id": "flash-sheet",
+    "path": "/sessions/3?sheet=route-16",
+    "url": "http://localhost:3100/sessions/3?sheet=route-16",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/flash-sheet.png"
+  },
+  {
+    "id": "correction",
+    "path": "/sessions/3?sheet=route-11",
+    "url": "http://localhost:3100/sessions/3?sheet=route-11",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/correction.png"
+  },
+  {
+    "id": "note",
+    "path": "/sessions/3?sheet=route-11",
+    "url": "http://localhost:3100/sessions/3?sheet=route-11",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/note.png"
+  },
+  {
+    "id": "end-session",
+    "path": "/sessions/3?sheet=end-session",
+    "url": "http://localhost:3100/sessions/3?sheet=end-session",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/end-session.png"
+  },
+  {
+    "id": "completed-session",
+    "path": "/sessions/2",
+    "url": "http://localhost:3100/sessions/2",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/completed-session.png"
+  },
+  {
+    "id": "climbs",
+    "path": "/climbs",
+    "url": "http://localhost:3100/climbs",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/climbs.png"
+  },
+  {
+    "id": "climbs-gym",
+    "path": "/climbs",
+    "url": "http://localhost:3100/climbs?gym=1",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/climbs-gym.png"
+  },
+  {
+    "id": "history",
+    "path": "/routes/11",
+    "url": "http://localhost:3100/routes/11",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/history.png"
+  },
+  {
+    "id": "retired-history",
+    "path": "/routes/13",
+    "url": "http://localhost:3100/routes/13",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/retired-history.png"
+  },
+  {
+    "id": "profile",
+    "path": "/profile",
+    "url": "http://localhost:3100/profile",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/profile.png"
+  },
+  {
+    "id": "profile-bottom",
+    "path": "/profile",
+    "url": "http://localhost:3100/profile",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/profile-bottom.png"
+  },
+  {
+    "id": "explore",
+    "path": "/explore",
+    "url": "http://localhost:3100/explore",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/explore.png"
+  },
+  {
+    "id": "explore-bottom",
+    "path": "/explore",
+    "url": "http://localhost:3100/explore",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/explore-bottom.png"
+  },
+  {
+    "id": "edit-profile",
+    "path": "/profile/edit",
+    "url": "http://localhost:3100/profile/edit",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/edit-profile.png"
+  },
+  {
+    "id": "public-profile",
+    "path": "/profile/public",
+    "url": "http://localhost:3100/profile/public",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/public-profile.png"
+  },
+  {
+    "id": "privacy",
+    "path": "/profile/privacy",
+    "url": "http://localhost:3100/profile/privacy",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/privacy.png"
+  },
+  {
+    "id": "feed",
+    "path": "/explore/feed",
+    "url": "http://localhost:3100/explore/feed",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/feed.png"
+  },
+  {
+    "id": "climbers",
+    "path": "/explore/climbers",
+    "url": "http://localhost:3100/explore/climbers",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/climbers.png"
+  },
+  {
+    "id": "leaderboards",
+    "path": "/explore/leaderboards",
+    "url": "http://localhost:3100/explore/leaderboards",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/leaderboards.png"
+  },
+  {
+    "id": "challenges",
+    "path": "/explore/challenges",
+    "url": "http://localhost:3100/explore/challenges",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/challenges.png"
+  },
+  {
+    "id": "groups",
+    "path": "/explore/groups",
+    "url": "http://localhost:3100/explore/groups",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/groups.png"
+  },
+  {
+    "id": "beta",
+    "path": "/routes/11/beta",
+    "url": "http://localhost:3100/routes/11/beta",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/beta.png"
+  },
+  {
+    "id": "partial-history",
+    "path": "/routes/11",
+    "url": "http://localhost:3100/routes/11",
+    "viewport": "390x844",
+    "scenario": "partial",
+    "image": "docs/evidence/source-current/partial-history.png"
+  },
+  {
+    "id": "empty-climbs",
+    "path": "/climbs",
+    "url": "http://localhost:3100/climbs",
+    "viewport": "390x844",
+    "scenario": "empty",
+    "image": "docs/evidence/source-current/empty-climbs.png"
+  },
+  {
+    "id": "not-found",
+    "path": "/unknown-reference",
+    "url": "http://localhost:3100/unknown-reference",
+    "viewport": "390x844",
+    "scenario": "normal",
+    "image": "docs/evidence/source-current/not-found.png"
+  },
+  {
+    "id": "route-sheet",
+    "path": "/sessions/3?sheet=route-11",
+    "scenario": "normal",
+    "url": "http://localhost:3100/sessions/3?sheet=route-11",
+    "image": "docs/evidence/source-current/route-sheet.png"
+  },
+  {
+    "id": "flash-sheet",
+    "path": "/sessions/3?sheet=route-16",
+    "scenario": "normal",
+    "url": "http://localhost:3100/sessions/3?sheet=route-16",
+    "image": "docs/evidence/source-current/flash-sheet.png"
+  },
+  {
+    "id": "end-session",
+    "path": "/sessions/3?sheet=end-session",
+    "scenario": "normal",
+    "url": "http://localhost:3100/sessions/3?sheet=end-session",
+    "image": "docs/evidence/source-current/end-session.png"
+  },
+  {
+    "id": "partial-history",
+    "path": "/routes/11",
+    "scenario": "partial",
+    "url": "http://localhost:3100/routes/11",
+    "image": "docs/evidence/source-current/partial-history.png"
+  },
+  {
+    "id": "empty-home",
+    "path": "/",
+    "scenario": "empty",
+    "url": "http://localhost:3100/",
+    "image": "docs/evidence/source-current/empty-home.png"
+  },
+  {
+    "id": "unavailable-home",
+    "path": "/",
+    "scenario": "unavailable",
+    "url": "http://localhost:3100/",
+    "image": "docs/evidence/source-current/unavailable-home.png"
+  },
+  {
+    "id": "duplicate-session",
+    "path": "/sessions/3?sheet=route-11",
+    "scenario": "duplicate",
+    "url": "http://localhost:3100/sessions/3?sheet=route-11",
+    "image": "docs/evidence/source-current/duplicate-session.png"
+  },
+  {
+    "id": "attempt-error",
+    "path": "/sessions/3?sheet=route-11&error=Could%20not%20save%20this%20sample%20attempt.%20Try%20again.",
+    "scenario": "attempt-error",
+    "url": "http://localhost:3100/sessions/3?sheet=route-11&error=Could%20not%20save%20this%20sample%20attempt.%20Try%20again.",
+    "image": "docs/evidence/source-current/attempt-error.png"
+  },
+  {
+    "id": "expired",
+    "path": "/sessions/3",
+    "scenario": "expired",
+    "url": "http://localhost:3100/welcome",
+    "image": "docs/evidence/source-current/expired.png"
+  }
+]

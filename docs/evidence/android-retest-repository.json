@@ -1,0 +1,54 @@
+[
+  {
+    "revision": "37.3.6",
+    "channel": {
+      "ref": "channel-2"
+    },
+    "arch": "x64",
+    "url": "emulator-darwin_x64-16696583.zip",
+    "checksum": "15706ee161e274bce456aadc4b07a13a3909a160",
+    "checksumType": {
+      "type": "sha1"
+    },
+    "size": "494022416"
+  },
+  {
+    "revision": "37.3.6",
+    "channel": {
+      "ref": "channel-2"
+    },
+    "arch": "aarch64",
+    "url": "emulator-darwin_aarch64-16696583.zip",
+    "checksum": "c6c088cd7c0dd76f0216a4a7057e3e78c07d4039",
+    "checksumType": {
+      "type": "sha1"
+    },
+    "size": "424339082"
+  },
+  {
+    "revision": "37.2.12",
+    "channel": {
+      "ref": "channel-0"
+    },
+    "arch": "x64",
+    "url": "emulator-darwin_x64-16428233.zip",
+    "checksum": "0c08fc22f41f2e63976f5503d593f821ff11e30b",
+    "checksumType": {
+      "type": "sha1"
+    },
+    "size": "488731099"
+  },
+  {
+    "revision": "37.2.12",
+    "channel": {
+      "ref": "channel-0"
+    },
+    "arch": "aarch64",
+    "url": "emulator-darwin_aarch64-16428233.zip",
+    "checksum": "3af4fe44ce82b3d88ae5678a53735f27ad729c15",
+    "checksumType": {
+      "type": "sha1"
+    },
+    "size": "416112708"
+  }
+]

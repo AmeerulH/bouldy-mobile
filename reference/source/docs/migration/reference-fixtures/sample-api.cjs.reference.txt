@@ -1,0 +1,27 @@
+const http=require('node:http');
+const user={id:1,username:'sample-climber',email:'climber@example.test',current_grade:'V3'};
+const gyms=[{id:1,name:'Sample Boulder Club',location:'Kuala Lumpur'},{id:2,name:'Sample Climbing Lab',location:'Petaling Jaya'}];
+const route=(id,gym_id,route_name,grade,colour,wall,styles,status='active')=>({id,gym_id,route_name,grade,colour,wall,styles,status,setter:'Sample setter',set_date:'2026-10-01',retired_date:status==='retired'?'2026-10-21':null});
+let routes=[route(11,1,'The patient heel hook','V3','red','Slab',['Balance','Slab']),route(12,1,'A clean finish','V2','blue','Vertical',['Static']),route(13,1,'Old wall project','V4','green','Overhang',['Power'],'retired'),route(14,1,'Fresh wall','V4','green','Overhang',['Power']),route(15,1,'First steps','V1','yellow','Vertical',['Footwork']),route(16,1,'A little reach','V2','purple','Slab',['Balance']),route(17,1,'Keep the tension','V5','black','Overhang',['Core']),route(21,2,'The side pull','V3','orange','Vertical',['Static'])];
+let sessions=[{id:3,user_id:1,gym_id:1,session_date:'2026-10-24',duration_minutes:0,notes:null},{id:2,user_id:1,gym_id:1,session_date:'2026-10-20',duration_minutes:75,notes:null},{id:1,user_id:1,gym_id:2,session_date:'2026-09-28',duration_minutes:60,notes:null},{id:4,user_id:1,gym_id:1,session_date:'2026-10-13',duration_minutes:90,notes:null}];
+let attempts=[{id:31,session_id:3,route_id:11,num_attempts:2,result:'project',notes:'Keep the left heel high.'},{id:32,session_id:3,route_id:12,num_attempts:1,result:'flash',notes:null},{id:23,session_id:2,route_id:11,num_attempts:4,result:'project',notes:'Try the heel hook next visit.'},{id:24,session_id:2,route_id:15,num_attempts:2,result:'send',notes:null},{id:11,session_id:1,route_id:21,num_attempts:3,result:'send',notes:'Commit to the side pull.'},{id:41,session_id:4,route_id:13,num_attempts:3,result:'project',notes:'The route has since been retired.'}];
+let scenario='normal',writes=[],next=100;
+http.createServer(async(req,res)=>{let raw='';for await(const b of req)raw+=b;let data={};try{data=JSON.parse(raw||'{}')}catch{} const path=new URL(req.url,'http://localhost').pathname;
+const send=(code,value)=>{res.writeHead(code,{'content-type':'application/json'});res.end(JSON.stringify(value));};
+if(path==='/__control'){scenario=data.scenario??'normal';return send(200,{scenario});}
+if(path==='/__state')return send(200,{writes,attempts,sessions});
+if(path==='/auth/login')return send(200,{access_token:'walkthrough-sample',token_type:'bearer'});
+if(path==='/auth/register')return send(201,user);
+if(path==='/auth/me')return req.headers.authorization==='Bearer walkthrough-sample'?send(200,user):send(401,{detail:'Please sign in'});
+if(path==='/gyms/'){if(req.method==='POST'){const g={id:next++,...data};gyms.push(g);writes.push(path);return send(201,g);}return send(200,gyms);}
+if(/^\/gyms\/\d+$/.test(path))return send(200,gyms.find(g=>g.id===+path.split('/')[2]));
+if(/^\/gyms\/\d+\/routes$/.test(path))return send(200,routes.filter(r=>r.gym_id===+path.split('/')[2]));
+if(path==='/routes/'){if(req.method==='POST'){const r={id:next++,status:'active',retired_date:null,...data};routes.push(r);writes.push(path);return send(201,r);}return send(200,routes);}
+if(/^\/routes\/\d+$/.test(path)){const r=routes.find(r=>r.id===+path.split('/')[2]);if(!r)return send(404,{detail:'Route not found'});if(req.method==='PUT'){Object.assign(r,data);writes.push(path);}return send(200,r);}
+if(req.headers.authorization!=='Bearer walkthrough-sample')return send(401,{detail:'Please sign in'});
+if(path==='/sessions/'){if(req.method==='POST'){const s={id:next++,notes:null,...data};sessions.unshift(s);writes.push(path);return send(201,s);}if(scenario==='unavailable')return send(503,{detail:'Sample unavailable state'});return send(200,scenario==='empty'?[]:sessions);}
+if(/^\/sessions\/\d+$/.test(path)){const s=sessions.find(s=>s.id===+path.split('/')[2]);if(!s)return send(404,{detail:'Session not found'});if(req.method==='PUT'){Object.assign(s,data);writes.push(path);}return send(200,s);}
+if(/^\/sessions\/\d+\/attempts$/.test(path)){const id=+path.split('/')[2];if(req.method==='POST'){const a={id:next++,session_id:id,notes:null,...data};attempts.push(a);writes.push(path);return send(201,a);}if(scenario==='partial'&&id===2)return send(503,{detail:'Sample previous-visit failure'});return send(200,attempts.filter(a=>a.session_id===id));}
+if(/^\/attempts\/\d+$/.test(path)){const a=attempts.find(a=>a.id===+path.split('/')[2]);if(!a)return send(404,{detail:'Missing log'});if(req.method==='PATCH'){if(scenario==='note-error'&&'notes'in data)return send(503,{detail:'Could not save this sample note. Try again.'});Object.assign(a,data);writes.push(path);}return send(200,a);}
+send(404,{detail:'Unsupported sample endpoint'});
+}).listen(4010,'127.0.0.1',()=>console.log('Walkthrough sample API http://127.0.0.1:4010'));

@@ -1,0 +1,15 @@
+{"text": "", "content-desc": "Tools", "class": "android.widget.ImageView", "clickable": "false", "bounds": "[915,87][993,165]", "focused": "false", "password": "false"}
+{"text": "BACK FOR\nANOTHER TRY.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[72,22][768,228]", "focused": "false", "password": "false"}
+{"text": "Your projects, sends and small wins. All here.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[72,264][768,408]", "focused": "false", "password": "false"}
+{"text": "Enter your email and password.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[120,522][960,582]", "focused": "false", "password": "false"}
+{"text": "Email", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[72,696][1008,756]", "focused": "false", "password": "false"}
+{"text": "climber@example.test", "content-desc": "Email", "class": "android.widget.EditText", "clickable": "true", "bounds": "[72,774][1008,918]", "focused": "false", "password": "false"}
+{"text": "Password", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[72,966][1008,1026]", "focused": "false", "password": "false"}
+{"text": "[password hidden]", "content-desc": "Password", "class": "android.widget.EditText", "clickable": "true", "bounds": "[72,1044][1008,1188]", "focused": "true", "password": "true"}
+{"text": "", "content-desc": "busy", "class": "android.widget.Button", "clickable": "true", "bounds": "[72,1260][1008,1404]", "focused": "false", "password": "false"}
+{"text": "Log in", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[479,1302][602,1362]", "focused": "false", "password": "false"}
+{"text": "New to Bouldy?", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[304,1482][611,1542]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Sign up", "class": "android.view.View", "clickable": "true", "bounds": "[624,1482][776,1542]", "focused": "false", "password": "false"}
+{"text": "Sign up", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[624,1482][776,1542]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Meet Bouldy", "class": "android.view.View", "clickable": "true", "bounds": "[72,1620][1008,1668]", "focused": "false", "password": "false"}
+{"text": "Meet Bouldy", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[72,1620][1008,1668]", "focused": "false", "password": "false"}

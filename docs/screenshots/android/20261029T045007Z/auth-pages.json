@@ -1,0 +1,54 @@
+{
+  "scope": "Signed-out auth and original development brand route; raw Android viewport/scroll captures. No record writes.",
+  "states": [
+    {
+      "name": "welcome",
+      "scenario": "normal",
+      "route": "/welcome",
+      "frames": [
+        "welcome/01.png",
+        "welcome/02.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbouldy.\n\n\n\n\n\n\n\n\n\n\n\n\nONE MORE\nTRY.\nFrom your first attempt to that finally-sent feeling. Keep a little of every climb.\nStart your climbing journal\nStart your climbing journal\nAlready climbing? Log in\nAlready climbing? Log in\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbouldy.\n\n\n\n\n\n\n\n\n\n\n\n\nONE MORE\nTRY.\nFrom your first attempt to that finally-sent feeling. Keep a little of every climb.\nStart your climbing journal\nStart your climbing journal\nAlready climbing? Log in\nAlready climbing? Log in\n"
+    },
+    {
+      "name": "login",
+      "scenario": "normal",
+      "route": "/login",
+      "frames": [
+        "login/01.png",
+        "login/02.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbouldy.\nBACK FOR\nANOTHER TRY.\nYour projects, sends and small wins. All here.\n\n\n\nEmail\nEmail\nPassword\nPassword\nLog in\nLog in\nNew to Bouldy?\nSign up\nSign up\nMeet Bouldy\nMeet Bouldy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbouldy.\nBACK FOR\nANOTHER TRY.\nYour projects, sends and small wins. All here.\n\n\n\nEmail\nEmail\nPassword\nPassword\nLog in\nLog in\nNew to Bouldy?\nSign up\nSign up\nMeet Bouldy\nMeet Bouldy\n"
+    },
+    {
+      "name": "signup",
+      "scenario": "normal",
+      "route": "/signup",
+      "frames": [
+        "signup/01.png",
+        "signup/02.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbouldy.\nEVERY CLIMB.\nYOUR STORY.\nStart your journal. Find your next wall.\n\n\n\nUsername\nUsername\nEmail\nEmail\nPassword\nPassword\nCurrent grade\n(optional)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStart your journal. Find your next wall.\n\n\n\nUsername\nUsername\nEmail\nEmail\nPassword\nPassword\nCurrent grade\n(optional)\nV4\nCreate account\nCreate account\nAlready climbing with us?\nLog in\nLog in\n"
+    },
+    {
+      "name": "brand-preview",
+      "scenario": "normal",
+      "route": "/brand-preview",
+      "frames": [
+        "brand-preview/01.png",
+        "brand-preview/02.png",
+        "brand-preview/03.png",
+        "brand-preview/04.png",
+        "brand-preview/05.png"
+      ],
+      "bottomReached": true,
+      "visibleText": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbouldy.\nFIND OUR MARK.\nBolt B is now Bouldy\u2019s selected app mark. The others remain here as reference proposals.\n\n\n\n\n\n\n\nbouldy.\n\n\n\n\n\n\n\n\n\n\nA. Bolt B \u00b7 Selected\nA leaning B with bolt-hole counters. Compact, friendly and unmistakably climbing hardware.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbouldy.\n\n\n\n\n\n\n\n\n\n\nA. Bolt B \u00b7 Selected\nA leaning B with bolt-hole counters. Compact, friendly and unmistakably climbing hardware.\n\n\n\n\n\n\n\nbouldy.\n\n\n\n\n\n\n\n\n\n\nB. Crux\nA cut, angular B with a red finishing hold. Sharper, more athletic, more like a mark on climbing gear.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbouldy.\n\n\n\n\n\n\n\n\n\n\nB. Crux\nA cut, angular B with a red finishing hold. Sharper, more athletic, more like a mark on climbing gear.\n\n\n\n\n\n\n\nbouldy.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB. Crux\nA cut, angular B with a red finishing hold. Sharper, more athletic, more like a mark on climbing gear.\n\n\n\n\n\n\n\nbouldy.\n\n\n\n\n\n\n\n\n\n\nC. Three Moves\nThree holds, one upward sequence. An open, playful symbol for progress, attempt by attempt.\nPreview the welcome screen \u2192\nPreview the welcome screen \u2192\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB. Crux\nA cut, angular B with a red finishing hold. Sharper, more athletic, more like a mark on climbing gear.\n\n\n\n\n\n\n\nbouldy.\n\n\n\n\n\n\n\n\n\n\nC. Three Moves\nThree holds, one upward sequence. An open, playful symbol for progress, attempt by attempt.\nPreview the welcome screen \u2192\nPreview the welcome screen \u2192\n"
+    }
+  ],
+  "writesUnchanged": true,
+  "passed": true
+}

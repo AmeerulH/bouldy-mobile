@@ -1,0 +1,53 @@
+{"text": "", "content-desc": "Tools", "class": "android.widget.ImageView", "clickable": "false", "bounds": "[915,87][993,165]", "focused": "false", "password": "false"}
+{"text": "Sample journal \u00b7 local preview", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,96][1020,144]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Sessions", "class": "android.view.View", "clickable": "true", "bounds": "[60,188][1020,320]", "focused": "false", "password": "false"}
+{"text": "Sessions", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[144,224][327,284]", "focused": "false", "password": "false"}
+{"text": "Sends", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[120,339][224,186]", "focused": "false", "password": "false"}
+{"text": "Flashes", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[296,339][424,186]", "focused": "false", "password": "false"}
+{"text": "6 routes at Sample Boulder Club", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,339][657,438]", "focused": "false", "password": "false"}
+{"text": "ROUTE LOG", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,450][657,522]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "+ Add route", "class": "android.view.View", "clickable": "true", "bounds": "[693,390][1020,522]", "focused": "false", "password": "false"}
+{"text": "+ Add route", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[741,426][972,486]", "focused": "false", "password": "false"}
+{"text": "Grade, name or wall", "content-desc": "Search routes", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,582][717,714]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Filter", "class": "android.widget.Button", "clickable": "true", "bounds": "[741,582][1020,714]", "focused": "false", "password": "false"}
+{"text": "Filter", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[864,618][969,678]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "All", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,738][210,870]", "focused": "false", "password": "false"}
+{"text": "All", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[108,774][162,834]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "V1, 1 route", "class": "android.widget.Button", "clickable": "true", "bounds": "[228,738][394,870]", "focused": "false", "password": "false"}
+{"text": "V1", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[276,777][314,831]", "focused": "false", "password": "false"}
+{"text": "1", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[332,780][346,828]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "V2, 2 routes", "class": "android.widget.Button", "clickable": "true", "bounds": "[412,738][594,870]", "focused": "false", "password": "false"}
+{"text": "V2", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[460,777][505,831]", "focused": "false", "password": "false"}
+{"text": "2", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[523,780][546,828]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "V3, 1 route", "class": "android.widget.Button", "clickable": "true", "bounds": "[612,738][785,870]", "focused": "false", "password": "false"}
+{"text": "V3", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[660,777][705,831]", "focused": "false", "password": "false"}
+{"text": "1", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[723,780][737,828]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "V4, 1 route", "class": "android.widget.Button", "clickable": "true", "bounds": "[803,738][978,870]", "focused": "false", "password": "false"}
+{"text": "V4", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[851,777][898,831]", "focused": "false", "password": "false"}
+{"text": "1", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[916,780][930,828]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "V5, 1 route", "class": "android.widget.Button", "clickable": "true", "bounds": "[996,738][1020,870]", "focused": "false", "password": "false"}
+{"text": "V5", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[1044,777][1020,831]", "focused": "false", "password": "false"}
+{"text": "TODAY", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,933][222,1005]", "focused": "false", "password": "false"}
+{"text": "2 routes", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[877,945][1020,993]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "V3, The patient heel hook", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1032][845,1271]", "focused": "false", "password": "false"}
+{"text": "V3", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[216,1062][271,1122]", "focused": "false", "password": "false"}
+{"text": "red", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[295,1079][352,1127]", "focused": "false", "password": "false"}
+{"text": "The patient heel hook", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[216,1133][845,1193]", "focused": "false", "password": "false"}
+{"text": "Sent \u00b7 4 tries", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[216,1193][845,1241]", "focused": "false", "password": "false"}
+{"text": "Send", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[899,1128][990,1176]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "V2, A clean finish", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1274][787,1513]", "focused": "false", "password": "false"}
+{"text": "V2", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[216,1304][272,1364]", "focused": "false", "password": "false"}
+{"text": "blue", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[296,1321][371,1369]", "focused": "false", "password": "false"}
+{"text": "A clean finish", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[216,1375][787,1435]", "focused": "false", "password": "false"}
+{"text": "Flashed", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[216,1435][787,1483]", "focused": "false", "password": "false"}
+{"text": "\u26a1 Flash", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[841,1370][990,1418]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Home", "class": "android.view.View", "clickable": "true", "bounds": "[0,1594][216,1752]", "focused": "false", "password": "false"}
+{"text": "Home", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[62,1684][153,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Explore", "class": "android.view.View", "clickable": "true", "bounds": "[216,1594][432,1752]", "focused": "false", "password": "false"}
+{"text": "Explore", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[265,1684][382,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Sessions", "class": "android.view.View", "clickable": "true", "bounds": "[432,1594][648,1752]", "focused": "false", "password": "false"}
+{"text": "Sessions", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[470,1684][610,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Gyms", "class": "android.view.View", "clickable": "true", "bounds": "[648,1594][864,1752]", "focused": "false", "password": "false"}
+{"text": "Gyms", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[712,1684][800,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "You", "class": "android.view.View", "clickable": "true", "bounds": "[864,1594][1080,1752]", "focused": "false", "password": "false"}
+{"text": "You", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[944,1684][1000,1734]", "focused": "false", "password": "false"}

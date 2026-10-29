@@ -1,0 +1,286 @@
+{
+  "writes": [
+    "/attempts/31",
+    "/attempts/31",
+    "/attempts/31",
+    "/attempts/31",
+    "/attempts/31",
+    "/attempts/31",
+    "/gyms/",
+    "/routes/",
+    "/routes/101",
+    "/sessions/",
+    "/routes/",
+    "/sessions/102/attempts"
+  ],
+  "attempts": [
+    {
+      "id": 31,
+      "session_id": 3,
+      "route_id": 11,
+      "num_attempts": 4,
+      "result": "send",
+      "notes": "Android emulator note."
+    },
+    {
+      "id": 32,
+      "session_id": 3,
+      "route_id": 12,
+      "num_attempts": 1,
+      "result": "flash",
+      "notes": null
+    },
+    {
+      "id": 23,
+      "session_id": 2,
+      "route_id": 11,
+      "num_attempts": 4,
+      "result": "project",
+      "notes": "Try the heel hook next visit."
+    },
+    {
+      "id": 24,
+      "session_id": 2,
+      "route_id": 15,
+      "num_attempts": 2,
+      "result": "send",
+      "notes": null
+    },
+    {
+      "id": 11,
+      "session_id": 1,
+      "route_id": 21,
+      "num_attempts": 3,
+      "result": "send",
+      "notes": "Commit to the side pull."
+    },
+    {
+      "id": 41,
+      "session_id": 4,
+      "route_id": 13,
+      "num_attempts": 3,
+      "result": "project",
+      "notes": "The route has since been retired."
+    },
+    {
+      "id": 104,
+      "session_id": 102,
+      "notes": null,
+      "route_id": 103,
+      "num_attempts": 1,
+      "result": "flash"
+    }
+  ],
+  "sessions": [
+    {
+      "id": 102,
+      "notes": null,
+      "user_id": 1,
+      "gym_id": 100,
+      "session_date": "2026-10-29",
+      "duration_minutes": 0
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "gym_id": 1,
+      "session_date": "2026-10-24",
+      "duration_minutes": 0,
+      "notes": null
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "gym_id": 1,
+      "session_date": "2026-10-20",
+      "duration_minutes": 75,
+      "notes": null
+    },
+    {
+      "id": 1,
+      "user_id": 1,
+      "gym_id": 2,
+      "session_date": "2026-09-28",
+      "duration_minutes": 60,
+      "notes": null
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "gym_id": 1,
+      "session_date": "2026-10-13",
+      "duration_minutes": 90,
+      "notes": null
+    }
+  ],
+  "gyms": [
+    {
+      "id": 1,
+      "name": "Sample Boulder Club",
+      "location": "Kuala Lumpur"
+    },
+    {
+      "id": 2,
+      "name": "Sample Climbing Lab",
+      "location": "Petaling Jaya"
+    },
+    {
+      "id": 100,
+      "name": "Android Test Wall",
+      "location": "Local Emulator"
+    }
+  ],
+  "routes": [
+    {
+      "id": 11,
+      "gym_id": 1,
+      "route_name": "The patient heel hook",
+      "grade": "V3",
+      "colour": "red",
+      "wall": "Slab",
+      "styles": [
+        "Balance",
+        "Slab"
+      ],
+      "status": "active",
+      "setter": "Sample setter",
+      "set_date": "2026-10-01",
+      "retired_date": null
+    },
+    {
+      "id": 12,
+      "gym_id": 1,
+      "route_name": "A clean finish",
+      "grade": "V2",
+      "colour": "blue",
+      "wall": "Vertical",
+      "styles": [
+        "Static"
+      ],
+      "status": "active",
+      "setter": "Sample setter",
+      "set_date": "2026-10-01",
+      "retired_date": null
+    },
+    {
+      "id": 13,
+      "gym_id": 1,
+      "route_name": "Old wall project",
+      "grade": "V4",
+      "colour": "green",
+      "wall": "Overhang",
+      "styles": [
+        "Power"
+      ],
+      "status": "retired",
+      "setter": "Sample setter",
+      "set_date": "2026-10-01",
+      "retired_date": "2026-10-21"
+    },
+    {
+      "id": 14,
+      "gym_id": 1,
+      "route_name": "Fresh wall",
+      "grade": "V4",
+      "colour": "green",
+      "wall": "Overhang",
+      "styles": [
+        "Power"
+      ],
+      "status": "active",
+      "setter": "Sample setter",
+      "set_date": "2026-10-01",
+      "retired_date": null
+    },
+    {
+      "id": 15,
+      "gym_id": 1,
+      "route_name": "First steps",
+      "grade": "V1",
+      "colour": "yellow",
+      "wall": "Vertical",
+      "styles": [
+        "Footwork"
+      ],
+      "status": "active",
+      "setter": "Sample setter",
+      "set_date": "2026-10-01",
+      "retired_date": null
+    },
+    {
+      "id": 16,
+      "gym_id": 1,
+      "route_name": "A little reach",
+      "grade": "V2",
+      "colour": "purple",
+      "wall": "Slab",
+      "styles": [
+        "Balance"
+      ],
+      "status": "active",
+      "setter": "Sample setter",
+      "set_date": "2026-10-01",
+      "retired_date": null
+    },
+    {
+      "id": 17,
+      "gym_id": 1,
+      "route_name": "Keep the tension",
+      "grade": "V5",
+      "colour": "black",
+      "wall": "Overhang",
+      "styles": [
+        "Core"
+      ],
+      "status": "active",
+      "setter": "Sample setter",
+      "set_date": "2026-10-01",
+      "retired_date": null
+    },
+    {
+      "id": 21,
+      "gym_id": 2,
+      "route_name": "The side pull",
+      "grade": "V3",
+      "colour": "orange",
+      "wall": "Vertical",
+      "styles": [
+        "Static"
+      ],
+      "status": "active",
+      "setter": "Sample setter",
+      "set_date": "2026-10-01",
+      "retired_date": null
+    },
+    {
+      "id": 101,
+      "status": "active",
+      "retired_date": null,
+      "gym_id": 100,
+      "route_name": "Android Foothold Edited",
+      "grade": "3 dots",
+      "colour": "Green",
+      "wall": "",
+      "setter": "",
+      "set_date": "2026-10-29",
+      "styles": [
+        "Slab",
+        "Balance"
+      ]
+    },
+    {
+      "id": 103,
+      "status": "active",
+      "retired_date": null,
+      "gym_id": 100,
+      "route_name": "Session Blue",
+      "grade": "V2",
+      "colour": "Blue",
+      "wall": "",
+      "setter": "",
+      "set_date": "2026-10-29",
+      "styles": []
+    }
+  ],
+  "registrations": []
+}

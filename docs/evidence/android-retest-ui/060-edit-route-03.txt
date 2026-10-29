@@ -1,0 +1,55 @@
+{"text": "", "content-desc": "Tools", "class": "android.widget.ImageView", "clickable": "false", "bounds": "[915,87][993,165]", "focused": "false", "password": "false"}
+{"text": "Sample journal \u00b7 local preview", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,96][1020,144]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Android Test Wall", "class": "android.view.View", "clickable": "true", "bounds": "[60,188][1020,320]", "focused": "false", "password": "false"}
+{"text": "Android Test Wall", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[144,224][495,284]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Red", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[60,339][282,215]", "focused": "false", "password": "false"}
+{"text": "Red", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[137,339][205,188]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Blue", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[306,339][528,215]", "focused": "false", "password": "false"}
+{"text": "Blue", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[378,339][456,188]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Green", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[552,339][774,215]", "focused": "false", "password": "false"}
+{"text": "Green", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[611,339][714,188]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Yellow", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[798,339][1020,215]", "focused": "false", "password": "false"}
+{"text": "Yellow", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[852,339][965,188]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Orange", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[60,339][282,497]", "focused": "false", "password": "false"}
+{"text": "Orange", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[107,422][234,470]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Purple", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[306,339][528,497]", "focused": "false", "password": "false"}
+{"text": "Purple", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[361,422][473,470]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Pink", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[552,339][774,497]", "focused": "false", "password": "false"}
+{"text": "Pink", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[624,422][702,470]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Teal", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[798,339][1020,497]", "focused": "false", "password": "false"}
+{"text": "Teal", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[873,422][944,470]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Mint", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[60,521][282,779]", "focused": "false", "password": "false"}
+{"text": "Mint", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[132,704][210,752]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Black", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[306,521][528,779]", "focused": "false", "password": "false"}
+{"text": "Black", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[367,704][466,752]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "White", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[552,521][774,779]", "focused": "false", "password": "false"}
+{"text": "White", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[612,704][713,752]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Grey", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[798,521][1020,779]", "focused": "false", "password": "false"}
+{"text": "Grey", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[868,704][949,752]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Brown", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[60,803][282,1061]", "focused": "false", "password": "false"}
+{"text": "Brown", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[116,986][226,1034]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Transparent", "class": "android.widget.RadioButton", "clickable": "true", "bounds": "[306,803][528,1061]", "focused": "false", "password": "false"}
+{"text": "Transparent", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[321,986][513,1034]", "focused": "false", "password": "false"}
+{"text": "Wall / area", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1121][522,1181]", "focused": "false", "password": "false"}
+{"text": "Main style", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[558,1121][1020,1181]", "focused": "false", "password": "false"}
+{"text": "Optional", "content-desc": "Wall / area", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,1199][522,1343]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Main style, Slab", "class": "android.view.View", "clickable": "true", "bounds": "[558,1199][1020,1343]", "focused": "false", "password": "false"}
+{"text": "Slab", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[603,1235][702,1307]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Add more styles, +", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1430][1020,1557]", "focused": "false", "password": "false"}
+{"text": "Add more styles", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1466][386,1526]", "focused": "false", "password": "false"}
+{"text": "+", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[968,1460][1020,1532]", "focused": "false", "password": "false"}
+{"text": "Select as many as fit this route.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1562][1020,1557]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Slab", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,1646][216,1557]", "focused": "false", "password": "false"}
+{"text": "Slab", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,1673][177,1557]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Vertical", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[240,1646][453,1557]", "focused": "false", "password": "false"}
+{"text": "Vertical", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[279,1673][414,1557]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Overhang", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[477,1646][722,1557]", "focused": "false", "password": "false"}
+{"text": "Overhang", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[516,1673][683,1557]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Roof", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[746,1646][906,1557]", "focused": "false", "password": "false"}
+{"text": "Roof", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[785,1673][867,1557]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Crimps", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,1772][261,1557]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Slopers", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[285,1772][495,1557]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Pinches", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[519,1772][734,1557]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Jugs", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[758,1772][922,1557]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Save route", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1596][1020,1740]", "focused": "false", "password": "false"}
+{"text": "Save route", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[429,1638][651,1698]", "focused": "false", "password": "false"}

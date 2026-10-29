@@ -1,0 +1,56 @@
+
+> bouldy-mobile@0.1.0 test
+> node --test tests/*.test.mjs
+
+(node:53825) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/server/http.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ cookie login never returns bearer; SameSite/HttpOnly 30-day cookie (111.870291ms)
+✔ native login receives credential only without browser Origin/cookie (3.636ms)
+✔ cookie writes reject cross-origin, missing origin and non-JSON (2.29175ms)
+✔ +1 changes only today; Send adds no try; saved history totals seven (10.15625ms)
+✔ first try creates one aggregate project; genuine Flash has one try (15.558666ms)
+✔ stale IDs, duplicate logs, completed visits and unavailable lifetime history block writes (13.296458ms)
+✔ notes patch notes only; failed note retains supplied draft (5.531375ms)
+✔ failed attempt stays in affected sheet and never writes (3.159125ms)
+✔ expired identity returns 401 and clears cookie; resource errors remain distinct (1.451208ms)
+✔ adapter accepts no arbitrary proxy URL or unknown command (1.059625ms)
+✔ end session preserves positive-duration convention and journal destination (2.625083ms)
+✔ correction updates the aggregate without adding a try and completed correction is blocked (4.697292ms)
+✔ application boundary rejects a foreign session even if an upstream returns it; 403 does not clear login (3.870416ms)
+✔ JSON size bound is enforced without trusting Content-Length (2.918708ms)
+(node:53826) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/domain/journal-summary.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ four old plus two new tries remain separate and total six (0.561292ms)
+✔ duplicate records remain visible but cannot inflate a total (0.445167ms)
+✔ failed reads do not become empty visits or proof of no send (0.097375ms)
+✔ reset route IDs stay distinct regardless of grade or colour (0.076833ms)
+✔ empty and unavailable journals are different states (0.066458ms)
+(node:53827) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/domain/route-grades.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ V grades sort by number, with VB first (0.82575ms)
+✔ Font grades sort by number, letter, then plus (0.077542ms)
+✔ grades without a number sort alphabetically after numbered grades (7.059333ms)
+✔ grade keys ignore case and surrounding space (0.086292ms)
+✔ every search term must match somewhere (0.147541ms)
+(node:53828) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/features/session-state.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ sheet model separates four earlier tries from two today (0.64575ms)
+✔ unknown prior history never creates a project suggestion or Flash proof (0.085208ms)
+✔ duplicate current records remain ambiguous without picking a mutable record (0.083292ms)
+✔ retired completed visit retains recorded status and no live project flag (0.080792ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 235.566334

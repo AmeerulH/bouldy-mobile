@@ -1,0 +1,300 @@
+{
+  "device": "Nexus 5 profile / API31 ARM64 / 1080x1920 / Expo Go58.0.5",
+  "scope": "Real unedited Android emulator captures, synthetic local fixture; viewport scroll sections. Not source comparison or physical/release acceptance. Expo Go developer Tools overlay may be visible.",
+  "pages": [
+    {
+      "route": "/",
+      "frames": [
+        "home/01.png",
+        "home/02.png",
+        "home/03.png"
+      ],
+      "expected": [
+        "KEEP\nSHOWING UP."
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/sessions",
+      "frames": [
+        "sessions/01.png",
+        "sessions/02.png",
+        "sessions/03.png",
+        "sessions/04.png"
+      ],
+      "expected": [
+        "Every attempt has a place."
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/sessions/3",
+      "frames": [
+        "sessions-3/01.png",
+        "sessions-3/02.png",
+        "sessions-3/03.png",
+        "sessions-3/04.png",
+        "sessions-3/05.png"
+      ],
+      "expected": [
+        "Live session",
+        "2026-10-24"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/routes/11",
+      "frames": [
+        "routes-11/01.png",
+        "routes-11/02.png",
+        "routes-11/03.png"
+      ],
+      "expected": [
+        "YOUR ROUTE HISTORY",
+        "The patient heel hook"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/gyms",
+      "frames": [
+        "gyms/01.png",
+        "gyms/02.png"
+      ],
+      "expected": [
+        "Choose your wall.",
+        "ALL GYMS"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/gyms/1",
+      "frames": [
+        "gyms-1/01.png",
+        "gyms-1/02.png",
+        "gyms-1/03.png",
+        "gyms-1/04.png"
+      ],
+      "expected": [
+        "SAMPLE BOULDER CLUB",
+        "Kuala Lumpur"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/gyms/1/routes/new",
+      "frames": [
+        "gyms-1-routes-new/01.png",
+        "gyms-1-routes-new/02.png",
+        "gyms-1-routes-new/03.png",
+        "gyms-1-routes-new/04.png"
+      ],
+      "expected": [
+        "ADD A ROUTE",
+        "New route at Sample Boulder Club"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/gyms/1/routes/11/edit",
+      "frames": [
+        "gyms-1-routes-11-edit/01.png",
+        "gyms-1-routes-11-edit/02.png",
+        "gyms-1-routes-11-edit/03.png",
+        "gyms-1-routes-11-edit/04.png",
+        "gyms-1-routes-11-edit/05.png"
+      ],
+      "expected": [
+        "EDIT ROUTE",
+        "The patient heel hook"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/sessions/3/routes/new",
+      "frames": [
+        "sessions-3-routes-new/01.png",
+        "sessions-3-routes-new/02.png",
+        "sessions-3-routes-new/03.png",
+        "sessions-3-routes-new/04.png"
+      ],
+      "expected": [
+        "ADD A ROUTE",
+        "ready to log."
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/climbs",
+      "frames": [
+        "climbs/01.png",
+        "climbs/02.png"
+      ],
+      "expected": [
+        "Every route you've logged."
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/explore",
+      "frames": [
+        "explore/01.png",
+        "explore/02.png",
+        "explore/03.png"
+      ],
+      "expected": [
+        "Climb with others.",
+        "CLOSED FOR SETTING"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/explore/feed",
+      "frames": [
+        "explore-feed/01.png",
+        "explore-feed/02.png",
+        "explore-feed/03.png"
+      ],
+      "expected": [
+        "CLIMBERS' SESSIONS",
+        "Planned"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/explore/climbers",
+      "frames": [
+        "explore-climbers/01.png",
+        "explore-climbers/02.png",
+        "explore-climbers/03.png"
+      ],
+      "expected": [
+        "FIND CLIMBERS",
+        "Planned"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/explore/leaderboards",
+      "frames": [
+        "explore-leaderboards/01.png",
+        "explore-leaderboards/02.png",
+        "explore-leaderboards/03.png",
+        "explore-leaderboards/04.png"
+      ],
+      "expected": [
+        "LEADERBOARDS",
+        "Planned"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/explore/challenges",
+      "frames": [
+        "explore-challenges/01.png",
+        "explore-challenges/02.png",
+        "explore-challenges/03.png"
+      ],
+      "expected": [
+        "CHALLENGES",
+        "Planned"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/explore/groups",
+      "frames": [
+        "explore-groups/01.png",
+        "explore-groups/02.png",
+        "explore-groups/03.png"
+      ],
+      "expected": [
+        "GROUPS AND LEAGUES",
+        "Planned"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/profile",
+      "frames": [
+        "profile/01.png",
+        "profile/02.png",
+        "profile/03.png",
+        "profile/04.png"
+      ],
+      "expected": [
+        "Only you can see this page.",
+        "sample-climber"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/profile/edit",
+      "frames": [
+        "profile-edit/01.png",
+        "profile-edit/02.png",
+        "profile-edit/03.png"
+      ],
+      "expected": [
+        "EDIT PROFILE",
+        "Planned"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/profile/public",
+      "frames": [
+        "profile-public/01.png",
+        "profile-public/02.png",
+        "profile-public/03.png"
+      ],
+      "expected": [
+        "PUBLIC PROFILE",
+        "Planned"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/profile/privacy",
+      "frames": [
+        "profile-privacy/01.png",
+        "profile-privacy/02.png",
+        "profile-privacy/03.png"
+      ],
+      "expected": [
+        "PRIVACY",
+        "Planned"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/routes/11/beta",
+      "frames": [
+        "routes-11-beta/01.png",
+        "routes-11-beta/02.png",
+        "routes-11-beta/03.png"
+      ],
+      "expected": [
+        "BETA",
+        "The patient heel hook",
+        "Planned"
+      ],
+      "bottomReached": true
+    },
+    {
+      "route": "/history",
+      "frames": [
+        "history/01.png",
+        "history/02.png",
+        "history/03.png",
+        "history/04.png"
+      ],
+      "expected": [
+        "Every attempt has a place."
+      ],
+      "bottomReached": true
+    }
+  ],
+  "passed": false,
+  "error": "Expected page missing: /loading-preview"
+}

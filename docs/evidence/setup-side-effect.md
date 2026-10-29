@@ -1,0 +1,3 @@
+# Setup side effect — 28 October 2026
+
+Two npm commands started before the asynchronous target manifest writer finished. npm resolved the pre-existing `/Users/Ambassador/package.json`, rather than the intended target, and ran `install --package-lock-only --ignore-scripts` followed by `ci --ignore-scripts` there. The latter completed before the stop request. The home `package-lock.json` and `node_modules` were refreshed. No Bouldy source file was involved; the pre-existing home package manifest was not edited. The prior untracked home lockfile/install state was not captured, so no blind restoration or deletion was attempted. The user was informed during execution. Subsequent installs explicitly verified the target manifest. Preserve this note for review.

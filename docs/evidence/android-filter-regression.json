@@ -1,0 +1,14 @@
+{
+  "rootCause": "Native Clear all stores all-empty filters; restore effect used object presence instead of active values, dispatching SET_PARAMS on every fresh params object.",
+  "beforeNative": "android-retest-ui/083-no-match.xml (maximum update depth and branded error fallback)",
+  "fix": "Restore only saved filters with at least one non-empty value.",
+  "unitRed": "android-filter-regression-red.log: original implementation fails clear-all and clear-search cases",
+  "unitGreen": "android-filter-regression-green.log: four actual-hook effect harness cases pass",
+  "nativeAfter": [
+    "088-filter-clear-fixed.xml (no crash; cleared panel)",
+    "090-search-ready.xml (no active filter count)",
+    "091-search-no-match-fixed.xml (0 of 6, No routes match)",
+    "092-search-clear-fixed.xml (search cleared, normal browser retained)"
+  ],
+  "scope": "Effect/router harness plus native UI; not a full React renderer or deployed backend account test"
+}

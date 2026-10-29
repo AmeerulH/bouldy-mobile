@@ -1,0 +1,1 @@
+{"text": "Bouldy", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[448,925][633,996]", "focused": "false", "password": "false"}

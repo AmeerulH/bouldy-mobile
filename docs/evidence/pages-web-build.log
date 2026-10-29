@@ -1,0 +1,98 @@
+
+> bouldy-mobile@0.1.0 build
+> expo export --platform web --output-dir dist/pages-20261029/web
+
+Using src/app as the root directory for Expo Router.
+Starting Metro Bundler
+
+Server rendering is enabled. Learn more: https://docs.expo.dev/router/web/server-rendering/
+| (node:13413) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:13413) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:13413) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:13413) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:13413) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:13413) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Web Bundled 3430ms node_modules/expo-router/entry.js (1268 modules)
+λ Bundled 3548ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1497 modules)
+λ Bundled 199ms src/app/api/command+api.ts (5 modules)
+λ Bundled 5ms src/app/api/identity+api.ts (1 module)
+λ Bundled 4ms src/app/api/snapshot+api.ts (1 module)
+λ Bundled 26ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+
+› Assets (43):
+assets/fonts/BarlowCondensed-600.4cff15f6ad865e6e6c504cff84fea39b.ttf (36KB)
+assets/fonts/BarlowCondensed-700.3cf9e5d752a9a2ddb2f35ae5699879e2.ttf (36KB)
+assets/fonts/BarlowCondensed-800.b2a55f55c9ead8d20615fb35d4ffe12c.ttf (36KB)
+assets/fonts/Geist-400.f049497563dc07e2b6405b4a962b48e1.ttf (32KB)
+assets/fonts/Geist-500.abeb007cda2e298d17123d224afe92e2.ttf (32KB)
+assets/fonts/Geist-600.5a0cc592c98f8a6cc868ab7250c1bc1d.ttf (32KB)
+assets/fonts/Geist-700.86de62fb9db18500779d01e4cd5e0775.ttf (32KB)
+assets/fonts/Geist-800.ef6a4e4fd2e64f3de3d4d9c00a7d08d5.ttf (32KB)
+assets/fonts/GeistMono-400.a857fe9f310883750be0605cdda63f05.ttf (21KB)
+assets/source/brand/bolt-b.adfd8212a99da8d92f956c0fc6e9f983.svg (440B)
+assets/source/route-holds/black.624951c6b543acf00f49aeb7674c33dd.svg (1.5KB)
+assets/source/route-holds/blue-triangle.dea641ffeb496ffb07f34870b50edc31.svg (1.5KB)
+assets/source/route-holds/blue.ff79933ca2682e87849f20c75d1da664.svg (1.5KB)
+assets/source/route-holds/brown.8980e5d8920abedc098d4b746299f770.svg (1.4KB)
+assets/source/route-holds/green.66a028dac752a2d0c199cab2c7e911bb.svg (1.5KB)
+assets/source/route-holds/grey.79cc7b3af3afbd3c965cc4f4433a293f.svg (1.4KB)
+assets/source/route-holds/mint.18740e605abea9ce6cce791ec22189b4.svg (1.4KB)
+assets/source/route-holds/orange.507dba4905d36945dceed404faf8b39a.svg (1.5KB)
+assets/source/route-holds/pink.fd624ffc2bf3dc934d63740fd35e2148.svg (1.4KB)
+assets/source/route-holds/purple.49fbf997e2f2038c55be51efdd943058.svg (1.5KB)
+assets/source/route-holds/red.41e2f603b69dbc5500b83be809a64a97.svg (1.6KB)
+assets/source/route-holds/teal.d716e84ea47101a3bbe0076e2730c042.svg (1.4KB)
+assets/source/route-holds/transparent.8337f302ee7bdb05e9ca9b3accb60263.svg (1.5KB)
+assets/source/route-holds/white.3f2f05eacb82c4148daee01689aecdea.svg (1.5KB)
+assets/source/route-holds/yellow.74eb806472127872954a6274e5c3efb8.svg (1.5KB)
+node_modules/expo-router/assets/arrow_down.017bc6ba3fc25503e5eb5e53826d48a8.png (9.5KB)
+node_modules/expo-router/assets/error.d1ea1496f9057eb392d5bbf3732a61b7.png (469B)
+node_modules/expo-router/assets/file.19eeb73b9593a38f8e9f418337fc7d10.png (138B)
+node_modules/expo-router/assets/forward.d8b800c443b8972542883e0b9de2bdc6.png (188B)
+node_modules/expo-router/assets/pkg.ab19f4cbc543357183a20571f68380a3.png (364B)
+node_modules/expo-router/assets/react-navigation/elements/back-icon-mask.0a328cd9c1afd0afe8e3b1ec5165b1b4.png (653B)
+node_modules/expo-router/assets/react-navigation/elements/back-icon.35ba0eaec5a4f5ed12ca16fabeae451d.png (207B)
+node_modules/expo-router/assets/react-navigation/elements/clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55.png (4 variations | 425B)
+node_modules/expo-router/assets/react-navigation/elements/close-icon.808e1b1b9b53114ec2838071a7e6daa7.png (4 variations | 235B)
+node_modules/expo-router/assets/react-navigation/elements/search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png (928B)
+node_modules/expo-router/assets/sitemap.412dd9275b6b48ad28f5e3d81bb1f626.png (465B)
+node_modules/expo-router/assets/unmatched.20e71bdf79e3a97bf55fd9e164041578.png (4.8KB)
+
+› web bundles (21):
+_expo/server/render.js (2.6MB)
+_expo/server/render.js.map (3.5MB)
+_expo/static/css/global-e496f6a6d61672a2106fe1adf0001d6f.css (939B)
+_expo/static/js/web/__common-d74e6fd6dac139fa5296fbcfe9a9bb8b.js (891KB)
+_expo/static/js/web/__expo-metro-runtime-ed4c1cfa6193d76fc294130e42bd1916.js (3.5KB)
+_expo/static/js/web/_layout-59f5270ae7cb2fc9f36a1e5c1d936512.js (578B)
+_expo/static/js/web/_layout-8389868a580953185c5888f54dd82917.js (30KB)
+_expo/static/js/web/_layout-ff468f7d3e3bd65c721c8930b358dd0b.js (2KB)
+_expo/static/js/web/[id]-443305e66fa14d215eaa748557cedc4f.js (17KB)
+_expo/static/js/web/[id]-4c93156c0ebfa1d7243b5706693c1a6f.js (3.8KB)
+_expo/static/js/web/[id]-7ab5a8620d4184561656afb1ebf89dac.js (3.9KB)
+_expo/static/js/web/edit-7013a81663ea6b7ba1a79718606e652f.js (263B)
+_expo/static/js/web/entry-d5433a0f6aee3a4722ffea50b520b335.js (1.1MB)
+_expo/static/js/web/index-1e09546a08a579b53396ce2d1a498293.js (8.5KB)
+_expo/static/js/web/index-7334c8fd6ff0e4a3220a5cd1507c1817.js (4KB)
+_expo/static/js/web/index-e5551e3f9861c3f304f5300734c24a30.js (6.1KB)
+_expo/static/js/web/login-8e29b612d248e70c0423104cac12a859.js (2.6KB)
+_expo/static/js/web/new-42a3f7b0caea0448506d1b707531ae91.js (266B)
+_expo/static/js/web/new-88187fc665753a8b92674897c6232cbd.js (262B)
+_expo/static/js/web/signup-96d2b46c501307309e15e8057655a2f3.js (2.9KB)
+_expo/static/js/web/welcome-56fe8e95dd5734db9500092d7de1fb3b.js (2.5KB)
+
+› Files (1):
+_expo/routes.json (7.6KB)
+
+› API routes (3):
+/api/command (25KB) (source map (30KB))
+/api/identity (25KB) (source map (30KB))
+/api/snapshot (25KB) (source map (30KB))
+
+Exported: dist/pages-20261029/web

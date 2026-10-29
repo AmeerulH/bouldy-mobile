@@ -1,0 +1,24 @@
+{"text": "", "content-desc": "Dismiss V3 \u00b7 red", "class": "android.view.ViewGroup", "clickable": "true", "bounds": "[0,72][1080,1776]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "V3 \u00b7 red", "class": "android.view.ViewGroup", "clickable": "false", "bounds": "[0,276][1080,1776]", "focused": "false", "password": "false"}
+{"text": "V3 \u00b7 RED", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,354][888,426]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Close V3 \u00b7 red", "class": "android.widget.Button", "clickable": "true", "bounds": "[912,324][1044,456]", "focused": "false", "password": "false"}
+{"text": "The patient heel hook", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[264,489][1020,555]", "focused": "false", "password": "false"}
+{"text": "Slab \u00b7 Set by Sample setter", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[264,567][1020,627]", "focused": "false", "password": "false"}
+{"text": "Balance", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[90,690][230,738]", "focused": "false", "password": "false"}
+{"text": "Slab", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[308,690][386,738]", "focused": "false", "password": "false"}
+{"text": "Today", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,837][522,885]", "focused": "false", "password": "false"}
+{"text": "Earlier visits", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[558,837][1020,885]", "focused": "false", "password": "false"}
+{"text": "4", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,897][95,969]", "focused": "false", "password": "false"}
+{"text": "In progress", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[149,909][348,957]", "focused": "false", "password": "false"}
+{"text": "4", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[558,897][593,969]", "focused": "false", "password": "false"}
+{"text": "tries", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[611,925][691,973]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "+1 try", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1060][528,1204]", "focused": "false", "password": "false"}
+{"text": "+1 try", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[238,1102][351,1162]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Sent", "class": "android.widget.Button", "clickable": "true", "bounds": "[552,1060][1020,1204]", "focused": "false", "password": "false"}
+{"text": "Sent", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[738,1102][835,1162]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Correct this log", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1267][1020,1399]", "focused": "false", "password": "false"}
+{"text": "Correct this log", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1303][372,1363]", "focused": "false", "password": "false"}
+{"text": "Private note \u00b7 only you", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1486][1020,1534]", "focused": "false", "password": "false"}
+{"text": "Keep the left heel high.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1558][1020,1630]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Edit note", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1642][240,1774]", "focused": "false", "password": "false"}
+{"text": "Edit note", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1678][240,1738]", "focused": "false", "password": "false"}

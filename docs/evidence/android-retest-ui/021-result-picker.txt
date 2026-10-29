@@ -1,0 +1,2 @@
+{"text": "Send", "content-desc": "", "class": "android.widget.CheckedTextView", "clickable": "false", "bounds": "[75,763][1005,924]", "focused": "false", "password": "false"}
+{"text": "In progress", "content-desc": "", "class": "android.widget.CheckedTextView", "clickable": "false", "bounds": "[75,924][1005,1085]", "focused": "false", "password": "false"}

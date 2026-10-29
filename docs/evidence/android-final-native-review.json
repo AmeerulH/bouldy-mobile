@@ -1,0 +1,67 @@
+{
+  "checkedAt": "2026-10-29T05:24:27.782529+00:00",
+  "scope": "Actual Android API31 ARM64 Nexus5 profile, 1080x1920, Expo Go58.0.5, synthetic loopback fixtures; single-agent adb/UIAutomator authorised by user. Not standalone/release/physical or source-golden acceptance.",
+  "sourceRoutesCaptured": 27,
+  "productRoutesCaptured": 24,
+  "protectedRoutesSmokePassed": 21,
+  "gallery": "docs/screenshots/android/index.html",
+  "galleryManifest": "docs/screenshots/android/20261029T045007Z/gallery-manifest.json",
+  "screenshots": 195,
+  "groups": 59,
+  "recordWrites": 16,
+  "productionWrites": 0,
+  "checks": [
+    "Login required, synthetic login and Signup required/register-login",
+    "Home, session +1, Send, result correction, previous-visit preservation, first-lifetime Flash",
+    "Failed note preserves draft, background/Recents/resume preserves draft, explicit retry writes once",
+    "History total/visits and private note, standalone note sheet cancel without write",
+    "Completed session locks logging/corrections but allows note add/clear; empty note payload preserves source empty string",
+    "Add gym required/success; custom-grade green route with Slab/Balance; edit rename preserves metadata/attempts",
+    "Start session, add blue V2 route inside session, Flash one try, end with60 minutes",
+    "Filter blue one-of-six, Clear all stable; no-match search and Clear search stable",
+    "Fast header drag, hardware Back, uncovered history navigation, Explore-to-Sessions peer swipe",
+    "Empty Home/Sessions/Climbs/Gyms, unavailable, partial, duplicate, invalid resource, private-read error and explicit recovery",
+    "Logout to Welcome; foreground expired identity to Welcome; normal restored and signed back in on Home"
+  ],
+  "fixes": [
+    {
+      "file": "src/components/screen.tsx",
+      "issue": "Focus reset overwrote fragment scroll after attempt save",
+      "proof": "android-retest-anchor-regression.json"
+    },
+    {
+      "file": "src/components/style-select.tsx",
+      "issue": "Keyboard resurfaced after native style modal closed",
+      "proof": [
+        "android-retest-ui/054-style-retest-picker.png",
+        "android-retest-ui/055-style-retest-after.png"
+      ],
+      "observedAfter": "mInputShown=false; full viewport restored"
+    },
+    {
+      "file": "src/platform/route-filters.ts",
+      "issue": "Clear all/last search caused repeated SET_PARAMS and maximum update depth",
+      "proof": "android-filter-regression.json",
+      "regression": "Original fails2 harness cases; fixed passes4; native UI subsequently stable"
+    }
+  ],
+  "limits": [
+    "Fixture auth/me always returns sample identity, not real new-account persistence",
+    "All acceptance rows OPEN; native Main style sheet differs from source OS select and is unaccepted",
+    "No fresh browser/PWA or post-fix iOS runtime pass; prior iOS observations historical",
+    "No standalone/release binaries, physical device checks or approved two-account backend proof",
+    "No measured full visual/motion/reduced-motion/software-keyboard matrix",
+    "Always-animated catalogues cannot idle for UIAutomator: original failure preserved; raw framebuffer captures visually verified",
+    "Screenshots capture observed states, not proof every combination/interaction passed"
+  ],
+  "evidence": [
+    "android-retest-route-smoke-final.log",
+    "android-retest-auth.json",
+    "android-retest-read-error-retry.json",
+    "android-final-fixture-state.json",
+    "android-final-gallery-check.json",
+    "android-final-production-smoke.json",
+    "android-final-bundle-boundary.json",
+    "android-final-preservation.json"
+  ]
+}

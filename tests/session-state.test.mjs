@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {routeStates,statusText} from '../src/features/session-state.ts';
+const route={id:11,gym_id:1,route_name:'Project',grade:'V3',colour:'red',status:'active',wall:'Slab',setter:null,styles:[]};
+const session=id=>({id,user_id:1,gym_id:1,session_date:'2026-10-24',duration_minutes:0,notes:null});
+const attempt=(id,sid,n,result='project')=>({id,session_id:sid,route_id:11,num_attempts:n,result,notes:null});
+const journal=records=>({sessionsLoaded:true,records});
+const record=(id,attempts,loaded=true)=>({session:session(id),attempts,loaded});
+test('sheet model separates four earlier tries from two today',()=>{const today=attempt(31,3,2),j=journal([record(3,[today]),record(2,[attempt(23,2,4)])]);const state=routeStates([route],[today],j,3,false)[0];assert.equal(state.previous.total,4);assert.equal(state.attempt.num_attempts,2);assert.equal(state.project,true);assert.equal(statusText(state,false),'2 tries today');});
+test('unknown prior history never creates a project suggestion or Flash proof',()=>{const state=routeStates([route],[],journal([record(2,[],false)]),3,false)[0];assert.equal(state.project,false);assert.equal(state.previous.complete,false);assert.equal(state.previous.total,null);});
+test('duplicate current records remain ambiguous without picking a mutable record',()=>{const attempts=[attempt(31,3,2),attempt(32,3,3)];const state=routeStates([route],attempts,journal([record(3,attempts)]),3,false)[0];assert.equal(state.attempt,undefined);assert.equal(state.ambiguous,true);assert.equal(statusText(state,false),'Conflicting logs');});
+test('retired completed visit retains recorded status and no live project flag',()=>{const a=attempt(31,3,2,'send'),state=routeStates([{...route,status:'retired'}],[a],journal([record(3,[a])]),3,true)[0];assert.equal(state.project,false);assert.equal(statusText(state,true),'Sent · 2 tries · Retired');});

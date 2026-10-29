@@ -1,0 +1,459 @@
+# Bouldy — Master Product & Engineering Specification
+
+> **Living source of truth.** Update this document in the same change set as any user-visible flow, data contract, route, or architecture decision. If implementation and this specification disagree, fix one before merging.
+
+**Product:** Bouldy
+**Surface:** mobile-first web app, intentionally presented as a focused phone-sized experience on desktop
+**Frontend repository:** `AmeerulH/bouldy`
+**Backend service:** `https://bouldy-api.onrender.com`
+**Last updated:** 2026-10-03 (route browsing)
+
+**Read next:** [Frontend implementation map](./docs/FRONTEND_SPEC.md) · [Backend/API contract](./docs/BACKEND_SPEC.md) · [Design system](./DESIGN.md). `README.md` and `AGENTS.md` provide the first-contact reading order. This repository contains the frontend; the FastAPI backend is a separate codebase.
+
+## 1. Product in one minute
+
+Bouldy is a bouldering-session tracker for climbers, initially focused on the Malaysian gym scene. A climber chooses a gym, starts a session, records progress on routes, and looks back on their climbing history.
+
+**North star:** a Strava-like community for bouldering, rooted in a useful personal climbing log. Over time, climbers should be able to share sessions, follow friends, learn from route photos and beta videos, join gym/community challenges, and compare progress on meaningful leaderboards. Social proof must never replace accurate personal history: a self-reported send is not automatically a verified competition result. The feed, follows, challenges, leaderboards, and operator tools are **not built** in the current frontend or public API.
+
+The product is built around a practical bouldering constraint: routes are temporary. A gym resets walls often, but Bouldy must preserve a climber's historical attempts. Routes are therefore **retired**, never removed from history.
+
+### Core journey
+
+```mermaid
+flowchart LR
+  A[Sign up / log in] --> B[Browse or add a gym]
+  B --> C[Start a session]
+  C --> D[Browse active routes at that gym]
+  D --> E[Log attempts and result]
+  E --> F[End session]
+  F --> G[Review journal and progress]
+```
+
+### Product principles
+
+- **Mobile first, always.** The desktop browser keeps the same phone-oriented experience rather than becoming a separate dashboard. At wider widths, it remains a full-height, square-edged mobile canvas rather than a floating rounded card.
+- **Fast while standing below a wall.** The important action should take a few obvious taps, have a clear outcome, and never require reading a dense screen.
+- **History is durable.** Retired routes remain attached to past sessions and attempts.
+- **A gym's language comes first.** Grades are currently stored as the gym displays them. A future gym-level grading-system label should be free text, because local gyms use different systems.
+- **Progress before comparison.** Home summaries use real session and attempt data. No invented check-ins, badges, or totals. Future public metrics must disclose their scoring and verification level.
+- **Consent before social.** Future sharing, profiles, rankings, and media require privacy controls, moderation, and clear opt-in choices.
+
+## 2. Scope and roadmap
+
+### Implemented in the current frontend / published API
+
+- Account registration, login, logout, and current-user profile.
+- Gym list, gym creation, gym detail, route creation/editing, and session start from an existing gym.
+- User-owned session creation and history.
+- Route browsing, multi-style/colour route forms, and aggregated attempt logging.
+- Attempt count and outcome: `project`, `send`, `flash`, plus historic `zone` support. New Zone logging is gated on a competition-route flag that the public API does not yet expose.
+- Flash recognition: a confirmed first lifetime try is displayed with `⚡`; known earlier tries or unavailable history suppress new Flash logging in the frontend. Backend lifetime enforcement remains pending.
+- Local frontend additions: private route-note editing, an owner-only profile, session-level route history, project status, a searchable grade-grouped route browser, and the Climbs collection. Not deployed.
+- Route lifecycle support in the API: active versus retired routes.
+
+The current five-tab experience is **Home** (real-data summary), **Explore** (planned community hub, under construction), **Sessions** (featured latest visit, month-grouped journal, and the Climbs collection), **Gyms** (list, add, gym detail, routes) and **You** (owner profile). Explore and its sub-pages, plus profile editing, public profile, privacy and route beta, are honest "under construction" screens: they show intent and the blocking dependency, never sample climbers, scores or activity. `/history` redirects to `/sessions`. Authentication and these pages are built, but do not equate a passing build or OpenAPI route listing with a fresh authenticated production smoke test.
+
+### Product phases — direction, not delivery promises
+
+| Phase | User value | Current state / dependency |
+| --- | --- | --- |
+| 1. Personal log | Capture gym, route, attempts, sends/flashes; review durable history | Core frontend and API are present. Continue reliability, authorization, and usability verification. |
+| 2. Richer climbing context | Gym grading systems, felt grade, competition route/Zone, photos and beta videos | Planned. Needs backend fields, storage/media policy, and ownership decisions. |
+| 3. Social climbing | Optional public profile, follow graph, shareable session activity, comments/reactions and beta contributions | Planned. Needs privacy, consent, moderation, and new API contracts. |
+| 4. Challenges and leaderboards | Gym/community challenges and fair, explainable rankings | Planned. Needs scoring definitions, opt-in, time/reset boundaries, grade semantics, anti-abuse, and verification policy. |
+| 5. Gym/operator tools | Verified routes, setter/admin workflow, gym-managed competitions, potential B2B offering | Longer-term. Needs roles, permissions, audit trail, and an operator product design. |
+
+The product should not rush to a global rank based on incomparable gym grades or unchecked self-reported sends. A gym-local, time-bounded, transparent leaderboard is a possible first experiment, **not** a committed implementation.
+
+### Planned platform migration — 28 October 2026
+
+The user selected native/mobile-first delivery through a separate React Native + Expo application repository, with replacement web/PWA output from that same codebase. The [migration specification](./docs/REACT_NATIVE_MIGRATION_SPEC.md) requires one-for-one preservation of the current UI, flows, wording, screens and logic. This direction supersedes the earlier PWA-first delivery proposal; it does not implement any product-backlog features or change the current Next.js runtime. See the [parity register](./docs/migration/PARITY_REGISTER.md) and [agent handoff](./docs/migration/IMPLEMENTATION_HANDOFF.md). The source repo remains intact until verified replacement and retirement gates pass. No target repo or migration implementation has been created.
+
+### Planned backend contract — do not fake persistence
+
+These are intended features, but the current frontend must label them as unavailable or local-only until the API contract lands.
+
+| Feature | Needed durable data | Proposed owner | Status |
+| --- | --- | --- | --- |
+| Gym grading system | `Gym.grading_system: string` | Backend migration + gym schema | Planned; free text |
+| Perceived difficulty | `RouteAttempt.perceived_grade: string` or an explicitly session-scoped route-log field | Product/Backend decision required | Planned |
+| Route photo | media asset + `Route.photo_url` | Storage + backend | Future |
+| Beta video | media asset + `Route.beta_video_url` / separate beta model | Storage + backend | Future |
+| Grade conversion | gym-grade-to-reference-grade mapping | Product + backend | Future |
+
+**Important modelling decision pending:** the “felt like” grade belongs to the climber's experience of a route, so it should generally be attached to an attempt/session route log rather than the shared gym route. A final backend proposal must confirm this before implementation.
+
+## 3. Information architecture
+
+```mermaid
+flowchart TD
+  App[Bouldy app]
+  App --> Auth[Authentication]
+  App --> Home[Home]
+  App --> Explore[Explore - planned]
+  App --> Sessions[Sessions journal]
+  App --> Gyms[Gyms]
+  App --> You[You - owner profile]
+  Explore --> Planned[Feed, Find climbers, Leaderboards, Challenges, Groups - all planned]
+  You --> ProfilePlanned[Edit profile, Public profile, Privacy - planned]
+  Gyms --> RouteForm[Add or edit route - full-screen page]
+  Auth --> Login[Log in]
+  Auth --> Signup[Sign up]
+  Home --> SessionDetail[Session detail]
+  Sessions --> SessionDetail
+  Sessions <--> Climbs[Climbs - every logged route by gym and grade]
+  Climbs --> RouteHistory[Route history]
+  Gyms --> Start[Start a session]
+  Gyms --> AddGym[Add a gym]
+  Start --> SessionDetail
+  SessionDetail --> RouteLog[Route attempt log]
+```
+
+### Navigation
+
+| Destination | Purpose | Primary action |
+| --- | --- | --- |
+| Home (`/`) | A useful snapshot of actual climbing activity and a direct route into the next session. | Start a session |
+| Sessions (`/sessions`; `/history` redirects here) | Diary/journal of all owned sessions, grouped by month, newest first. A `Sessions | Climbs` switch sits at the top. | Open a session |
+| Climbs (`/climbs`, under the Sessions tab) | Every route the owner has logged, grouped by gym then grade, with best result, total tries and visits. | Open route history |
+| Gyms (`/gyms`) | Discover/add gyms, open a gym's routes, or start a session. | Open gym / Start a session |
+| Explore (`/explore`) | Planned community hub; currently an honest under-construction list. Sub-pages: `/explore/feed`, `/climbers`, `/leaderboards`, `/challenges`, `/groups`. | Read what is planned |
+| You (`/profile`) | Owner identity, grade, sessions and visited gyms; links to planned edit, public-profile and privacy screens; Log out. | Open journal / Log out |
+| Planned profile screens (`/profile/edit`, `/profile/public`, `/profile/privacy`) | Under construction. No live-looking controls. | None |
+| Route beta (`/routes/[id]/beta`) | Under construction; shows the real route header only. | None |
+| Route history (`/routes/[id]`) | Owner’s dated logs for a stable route ID, including retired routes. | Open source session / Edit private note |
+| Gym detail (`/gyms/[id]`) | Search, filter and browse active routes by grade, open one to edit it, add a route, and start a session. | Start a session / Add route |
+| Route form pages (`/gyms/[id]/routes/new`, `/gyms/[id]/routes/[routeId]/edit`, `/sessions/[id]/routes/new`) | Full-screen add or edit route form with a sticky Save bar; the bottom tab bar is hidden. | Save route |
+| Session detail (`/sessions/[id]`) | Record and review the routes attempted in one climbing visit. | Log route / End session |
+
+Gym route rows are compact links; tapping a row opens the edit form as its own full-screen page that slides in from the right, with a back chevron to the gym.
+
+**Route browsing (gym detail, session detail, Climbs).** Every long route list uses one shared browser instead of an endless list:
+
+- A sticky toolbar with search (grade, name, colour, wall, setter, style, gym) and a Filter button that opens a bottom sheet (progress, hold colour, wall, and gym on Climbs). The button shows how many filters are on.
+- A horizontal grade rail with a count per grade; tapping a grade shows only that grade.
+- Routes grouped by grade under headers such as `V3 · 12 routes · 4 sent`. Groups start collapsed when more than 12 routes are showing. Searching flattens the groups into one list sorted by grade.
+- Grades are free text per gym, so ordering is numeric-aware (`VB`, `V0`…`V10`; `6a`, `6a+`, `6b`), and grades with no number (colour circuits) sort alphabetically after numbered ones until gyms can define their grading system.
+- Filter state lives in the URL and is remembered per screen for the browser tab, so a server-action redirect keeps the climber's place.
+- Climbs groups by gym first, because grades only compare within one gym; tapping a gym drills into its grade groups.
+
+The authenticated app uses a fixed bottom navigation for **Home**, **Explore**, **Sessions**, **Gyms** and **You** (five equal tabs). `/profile` is the You tab and holds Log out; Home no longer carries a profile link or Log out. `/routes/[id]` history, session detail, gym detail and form pages are pushed screens with a sticky back header, not tabs.
+
+## 4. Screen specifications
+
+### Home
+
+**Job:** answer “what have I climbed recently, and what should I do next?”
+
+**Contents, in priority order:**
+
+1. Brand mark and personal greeting.
+2. Start-session CTA.
+3. Recent session card with gym, date, duration, and route outcomes when available.
+4. Period summary based only on fetched data: session count, gyms visited, sends, flashes.
+5. A short recent-activity list or empty state pointing to Gyms.
+
+**States:** loading skeleton; first-session empty state; partial data when a gym record is unavailable; API error with retry.
+
+### Gyms
+
+**Job:** make choosing a climbing venue simple and allow a user to add a missing venue.
+
+**Contents:**
+
+- Search/filter when the list becomes large (planned, not in the current page).
+- Gym name, location, and (once supported) free-text grading-system label.
+- One clear “Start session” action per gym.
+- “Add gym” opens a bottom sheet from the page header (URL `?sheet=add-gym`), keeping the list in view; validation and API errors reappear inside the reopened sheet.
+
+**Add gym fields:**
+
+- Name — required.
+- Location — required.
+- Grading system — free text; planned until the backend accepts it. Example: `Circuit colours`, `V-scale`, or `Gym-set scale`.
+
+**States:** no gyms; add-gym validation; submit loading within button; created confirmation; duplicate/API error.
+
+### Sessions journal
+
+**Job:** be a climber's readable diary, not a spreadsheet.
+
+**Contents:**
+
+- A `Sessions | Climbs` switch at the top; both views belong to the Sessions tab.
+- A featured latest-session board (a link into the session) with date, gym, duration/live status, route count, and an outcome strip for flashes, sends, in-progress routes, and active routes not yet tried. The board no longer lists every gym route.
+- A live session shows `Log route`; a completed one shows `Review session` and `Start a session`.
+- The journal below is grouped by month (sticky month headers with session and send counts). The three most recent months show first; `Show earlier months` reveals three more at a time.
+
+### Climbs collection
+
+**Job:** answer "what have I climbed, where, and at what grade?" without scrolling the whole journal.
+
+- Every route with at least one owned log, from complete journal data. Rows show hold, grade, colour, name, best result (Flash, Send, Zone, In progress), total tries and visit count, and link to route history. Retired routes stay and are labelled.
+- Grouped by gym, then grade, using the shared route browser. Progress filters: Flash, Sent, Project.
+- Partial journal loads show a warning; totals that cannot be trusted show as unavailable.
+
+**States:** no sessions; loading skeleton; missing gym fallback; API error with retry.
+
+### Start session
+
+**Job:** create a session without friction.
+
+**Flow:**
+
+1. Open Gyms.
+2. Select an existing gym, or add a missing gym.
+3. Create a new session for the authenticated user at that gym.
+4. Go directly to that session's route log.
+
+The backend derives session ownership from the JWT. The client must never rely on its visible `user_id` form field as authorization.
+
+### Session detail and route logging
+
+**Job:** record performance on routes at the chosen gym while climbing.
+
+**Contents:**
+
+- Session header: gym, date, live/completed state, final duration when ended, and an end-session action. Session notes exist in the API but are not editable in the current UI.
+- Active routes belonging to the session's gym; retired routes remain visible only in historic context.
+- Route metadata: gym grade, colour, wall, setter, and style tags when supplied.
+- Route styles can include technical styles and wall angles, such as `Slab`, `Vertical`, `Overhang`, `Roof`, `Crimps`, `Slopers`, `Dyno`, `Static`, and `Balance`.
+- `Log attempt` increments this session’s count. `Sent` completes an already logged route without adding a try; when no current log exists it records today’s successful first try as one send. Earlier visits stay unchanged. `⚡ Flash` is offered only when complete, unambiguous owned history confirms no prior tries. Corrections refresh the derived history. Backend concurrency and lifetime enforcement still need the BE work brief.
+- Zone is only shown for routes the backend identifies as competition routes. Historical zone results remain readable and correctable. The current API has no competition-route field, so the route form labels this classification as coming soon and the Zone action is absent for ordinary routes.
+- A flash displays `⚡ Flash` and should have exactly one recorded attempt.
+- Route notes are optional and private, saved independently through the existing attempt update API. They remain editable in completed sessions and route history; a failed save keeps the draft and does not undo the climb. Session-wide notes remain a separate field with no editor.
+- A live session lists the gym's active routes (plus retired routes already logged that visit) in the shared route browser. Routes logged this visit are pinned in a `Today` section above the grade groups.
+- Each route is a compact row (about 64px): hold, grade, colour, name and one status line (for example `2 tries today`, `Sent · 3 tries`, `Project · 4 tries before`, `Sent before`). A trailing `+1` button logs one more try without leaving the list. Tapping the row opens a route bottom sheet (`?sheet=route-<id>`) with today's and earlier counts, `+1 try`, `Sent` or `⚡ Flash`, Zone for competition routes, `Correct this log`, the private note (edited in place), and a link to route history.
+- Live progress filters are lifetime-based: `New to you` (never tried, the flash candidates), `Projects` (tried, not sent) and `Sent`.
+- A completed session is reviewed by what was logged: only that visit's routes, grouped by grade, with Flash, Sent and Project filters. Notes stay editable; logging and corrections are not offered.
+- Existing restrictions on correcting completed sessions remain. Logging and correction errors reopen the affected route sheet.
+- Project status uses complete owned session history and stable route IDs. Previous attempts and this session’s attempts stay separate.
+- Owner route history shows date, count, outcome, private note and source-session links. It is session-level; exact try/send times and same-date visit ordering are unknown. Failed reads and duplicate session-route records make affected totals unavailable rather than zero.
+
+**Route entry/edit:** Grade and hold colour lead; the colour chooser shows the matching local hold asset and a live grade preview. Main style and any number of additional styles are sent in the API's `styles[]` list. Route name sits below grade, colour, wall, and styles, immediately above setter. Existing active routes can be edited from `/gyms/[id]`. The palette currently includes red, blue, green, yellow, orange, purple, pink, teal, mint, black, white, grey, brown, and transparent holds.
+
+**Future fields:** user-perceived grade, photos, and beta videos. These remain visibly planned but must not look actionable until a backend contract exists.
+
+## 5. Data model and ownership
+
+```mermaid
+erDiagram
+  USER ||--o{ SESSION : owns
+  GYM ||--o{ SESSION : hosts
+  GYM ||--o{ ROUTE : has
+  SESSION ||--o{ ATTEMPT : contains
+  ROUTE ||--o{ ATTEMPT : records
+  USER {
+    int id
+    string username
+    string email
+    string current_grade
+  }
+  GYM {
+    int id
+    string name
+    string location
+    string grading_system "planned"
+  }
+  ROUTE {
+    int id
+    int gym_id
+    string route_name
+    string grade
+    string status
+    string[] styles
+  }
+  SESSION {
+    int id
+    int user_id
+    int gym_id
+    date session_date
+    int duration_minutes
+    string notes
+  }
+  ATTEMPT {
+    int id
+    int session_id
+    int route_id
+    int num_attempts
+    string result
+    string notes
+    string perceived_grade "planned"
+  }
+```
+
+### Current backend entities
+
+| Entity | Current fields used by the frontend | Ownership rule |
+| --- | --- | --- |
+| User | id, username, email, current grade | Authenticated profile only |
+| Gym | id, name, location | Public catalogue; write permissions need tightening before public launch |
+| Route | gym, name, grade, colour, wall, setter, set/retired dates, status, styles | Belongs to a gym; preserve retired records |
+| Session | user, gym, date, duration, notes | Only the authenticated owner can read/change it |
+| Attempt | session, route, number of attempts, result, notes | Must match both the session's owner and gym |
+
+### Attempt aggregation rule
+
+One route has one attempt record within a session. Repeated tries update its count/result rather than creating duplicate physical-try rows. A climber can correct that record afterwards, including reducing its count and restoring a one-attempt `flash`; corrections must never silently add another try.
+
+```mermaid
+sequenceDiagram
+  participant C as Climber
+  participant W as Bouldy web
+  participant A as API
+  C->>W: Try route, 1 attempt
+  W->>A: Create attempt (project)
+  C->>W: Try route again
+  W->>A: Update same attempt to 2
+  C->>W: Try route a third time
+  W->>A: Update same attempt to 3, project
+  C->>W: Mark it Sent
+  W->>A: Update same attempt to send (still 3 tries)
+```
+
+## 6. Frontend architecture
+
+### Technology
+
+- Next.js 16 App Router, React 19, TypeScript.
+- Tailwind CSS v4 with CSS custom-property tokens in `app/globals.css`.
+- Server Actions for mutations and HTTP-only cookie session storage.
+- `motion` for targeted interface motion.
+- Kokonut UI patterns are selectively adapted into the local `components/kokonutui/` directory; they must be reconciled with Bouldy's component vocabulary rather than copied indiscriminately.
+
+### Key locations
+
+| Concern | Location |
+| --- | --- |
+| Global tokens and interaction states | `app/globals.css` |
+| Canonical visual specification | `DESIGN.md` |
+| Design-system metadata and previews | `.impeccable/design.json` |
+| Reusable UI primitives | `components/ui/` |
+| Phone-sized app shell | `components/app-shell.tsx` |
+| Primary bottom navigation | `components/bottom-nav.tsx` |
+| Auth pages | `app/(auth)/login`, `app/(auth)/signup` |
+| Authenticated pages | `app/(app)/` |
+| Backend client and types | `lib/api.ts` |
+| Server Actions | `lib/actions.ts` |
+| HTTP-only session cookie helpers | `lib/session.ts` |
+
+### Frontend rules
+
+- Server Components fetch page data by default. Use client components only for browser state or interaction that cannot be a Server Action.
+- All network mutations show an in-control loading state; a click must feel acknowledged immediately.
+- Internal navigation shows an immediate full-screen loading state, while slow server-rendered routes have dedicated `loading.tsx` fallbacks. Form mutations keep their feedback inside the pressed button.
+- Loading design: `BouldyLoader` reuses local detailed hold SVGs in three indeterminate variants: ascent (full-screen), traverse (page status), and hold (compact/account status). Button spinners stay circular. No fake progress percentages or forced waiting times.
+- `PageSkeleton` matches Home, Sessions journal, Climbs, session detail (toolbar, grade rail and compact rows), Gyms, route forms, planned placeholder screens, login and signup. Each route has its own streaming fallback; History uses the Sessions fallback. Navigation displays the destination skeleton immediately and keeps the bottom navigation available. After eight seconds, loading states explain that data is still being fetched. Reduced-motion users see stationary holds. Skeleton geometry is decorative and hidden from assistive technology; status labels announce loading.
+- Development-only `/loading-preview` displays all three motifs and expandable skeleton examples. It returns not-found in production. These assets need no backend changes or external animation service.
+- **Long forms are pages, short tasks are sheets.** Add/edit route (many fields, colour grid) opens a full-screen page with a sticky Save bar and the tab bar hidden. Short tasks (add gym, a session route's log/correct/note, private note, end session, route filters) open in a bottom sheet. Neither expands inline within a list.
+- **No endless lists.** Route lists use the shared route browser (search, filter sheet, grade rail, collapsible grade groups); the session journal pages by month.
+- Sheet state lives in the URL as `?sheet=<id>`: opening pushes a history entry, so the browser or phone back gesture closes it; Escape, backdrop tap, the close button and a swipe down on the handle also close it. Server Actions reopen the sheet with an error by redirecting with the same `sheet` value, and close it on success by redirecting without it. Sheet and form-error redirects replace the history entry. The sheet is a native `<dialog>` capped at the 430px canvas.
+- Pushed pages slide in from the right (260ms) and back out to the right; tabs keep the shorter horizontal slide. Back is an explicit parent link, not `history.back()`, so it is deterministic after saves and redirects.
+- **Snackbars vs inline messages.** Two separate components. A *snackbar* (`components/ui/snackbar.tsx`) is for passing success confirmations ("Route added to this gym.", "Gym added", "Route updated", "Route log corrected", "Private note saved"): it floats over the top of the 430px canvas, never moves page content, auto-dismisses after 5 seconds, and dismisses on tap anywhere on it. Server Actions send it as `?notice=`; `SnackbarHost` (mounted once in the app shell) shows it and removes `notice` from the URL so refresh or Back does not replay it. Client code calls `showSnackbar(message)`. An *inline message* (`FeedbackMessage`) is for errors, validation and partial-data warnings the climber must act on: it sits in the page flow beside what failed and stays until fixed. Never show a success as an inline banner, and never show an error as a snackbar.
+- Every interactive element has visible keyboard focus, touch-friendly targets, disabled/loading states, and a useful error message.
+- Use genuine fetched values in summaries. Show a good empty state rather than a made-up metric.
+- Do not add a desktop dashboard layout. At widths above 430px, preserve the focused mobile shell.
+- Respect `prefers-reduced-motion`.
+
+### Design system
+
+- `DESIGN.md` is the normative visual specification for future pages and components. Its creative north star is “The Climber’s Logbook.” Update it and `.impeccable/design.json` whenever foundational tokens, typography, motion, or shared component contracts change.
+- Restrained light product surface with a dark performance panel and a selectable accent colour.
+- `Barlow Condensed` is reserved for high-emphasis display headings; `Geist` carries controls, labels, data, and body copy.
+- Cards are purposeful information groups, not generic containers. Corners stay compact (12–16px) and button loading is local to the pressed button.
+- Motion is purposeful: 150–250ms for pressed states, list updates, and state transitions. No choreographed page-load sequence.
+- Shared visual behavior belongs in `components/ui/`. Page files retain data fetching, authorization, aggregation, and form composition; they must not duplicate button, field, feedback-message, or section-heading contracts.
+- Storybook 10 uses the official `@storybook/nextjs-vite` framework with Docs and Accessibility addons. Run `npm run storybook` for the local library or `npm run build-storybook` for the static build. Current stories cover BrandWordmark, AuthHeading, RouteHold, RouteMark, RouteForm add/edit states, buttons, submit buttons, fields, feedback messages, section headings, loaders, all page skeletons, and bottom navigation. Extract SessionSummary, SessionListItem, RouteCard, ResultBadge, ExpandableFormSection, EmptyState, and ErrorState before adding their stories.
+
+## 7. Backend architecture and API contract
+
+### Technology
+
+- FastAPI, SQLAlchemy 2, Alembic; PostgreSQL on Neon; JWT bearer authentication with PyJWT and Argon2 password hashing were identified in an earlier backend-source review. This frontend checkout does not include that backend source, so reverify those implementation details before backend changes.
+- The Render API and its OpenAPI schema were reachable on 2026-10-01.
+
+### Current endpoint families
+
+| Domain | Endpoints used or expected |
+| --- | --- |
+| Auth | `POST /auth/register`, `POST /auth/login`, `GET /auth/me` |
+| Gyms | `GET /gyms/`, `POST /gyms/`, `GET/PUT/DELETE /gyms/{gym_id}` |
+| Routes | `GET /routes/`, `POST /routes/`, route detail/update/delete, retire route; `GET /gyms/{gym_id}/routes` lists gym routes |
+| Sessions | owned list/create/detail/update/delete under `/sessions/` |
+| Attempts | create/list nested under `/sessions/{session_id}/attempts`, detail/update/delete under `/attempts/{attempt_id}` |
+
+### Security and validation expectations
+
+- Authenticate session and attempt operations with a bearer token.
+- Resolve the actual user server-side from JWT `sub`; do not trust a body `user_id`.
+- When logging an attempt, validate that the session belongs to the current user, the route exists, and the route belongs to the session's gym.
+- Retiring a route changes availability, not historical integrity.
+- Before public launch, require appropriate authenticated/admin permissions for gym and route writes.
+
+### Required changes before future features are enabled
+
+1. Add a free-text gym grading-system field via an Alembic migration, Pydantic schemas, CRUD, and gym create/update responses.
+2. Agree whether perceived grade belongs on `Attempt` (recommended) or a separate session-route log; add it end-to-end with migration, schema, validation, and API documentation.
+3. Select storage, ownership, moderation, file-size, and deletion rules before accepting route photos or beta videos.
+4. Document all new OpenAPI contracts and update `lib/api.ts` in the frontend at the same time.
+5. Add `Route.is_competition: boolean` to create, update, and response schemas (plus the database model and migration). Only then enable the competition-route control in `RouteForm`; Zone appears only when the saved route carries this flag. Keep existing `zone` attempts readable during rollout.
+6. If the primary style must survive a backend reorder of `styles[]`, add a dedicated `primary_style` field. Until then the first returned style is used as the editor's main style.
+7. Social profiles, feed, follows, reactions, challenges, and leaderboards have no current API contract. Specify privacy/visibility, moderation, scoring, gym/reset scope, verification and abuse controls before schema design. See [Backend spec](./docs/BACKEND_SPEC.md).
+
+## 8. Acceptance criteria for the current product slice
+
+A signed-in user can:
+
+1. Open Home and understand their real recent climbing activity.
+2. Browse all gyms and create one if it is missing.
+3. Select a gym and start a session.
+4. See the gym's active routes and their available style/grade metadata.
+5. Log a route outcome and number of attempts, including a one-attempt flash.
+6. End the session and find it in the Sessions journal.
+7. Return to Home and see the new session reflected in the summary.
+
+## 9. Quality checklist
+
+- [ ] No console errors, hydration warnings, or broken links.
+- [ ] All forms have loading, success, validation, and backend-error states.
+- [ ] Every primary action is reachable by keyboard and usable on touch.
+- [ ] Mobile 320–430px and desktop-contained views are inspected.
+- [ ] Build, lint, and relevant data-flow smoke tests pass.
+- [ ] No fake values in product summaries.
+- [ ] API additions are implemented and documented before dependent UI is marked live.
+- [ ] This specification is updated with the same change.
+
+## 10. Change log
+
+### Brand and motion update (17 September 2026)
+
+- Bolt B (`public/brand/bolt-b.svg`) is the selected Bouldy app mark. It is now the lockup symbol, browser/app icon (`app/icon.svg`), Home and auth identity. Crux and Three Moves remain archived proposals for reference.
+- Login and signup use the Bouldy lockup and detailed hold artwork; Home uses the same identity with a compact personal greeting and “Keep showing up” heading above real session data.
+- The surrounding viewport uses the same background as the mobile canvas; gray desktop gutters are removed. The mobile layout remains constrained to 430px on wide screens.
+- `/welcome` is the public landing experience for unauthenticated visits to `/`, with signup and login links. It never forces a timed delay. An authenticated visitor still opens their Home journal at `/`. Logout returns to `/welcome`; Login links back through “Meet Bouldy”.
+- If a stale browser cookie reaches an app route but fails the server-side user/session check, that route also redirects to `/welcome`. Session-required Server Actions follow the same rule.
+- The authenticated route-group layout validates the session with `/auth/me` before rendering Home, Sessions, session detail, History, Gyms, or development-only authenticated previews. The proxy provides the fast missing-cookie redirect; the layout is the authoritative stale/invalid-token guard. Protected page content and bottom navigation never render for an unauthorized visitor.
+- Unknown URLs render a branded mobile 404 with a direct route back to `/`. The proxy only intercepts known protected sections, allowing genuine missing pages to reach this recovery screen. The `/` destination resolves to the journal for authenticated users and `/welcome` for unauthenticated users.
+- Page navigation uses a 220ms directional slide. Horizontal swipes between the five primary tabs require at least 90px and predominantly horizontal movement. Forms, controls, screen-edge gestures and session-detail pages do not initiate tab swipes. Bottom tabs remain the accessible alternative. Reduced-motion disables navigation motion and simplifies the welcome artwork entrance.
+- Logo proposals are standalone vectors under `public/brand/proposals/`: `bolt-b.svg` (A), `crux.svg` (B), `three-moves.svg` (C). Bolt B is selected and used as the app icon; the others remain archived alternatives. Development-only `/brand-preview` displays them at multiple sizes. Both design preview routes are available only in development and return not-found in production.
+
+| Date | Decision |
+| --- | --- |
+| 2026-09-13 | Established this document as the required living master spec. |
+| 2026-09-13 | Gym grading systems will be free-text initially; conversion/mapping is a later feature. |
+| 2026-09-13 | Perceived grade is product-approved but needs a durable backend model before it is enabled. |
+| 2026-09-13 | Photos and beta videos are future functionality pending media/storage design. |
+| 2026-09-13 | Implemented the Direction B route-log visual system: expressive route-colour markers, native grades, styles, attempt counts, and flash recognition. |
+| 2026-09-13 | Implemented functional gym creation and route creation flows against the existing API contract; grading-system, perceived-grade, photo, and beta-video fields remain clearly marked as backend-dependent. |
+| 2026-09-13 | Rebuilt the Sessions tab as the expressive session board: real latest-session stats, colour-matched local SVG hold assets, route-state cards, a live Log route action, and a compact complete journal beneath. |
+| 2026-09-13 | Replaced flat route markers with individually exported, detailed SVG hold assets across the full route-colour vocabulary; blue routes also support the triangle/arete hold variant. |
+| 2026-09-17 | Replaced the floating rounded desktop shell with a full-height square-edged mobile canvas and added immediate navigation overlays, route loading fallbacks, and button-level retry feedback for slow API paths. |
+| 2026-09-30 | Separated try counting from sending; moved grade and hold colour ahead of route name; added live colour preview, expanded hold palette, multi-style route entry, and a gym route editor. Zone now waits for a persisted competition-route flag. |
+| 2026-09-17 | Added three animated bouldering-hold loaders, six page-specific skeletons, destination-aware navigation feedback, slow-request messaging, reduced-motion support and a local loading-design preview. |
+| 2026-09-19 | Established “The Climber’s Logbook” as the canonical design system in `DESIGN.md` and `.impeccable/design.json`; extracted shared button, field, feedback, and section-heading primitives as the foundation for future Storybook coverage. |
+| 2026-09-19 | Installed Storybook 10 with the Next.js Vite framework, Docs and Accessibility addons; added initial stories for Bouldy's reusable primitives, brand, climbing assets, navigation, loaders, and page skeletons. |
+| 2026-10-03 | Mobile-native flows (local, uncommitted, not deployed): route add/edit became full-screen pages with a sticky Save bar; add gym, route-log correction, private notes and end session moved into bottom sheets with URL-synced state; bottom navigation became Home, Explore, Sessions, Gyms, You (reverses the earlier no-fourth-tab rule); Home lost its Profile and Log out links; added under-construction Explore, profile and route-beta screens. No new backend contract; planned screens show no data. |
+| 2026-10-03 | Route browsing (local, uncommitted, not deployed): shared route browser with search, filter sheet, grade rail and collapsible grade groups on gym detail, live session and session review; compact session rows with a quick `+1` and a route sheet for Sent/Flash, correction, note and history; completed sessions show only that visit's routes; new `/climbs` collection grouped by gym then grade behind a `Sessions | Climbs` switch; session journal grouped by month with stepped paging. Uses existing route, session and attempt contracts only. |
+| 2026-10-03 | Snackbars (local, uncommitted, not deployed): success confirmations moved from inline green banners (which pushed the page down) to a top-floating, tap-to-dismiss snackbar; `FeedbackMessage` is now inline errors and warnings only. No backend change. |
+| 2026-10-01 | Clarified Bouldy's Strava-like north star and phased social/leaderboard direction; added separate frontend and backend first-contact specs with live-versus-planned boundaries. |

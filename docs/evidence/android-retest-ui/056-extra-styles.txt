@@ -1,0 +1,55 @@
+{"text": "", "content-desc": "Tools", "class": "android.widget.ImageView", "clickable": "false", "bounds": "[915,87][993,165]", "focused": "false", "password": "false"}
+{"text": "Sample journal \u00b7 local preview", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,96][1020,144]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Android Test Wall", "class": "android.view.View", "clickable": "true", "bounds": "[60,188][1020,320]", "focused": "false", "password": "false"}
+{"text": "Android Test Wall", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[144,224][495,284]", "focused": "false", "password": "false"}
+{"text": "Wall / area", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,339][522,267]", "focused": "false", "password": "false"}
+{"text": "Main style", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[558,339][1020,267]", "focused": "false", "password": "false"}
+{"text": "Optional", "content-desc": "Wall / area", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,339][522,429]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Main style, Slab", "class": "android.view.View", "clickable": "true", "bounds": "[558,339][1020,429]", "focused": "false", "password": "false"}
+{"text": "Slab", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[603,339][702,393]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Add more styles, +", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,516][1020,648]", "focused": "false", "password": "false"}
+{"text": "Add more styles", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,552][386,612]", "focused": "false", "password": "false"}
+{"text": "+", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[968,546][1020,618]", "focused": "false", "password": "false"}
+{"text": "Select as many as fit this route.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,648][1020,696]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Slab", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,732][216,834]", "focused": "false", "password": "false"}
+{"text": "Slab", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,759][177,807]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Vertical", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[240,732][453,834]", "focused": "false", "password": "false"}
+{"text": "Vertical", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[279,759][414,807]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Overhang", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[477,732][722,834]", "focused": "false", "password": "false"}
+{"text": "Overhang", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[516,759][683,807]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Roof", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[746,732][906,834]", "focused": "false", "password": "false"}
+{"text": "Roof", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[785,759][867,807]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Crimps", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,858][261,960]", "focused": "false", "password": "false"}
+{"text": "Crimps", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,885][222,933]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Slopers", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[285,858][495,960]", "focused": "false", "password": "false"}
+{"text": "Slopers", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[324,885][456,933]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Pinches", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[519,858][734,960]", "focused": "false", "password": "false"}
+{"text": "Pinches", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[558,885][695,933]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Jugs", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[758,858][922,960]", "focused": "false", "password": "false"}
+{"text": "Jugs", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[797,885][883,933]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Pockets", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,984][279,1086]", "focused": "false", "password": "false"}
+{"text": "Pockets", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,1011][240,1059]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Dyno", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[303,984][469,1086]", "focused": "false", "password": "false"}
+{"text": "Dyno", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[342,1011][430,1059]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Deadpoint", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[493,984][751,1086]", "focused": "false", "password": "false"}
+{"text": "Deadpoint", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[532,1011][712,1059]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Static", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[775,984][956,1086]", "focused": "false", "password": "false"}
+{"text": "Static", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[814,1011][917,1059]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Coordination", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,1110][360,1212]", "focused": "false", "password": "false"}
+{"text": "Coordination", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,1137][321,1185]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Compression", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[384,1110][689,1212]", "focused": "false", "password": "false"}
+{"text": "Compression", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[423,1137][650,1185]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Balance", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[713,1110][931,1212]", "focused": "false", "password": "false"}
+{"text": "Balance", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[752,1137][892,1185]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Mantle", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,1236][259,1338]", "focused": "false", "password": "false"}
+{"text": "Mantle", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,1263][220,1311]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Heel Hook", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[283,1236][539,1338]", "focused": "false", "password": "false"}
+{"text": "Heel Hook", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[322,1263][500,1311]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Toe Hook", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[563,1236][802,1338]", "focused": "false", "password": "false"}
+{"text": "Toe Hook", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[602,1263][763,1311]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Gaston", "class": "android.widget.CheckBox", "clickable": "true", "bounds": "[60,1362][262,1464]", "focused": "false", "password": "false"}
+{"text": "Gaston", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[99,1389][223,1437]", "focused": "false", "password": "false"}
+{"text": "Route name", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1638][1020,1557]", "focused": "false", "password": "false"}
+{"text": "e.g. Red Horizon", "content-desc": "Route name", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,1716][1020,1557]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Add route", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1596][1020,1740]", "focused": "false", "password": "false"}
+{"text": "Add route", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[439,1638][641,1698]", "focused": "false", "password": "false"}

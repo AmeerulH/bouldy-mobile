@@ -1,0 +1,2 @@
+@AGENTS.md
+@MASTER_SPEC.md

@@ -1,0 +1,11 @@
+{"text": "", "content-desc": "Dismiss Add a gym", "class": "android.view.ViewGroup", "clickable": "true", "bounds": "[0,72][1080,1776]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Add a gym", "class": "android.view.ViewGroup", "clickable": "false", "bounds": "[0,654][1080,1776]", "focused": "false", "password": "false"}
+{"text": "ADD A GYM", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,732][888,804]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Close Add a gym", "class": "android.widget.Button", "clickable": "true", "bounds": "[912,702][1044,834]", "focused": "false", "password": "false"}
+{"text": "Gym name", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,852][1020,912]", "focused": "false", "password": "false"}
+{"text": "e.g. Bump Bouldering", "content-desc": "Gym name", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,930][1020,1074]", "focused": "false", "password": "false"}
+{"text": "Location", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1122][1020,1182]", "focused": "false", "password": "false"}
+{"text": "e.g. Petaling Jaya", "content-desc": "Location", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,1200][1020,1344]", "focused": "false", "password": "false"}
+{"text": "Coming soon: each gym will be able to label its grading system in its own words.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1392][1020,1512]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Add gym", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1560][1020,1704]", "focused": "false", "password": "false"}
+{"text": "Add gym", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[450,1602][630,1662]", "focused": "false", "password": "false"}

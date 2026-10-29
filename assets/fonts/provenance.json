@@ -1,0 +1,113 @@
+[
+  {
+    "asset": "Geist-400.ttf",
+    "family": "Geist",
+    "weight": 400,
+    "source": "22a5144ee8d83bca-s.p.woff2",
+    "sourceSha256": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608",
+    "sha256": "12b1f5fa6b5babbc898827573a93b75422c125c1337e5da696b8f132a586780c",
+    "derivation": "WOFF2 decompressed, variable weight instantiated without glyph redesign",
+    "nativeIdentityFix": {
+      "previousSha256": "8a8b6396b152ac0a662b356e9a63b5d0d164139e7b1c429cf4b1b9e0795f7bf1",
+      "postscriptName": "Geist-Regular",
+      "change": "name table only; every non-name/non-head table verified unchanged",
+      "preservedAt": "reference/fonts-before-coretext-identity-fix/Geist-400.ttf"
+    }
+  },
+  {
+    "asset": "Geist-500.ttf",
+    "family": "Geist",
+    "weight": 500,
+    "source": "22a5144ee8d83bca-s.p.woff2",
+    "sourceSha256": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608",
+    "sha256": "4e274a111d6e0883f82a1f0731c412c7e810528c8a4d176d65da7eccdc376661",
+    "derivation": "WOFF2 decompressed, variable weight instantiated without glyph redesign",
+    "nativeIdentityFix": {
+      "previousSha256": "9ce1aa03106c9e662c7892006f41d849e7642908cd32126e4f8107baf6451a0e",
+      "postscriptName": "Geist-Medium",
+      "change": "name table only; every non-name/non-head table verified unchanged",
+      "preservedAt": "reference/fonts-before-coretext-identity-fix/Geist-500.ttf"
+    }
+  },
+  {
+    "asset": "Geist-600.ttf",
+    "family": "Geist",
+    "weight": 600,
+    "source": "22a5144ee8d83bca-s.p.woff2",
+    "sourceSha256": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608",
+    "sha256": "514e9c8a9bb752cbe85181b2c6b420d3dbcbaf09f3585e4e93b8ceb369a0f82b",
+    "derivation": "WOFF2 decompressed, variable weight instantiated without glyph redesign",
+    "nativeIdentityFix": {
+      "previousSha256": "1e879601e872a38f1916f948b6acbc8681a159011eb46b9dd71ae043c1e3e8bc",
+      "postscriptName": "Geist-SemiBold",
+      "change": "name table only; every non-name/non-head table verified unchanged",
+      "preservedAt": "reference/fonts-before-coretext-identity-fix/Geist-600.ttf"
+    }
+  },
+  {
+    "asset": "Geist-700.ttf",
+    "family": "Geist",
+    "weight": 700,
+    "source": "22a5144ee8d83bca-s.p.woff2",
+    "sourceSha256": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608",
+    "sha256": "9364a31817d7b22ee4f0c3c06e15d4d7f22aed08234b494f133e57cdceb6ae96",
+    "derivation": "WOFF2 decompressed, variable weight instantiated without glyph redesign",
+    "nativeIdentityFix": {
+      "previousSha256": "7e0c4ecd623547fb49e03463beffd7becf0c2dd6e561ef2e8ba81b24aab0d292",
+      "postscriptName": "Geist-Bold",
+      "change": "name table only; every non-name/non-head table verified unchanged",
+      "preservedAt": "reference/fonts-before-coretext-identity-fix/Geist-700.ttf"
+    }
+  },
+  {
+    "asset": "Geist-800.ttf",
+    "family": "Geist",
+    "weight": 800,
+    "source": "22a5144ee8d83bca-s.p.woff2",
+    "sourceSha256": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608",
+    "sha256": "8467f5e4dea02565c6224b9a1d7b569c652644a83de64cbe7dfffa596c1af344",
+    "derivation": "WOFF2 decompressed, variable weight instantiated without glyph redesign",
+    "nativeIdentityFix": {
+      "previousSha256": "9d88de9c0c32eeab0c6646cafeafe11a9decabd4d85e6966eabbce8902decb23",
+      "postscriptName": "Geist-ExtraBold",
+      "change": "name table only; every non-name/non-head table verified unchanged",
+      "preservedAt": "reference/fonts-before-coretext-identity-fix/Geist-800.ttf"
+    }
+  },
+  {
+    "asset": "GeistMono-400.ttf",
+    "family": "Geist Mono",
+    "weight": 400,
+    "source": "7d4881bb7e1bf84d-s.p.woff2",
+    "sourceSha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b",
+    "sha256": "8d06faada8cfb99f5831347e3c0aafad85f0637fddc41b71808e6d48ea308a86",
+    "derivation": "WOFF2 decompressed, variable weight instantiated without glyph redesign"
+  },
+  {
+    "asset": "BarlowCondensed-600.ttf",
+    "family": "Barlow Condensed",
+    "weight": 600,
+    "source": "5fb5c05ff73c0616-s.p.woff2",
+    "sourceSha256": "5bc49d41f32810a114765314392332ce2acae2276635eee265a50319a12c1b49",
+    "sha256": "e66b4523045a3a95fd46ea992db1f03fdb4be1f800aadb543a6b4bda63369c9a",
+    "derivation": "WOFF2 decompressed, variable weight instantiated without glyph redesign"
+  },
+  {
+    "asset": "BarlowCondensed-700.ttf",
+    "family": "Barlow Condensed",
+    "weight": 700,
+    "source": "437e5f23c97e320c-s.p.woff2",
+    "sourceSha256": "e3e520cb7468f2efd60bc2ce96694567c3312f4ef414fffbe605e3ad146b24e6",
+    "sha256": "167f6fd3dccefe8564086ec7d6ad2ac90e859ef3651c6a75429cd6f8a923371e",
+    "derivation": "WOFF2 decompressed, variable weight instantiated without glyph redesign"
+  },
+  {
+    "asset": "BarlowCondensed-800.ttf",
+    "family": "Barlow Condensed",
+    "weight": 800,
+    "source": "79f0f365efbf4f90-s.p.woff2",
+    "sourceSha256": "89eec21b1a1d6fd579d3e3c518901c5a6e3579e0e7a4f8b2f17b1473117bc30d",
+    "sha256": "53e0b979030250a176f0d40be6d9a7ee5b1a05359131c4702ee4dd77e165d94b",
+    "derivation": "WOFF2 decompressed, variable weight instantiated without glyph redesign"
+  }
+]

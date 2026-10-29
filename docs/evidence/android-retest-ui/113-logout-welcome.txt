@@ -1,0 +1,8 @@
+{"text": "", "content-desc": "Tools", "class": "android.widget.ImageView", "clickable": "false", "bounds": "[915,87][993,165]", "focused": "false", "password": "false"}
+{"text": "bouldy.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[177,84][417,180]", "focused": "false", "password": "false"}
+{"text": "ONE MORE\nTRY.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[72,774][1008,1098]", "focused": "false", "password": "false"}
+{"text": "From your first attempt to that finally-sent feeling. Keep a little of every climb.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[72,1146][822,1362]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Start your climbing journal", "class": "android.widget.Button", "clickable": "true", "bounds": "[72,1506][1008,1662]", "focused": "false", "password": "false"}
+{"text": "Start your climbing journal", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[266,1554][815,1614]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Already climbing? Log in", "class": "android.view.View", "clickable": "true", "bounds": "[72,1698][1008,1776]", "focused": "false", "password": "false"}
+{"text": "Already climbing? Log in", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[72,1734][1008,1776]", "focused": "false", "password": "false"}

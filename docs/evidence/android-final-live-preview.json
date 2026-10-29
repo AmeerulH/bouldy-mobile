@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-29T05:25:22.900242+00:00",
+  "ports": {
+    "4010": {
+      "status": 200
+    },
+    "8081": {
+      "status": 200
+    }
+  },
+  "temporary8083Stopped": true,
+  "device": "device",
+  "bootCompleted": "1",
+  "android": "12",
+  "expoGo": "versionName=58.0.5",
+  "lastObservedScreen": "Signed in Home, docs/evidence/android-retest-ui/136-final-home.png",
+  "scope": "Last UI observation before fresh exports; current listeners/adb boot/package check. Development fixture only."
+}

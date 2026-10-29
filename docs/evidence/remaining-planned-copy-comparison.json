@@ -1,0 +1,34 @@
+[
+  {
+    "route": "/explore/feed",
+    "exactExceptImport": true
+  },
+  {
+    "route": "/explore/climbers",
+    "exactExceptImport": true
+  },
+  {
+    "route": "/explore/leaderboards",
+    "exactExceptImport": true
+  },
+  {
+    "route": "/explore/challenges",
+    "exactExceptImport": true
+  },
+  {
+    "route": "/explore/groups",
+    "exactExceptImport": true
+  },
+  {
+    "route": "/profile/edit",
+    "exactExceptImport": true
+  },
+  {
+    "route": "/profile/public",
+    "exactExceptImport": true
+  },
+  {
+    "route": "/profile/privacy",
+    "exactExceptImport": true
+  }
+]

@@ -1,0 +1,12 @@
+# Foundation security boundary review
+
+Single-agent review, scoped to the implemented M2 adapter, credentials and reads. This is not a backend audit or release approval. No high-confidence vulnerability remained in that reviewed boundary after the fixes and tests recorded below; claims are limited to the implemented commands, not all 11 migration actions.
+
+- Client code imports only shared response types and client transport. Trusted FastAPI transport/commands are reachable from three +api.ts route files. Exported client/native bundles must be checked again after final export.
+- Fixed upstream origin; no arbitrary URL/method forwarding. Six allowed commands with typed field validation and the original source guard bodies. Request method/content type, one-MiB streaming body bound, exact Origin for browser writes, no cross-origin CORS allowance. Native login without browser Origin requires explicit native marker and no cookie; browser login never returns a bearer credential.
+- Cookie attributes preserve source name, path, HttpOnly, SameSite=Lax and 30-day ceiling; Secure in production. Native credentials use SecureStore, not public variables, route params or persistent browser storage. Passwords are never stored.
+- Protected reads/commands validate identity. Session user_id is checked before exposing/mutating it even if an upstream returns a foreign record. 401 clears credentials; resource 403 remains a resource error. Journal records from another account are rejected. Reads and drafts are scoped to the current account; logout/login/expiry clear remembered route filters.
+- No mutation retry, offline queue, service worker, private-response cache or token logging. Responses are private/no-store and vary by Cookie/Authorization.
+- Tests cover missing/cross-origin writes, native/web credential distinction, foreign session rejection, notes-only updates, duplicate/stale/complete guards, expiry and streaming size bound. Local fixture faults prove adapter handling, not deployed FastAPI authorization or atomicity.
+
+Still unverified: physical-device SecureStore/restart/background lifecycle; cross-account end-to-end with two real isolated test users; deployed host/proxy/cookie configuration; backend ownership, concurrency and lifetime integrity; all unported commands. Dependencies retain the transitive advisories documented in dependency-report.md and npm-audit-final.json. No production write or deployment occurred.

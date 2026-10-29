@@ -1,0 +1,1178 @@
+{
+  "verifiedAt": "2026-10-29T10:08:46.551357+00:00",
+  "files": 195,
+  "allOriginalHashesMatch": true,
+  "results": [
+    {
+      "frame": "welcome/01.png",
+      "status": 200,
+      "bytes": 221460,
+      "sha256Matches": true
+    },
+    {
+      "frame": "welcome/02.png",
+      "status": 200,
+      "bytes": 219957,
+      "sha256Matches": true
+    },
+    {
+      "frame": "login/01.png",
+      "status": 200,
+      "bytes": 128497,
+      "sha256Matches": true
+    },
+    {
+      "frame": "login/02.png",
+      "status": 200,
+      "bytes": 129810,
+      "sha256Matches": true
+    },
+    {
+      "frame": "signup/01.png",
+      "status": 200,
+      "bytes": 126739,
+      "sha256Matches": true
+    },
+    {
+      "frame": "signup/02.png",
+      "status": 200,
+      "bytes": 106843,
+      "sha256Matches": true
+    },
+    {
+      "frame": "home/01.png",
+      "status": 200,
+      "bytes": 156895,
+      "sha256Matches": true
+    },
+    {
+      "frame": "home/02.png",
+      "status": 200,
+      "bytes": 143906,
+      "sha256Matches": true
+    },
+    {
+      "frame": "home/03.png",
+      "status": 200,
+      "bytes": 150553,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms/01.png",
+      "status": 200,
+      "bytes": 159777,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms/02.png",
+      "status": 200,
+      "bytes": 161619,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1/01.png",
+      "status": 200,
+      "bytes": 146201,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1/02.png",
+      "status": 200,
+      "bytes": 160843,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1/03.png",
+      "status": 200,
+      "bytes": 157037,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1/04.png",
+      "status": 200,
+      "bytes": 143457,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1-routes-new/01.png",
+      "status": 200,
+      "bytes": 176730,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1-routes-new/02.png",
+      "status": 200,
+      "bytes": 266732,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1-routes-new/03.png",
+      "status": 200,
+      "bytes": 146991,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1-routes-new/04.png",
+      "status": 200,
+      "bytes": 127397,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1-routes-11-edit/01.png",
+      "status": 200,
+      "bytes": 138254,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1-routes-11-edit/02.png",
+      "status": 200,
+      "bytes": 248280,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1-routes-11-edit/03.png",
+      "status": 200,
+      "bytes": 199708,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1-routes-11-edit/04.png",
+      "status": 200,
+      "bytes": 170966,
+      "sha256Matches": true
+    },
+    {
+      "frame": "gyms-1-routes-11-edit/05.png",
+      "status": 200,
+      "bytes": 133690,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions/01.png",
+      "status": 200,
+      "bytes": 152020,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions/02.png",
+      "status": 200,
+      "bytes": 175614,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions/03.png",
+      "status": 200,
+      "bytes": 199747,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions/04.png",
+      "status": 200,
+      "bytes": 196487,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions-3/01.png",
+      "status": 200,
+      "bytes": 147896,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions-3/02.png",
+      "status": 200,
+      "bytes": 185225,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions-3/03.png",
+      "status": 200,
+      "bytes": 172888,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions-3/04.png",
+      "status": 200,
+      "bytes": 165361,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions-3/05.png",
+      "status": 200,
+      "bytes": 156389,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions-3-routes-new/01.png",
+      "status": 200,
+      "bytes": 153594,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions-3-routes-new/02.png",
+      "status": 200,
+      "bytes": 251636,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions-3-routes-new/03.png",
+      "status": 200,
+      "bytes": 149413,
+      "sha256Matches": true
+    },
+    {
+      "frame": "sessions-3-routes-new/04.png",
+      "status": 200,
+      "bytes": 122436,
+      "sha256Matches": true
+    },
+    {
+      "frame": "climbs/01.png",
+      "status": 200,
+      "bytes": 146478,
+      "sha256Matches": true
+    },
+    {
+      "frame": "climbs/02.png",
+      "status": 200,
+      "bytes": 140394,
+      "sha256Matches": true
+    },
+    {
+      "frame": "routes-11/01.png",
+      "status": 200,
+      "bytes": 174630,
+      "sha256Matches": true
+    },
+    {
+      "frame": "routes-11/02.png",
+      "status": 200,
+      "bytes": 145792,
+      "sha256Matches": true
+    },
+    {
+      "frame": "routes-11/03.png",
+      "status": 200,
+      "bytes": 122642,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile/01.png",
+      "status": 200,
+      "bytes": 132798,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile/02.png",
+      "status": 200,
+      "bytes": 121562,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile/03.png",
+      "status": 200,
+      "bytes": 154658,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile/04.png",
+      "status": 200,
+      "bytes": 140515,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore/01.png",
+      "status": 200,
+      "bytes": 184622,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore/02.png",
+      "status": 200,
+      "bytes": 191793,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore/03.png",
+      "status": 200,
+      "bytes": 182997,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-feed/01.png",
+      "status": 200,
+      "bytes": 188594,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-feed/02.png",
+      "status": 200,
+      "bytes": 172801,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-feed/03.png",
+      "status": 200,
+      "bytes": 170837,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-climbers/01.png",
+      "status": 200,
+      "bytes": 196361,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-climbers/02.png",
+      "status": 200,
+      "bytes": 177492,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-climbers/03.png",
+      "status": 200,
+      "bytes": 176911,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-leaderboards/01.png",
+      "status": 200,
+      "bytes": 193795,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-leaderboards/02.png",
+      "status": 200,
+      "bytes": 188327,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-leaderboards/03.png",
+      "status": 200,
+      "bytes": 190506,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-leaderboards/04.png",
+      "status": 200,
+      "bytes": 197030,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-challenges/01.png",
+      "status": 200,
+      "bytes": 197761,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-challenges/02.png",
+      "status": 200,
+      "bytes": 187535,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-challenges/03.png",
+      "status": 200,
+      "bytes": 193859,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-groups/01.png",
+      "status": 200,
+      "bytes": 206569,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-groups/02.png",
+      "status": 200,
+      "bytes": 181172,
+      "sha256Matches": true
+    },
+    {
+      "frame": "explore-groups/03.png",
+      "status": 200,
+      "bytes": 173301,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile-edit/01.png",
+      "status": 200,
+      "bytes": 184859,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile-edit/02.png",
+      "status": 200,
+      "bytes": 168713,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile-edit/03.png",
+      "status": 200,
+      "bytes": 159819,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile-public/01.png",
+      "status": 200,
+      "bytes": 193424,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile-public/02.png",
+      "status": 200,
+      "bytes": 179981,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile-public/03.png",
+      "status": 200,
+      "bytes": 166717,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile-privacy/01.png",
+      "status": 200,
+      "bytes": 176706,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile-privacy/02.png",
+      "status": 200,
+      "bytes": 165162,
+      "sha256Matches": true
+    },
+    {
+      "frame": "profile-privacy/03.png",
+      "status": 200,
+      "bytes": 167984,
+      "sha256Matches": true
+    },
+    {
+      "frame": "routes-11-beta/01.png",
+      "status": 200,
+      "bytes": 193278,
+      "sha256Matches": true
+    },
+    {
+      "frame": "routes-11-beta/02.png",
+      "status": 200,
+      "bytes": 217502,
+      "sha256Matches": true
+    },
+    {
+      "frame": "routes-11-beta/03.png",
+      "status": 200,
+      "bytes": 192287,
+      "sha256Matches": true
+    },
+    {
+      "frame": "history/01.png",
+      "status": 200,
+      "bytes": 151707,
+      "sha256Matches": true
+    },
+    {
+      "frame": "history/02.png",
+      "status": 200,
+      "bytes": 175252,
+      "sha256Matches": true
+    },
+    {
+      "frame": "history/03.png",
+      "status": 200,
+      "bytes": 199607,
+      "sha256Matches": true
+    },
+    {
+      "frame": "history/04.png",
+      "status": 200,
+      "bytes": 196219,
+      "sha256Matches": true
+    },
+    {
+      "frame": "brand-preview/01.png",
+      "status": 200,
+      "bytes": 145984,
+      "sha256Matches": true
+    },
+    {
+      "frame": "brand-preview/02.png",
+      "status": 200,
+      "bytes": 122632,
+      "sha256Matches": true
+    },
+    {
+      "frame": "brand-preview/03.png",
+      "status": 200,
+      "bytes": 107670,
+      "sha256Matches": true
+    },
+    {
+      "frame": "brand-preview/04.png",
+      "status": 200,
+      "bytes": 139594,
+      "sha256Matches": true
+    },
+    {
+      "frame": "brand-preview/05.png",
+      "status": 200,
+      "bytes": 138547,
+      "sha256Matches": true
+    },
+    {
+      "frame": "loading-preview/01.png",
+      "status": 200,
+      "bytes": 180974,
+      "sha256Matches": true
+    },
+    {
+      "frame": "loading-preview/02.png",
+      "status": 200,
+      "bytes": 131673,
+      "sha256Matches": true
+    },
+    {
+      "frame": "loading-preview/03.png",
+      "status": 200,
+      "bytes": 97296,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/01.png",
+      "status": 200,
+      "bytes": 191726,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/02.png",
+      "status": 200,
+      "bytes": 200559,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/03.png",
+      "status": 200,
+      "bytes": 254898,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/04.png",
+      "status": 200,
+      "bytes": 191666,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/05.png",
+      "status": 200,
+      "bytes": 133178,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/06.png",
+      "status": 200,
+      "bytes": 138669,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/07.png",
+      "status": 200,
+      "bytes": 159547,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/08.png",
+      "status": 200,
+      "bytes": 159336,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/09.png",
+      "status": 200,
+      "bytes": 180708,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/10.png",
+      "status": 200,
+      "bytes": 171148,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/11.png",
+      "status": 200,
+      "bytes": 138819,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/12.png",
+      "status": 200,
+      "bytes": 118860,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/13.png",
+      "status": 200,
+      "bytes": 118761,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/14.png",
+      "status": 200,
+      "bytes": 160339,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/15.png",
+      "status": 200,
+      "bytes": 163009,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/16.png",
+      "status": 200,
+      "bytes": 119817,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/17.png",
+      "status": 200,
+      "bytes": 117875,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/18.png",
+      "status": 200,
+      "bytes": 134359,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/19.png",
+      "status": 200,
+      "bytes": 162730,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/20.png",
+      "status": 200,
+      "bytes": 162730,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/21.png",
+      "status": 200,
+      "bytes": 162730,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/22.png",
+      "status": 200,
+      "bytes": 162730,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/23.png",
+      "status": 200,
+      "bytes": 162726,
+      "sha256Matches": true
+    },
+    {
+      "frame": "component-preview/24.png",
+      "status": 200,
+      "bytes": 162726,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/015-sheet.png",
+      "status": 200,
+      "bytes": 138396,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/019-sent-sheet.png",
+      "status": 200,
+      "bytes": 148127,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/010-plus-one.png",
+      "status": 200,
+      "bytes": 146349,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/032-anchor-regression.png",
+      "status": 200,
+      "bytes": 170542,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/020-correction.png",
+      "status": 200,
+      "bytes": 163416,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/021-result-picker.png",
+      "status": 200,
+      "bytes": 130193,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/023-correction-bottom.png",
+      "status": 200,
+      "bytes": 125730,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/069-flash-sheet.png",
+      "status": 200,
+      "bytes": 144459,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/070-flash-saved.png",
+      "status": 200,
+      "bytes": 172004,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/027-note-draft.png",
+      "status": 200,
+      "bytes": 107628,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/028-note-failed.png",
+      "status": 200,
+      "bytes": 117637,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/030-resumed-draft.png",
+      "status": 200,
+      "bytes": 117105,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/031-note-saved.png",
+      "status": 200,
+      "bytes": 110692,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/100-history-note-modal.png",
+      "status": 200,
+      "bytes": 122854,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/101-history-note-draft.png",
+      "status": 200,
+      "bytes": 125339,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/102-history-note-cancelled.png",
+      "status": 200,
+      "bytes": 154262,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/103-completed-sheet.png",
+      "status": 200,
+      "bytes": 142025,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/104-completed-note-editor.png",
+      "status": 200,
+      "bytes": 128743,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/106-completed-note-saved.png",
+      "status": 200,
+      "bytes": 142943,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/108-completed-note-empty.png",
+      "status": 200,
+      "bytes": 142578,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/109-completed-note-cleared.png",
+      "status": 200,
+      "bytes": 145082,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/087-filter-clear-before.png",
+      "status": 200,
+      "bytes": 137071,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/081-filter-verified.png",
+      "status": 200,
+      "bytes": 160655,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/088-filter-clear-fixed.png",
+      "status": 200,
+      "bytes": 142930,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/091-search-no-match-fixed.png",
+      "status": 200,
+      "bytes": 144039,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/092-search-clear-fixed.png",
+      "status": 200,
+      "bytes": 184434,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/037-add-gym.png",
+      "status": 200,
+      "bytes": 141319,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/042-gym-required-error.png",
+      "status": 200,
+      "bytes": 147265,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/043-gym-filled.png",
+      "status": 200,
+      "bytes": 145552,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/044-gym-created.png",
+      "status": 200,
+      "bytes": 176290,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/046-route-colours.png",
+      "status": 200,
+      "bytes": 231103,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/054-style-retest-picker.png",
+      "status": 200,
+      "bytes": 89475,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/055-style-retest-after.png",
+      "status": 200,
+      "bytes": 166636,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/056-extra-styles.png",
+      "status": 200,
+      "bytes": 167673,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/057-route-name.png",
+      "status": 200,
+      "bytes": 136617,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/058-route-ready.png",
+      "status": 200,
+      "bytes": 127360,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/059-route-created.png",
+      "status": 200,
+      "bytes": 173098,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/060-edit-route-01.png",
+      "status": 200,
+      "bytes": 140918,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/060-edit-route-02.png",
+      "status": 200,
+      "bytes": 245054,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/060-edit-route-03.png",
+      "status": 200,
+      "bytes": 202897,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/060-edit-route-04.png",
+      "status": 200,
+      "bytes": 173714,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/060-edit-route-05.png",
+      "status": 200,
+      "bytes": 138706,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/061-edit-filled.png",
+      "status": 200,
+      "bytes": 130715,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/062-route-edited.png",
+      "status": 200,
+      "bytes": 169812,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/063-session-started.png",
+      "status": 200,
+      "bytes": 160954,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/064-session-add-route.png",
+      "status": 200,
+      "bytes": 176779,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/067-session-route-ready.png",
+      "status": 200,
+      "bytes": 124148,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/068-session-route-created.png",
+      "status": 200,
+      "bytes": 167893,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/071-end-session.png",
+      "status": 200,
+      "bytes": 132030,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/073-completed-session.png",
+      "status": 200,
+      "bytes": 144664,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/110-error-retry-before.png",
+      "status": 200,
+      "bytes": 120230,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/111-error-retry-success.png",
+      "status": 200,
+      "bytes": 137656,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/112-logout-before.png",
+      "status": 200,
+      "bytes": 139105,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/113-logout-welcome.png",
+      "status": 200,
+      "bytes": 216009,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/120-login-required.png",
+      "status": 200,
+      "bytes": 123598,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/124-signup-required.png",
+      "status": 200,
+      "bytes": 123294,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/128-signup-success.png",
+      "status": 200,
+      "bytes": 156145,
+      "sha256Matches": true
+    },
+    {
+      "frame": "features/131-expired-welcome.png",
+      "status": 200,
+      "bytes": 216029,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/completed-session/01.png",
+      "status": 200,
+      "bytes": 149825,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/completed-session/02.png",
+      "status": 200,
+      "bytes": 156115,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/empty-home/01.png",
+      "status": 200,
+      "bytes": 182737,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/empty-home/02.png",
+      "status": 200,
+      "bytes": 174599,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/empty-home/03.png",
+      "status": 200,
+      "bytes": 161600,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/empty-home/04.png",
+      "status": 200,
+      "bytes": 158348,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/empty-sessions/01.png",
+      "status": 200,
+      "bytes": 161857,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/empty-climbs/01.png",
+      "status": 200,
+      "bytes": 147365,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/empty-gyms/01.png",
+      "status": 200,
+      "bytes": 130916,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/unavailable-home/01.png",
+      "status": 200,
+      "bytes": 189321,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/unavailable-home/02.png",
+      "status": 200,
+      "bytes": 168324,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/unavailable-home/03.png",
+      "status": 200,
+      "bytes": 157922,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/unavailable-home/04.png",
+      "status": 200,
+      "bytes": 154790,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/partial-history/01.png",
+      "status": 200,
+      "bytes": 173050,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/partial-history/02.png",
+      "status": 200,
+      "bytes": 181312,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/partial-history/03.png",
+      "status": 200,
+      "bytes": 147895,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/partial-history/04.png",
+      "status": 200,
+      "bytes": 144555,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/duplicate-log/01.png",
+      "status": 200,
+      "bytes": 152338,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/duplicate-log/02.png",
+      "status": 200,
+      "bytes": 181730,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/duplicate-log/03.png",
+      "status": 200,
+      "bytes": 172801,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/duplicate-log/04.png",
+      "status": 200,
+      "bytes": 169444,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/duplicate-log/05.png",
+      "status": 200,
+      "bytes": 155397,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/not-found/01.png",
+      "status": 200,
+      "bytes": 138589,
+      "sha256Matches": true
+    },
+    {
+      "frame": "states/private-read-error/01.png",
+      "status": 200,
+      "bytes": 120446,
+      "sha256Matches": true
+    }
+  ],
+  "scope": "Notion-hosted original file downloads compared byte hashes with all195 local PNGs; no signed download URLs retained."
+}

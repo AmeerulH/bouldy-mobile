@@ -1,0 +1,187 @@
+{
+  "coverage": {
+    "criteria": {
+      "advisories": {
+        "assessed_clean": 1,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "archived": {
+        "assessed_clean": 1,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "binary_artifacts": {
+        "assessed_clean": 0,
+        "assessed_flagged": 1,
+        "unassessable": 0
+      },
+      "code_review": {
+        "assessed_clean": 1,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "dangerous_workflow": {
+        "assessed_clean": 1,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "deprecated": {
+        "assessed_clean": 1,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "downloads": {
+        "assessed_clean": 1,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "install_script": {
+        "assessed_clean": 1,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "provenance": {
+        "assessed_clean": 1,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "publisher_concentration": {
+        "assessed_clean": 0,
+        "assessed_flagged": 1,
+        "unassessable": 0
+      },
+      "security_policy": {
+        "assessed_clean": 1,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "staleness": {
+        "assessed_clean": 1,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      },
+      "token_permissions": {
+        "assessed_clean": 1,
+        "assessed_flagged": 0,
+        "unassessable": 0
+      }
+    },
+    "total_dependencies": 1
+  },
+  "dependencies": [
+    {
+      "dev": false,
+      "ecosystem": "npm",
+      "exists": true,
+      "flagged": [
+        "publisher_concentration",
+        "binary_artifacts"
+      ],
+      "name": "@react-native-picker/picker",
+      "non_registry_reason": null,
+      "repo": "github.com/react-native-picker/picker",
+      "signals": {
+        "advisories": {
+          "detail": "no advisories recorded",
+          "state": "assessed_clean",
+          "value": []
+        },
+        "archived": {
+          "detail": "repository is active",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "binary_artifacts": {
+          "detail": "Binary-Artifacts scores 8/10 (below 10)",
+          "state": "assessed_flagged",
+          "value": 8
+        },
+        "code_review": {
+          "detail": "Code-Review scores 4/10",
+          "state": "assessed_clean",
+          "value": 4
+        },
+        "dangerous_workflow": {
+          "detail": "Dangerous-Workflow scores 10/10",
+          "state": "assessed_clean",
+          "value": 10
+        },
+        "deprecated": {
+          "detail": "not deprecated",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "downloads": {
+          "detail": "780,487 downloads/week (normal volume)",
+          "state": "assessed_clean",
+          "value": 780487
+        },
+        "install_script": {
+          "detail": "no install script",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "provenance": {
+          "detail": "no publish provenance",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "publisher_concentration": {
+          "detail": "single human publisher (naturalclar) of 1 listed",
+          "state": "assessed_flagged",
+          "value": [
+            "naturalclar"
+          ]
+        },
+        "security_policy": {
+          "detail": "no security policy found",
+          "state": "assessed_clean",
+          "value": false
+        },
+        "staleness": {
+          "detail": "pushed 9 months ago",
+          "state": "assessed_clean",
+          "value": "2026-01-21T23:45:43Z"
+        },
+        "token_permissions": {
+          "detail": "Token-Permissions scores 0/10",
+          "state": "assessed_clean",
+          "value": 0
+        }
+      },
+      "version": "2.11.4",
+      "version_source": "manifest-pin"
+    }
+  ],
+  "ecosystems": {
+    "npm": 1
+  },
+  "notes": [
+    "gh is not authenticated. GitHub allows 60 requests/hour unauthenticated against 5000 authenticated, so repository signals may be unassessable.",
+    "Optional tooling detected: npm. Not installed, so not used: bundler-audit, cargo-audit, osv-scanner, pip-audit.",
+    "Direct dependencies only. Advisories attach to the package that ships the affected code, so an umbrella package can look clean while its components are not \u2014 rails 5.0.0 reports 0 advisories where actionpack 5.0.0 reports 10. Transitive dependencies were not examined: no lockfile resolves the transitive tree (package-lock.json, uv.lock, or a go 1.17+ go.mod).",
+    "HTTP sources: 5 fetched, 1 served from cache (oldest 0.0h old), 0 refetched as stale, 0 unavailable offline, 0 errors."
+  ],
+  "scan": {
+    "commit": null,
+    "manifests": [
+      "package.json"
+    ],
+    "path": "/tmp/bouldy-picker-review",
+    "scanned_at": "2026-10-28T10:27:16+00:00",
+    "subject": "bouldy-picker-review"
+  },
+  "target": "/tmp/bouldy-picker-review",
+  "transitive": {
+    "checked": 0,
+    "examined": false,
+    "excluded_direct": 0,
+    "flagged": [],
+    "lockfile_entries": 0,
+    "reason": "no lockfile resolves the transitive tree (package-lock.json, uv.lock, or a go 1.17+ go.mod)",
+    "sources": [],
+    "total": 0,
+    "unverifiable": []
+  }
+}

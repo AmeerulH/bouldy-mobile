@@ -1,0 +1,10 @@
+{
+  "bundlesScanned": 20,
+  "markers": [
+    "bouldy-api.onrender.com",
+    "BOULDY_LOCAL_API",
+    "walkthrough-sample"
+  ],
+  "hits": [],
+  "limit": "Selected ASCII marker scan only; not a full binary/security audit."
+}

@@ -1,0 +1,19 @@
+{"text": "", "content-desc": "Dismiss V2 \u00b7 Blue", "class": "android.view.ViewGroup", "clickable": "true", "bounds": "[0,72][1080,1776]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "V2 \u00b7 Blue", "class": "android.view.ViewGroup", "clickable": "false", "bounds": "[0,437][1080,1776]", "focused": "false", "password": "false"}
+{"text": "V2 \u00b7 BLUE", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,515][888,587]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Close V2 \u00b7 Blue", "class": "android.widget.Button", "clickable": "true", "bounds": "[912,485][1044,617]", "focused": "false", "password": "false"}
+{"text": "Session Blue", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[264,650][1020,716]", "focused": "false", "password": "false"}
+{"text": "No wall or setter recorded", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[264,728][1020,788]", "focused": "false", "password": "false"}
+{"text": "This visit", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,890][522,938]", "focused": "false", "password": "false"}
+{"text": "Earlier visits", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[558,890][1020,938]", "focused": "false", "password": "false"}
+{"text": "1", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,950][81,1022]", "focused": "false", "password": "false"}
+{"text": "\u26a1 Flash", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[135,962][284,1010]", "focused": "false", "password": "false"}
+{"text": "0", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[558,950][591,1022]", "focused": "false", "password": "false"}
+{"text": "new to you", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[609,978][797,1026]", "focused": "false", "password": "false"}
+{"text": "Private note \u00b7 only you", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1152][1020,1200]", "focused": "false", "password": "false"}
+{"text": "Remember what helped, or come back to this later.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1224][1020,1368]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Add a note", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1380][276,1512]", "focused": "false", "password": "false"}
+{"text": "Add a note", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1416][276,1476]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Your route history, \u203a", "class": "android.view.View", "clickable": "true", "bounds": "[60,1560][1020,1704]", "focused": "false", "password": "false"}
+{"text": "Your route history", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1610][417,1670]", "focused": "false", "password": "false"}
+{"text": "\u203a", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[1006,1610][1020,1670]", "focused": "false", "password": "false"}

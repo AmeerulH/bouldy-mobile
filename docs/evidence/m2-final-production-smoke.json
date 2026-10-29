@@ -1,0 +1,8 @@
+{
+  "welcome": 200,
+  "hydrationScripts": 7,
+  "fixtureBannerPresent": false,
+  "identity": 401,
+  "cacheControl": "no-store, private",
+  "crossOriginCommand": 403
+}

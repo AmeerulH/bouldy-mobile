@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/Ambassador/.agents/skills/supply-chain-risk-auditor/scripts/collect.py", line 1568, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/Ambassador/.agents/skills/supply-chain-risk-auditor/scripts/collect.py", line 1560, in main
+    args.json.write_text(text + "\n", encoding="utf-8")
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1078, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/bouldy-final-dependencies/findings.json'

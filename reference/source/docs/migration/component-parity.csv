@@ -1,0 +1,32 @@
+source,target,contract,status
+components/app-shell.tsx,src/components/app-shell.tsx,Port layout/layers/430px canvas; safe areas; overlay outside page transform.,Not started
+components/attempt-note.tsx,src/components/attempt-note.tsx,Inline editor inside route sheet; standalone note sheet in history; failure preserves draft.,Not started
+components/auth-heading.tsx,src/components/auth-heading.tsx,"Same words, layout and holds for login/signup.",Not started
+components/bottom-nav.tsx,src/components/bottom-nav.tsx,Custom identical five-tab bar; never substitute system tabs; hide only on current form paths.,Not started
+components/bouldy-loader.tsx,src/components/bouldy-loader.tsx,Port ascent/traverse/hold variants and reduced motion.,Not started
+components/brand-wordmark.tsx,src/components/brand-wordmark.tsx,"Same Bolt B SVG, Bouldy typography and compact variant.",Not started
+components/journal-switch.tsx,src/components/journal-switch.tsx,Same Sessions/Climbs segment appearance and navigation.,Not started
+components/journal-warning.tsx,src/components/journal-warning.tsx,"Same incomplete-data wording, retry link and warning appearance.",Not started
+components/kokonutui/slide-text-button.tsx,src/components/kokonutui/slide-text-button.tsx,Preserve link wording and web hover/focus text slide; tap navigates without extra step.,Not started
+components/month-groups.tsx,src/components/month-groups.tsx,"Same 3-month reveal step and sticky headings, not infinite scrolling.",Not started
+components/page-loader.tsx,src/components/page-loader.tsx,Same loading labels; 8-second patience label.,Not started
+components/page-motion.tsx,src/components/page-motion.tsx,Preserve measured directional translation/fade and deliberate tab swipe thresholds; disable duplicate navigator animation.,Not started
+components/page-skeleton.tsx,src/components/page-skeleton.tsx,All 9 geometry variants; 19 loading boundaries plus layout loading.,Not started
+components/result-badge.tsx,src/components/result-badge.tsx,Same labels/colours including legacy Zone.,Not started
+components/route-browser.tsx,src/components/route-browser.tsx,Extract portable filters/grouping without changing behaviour; replace ReactNode rows with same row renderers.,Not started
+components/route-form-screen.tsx,src/components/route-form-screen.tsx,"Exact pushed header and form layout; no tabs, sticky save supplied by form.",Not started
+components/route-form.tsx,src/components/route-form.tsx,"Same field order, controlled preview, 14 colours, style expansion, selected values and planned comp block.",Not started
+components/route-hold.tsx,src/components/route-hold.tsx,"Preserve 14 colour map, grey fallback, blue triangle name rule and local SVG paths.",Not started
+components/route-loading-overlay.tsx,src/components/route-loading-overlay.tsx,"Replace click interception with navigation lifecycle; retain destination skeleton, layout and exit conditions.",Not started
+components/route-mark.tsx,src/components/route-mark.tsx,"Dormant/isolated component; retain in catalogue, do not expose as new app feature.",Not started
+components/route-rows.tsx,src/components/route-rows.tsx,"Gym/session/climb row variants; exact metadata, badges and trailing +1.",Not started
+components/submit-button.tsx,src/components/submit-button.tsx,"Same per-button spinner, retained label space, disabled state and pending copy.",Not started
+components/theme-switcher.tsx,src/components/theme-switcher.tsx,"Unmounted dev-only accent preview; preserve reference, do not ship theme selection as a new feature.",Not started
+components/ui/bottom-sheet.tsx,src/components/ui/bottom-sheet.tsx,Identical panel/backdrop/handle/close; URL/state adapter; Back closes before leaving; no added detents.,Not started
+components/ui/button.ts,src/components/ui/button.ts,Replace Tailwind class utility with identical style tokens and variant/size contracts.,Not started
+components/ui/feedback-message.tsx,src/components/ui/feedback-message.tsx,Same inline errors/warnings and announcements; never convert errors to transient toast.,Not started
+components/ui/form-field.tsx,src/components/ui/form-field.tsx,"Same Input/Select/Textarea labels, values, validation and closed appearance; keyboard/autofill adapters.",Not started
+components/ui/screen-header.tsx,src/components/ui/screen-header.tsx,"Same 56px header, back chevron and explicit parent destination.",Not started
+components/ui/section-heading.tsx,src/components/ui/section-heading.tsx,"Same type, spacing and optional aside.",Not started
+components/ui/snackbar.tsx,src/components/ui/snackbar.tsx,"Same top overlay, 5s lifetime, tap dismissal, 260ms entry/180ms exit; consume notice once.",Not started
+components/under-construction.tsx,src/components/under-construction.tsx,"Same placeholder template, per-route copy, holds and related links.",Not started

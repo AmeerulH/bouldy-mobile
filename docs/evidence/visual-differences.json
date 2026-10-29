@@ -1,0 +1,285 @@
+{
+  "note": "Raw pixel differences are evidence, not approval. Font rasterisation and layout/copy differences require human/region review. No global tolerance silently accepts deviations.",
+  "reports": [
+    {
+      "screen": "welcome",
+      "viewport": "390x844",
+      "width": 390,
+      "height": 844,
+      "differingPixels": 22155,
+      "bounds": [
+        24,
+        34,
+        365,
+        807
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "login",
+      "viewport": "390x844",
+      "width": 390,
+      "height": 844,
+      "differingPixels": 24132,
+      "bounds": [
+        23,
+        42,
+        365,
+        581
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "home",
+      "viewport": "390x844",
+      "width": 390,
+      "height": 844,
+      "differingPixels": 22151,
+      "bounds": [
+        20,
+        10,
+        369,
+        827
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "session",
+      "viewport": "390x844",
+      "width": 390,
+      "height": 844,
+      "differingPixels": 24396,
+      "bounds": [
+        19,
+        10,
+        389,
+        827
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "route-sheet",
+      "viewport": "390x844",
+      "width": 390,
+      "height": 844,
+      "differingPixels": 16041,
+      "bounds": [
+        0,
+        10,
+        389,
+        806
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "welcome",
+      "viewport": "320x844",
+      "width": 320,
+      "height": 844,
+      "differingPixels": 22148,
+      "bounds": [
+        24,
+        34,
+        295,
+        807
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "login",
+      "viewport": "320x844",
+      "width": 320,
+      "height": 844,
+      "differingPixels": 20389,
+      "bounds": [
+        23,
+        42,
+        295,
+        581
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "home",
+      "viewport": "320x844",
+      "width": 320,
+      "height": 844,
+      "differingPixels": 17361,
+      "bounds": [
+        17,
+        10,
+        299,
+        827
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "session",
+      "viewport": "320x844",
+      "width": 320,
+      "height": 844,
+      "differingPixels": 73630,
+      "bounds": [
+        0,
+        10,
+        319,
+        827
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "route-sheet",
+      "viewport": "320x844",
+      "width": 320,
+      "height": 844,
+      "differingPixels": 26489,
+      "bounds": [
+        0,
+        10,
+        319,
+        806
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "welcome",
+      "viewport": "430x844",
+      "width": 430,
+      "height": 844,
+      "differingPixels": 22144,
+      "bounds": [
+        24,
+        34,
+        405,
+        807
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "login",
+      "viewport": "430x844",
+      "width": 430,
+      "height": 844,
+      "differingPixels": 24852,
+      "bounds": [
+        23,
+        42,
+        405,
+        581
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "home",
+      "viewport": "430x844",
+      "width": 430,
+      "height": 844,
+      "differingPixels": 22389,
+      "bounds": [
+        20,
+        10,
+        409,
+        827
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "session",
+      "viewport": "430x844",
+      "width": 430,
+      "height": 844,
+      "differingPixels": 24277,
+      "bounds": [
+        19,
+        10,
+        409,
+        827
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "route-sheet",
+      "viewport": "430x844",
+      "width": 430,
+      "height": 844,
+      "differingPixels": 16081,
+      "bounds": [
+        0,
+        10,
+        429,
+        806
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "welcome",
+      "viewport": "1440x844",
+      "width": 1440,
+      "height": 844,
+      "differingPixels": 22151,
+      "bounds": [
+        529,
+        34,
+        910,
+        807
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "login",
+      "viewport": "1440x844",
+      "width": 1440,
+      "height": 844,
+      "differingPixels": 24852,
+      "bounds": [
+        528,
+        42,
+        910,
+        581
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "home",
+      "viewport": "1440x844",
+      "width": 1440,
+      "height": 844,
+      "differingPixels": 22391,
+      "bounds": [
+        525,
+        10,
+        914,
+        827
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "session",
+      "viewport": "1440x844",
+      "width": 1440,
+      "height": 844,
+      "differingPixels": 24275,
+      "bounds": [
+        524,
+        10,
+        914,
+        827
+      ],
+      "accepted": false
+    },
+    {
+      "screen": "route-sheet",
+      "viewport": "1440x844",
+      "width": 1440,
+      "height": 844,
+      "differingPixels": 16081,
+      "bounds": [
+        505,
+        10,
+        934,
+        806
+      ],
+      "accepted": false
+    }
+  ]
+}

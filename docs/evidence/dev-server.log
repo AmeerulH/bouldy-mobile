@@ -1,0 +1,527 @@
+Starting project at /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile
+Using src/app as the root directory for Expo Router.
+Starting Metro Bundler
+
+warning: Bundler cache is empty, rebuilding (this may take a minute)
+Unable to run simctl:
+Error: xcrun simctl help exited with non-zero code: 69
+Waiting on http://localhost:8081
+
+Logs for your project will appear below.
+| (node:55032) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:55032) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:55032) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:55032) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:55032) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:55032) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+λ Bundled 3265ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1181 modules)
+Web Bundled 3269ms node_modules/expo-router/entry.js (831 modules)
+λ Bundled 33ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 2781ms node_modules/expo-router/entry.js (830 modules)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 521ms src/app/(auth)/_layout.tsx (855 modules)
+Web Bundled 549ms src/app/_layout.tsx (918 modules)
+λ Bundled 37ms src/app/api/identity+api.ts (1 module)
+Web Bundled 105ms src/app/(auth)/login.tsx (557 modules)
+λ Bundled 12ms src/app/api/command+api.ts (1 module)
+Web Bundled 95ms src/app/(app)/_layout.tsx (842 modules)
+Web Bundled 118ms src/app/(app)/index.tsx (1 module)
+λ Bundled 8ms src/app/api/snapshot+api.ts (1 module)
+Web Bundled 194ms src/app/(app)/sessions/[id].tsx (359 modules)
+Web Bundled 213ms src/app/(app)/routes/[id].tsx (703 modules)
+λ Bundled 38ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 11ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 15ms src/app/(app)/routes/[id].tsx (1 module)
+Web Bundled 25ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 39ms src/app/_layout.tsx (1 module)
+Web Bundled 31ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(app)/routes/[id].tsx (1 module)
+λ Bundled 27ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 9ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 25ms src/app/_layout.tsx (1 module)
+Web Bundled 22ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 24ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 30ms src/app/(app)/index.tsx (1 module)
+λ Bundled 22ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 15ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 21ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 25ms src/app/_layout.tsx (1 module)
+Web Bundled 23ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 23ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 26ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 7ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 0.5ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 26ms src/app/_layout.tsx (1 module)
+Web Bundled 31ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 23ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 22ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 28ms src/app/(app)/index.tsx (1 module)
+λ Bundled 21ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 8ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 21ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 25ms src/app/_layout.tsx (1 module)
+Web Bundled 22ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 27ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 37ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 19ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 24ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 24ms src/app/_layout.tsx (1 module)
+Web Bundled 22ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 23ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 18ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 7ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 21ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 25ms src/app/_layout.tsx (1 module)
+Web Bundled 22ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 31ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 9ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 23ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 27ms src/app/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 23ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 30ms src/app/(app)/index.tsx (1 module)
+λ Bundled 18ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 13ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 0.4ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 25ms src/app/_layout.tsx (1 module)
+Web Bundled 22ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 18ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 16ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 26ms src/app/_layout.tsx (1 module)
+Web Bundled 22ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 21ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 21ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 26ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 34ms src/app/_layout.tsx (1 module)
+Web Bundled 31ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 28ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 210ms src/app/(auth)/welcome.tsx (521 modules)
+λ Bundled 36ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 20ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 9ms src/app/(auth)/welcome.tsx (1 module)
+Web Bundled 30ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 26ms src/app/_layout.tsx (1 module)
+Web Bundled 26ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 34ms src/app/(auth)/welcome.tsx (1 module)
+λ Bundled 20ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 21ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 25ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 29ms src/app/_layout.tsx (1 module)
+Web Bundled 28ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 37ms src/app/(auth)/login.tsx (1 module)
+λ Bundled 19ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 38ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 24ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 24ms src/app/_layout.tsx (1 module)
+Web Bundled 23ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 28ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 24ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(app)/index.tsx (1 module)
+λ Bundled 18ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 29ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 26ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 28ms src/app/_layout.tsx (1 module)
+Web Bundled 26ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 27ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 21ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 19ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 0.5ms src/app/(auth)/welcome.tsx (1 module)
+Web Bundled 24ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 29ms src/app/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(auth)/welcome.tsx (1 module)
+λ Bundled 27ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 27ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 32ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 60ms src/app/_layout.tsx (1 module)
+Web Bundled 45ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 27ms src/app/(auth)/login.tsx (1 module)
+λ Bundled 25ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 18ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 29ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 27ms src/app/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 28ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 33ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 37ms src/app/(app)/index.tsx (1 module)
+λ Bundled 27ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 11ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 25ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 26ms src/app/_layout.tsx (1 module)
+Web Bundled 33ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 28ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 37ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 11ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/welcome.tsx (1 module)
+Web Bundled 35ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 33ms src/app/_layout.tsx (1 module)
+Web Bundled 42ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 26ms src/app/(auth)/welcome.tsx (1 module)
+λ Bundled 21ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 9ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 27ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 27ms src/app/_layout.tsx (1 module)
+Web Bundled 41ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 28ms src/app/(auth)/login.tsx (1 module)
+λ Bundled 20ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 28ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 24ms src/app/_layout.tsx (1 module)
+Web Bundled 22ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 28ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 31ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 35ms src/app/(app)/index.tsx (1 module)
+λ Bundled 28ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 26ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 29ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 72ms src/app/_layout.tsx (1 module)
+Web Bundled 72ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 74ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 32ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 13ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/welcome.tsx (1 module)
+Web Bundled 45ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 45ms src/app/_layout.tsx (1 module)
+Web Bundled 45ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 32ms src/app/(auth)/welcome.tsx (1 module)
+λ Bundled 20ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 8ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 24ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 26ms src/app/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 27ms src/app/(auth)/login.tsx (1 module)
+λ Bundled 18ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 9ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 0.5ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 25ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 25ms src/app/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 51ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 41ms src/app/(app)/index.tsx (1 module)
+λ Bundled 20ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 16ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 26ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 33ms src/app/_layout.tsx (1 module)
+Web Bundled 27ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 27ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 28ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 18ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 0.5ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 23ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 28ms src/app/_layout.tsx (1 module)
+Web Bundled 27ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 27ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 26ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 30ms src/app/(app)/index.tsx (1 module)
+λ Bundled 32ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 13ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 38ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 26ms src/app/_layout.tsx (1 module)
+Web Bundled 40ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 26ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 21ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 8ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 0.4ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 24ms src/app/_layout.tsx (1 module)
+Web Bundled 22ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 22ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(auth)/welcome.tsx (1 module)
+λ Bundled 50ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 18ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 27ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 24ms src/app/_layout.tsx (1 module)
+Web Bundled 26ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 27ms src/app/(app)/sessions/[id].tsx (1 module)
+No apps connected. Sending "sendDevCommand" to all React Native apps failed. Make sure your app is running in the simulator or on a phone connected via USB.
+λ Bundled 42ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 11ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/welcome.tsx (1 module)
+Web Bundled 26ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 25ms src/app/_layout.tsx (1 module)
+Web Bundled 23ms src/app/(auth)/_layout.tsx (1 module)
+λ Bundled 1ms src/app/api/identity+api.ts (1 module)
+Web Bundled 23ms src/app/(auth)/welcome.tsx (1 module)
+λ Bundled 22ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 8ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 0.5ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 24ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 25ms src/app/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 28ms src/app/(auth)/login.tsx (1 module)
+λ Bundled 30ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 14ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 0.5ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 23ms src/app/_layout.tsx (1 module)
+Web Bundled 22ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(auth)/login.tsx (1 module)
+λ Bundled 1ms src/app/api/command+api.ts (1 module)
+Web Bundled 24ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(app)/index.tsx (1 module)
+λ Bundled 1ms src/app/api/snapshot+api.ts (1 module)
+λ Bundled 17ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 9ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 24ms src/app/_layout.tsx (1 module)
+Web Bundled 23ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 19ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 8ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 26ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 25ms src/app/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 26ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 28ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 8ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/welcome.tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 31ms src/app/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 27ms src/app/(auth)/welcome.tsx (1 module)
+λ Bundled 22ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 7ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 0.5ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 23ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 34ms src/app/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(auth)/login.tsx (1 module)
+λ Bundled 21ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 18ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 25ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 26ms src/app/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 27ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 39ms src/app/(app)/index.tsx (1 module)
+λ Bundled 20ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 9ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 0.5ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 23ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 23ms src/app/_layout.tsx (1 module)
+Web Bundled 22ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 38ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 18ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 8ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 25ms src/app/_layout.tsx (1 module)
+Web Bundled 26ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 26ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 23ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 8ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/welcome.tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 24ms src/app/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 25ms src/app/(auth)/welcome.tsx (1 module)
+λ Bundled 22ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 7ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 21ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 29ms src/app/_layout.tsx (1 module)
+Web Bundled 23ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 23ms src/app/(auth)/login.tsx (1 module)
+λ Bundled 17ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 8ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 21ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 25ms src/app/_layout.tsx (1 module)
+Web Bundled 22ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 23ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 23ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 26ms src/app/(app)/index.tsx (1 module)
+λ Bundled 20ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 16ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 24ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 26ms src/app/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 27ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 18ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 9ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 23ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 24ms src/app/_layout.tsx (1 module)
+Web Bundled 30ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 26ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 8ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/welcome.tsx (1 module)
+Web Bundled 23ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 28ms src/app/_layout.tsx (1 module)
+Web Bundled 57ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 33ms src/app/(auth)/welcome.tsx (1 module)
+λ Bundled 18ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 15ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 32ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 24ms src/app/_layout.tsx (1 module)
+Web Bundled 29ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 23ms src/app/(auth)/login.tsx (1 module)
+λ Bundled 21ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 7ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 23ms src/app/_layout.tsx (1 module)
+Web Bundled 30ms src/app/(auth)/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(auth)/login.tsx (1 module)
+Web Bundled 59ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 32ms src/app/(app)/index.tsx (1 module)
+λ Bundled 39ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 15ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 37ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 32ms src/app/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 30ms src/app/(app)/sessions/[id].tsx (1 module)
+λ Bundled 26ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+Web Bundled 10ms node_modules/expo-router/entry.js (1 module)
+λ Bundled 1ms src/app/(app)/sessions/[id].tsx (1 module)
+Web Bundled 24ms node_modules/expo-router/entry.js (1 module)
+Web  INFO  %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+Web  LOG  Running application "main" with appParams: {"hydrate": true, "rootTag": "#root"}
+Web Bundled 31ms src/app/_layout.tsx (1 module)
+Web Bundled 24ms src/app/(app)/_layout.tsx (1 module)
+Web Bundled 39ms src/app/(app)/sessions/[id].tsx (1 module)

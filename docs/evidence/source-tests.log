@@ -1,0 +1,26 @@
+(node:55451) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/reference/source/lib/journal-summary.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/reference/source/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ four old plus two new tries remain separate and total six (1.87675ms)
+✔ duplicate records remain visible but cannot inflate a total (0.545958ms)
+✔ failed reads do not become empty visits or proof of no send (0.109916ms)
+✔ reset route IDs stay distinct regardless of grade or colour (0.084333ms)
+✔ empty and unavailable journals are different states (0.069833ms)
+(node:55452) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/reference/source/lib/route-grades.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/reference/source/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ V grades sort by number, with VB first (1.548584ms)
+✔ Font grades sort by number, letter, then plus (0.31ms)
+✔ grades without a number sort alphabetically after numbered grades (14.288708ms)
+✔ grade keys ignore case and surrounding space (0.961625ms)
+✔ every search term must match somewhere (0.593541ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 236.326167

@@ -1,0 +1,12 @@
+[
+  {
+    "folder": "dist/client",
+    "bundlesScanned": 12,
+    "serverOrFixtureMarkers": []
+  },
+  {
+    "folder": "dist-native",
+    "bundlesScanned": 2,
+    "serverOrFixtureMarkers": []
+  }
+]

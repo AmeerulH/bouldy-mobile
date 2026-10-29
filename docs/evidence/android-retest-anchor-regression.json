@@ -1,0 +1,8 @@
+{
+  "before": "017-sent-settled.xml: route remained offscreen after save",
+  "after": "032-anchor-regression.xml: route and Sent \u00b7 4 tries visible",
+  "routeBounds": "[60,867][845,1106]",
+  "fix": "Do not reset focus to page top when hash exists; register anchor views and restore after focus/content-size layout",
+  "sourceCopy": "reference/anchor-before-android-fix/screen.tsx",
+  "writes": 6
+}

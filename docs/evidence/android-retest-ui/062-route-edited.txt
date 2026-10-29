@@ -1,0 +1,36 @@
+{"text": "", "content-desc": "Tools", "class": "android.widget.ImageView", "clickable": "false", "bounds": "[915,87][993,165]", "focused": "false", "password": "false"}
+{"text": "Sample journal \u00b7 local preview", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,96][1020,144]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Gyms", "class": "android.view.View", "clickable": "true", "bounds": "[60,188][1020,320]", "focused": "false", "password": "false"}
+{"text": "Gyms", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[144,224][258,284]", "focused": "false", "password": "false"}
+{"text": "ANDROID TEST WALL", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,399][1020,497]", "focused": "false", "password": "false"}
+{"text": "Local Emulator", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,521][1020,581]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Start a session here", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,653][1020,797]", "focused": "false", "password": "false"}
+{"text": "Start a session here", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[335,695][745,755]", "focused": "false", "password": "false"}
+{"text": "ROUTES ON THE WALL", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,869][657,941]", "focused": "false", "password": "false"}
+{"text": "1 active", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,953][657,1001]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "+ Add route", "class": "android.view.View", "clickable": "true", "bounds": "[693,869][1020,1001]", "focused": "false", "password": "false"}
+{"text": "+ Add route", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[741,905][972,965]", "focused": "false", "password": "false"}
+{"text": "Grade, name or wall", "content-desc": "Search routes", "class": "android.widget.EditText", "clickable": "true", "bounds": "[60,1061][717,1193]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Filter", "class": "android.widget.Button", "clickable": "true", "bounds": "[741,1061][1020,1193]", "focused": "false", "password": "false"}
+{"text": "Filter", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[864,1097][969,1157]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "3 DOTS, 1 route", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1220][1020,1364]", "focused": "false", "password": "false"}
+{"text": "3 DOTS", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1254][235,1326]", "focused": "false", "password": "false"}
+{"text": "1 route", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[271,1266][387,1314]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "3 DOTS, Green, Android Foothold Edited, Slab \u00b7 Balance, Edit", "class": "android.view.View", "clickable": "true", "bounds": "[60,1364][1020,1567]", "focused": "false", "password": "false"}
+{"text": "3 DOTS", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[216,1394][362,1454]", "focused": "false", "password": "false"}
+{"text": "Green", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[386,1411][489,1459]", "focused": "false", "password": "false"}
+{"text": "Android Foothold Edited", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[216,1465][854,1525]", "focused": "false", "password": "false"}
+{"text": "Edit", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[890,1460][960,1508]", "focused": "false", "password": "false"}
+{"text": "Slab \u00b7 Balance", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[216,1525][854,1567]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Home", "class": "android.view.View", "clickable": "true", "bounds": "[0,1594][216,1752]", "focused": "false", "password": "false"}
+{"text": "Home", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[62,1684][153,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Explore", "class": "android.view.View", "clickable": "true", "bounds": "[216,1594][432,1752]", "focused": "false", "password": "false"}
+{"text": "Explore", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[265,1684][382,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Sessions", "class": "android.view.View", "clickable": "true", "bounds": "[432,1594][648,1752]", "focused": "false", "password": "false"}
+{"text": "Sessions", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[470,1684][610,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Gyms", "class": "android.view.View", "clickable": "true", "bounds": "[648,1594][864,1752]", "focused": "false", "password": "false"}
+{"text": "Gyms", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[712,1684][800,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "You", "class": "android.view.View", "clickable": "true", "bounds": "[864,1594][1080,1752]", "focused": "false", "password": "false"}
+{"text": "You", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[944,1684][1000,1734]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Route updated.. Tap to dismiss.", "class": "android.widget.Button", "clickable": "true", "bounds": "[36,72][1044,252]", "focused": "false", "password": "false"}
+{"text": "Route updated.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[180,134][852,191]", "focused": "false", "password": "false"}

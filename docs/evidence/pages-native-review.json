@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-29",
+  "environment": "Device Hub, iPhone 17 Pro, iOS 26.2, Expo Go 58.0.7; synthetic loopback fixture only",
+  "observed": [
+    "Gyms list renders and opens gym detail",
+    "Gym grade filter selects V2 and shows two of six active routes; retired route omitted",
+    "Start session from existing gym opens a new zero-duration session",
+    "Add gym required fields show exact error in the same sheet",
+    "Add gym creates Native Test Wall and closes sheet with original notice",
+    "New gym shows source empty-route copy",
+    "Add gym route preserves custom grade 3 dots, green hold, Slab and Balance; returns to gym",
+    "Edit route restores saved fields and styles; renamed route returns to gym with original notice",
+    "Start session at new gym opens session 103",
+    "Session Add route opens with correct parent/gym, creates V2 blue route and returns to session",
+    "First try on new route stored one project attempt in synthetic session 103",
+    "Expired fixture identity plus reload reaches Welcome",
+    "Welcome signup entry renders source composition and required fields",
+    "Signup required-field error displayed; synthetic register/login reaches Home"
+  ],
+  "notAccepted": [
+    "Android execution",
+    "Fresh browser UI regression and three-platform visual/motion comparisons",
+    "Full soft-keyboard/safe-area/reduced-motion/error matrix",
+    "Native Main style sheet equivalence to original browser select",
+    "Two-account backend isolation or real registration",
+    "Standalone or release binaries"
+  ],
+  "limits": [
+    "Native screenshots and accessibility observations are in conversation; no new saved PNG goldens.",
+    "4010 is the already-running legacy fixture process. Updated fault scenarios and registration payload assertions were tested by fresh fixture 4012 in npm test.",
+    "Synthetic signup uses a mock registration response and signs into the existing sample identity; it does not prove new-account persistence or account isolation."
+  ]
+}

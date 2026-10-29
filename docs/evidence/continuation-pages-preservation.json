@@ -1,0 +1,14 @@
+{
+  "checked": 271,
+  "mismatches": [],
+  "sourceStatus": " M AGENTS.md\n M MASTER_SPEC.md\n M README.md\n?? .impeccable/review/\n?? docs/REACT_NATIVE_MIGRATION_SPEC.md\n?? docs/TEAM_BRAINSTORM_SESSION.md\n?? docs/TEAM_FEEDBACK_PRIORITIES.md\n?? docs/TESTER_FEEDBACK_2026-10-24.md\n?? docs/migration/\n?? docs/notion-backlog/\n?? docs/visual-walkthrough/\n?? output/\n",
+  "sourceHead": "5467a433ea6699c1206b6e9019430fccff693918",
+  "canonicalSpecMatches": true,
+  "finalChecked": 271,
+  "finalMismatches": [],
+  "sourceStatusUnchanged": true,
+  "targetRoot": "/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile",
+  "targetBranch": "codex/react-native-migration",
+  "targetCommitCount": 0,
+  "targetRemotes": ""
+}

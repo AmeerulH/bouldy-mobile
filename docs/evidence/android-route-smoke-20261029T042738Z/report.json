@@ -1,0 +1,215 @@
+{
+  "scope": "Fixture Android native route-render smoke only; not all states/visual/motion/physical/release acceptance",
+  "cases": [
+    {
+      "route": "/",
+      "expected": [
+        "KEEP\nSHOWING UP."
+      ],
+      "passed": true,
+      "xml": "01.xml",
+      "screenshot": "01.png"
+    },
+    {
+      "route": "/sessions",
+      "expected": [
+        "Every attempt has a place."
+      ],
+      "passed": true,
+      "xml": "02.xml",
+      "screenshot": "02.png"
+    },
+    {
+      "route": "/sessions/3",
+      "expected": [
+        "Live session",
+        "2026-10-24"
+      ],
+      "passed": true,
+      "xml": "03.xml",
+      "screenshot": "03.png"
+    },
+    {
+      "route": "/routes/11",
+      "expected": [
+        "YOUR ROUTE HISTORY",
+        "The patient heel hook"
+      ],
+      "passed": true,
+      "xml": "04.xml",
+      "screenshot": "04.png"
+    },
+    {
+      "route": "/gyms",
+      "expected": [
+        "Choose your wall.",
+        "ALL GYMS"
+      ],
+      "passed": true,
+      "xml": "05.xml",
+      "screenshot": "05.png"
+    },
+    {
+      "route": "/gyms/1",
+      "expected": [
+        "SAMPLE BOULDER CLUB",
+        "Kuala Lumpur"
+      ],
+      "passed": true,
+      "xml": "06.xml",
+      "screenshot": "06.png"
+    },
+    {
+      "route": "/gyms/1/routes/new",
+      "expected": [
+        "ADD A ROUTE",
+        "New route at Sample Boulder Club"
+      ],
+      "passed": true,
+      "xml": "07.xml",
+      "screenshot": "07.png"
+    },
+    {
+      "route": "/gyms/1/routes/11/edit",
+      "expected": [
+        "EDIT ROUTE",
+        "The patient heel hook"
+      ],
+      "passed": true,
+      "xml": "08.xml",
+      "screenshot": "08.png"
+    },
+    {
+      "route": "/sessions/3/routes/new",
+      "expected": [
+        "ADD A ROUTE",
+        "ready to log."
+      ],
+      "passed": true,
+      "xml": "09.xml",
+      "screenshot": "09.png"
+    },
+    {
+      "route": "/climbs",
+      "expected": [
+        "Every route you've logged."
+      ],
+      "passed": true,
+      "xml": "10.xml",
+      "screenshot": "10.png"
+    },
+    {
+      "route": "/explore",
+      "expected": [
+        "Climb with others.",
+        "CLOSED FOR SETTING"
+      ],
+      "passed": true,
+      "xml": "11.xml",
+      "screenshot": "11.png"
+    },
+    {
+      "route": "/explore/feed",
+      "expected": [
+        "CLIMBERS' SESSIONS",
+        "Planned"
+      ],
+      "passed": true,
+      "xml": "12.xml",
+      "screenshot": "12.png"
+    },
+    {
+      "route": "/explore/climbers",
+      "expected": [
+        "FIND CLIMBERS",
+        "Planned"
+      ],
+      "passed": true,
+      "xml": "13.xml",
+      "screenshot": "13.png"
+    },
+    {
+      "route": "/explore/leaderboards",
+      "expected": [
+        "LEADERBOARDS",
+        "Planned"
+      ],
+      "passed": true,
+      "xml": "14.xml",
+      "screenshot": "14.png"
+    },
+    {
+      "route": "/explore/challenges",
+      "expected": [
+        "CHALLENGES",
+        "Planned"
+      ],
+      "passed": true,
+      "xml": "15.xml",
+      "screenshot": "15.png"
+    },
+    {
+      "route": "/explore/groups",
+      "expected": [
+        "GROUPS AND LEAGUES",
+        "Planned"
+      ],
+      "passed": true,
+      "xml": "16.xml",
+      "screenshot": "16.png"
+    },
+    {
+      "route": "/profile",
+      "expected": [
+        "Only you can see this page.",
+        "sample-climber"
+      ],
+      "passed": true,
+      "xml": "17.xml",
+      "screenshot": "17.png"
+    },
+    {
+      "route": "/profile/edit",
+      "expected": [
+        "EDIT PROFILE",
+        "Planned"
+      ],
+      "passed": true,
+      "xml": "18.xml",
+      "screenshot": "18.png"
+    },
+    {
+      "route": "/profile/public",
+      "expected": [
+        "PUBLIC PROFILE",
+        "Planned"
+      ],
+      "passed": true,
+      "xml": "19.xml",
+      "screenshot": "19.png"
+    },
+    {
+      "route": "/profile/privacy",
+      "expected": [
+        "PRIVACY",
+        "Planned"
+      ],
+      "passed": true,
+      "xml": "20.xml",
+      "screenshot": "20.png"
+    },
+    {
+      "route": "/routes/11/beta",
+      "expected": [
+        "BETA",
+        "The patient heel hook",
+        "Planned"
+      ],
+      "passed": true,
+      "xml": "21.xml",
+      "screenshot": "21.png"
+    }
+  ],
+  "writesUnchanged": true,
+  "passed": true
+}

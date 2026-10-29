@@ -1,0 +1,2 @@
+import { defineConfig } from '@playwright/test';
+export default defineConfig({testDir:'./tests/e2e',fullyParallel:false,workers:1,timeout:30000,reporter:[['list'],['json',{outputFile:'docs/evidence/e2e.json'}]],use:{baseURL:'http://localhost:8081',viewport:{width:390,height:844},reducedMotion:'reduce',locale:'en-MY',timezoneId:'Asia/Kuala_Lumpur',launchOptions:{executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'},screenshot:'only-on-failure'},outputDir:'docs/evidence/e2e-artifacts'});

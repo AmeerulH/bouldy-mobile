@@ -1,0 +1,46 @@
+{
+  "pages": {
+    "/welcome": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/signup": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/gyms": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/gyms/1": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/gyms/1/routes/new": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/gyms/1/routes/11/edit": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/sessions/3/routes/new": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    }
+  },
+  "identity": {
+    "status": 401,
+    "cacheControl": "no-store, private"
+  },
+  "crossOriginSignup": {
+    "status": 403
+  }
+}

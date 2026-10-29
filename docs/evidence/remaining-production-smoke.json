@@ -1,0 +1,219 @@
+{
+  "scope": "Local exported production HTTP smoke; unauthenticated shells, not browser UI or data equivalence",
+  "pages": {
+    "/welcome": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/login": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/signup": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/gyms": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/gyms/1": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/gyms/1/routes/new": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/gyms/1/routes/11/edit": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/sessions": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/sessions/3": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/sessions/3/routes/new": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/climbs": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/routes/11": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/profile": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/explore": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/explore/feed": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/explore/climbers": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/explore/leaderboards": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/explore/challenges": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/explore/groups": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/profile/edit": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/profile/public": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/profile/privacy": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    },
+    "/routes/11/beta": {
+      "status": 200,
+      "hydrationScripts": 6,
+      "fixtureBanner": false
+    }
+  },
+  "other": {
+    "/history": {
+      "status": 307,
+      "location": "http://127.0.0.1:8083/sessions",
+      "cacheControl": null,
+      "branded404": false
+    },
+    "/brand-preview": {
+      "status": 404,
+      "location": null,
+      "cacheControl": "no-store",
+      "branded404": true
+    },
+    "/loading-preview": {
+      "status": 404,
+      "location": null,
+      "cacheControl": "no-store",
+      "branded404": true
+    },
+    "/component-preview": {
+      "status": 404,
+      "location": null,
+      "cacheControl": "no-store",
+      "branded404": true
+    },
+    "/missing-bouldy-route": {
+      "status": 404,
+      "location": null,
+      "cacheControl": null,
+      "branded404": true
+    },
+    "/api/identity": {
+      "status": 401,
+      "cacheControl": "no-store, private"
+    },
+    "/api/snapshot?view=profile": {
+      "status": 401,
+      "cacheControl": "no-store, private"
+    },
+    "/api/snapshot?view=climbs": {
+      "status": 401,
+      "cacheControl": "no-store, private"
+    },
+    "/api/snapshot?view=beta&id=11": {
+      "status": 401,
+      "cacheControl": "no-store, private"
+    },
+    "crossOriginSignup": {
+      "status": 403
+    }
+  },
+  "assets": {
+    "manifest": {
+      "status": 200,
+      "display": "standalone",
+      "scope": "/"
+    },
+    "/icons/icon-192.png": {
+      "status": 200,
+      "size": "192x192"
+    },
+    "/icons/icon-512.png": {
+      "status": 200,
+      "size": "512x512"
+    },
+    "/icons/maskable-512.png": {
+      "status": 200,
+      "size": "512x512"
+    },
+    "/sw.js": {
+      "status": 200,
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    "/offline.html": {
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "/fonts/Geist-400.ttf": {
+      "status": 200,
+      "contentType": "font/ttf"
+    },
+    "/fonts/Geist-OFL.txt": {
+      "status": 200,
+      "contentType": "text/plain; charset=UTF-8"
+    },
+    "/brand/bolt-b.svg": {
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    "/route-holds/red.svg": {
+      "status": 200,
+      "contentType": "image/svg+xml"
+    }
+  }
+}

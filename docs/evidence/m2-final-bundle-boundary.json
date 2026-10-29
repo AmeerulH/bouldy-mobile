@@ -1,0 +1,11 @@
+{
+  "checkedBundles": 14,
+  "markers": [
+    "bouldy-api.onrender.com",
+    "BOULDY_LOCAL_API",
+    "walkthrough-sample",
+    "fixture-only"
+  ],
+  "hits": [],
+  "scope": "Selected ASCII marker scan only; not a full security audit"
+}

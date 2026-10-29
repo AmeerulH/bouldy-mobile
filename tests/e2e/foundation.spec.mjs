@@ -1,0 +1,36 @@
+import {test,expect} from '@playwright/test';
+import {mkdir} from 'node:fs/promises';
+const control=async(scenario='normal',reset=true)=>fetch('http://127.0.0.1:4010/__control',{method:'POST',body:JSON.stringify({scenario,reset})});
+const state=async()=>await(await fetch('http://127.0.0.1:4010/__state')).json();
+async function signIn(page){await page.goto('/login',{waitUntil:'networkidle'});await page.getByLabel('Email',{exact:true}).fill('climber@example.test');await page.getByLabel('Password',{exact:true}).fill('fixture-only');await page.getByRole('button',{name:'Log in',exact:true}).click();await page.waitForURL('http://localhost:8081/');await expect(page.getByText('Recent sessions',{exact:true})).toBeVisible();}
+test.beforeEach(async()=>{await control();});
+test('login, current visit +1, Send without increment, saved history and browser restart',async({page,context,browser})=>{
+ await signIn(page);const cookie=(await context.cookies()).find(c=>c.name==='bouldy_token');expect(cookie.httpOnly).toBe(true);expect(cookie.sameSite).toBe('Lax');
+ await page.getByRole('link',{name:'Open',exact:true}).click();await page.waitForURL(/\/sessions\/3$/);
+ await page.getByRole('button',{name:'Log a try on V3 The patient heel hook',exact:true}).click();
+ await expect.poll(async()=> (await state()).attempts.find(a=>a.id===31).num_attempts).toBe(3);await expect(page.getByText('3 tries today',{exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'V3, The patient heel hook',exact:true}).click();await expect(page.getByRole('button',{name:'Close V3 · red',exact:true})).toBeVisible();await page.getByRole('button',{name:'Sent',exact:true}).click();
+ await expect.poll(async()=> (await state()).attempts.find(a=>a.id===31).result).toBe('send');expect((await state()).attempts.find(a=>a.id===31).num_attempts).toBe(3);
+ await page.getByRole('button',{name:'V3, The patient heel hook',exact:true}).click();await page.getByRole('link',{name:/Your route history/}).click();await expect(page.getByText('7 tries across 2 visits',{exact:true})).toBeVisible();
+ const stored=await context.storageState();const restarted=await browser.newContext({storageState:stored,viewport:{width:390,height:844}});const p=await restarted.newPage();await p.goto('http://localhost:8081/routes/11?from=3');await expect(p.getByText('7 tries across 2 visits',{exact:true})).toBeVisible();await restarted.close();
+});
+test('failed attempt stays in route sheet; failed note keeps draft and changes no counts',async({page})=>{
+ await signIn(page);await page.goto('/sessions/3?sheet=route-11');await expect(page.getByRole('button',{name:'Close V3 · red',exact:true})).toBeVisible();await control('attempt-error',false);await page.getByRole('button',{name:'+1 try',exact:true}).click();await expect(page.getByRole('dialog',{name:'V3 · red',exact:true}).getByText('Could not save this sample attempt. Try again.',{exact:true})).toBeVisible();expect((await state()).writes).toEqual([]);
+ await control('note-error',false);await page.getByRole('button',{name:'Edit note',exact:true}).click();await page.getByLabel('Your note',{exact:true}).fill('Keep this unsaved draft');await page.getByRole('button',{name:'Save note',exact:true}).click();await expect(page.getByText('Could not save this sample note. Try again.',{exact:true})).toBeVisible();await expect(page.getByLabel('Your note',{exact:true})).toHaveValue('Keep this unsaved draft');expect((await state()).writes).toEqual([]);
+});
+test('sheet Back, close, Escape and cold-link dismissal preserve session destination',async({page})=>{
+ await signIn(page);await page.goto('/sessions/3');await page.getByRole('button',{name:'V3, The patient heel hook',exact:true}).click();await expect(page.getByRole('button',{name:'Close V3 · red',exact:true})).toBeVisible();await page.goBack();await expect(page.getByRole('button',{name:'Close V3 · red',exact:true})).not.toBeVisible();await expect(page).toHaveURL(/\/sessions\/3$/);
+ await page.goto('/sessions/3?sheet=route-11');await page.getByRole('button',{name:'Close V3 · red',exact:true}).click();await expect(page).toHaveURL(/\/sessions\/3$/);await page.goto('/sessions/3?sheet=route-11');await page.getByRole('button',{name:'Close V3 · red',exact:true}).waitFor();await page.keyboard.press('Escape');await expect(page).toHaveURL(/\/sessions\/3$/);
+});
+test('partial and duplicate history retain uncertainty; expiry returns to Welcome',async({page})=>{
+ await signIn(page);await control('partial',false);await page.goto('/sessions/3?sheet=route-16');await expect(page.getByRole('dialog',{name:'V2 · purple',exact:true}).getByText('Flash is unavailable until your full history loads.',{exact:true})).toBeVisible();await expect(page.getByRole('button',{name:'⚡ Flash',exact:true})).not.toBeVisible();await control('duplicate',false);await page.goto('/sessions/3?sheet=route-11');await expect(page.getByText('Conflicting logs for this route. Review the source records in route history; logging and corrections are paused.',{exact:true})).toBeVisible();await control('expired',false);await page.reload();await expect(page).toHaveURL(/\/welcome$/);
+});
+test('final matched viewport captures of the foundation',async({page,context})=>{
+ test.setTimeout(90000);
+ await mkdir('docs/evidence/target-current',{recursive:true});
+ for(const width of [390,320,430,1440]){
+  await page.setViewportSize({width,height:844});await context.clearCookies();for(const [name,path] of [['welcome','/welcome'],['login','/login']]){await page.goto(path);await page.getByText(name==='login'?'Meet Bouldy':'Already climbing? Log in',{exact:true}).waitFor();await page.evaluate(()=>document.fonts.ready);await page.screenshot({animations:'disabled',path:`docs/evidence/target-current/${name}-${width}.png`});}
+  await signIn(page);await page.screenshot({animations:'disabled',path:`docs/evidence/target-current/home-${width}.png`});await page.goto('/sessions/3');await page.getByRole('button',{name:'V3, The patient heel hook',exact:true}).waitFor();await page.screenshot({animations:'disabled',path:`docs/evidence/target-current/session-${width}.png`});await page.goto('/sessions/3?sheet=route-11',{waitUntil:'networkidle'});await page.getByRole('button',{name:'Close V3 · red',exact:true}).waitFor();await page.screenshot({animations:'disabled',path:`docs/evidence/target-current/route-sheet-${width}.png`});
+ }
+});
+test('filters restore after a saved try and clear when authentication ends',async({page})=>{await signIn(page);await page.goto('/sessions/3');await page.getByRole('textbox',{name:'Search routes',exact:true}).fill('heel');await expect(page.getByText('1 of 6 routes',{exact:true})).toBeVisible();await page.getByRole('button',{name:'Log a try on V3 The patient heel hook',exact:true}).click();await expect(page.getByText('3 tries today',{exact:true})).toBeVisible();await expect(page.getByRole('textbox',{name:'Search routes',exact:true})).toHaveValue('heel');await page.evaluate(()=>fetch('/api/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command:'logout',fields:{}})}));await page.reload();await expect(page).toHaveURL(/\/welcome$/);expect(await page.evaluate(()=>Object.keys(sessionStorage).filter(k=>k.startsWith('bouldy:routes:')))).toEqual([]);});

@@ -1,0 +1,11 @@
+{"text": "", "content-desc": "Tools", "class": "android.widget.ImageView", "clickable": "false", "bounds": "[915,87][993,165]", "focused": "false", "password": "false"}
+{"text": "bouldy.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[177,180][417,276]", "focused": "false", "password": "false"}
+{"text": "BACK FOR\nANOTHER TRY.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[72,366][768,572]", "focused": "false", "password": "false"}
+{"text": "Your projects, sends and small wins. All here.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[72,608][768,752]", "focused": "false", "password": "false"}
+{"text": "Enter your email and password.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[120,866][960,926]", "focused": "false", "password": "false"}
+{"text": "Email", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[72,1040][1008,1100]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Email", "class": "android.widget.EditText", "clickable": "true", "bounds": "[72,1118][1008,1262]", "focused": "false", "password": "false"}
+{"text": "Password", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[72,1310][1008,1370]", "focused": "false", "password": "false"}
+{"text": "[password hidden]", "content-desc": "Password", "class": "android.widget.EditText", "clickable": "true", "bounds": "[72,1388][1008,1532]", "focused": "false", "password": "true"}
+{"text": "", "content-desc": "busy", "class": "android.widget.Button", "clickable": "true", "bounds": "[72,1604][1008,1748]", "focused": "false", "password": "false"}
+{"text": "Log in", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[479,1646][602,1706]", "focused": "false", "password": "false"}

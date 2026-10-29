@@ -1,0 +1,10 @@
+{
+  "exactSourceBodiesPresent": {
+    "signup": true,
+    "startSession": true,
+    "addGym": true,
+    "addRoute": true,
+    "editRoute": true
+  },
+  "note": "addRoute range includes style helpers and editRoute. Trusted-boundary extensions documented separately."
+}

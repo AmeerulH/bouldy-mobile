@@ -1,0 +1,23 @@
+{"text": "", "content-desc": "Dismiss V3 \u00b7 red", "class": "android.view.ViewGroup", "clickable": "true", "bounds": "[0,72][1080,1776]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "V3 \u00b7 red", "class": "android.view.ViewGroup", "clickable": "false", "bounds": "[0,276][1080,1776]", "focused": "false", "password": "false"}
+{"text": "V3 \u00b7 RED", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,354][888,426]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Close V3 \u00b7 red", "class": "android.widget.Button", "clickable": "true", "bounds": "[912,324][1044,456]", "focused": "false", "password": "false"}
+{"text": "The patient heel hook", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[264,489][1020,555]", "focused": "false", "password": "false"}
+{"text": "Slab \u00b7 Set by Sample setter", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[264,567][1020,627]", "focused": "false", "password": "false"}
+{"text": "Balance", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[90,690][230,738]", "focused": "false", "password": "false"}
+{"text": "Slab", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[308,690][386,738]", "focused": "false", "password": "false"}
+{"text": "Today", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,837][522,885]", "focused": "false", "password": "false"}
+{"text": "Earlier visits", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[558,837][1020,885]", "focused": "false", "password": "false"}
+{"text": "4", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,897][95,969]", "focused": "false", "password": "false"}
+{"text": "Send", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[149,909][240,957]", "focused": "false", "password": "false"}
+{"text": "4", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[558,897][593,969]", "focused": "false", "password": "false"}
+{"text": "tries", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[611,925][691,973]", "focused": "false", "password": "false"}
+{"text": "Route complete. Use Correct this log to change the result.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1060][1020,1180]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Correct this log", "class": "android.widget.Button", "clickable": "true", "bounds": "[60,1243][1020,1375]", "focused": "false", "password": "false"}
+{"text": "Correct this log", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1279][372,1339]", "focused": "false", "password": "false"}
+{"text": "Result", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1399][522,1447]", "focused": "false", "password": "false"}
+{"text": "Attempts", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[558,1399][1020,1459]", "focused": "false", "password": "false"}
+{"text": "", "content-desc": "Result", "class": "android.widget.Spinner", "clickable": "true", "bounds": "[60,1465][522,1632]", "focused": "false", "password": "false"}
+{"text": "In progress", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1468][378,1629]", "focused": "false", "password": "false"}
+{"text": "4", "content-desc": "Attempts", "class": "android.widget.EditText", "clickable": "true", "bounds": "[558,1477][1020,1621]", "focused": "false", "password": "false"}
+{"text": "A flash is always one attempt. Corrections don't add another try.", "content-desc": "", "class": "android.widget.TextView", "clickable": "false", "bounds": "[60,1668][1020,1776]", "focused": "false", "password": "false"}
