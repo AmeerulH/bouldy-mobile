@@ -11,3 +11,6 @@ reference/toolchains/
 dist-native/
 **/.next/
 **/.vercel/
+
+# Generated Impeccable detector cache; design context remains versionable.
+.impeccable/hook.cache.json

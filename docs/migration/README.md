@@ -1,6 +1,6 @@
 # Bouldy migration planning package
 
-Prepared 28 October 2026. This is a specification and reference package, not an implemented React Native app.
+Original planning package prepared 28 October 2026. The app has since been implemented in this repository; this directory retains the baseline contract and working parity registers. Start with [current progress](../../MIGRATION_PROGRESS.md) and [the project guide](../PROJECT_GUIDE.md), not a fresh execution of the historical starter prompt.
 
 Start with [the full migration spec](../REACT_NATIVE_MIGRATION_SPEC.md), then [the parity register](PARITY_REGISTER.md) and [the agent handoff](IMPLEMENTATION_HANDOFF.md). The handoff includes Notion links and a copy-paste continuation prompt.
 
@@ -16,7 +16,7 @@ Start with [the full migration spec](../REACT_NATIVE_MIGRATION_SPEC.md), then [t
 - `NOTION_LINKS.json`: current plan, spec, register and tracking-page identities.
 - `VERIFICATION.md`: what was checked while preparing the plan and what is still unverified.
 
-Every migration row begins **Not started / Not verified**. Use these registers to record actual work later; do not infer completion from the existence of this package.
+At the planning baseline every migration row began **Not started / Not verified**. Current CSV implementation/evidence fields have since changed; unverified acceptance remains open. Use current progress and affected rows rather than inferring completion from this package or a Done card.
 
 ## Historical visual references
 
@@ -34,4 +34,4 @@ It does not emulate complete validation, ownership, concurrency, all response co
 
 `output/migration/bouldy-react-native-migration-handoff.zip` contains the spec, registers, handoff, API/fixture evidence, selected source documentation and all original screenshots. `PACKAGE_MANIFEST.json` records SHA-256 values for its entries. It is a handoff reference, **not** a full source/Git archive or a replacement for preserving the old repo.
 
-No new repo, dependency installation, Expo scaffold, app implementation, production write, commit, push or deployment was performed.
+At the original planning checkpoint no new repository, dependency installation, Expo scaffold, app implementation, production write, commit, push or deployment was performed. Later implementation/publication is documented in current progress; that historical statement is not the present app status.

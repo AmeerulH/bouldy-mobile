@@ -1,8 +1,39 @@
-# Bouldy native migration
-Read MIGRATION_PROGRESS.md first. Canonical carried contract: docs/REACT_NATIVE_MIGRATION_SPEC.md. Source snapshot and provenance are in reference/; toolchains and generated caches stay local and ignored. Do not reset or edit the old repo. The user explicitly authorised the initial commit and push to a new public GitHub repository on 29 October 2026. This supersedes the earlier local-only commit/push restriction for that publication. Deployments, Bouldy production writes and deletion/archive operations remain unauthorised. Single agent only.
+# Bouldy native and PWA application
 
-The user authorised finishing all remaining local migration implementation on 29 October. All original routes now have local implementations. M2/M6 and every cross-platform parity row remain OPEN; no release/cutover is authorised. Read current android-final-* evidence and the screenshot gallery, then historical remaining-* evidence and close recorded acceptance gaps instead of recreating screens or rediscovering documents. This is a 1:1 reproduction, not a redesign. Preserve tokens, typography, SVGs, flows, copies, guards, counting and uncertainty. No default native/template restyling. Keep every unverified parity row open.
+## Start here
 
-Use arm64 Node 24.11.1 explicitly. Verify package.json exists before installing. Run lint, typecheck, unit/command tests, Expo checks, web/server and native export; inspect matching renders. Record unavailable toolchains/devices honestly. Client code must never import src/server at runtime. Only +api.ts endpoints may do that. Use isolated loopback fixtures for all writes. No mutation queues or automatic write retries. Never log credentials.
+Read the latest section of [MIGRATION_PROGRESS.md](MIGRATION_PROGRESS.md), then [PRODUCT.md](PRODUCT.md), [DESIGN.md](DESIGN.md) and [docs/CODE_QUALITY.md](docs/CODE_QUALITY.md) as relevant to the task. [docs/PROJECT_GUIDE.md](docs/PROJECT_GUIDE.md) maps the source tree, verified Notion Kanban views and documentation. Do not repeat completed discovery or reread duplicate full specifications without a discrepancy to resolve.
 
-29 October live-API follow-up: normal startup now explicitly uses the real API; synthetic mutation testing requires start:fixture. User authorised the follow-up push, then clarified GitHub main only for now. No site deployment or old-site cutover is requested. Preserve the original repo and production climbing records. BLY-077 is Done by owner request with unchecked acceptance gates retained; BLY-035 installed-PWA verification remains open. Read the latest progress section before historical fixture notes.
+The canonical carried migration contract is [docs/REACT_NATIVE_MIGRATION_SPEC.md](docs/REACT_NATIVE_MIGRATION_SPEC.md). Local files are authoritative when available; Notion supplies fallback/shared coordination. Report conflicts explicitly. `docs/SOURCE_*` and `reference/source/` are preserved historical records, not current setup instructions.
+
+## Product and design contract
+
+Bouldy is a personal climbing journal: gym → session → route → attempt/result/private note → history. Build for iOS and Android with shared Expo web/PWA output. This is a one-for-one migration, not a redesign. Preserve current UI, copy, typography, token values, SVGs, phone-width canvas, flows, counting, validation and uncertainty. Use current shared components; no stock native/template restyling or new backlog features.
+
+When invoking Impeccable, load its context once per session and use root PRODUCT/DESIGN plus `.impeccable/design.json`. Preserve the incumbent “The Climber’s Logbook” direction. The explicit migration brief overrides generic suggestions for system fonts, dark themes, Material/Cupertino reskins or expanded desktop/tablet layouts. Read the relevant playbook and craft floor before UI edits; do bounded visual verification and run the requested detector only on changed UI. Documentation work derives from actual code and evidence, not invented design choices. Single agent only unless the user explicitly changes that instruction.
+
+## Engineering requirements
+
+Follow [docs/CODE_QUALITY.md](docs/CODE_QUALITY.md). Keep strict types, clear state models, focused readable functions, shared primitives and explicit platform boundaries. Reuse existing helpers. Do not add speculative abstractions, duplicate feature logic, broad refactors or dependencies without a demonstrated need.
+
+Client/native code must never import `src/server` at runtime. Only `+api.ts` endpoints cross that boundary. Preserve server-side validation/ownership and command-origin protection. Web credentials remain HTTP-only; native credentials use SecureStore. Never log or document passwords/tokens. Preserve account lifecycle guards, partial/ambiguous reads, current/prior session counts and failed drafts. No mutation queues or automatic write retries.
+
+Normal `npm start`, `start:live` and `web` use the real API through the trusted adapter. Use `npm run fixture` plus `npm run start:fixture` for synthetic testing. Automated/exploratory record writes must use isolated fixtures unless the user specifically authorises the environment and records. A simulator loopback adapter origin is not a production/physical-phone configuration.
+
+Verify safe areas, keyboard access, text scaling, focus, screen-reader state, Back/dismissal, touch geometry and reduced motion on affected platforms. Record any conflict with exact visual parity; do not silently redesign or certify accessibility. PWA caching remains public-fallback-only: no authenticated responses, private journal cache, forced draft-losing reload or write replay.
+
+## Verification and reporting
+
+Use arm64 Node 24.11.1 explicitly. Verify this directory's package.json before installing. Implementation checkpoints require lint, typecheck, meaningful domain/command tests, Expo compatibility/Doctor, web/server export and iOS/Android export as affected. Observe matching native/browser renders for UI changes. Docs-only changes need link, metadata, token/source and diff checks; do not rerun builds or write implementation-mirroring tests without a runtime change.
+
+Do not export concurrently with active native/browser QA or source edits. Do not bypass a browser-control policy block with another automation surface. Record unavailable toolchains/devices honestly. Existing test results are dated evidence; 75 passing tests or an exported bundle is not a fresh full-platform or release verdict. Do not suppress the known React Native compatibility mismatch or dependency advisories.
+
+All original routes have local implementations. M2/M6 and every unaccepted cross-platform parity row remain OPEN. Start from current `live-api-*`, `android-final-*` and screenshot evidence; earlier `remaining-*` records are historical. Update progress and affected registers with what was actually observed. Keep unverified acceptance rows open.
+
+## Task board and release boundaries
+
+Use the existing [Bouldy — Task Board](https://app.notion.com/p/4b6c2168a8ab47289704a345a3ae239c), with Kanban/Frontend/Backend views linked in the project guide. Preserve Task IDs, dependencies, acceptance criteria, scope and existing evidence; do not duplicate cards or invent owners/dates. Read a card before updating it. Status Done does not itself approve production release.
+
+BLY-077 is Done by owner request, with unchecked acceptance gates retained. BLY-035 installed-PWA verification remains open. Re-check live properties before reporting a later status.
+
+The user authorised the initial public repository publication and the live-API follow-up, then clarified GitHub main only for now. Do not infer deployment, production record changes, signing/account provisioning, old-site cutover or source retirement from those pushes. Commit/push only within the user's authorised scope. Do not reset or edit the old `../bouldy-web` repository; preserve uncommitted work, source/history backups and rollback evidence. No deletion or archive operation is authorised. Toolchains, caches, dependencies and generated exports stay local/ignored.

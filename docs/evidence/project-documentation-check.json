@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-29",
+  "checked_at_utc": "2026-10-29T15:10:39.612496+00:00",
+  "scope": "Documentation/context only; no runtime test/build claim",
+  "markdown_files_checked": 8,
+  "local_links_checked": 73,
+  "missing_local_links": [],
+  "design_validation": {
+    "frontmatter": "valid",
+    "colours": 23,
+    "sidecar": "consistent",
+    "components": 7,
+    "primitiveSources": "matched",
+    "sections": "canonical order"
+  },
+  "notion_board": "Bouldy — Task Board; five board views read from the connected database",
+  "notion_cards": {
+    "BLY-077": "Done; owner closure does not accept unchecked gates",
+    "BLY-035": "Backlog; installed-PWA verification open"
+  },
+  "impeccable_runtime": "4.5.2; user-requested 4.8.0 update deferred to next turn",
+  "runtime_files_changed": false,
+  "generated_detector_cache": "ignored; design sidecar retained",
+  "canonical_spec_sha256": "373a93790554e03aa129b3aa0c4159c2ee683cbf030acacca8e3ad418b94b967",
+  "checked_files": {
+    "PRODUCT.md": "51f9a723b5a2f9f7475361b7bbdf0e4303d1bab554d8820ee70d2a7599a6cc04",
+    "DESIGN.md": "1cd712cd572478b28f9812a9bd80337502e3ca0089deaa387cf36ed9d4c00b71",
+    "docs/PROJECT_GUIDE.md": "90fccd2d513ef5dbe92b88908cd56d2ad9a044319b44463bea4e36c0e799200b",
+    "docs/CODE_QUALITY.md": "8df41aedfaf27fce241c46d517c0eab28e6088eb105e10537c7c1954f1f2214a",
+    "AGENTS.md": "7377792df528b6fcc1dbb0372b667645a24231a84f321a0df80d4910f26d6015",
+    "README.md": "d100c03219c8d03c93277b0eb75530cfa5d868be61719ac10ceb603e0773f570",
+    "MIGRATION_PROGRESS.md": "ee5941bc921c8bfe570072844de6287a45a631304d5a61779ce732feaf3686f2",
+    "docs/migration/README.md": "ac386e7bacabbd78016c97c229006d720d3bb11a511f9fdc2b458b1df22617a0",
+    ".impeccable/design.json": "89dd7d0e2031c95def84d3e4acfd5d829f7267eb574f34cd1b948e05085d949c",
+    "docs/migration/NOTION_LINKS.json": "4398656586a1227ed2268c71d10c80378bbcbb8a0e3be8dd0409add4b48a0f03",
+    ".gitignore": "3da7f1e72eee2caa8b216e8d0547fbdda47bfc7a53d7af6111e4dca578d174f5"
+  },
+  "publication": "User authorised documentation commit/push to GitHub main; no deployment"
+}

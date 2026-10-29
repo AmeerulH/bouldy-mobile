@@ -2,6 +2,12 @@
 
 React Native + Expo SDK 58 / React Native 0.88 / React 19.3 / Expo Router 58, with React Native Web and a trusted application API adapter in this repository. All 24 source product screens, the history alias, both original development routes and all 11 commands now have local implementations. Full migration acceptance remains open; this has not been released as a replacement. Read [MIGRATION_PROGRESS.md](MIGRATION_PROGRESS.md) before continuing. Public repository: [AmeerulH/bouldy-mobile](https://github.com/AmeerulH/bouldy-mobile).
 
+## Project context
+
+Start with [PRODUCT.md](PRODUCT.md) for what Bouldy does, [DESIGN.md](DESIGN.md) for the existing design specifications, and [CODE_QUALITY.md](docs/CODE_QUALITY.md) for mobile/native/PWA engineering and acceptance expectations. [PROJECT_GUIDE.md](docs/PROJECT_GUIDE.md) links the Notion Kanban/Frontend/Backend boards, specs, screenshots and code map. Coding agents must follow [AGENTS.md](AGENTS.md).
+
+Root product/design records describe this Expo repository; `docs/SOURCE_*` preserves the old web context. Full parity and release acceptance remain open even though the owner closed the migration implementation card.
+
 ## Live API review
 
 Normal startup connects the trusted adapter to `https://bouldy-api.onrender.com`. Native requests go through this repository's adapter, which keeps the original FastAPI authentication and command validation. Use an existing backend account; login takes its email, not its display username.

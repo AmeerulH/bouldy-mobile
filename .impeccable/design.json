@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T15:04:46.648094+00:00",
+  "title": "Design System: Bouldy",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Accent",
+        "canonical": "#d8151e",
+        "tonalRamp": [
+          "#440000",
+          "#6d0000",
+          "#960000",
+          "#bf0000",
+          "#e92f2e",
+          "#ff5c53",
+          "#ff8477",
+          "#ffab9b"
+        ]
+      },
+      "accent-strong": {
+        "role": "primary",
+        "displayName": "Accent Strong",
+        "canonical": "#b30000",
+        "tonalRamp": [
+          "#3f0000",
+          "#670000",
+          "#8f0000",
+          "#b70b06",
+          "#e04133",
+          "#ff6957",
+          "#ff8f7a",
+          "#ffb69f"
+        ]
+      },
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "Accent Ink",
+        "canonical": "#fbf7f7",
+        "tonalRamp": [
+          "#0d0a0a",
+          "#272424",
+          "#444141",
+          "#646060",
+          "#858181",
+          "#a8a4a4",
+          "#ccc8c8",
+          "#f1eded"
+        ]
+      },
+      "accent-tint": {
+        "role": "primary",
+        "displayName": "Accent Tint",
+        "canonical": "#ffe2dd",
+        "tonalRamp": [
+          "#170604",
+          "#331f1c",
+          "#523c38",
+          "#735b56",
+          "#957b77",
+          "#b99e99",
+          "#dec2bd",
+          "#ffe7e2"
+        ]
+      },
+      "accent-tint-ink": {
+        "role": "primary",
+        "displayName": "Accent Tint Ink",
+        "canonical": "#8a050d",
+        "tonalRamp": [
+          "#360000",
+          "#5c0000",
+          "#830005",
+          "#a92f2a",
+          "#d1544b",
+          "#f9786c",
+          "#ff9d8f",
+          "#ffc2b3"
+        ]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "Bg",
+        "canonical": "#fafafa",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#0d0d0d",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Ink Muted",
+        "canonical": "#4e4c4d",
+        "tonalRamp": [
+          "#0c0b0b",
+          "#262425",
+          "#434142",
+          "#636061",
+          "#848183",
+          "#a6a4a5",
+          "#cbc8c9",
+          "#f0eeef"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Ink Faint",
+        "canonical": "#706e6e",
+        "tonalRamp": [
+          "#0c0b0b",
+          "#262525",
+          "#434141",
+          "#636161",
+          "#848282",
+          "#a6a4a4",
+          "#cbc8c8",
+          "#f0eeee"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d6d3d4",
+        "tonalRamp": [
+          "#0c0b0b",
+          "#272425",
+          "#444142",
+          "#636061",
+          "#848182",
+          "#a7a4a5",
+          "#cbc8c9",
+          "#f0edee"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel",
+        "canonical": "#1c1a1a",
+        "tonalRamp": [
+          "#0c0b0b",
+          "#272424",
+          "#444141",
+          "#636060",
+          "#848181",
+          "#a7a4a4",
+          "#cbc8c8",
+          "#f0eeee"
+        ]
+      },
+      "panel-ink": {
+        "role": "neutral",
+        "displayName": "Panel Ink",
+        "canonical": "#f8f8f8",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "panel-ink-muted": {
+        "role": "neutral",
+        "displayName": "Panel Ink Muted",
+        "canonical": "#b0adae",
+        "tonalRamp": [
+          "#0c0b0b",
+          "#272425",
+          "#444142",
+          "#636061",
+          "#848182",
+          "#a7a4a5",
+          "#cbc8c9",
+          "#f1edee"
+        ]
+      },
+      "panel-track": {
+        "role": "neutral",
+        "displayName": "Panel Track",
+        "canonical": "#393738",
+        "tonalRamp": [
+          "#0c0b0b",
+          "#262425",
+          "#434142",
+          "#636061",
+          "#848183",
+          "#a7a4a5",
+          "#cbc8c9",
+          "#f0eeef"
+        ]
+      },
+      "neutral": {
+        "role": "neutral",
+        "displayName": "Neutral",
+        "canonical": "#eceaeb",
+        "tonalRamp": [
+          "#0c0b0b",
+          "#262525",
+          "#434142",
+          "#626161",
+          "#838283",
+          "#a6a4a5",
+          "#cac8c9",
+          "#f0eeef"
+        ]
+      },
+      "rail": {
+        "role": "neutral",
+        "displayName": "Rail",
+        "canonical": "#f0eeee",
+        "tonalRamp": [
+          "#0c0b0b",
+          "#262525",
+          "#434141",
+          "#626161",
+          "#838282",
+          "#a6a4a4",
+          "#cac8c8",
+          "#f0eeee"
+        ]
+      },
+      "flash-bg": {
+        "role": "secondary",
+        "displayName": "Flash Bg",
+        "canonical": "#c8f2c8",
+        "tonalRamp": [
+          "#001200",
+          "#082e0c",
+          "#284c29",
+          "#476c48",
+          "#678e68",
+          "#89b18a",
+          "#add6ad",
+          "#d2fcd2"
+        ]
+      },
+      "flash-ink": {
+        "role": "secondary",
+        "displayName": "Flash Ink",
+        "canonical": "#004b00",
+        "tonalRamp": [
+          "#001400",
+          "#003200",
+          "#095107",
+          "#31722d",
+          "#54944f",
+          "#76b871",
+          "#9ade94",
+          "#bfffb8"
+        ]
+      },
+      "send-bg": {
+        "role": "secondary",
+        "displayName": "Send Bg",
+        "canonical": "#cfe7ff",
+        "tonalRamp": [
+          "#000c1c",
+          "#142738",
+          "#304457",
+          "#4f6478",
+          "#6f859b",
+          "#91a8be",
+          "#b5cce4",
+          "#d9f2ff"
+        ]
+      },
+      "send-ink": {
+        "role": "secondary",
+        "displayName": "Send Ink",
+        "canonical": "#004192",
+        "tonalRamp": [
+          "#000047",
+          "#001969",
+          "#003d8d",
+          "#245fb2",
+          "#4781d8",
+          "#69a5ff",
+          "#8ccaff",
+          "#b0f1ff"
+        ]
+      },
+      "zone-bg": {
+        "role": "secondary",
+        "displayName": "Zone Bg",
+        "canonical": "#fee9be",
+        "tonalRamp": [
+          "#160700",
+          "#322200",
+          "#513f18",
+          "#715f38",
+          "#938058",
+          "#b6a37a",
+          "#dbc79d",
+          "#ffecc1"
+        ]
+      },
+      "zone-ink": {
+        "role": "secondary",
+        "displayName": "Zone Ink",
+        "canonical": "#6d4400",
+        "tonalRamp": [
+          "#200000",
+          "#3f1900",
+          "#603800",
+          "#82571d",
+          "#a57941",
+          "#ca9b63",
+          "#efbf87",
+          "#ffe5ab"
+        ]
+      },
+      "focus-web": {
+        "role": "neutral",
+        "displayName": "Focus Web",
+        "canonical": "#d32828",
+        "tonalRamp": [
+          "#400000",
+          "#690000",
+          "#910000",
+          "#ba000e",
+          "#e33b36",
+          "#ff645a",
+          "#ff8b7d",
+          "#ffb1a1"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Climbing display",
+        "purpose": "Existing condensed page statements; preserve route-specific overrides."
+      },
+      "body": {
+        "displayName": "Journal body",
+        "purpose": "Task and journal content."
+      }
+    },
+    "shadows": [
+      {
+        "name": "snackbar",
+        "value": "0 6px 20px rgba(13,13,13,.28)",
+        "purpose": "Transient snackbar only; resting cards remain flat."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.22,1,.36,1)",
+        "purpose": "Shared entrance curve."
+      },
+      {
+        "name": "sheet-exit",
+        "value": "cubic-bezier(.64,0,.78,0)",
+        "purpose": "Sheet dismissal."
+      },
+      {
+        "name": "sheet-in",
+        "value": "260ms",
+        "purpose": "Sheet entrance."
+      },
+      {
+        "name": "sheet-out",
+        "value": "200ms",
+        "purpose": "Sheet exit."
+      },
+      {
+        "name": "snackbar-in",
+        "value": "260ms",
+        "purpose": "Snackbar entrance."
+      },
+      {
+        "name": "snackbar-out",
+        "value": "180ms",
+        "purpose": "Snackbar exit."
+      },
+      {
+        "name": "snackbar-visible",
+        "value": "5000ms",
+        "purpose": "Snackbar lifetime."
+      },
+      {
+        "name": "welcome",
+        "value": "500ms",
+        "purpose": "Welcome entrance."
+      },
+      {
+        "name": "tab-transition",
+        "value": "220ms",
+        "purpose": "Primary-route transition."
+      },
+      {
+        "name": "push-transition",
+        "value": "260ms",
+        "purpose": "Pushed-route transition."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone-canvas-cap",
+        "value": "430px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button Primary",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Shared Button variant; actual pending state uses the runtime spinner and blocks repeat submission.",
+      "html": "<button class=\"ds-button-primary\">Save</button>",
+      "css": ".ds-button-primary{background:#d8151e;color:#fbf7f7;border:0;border-radius:999px;min-height:48px;padding:0 20px;font:700 14px/20px \"Geist-700\",Geist,sans-serif}.ds-button-primary:hover:not(:disabled){cursor:pointer}.ds-button-primary:focus-visible{outline:3px solid #d32828;outline-offset:3px}.ds-button-primary:active:not(:disabled){transform:translateY(1px) scale(.985)}.ds-button-primary:disabled{opacity:.72}"
+    },
+    {
+      "name": "Button Dark",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Shared Button variant; actual pending state uses the runtime spinner and blocks repeat submission.",
+      "html": "<button class=\"ds-button-dark\">Save</button>",
+      "css": ".ds-button-dark{background:#1c1a1a;color:#f8f8f8;border:0;border-radius:999px;min-height:48px;padding:0 20px;font:700 14px/20px \"Geist-700\",Geist,sans-serif}.ds-button-dark:hover:not(:disabled){cursor:pointer}.ds-button-dark:focus-visible{outline:3px solid #d32828;outline-offset:3px}.ds-button-dark:active:not(:disabled){transform:translateY(1px) scale(.985)}.ds-button-dark:disabled{opacity:.72}"
+    },
+    {
+      "name": "Button Soft",
+      "kind": "button",
+      "refersTo": "button-soft",
+      "description": "Shared Button variant; actual pending state uses the runtime spinner and blocks repeat submission.",
+      "html": "<button class=\"ds-button-soft\">Save</button>",
+      "css": ".ds-button-soft{background:#ffe2dd;color:#8a050d;border:0;border-radius:999px;min-height:48px;padding:0 20px;font:700 14px/20px \"Geist-700\",Geist,sans-serif}.ds-button-soft:hover:not(:disabled){cursor:pointer}.ds-button-soft:focus-visible{outline:3px solid #d32828;outline-offset:3px}.ds-button-soft:active:not(:disabled){transform:translateY(1px) scale(.985)}.ds-button-soft:disabled{opacity:.72}"
+    },
+    {
+      "name": "Labelled field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Shared Field label and minimum control height.",
+      "html": "<label class=\"ds-field\">Route name<input placeholder=\"Name\" /></label>",
+      "css": ".ds-field{display:grid;gap:6px;color:#0d0d0d;font:600 14px/20px \"Geist-600\",Geist,sans-serif}.ds-field input{min-height:48px;border:1px solid #d6d3d4;border-radius:12px;padding:12px 14px;background:transparent;color:#0d0d0d;font:400 16px \"Geist-400\",Geist,sans-serif}.ds-field input:focus-visible{outline:3px solid #d32828;outline-offset:3px}"
+    },
+    {
+      "name": "Session summary",
+      "kind": "card",
+      "refersTo": "summary",
+      "description": "Dark record grouping; no resting shadow.",
+      "html": "<article class=\"ds-summary\"><span>LAST SESSION</span><strong>SESSION JOURNAL</strong></article>",
+      "css": ".ds-summary{padding:20px;border-radius:16px;background:#1c1a1a;color:#f8f8f8}.ds-summary span{color:#b0adae;font:400 12px/16px \"Geist-400\",Geist,sans-serif}.ds-summary strong{display:block;margin-top:8px;font:800 24px/24px \"BarlowCondensed-800\",\"Barlow Condensed\",sans-serif;letter-spacing:-.02em}"
+    },
+    {
+      "name": "Send result",
+      "kind": "chip",
+      "refersTo": "result-send",
+      "description": "Noninteractive result badge.",
+      "html": "<span class=\"ds-result\">Send</span>",
+      "css": ".ds-result{display:inline-flex;padding:4px 10px;border-radius:999px;background:#cfe7ff;color:#004192;font:700 12px/16px \"Geist-700\",Geist,sans-serif}"
+    },
+    {
+      "name": "Bottom navigation",
+      "kind": "nav",
+      "description": "Five destinations with current line icons, selected marker and labels; runtime additionally applies safe-area insets and routing.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary\"><a href=\"#home\" aria-current=\"page\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z\"/></svg><span>Home</span></a><a href=\"#explore\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m15.5 8.5-2 5-5 2 2-5z\"/></svg><span>Explore</span></a><a href=\"#sessions\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"5\" width=\"16\" height=\"16\" rx=\"2\"/><path d=\"M8 3v4m8-4v4M4 10h16\"/></svg><span>Sessions</span></a><a href=\"#gyms\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z\"/><circle cx=\"12\" cy=\"10\" r=\"2.5\"/></svg><span>Gyms</span></a><a href=\"#you\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"8\" r=\"3.5\"/><path d=\"M5 20c.8-3.6 3.8-5.5 7-5.5s6.2 1.9 7 5.5\"/></svg><span>You</span></a></nav>",
+      "css": ".ds-nav{display:flex;max-width:430px;padding:8px 0;background:#fafafa;border-top:1px solid #d6d3d4}.ds-nav a{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;padding:6px 0;color:#706e6e;font:500 11px/16.5px \"Geist-500\",Geist,sans-serif;text-decoration:none}.ds-nav a[aria-current]{color:#d8151e}.ds-nav a[aria-current]::after{content:\"\";position:absolute;bottom:0;width:18px;height:2px;border-radius:2px;background:#d8151e}.ds-nav a:hover{cursor:pointer}.ds-nav a:focus-visible{outline:3px solid #d32828;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Climber’s Logbook",
+    "overview": "This records the existing visual direction, not a new proposal. Bouldy feels like a compact personal logbook used between attempts: direct, easy to scan and specific to climbing. Condensed gym-signage headings sit above calm interface text. Detailed hold artwork and the Bolt B mark provide identity without turning records into decoration.\n\nThe canonical [migration specification](docs/REACT_NATIVE_MIGRATION_SPEC.md) governs exact parity. This document describes the current Expo implementation, checked against the preserved [source design](docs/SOURCE_DESIGN.md), theme modules and [Android fixture captures](docs/screenshots/android/README.md) on 29 October 2026. Captures establish visual evidence, not accepted parity. Any difference between source, code and this record must be reported and resolved rather than silently redesigned.",
+    "keyCharacteristics": [
+      "A light phone canvas with restrained dark summaries and one action accent.",
+      "Condensed uppercase headings, readable Geist controls and accurate session data.",
+      "Flat records, pill actions, detailed climbing holds and purposeful state feedback.",
+      "Shared branded UI with working native safe areas, keyboard behaviour and dismissal."
+    ],
+    "rules": [
+      {
+        "name": "The One Red Rule",
+        "body": "One shared action accent establishes hierarchy; do not assign unrelated accent themes per route or tab.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paired Surface Rule",
+        "body": "Dark summaries use the panel text tokens, while semantic badges keep their matched foreground/background pair.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Voice Rule",
+        "body": "Condensed type identifies climbing content; Geist makes controls and journal detail readable. Do not replace either family with a platform default as a migration shortcut.",
+        "section": "typography"
+      },
+      {
+        "name": "The Phone Canvas Rule",
+        "body": "Wider screens retain the same app hierarchy and reading width; no sidebar, desktop dashboard or decorative phone frame is implied.",
+        "section": "layout"
+      },
+      {
+        "name": "The State-Only Lift Rule",
+        "body": "Elevation belongs to transient feedback or overlays. The current snackbar has an explicit soft shadow; that is not permission to add decorative shadows to resting cards. Button press feedback uses the existing downward movement and slight compression.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the exact approved source copy, interface, assets and business semantics.",
+      "**Do** reuse shared primitives, theme roles, platform boundaries and reduced-motion handling.",
+      "**Do** verify safe areas, keyboard access, focus, text scaling and touch targets on the affected platform.",
+      "**Do** compare matching route/data/state captures before accepting visual parity.",
+      "**Do** record a visual/accessibility conflict explicitly and resolve it with the product owner."
+    ],
+    "donts": [
+      "**Don't** redesign the migration into a stock iOS/Material app or a wide desktop dashboard.",
+      "**Don't** add cream/beige palettes, glass effects, decorative gradients, nested cards or generic icon-card grids.",
+      "**Don't** replace the supplied fonts, Bolt B or hold artwork with approximations.",
+      "**Don't** hide failed reads, ambiguous history, missing content or unverified platform behaviour.",
+      "**Don't** treat these specifications, generated component previews or a Done card as proof of release readiness."
+    ]
+  }
+}

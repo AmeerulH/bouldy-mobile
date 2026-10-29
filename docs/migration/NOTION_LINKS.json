@@ -1,6 +1,6 @@
 {
-  "updatedDate": "2026-10-28",
-  "status": "Planning complete; migration implementation not started",
+  "updatedDate": "2026-10-29",
+  "status": "Implementation published; real API sign-in/read checks observed; full parity, installed-PWA and release acceptance remain open",
   "planningPage": {
     "id": "40776faa-3b39-8162-89e3-c6985884558e",
     "url": "https://app.notion.com/p/40776faa3b39816289e3c6985884558e?pvs=204"
@@ -22,10 +22,36 @@
     "id": "40676faa-3b39-8127-a698-d570e7631e24",
     "url": "https://app.notion.com/p/40676faa3b398127a698d570e7631e24?pvs=204",
     "name": "Migrate Bouldy 1:1 to React Native in a new app repository",
-    "priority": "P1 - Highest"
+    "priority": "P1 - Highest",
+    "status": "Done",
+    "statusNote": "Closed by product-owner request; unchecked acceptance gates retained"
   },
   "supersededPwaFirstPlan": {
     "id": "40676faa-3b39-8125-ba0b-ffaa3df5c550",
     "url": "https://app.notion.com/p/40676faa3b398125ba0bffaa3df5c550?pvs=204"
+  },
+  "taskBoard": {
+    "id": "4b6c2168-a8ab-4728-9704-a345a3ae239c",
+    "url": "https://app.notion.com/p/4b6c2168a8ab47289704a345a3ae239c",
+    "dataSourceUrl": "collection://58d423be-a9b9-4b16-aa7a-a7c399eb1d8f",
+    "views": {
+      "Kanban": "40376faa-3b39-817b-b5de-000c7b7b71e7",
+      "Frontend": "40376faa-3b39-81b7-9d95-000ccec290ee",
+      "Backend": "40376faa-3b39-812d-be1f-000ce573c0ef",
+      "Priorities": "40376faa-3b39-81cb-9825-000c2123478f",
+      "Decisions": "40376faa-3b39-8187-a0ad-000c8aa5d5a4"
+    },
+    "verifiedDate": "2026-10-29"
+  },
+  "installedPwaCard": {
+    "taskId": "BLY-035",
+    "id": "40376faa-3b39-8131-bb63-f24b27833621",
+    "url": "https://app.notion.com/p/40376faa3b398131bb63f24b27833621",
+    "acceptance": "Open; target-device installation/update/offline checks unverified",
+    "status": "Backlog"
+  },
+  "phoneReview": {
+    "id": "40876faa-3b39-8109-83cd-d8e80fb4d41a",
+    "url": "https://app.notion.com/p/40876faa3b39810983cdd8e80fb4d41a"
   }
 }

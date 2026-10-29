@@ -2,6 +2,16 @@
 
 Updated 29 October 2026. **All 27 original routes are implemented locally (24 product, one alias, two development), with all 11 commands and shared web/PWA output. Android Expo Go testing now works. Three Android bugs were fixed, 75/75 tests and fresh exports pass, and the requested gallery contains 195 Android screenshots. Full migration acceptance remains OPEN: fresh browser/installed-PWA, post-fix iOS, full three-platform visual/state/motion/account, physical-device and release checks. No release/cutover is authorised.**
 
+## Product/design/quality documentation — 29 October 2026
+
+User requested durable project Markdown with Impeccable design specifications, product context, Kanban locations and mobile/PWA code-quality expectations. Added root PRODUCT.md and DESIGN.md from the established source identity and observed Expo tokens/components, plus `.impeccable/design.json` for design-panel metadata/previews. Added `docs/PROJECT_GUIDE.md` with verified Task Board/ Kanban/Frontend/Backend/Priorities/Decisions links and `docs/CODE_QUALITY.md` with maintainability, domain correctness, trusted API/auth, accessibility, native lifecycle, performance, PWA cache/update and verification requirements. README and AGENTS now route future work to those records. Corrected the stale planning-only status in the migration index/Notion-links metadata; preserved original source documents and the canonical spec.
+
+This is documentation only: no app UI, runtime, dependency or backend changes, no new parity acceptance, no production record writes, no deployment and no commit/push in this documentation task. Validation covers local links, YAML/JSON, actual token values, sidecar consistency and a clean diff; runtime checks remain the prior dated evidence. The existing source “The Climber’s Logbook” direction is preserved; platform skill defaults do not authorise a redesign. Generated sidecar ramps/previews are documentation aids, not new runtime design tokens.
+
+The Impeccable context launcher ran once with installed v4.5.2. The user requested the available v4.8.0 update **in the next turn**; it has not been installed in this documentation turn. Do not rerun discovery or upgrade the skill while completing this packet.
+
+Publication follow-up: the user explicitly authorised committing and pushing this documentation packet to GitHub main on 29 October. Documentation links, recorded hashes, YAML/JSON, sidecar metadata and 23 runtime colour values were freshly verified before publication. No app deployment, runtime change or acceptance-gate closure is included.
+
 ## Real API connection and publication follow-up — 29 October 2026
 
 The user required the running app to use the real API, then authorised pushing the changes to production and moving the migration Kanban card to Done. The user clarified the destination as **GitHub main only for now**. Live-API changes and evidence were pushed as `bb6df8408b998a34a8290d9f1f194f32f0f3552e`; the remote main SHA matches and the worktree was clean after that push. No production site deployment or old-site cutover is requested in this follow-up. This does not authorise editing production climbing records or deleting/retiring the original repository.
