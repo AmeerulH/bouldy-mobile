@@ -56,7 +56,7 @@ export default function Layout() {
         <PageMotion>
           <Stack screenOptions={{ headerShown: false, animation: "none" }} />
         </PageMotion>
-        {!/\/routes\/new$|\/routes\/[^/]+\/edit$/.test(path) ? (
+        {!/\/routes\/new$|\/routes\/[^/]+\/edit$|^\/learn\/tour$/.test(path) ? (
           <View
             accessibilityRole="tablist"
             style={{
@@ -81,7 +81,8 @@ export default function Layout() {
                 href === "/"
                   ? path === "/"
                   : path.startsWith(href) ||
-                    (href === "/sessions" && path === "/climbs");
+                    (href === "/sessions" && path === "/climbs") ||
+                    (href === "/profile" && path.startsWith("/learn"));
               return (
                 <Link key={href} href={href} asChild>
                   <Pressable

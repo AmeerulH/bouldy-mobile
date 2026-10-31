@@ -1,6 +1,15 @@
+import { useEffect, useRef } from "react";
 import { View } from "react-native";
+import { router } from "expo-router";
 import { Image } from "expo-image";
-import { Brand, Heading, T, A, Chevron } from "../../components/primitives";
+import {
+  Brand,
+  Button,
+  Heading,
+  T,
+  A,
+  Chevron,
+} from "../../components/primitives";
 import { Screen, Waiting } from "../../components/screen";
 import { TaskFooter } from "../../components/task-footer";
 import { BrandPattern } from "../../components/brand-pattern";
@@ -11,10 +20,22 @@ import {
   duplicateRouteIds,
   journalComplete,
 } from "../../domain/journal-summary";
+import { tourEntry } from "../../domain/learn-progress";
+import { useLearnState } from "../../platform/learn-state";
 import { colors as c } from "../../theme/colors";
 import { s } from "../../theme/styles";
 export default function Home() {
-  const { data: d, error } = useSnapshot();
+  const { data: d, error } = useSnapshot(),
+    learn = useLearnState(),
+    entry = d && learn.ready ? tourEntry(learn.state, d.journal) : "none",
+    opened = useRef(false);
+  // A brand-new journal opens the tour once; skipping records that it was offered.
+  useEffect(() => {
+    if (entry === "auto" && !opened.current) {
+      opened.current = true;
+      router.push("/learn/tour");
+    }
+  }, [entry]);
   if (!d)
     return (
       <Screen footer={<SkeletonFooter />}>
@@ -77,6 +98,36 @@ export default function Home() {
                   : "A little progress, every visit."}
               </T>
             </View>
+            {entry === "offer" ? (
+              <View
+                style={{
+                  gap: 12,
+                  padding: 16,
+                  borderRadius: 12,
+                  backgroundColor: c["accent-tint"],
+                }}
+              >
+                <T size={16} weight={700} color={c["accent-tint-ink"]}>
+                  New here? Take the tour.
+                </T>
+                <T color={c["accent-tint-ink"]}>
+                  Two minutes to see how Bouldy works, plus lessons and goals.
+                </T>
+                <View style={[s.row, { gap: 8 }]}>
+                  <Button onPress={() => router.push("/learn/tour")}>
+                    Take the tour
+                  </Button>
+                  <Button
+                    variant="plain"
+                    onPress={() =>
+                      void learn.update((st) => ({ ...st, prompted: true }))
+                    }
+                  >
+                    Not now
+                  </Button>
+                </View>
+              </View>
+            ) : null}
             {!reliable ? (
               <T color={c["accent-strong"]}>
                 Some history is unavailable. Totals may be incomplete.
@@ -206,6 +257,27 @@ export default function Home() {
             </A>
           </>
         )}
+        <A
+          href="/learn"
+          style={[
+            s.between,
+            {
+              gap: 12,
+              borderTopWidth: 1,
+              borderColor: c.hairline,
+              marginHorizontal: -20,
+              padding: 20,
+            },
+          ]}
+        >
+          <View style={{ flex: 1 }}>
+            <T size={16} weight={700}>
+              Learn and goals
+            </T>
+            <T color={c["ink-muted"]}>Tour, lessons and glossary</T>
+          </View>
+          <Chevron />
+        </A>
       </View>
     </Screen>
   );

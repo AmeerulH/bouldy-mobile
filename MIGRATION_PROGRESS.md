@@ -1,5 +1,13 @@
 # Bouldy migration progress
 
+## Learn hub: tour, lessons, glossary and goals — 31 October 2026
+
+Owner requested a guided tour, lessons, glossary and goals for new and existing users. Branch `feat/learn-hub` adds `/learn` (hub), `/learn/tour` (11 steps, tab bar hidden), `/learn/lessons` and `/learn/lessons/[id]` (9 lessons, ordered by chosen level), `/learn/glossary` (31 searchable terms) and `/learn/goals` (9 goals derived from the journal; unknown history shows "Can’t confirm yet", never a false to-do or done). Profile's disabled "Learn & glossary" row now opens `/learn`; Home shows a dismissible tour offer for users with history and opens the tour once for a loaded journal with no sessions, plus a "Learn and goals" row.
+
+Only the level, tour completion/skip and lesson ticks are stored, device-locally per user id (`localStorage` on web, SecureStore on native). No backend change; progress does not sync across devices. Goal completion is never stored.
+
+Observed: Node 24.11.1 lint (0 errors, 3 pre-existing test warnings), typecheck, 97 tests (new `tests/learn.test.mjs`), web export and native export pass. In fixture mode on web (localhost) the existing-user offer, Not now, hub, level selection, tour step 1 and goals and glossary pages rendered correctly. Not observed: auto-open for an empty journal, lesson detail, tour steps 2 to 11, native iOS/Android, screen reader, text scaling, reduced motion. Those acceptance rows remain OPEN. Lesson and glossary copy awaits owner review.
+
 ## UI fixes publication authorised — 31 October 2026
 
 Owner explicitly authorised committing/pushing the cream input/autofill fix and removal of Explore's final personal-history shortcut, with their design/progress documentation and previously recorded live-deployment evidence. Main is connected to Vercel, so this publication may automatically deploy the replacement site. Fresh publication checks and hosted status must be reported from their actual results; the Git commit and remote main identify this checkpoint. No backend-record writes, signing or old-repo edits are included. Earlier local/uncommitted statements below describe the preparation checkpoints before this authorisation.
