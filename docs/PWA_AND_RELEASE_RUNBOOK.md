@@ -8,6 +8,30 @@ Use Node 24.11.1. `npm run build` generates the allowlisted PWA worker then expo
 
 The manifest preserves `/` as launch URL and scope, standalone display, portrait orientation and the source Bolt B artwork. App theme, HTML first-paint/theme metadata and manifest background/theme now use the approved cream `#f5f1e8`. This is a source check, not fresh installed-PWA evidence. PNGs are deterministic raster derivatives of the preserved `assets/source/icon.svg`, on the source light background; maskable artwork is inset inside its safe zone. No new logo was created.
 
+## Vercel setup for the replacement web app
+
+The owner reports reconnecting the existing Vercel project to `AmeerulH/bouldy-mobile`. The remote project/settings have not been independently inspected. The owner has authorised publication of the repository configuration to main, including its possible automatic Vercel deployment. No remote deployment result or production-domain change has been verified in this setup task.
+
+In the existing project's **Settings → Build and Deployment**, use:
+
+| Setting | Value |
+| --- | --- |
+| Framework Preset | **Other** (replace Next.js) |
+| Root Directory | Repository root; leave unset, not `bouldy-mobile` or `src` |
+| Build Command | `npm run build` |
+| Output Directory | `dist/client` |
+| Install Command | `npm ci` |
+| Node.js Version | **24.x** |
+| Production branch (Git settings) | `main` |
+
+`vercel.json` sets the framework/build/install/output values in source. It includes `dist/server/**` in the `api/index.ts` Node function and routes page/API requests through Expo's Vercel adapter. Vercel serves existing client assets from `dist/client`. Do not publish just a static export or use `.next`, `public`, or `dist` as the output directory. The build runs the existing PWA preparation hook. `expo-server` is pinned directly at the already-installed `58.0.6`; this does not upgrade Expo or its transitive server runtime. See [Expo's Vercel adapter instructions](https://docs.expo.dev/router/web/api-routes/#vercel).
+
+Web API requests use the same deployment origin. No new API key is required for the current hard-coded real FastAPI upstream. Leave `EXPO_PUBLIC_ADAPTER_ORIGIN` unset for a web-only deployment; native builds require a separately verified HTTPS origin. Leave `BOULDY_LOCAL_API` unset and `EXPO_PUBLIC_FIXTURE_PREVIEW` unset or `0`. Set `BOULDY_ADMIN_USER_IDS` only to explicitly authorised backend user IDs; blank retains default-deny catalogue administration. Do not copy local fixture settings or credentials to Vercel. Preserve existing environment settings and prior deployment details for rollback; do not blindly delete old variables.
+
+After configuration is published with authorisation, build a new deployment from the new repository/commit. Redeploying an old `bouldy-web` deployment does not select new source. Verify a preview first: page/deep-link HTML, JS/CSS/font/icon assets, manifest/service worker, `/history` redirect, unknown-page 404, unauthenticated API 401, same-origin command protections and authorised-account login/reads. Retain production promotion as an explicit final step after reviewing the concrete preview. Do not register accounts or write climbing records as part of deployment smoke tests.
+
+Local readiness evidence is in [vercel-readiness-20261031.json](evidence/vercel-readiness-20261031.json). It exercises the actual entrypoint against a production Expo export over local HTTP, with all external API requests blocked. This is not Vercel CDN/function-bundling, authenticated remote, installed-PWA or release acceptance. The existing `/skeleton-preview` production exclusion follow-up and Expo compatibility mismatches remain open.
+
 ## Install
 
 - iOS Safari: open the intended HTTPS app, use Share, then Add to Home Screen and Open as Web App where offered. Launch the installed icon separately from the browser tab.

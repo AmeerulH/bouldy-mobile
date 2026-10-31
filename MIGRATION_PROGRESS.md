@@ -1,5 +1,13 @@
 # Bouldy migration progress
 
+## Vercel configuration preparation — 31 October 2026
+
+Owner reports switching the existing Vercel Git connection to `bouldy-mobile` and requests help replacing Next.js build settings. Added the Expo Vercel Node entrypoint (`api/index.ts`), source-controlled framework/build/install/output/routing config (`vercel.json`), and direct `expo-server@58.0.6` dependency at the previously installed transitive version. Included the entrypoint in lint and TypeScript checks. Exact dashboard values, environment handling, preview checks and rollback boundaries are in the PWA/release runbook.
+
+Fresh checks: lint exits successfully with three existing warnings in `tests/error-copy.test.mjs`; TypeScript passes; 86/86 tests pass; production web/client/server/middleware/API export succeeds to `/tmp/bouldy-vercel-readiness-20261031`. Ten local HTTP smoke checks through the actual Vercel entrypoint cover HTML, deep links, redirect, unknown/development-route 404, unauthenticated API 401, foreign-origin rejection and malformed JSON. External API calls were blocked and none occurred. Evidence: `docs/evidence/vercel-readiness-20261031.json`.
+
+`expo install --check` remains nonzero: Expo58.0.21→~58.0.22, Router58.0.28→~58.0.29, RN0.88.0→0.88.1 and Screens4.30.0→~4.30.1 are now recommended. No automatic upgrades or release acceptance. Plugin discovery reports Vercel enabled, but project/deployment tools are not exposed in this chat; remote settings and deployments are unverified. The owner subsequently explicitly authorised committing and pushing this configuration to `main`, including its possible automatic Vercel production deployment. Remote settings and deployment outcome remain unverified until observed after the push. No manual deployment, production-domain change, record write or old-repo edit has been performed. The Git commit and remote main ref identify the publication checkpoint.
+
 ## Current documentation/source snapshot — 31 October 2026
 
 Local HEAD and remote main were verified at `55b51d8d0ed70696b706dd191523ab3c1db59604` during this documentation refresh. Later source commits after the earlier `488ab9b` publication add admin Gyms/profile hero/Bolt B titles, refined dark launch, contextual section/action errors and error-copy tests, cream navigation/HTML/PWA metadata, matching skeletons, eager route bundling, profile boundary adjustments, overflow-only scrolling and tiled active-visit marks. Native full width and planned-header spacing remain implemented; the owner confirmed the iPhone width correction. Current implementation details and commit IDs are in `docs/redesign/HANDOFF.md`.

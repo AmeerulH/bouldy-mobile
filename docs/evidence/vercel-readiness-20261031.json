@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-31",
+  "scope": "Local Node HTTP execution of the actual Vercel entrypoint against the production Expo export; does not emulate Vercel CDN routing or prove deployed authentication",
+  "results": [
+    {
+      "route": "/welcome",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/html",
+      "location": null,
+      "cacheControl": null
+    },
+    {
+      "route": "/login",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/html",
+      "location": null,
+      "cacheControl": null
+    },
+    {
+      "route": "/explore",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/html",
+      "location": null,
+      "cacheControl": null
+    },
+    {
+      "route": "/history",
+      "method": "GET",
+      "status": 307,
+      "contentType": null,
+      "location": "https://127.0.0.1:57746/sessions",
+      "cacheControl": null
+    },
+    {
+      "route": "/api/identity",
+      "method": "GET",
+      "status": 401,
+      "contentType": "application/json",
+      "location": null,
+      "cacheControl": "no-store, private"
+    },
+    {
+      "route": "/api/snapshot",
+      "method": "GET",
+      "status": 401,
+      "contentType": "application/json",
+      "location": null,
+      "cacheControl": "no-store, private"
+    },
+    {
+      "route": "/api/command",
+      "method": "POST",
+      "status": 403,
+      "contentType": "application/json",
+      "location": null,
+      "cacheControl": "no-store, private"
+    },
+    {
+      "route": "/api/command",
+      "method": "POST",
+      "status": 400,
+      "contentType": "application/json",
+      "location": null,
+      "cacheControl": "no-store, private"
+    },
+    {
+      "route": "/brand-preview",
+      "method": "GET",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "cacheControl": "no-store"
+    },
+    {
+      "route": "/not-a-real-bouldy-route",
+      "method": "GET",
+      "status": 404,
+      "contentType": "text/html",
+      "location": null,
+      "cacheControl": null
+    }
+  ],
+  "external_api_calls": 0,
+  "checks": {
+    "lint": "passes with 3 existing test import warnings",
+    "typecheck": "passes",
+    "tests": {
+      "passed": 86,
+      "failed": 0
+    },
+    "web_export": "passes",
+    "expo_compatibility": "fails; four existing/recommended patch mismatches recorded in progress"
+  },
+  "deployment_status": "not deployed; no Vercel project tools exposed",
+  "source_head_before_changes": "ca90887ca85be573b4bae53f483421195068dff2"
+}
