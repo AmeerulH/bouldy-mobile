@@ -12,7 +12,7 @@
       "favicon": "./assets/source/icon.svg"
     },
     "plugins": [
-      "expo-router",
+      ["expo-router", { "asyncRoutes": false }],
       "expo-font",
       "expo-secure-store",
       "expo-image"
