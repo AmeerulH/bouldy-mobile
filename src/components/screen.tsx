@@ -9,6 +9,7 @@ import {
   useContext,
   useEffect,
   useRef,
+  useState,
   type ComponentRef,
   type ReactNode,
 } from "react";
@@ -59,6 +60,10 @@ export function Screen({
   const scroll = useRef<ComponentRef<typeof ScrollView>>(null),
     params = useLocalSearchParams<Record<string, string>>();
   const hash = params["#"] ?? "";
+  // Only allow scrolling when the content is actually taller than the viewport.
+  const [viewH, setViewH] = useState(0),
+    [contentH, setContentH] = useState(0),
+    canScroll = contentH > viewH + 1;
   const anchors = useRef(new Map<string, ComponentRef<typeof View>>());
   const restoreAnchor = useCallback(() => {
     const view = anchors.current.get(hash),
@@ -115,7 +120,15 @@ export function Screen({
         ) : null}
         <ScrollView
           ref={scroll}
-          onContentSizeChange={restoreAnchor}
+          onLayout={(e) => setViewH(e.nativeEvent.layout.height)}
+          onContentSizeChange={(_w, h) => {
+            setContentH(h);
+            restoreAnchor();
+          }}
+          scrollEnabled={canScroll}
+          bounces={canScroll}
+          alwaysBounceVertical={false}
+          overScrollMode={canScroll ? "auto" : "never"}
           contentContainerStyle={{ flexGrow: 1 }}
           automaticallyAdjustKeyboardInsets
           keyboardShouldPersistTaps="handled"
