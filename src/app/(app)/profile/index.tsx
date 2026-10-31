@@ -1,3 +1,4 @@
+import { reportFrom, useActionError } from "../../../components/error-sheet";
 import { useRef, useState } from "react";
 import { View } from "react-native";
 import { router, useIsFocused } from "expo-router";
@@ -5,7 +6,7 @@ import { StatusBar } from "expo-status-bar";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Image } from "expo-image";
 import { Pressable } from "../../../components/pressable";
-import { Heading, Icon, T, Feedback, A } from "../../../components/primitives";
+import { Heading, Icon, T, A } from "../../../components/primitives";
 import { Screen, Waiting } from "../../../components/screen";
 import { useSnapshot } from "../../../data/snapshot";
 import { useAuth } from "../../../platform/auth";
@@ -14,11 +15,11 @@ import { s } from "../../../theme/styles";
 export default function Profile() {
   const { data, error } = useSnapshot("profile"),
     auth = useAuth(),
+    report = useActionError(),
     insets = useSafeAreaInsets(),
     focused = useIsFocused(),
     busy = useRef(false),
-    [pending, setPending] = useState(false),
-    [issue, setIssue] = useState("");
+    [pending, setPending] = useState(false);
   if (!data)
     return (
       <Screen>
@@ -33,7 +34,7 @@ export default function Profile() {
       const out = await auth.command("logout", {});
       if (out.destination) router.replace(out.destination as never);
     } catch (e) {
-      setIssue((e as Error).message);
+      report(reportFrom(e, { context: "logout", retry: logout }));
     } finally {
       busy.current = false;
       setPending(false);
@@ -203,7 +204,6 @@ export default function Profile() {
             </T>
           </Pressable>
         </View>
-        {issue ? <Feedback>{issue}</Feedback> : null}
       </View>
     </Screen>
   );

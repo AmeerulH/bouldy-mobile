@@ -1,3 +1,4 @@
+import { plainMessage } from "../features/error-copy.ts";
 import {
   ApiError,
   registerUser,
@@ -43,6 +44,10 @@ export type Credentials = {
   token: string | null;
   setToken: (token: string | null) => void;
 };
+/** HTTP status the person-facing error sheet should explain. Non-API failures count as server errors. */
+function failedStatus(error: unknown) {
+  return error instanceof ApiError ? error.status : 500;
+}
 class Navigation extends Error {
   outcome: Outcome;
   constructor(outcome: Outcome) {
@@ -80,7 +85,7 @@ export async function executeCommand(
       await setSessionCookie(token.access_token);
     } catch (err) {
       const message =
-        err instanceof ApiError ? err.message : "Couldn't sign in. Try again.";
+        err instanceof ApiError ? plainMessage(err) : "Couldn't sign in. Try again.";
       redirect(`/login?error=${encodeURIComponent(message)}`);
     }
 
@@ -199,10 +204,10 @@ export async function executeCommand(
     } catch (err) {
       const message =
         err instanceof ApiError
-          ? err.message
+          ? plainMessage(err)
           : "We couldn't save that attempt. Try again.";
       redirect(
-        `/sessions/${sessionId}?route=${routeId}&sheet=route-${routeId}&error=${encodeURIComponent(message)}`,
+        `/sessions/${sessionId}?route=${routeId}&sheet=route-${routeId}&error=${encodeURIComponent(message)}&errorStatus=${failedStatus(err)}`,
         RedirectType.replace,
       );
     }
@@ -233,10 +238,10 @@ export async function executeCommand(
     } catch (err) {
       const message =
         err instanceof ApiError
-          ? err.message
+          ? plainMessage(err)
           : "We couldn't end that session. Try again.";
       redirect(
-        `/sessions/${sessionId}?sheet=end-session&error=${encodeURIComponent(message)}`,
+        `/sessions/${sessionId}?sheet=end-session&error=${encodeURIComponent(message)}&errorStatus=${failedStatus(err)}`,
         RedirectType.replace,
       );
     }
@@ -290,7 +295,7 @@ export async function executeCommand(
         status: "error" as const,
         message:
           error instanceof ApiError
-            ? error.message
+            ? plainMessage(error)
             : "Your climb is saved, but the note could not be saved. Try again.",
       };
     }
@@ -377,10 +382,10 @@ export async function executeCommand(
     } catch (err) {
       const message =
         err instanceof ApiError
-          ? err.message
+          ? plainMessage(err)
           : "We couldn't save that correction. Try again.";
       redirect(
-        `/sessions/${sessionId}?route=${routeId}&sheet=route-${routeId}&error=${encodeURIComponent(message)}`,
+        `/sessions/${sessionId}?route=${routeId}&sheet=route-${routeId}&error=${encodeURIComponent(message)}&errorStatus=${failedStatus(err)}`,
         RedirectType.replace,
       );
     }
@@ -415,7 +420,7 @@ export async function executeCommand(
     } catch (err) {
       const message =
         err instanceof ApiError
-          ? err.message
+          ? plainMessage(err)
           : "Couldn't create your account. Try again.";
       redirect(`/signup?error=${encodeURIComponent(message)}`);
     }
@@ -461,7 +466,7 @@ export async function executeCommand(
       }
     } catch (error) {
       redirect(
-        `/sessions/new?error=${encodeURIComponent(error instanceof ApiError ? error.message : "Couldn’t start your visit. Try again.")}`,
+        `/sessions/new?error=${encodeURIComponent(error instanceof ApiError ? plainMessage(error) : "Couldn’t start your visit. Try again.")}&errorStatus=${failedStatus(error)}`,
       );
     }
     redirect(destination);
@@ -486,10 +491,10 @@ export async function executeCommand(
     } catch (err) {
       const message =
         err instanceof ApiError
-          ? err.message
+          ? plainMessage(err)
           : "We couldn't add that gym. Try again.";
       redirect(
-        `/gyms?sheet=add-gym&error=${encodeURIComponent(message)}`,
+        `/gyms?sheet=add-gym&error=${encodeURIComponent(message)}&errorStatus=${failedStatus(err)}`,
         RedirectType.replace,
       );
     }
@@ -544,10 +549,10 @@ export async function executeCommand(
     } catch (err) {
       const message =
         err instanceof ApiError
-          ? err.message
+          ? plainMessage(err)
           : "We couldn't add that route. Try again.";
       redirect(
-        `${formPath}?error=${encodeURIComponent(message)}`,
+        `${formPath}?error=${encodeURIComponent(message)}&errorStatus=${failedStatus(err)}`,
         RedirectType.replace,
       );
     }
@@ -614,10 +619,10 @@ export async function executeCommand(
     } catch (err) {
       const message =
         err instanceof ApiError
-          ? err.message
+          ? plainMessage(err)
           : "We couldn't save that route. Try again.";
       redirect(
-        `${formPath}?error=${encodeURIComponent(message)}`,
+        `${formPath}?error=${encodeURIComponent(message)}&errorStatus=${failedStatus(err)}`,
         RedirectType.replace,
       );
     }

@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { View } from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
 import { Pressable } from "../../../components/pressable";
+import { reportFrom, reportFromDestination, useActionError } from "../../../components/error-sheet";
 import { Screen, Waiting } from "../../../components/screen";
 import {
   Heading,
@@ -36,6 +37,7 @@ export default function NewSession() {
     [gym, setGym] = useState<number | null>(null),
     [date, setDate] = useState(new Date().toISOString().slice(0, 10)),
     [pending, setPending] = useState(false),
+    report = useActionError(),
     [issue, setIssue] = useState(""),
     busy = useRef(false);
   if (!data)
@@ -59,13 +61,16 @@ export default function NewSession() {
         ...(past ? { session_date: date } : {}),
       });
       if (out.destination) {
-        const url = new URL(out.destination, "http://local");
-        if (url.searchParams.has("error"))
-          setIssue(url.searchParams.get("error") ?? "");
-        else router.replace(out.destination as never);
+        const failure = reportFromDestination(out.destination, {
+          context: "start-session",
+          retry: start,
+        });
+        if (!failure) router.replace(out.destination as never);
+        else if (failure.server) report(failure);
+        else setIssue(failure.message ?? "");
       }
     } catch (e) {
-      setIssue((e as Error).message);
+      report(reportFrom(e, { context: "start-session", retry: start }));
     } finally {
       busy.current = false;
       setPending(false);

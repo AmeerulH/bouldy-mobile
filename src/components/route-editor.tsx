@@ -1,3 +1,4 @@
+import { reportFrom, reportFromDestination, useActionError } from './error-sheet';
 import { Pressable } from './pressable';
 import { useRef, useState } from 'react';
 import { KeyboardAvoidingView, Platform,  View, useWindowDimensions } from 'react-native';
@@ -25,7 +26,7 @@ export function RouteEditor({ kind }: { kind: 'gym' | 'session' | 'edit' }) {
 }
 
 export function RouteForm({ gymId, sessionId, route, back, backLabel, subtitle, initialError, demo = false }: { gymId: number; sessionId?: number; route?: Route; back: string; backLabel: string; subtitle: string; initialError?: string; demo?: boolean }) {
-  const auth = useAuth(), insets = useSafeAreaInsets(), busy = useRef(false), { width } = useWindowDimensions();
+  const auth = useAuth(), report = useActionError(), insets = useSafeAreaInsets(), busy = useRef(false), { width } = useWindowDimensions();
   const colourWidth = (Math.min(width, 430) - 64) / 4;
   const [colour, setColour] = useState(normaliseRouteColour(route?.colour) ?? ''), [grade, setGrade] = useState(route?.grade ?? '');
   const [wall, setWall] = useState(route?.wall ?? ''), [name, setName] = useState(route?.route_name ?? ''), [setter, setSetter] = useState(route?.setter ?? '');
@@ -37,12 +38,13 @@ export function RouteForm({ gymId, sessionId, route, back, backLabel, subtitle, 
     try {
       const out = demo ? {} : await auth.command(route ? 'editRoute' : 'addRoute', { gym_id: gymId, ...(sessionId ? { session_id: sessionId } : {}), ...(route ? { route_id: route.id } : {}), grade, colour: ROUTE_COLOURS.find(option => option.toLowerCase() === colour) ?? '', wall, route_name: name, setter, main_style: mainStyle, style: otherStyles });
       if (out.destination) {
-        const message = new URL(out.destination, 'http://local').searchParams.get('error');
-        if (message) { setError(message); router.setParams({ error: message }); }
+        const failure = reportFromDestination(out.destination, { context: 'save-route', retry: save }), message = failure?.message;
+        if (failure?.server) report(failure);
+        else if (message) { setError(message); router.setParams({ error: message }); }
         else if (out.replace) router.replace(out.destination as never);
         else router.push(out.destination as never);
       }
-    } catch (issue) { setError((issue as Error).message); }
+    } catch (issue) { report(reportFrom(issue, { context: 'save-route', retry: save })); }
     finally { busy.current = false; setPending(false); }
   }
   return <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}><Screen back={back} label={backLabel}><View style={[s.page, { gap: 20, paddingBottom: 20 }]}>

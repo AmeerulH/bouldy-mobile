@@ -1,3 +1,4 @@
+import { plainMessage } from "../../features/error-copy";
 import { Screen } from "../../components/screen";
 import { TaskFooter } from "../../components/task-footer";
 import { useState } from "react";
@@ -34,7 +35,7 @@ export default function Login() {
             "",
         );
     } catch (e) {
-      setError((e as Error).message);
+      setError(plainMessage(e as Error & { status?: number }));
     } finally {
       setPending(false);
     }

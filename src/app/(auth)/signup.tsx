@@ -1,3 +1,4 @@
+import { plainMessage } from "../../features/error-copy";
 import { Screen } from "../../components/screen";
 import { TaskFooter } from "../../components/task-footer";
 import { useRef, useState } from "react";
@@ -45,7 +46,7 @@ export default function Signup() {
             "",
         );
     } catch (issue) {
-      setError((issue as Error).message);
+      setError(plainMessage(issue as Error & { status?: number }));
     } finally {
       submitting.current = false;
       setPending(false);

@@ -1,3 +1,4 @@
+import { reportFrom, reportFromDestination, useActionError } from "../../../components/error-sheet";
 import { useRef, useState } from "react";
 import { View } from "react-native";
 import {
@@ -25,7 +26,8 @@ export default function Gyms() {
   const [name, setName] = useState(""),
     [location, setLocation] = useState("");
   const [adding, setAdding] = useState(false);
-  const [localError, setLocalError] = useState(""),
+  const report = useActionError(),
+    [localError, setLocalError] = useState(""),
     busy = useRef(false);
   function openAdd() {
     setName("");
@@ -40,9 +42,14 @@ export default function Gyms() {
     setLocalError("");
     try {
       const out = await auth.command("addGym", { name, location });
-      if (out.destination) nav.apply(out.destination);
+      const failure = reportFromDestination(out.destination, {
+        context: "add-gym",
+        retry: add,
+      });
+      if (failure?.server) report(failure);
+      else if (out.destination) nav.apply(out.destination);
     } catch (issue) {
-      setLocalError((issue as Error).message);
+      report(reportFrom(issue, { context: "add-gym", retry: add }));
     } finally {
       busy.current = false;
       setAdding(false);

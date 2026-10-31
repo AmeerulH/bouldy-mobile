@@ -1,3 +1,4 @@
+import { reportFrom, reportFromDestination, useActionError } from "../components/error-sheet";
 import { useState, useRef } from "react";
 import { View } from "react-native";
 import { Picker } from "@react-native-picker/picker";
@@ -38,6 +39,7 @@ export function RouteSheet({
 }) {
   const { route, attempt, ambiguous, previous } = state,
     auth = useAuth(),
+    report = useActionError(),
     [correcting, setCorrecting] = useState(false),
     [result, setResult] = useState<AttemptResult>(attempt?.result ?? "project"),
     [count, setCount] = useState(String(attempt?.num_attempts ?? 1)),
@@ -66,12 +68,17 @@ export function RouteSheet({
             }
           : { session_id: sessionId, attempt_id: attempt.id, notes: draft },
       );
-      const message = out.destination
-        ? new URL(out.destination, "http://local").searchParams.get("error")
-        : out.status === "error"
-          ? out.message
-          : null;
-      if (message) setIssue(message);
+      const failure = reportFromDestination(out.destination, {
+          context: "log-attempt",
+          retry: () => save(correction),
+        }),
+        message = failure
+          ? failure.message
+          : out.status === "error"
+            ? out.message
+            : null;
+      if (failure?.server) report(failure);
+      else if (message) setIssue(message);
       else {
         if (correction) setCorrecting(false);
         onSaved(
@@ -81,7 +88,12 @@ export function RouteSheet({
         );
       }
     } catch (e) {
-      setIssue((e as Error).message);
+      report(
+        reportFrom(e, {
+          context: "log-attempt",
+          retry: () => save(correction),
+        }),
+      );
     } finally {
       busy.current = false;
       setPending("");

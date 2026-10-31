@@ -9,6 +9,7 @@ import {
   Chevron,
   PageTitle,
 } from "../../../components/primitives";
+import { SectionError } from "../../../components/section-error";
 import { Screen, Waiting } from "../../../components/screen";
 import { TaskFooter } from "../../../components/task-footer";
 import { EmptyState } from "../../../components/empty-state";
@@ -29,7 +30,7 @@ function visitDate(date: string) {
 }
 
 export default function Sessions() {
-  const { data: d, error } = useSnapshot("journal"),
+  const { data: d, error, status } = useSnapshot("journal"),
     [limit, setLimit] = useState(3);
   if (!d)
     return (
@@ -80,11 +81,6 @@ export default function Sessions() {
     >
       <View style={[s.page, { flexGrow: 1 }]}>
         <PageTitle>Sessions</PageTitle>
-        {error || !d.journal.sessionsLoaded ? (
-          <T color={c["accent-strong"]}>
-            {error || "Your journal couldn’t load. Try again."}
-          </T>
-        ) : null}
         {active.length ? (
           <View style={{ gap: 8 }}>
             {active.map((r) => {
@@ -111,6 +107,9 @@ export default function Sessions() {
               );
             })}
           </View>
+        ) : null}
+        {!d.journal.sessionsLoaded ? (
+          <SectionError what="your visits" status={status} />
         ) : null}
         {!active.length && !completed.length && d.journal.sessionsLoaded ? (
           <EmptyState title="Your journal starts here">

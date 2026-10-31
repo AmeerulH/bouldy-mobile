@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { reportFrom, reportFromDestination, useActionError } from "../../../components/error-sheet";
 import { View } from "react-native";
 import { useLocalSearchParams } from "expo-router";
 import {
@@ -33,6 +34,7 @@ export default function Session() {
     { data: d, error } = useSnapshot("session", id),
     [pending, setPending] = useState<number | null>(null),
     busy = useRef(false),
+    report = useActionError(),
     [issue, setIssue] = useState(""),
     [duration, setDuration] = useState(60),
     [ending, setEnding] = useState(false);
@@ -74,20 +76,27 @@ export default function Session() {
         ...(state.attempt ? { attempt_id: state.attempt.id } : {}),
       });
       if (out.destination) {
-        const url = new URL(out.destination, "http://local"),
-          message = url.searchParams.get("error");
-        if (message) {
-          setIssue(message);
+        const failure = reportFromDestination(out.destination, {
+          context: "log-attempt",
+          retry: () => log(state, intent),
+        });
+        if (failure) {
           nav.open(`route-${state.route.id}`);
-          snackbar(message, "error");
+          if (failure.server) report(failure);
+          else setIssue(failure.message ?? "");
         } else {
+          const url = new URL(out.destination, "http://local");
           const notice = url.searchParams.get("notice");
           if (notice) snackbar(notice);
         }
       }
     } catch (e) {
-      setIssue((e as Error).message);
-      snackbar((e as Error).message, "error");
+      report(
+        reportFrom(e, {
+          context: "log-attempt",
+          retry: () => log(state, intent),
+        }),
+      );
     } finally {
       busy.current = false;
       setPending(null);
@@ -107,18 +116,20 @@ export default function Session() {
         duration_minutes: duration,
       });
       if (out.destination) {
-        const message = new URL(
-          out.destination,
-          "http://local",
-        ).searchParams.get("error");
-        if (message) setIssue(message);
-        else {
+        const failure = reportFromDestination(out.destination, {
+          context: "finish-session",
+          retry: finish,
+        });
+        if (failure) {
+          if (failure.server) report(failure);
+          else setIssue(failure.message ?? "");
+        } else {
           nav.close();
           snackbar("Visit saved. A little further.");
         }
       }
     } catch (e) {
-      setIssue((e as Error).message);
+      report(reportFrom(e, { context: "finish-session", retry: finish }));
     } finally {
       setEnding(false);
     }

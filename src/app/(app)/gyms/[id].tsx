@@ -1,3 +1,4 @@
+import { reportFrom, useActionError } from '../../../components/error-sheet';
 import { useRef, useState } from 'react';
 import { router, useLocalSearchParams } from 'expo-router';
 import { View } from 'react-native';
@@ -14,14 +15,14 @@ import { s } from '../../../theme/styles';
 export default function GymDetail() {
   const { id } = useLocalSearchParams<{ id: string }>(), nav = useSheetNavigation(), auth = useAuth();
   const { data, error: readError } = useSnapshot('gym', id);
-  const [pending, setPending] = useState(false), [localError, setLocalError] = useState(''), busy = useRef(false);
+  const report = useActionError(), [pending, setPending] = useState(false), [localError, setLocalError] = useState(''), busy = useRef(false);
   async function start() {
     if (busy.current) return;
     busy.current = true; setPending(true); setLocalError('');
     try {
       const out = await auth.command('startSession', { gym_id: Number(id) });
       if (out.destination) router.push(out.destination as never);
-    } catch (issue) { setLocalError((issue as Error).message); }
+    } catch (issue) { report(reportFrom(issue, { context: 'start-session', retry: start })); }
     finally { busy.current = false; setPending(false); }
   }
   if (!data) return <Screen back="/gyms" label="Gyms"><Waiting error={readError} page="gyms" /></Screen>;
