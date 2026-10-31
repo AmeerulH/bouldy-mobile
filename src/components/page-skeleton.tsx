@@ -447,7 +447,7 @@ export function PageSkeleton({ page }: { page: SkeletonPage }) {
         <View
           accessibilityElementsHidden
           importantForAccessibility="no-hide-descendants"
-          style={{ gap: 24 }}
+          style={{ gap: 0 }}
         >
           <View
             style={{

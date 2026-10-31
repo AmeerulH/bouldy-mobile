@@ -43,7 +43,7 @@ export default function Profile() {
   return (
     <Screen>
       {focused ? <StatusBar style="light" /> : null}
-      <View style={[s.page, { paddingTop: 0 }]}>
+      <View style={[s.page, { paddingTop: 0, gap: 0 }]}>
         <View
           style={{
             backgroundColor: c.panel,
