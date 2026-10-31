@@ -3,6 +3,7 @@ import { Image } from "expo-image";
 import { Brand, Heading, T, A, Chevron } from "../../components/primitives";
 import { Screen, Waiting } from "../../components/screen";
 import { TaskFooter } from "../../components/task-footer";
+import { BrandPattern } from "../../components/brand-pattern";
 import { SkeletonFooter } from "../../components/page-skeleton";
 import { EmptyState } from "../../components/empty-state";
 import { useSnapshot } from "../../data/snapshot";
@@ -120,7 +121,11 @@ export default function Home() {
               </T>
             </View>
             {active ? (
-              <A href={target} style={[s.panel, s.between, { gap: 12 }]}>
+              <A
+                href={target}
+                style={[s.panel, s.between, { gap: 12, overflow: "hidden" }]}
+              >
+                <BrandPattern />
                 <View style={{ flex: 1 }}>
                   <T size={16} weight={700} color={c["panel-ink"]}>
                     Climbing now

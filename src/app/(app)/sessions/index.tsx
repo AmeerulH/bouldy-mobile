@@ -12,6 +12,7 @@ import {
 import { SectionError } from "../../../components/section-error";
 import { Screen, Waiting } from "../../../components/screen";
 import { TaskFooter } from "../../../components/task-footer";
+import { BrandPattern } from "../../../components/brand-pattern";
 import { SkeletonFooter } from "../../../components/page-skeleton";
 import { EmptyState } from "../../../components/empty-state";
 import { useSnapshot } from "../../../data/snapshot";
@@ -92,8 +93,9 @@ export default function Sessions() {
                   key={r.session.id}
                   href={`/sessions/${r.session.id}`}
                   accessibilityLabel={`Climbing now at ${name}, opened ${opened}`}
-                  style={[s.panel, s.between, { gap: 12 }]}
+                  style={[s.panel, s.between, { gap: 12, overflow: "hidden" }]}
                 >
+                  <BrandPattern />
                   <View style={{ flex: 1 }}>
                     <T size={16} weight={700} color={c["panel-ink"]}>
                       Climbing now
