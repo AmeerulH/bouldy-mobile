@@ -63,7 +63,7 @@ test('invalid gym and failed session creation return to Gyms without mutation/re
 test('Add gym trims input, returns sheet errors with replace, and succeeds with the original notice',async()=>{
  let out=await(await post('addGym',{name:' ',location:'Test'})).json();assert.equal(out.replace,true);assert.equal(new URL(out.destination,origin).searchParams.get('sheet'),'add-gym');assert.deepEqual((await state()).writes,[]);
  await control('gym-error');out=await(await post('addGym',{name:'New wall',location:'Test'})).json();assert.equal(out.replace,true);assert.equal(new URL(out.destination,origin).searchParams.get('error'),'Could not add this sample gym. Try again.');assert.deepEqual((await state()).writes,[]);
- await control();out=await(await post('addGym',{name:' New wall ',location:' Test '})).json();assert.equal(out.replace,true);assert.equal(new URL(out.destination,origin).searchParams.get('notice'),'Gym added. You can start a session now.');const s=await state();assert.deepEqual(s.gyms.at(-1),{id:100,name:'New wall',location:'Test'});assert.deepEqual(s.writes,['/gyms/']);
+ await control();out=await(await post('addGym',{name:' New wall ',location:' Test '})).json();assert.equal(out.replace,true);assert.equal(new URL(out.destination,origin).searchParams.get('notice'),'Gym added. Now add its routes.');const s=await state();assert.deepEqual(s.gyms.at(-1),{id:100,name:'New wall',location:'Test'});assert.deepEqual(s.writes,['/gyms/']);
 });
 test('gym reads are protected and independent of an unavailable journal; empty/missing states remain explicit',async()=>{
  const read=url=>snapshotRequest(new Request(origin+url,{headers:{Cookie:'bouldy_token=walkthrough-sample'}}));

@@ -3,7 +3,7 @@ import { UnderConstruction } from "../../../components/under-construction";
 export default function EditProfilePage() {
   return (
     <UnderConstruction
-      back={{ href: "/profile", label: "You" }}
+      back={{ href: "/profile", label: "Profile" }}
       eyebrow="Your profile"
       title="Edit profile"
       summary="Choose a display name, add a short bio and a photo, while your unique handle stays the same."

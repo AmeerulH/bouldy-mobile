@@ -17,7 +17,7 @@ CASES = [
  ('/sessions', ['Every attempt has a place.']),
  ('/sessions/3', ['Live session', '2026-10-24']),
  ('/routes/11', ['YOUR ROUTE HISTORY', 'The patient heel hook']),
- ('/gyms', ['Choose your wall.', 'ALL GYMS']),
+ ('/gyms', ['GYMS', '+ Add gym']),
  ('/gyms/1', ['SAMPLE BOULDER CLUB', 'Kuala Lumpur']),
  ('/gyms/1/routes/new', ['ADD A ROUTE', 'New route at Sample Boulder Club']),
  ('/gyms/1/routes/11/edit', ['EDIT ROUTE', 'The patient heel hook']),

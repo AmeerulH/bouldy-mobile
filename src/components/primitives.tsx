@@ -155,6 +155,31 @@ export function Brand({ dark = false }: { dark?: boolean }) {
     </View>
   );
 }
+/** Main-page title: the Bolt B mark leads the heading. */
+export function PageTitle({
+  children,
+  size = 36,
+}: {
+  children: ReactNode;
+  size?: number;
+}) {
+  return (
+    <View style={[s.row, { gap: 10 }]}>
+      <Image
+        source={require("../../assets/source/brand/bolt-b.svg")}
+        accessibilityElementsHidden
+        importantForAccessibility="no"
+        style={{ width: Math.round(size * 0.9), height: Math.round(size * 0.9) }}
+      />
+      <Heading
+        size={size}
+        style={{ flexShrink: 1, lineHeight: size * 0.9, letterSpacing: -0.03 * size }}
+      >
+        {children}
+      </Heading>
+    </View>
+  );
+}
 export function A({
   href,
   children,

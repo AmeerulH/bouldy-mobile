@@ -3,7 +3,7 @@ import { UnderConstruction } from "../../../components/under-construction";
 export default function PublicProfilePage() {
   return (
     <UnderConstruction
-      back={{ href: "/profile", label: "You" }}
+      back={{ href: "/profile", label: "Profile" }}
       eyebrow="Your profile"
       title="Public profile"
       summary="Preview exactly what other climbers see before you turn anything on."

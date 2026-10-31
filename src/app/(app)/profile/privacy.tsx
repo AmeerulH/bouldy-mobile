@@ -3,7 +3,7 @@ import { UnderConstruction } from "../../../components/under-construction";
 export default function PrivacyPage() {
   return (
     <UnderConstruction
-      back={{ href: "/profile", label: "You" }}
+      back={{ href: "/profile", label: "Profile" }}
       eyebrow="Your profile"
       title="Privacy"
       summary="Decide who can find you, follow you and see your results, with everything off by default."

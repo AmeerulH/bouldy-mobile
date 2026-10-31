@@ -46,7 +46,7 @@ export default function Layout() {
     ["/", "Home", "home"],
     ["/explore", "Explore", "explore"],
     ["/sessions", "Sessions", "sessions"],
-    ["/profile", "You", "profile"],
+    ["/profile", "Profile", "profile"],
   ] as const;
   return (
     <View style={{ flex: 1, paddingTop: insets.top }}>

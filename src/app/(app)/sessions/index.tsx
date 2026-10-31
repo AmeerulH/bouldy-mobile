@@ -5,8 +5,9 @@ import {
   Heading,
   A,
   Button,
-  IconButton,
+  Icon,
   Chevron,
+  PageTitle,
 } from "../../../components/primitives";
 import { Screen, Waiting } from "../../../components/screen";
 import { TaskFooter } from "../../../components/task-footer";
@@ -18,6 +19,15 @@ import {
 } from "../../../domain/journal-summary";
 import { colors as c } from "../../../theme/colors";
 import { s } from "../../../theme/styles";
+
+function visitDate(date: string) {
+  return new Intl.DateTimeFormat("en", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).format(new Date(`${date}T12:00:00`));
+}
+
 export default function Sessions() {
   const { data: d, error } = useSnapshot("journal"),
     [limit, setLimit] = useState(3);
@@ -42,41 +52,66 @@ export default function Sessions() {
     <Screen
       footer={
         <TaskFooter>
-          <A
-            href="/sessions/new?past=1"
-            style={[s.button, { backgroundColor: c.panel }]}
-            color={c["panel-ink"]}
-          >
-            Record a past visit
-          </A>
+          <View style={[s.row, { gap: 12 }]}>
+            <A
+              href="/sessions/new?past=1"
+              style={[s.button, { flex: 1, backgroundColor: c.panel }]}
+              color={c["panel-ink"]}
+            >
+              Record a past visit
+            </A>
+            <A
+              href="/sessions/new"
+              accessibilityLabel="Start session"
+              style={{
+                width: 48,
+                height: 48,
+                borderRadius: 24,
+                backgroundColor: c.accent,
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Icon name="plus" color={c["accent-ink"]} size={22} />
+            </A>
+          </View>
         </TaskFooter>
       }
     >
       <View style={[s.page, { flexGrow: 1 }]}>
-        <View style={s.between}>
-          <Heading size={36}>Sessions</Heading>
-          <IconButton href="/sessions/new" name="plus" label="Start session" />
-        </View>
+        <PageTitle>Sessions</PageTitle>
         {error || !d.journal.sessionsLoaded ? (
           <T color={c["accent-strong"]}>
             {error || "Your journal couldn’t load. Try again."}
           </T>
         ) : null}
-        {active.map((r) => (
-          <A
-            key={r.session.id}
-            href={`/sessions/${r.session.id}`}
-            style={[s.panel, s.between, { gap: 12 }]}
-          >
-            <View style={{ flex: 1 }}>
-              <T size={16} weight={700} color={c["panel-ink"]}>
-                Climbing now
-              </T>
-              <T color={c["panel-ink-muted"]}>{gym(r.session.gym_id)}</T>
-            </View>
-            <Chevron />
-          </A>
-        ))}
+        {active.length ? (
+          <View style={{ gap: 8 }}>
+            {active.map((r) => {
+              const opened = visitDate(r.session.session_date);
+              const name = gym(r.session.gym_id);
+              return (
+                <A
+                  key={r.session.id}
+                  href={`/sessions/${r.session.id}`}
+                  accessibilityLabel={`Climbing now at ${name}, opened ${opened}`}
+                  style={[s.panel, s.between, { gap: 12 }]}
+                >
+                  <View style={{ flex: 1 }}>
+                    <T size={16} weight={700} color={c["panel-ink"]}>
+                      Climbing now
+                    </T>
+                    <T color={c["panel-ink-muted"]}>{name}</T>
+                    <T size={12} color={c["panel-ink-muted"]}>
+                      Opened {opened}
+                    </T>
+                  </View>
+                  <Chevron />
+                </A>
+              );
+            })}
+          </View>
+        ) : null}
         {!active.length && !completed.length && d.journal.sessionsLoaded ? (
           <EmptyState title="Your journal starts here">
             Your visits and climbs will collect here after your first session.

@@ -494,7 +494,7 @@ export async function executeCommand(
       );
     }
     redirect(
-      `/gyms?notice=${encodeURIComponent("Gym added. You can start a session now.")}`,
+      `/gyms?notice=${encodeURIComponent("Gym added. Now add its routes.")}`,
       RedirectType.replace,
     );
   }

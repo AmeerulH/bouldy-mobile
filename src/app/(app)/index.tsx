@@ -1,4 +1,5 @@
 import { View } from "react-native";
+import { Image } from "expo-image";
 import { Brand, Heading, T, A, Chevron } from "../../components/primitives";
 import { Screen, Waiting } from "../../components/screen";
 import { TaskFooter } from "../../components/task-footer";
@@ -79,7 +80,21 @@ export default function Home() {
                 Some history is unavailable. Totals may be incomplete.
               </T>
             ) : null}
-            <View style={s.panel}>
+            <View style={[s.panel, { overflow: "hidden" }]}>
+              <Image
+                source={require("../../../assets/source/brand/bolt-b.svg")}
+                accessibilityElementsHidden
+                importantForAccessibility="no"
+                pointerEvents="none"
+                style={{
+                  position: "absolute",
+                  right: -24,
+                  top: -22,
+                  width: 150,
+                  height: 150,
+                  opacity: 0.14,
+                }}
+              />
               <Heading color={c["panel-ink"]}>This month</Heading>
               <View style={[s.row, { gap: 16, marginTop: 20 }]}>
                 {[

@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { A, Heading, Icon, T } from "../../../components/primitives";
+import { A, Heading, Icon, PageTitle, T } from "../../../components/primitives";
 import { Screen } from "../../../components/screen";
 import { colors as c } from "../../../theme/colors";
 import { s } from "../../../theme/styles";
@@ -44,14 +44,7 @@ export default function Explore() {
   return (
     <Screen>
       <View style={[s.page, { gap: 28, paddingTop: 24 }]}>
-        <View>
-          <Heading
-            size={36}
-            style={{ marginTop: 4, lineHeight: 32.4, letterSpacing: -1.08 }}
-          >
-            Explore
-          </Heading>
-        </View>
+        <PageTitle>Explore</PageTitle>
         <View accessibilityLabel="Status" style={s.panel}>
           <Heading color={c["panel-ink"]}>Climb with others.</Heading>
           <T color={c["panel-ink"]} style={{ marginTop: 8, lineHeight: 24 }}>

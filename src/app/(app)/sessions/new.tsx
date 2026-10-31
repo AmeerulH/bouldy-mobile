@@ -17,6 +17,18 @@ import { useSnapshot } from "../../../data/snapshot";
 import { useAuth } from "../../../platform/auth";
 import { colors as c } from "../../../theme/colors";
 import { s } from "../../../theme/styles";
+
+function openedOn(date: string) {
+  const today = new Date().toISOString().slice(0, 10);
+  if (date === today) return "Opened today";
+  const label = new Intl.DateTimeFormat("en", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).format(new Date(`${date}T12:00:00`));
+  return `Opened ${label}`;
+}
+
 export default function NewSession() {
   const { past } = useLocalSearchParams<{ past?: string }>(),
     { data, error } = useSnapshot("home"),
@@ -80,36 +92,84 @@ export default function NewSession() {
     >
       <View style={s.page}>
         <Heading size={36}>
-          {active.length
-            ? "A session is already open"
-            : past
-              ? "Record a past visit"
-              : "Where are you climbing?"}
+          {active.length > 1
+            ? `${active.length} sessions are open`
+            : active.length
+              ? "A session is already open"
+              : past
+                ? "Record a past visit"
+                : "Where are you climbing?"}
         </Heading>
         {active.length ? (
           <>
             <T size={16} color={c["ink-muted"]}>
-              Finish your current visit before starting another. Your climbs and
-              notes stay in your journal.
+              Finish an open visit before starting another. Your climbs and
+              notes stay with that visit.
             </T>
-            {active.map((r) => (
-              <View key={r.session.id} style={{ gap: 12 }}>
-                <A
-                  href={`/sessions/${r.session.id}`}
-                  style={[s.button, { backgroundColor: c.accent }]}
-                  color={c["accent-ink"]}
-                >
-                  Resume session
-                </A>
-                <A
-                  href={`/sessions/${r.session.id}?sheet=end-session`}
-                  style={[s.button, { backgroundColor: c.panel }]}
-                  color={c["panel-ink"]}
-                >
-                  Finish current visit
-                </A>
-              </View>
-            ))}
+            <View
+              style={{
+                marginHorizontal: -20,
+                borderTopWidth: 1,
+                borderColor: c.hairline,
+              }}
+            >
+              {active.map((r) => {
+                const name =
+                  data.gyms?.find((g) => g.id === r.session.gym_id)?.name ??
+                  "Gym name unavailable";
+                const opened = openedOn(r.session.session_date);
+                const routes = !r.loaded
+                  ? "Routes unavailable"
+                  : r.attempts.length === 1
+                    ? "1 route logged"
+                    : `${r.attempts.length} routes logged`;
+                return (
+                  <View
+                    key={r.session.id}
+                    style={{
+                      gap: 16,
+                      paddingHorizontal: 20,
+                      paddingVertical: 16,
+                      borderBottomWidth: 1,
+                      borderColor: c.hairline,
+                    }}
+                  >
+                    <View>
+                      <T size={17} weight={700}>
+                        {name}
+                      </T>
+                      <T color={c["ink-muted"]} style={{ marginTop: 4 }}>
+                        {opened} · {routes}
+                      </T>
+                    </View>
+                    <View style={[s.row, { gap: 12 }]}>
+                      <A
+                        href={`/sessions/${r.session.id}`}
+                        accessibilityLabel={`Resume session at ${name}, ${opened}`}
+                        style={[
+                          s.button,
+                          { flex: 1, backgroundColor: c.accent },
+                        ]}
+                        color={c["accent-ink"]}
+                      >
+                        Resume
+                      </A>
+                      <A
+                        href={`/sessions/${r.session.id}?sheet=end-session`}
+                        accessibilityLabel={`Finish visit at ${name}, ${opened}`}
+                        style={[
+                          s.button,
+                          { flex: 1, backgroundColor: c.panel },
+                        ]}
+                        color={c["panel-ink"]}
+                      >
+                        Finish
+                      </A>
+                    </View>
+                  </View>
+                );
+              })}
+            </View>
           </>
         ) : (
           <>
