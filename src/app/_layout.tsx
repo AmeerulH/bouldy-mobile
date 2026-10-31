@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Platform, type ViewStyle } from "react-native";
-import { Stack } from "expo-router";
+import { Stack, ThemeProvider, DefaultTheme } from "expo-router";
 import { useFonts } from "expo-font";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
@@ -12,6 +12,13 @@ import { NavigationProvider } from "../components/navigation-provider";
 import { SnackbarProvider } from "../components/snackbar";
 import { LaunchSplash } from "../components/launch-splash";
 import { PageLoader } from "../components/page-loader";
+
+// Navigation screens default to a white card. Without this, every route change
+// flashes white before the cream page paints.
+const theme = {
+  ...DefaultTheme,
+  colors: { ...DefaultTheme.colors, background: c.bg, card: c.bg },
+};
 
 // Native screens fill the device. Only the browser keeps a phone-width canvas.
 const frameStyle: ViewStyle = {
@@ -42,6 +49,7 @@ export default function Root() {
       </View>
     );
   return (
+    <ThemeProvider value={theme}>
     <SafeAreaProvider style={{ backgroundColor: c.bg }}>
       <AuthProvider>
         <StatusBar style="dark" />
@@ -68,6 +76,7 @@ export default function Root() {
         </View>
       </AuthProvider>
     </SafeAreaProvider>
+    </ThemeProvider>
   );
 }
 
