@@ -482,7 +482,7 @@ export function PageSkeleton({ page }: { page: SkeletonPage }) {
                   gap: 16,
                   flexDirection: "row",
                   alignItems: "center",
-                  borderBottomWidth: 1,
+                  borderBottomWidth: i === 4 ? 0 : 1,
                   borderColor: c.hairline,
                 }}
               >
