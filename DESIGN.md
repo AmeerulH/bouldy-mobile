@@ -87,7 +87,7 @@ components:
     padding: "0 20px"
     height: "48px"
   field:
-    backgroundColor: "transparent"
+    backgroundColor: "{colors.bg}"
     textColor: "{colors.ink}"
     rounded: "{rounded.control}"
     padding: "12px 14px"
@@ -161,3 +161,5 @@ Source snapshot: `55b51d8` (31 October 2026). The structured tokens below descri
 ## Verification scope
 
 Native iPhone simulator Welcome/Login captures and shared Expo browser flow checks are recorded in `docs/redesign/HANDOFF.md`. Device Hub interaction remained unavailable. Physical iPhone, Android, native keyboard/gesture/VoiceOver and complete screenshot/motion parity remain acceptance gates. An exported native bundle is not a signed app or a release verdict.
+
+Input surfaces use the existing cream background token on native and web, including multiline notes and route search. Web autofill keeps that cream fill and ink text through an inset fill, while retaining keyboard-focus outlines and system colours in forced-colour mode.

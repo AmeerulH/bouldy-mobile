@@ -1,5 +1,25 @@
 # Bouldy migration progress
 
+## UI fixes publication authorised — 31 October 2026
+
+Owner explicitly authorised committing/pushing the cream input/autofill fix and removal of Explore's final personal-history shortcut, with their design/progress documentation and previously recorded live-deployment evidence. Main is connected to Vercel, so this publication may automatically deploy the replacement site. Fresh publication checks and hosted status must be reported from their actual results; the Git commit and remote main identify this checkpoint. No backend-record writes, signing or old-repo edits are included. Earlier local/uncommitted statements below describe the preparation checkpoints before this authorisation.
+
+## Explore journal shortcut removal — 31 October 2026
+
+Owner requested removal of the final “Your own history is live now. Open your sessions.” section on Explore. Removed only that text/link container from `src/app/(app)/explore/index.tsx`; existing community/planned destinations and bottom navigation remain. Source check confirms both removed strings are absent and all five Explore destination labels remain. Focused ESLint and TypeScript pass. No new authenticated visual/device acceptance is claimed. The earlier cream input fix and local deployment evidence are preserved; these UI edits remain local/uncommitted/unpushed.
+
+## Cream text-entry surfaces — 31 October 2026
+
+Owner reported white/pale-blue fields on the login screenshot and requested all inputs/text areas use the app palette. On `codex/cream-input-surfaces`, the shared Field (including multiline notes) and both independent route-search TextInputs now explicitly use `c.bg` cream. Global web input/textarea defaults use matching cream and caret ink. Browser-owned autofill paint is covered with an inset cream fill and ink text; autofill remains enabled, focus outlines are unchanged, and forced-colour mode uses system text/no inset paint. Updated DESIGN and its field specimen. Existing live-deployment evidence edits were preserved.
+
+Fresh lint succeeds with three pre-existing test import warnings; TypeScript and web/iOS/Android exports pass. Source inventory confirms all three TextInput owners have explicit cream. Chrome localhost login visibly renders cream default fields; screenshot `/tmp/bouldy-cream-inputs-chrome.png` contains no supplied credentials. Genuine saved-password autofill, multiline native rendering and physical iOS/Android visual checks were not exercised. Scoped Impeccable scan reports the established Geist font as overused; retained per approved brand, with no new layout/type defect. No logic, credentials, records or production changes; this UI fix remains local/uncommitted/unpushed.
+
+## Replacement site live verification — 31 October 2026
+
+Corrective commit `235e99c80893768171aad224903dade65d057bc1` is verified on remote main. GitHub's Vercel status is success for production deployment `BqWH2Wr5i22sXbnKMXdwySHeeKBM`. Public `https://bouldy.vercel.app/welcome` rendered the approved welcome screen in the user's signed-in Chrome profile; direct `/login` rendered the branded email/password form. No credentials were entered/submitted by the agent, and no accounts or climbing records were created/changed. Chrome's saved form values were not copied to evidence. The user interacted with Chrome/DevTools during verification, so their current testing state was left intact.
+
+Unauthenticated HTTP verification: welcome/login200 HTML; identity/snapshot401 JSON with `Cache-Control: no-store, private`; manifest200 application/manifest+json; worker200 JavaScript; exported JS/CSS/font assets200 with correct content types. This proves the replacement frontend and unauthenticated server adapter are reachable, not authenticated journal parity, installed-PWA behaviour or native release readiness. Existing release follow-ups remain open. Detailed HTTP evidence is `docs/evidence/vercel-live-20261031.json`. This post-deployment evidence is recorded locally, without a separate documentation-only deployment push.
+
 ## Vercel install failure and lockfile repair — 31 October 2026
 
 Published configuration commit `7045e13` was verified on remote main. Vercel production deployment `18QX4UykDQp5z7M79Pfct9sTQTZk` failed during `npm ci`, before export: `@emnapi/core@1.11.3` and `@emnapi/runtime@1.11.3` were missing from the lockfile. Chrome was already authenticated and showed the exact error plus Node24.x; no login or project-setting change was needed. Vercel connector project tools remain unavailable in this chat.

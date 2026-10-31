@@ -71,6 +71,7 @@ export function SessionRouteList({
               fontFamily: "Geist-400",
               fontSize: 16,
               color: c.ink,
+              backgroundColor: c.bg,
               paddingHorizontal: 12,
               minHeight: 48,
             }}

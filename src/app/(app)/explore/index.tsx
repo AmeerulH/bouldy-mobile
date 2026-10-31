@@ -92,21 +92,6 @@ export default function Explore() {
             </View>
           </View>
         ))}
-        <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-          <T color={c["ink-muted"]} style={{ lineHeight: 24 }}>
-            Your own history is live now.{" "}
-          </T>
-          <A
-            href="/sessions"
-            color={c.ink}
-            textStyle={{ textDecorationLine: "underline", lineHeight: 24 }}
-          >
-            Open your sessions
-          </A>
-          <T color={c["ink-muted"]} style={{ lineHeight: 24 }}>
-            .
-          </T>
-        </View>
       </View>
     </Screen>
   );

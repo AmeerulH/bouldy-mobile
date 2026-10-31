@@ -344,6 +344,7 @@ export function Field({
             fontFamily: "Geist-400",
             fontSize: 16,
             color: c.ink,
+            backgroundColor: c.bg,
             minHeight: 48,
             borderWidth: 1,
             borderColor: c.hairline,

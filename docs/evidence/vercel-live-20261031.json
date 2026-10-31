@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-31",
+  "deployed_commit": "235e99c80893768171aad224903dade65d057bc1",
+  "deployment": "https://vercel.com/ameerulhs-projects/bouldy/BqWH2Wr5i22sXbnKMXdwySHeeKBM",
+  "github_vercel_status": "success",
+  "site": "https://bouldy.vercel.app",
+  "browser_observations": [
+    "Chrome welcome screen rendered",
+    "Chrome direct login email/password form rendered; no submission"
+  ],
+  "http_checks": [
+    {
+      "path": "/welcome",
+      "status": 200,
+      "content_type": "text/html",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "bytes": 23544,
+      "html": true
+    },
+    {
+      "path": "/login",
+      "status": 200,
+      "content_type": "text/html",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "bytes": 23544,
+      "html": true
+    },
+    {
+      "path": "/api/identity",
+      "status": 401,
+      "content_type": "application/json",
+      "cache_control": "no-store, private"
+    },
+    {
+      "path": "/api/snapshot",
+      "status": 401,
+      "content_type": "application/json",
+      "cache_control": "no-store, private"
+    },
+    {
+      "path": "/manifest.webmanifest",
+      "status": 200,
+      "content_type": "application/manifest+json; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "bytes": 690,
+      "html": false
+    },
+    {
+      "path": "/sw.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "bytes": 1390,
+      "html": false
+    }
+  ],
+  "asset_checks": "Exported entry JS, global CSS and six sampled fonts return200 with correct content types",
+  "authenticated_flow_verified": false,
+  "installed_pwa_verified": false,
+  "production_record_writes": 0,
+  "scope": "Read-only deployment smoke verification; no complete migration acceptance claim"
+}
