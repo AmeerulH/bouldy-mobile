@@ -129,7 +129,6 @@ export default function Profile() {
                   minHeight: 72,
                   padding: 20,
                   gap: 16,
-                  borderTopWidth: 1,
                   borderBottomWidth: 1,
                   borderColor: c.hairline,
                 },
