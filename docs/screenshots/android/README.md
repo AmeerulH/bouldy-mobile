@@ -1,5 +1,7 @@
 # Bouldy Android screenshots
 
+> **Historical visuals:** these captures predate the approved v35 cream/four-tab design. They are not current UI or redesign acceptance evidence. See [the current redesign handoff](../../redesign/HANDOFF.md).
+
 195 real PNG screenshots covering all 27 original page routes, the extra development catalogue and feature/fixture states.
 
 Unedited actual emulator viewport and vertical-scroll screenshots using synthetic local fixtures. Planned pages retain source planned status. Developer tooling overlays may be visible. Not fresh web/iOS/PWA screenshots or source-golden/pixel acceptance.

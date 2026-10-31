@@ -1,6 +1,6 @@
 # Bouldy migration planning package
 
-Original planning package prepared 28 October 2026. The app has since been implemented in this repository; this directory retains the baseline contract and working parity registers. Start with [current progress](../../MIGRATION_PROGRESS.md) and [the project guide](../PROJECT_GUIDE.md), not a fresh execution of the historical starter prompt.
+Original planning package prepared 28 October 2026. The app has since been implemented in this repository; this directory retains the baseline contract and working parity registers. Start with [current progress](../../MIGRATION_PROGRESS.md) and [the project guide](../PROJECT_GUIDE.md), not a fresh execution of the historical starter prompt. The owner-approved v35 design supersedes the old exact-copy visual/five-tab constraints; use [the redesign handoff](../redesign/HANDOFF.md) and [current continuation prompt](../redesign/CONTINUE_PROMPT.md). The original spec/register bodies remain historical requirements/evidence, not current UI descriptions.
 
 Start with [the full migration spec](../REACT_NATIVE_MIGRATION_SPEC.md), then [the parity register](PARITY_REGISTER.md) and [the agent handoff](IMPLEMENTATION_HANDOFF.md). The handoff includes Notion links and a copy-paste continuation prompt.
 

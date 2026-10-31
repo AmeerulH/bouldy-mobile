@@ -1,6 +1,6 @@
 {
-  "updatedDate": "2026-10-29",
-  "status": "Implementation published; real API sign-in/read checks observed; full parity, installed-PWA and release acceptance remain open",
+  "updatedDate": "2026-10-31",
+  "status": "Approved v35 redesign and subsequent UI refinements published; commit-specific validation and device/PWA/release gaps remain open",
   "planningPage": {
     "id": "40776faa-3b39-8162-89e3-c6985884558e",
     "url": "https://app.notion.com/p/40776faa3b39816289e3c6985884558e?pvs=204"
@@ -53,5 +53,12 @@
   "phoneReview": {
     "id": "40876faa-3b39-8109-83cd-d8e80fb4d41a",
     "url": "https://app.notion.com/p/40876faa3b39810983cdd8e80fb4d41a"
+  },
+  "currentDesign": {
+    "version": "v35",
+    "localHandoff": "docs/redesign/HANDOFF.md",
+    "continuation": "docs/redesign/CONTINUE_PROMPT.md",
+    "reviewedCommit": "55b51d8d0ed70696b706dd191523ab3c1db59604",
+    "scopeNote": "Original Notion migration pages are historical visual baselines; current local approved design supersedes exact-copy/five-tab constraints."
   }
 }

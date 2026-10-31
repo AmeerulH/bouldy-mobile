@@ -1,9 +1,11 @@
 # Bouldy visual walkthrough
 
+> **Historical visuals:** these captures predate the approved v35 cream/four-tab design. They are not current UI or redesign acceptance evidence. See [the current redesign handoff](../redesign/HANDOFF.md).
+
 Prepared 24 October 2026 for the team brainstorm.
 
 - Open `bouldy-visual-walkthrough.html` in a browser. It is self-contained, including all screenshots, and can be shared as one file.
-- The shareable PDF is [Bouldy visual walkthrough](../../output/pdf/bouldy-visual-walkthrough.pdf).
+- The original PDF export is not present in this Expo checkout; use the preserved HTML walkthrough above. Current phone review is available through the [Notion screenshot index](https://app.notion.com/p/40876faa3b39810983cdd8e80fb4d41a), whose 195-image gallery is also historical/pre-v35.
 - `walkthrough-data.json` contains the editable page descriptions, current/proposed flow steps and discussion prompts.
 - `screenshots/` contains the unedited local app captures and capture log.
 

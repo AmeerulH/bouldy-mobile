@@ -1,5 +1,7 @@
 # Screen and interaction parity register
 
+> **Historical baseline — current-state notice, 31 October 2026.** The app now exists and its approved v35 redesign is published. The original planning-only, exact-copy visual, five-tab and M0–M2-only instructions below are historical, not the current continuation task. Use [the current handoff](../redesign/HANDOFF.md); preserve unchanged journal/auth/privacy invariants and keep unverified acceptance gates open. Original baseline text is retained below for provenance.
+
 Prepared 28 October 2026. Baseline tables below are the frozen source contracts. Implementation updates for this local M0–M2 run are in the sibling CSV registers and MIGRATION_PROGRESS.md. No full screen/platform parity row is accepted. Source paths are relative to `bouldy-web`; target paths are proposed in `bouldy-mobile`. All production screens must pass on iOS, Android and Expo web.
 
 | ID | URL / surface | Current state | Exact contract to retain | Source | Proposed target |

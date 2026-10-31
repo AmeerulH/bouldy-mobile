@@ -1,5 +1,17 @@
 # Approved native redesign — 31 October 2026
 
+## Current source snapshot — 31 October 2026
+
+Reviewed local HEAD and remote main: `55b51d8d0ed70696b706dd191523ab3c1db59604`. This supersedes the implementation snapshot at `488ab9b` below; the earlier evidence remains dated rather than being silently promoted to the newer code.
+
+Since `488ab9b`, committed work adds the admin Gyms page, dark animated launch, Bolt B page titles and profile hero (`058ce10`); section/action error handling and error-copy tests (`b7f7076`) plus a guarded error preview (`d7f2676`); cream navigation/PWA metadata (`17889ad`); matching skeletons (`f0a0842`); eager route bundles (`44e1d2a`); tighter profile/settings boundaries (`d71ee65`, `9cc4408`, `f44a415`); overflow-only page scrolling (`b94319c`); and tiled active-visit Bolt B marks (`55b51d8`). These source changes were inspected for documentation, not re-tested on devices in this docs-only pass.
+
+Current launch code settles at 2800ms and exits over 200ms, or uses a 400ms reduced-motion fallback. Native root/sheets remain edge-to-edge; web stays at the 430-unit cap. Planned-page header gaps remain 12 units. Error/empty/partial states must not fabricate saved data or automatically replay commands.
+
+The last recorded full lint/typecheck/78-test/web/native export checkpoint is `488ab9b` (`evidence/publication-*`); it predates the newer commits and added error-copy tests. Exact current-suite count and fresh build/device acceptance are not claimed here. Device Hub display was unavailable at its last check; physical iPhone width confirmation is scoped evidence only. Verify listeners before resuming live preview rather than trusting an old session number.
+
+Known release follow-up: `/skeleton-preview` lacks a route-local development guard and is not in the existing production middleware preview list. Decide and verify its production disposition before release; this documentation pass makes no runtime change. Catalogue direct-API authorization, atomicity, physical iOS/Android, native errors/keyboard/gestures, PWA installed/update/offline and signing/hosted-adapter acceptance remain open.
+
 ## Target and authority
 
 - Active checkout: `/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile`, branch `codex/approved-native-redesign`. The owner authorised publishing this redesign and UI fixes to GitHub main on 31 October; see the publication checkpoint below. No deployment, signing or production record mutation.
@@ -11,7 +23,7 @@
 
 - Approved cream/limestone palette and supplied texture assets, Barlow/Geist fonts and hold artwork. Pill primary/secondary geometry,12-unit stacked task actions, circular back/help/add controls and full-width separators. Shared text leading corrected.
 - Four tabs Home/Explore/Sessions/You; Gyms removed from main navigation. Home header is not sticky and has no duplicate profile icon.
-- Welcome/Login/Signup with new copy/composition and fixed actions. Animation-only launch hold ascent2.2s/2.4s total, static600ms reduced-motion alternative.
+- Welcome/Login/Signup with new copy/composition and fixed actions. The current launch was subsequently refined to the dark hold/Bolt B/wordmark composition with 2800ms settle + 200ms exit and a 400ms reduced-motion alternative.
 - Home uses actual monthly completed visits, finishes, climbing duration, latest visit and active resume; first-use centred. Explore retains planned community/competition destinations. Profile focuses on account/disabled forthcoming settings plus adjacent logout.
 - Sessions uses dated monthly rows, active session, Your climbs and Record past visit. New session setup chooses an existing gym, accepts validated past dates and offers Resume/Finish while another visit is active.
 - Session workbench keeps header, search and grade chips outside its scrolling FlatList.20-record batches expand on end reach; FlatList bounds mounted rows. Whole row opens details, independent sibling controls log +1/Sent/eligible Flash, trailing chevron. Complete visits only show actual logged routes.
@@ -47,7 +59,7 @@ Normal local simulator preview: `npm start -- --ios`. Physical iPhone: `npm run 
 
 Read AGENTS.md, PRODUCT.md, DESIGN.md and docs/CODE_QUALITY.md. Continue from this implementation; do not repeat the old migration scaffold or edit the deprecated Next.js app. Preserve unrelated work, keep pending acceptance gates open and update this handoff with observed evidence.
 
-## Final verification results
+## Historical full verification — checkpoint 488ab9b
 
 - `npm run lint`: passed, no findings.
 - `npm run typecheck`: passed, no diagnostics.
@@ -59,13 +71,13 @@ Read AGENTS.md, PRODUCT.md, DESIGN.md and docs/CODE_QUALITY.md. Continue from th
 - Targeted review: admin authority comes from authenticated server-issued IDs; original exact-origin/HTTP-only/native SecureStore boundary retained. Snapshot cache is process-only, cleared on account lifecycle, with generation/epoch guards for late reads. Backend atomicity/direct-endpoint authorization remain open as above.
 - `git diff --check` and sidecar JSON parse passed. No product dependency was added. Prettier was used as an ephemeral formatting tool.
 
-The final preview is running in live API LAN mode through `npm run start:phone`, owned terminal session82704, Metro port8081. Status endpoint reports running; iOS bundled2051 modules and the Expo Go URL was reopened. Inspect its listener before running a second server. Automated writes used fixtures only. The existing fixture4010 was preserved and does not affect live-mode configuration.
+At the initial implementation handoff, preview ran in live API LAN mode through `npm run start:phone` on port8081. This process/session observation is historical, not a guarantee that it is still running. Status endpoint reports running; iOS bundled2051 modules and the Expo Go URL was reopened. Inspect its listener before running a second server. Automated writes used fixtures only. The existing fixture4010 was preserved and does not affect live-mode configuration.
 
 ## Physical iPhone width correction — 31 October 2026
 
 The owner observed white side strips in Expo Go and confirmed their removal after this change. `src/app/_layout.tsx` now shares a cream-backed frame between loading/loaded states, applies the 430-unit cap only to web and colours the outer safe-area provider. `src/components/sheet.tsx` no longer caps native sheets to the browser width. Web layout and web sheets retain the phone-canvas cap. Inner content gutters are intentional and unchanged.
 
-Root render/constraint verification reproduces 5-unit side gaps at native width440 before the fix and zero afterward. Native loading/loaded frames fill all checked widths; browser widths remain capped. Fresh lint/typecheck and78/78 tests pass; Metro compiles/serves iOS successfully; the targeted Impeccable layout scan has no findings. This scoped physical-iPhone confirmation does not close the remaining native interaction/release gates. Device Hub display remains timed out. Changes are local/uncommitted; prior uncommitted redesign work is preserved. See `evidence/native-width-fix.json`.
+Root render/constraint verification reproduces 5-unit side gaps at native width440 before the fix and zero afterward. Native loading/loaded frames fill all checked widths; browser widths remain capped. Fresh lint/typecheck and78/78 tests pass; Metro compiles/serves iOS successfully; the targeted Impeccable layout scan has no findings. This scoped physical-iPhone confirmation does not close the remaining native interaction/release gates. Device Hub display remains timed out. At that width-fix checkpoint changes were local/uncommitted; they were subsequently published in `488ab9b`. See `evidence/native-width-fix.json`.
 
 ## Publication checkpoint — 31 October 2026
 

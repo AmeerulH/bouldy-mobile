@@ -1,6 +1,6 @@
 # Bouldy mobile and PWA code quality
 
-These requirements govern future changes to the React Native/Expo app and shared web/PWA. They are a review contract, not a claim that the existing migration has passed every check. Read [PRODUCT.md](../PRODUCT.md), [DESIGN.md](../DESIGN.md), the [migration spec](REACT_NATIVE_MIGRATION_SPEC.md) and current [progress](../MIGRATION_PROGRESS.md) before changing behaviour. Follow the task's authorised scope; keep unrelated refactors separate.
+These requirements govern future changes to the React Native/Expo app and shared web/PWA. They are a review contract, not a claim that the existing migration has passed every check. Read [PRODUCT.md](../PRODUCT.md), [DESIGN.md](../DESIGN.md), the [current redesign handoff](redesign/HANDOFF.md) and [progress](../MIGRATION_PROGRESS.md) before changing behaviour. Follow the task's authorised scope; keep unrelated refactors separate.
 
 ## Correctness and maintainability
 
@@ -27,7 +27,7 @@ Preserve the approved touch geometry while recording conflicts. Aim for [iOS 44-
 
 For web/PWA, use [WCAG 2.2 AA](https://www.w3.org/TR/WCAG22/) as the review target: readable contrast, meaningful names/states, keyboard operation, visible and unobscured focus, zoom/reflow, and errors associated with their fields. Test actual colour pairs; a token name does not prove contrast. WCAG's [24 CSS-pixel target-size criterion](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum/) has exceptions and is distinct from comfortable mobile touch sizing. Do not use colour alone to communicate a route result or error.
 
-Respect reduced-motion settings without removing essential state feedback. Preserve access to controls when animation is disabled. Record any conflict between accessibility, native expectations and exact source parity in the affected register/card for an explicit product decision. No new dark theme or tablet redesign is implied by this quality guide.
+Respect reduced-motion settings without removing essential state feedback. Preserve access to controls when animation is disabled. Record any conflict between accessibility, native expectations and the approved v35 visual contract in the affected register/card for an explicit product decision. No new dark theme or tablet redesign is implied by this quality guide.
 
 ## PWA lifecycle and caching
 
@@ -49,7 +49,7 @@ Use the pinned arm64 Node runtime and lockfile. Review the need, licence, bundle
 | --- | --- |
 | Docs/context only | Valid local links, parsed JSON/YAML, source/token consistency, accurate dated status and clean diff. No new runtime success claim. |
 | Domain or trusted API logic | Lint, typecheck, relevant regression/adapter tests, adverse inputs, auth/ownership/partial/failure paths; demonstrate that the old behaviour fails the regression when practical. |
-| Shared UI, navigation, credentials or lifecycle | Relevant automated checks plus observed iOS, Android and web states; safe area, keyboard, focus, Back, restart and reduced motion as affected. Compare matching source/state references. |
+| Shared UI, navigation, credentials or lifecycle | Relevant automated checks plus observed iOS, Android and web states; safe area, keyboard, focus, Back, restart and reduced motion as affected. Compare matching approved-v35 state references; older one-for-one screenshots are historical. |
 | Dependency/config/build output | Compatibility/Doctor, lint/typecheck/tests and web/server/iOS/Android exports as affected; review bundle boundaries and runtime behaviour. |
 | Production/release candidate | Complete acceptance matrix, real browser/installed-PWA tests, authorised account checks, standalone/release builds, physical-device/performance evidence, approved adapter origin and rollback plan. |
 
@@ -67,7 +67,7 @@ npm run export:native -- --output-dir dist/review/native
 
 Use meaningful behaviour tests, not tests that merely repeat the implementation or an arbitrary coverage percentage. The [React Native testing overview](https://reactnative.dev/docs/testing-overview) distinguishes static, component and end-to-end confidence. Browser E2E uses the explicit fixture server and fixture preview described in README; never point a mutation harness at the real API. Do not bypass a browser-control policy block with another automation surface. Do not export concurrently with active native/browser QA or source edits.
 
-The prior live-API checkpoint records 75 tests, lint/typecheck and web/native exports passing. Expo Doctor is 19/20 because React Native 0.88.0 differs from the recommended 0.88.1. Dependency advisories and full platform/PWA/release checks remain open. These are dated findings in current progress, not permanent exemptions or results for a new change.
+The last full recorded redesign publication checkpoint at `488ab9b` records 78 tests, lint/typecheck and web/native exports passing. Later changes through `55b51d8` include error-copy tests and UI refinements; the earlier 78-test result does not validate those changes. Expo Doctor is 19/20 because React Native 0.88.0 differs from the recommended 0.88.1. Dependency advisories and full platform/PWA/release checks remain open. These are dated findings in current progress, not permanent exemptions or results for a new change.
 
 ## Review and completion
 
@@ -75,7 +75,7 @@ Review correctness, readability, architecture, privacy/security and performance;
 
 Before calling work complete:
 
-- Match the requested behaviour and preserved design; explain any approved deviation.
+- Match the requested behaviour and approved v35 design; explain any approved deviation.
 - Record exactly what ran, what passed/failed, platform, environment and evidence paths.
 - Keep unavailable, stale, partial and untested checks explicit; do not equate exported JS with an app binary.
 - Update progress, affected parity rows and the existing task card without accepting unverified gates.

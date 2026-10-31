@@ -1,12 +1,12 @@
 # Bouldy web/PWA and native release handoff
 
-Implementation is local. This runbook grants no permission to deploy, provision accounts/signing, submit binaries, replace the existing web deployment or change production records.
+Source is published to GitHub main; no replacement site or store app has been deployed. This runbook grants no permission to deploy, provision accounts/signing, submit binaries, replace the existing web deployment or change production records.
 
 ## Build and local review
 
 Use Node 24.11.1. `npm run build` generates the allowlisted PWA worker then exports the shared screens and trusted server adapter. `npx expo serve <export-directory> --port 8083` hosts a local production-mode export. HTTPS or localhost is required for service-worker registration. Development/fixture previews never register a worker.
 
-The manifest preserves `/` as launch URL and scope, standalone display, portrait orientation and the source Bolt B artwork. PNGs are deterministic raster derivatives of the preserved `assets/source/icon.svg`, on the source light background; maskable artwork is inset inside its safe zone. No new logo was created.
+The manifest preserves `/` as launch URL and scope, standalone display, portrait orientation and the source Bolt B artwork. App theme, HTML first-paint/theme metadata and manifest background/theme now use the approved cream `#f5f1e8`. This is a source check, not fresh installed-PWA evidence. PNGs are deterministic raster derivatives of the preserved `assets/source/icon.svg`, on the source light background; maskable artwork is inset inside its safe zone. No new logo was created.
 
 ## Install
 
@@ -30,10 +30,10 @@ Web uses `bouldy_token`, Path=/, HttpOnly, SameSite=Lax and the existing 30-day 
 
 ## Native prerequisites and acceptance
 
-Bundle/asset exports are not app binaries. A local development binary needs the iOS/Android toolchain and reachable adapter URL. A physical device cannot reach the Mac through 127.0.0.1. Do not expose the adapter publicly or provision signing/accounts without authorisation. Standalone/release builds, physical iOS/Android checks and performance review remain required. Shipping apps must use an authorised HTTPS adapter and the existing backend; never the synthetic fixture. Resolve current advisory and compatibility checks before release.
+Bundle/asset exports are not app binaries. A local development binary needs the iOS/Android toolchain and reachable adapter URL. A physical device cannot reach the Mac through 127.0.0.1. Do not expose the adapter publicly or provision signing/accounts without authorisation. Use `npm run start:phone` for live-API LAN Expo Go on the same Wi-Fi; local native screens and sheets fill the device width, while web retains its 430-unit preview canvas. The owner confirmed the iPhone side-gap fix. Full standalone/release builds, physical iOS/Android checks and performance review remain required. Shipping apps must use an authorised HTTPS adapter and the existing backend; never the synthetic fixture. Resolve current advisory and compatibility checks before release.
 
 ## Authorised cutover and rollback, later
 
-Keep the old web deployment and repository as rollback targets. Record the approved host/domain, signing identities, backend/test accounts, cookie continuity result and observation period. Deploy only after explicit authorisation and all parity gates. Verify intended URLs/queries/cookies and no double-created records or replayed writes after cutover.
+The old web repository is deprecated for development, but preserve its deployment/history as rollback references until a separately authorised cutover. Do not develop the deprecated Next app or infer source retirement from the redesign. Record the approved host/domain, signing identities, backend/test accounts, cookie continuity result and observation period. Deploy only after explicit authorisation and all parity gates. Verify intended URLs/queries/cookies and no double-created records or replayed writes after cutover.
 
 If rollback is required, first preserve the current export and diagnostics. Serve the previous frontend. To remove this worker safely on the same origin, deploy a deliberate replacement `/sw.js` that unregisters itself and deletes only `bouldy-public-*` caches after controlled activation; do not clear unrelated origin storage, accounts or user drafts. Test this procedure on an isolated staging origin before a production incident. No rollback, worker removal or source retirement has been performed.

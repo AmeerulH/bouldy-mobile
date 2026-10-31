@@ -1,0 +1,92 @@
+{
+  "client_date": "2026-10-31",
+  "checked_at_utc": "2026-10-31T14:57:22.130469+00:00",
+  "reviewed_source_head": "55b51d8d0ed70696b706dd191523ab3c1db59604",
+  "verified_remote_main_at_review": "55b51d8d0ed70696b706dd191523ab3c1db59604",
+  "scope": "Documentation and design-context metadata only; no runtime source/config changes, no new application test or build claim",
+  "files_updated": [
+    ".impeccable/design.json",
+    "AGENTS.md",
+    "DESIGN.md",
+    "MIGRATION_PROGRESS.md",
+    "PRODUCT.md",
+    "README.md",
+    "docs/CODE_QUALITY.md",
+    "docs/PROJECT_GUIDE.md",
+    "docs/PWA_AND_RELEASE_RUNBOOK.md",
+    "docs/REACT_NATIVE_MIGRATION_SPEC.md",
+    "docs/migration/IMPLEMENTATION_HANDOFF.md",
+    "docs/migration/NOTION_LINKS.json",
+    "docs/migration/PARITY_REGISTER.md",
+    "docs/migration/README.md",
+    "docs/migration/START_IMPLEMENTATION_PROMPT.md",
+    "docs/migration/VERIFICATION.md",
+    "docs/redesign/CONTINUE_PROMPT.md",
+    "docs/redesign/HANDOFF.md",
+    "docs/screenshots/android/README.md",
+    "docs/visual-walkthrough/README.md"
+  ],
+  "local_links_checked": 270,
+  "missing_local_links": [],
+  "design_validation": {
+    "yaml": "valid",
+    "colour_tokens": 24,
+    "typography_roles": 5,
+    "sidecar": "consistent",
+    "navigation_destinations": 4
+  },
+  "runtime_and_config_files_unchanged": 190,
+  "historical_baselines": {
+    "docs/REACT_NATIVE_MIGRATION_SPEC.md": {
+      "original_sha256": "373a93790554e03aa129b3aa0c4159c2ee683cbf030acacca8e3ad418b94b967",
+      "original_body_preserved": true,
+      "change": "Additive historical/current-state preface only"
+    },
+    "docs/migration/IMPLEMENTATION_HANDOFF.md": {
+      "original_sha256": "e418a2c4f7782bd2563d8c4d638cc422b7a1d799ea1e28868a296c972fa1483f",
+      "original_body_preserved": true,
+      "change": "Additive historical/current-state preface only"
+    },
+    "docs/migration/START_IMPLEMENTATION_PROMPT.md": {
+      "original_sha256": "1a120ecc29282f5e28519e438effb7f0d1d5f33024d028f1208d9f1db1221497",
+      "original_body_preserved": true,
+      "change": "Additive historical/current-state preface only"
+    },
+    "docs/migration/PARITY_REGISTER.md": {
+      "original_sha256": "131cbf443704c4cbddfa073ae01c565dd462ffb6651aa46ee1c14c63778298cb",
+      "original_body_preserved": true,
+      "change": "Additive historical/current-state preface only"
+    },
+    "docs/migration/VERIFICATION.md": {
+      "original_sha256": "2915b6f0f53730d17ff5b0b45d613f1917ebe5122a037011179e1e7fa606e978",
+      "original_body_preserved": true,
+      "change": "Additive historical/current-state preface only"
+    }
+  },
+  "last_full_runtime_checkpoint": "488ab9b: 78 tests/lint/typecheck/web/native exports; predates newer code",
+  "remaining_followup": "Skeleton-preview production disposition is unverified; full device/PWA/release acceptance remains open",
+  "notion_writes": 0,
+  "production_record_writes": 0,
+  "document_hashes": {
+    ".impeccable/design.json": "a1b8d816ffa526d4f02011b3c52348ace403481f1ca6c891618a6ae1e8f723e1",
+    "AGENTS.md": "3268a526ce737ae1afcd5a080b99aa2a698534ed7e9b8dd5606f2edeced522ab",
+    "DESIGN.md": "4bbed3c90c5378c05b12cc4ff7fb0a15842d69ce6e51a8c85487de7723b2e31a",
+    "MIGRATION_PROGRESS.md": "abc7c008e9a42f266b0d7410e8d79e4f8b478bb9ef4ead5819ec410851e1e4b6",
+    "PRODUCT.md": "37585a18a2db031d78c16902bc6e02f841162bebb8a3b1286ec8f8966797e287",
+    "README.md": "5e1368a7be77ab6ae17cfc43b7daf6bd77b7c9cc9d60d84a420fe23b41040ebf",
+    "docs/CODE_QUALITY.md": "d9c62db27d8852a65c1e215a17ff8d13bb54380052a874cb1e9ed07a683ad4de",
+    "docs/PROJECT_GUIDE.md": "df775ecdfeb909939bfad41ad1f97f911413f66d743fef65adb5ca558dfa3e70",
+    "docs/PWA_AND_RELEASE_RUNBOOK.md": "17d530f939c211ae842d429ffb4ddc4b8404bd65f4867ac729a01e6ac046c6aa",
+    "docs/REACT_NATIVE_MIGRATION_SPEC.md": "4654c4300c9ebc5e2c2bb005b7ed407a1524c9203272ce0a1494f61faf608118",
+    "docs/migration/IMPLEMENTATION_HANDOFF.md": "5674bc33c31822de7edfc1d9f264aa0526ffd775b456a18b0ebe92a6e5511e35",
+    "docs/migration/NOTION_LINKS.json": "f689de6d0d53f2095e4fac7ef5839ea39f055b1e9dca19eaf92ac989762fc597",
+    "docs/migration/PARITY_REGISTER.md": "d7c0f3b3e38a5fa23565a2e1e6545433cb6b5e4fc0959e76fd42146da39e9689",
+    "docs/migration/README.md": "a40695c5e60deda95fc567cb0a3303038684d2dcc6d4cfa028ba2442fabbb205",
+    "docs/migration/START_IMPLEMENTATION_PROMPT.md": "f4edfbbf7aa0bd3ed3a97814b65e2b00725a905f9523ef0c6dd7f503d4eb1a43",
+    "docs/migration/VERIFICATION.md": "b2806a7756d3be70221c7bfac802492d2533a9cb0c84b2ba5ade294b14bbae4d",
+    "docs/redesign/CONTINUE_PROMPT.md": "683e4a2c0cfa129a70ab85252c9283cc77a7778a293fdc477a85855d8e5d2f5c",
+    "docs/redesign/HANDOFF.md": "d01fbfde67a689d0401f56775d80c0527483a489183687eed7b59ebf1f801a32",
+    "docs/screenshots/android/README.md": "7852a445727a874eaeef5d3633f28c42882adb06556682edc2a90cf4dc22ddf1",
+    "docs/visual-walkthrough/README.md": "99ffc08e42eab7e68c65334802a040e996019ccdd103f41d6af1e09c9e23f955"
+  }
+}

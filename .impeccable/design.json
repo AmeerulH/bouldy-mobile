@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-29T15:04:46.648094+00:00",
+  "generatedAt": "2026-10-31T14:55:29.221153+00:00",
   "title": "Design System: Bouldy",
   "extensions": {
     "colorMeta": {
@@ -84,14 +84,14 @@
         "displayName": "Bg",
         "canonical": "#f5f1e8",
         "tonalRamp": [
-          "#0b0b0b",
-          "#252525",
-          "#424242",
-          "#616161",
-          "#828282",
-          "#a5a5a5",
-          "#c9c9c9",
-          "#eeeeee"
+          "#0d0b06",
+          "#28251e",
+          "#45423a",
+          "#646159",
+          "#86827a",
+          "#a8a59c",
+          "#cdc9c0",
+          "#f2eee5"
         ]
       },
       "ink": {
@@ -114,14 +114,14 @@
         "displayName": "Ink Muted",
         "canonical": "#605b53",
         "tonalRamp": [
-          "#0c0b0b",
-          "#262425",
-          "#434142",
-          "#636061",
-          "#848183",
-          "#a6a4a5",
-          "#cbc8c9",
-          "#f0eeef"
+          "#0e0b05",
+          "#29241d",
+          "#46413a",
+          "#666058",
+          "#878279",
+          "#aaa49b",
+          "#cec8bf",
+          "#f4eee4"
         ]
       },
       "ink-faint": {
@@ -129,14 +129,14 @@
         "displayName": "Ink Faint",
         "canonical": "#736d63",
         "tonalRamp": [
-          "#0c0b0b",
-          "#262525",
-          "#434141",
-          "#636161",
-          "#848282",
-          "#a6a4a4",
-          "#cbc8c8",
-          "#f0eeee"
+          "#0f0a04",
+          "#29241c",
+          "#474138",
+          "#666057",
+          "#888177",
+          "#aba499",
+          "#cfc8bd",
+          "#f4eee2"
         ]
       },
       "hairline": {
@@ -144,14 +144,14 @@
         "displayName": "Hairline",
         "canonical": "#ddd6c9",
         "tonalRamp": [
-          "#0c0b0b",
-          "#272425",
-          "#444142",
-          "#636061",
-          "#848182",
-          "#a7a4a5",
-          "#cbc8c9",
-          "#f0edee"
+          "#0f0a03",
+          "#2a241a",
+          "#474137",
+          "#676055",
+          "#888276",
+          "#aba498",
+          "#cfc8bb",
+          "#f5eee0"
         ]
       },
       "panel": {
@@ -217,31 +217,46 @@
       "neutral": {
         "role": "neutral",
         "displayName": "Neutral",
-        "canonical": "#eceaeb",
+        "canonical": "#e7e0d4",
         "tonalRamp": [
-          "#0c0b0b",
-          "#262525",
-          "#434142",
-          "#626161",
-          "#838283",
-          "#a6a4a5",
-          "#cac8c9",
-          "#f0eeef"
+          "#0f0a04",
+          "#29241b",
+          "#474137",
+          "#666056",
+          "#888177",
+          "#aba499",
+          "#cfc8bc",
+          "#f5eee1"
+        ]
+      },
+      "control-neutral": {
+        "role": "neutral",
+        "displayName": "Control Neutral",
+        "canonical": "#ddd6c9",
+        "tonalRamp": [
+          "#0f0a03",
+          "#2a241a",
+          "#474137",
+          "#676055",
+          "#888276",
+          "#aba498",
+          "#cfc8bb",
+          "#f5eee0"
         ]
       },
       "rail": {
         "role": "neutral",
         "displayName": "Rail",
-        "canonical": "#f0eeee",
+        "canonical": "#eee8dc",
         "tonalRamp": [
-          "#0c0b0b",
-          "#262525",
-          "#434141",
-          "#626161",
-          "#838282",
-          "#a6a4a4",
-          "#cac8c8",
-          "#f0eeee"
+          "#0f0b04",
+          "#29241c",
+          "#464138",
+          "#666156",
+          "#878277",
+          "#aaa499",
+          "#cec8bd",
+          "#f4eee2"
         ]
       },
       "flash-bg": {
@@ -363,8 +378,8 @@
     "shadows": [
       {
         "name": "snackbar",
-        "value": "0 6px 20px rgba(13,13,13,.28)",
-        "purpose": "Transient snackbar only; resting cards remain flat."
+        "value": "0 4px 16px rgba(13,13,13,.2)",
+        "purpose": "Current transient snackbar; not resting-card decoration."
       }
     ],
     "motion": [
@@ -390,38 +405,38 @@
       },
       {
         "name": "snackbar-in",
-        "value": "260ms",
-        "purpose": "Snackbar entrance."
-      },
-      {
-        "name": "snackbar-out",
         "value": "180ms",
-        "purpose": "Snackbar exit."
+        "purpose": "Current active-presentation snackbar entrance."
       },
       {
         "name": "snackbar-visible",
-        "value": "5000ms",
-        "purpose": "Snackbar lifetime."
-      },
-      {
-        "name": "welcome",
-        "value": "500ms",
-        "purpose": "Welcome entrance."
-      },
-      {
-        "name": "tab-transition",
-        "value": "220ms",
-        "purpose": "Primary-route transition."
+        "value": "4000ms",
+        "purpose": "Success/info notices only; errors/warnings require dismissal."
       },
       {
         "name": "push-transition",
         "value": "260ms",
         "purpose": "Pushed-route transition."
+      },
+      {
+        "name": "launch-settled",
+        "value": "2800ms",
+        "purpose": "Current dark hold/Bolt B/wordmark launch phase."
+      },
+      {
+        "name": "launch-exit",
+        "value": "200ms",
+        "purpose": "Launch fade after the settled phase."
+      },
+      {
+        "name": "launch-reduced",
+        "value": "400ms",
+        "purpose": "Reduced-motion static fallback."
       }
     ],
     "breakpoints": [
       {
-        "name": "phone-canvas-cap",
+        "name": "web-phone-canvas-cap",
         "value": "430px"
       }
     ],
@@ -442,7 +457,7 @@
       "refersTo": "button-primary",
       "description": "Shared Button variant; actual pending state uses the runtime spinner and blocks repeat submission.",
       "html": "<button class=\"ds-button-primary\">Save</button>",
-      "css": ".ds-button-primary{background:#d8151e;color:#fbf7f7;border:0;border-radius:999px;min-height:48px;padding:0 20px;font:700 14px/20px \"Geist-700\",Geist,sans-serif}.ds-button-primary:hover:not(:disabled){cursor:pointer}.ds-button-primary:focus-visible{outline:3px solid #d32828;outline-offset:3px}.ds-button-primary:active:not(:disabled){transform:translateY(1px) scale(.985)}.ds-button-primary:disabled{opacity:.72}"
+      "css": ".ds-button-primary{background:#d8151e;color:#fbf7f7;border:0;border-radius:999px;min-height:48px;padding:0 20px;font:700 14px/21px \"Geist-700\",Geist,sans-serif}.ds-button-primary:hover:not(:disabled){cursor:pointer}.ds-button-primary:focus-visible{outline:3px solid #d32828;outline-offset:3px}.ds-button-primary:active:not(:disabled){transform:translateY(1px) scale(.985)}.ds-button-primary:disabled{opacity:.72}"
     },
     {
       "name": "Button Dark",
@@ -450,7 +465,7 @@
       "refersTo": "button-dark",
       "description": "Shared Button variant; actual pending state uses the runtime spinner and blocks repeat submission.",
       "html": "<button class=\"ds-button-dark\">Save</button>",
-      "css": ".ds-button-dark{background:#1c1a1a;color:#f8f8f8;border:0;border-radius:999px;min-height:48px;padding:0 20px;font:700 14px/20px \"Geist-700\",Geist,sans-serif}.ds-button-dark:hover:not(:disabled){cursor:pointer}.ds-button-dark:focus-visible{outline:3px solid #d32828;outline-offset:3px}.ds-button-dark:active:not(:disabled){transform:translateY(1px) scale(.985)}.ds-button-dark:disabled{opacity:.72}"
+      "css": ".ds-button-dark{background:#1c1a1a;color:#f8f8f8;border:0;border-radius:999px;min-height:48px;padding:0 20px;font:700 14px/21px \"Geist-700\",Geist,sans-serif}.ds-button-dark:hover:not(:disabled){cursor:pointer}.ds-button-dark:focus-visible{outline:3px solid #d32828;outline-offset:3px}.ds-button-dark:active:not(:disabled){transform:translateY(1px) scale(.985)}.ds-button-dark:disabled{opacity:.72}"
     },
     {
       "name": "Button Soft",
@@ -458,7 +473,7 @@
       "refersTo": "button-soft",
       "description": "Shared Button variant; actual pending state uses the runtime spinner and blocks repeat submission.",
       "html": "<button class=\"ds-button-soft\">Save</button>",
-      "css": ".ds-button-soft{background:#ffe2dd;color:#8a050d;border:0;border-radius:999px;min-height:48px;padding:0 20px;font:700 14px/20px \"Geist-700\",Geist,sans-serif}.ds-button-soft:hover:not(:disabled){cursor:pointer}.ds-button-soft:focus-visible{outline:3px solid #d32828;outline-offset:3px}.ds-button-soft:active:not(:disabled){transform:translateY(1px) scale(.985)}.ds-button-soft:disabled{opacity:.72}"
+      "css": ".ds-button-soft{background:#ffe2dd;color:#8a050d;border:0;border-radius:999px;min-height:48px;padding:0 20px;font:700 14px/21px \"Geist-700\",Geist,sans-serif}.ds-button-soft:hover:not(:disabled){cursor:pointer}.ds-button-soft:focus-visible{outline:3px solid #d32828;outline-offset:3px}.ds-button-soft:active:not(:disabled){transform:translateY(1px) scale(.985)}.ds-button-soft:disabled{opacity:.72}"
     },
     {
       "name": "Labelled field",
@@ -466,7 +481,7 @@
       "refersTo": "field",
       "description": "Shared Field label and minimum control height.",
       "html": "<label class=\"ds-field\">Route name<input placeholder=\"Name\" /></label>",
-      "css": ".ds-field{display:grid;gap:6px;color:#0d0d0d;font:600 14px/20px \"Geist-600\",Geist,sans-serif}.ds-field input{min-height:48px;border:1px solid #d6d3d4;border-radius:12px;padding:12px 14px;background:transparent;color:#0d0d0d;font:400 16px \"Geist-400\",Geist,sans-serif}.ds-field input:focus-visible{outline:3px solid #d32828;outline-offset:3px}"
+      "css": ".ds-field{display:grid;gap:6px;color:#0d0d0d;font:600 14px/21px \"Geist-600\",Geist,sans-serif}.ds-field input{min-height:48px;border:1px solid #d6d3d4;border-radius:12px;padding:12px 14px;background:transparent;color:#0d0d0d;font:400 16px \"Geist-400\",Geist,sans-serif}.ds-field input:focus-visible{outline:3px solid #d32828;outline-offset:3px}"
     },
     {
       "name": "Session summary",
@@ -474,7 +489,7 @@
       "refersTo": "summary",
       "description": "Dark record grouping; no resting shadow.",
       "html": "<article class=\"ds-summary\"><span>LAST SESSION</span><strong>SESSION JOURNAL</strong></article>",
-      "css": ".ds-summary{padding:20px;border-radius:16px;background:#1c1a1a;color:#f8f8f8}.ds-summary span{color:#b0adae;font:400 12px/16px \"Geist-400\",Geist,sans-serif}.ds-summary strong{display:block;margin-top:8px;font:800 24px/24px \"BarlowCondensed-800\",\"Barlow Condensed\",sans-serif;letter-spacing:-.02em}"
+      "css": ".ds-summary{padding:20px;border-radius:12px;background:#1c1a1a;color:#f8f8f8}.ds-summary span{color:#b0adae;font:400 12px/18px \"Geist-400\",Geist,sans-serif}.ds-summary strong{display:block;margin-top:8px;font:800 24px/27px \"BarlowCondensed-800\",\"Barlow Condensed\",sans-serif;letter-spacing:-.02em}"
     },
     {
       "name": "Send result",
@@ -482,65 +497,36 @@
       "refersTo": "result-send",
       "description": "Noninteractive result badge.",
       "html": "<span class=\"ds-result\">Send</span>",
-      "css": ".ds-result{display:inline-flex;padding:4px 10px;border-radius:999px;background:#cfe7ff;color:#004192;font:700 12px/16px \"Geist-700\",Geist,sans-serif}"
+      "css": ".ds-result{display:inline-flex;padding:4px 10px;border-radius:999px;background:#cfe7ff;color:#004192;font:700 12px/18px \"Geist-700\",Geist,sans-serif}"
     },
     {
       "name": "Bottom navigation",
       "kind": "nav",
-      "description": "Five destinations with current line icons, selected marker and labels; runtime additionally applies safe-area insets and routing.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Primary\"><a href=\"#home\" aria-current=\"page\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z\"/></svg><span>Home</span></a><a href=\"#explore\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m15.5 8.5-2 5-5 2 2-5z\"/></svg><span>Explore</span></a><a href=\"#sessions\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"5\" width=\"16\" height=\"16\" rx=\"2\"/><path d=\"M8 3v4m8-4v4M4 10h16\"/></svg><span>Sessions</span></a><a href=\"#gyms\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z\"/><circle cx=\"12\" cy=\"10\" r=\"2.5\"/></svg><span>Gyms</span></a><a href=\"#you\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"8\" r=\"3.5\"/><path d=\"M5 20c.8-3.6 3.8-5.5 7-5.5s6.2 1.9 7 5.5\"/></svg><span>You</span></a></nav>",
+      "description": "Current four destinations: Home, Explore, Sessions, You. Runtime supplies the approved rock texture and native safe areas; the browser alone caps its canvas.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary\"><a href=\"#home\" aria-current=\"page\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z\"/></svg><span>Home</span></a><a href=\"#explore\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m15.5 8.5-2 5-5 2 2-5z\"/></svg><span>Explore</span></a><a href=\"#sessions\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"5\" width=\"16\" height=\"16\" rx=\"2\"/><path d=\"M8 3v4m8-4v4M4 10h16\"/></svg><span>Sessions</span></a><a href=\"#you\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"8\" r=\"3.5\"/><path d=\"M5 20c.8-3.6 3.8-5.5 7-5.5s6.2 1.9 7 5.5\"/></svg><span>You</span></a></nav>",
       "css": ".ds-nav{display:flex;max-width:430px;padding:8px 0;background:#fafafa;border-top:1px solid #d6d3d4}.ds-nav a{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;padding:6px 0;color:#706e6e;font:500 11px/16.5px \"Geist-500\",Geist,sans-serif;text-decoration:none}.ds-nav a[aria-current]{color:#d8151e}.ds-nav a[aria-current]::after{content:\"\";position:absolute;bottom:0;width:18px;height:2px;border-radius:2px;background:#d8151e}.ds-nav a:hover{cursor:pointer}.ds-nav a:focus-visible{outline:3px solid #d32828;outline-offset:3px}"
     }
   ],
   "narrative": {
-    "northStar": "The Climber\u2019s Logbook",
-    "overview": "This records the existing visual direction, not a new proposal. Bouldy feels like a compact personal logbook used between attempts: direct, easy to scan and specific to climbing. Condensed gym-signage headings sit above calm interface text. Detailed hold artwork and the Bolt B mark provide identity without turning records into decoration.\n\nThe canonical [migration specification](docs/REACT_NATIVE_MIGRATION_SPEC.md) governs exact parity. This document describes the current Expo implementation, checked against the preserved [source design](docs/SOURCE_DESIGN.md), theme modules and [Android fixture captures](docs/screenshots/android/README.md) on 29 October 2026. Captures establish visual evidence, not accepted parity. Any difference between source, code and this record must be reported and resolved rather than silently redesigned.",
+    "northStar": "The Climber’s Logbook",
+    "overview": "The owner approved the design review on 31 October 2026 and directed all work to this Expo app. The old Next.js repository is deprecated. Visual source: https://bouldy-design-review.elatedbread66.chatgpt.site and the sibling `bouldy-design-review/components/design-review` source. This supersedes the previous one-for-one visual migration restriction. Domain/authentication/privacy safeguards remain unchanged.\n\nSource snapshot: `55b51d8` (31 October 2026). The structured tokens below describe shared primitives; page-specific values such as the profile hero’s larger corners and PageTitle’s compressed heading metrics are intentional exceptions. Preview ramps are generated documentation aids, not extra runtime colours. The original migration screenshots and earlier 78-test evidence do not verify this entire current design.",
     "keyCharacteristics": [
-      "A light phone canvas with restrained dark summaries and one action accent.",
-      "Condensed uppercase headings, readable Geist controls and accurate session data.",
-      "Flat records, pill actions, detailed climbing holds and purposeful state feedback.",
-      "Shared branded UI with working native safe areas, keyboard behaviour and dismissal."
+      "Approved cream/limestone surfaces with shared climbing identity.",
+      "Four main tabs; catalogue management is an administrator destination.",
+      "Native edge-to-edge frames with a centred browser phone canvas.",
+      "Explicit section/action error recovery and page-matched cold skeletons."
     ],
-    "rules": [
-      {
-        "name": "The One Red Rule",
-        "body": "One shared action accent establishes hierarchy; do not assign unrelated accent themes per route or tab.",
-        "section": "colors"
-      },
-      {
-        "name": "The Paired Surface Rule",
-        "body": "Dark summaries use the panel text tokens, while semantic badges keep their matched foreground/background pair.",
-        "section": "colors"
-      },
-      {
-        "name": "The Two-Voice Rule",
-        "body": "Condensed type identifies climbing content; Geist makes controls and journal detail readable. Do not replace either family with a platform default as a migration shortcut.",
-        "section": "typography"
-      },
-      {
-        "name": "The Phone Canvas Rule",
-        "body": "Wider screens retain the same app hierarchy and reading width; no sidebar, desktop dashboard or decorative phone frame is implied.",
-        "section": "layout"
-      },
-      {
-        "name": "The State-Only Lift Rule",
-        "body": "Elevation belongs to transient feedback or overlays. The current snackbar has an explicit soft shadow; that is not permission to add decorative shadows to resting cards. Button press feedback uses the existing downward movement and slight compression.",
-        "section": "elevation"
-      }
-    ],
+    "rules": [],
     "dos": [
-      "**Do** preserve the exact approved source copy, interface, assets and business semantics.",
-      "**Do** reuse shared primitives, theme roles, platform boundaries and reduced-motion handling.",
-      "**Do** verify safe areas, keyboard access, focus, text scaling and touch targets on the affected platform.",
-      "**Do** compare matching route/data/state captures before accepting visual parity.",
-      "**Do** record a visual/accessibility conflict explicitly and resolve it with the product owner."
+      "**Do** preserve the approved cream/limestone identity, supplied fonts and brand artwork.",
+      "**Do** fill the native device width while preserving the browser phone canvas.",
+      "**Do** use shared controls, explicit error recovery, account-safe state and reduced motion.",
+      "**Do** record exact commits and platforms when accepting behaviour."
     ],
     "donts": [
-      "**Don't** redesign the migration into a stock iOS/Material app or a wide desktop dashboard.",
-      "**Don't** add cream/beige palettes, glass effects, decorative gradients, nested cards or generic icon-card grids.",
-      "**Don't** replace the supplied fonts, Bolt B or hold artwork with approximations.",
-      "**Don't** hide failed reads, ambiguous history, missing content or unverified platform behaviour.",
-      "**Don't** treat these specifications, generated component previews or a Done card as proof of release readiness."
+      "**Don't** revert to the old five-tab or exact-copy visual baseline.",
+      "**Don't** invent activity, timing, admin authority or offline persistence.",
+      "**Don't** treat screenshots, previews or a source commit as full device/PWA/release acceptance."
     ]
   }
 }

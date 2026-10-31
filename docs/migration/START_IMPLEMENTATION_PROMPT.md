@@ -1,5 +1,7 @@
 # Bouldy — implementation starter prompt
 
+> **Historical baseline — current-state notice, 31 October 2026.** The app now exists and its approved v35 redesign is published. The original planning-only, exact-copy visual, five-tab and M0–M2-only instructions below are historical, not the current continuation task. Use [the current continuation prompt](../redesign/CONTINUE_PROMPT.md); preserve unchanged journal/auth/privacy invariants and keep unverified acceptance gates open. Original baseline text is retained below for provenance.
+
 Paste the text below into a new local Codex chat with access to the source checkout. Model/effort is selected in the app; this prompt does not change that setting. The first run deliberately targets M0–M2 so the foundation can be reviewed before the bulk screen migration.
 
 ```text

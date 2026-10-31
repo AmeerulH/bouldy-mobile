@@ -20,13 +20,13 @@ Community, opt-in discovery, shared beta and rankings are longer-term product di
 
 ## Operating Context
 
-The main destinations are Home, Explore, Sessions and You. Sessions and Climbs are related journal views. Short interactions use sheets; long route forms use pushed pages. The app stays a phone-width experience on wider browsers.
+The main destinations are Home, Explore, Sessions and You. Catalogue administrators can open Manage gyms from You; Gyms is not a main tab. Sessions and Climbs are related journal views. Short interactions use sheets; long route forms use pushed pages. The app stays a phone-width experience on wider browsers.
 
 The old Next.js repository at `../bouldy-web` is deprecated by owner direction (31 October 2026); do not develop there. The approved v35 design review in `../bouldy-design-review` is the visual reference. This repository is `bouldy-mobile`; its published source is [AmeerulH/bouldy-mobile](https://github.com/AmeerulH/bouldy-mobile). Product work is tracked in the [Bouldy Task Board](https://app.notion.com/p/4b6c2168a8ab47289704a345a3ae239c); view links and working conventions are in [the project guide](docs/PROJECT_GUIDE.md).
 
 ## Capabilities and Constraints
 
-- Existing implemented flows cover authentication, gym and route browsing/creation/editing, session logging, result correction, independent private notes, history, progress and an owner profile. All 27 original routes and 11 commands have local implementations; exact coverage and acceptance live in [MIGRATION_PROGRESS.md](MIGRATION_PROGRESS.md) and the parity registers.
+- Existing implemented flows cover authentication, gym and route browsing/creation/editing, session logging, result correction, independent private notes, history, progress and an owner profile. The original 27-route coverage and 11 commands were implemented before v35; additional admin/development routes now exist. Exact coverage and acceptance live in [MIGRATION_PROGRESS.md](MIGRATION_PROGRESS.md) and the parity registers.
 - Persistent users, gyms, routes, sessions and attempts use the real FastAPI service at `https://bouldy-api.onrender.com`. The trusted adapter in this repository retains validation and ownership checks. Backend authorization and atomicity remain backend responsibilities.
 - Login uses email in the backend OAuth2 `username` field. Web credentials are HTTP-only cookies; native credentials use SecureStore. Do not put test passwords or tokens in documentation.
 - Normal startup selects the real API. Fixture mode is explicit and isolated; all automated or exploratory record writes use synthetic fixtures unless the user specifically authorises a different environment and records. See [README.md](README.md).
@@ -34,7 +34,8 @@ The old Next.js repository at `../bouldy-web` is deprecated by owner direction (
 - Stored records summarise sessions/routes; exact physical-try timestamps, exact send timing and reliable same-day visit ordering must not be invented.
 - Completed sessions lock attempt logging/correction while private notes remain editable. Preserve the source's note-clear payload and error behaviour.
 - Planned social/media/profile-edit destinations retain their original planned copy. Do not implement new scoring, shared grades, rankings, groups, public profiles or persistent media merely to fill placeholders.
-- PWA output is online-first. Its generic offline fallback is not offline journal support. There is no private response cache, automatic mutation retry, replay or offline write queue.
+- PWA output is online-first. Successful private snapshots may be held in owner-keyed process memory and cleared on account lifecycle changes; this is not persistent/offline caching. The worker caches no private responses. There is no automatic mutation retry, replay or offline write queue.
+- Catalogue management uses server-issued user IDs in a server-only allowlist, default deny. A client email/admin badge does not grant rights. The adapter does not replace backend endpoint authorization or guarantee atomic single-active-session creation.
 
 ## Brand Commitments
 
@@ -42,9 +43,9 @@ Keep the name Bouldy, Bolt B mark, local climbing-hold artwork, established voic
 
 ## Evidence on Hand
 
-The canonical behaviour contract is [REACT_NATIVE_MIGRATION_SPEC.md](docs/REACT_NATIVE_MIGRATION_SPEC.md). Preserved product/design records are [SOURCE_PRODUCT.md](docs/SOURCE_PRODUCT.md) and [SOURCE_DESIGN.md](docs/SOURCE_DESIGN.md); their old paths, stack and release restrictions are historical, not current instructions.
+The current implementation/visual contract is the approved v35 design and [redesign handoff](docs/redesign/HANDOFF.md). [REACT_NATIVE_MIGRATION_SPEC.md](docs/REACT_NATIVE_MIGRATION_SPEC.md) preserves the original migration baseline and unchanged journal/auth/privacy requirements; its exact-copy visual/five-tab instructions are historical. Preserved product/design records are [SOURCE_PRODUCT.md](docs/SOURCE_PRODUCT.md) and [SOURCE_DESIGN.md](docs/SOURCE_DESIGN.md); their old paths, stack and release restrictions are historical, not current instructions.
 
-The [195-image Android gallery](docs/screenshots/android/README.md), [Notion phone review](https://app.notion.com/p/40876faa3b39810983cdd8e80fb4d41a) and [live API evidence](docs/evidence/live-api-connection.json) establish scoped observations. Screenshots use synthetic data; they are not accepted cross-platform goldens. Full installed-PWA, physical-device, release and parity acceptance remains open. Read current progress before citing a test result.
+The [195-image Android gallery](docs/screenshots/android/README.md), [Notion phone review](https://app.notion.com/p/40876faa3b39810983cdd8e80fb4d41a) and [live API evidence](docs/evidence/live-api-connection.json) establish scoped observations. The 195-image gallery shows the pre-v35 design with synthetic data. Current native/shared v35 captures and scoped observations are under `docs/redesign/evidence`; they are not accepted cross-platform goldens. Full installed-PWA, physical-device, release and parity acceptance remains open. Read current progress before citing a test result.
 
 ## Product Principles
 
@@ -56,4 +57,4 @@ The [195-image Android gallery](docs/screenshots/android/README.md), [Notion pho
 
 ## Accessibility & Inclusion
 
-Support touch, keyboard and assistive technology; labelled controls and state changes; readable contrast; text scaling; safe-area and keyboard access; and reduced motion. [CODE_QUALITY.md](docs/CODE_QUALITY.md) defines verification expectations and how to record a conflict with exact visual parity. This document establishes expectations, not an accessibility certification.
+Support touch, keyboard and assistive technology; labelled controls and state changes; readable contrast; text scaling; safe-area and keyboard access; and reduced motion. [CODE_QUALITY.md](docs/CODE_QUALITY.md) defines verification expectations and how to record a conflict with the approved visual contract. This document establishes expectations, not an accessibility certification.

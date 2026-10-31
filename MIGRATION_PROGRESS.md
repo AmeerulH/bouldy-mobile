@@ -1,5 +1,15 @@
 # Bouldy migration progress
 
+## Current documentation/source snapshot — 31 October 2026
+
+Local HEAD and remote main were verified at `55b51d8d0ed70696b706dd191523ab3c1db59604` during this documentation refresh. Later source commits after the earlier `488ab9b` publication add admin Gyms/profile hero/Bolt B titles, refined dark launch, contextual section/action errors and error-copy tests, cream navigation/HTML/PWA metadata, matching skeletons, eager route bundling, profile boundary adjustments, overflow-only scrolling and tiled active-visit marks. Native full width and planned-header spacing remain implemented; the owner confirmed the iPhone width correction. Current implementation details and commit IDs are in `docs/redesign/HANDOFF.md`.
+
+Updated root product/design/agent/README records, project/quality/release guides, continuation instructions and design metadata to match that source. Added historical-baseline notices to the original migration package and old screenshot indexes without rewriting their frozen bodies or accepting any parity rows. Original source copies/reference artifacts remain preserved. Notion links and dated status observations remain coordination references; no Notion records changed.
+
+Validation evidence is deliberately dated: the last full recorded suite/export checkpoint is `488ab9b` (78 tests, lint/typecheck, web/native exports, Doctor19/20 due to the existing RN patch mismatch). Newer code is not certified by that older result. This docs-only pass checks links, YAML/JSON, tokens/sidecar, frozen-body preservation and no runtime changes; it does not rerun application tests or build/device QA. `/skeleton-preview` production exclusion remains a recorded release follow-up. No UI/runtime changes, production record writes, deployment or release.
+
+Earlier entries below are historical checkpoints, not current runtime or current design instructions.
+
 ## Redesign and UI-fix publication — 31 October 2026
 
 The owner authorised pushing the current approved native redesign and the latest UI fixes to GitHub main, with further UI work deferred. This supersedes the local/uncommitted-only restriction for this publication. Native frames/sheets now fill the device; the owner confirmed the white side strips disappeared on physical iPhone/Expo Go. Planned subpage headers now use 12-unit separation both between the eyebrow/badge and above the title; the obsolete compressed title leading is removed in favour of the shared heading metrics. The header change compiles in the iOS development bundle; a new physical-device visual confirmation of that specific header was not collected.

@@ -1,6 +1,6 @@
 # Bouldy project guide
 
-Current documentation index, checked 29 October 2026. Start with the latest entry in [MIGRATION_PROGRESS.md](../MIGRATION_PROGRESS.md), then read only the documents relevant to the change. This avoids repeating the migration discovery.
+Current documentation index, refreshed 31 October 2026 against code/main `55b51d8`. Notion view/status observations below retain their separately stated dates. Start with the latest entry in [MIGRATION_PROGRESS.md](../MIGRATION_PROGRESS.md), then read only the documents relevant to the change. This avoids repeating the migration discovery.
 
 ## Product, design and engineering
 
@@ -11,12 +11,13 @@ Current documentation index, checked 29 October 2026. Start with the latest entr
 | [CODE_QUALITY.md](CODE_QUALITY.md) | Mobile/native/PWA engineering requirements and change/release verification. |
 | [AGENTS.md](../AGENTS.md) | Required working rules for coding agents and preservation boundaries. |
 | [README.md](../README.md) | Live API startup, explicit fixture startup, toolchain and build commands. |
-| [REACT_NATIVE_MIGRATION_SPEC.md](REACT_NATIVE_MIGRATION_SPEC.md) | Canonical one-for-one migration requirements and acceptance gates. |
+| [Redesign handoff](redesign/HANDOFF.md) and [continuation prompt](redesign/CONTINUE_PROMPT.md) | Current v35 implementation, recent changes, verification limits and resume instructions. |
+| [REACT_NATIVE_MIGRATION_SPEC.md](REACT_NATIVE_MIGRATION_SPEC.md) | Original migration baseline. Exact-copy visual/five-tab restrictions are superseded by the approved v35 redesign; unchanged data/auth/privacy safeguards still apply. |
 | [PWA_AND_RELEASE_RUNBOOK.md](PWA_AND_RELEASE_RUNBOOK.md) | Install, caching, updates, native prerequisites and future cutover/rollback. |
 | [Migration register](migration/PARITY_REGISTER.md) | Coverage and acceptance structure; detailed screen/action/component CSVs live beside it. |
 | [Android screenshot index](screenshots/android/README.md) | Page-by-page and feature/state evidence, with a linked gallery. |
 
-`SOURCE_PRODUCT.md`, `SOURCE_DESIGN.md`, `SOURCE_MASTER_SPEC.md` and `reference/source/` preserve the old web project. Keep them as historical evidence; do not follow their old imports, deployment assumptions, stack or uncommitted-only restrictions over the current root documents. The original repository at `/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-web` remains intact.
+`SOURCE_PRODUCT.md`, `SOURCE_DESIGN.md`, `SOURCE_MASTER_SPEC.md` and `reference/source/` preserve the old web project. Keep them as historical evidence; do not follow their old imports, deployment assumptions, stack or uncommitted-only restrictions over the current root documents. The original repository at `/Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-web` is deprecated and must not be developed. Keep its history/reference files intact; no deletion/archive is authorised.
 
 ## Notion Kanban and coordination
 
@@ -54,10 +55,10 @@ Both clients use this repository's trusted adapter. Web uses its own origin; nat
 
 ## Working with Impeccable
 
-Use the installed `impeccable` skill's `context` command once per session from this repository. Root PRODUCT/DESIGN are current context; the design sidecar is `.impeccable/design.json`. For documentation, extract the actual implementation; for a refinement, preserve the approved world. The migration spec and explicit user instructions override generic skill suggestions for new fonts, system skins, dark themes or larger-screen redesigns.
+Use the installed `impeccable` skill's `context` command once per session from this repository. Root PRODUCT/DESIGN are current context; the design sidecar is `.impeccable/design.json`. For documentation, extract the actual implementation; for a refinement, preserve the approved world. The approved v35 root design/handoff and explicit user instructions override historical exact-copy visual constraints and generic skill suggestions for new fonts, system skins, dark themes or larger-screen redesigns.
 
 Run the relevant playbook for the requested task. Read the craft floor before UI edits; run the mechanical detector on changed UI when directed. Inspect and correct UI in bounded passes. A documentation-only update does not need a UI build or detector run. Do not install skill updates, start agents or change workflow defaults as a side effect; respect the current user-authorised scope.
 
 ## Current release boundary
 
-The user selected GitHub main only for the latest publication. Source is published; no new site deployment, old-site cutover, store release or source retirement has occurred. Live sign-in/read verification is scoped evidence, not approval to mutate production climbing records. Every claim of test success needs the command, date, platform/environment and evidence path in current progress.
+The user selected GitHub main only. Current source/main was verified at `55b51d8` during this documentation pass; the last full recorded validation is the earlier `488ab9b` checkpoint. Native width is owner-confirmed on iPhone; full device/PWA/release acceptance remains open. Source is published; no new site deployment, old-site cutover, store release or source retirement has occurred. Live sign-in/read verification is scoped evidence, not approval to mutate production climbing records. Every claim of test success needs the command, date, platform/environment and evidence path in current progress.
