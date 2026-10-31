@@ -23,7 +23,7 @@ export default function Profile() {
   if (!data)
     return (
       <Screen>
-        <Waiting error={error} />
+        <Waiting error={error} page="profile" />
       </Screen>
     );
   async function logout() {

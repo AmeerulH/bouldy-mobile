@@ -13,7 +13,10 @@ import { useAuth } from "../../platform/auth";
 import { T, Icon } from "../../components/primitives";
 import { colors as c } from "../../theme/colors";
 import { ErrorSheetProvider } from "../../components/error-sheet";
-import { PageSkeleton } from "../../components/page-skeleton";
+import {
+  PageSkeleton,
+  skeletonPageForPath,
+} from "../../components/page-skeleton";
 export default function Layout() {
   const startNavigation = useNavigationStart(),
     a = useAuth(),
@@ -22,25 +25,9 @@ export default function Layout() {
   if (a.hydrationError) return <AppError retry={a.retry} />;
   if (!a.ready)
     return (
-      <PageSkeleton
-        page={
-          path === "/climbs"
-            ? "climbs"
-            : path.startsWith("/explore") ||
-                path.startsWith("/profile/") ||
-                /\/beta$/.test(path)
-              ? "placeholder"
-              : /\/routes\/new$|\/routes\/[^/]+\/edit$/.test(path)
-                ? "form"
-                : path.startsWith("/gyms")
-                  ? "gyms"
-                  : path === "/sessions"
-                    ? "sessions"
-                    : /^\/sessions\/[^/]+/.test(path)
-                      ? "session"
-                      : "home"
-        }
-      />
+      <View style={{ flex: 1, paddingTop: insets.top, backgroundColor: c.bg }}>
+        <PageSkeleton page={skeletonPageForPath(path) ?? "home"} />
+      </View>
     );
   if (!a.user) return <Redirect href="/welcome" />;
   const tabs = [

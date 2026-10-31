@@ -25,7 +25,7 @@ export default function GymDetail() {
     } catch (issue) { report(reportFrom(issue, { context: 'start-session', retry: start })); }
     finally { busy.current = false; setPending(false); }
   }
-  if (!data) return <Screen back="/gyms" label="Gyms"><Waiting error={readError} page="gyms" /></Screen>;
+  if (!data) return <Screen back="/gyms" label="Gyms"><Waiting error={readError} page="gym" /></Screen>;
   const { gym } = data, routes = data.gymRoutes.filter(route => route.status === 'active');
   const items = routeStates(routes, [], { records: [], sessionsLoaded: true }, 0, true).map(state => ({ state, status: '', pinned: false }));
   return <Screen back="/gyms" label="Gyms"><View style={s.page}>

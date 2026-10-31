@@ -12,6 +12,7 @@ import {
 import { SectionError } from "../../../components/section-error";
 import { Screen, Waiting } from "../../../components/screen";
 import { TaskFooter } from "../../../components/task-footer";
+import { SkeletonFooter } from "../../../components/page-skeleton";
 import { EmptyState } from "../../../components/empty-state";
 import { useSnapshot } from "../../../data/snapshot";
 import {
@@ -34,7 +35,7 @@ export default function Sessions() {
     [limit, setLimit] = useState(3);
   if (!d)
     return (
-      <Screen>
+      <Screen footer={<SkeletonFooter secondary />}>
         <Waiting error={error} page="sessions" />
       </Screen>
     );
