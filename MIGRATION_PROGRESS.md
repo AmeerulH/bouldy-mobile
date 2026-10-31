@@ -1,5 +1,11 @@
 # Bouldy migration progress
 
+## Vercel install failure and lockfile repair — 31 October 2026
+
+Published configuration commit `7045e13` was verified on remote main. Vercel production deployment `18QX4UykDQp5z7M79Pfct9sTQTZk` failed during `npm ci`, before export: `@emnapi/core@1.11.3` and `@emnapi/runtime@1.11.3` were missing from the lockfile. Chrome was already authenticated and showed the exact error plus Node24.x; no login or project-setting change was needed. Vercel connector project tools remain unavailable in this chat.
+
+Reproduced the same missing entries with npm12.2.1 in an isolated clean temporary directory; npm11.6.2 did not reproduce it. Repaired with npm12 `install --package-lock-only --ignore-scripts`, preserving all existing package versions. Two optional development peer entries were added; npm also normalised peer metadata. Both npm11 and npm12 clean-tree Linux/x64 `ci --dry-run --ignore-scripts` checks now pass. These checks simulate package selection, not a Linux build; npm12 warns that local Node24.11.1 is below its supported24.15.0 minimum. Existing app dependencies were not replaced. The already-authorised configuration release includes this corrective push. Hosted build outcome and live acceptance must be verified after publication. No production-record writes or old-source edits.
+
 ## Vercel configuration preparation — 31 October 2026
 
 Owner reports switching the existing Vercel Git connection to `bouldy-mobile` and requests help replacing Next.js build settings. Added the Expo Vercel Node entrypoint (`api/index.ts`), source-controlled framework/build/install/output/routing config (`vercel.json`), and direct `expo-server@58.0.6` dependency at the previously installed transitive version. Included the entrypoint in lint and TypeScript checks. Exact dashboard values, environment handling, preview checks and rollback boundaries are in the PWA/release runbook.

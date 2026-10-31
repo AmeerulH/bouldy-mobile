@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-31",
+  "failed_commit": "7045e1341c49a19a042d6c455febdbd14bd0d545",
+  "failed_deployment": "https://vercel.com/ameerulhs-projects/bouldy/18QX4UykDQp5z7M79Pfct9sTQTZk",
+  "observed_error": "npm ci EUSAGE: missing @emnapi/core@1.11.3 and @emnapi/runtime@1.11.3 from lockfile",
+  "reproduction": {
+    "npm11.6.2": "did not reproduce",
+    "npm12.2.1": "reproduced exact missing entries"
+  },
+  "repair": "npm12 install --package-lock-only --ignore-scripts in isolated clean directory",
+  "existing_package_versions_changed": 0,
+  "new_optional_dev_peer_entries": [
+    "@emnapi/core@1.11.3",
+    "@emnapi/runtime@1.11.3"
+  ],
+  "validation": {
+    "npm11_clean_linux_x64_ci_dry_run": "passes",
+    "npm12_clean_linux_x64_ci_dry_run": "passes"
+  },
+  "limitations": [
+    "Dry runs do not prove Vercel or actual Linux installation",
+    "npm12 validation runs on local Node24.11.1 with unsupported-engine warning; requires24.15.0 or later24.x",
+    "Hosted deployment remains to be observed"
+  ],
+  "production_record_writes": 0
+}
