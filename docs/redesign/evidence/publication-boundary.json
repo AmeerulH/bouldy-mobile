@@ -1,0 +1,10 @@
+{
+  "scope": "Selected ASCII marker check only; not a comprehensive security audit",
+  "files_scanned": 40,
+  "markers": [
+    "BOULDY_ADMIN_USER_IDS",
+    "BOULDY_LOCAL_API",
+    "walkthrough-sample"
+  ],
+  "findings": []
+}

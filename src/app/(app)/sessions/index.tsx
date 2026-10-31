@@ -1,17 +1,151 @@
-import { semantic as sc } from '../../../theme/semantic-colors';
-import { useState } from 'react';
-import { View } from 'react-native';
-import { T,Heading,A,Button } from '../../../components/primitives';
-import { Screen,Waiting } from '../../../components/screen';
-import { useSnapshot } from '../../../data/snapshot';
-import { duplicateRouteIds,summarizeJournal,type JournalRecord } from '../../../domain/journal-summary';
-import { colors as c } from '../../../theme/colors';
-import { s } from '../../../theme/styles';
-const date=(v:string)=>new Intl.DateTimeFormat('en-MY',{weekday:'short',day:'numeric',month:'short'}).format(new Date(`${v}T12:00:00`)).replace(',','');
-const counts=(r:JournalRecord)=>({reliable:r.loaded&&!duplicateRouteIds(r.attempts).size,sends:r.attempts.filter(a=>a.result==='send'||a.result==='flash').length,flashes:r.attempts.filter(a=>a.result==='flash').length});
-export default function Sessions(){const {data:d,error}=useSnapshot('journal'),[visibleMonths,setVisibleMonths]=useState(3);if(!d)return <Screen><Waiting error={error} page="sessions"/></Screen>;const records=d.journal.records,featured=records[0],gym=(id:number)=>d.gyms?.find(g=>g.id===id)?.name??'Unknown gym';const live=featured?.session.duration_minutes===0,reliable=featured&&counts(featured).reliable,flashes=featured?.attempts.filter(a=>a.result==='flash').length??0,sends=featured?.attempts.filter(a=>a.result==='send').length??0,inProgress=featured?.attempts.filter(a=>a.result==='zone'||a.result==='project').length??0;
- const routeById=new Map([...d.gymRoutes??[],...d.routes??[]].filter(r=>r.gym_id===featured?.session.gym_id).map(r=>[r.id,r]));const logged=new Set(featured?.attempts.map(a=>a.route_id));const notLogged=[...routeById.values()].filter(r=>r.status==='active'&&!logged.has(r.id)).length,months=new Map<string,JournalRecord[]>();for(const r of records){const key=r.session.session_date.slice(0,7);months.set(key,[...months.get(key)??[],r]);}
- return <Screen><View style={[s.page,{paddingTop:24}]}><View style={{gap:20}}><View style={[s.between,{alignItems:'flex-start',gap:16}]}><View><T color={c['ink-muted']}>Every attempt has a place.</T><Heading size={48} style={{marginTop:8,lineHeight:38.4,letterSpacing:-1.68}}>Sessions</Heading></View><View style={{alignItems:'flex-end',gap:12}}><View style={{width:44,height:44,borderRadius:22,backgroundColor:c.panel,alignItems:'center',justifyContent:'center'}}><T display size={20} weight={700} color={c['panel-ink']}>B</T></View><T size={9} weight={700} color={c['ink-faint']} style={{lineHeight:9.9,letterSpacing:1.44,textAlign:'right'}}>{'CLIMB\nLOG\nIMPROVE'}</T></View></View><View style={{flexDirection:'row',padding:4,borderWidth:1,borderColor:c.hairline,borderRadius:999}}>{[['/sessions','Sessions'],['/climbs','Climbs']].map(([href,label])=><A key={href} href={href} color={href==='/sessions'?c['panel-ink']:c['ink-muted']} style={{flex:1,minHeight:40,borderRadius:999,backgroundColor:href==='/sessions'?c.panel:'transparent',alignItems:'center',justifyContent:'center'}}>{label}</A>)}</View></View>
- {!summarizeJournal(d.journal).reliable||!d.gyms?<T color={c['accent-tint-ink']} style={{backgroundColor:c['accent-tint'],paddingHorizontal:16,paddingVertical:12,borderRadius:12}}>We couldn&apos;t load all of your journal just now. Reload to try again.</T>:null}
- {featured?<><View style={{gap:12}}><A href={`/sessions/${featured.session.id}`} style={{backgroundColor:c.panel,padding:16,borderRadius:16}}><View><View style={[s.between,{alignItems:'stretch',gap:16}]}><View style={{flex:1}}><T size={10} weight={700} color={c['panel-ink-muted']} style={{textTransform:'uppercase',letterSpacing:1.2}}>{live?'Climbing now':'Latest session'}</T><Heading size={30} color={c['panel-ink']} style={{marginTop:6}}>{date(featured.session.session_date)}</Heading><T weight={700} color={c['panel-ink-muted']} style={{marginTop:6,textTransform:'uppercase',letterSpacing:1.4}} lines={1}>{gym(featured.session.gym_id)}</T></View><View style={{borderLeftWidth:1,borderColor:c['panel-track'],paddingLeft:16,alignItems:'flex-end'}}><Heading size={30} color={c['panel-ink']}>{live?'Live':`${featured.session.duration_minutes} min`}</Heading><T size={10} weight={700} color={c['panel-ink-muted']} style={{marginTop:6,textTransform:'uppercase',letterSpacing:1}}>{reliable?`${featured.attempts.length} routes · ${sends+flashes} sends`:'Summary unavailable'}</T></View></View><View style={{flexDirection:'row',gap:8,marginTop:20,padding:12,borderRadius:12,backgroundColor:sc.panelLow}}>{[[flashes,'Flash',sc.flashDot],[sends,'Send',sc.sendDot],[inProgress,'In progress',c.accent],[d.routes||d.gymRoutes?notLogged:null,'Not tried',sc.untriedDot]].map(([n,label,color])=><View key={label} style={{flex:1}}><View style={[s.row,{gap:8}]}><View style={{width:12,height:12,borderRadius:6,backgroundColor:color as string}}/><T display size={24} weight={700} color={c['panel-ink']}>{reliable?n??'—':'—'}</T></View><T size={10} weight={700} color={c['panel-ink-muted']} style={{marginTop:4,letterSpacing:.8,textTransform:'uppercase'}}>{label}</T></View>)}</View></View></A>{live?<A href={`/sessions/${featured.session.id}`} style={[s.button,{minHeight:56,borderRadius:12,backgroundColor:c.accent}]} color={c['accent-ink']} textStyle={{fontSize:16,textTransform:'uppercase',letterSpacing:1.28}}>+  Log route</A>:<View style={{flexDirection:'row',gap:8}}><A href={`/sessions/${featured.session.id}`} color={c['panel-ink']} style={[s.button,{flex:1,backgroundColor:c.panel}]}>Review session</A><A href="/gyms" color={c['accent-ink']} style={[s.button,{flex:1,backgroundColor:c.accent}]}>Start a session</A></View>}</View><View><View style={s.between}><Heading>All sessions</Heading><T size={12} weight={600} color={c['ink-muted']}>{records.length} total</T></View>{[...months].slice(0,visibleMonths).map(([month,list])=><View key={month}><View style={[s.between,{borderBottomWidth:1,borderColor:c.ink,paddingTop:24,paddingBottom:8,gap:8}]}><Heading size={20}>{new Intl.DateTimeFormat('en-MY',{month:'long',year:'numeric'}).format(new Date(`${month}-15T12:00:00`))}</Heading><T size={12} color={c['ink-muted']}>{list.length} {list.length===1?'session':'sessions'}{list.every(r=>counts(r).reliable)?` · ${list.reduce((n,r)=>n+counts(r).sends,0)} sends`:''}</T></View>{list.map(r=>{const count=counts(r);return <A key={r.session.id} href={`/sessions/${r.session.id}`} style={{borderBottomWidth:1,borderColor:c.hairline,minHeight:80,paddingVertical:12}}><View style={[s.row,{gap:16}]}><View style={{width:56,height:56,borderRadius:12,backgroundColor:c.panel,paddingHorizontal:4,alignItems:'center',justifyContent:'center'}}><T display size={16} weight={700} color={c['panel-ink']} style={{textAlign:'center',textTransform:'uppercase'}}>{date(r.session.session_date)}</T></View><View style={{flex:1}}><Heading size={20} style={{fontFamily:'BarlowCondensed-700'}}>{gym(r.session.gym_id)}</Heading><T color={c['ink-muted']} style={{marginTop:8}}>{r.session.duration_minutes===0?'In progress':`${r.session.duration_minutes} min`}{r.attempts.length?` · ${r.attempts.length} routes`:''}</T></View><View style={{alignItems:'flex-end'}}><T weight={700}>{count.reliable?`${count.sends} sends`:'Unavailable'}</T><T size={12} weight={600} color={c.accent} style={{marginTop:4}}>{count.reliable&&count.flashes>0?`⚡ ${count.flashes} flash${count.flashes===1?'':'es'}`:''}</T></View></View></A>;})}</View>)}{months.size>visibleMonths?<Button onPress={()=>setVisibleMonths(v=>v+3)} variant="neutral">Show earlier months</Button>:null}</View></>:<View style={s.panel}><Heading color={c['panel-ink']}>{d.journal.sessionsLoaded?'Your journal is ready.':'Your journal is unavailable.'}</Heading><T color={c['panel-ink-muted']} style={{marginTop:12,lineHeight:24}}>Your completed sessions, sends, and flashes will collect here after your first climb.</T><A href="/gyms" color={c['accent-ink']} style={[s.button,{backgroundColor:c.accent,marginTop:20}]}>Choose a gym</A></View>}</View></Screen>;
+import { useState } from "react";
+import { View } from "react-native";
+import {
+  T,
+  Heading,
+  A,
+  Button,
+  IconButton,
+  Chevron,
+} from "../../../components/primitives";
+import { Screen, Waiting } from "../../../components/screen";
+import { TaskFooter } from "../../../components/task-footer";
+import { EmptyState } from "../../../components/empty-state";
+import { useSnapshot } from "../../../data/snapshot";
+import {
+  duplicateRouteIds,
+  type JournalRecord,
+} from "../../../domain/journal-summary";
+import { colors as c } from "../../../theme/colors";
+import { s } from "../../../theme/styles";
+export default function Sessions() {
+  const { data: d, error } = useSnapshot("journal"),
+    [limit, setLimit] = useState(3);
+  if (!d)
+    return (
+      <Screen>
+        <Waiting error={error} page="sessions" />
+      </Screen>
+    );
+  const active = d.journal.records.filter(
+      (r) => r.session.duration_minutes === 0,
+    ),
+    completed = d.journal.records.filter((r) => r.session.duration_minutes > 0),
+    months = new Map<string, JournalRecord[]>(),
+    gym = (id: number) =>
+      d.gyms?.find((g) => g.id === id)?.name ?? "Gym name unavailable";
+  for (const record of completed) {
+    const key = record.session.session_date.slice(0, 7);
+    months.set(key, [...(months.get(key) ?? []), record]);
+  }
+  return (
+    <Screen
+      footer={
+        <TaskFooter>
+          <A
+            href="/sessions/new?past=1"
+            style={[s.button, { backgroundColor: c.panel }]}
+            color={c["panel-ink"]}
+          >
+            Record a past visit
+          </A>
+        </TaskFooter>
+      }
+    >
+      <View style={[s.page, { flexGrow: 1 }]}>
+        <View style={s.between}>
+          <Heading size={36}>Sessions</Heading>
+          <IconButton href="/sessions/new" name="plus" label="Start session" />
+        </View>
+        {error || !d.journal.sessionsLoaded ? (
+          <T color={c["accent-strong"]}>
+            {error || "Your journal couldn’t load. Try again."}
+          </T>
+        ) : null}
+        {active.map((r) => (
+          <A
+            key={r.session.id}
+            href={`/sessions/${r.session.id}`}
+            style={[s.panel, s.between, { gap: 12 }]}
+          >
+            <View style={{ flex: 1 }}>
+              <T size={16} weight={700} color={c["panel-ink"]}>
+                Climbing now
+              </T>
+              <T color={c["panel-ink-muted"]}>{gym(r.session.gym_id)}</T>
+            </View>
+            <Chevron />
+          </A>
+        ))}
+        {!active.length && !completed.length && d.journal.sessionsLoaded ? (
+          <EmptyState title="Your journal starts here">
+            Your visits and climbs will collect here after your first session.
+          </EmptyState>
+        ) : null}
+        {[...months].slice(0, limit).map(([month, records]) => (
+          <View key={month}>
+            <View style={[s.between, { paddingBottom: 16 }]}>
+              <Heading>
+                {new Intl.DateTimeFormat("en", {
+                  month: "long",
+                  year: "numeric",
+                }).format(new Date(`${month}-15T12:00:00`))}
+              </Heading>
+              <T size={12} color={c["ink-muted"]}>
+                {records.length} visits
+              </T>
+            </View>
+            {records.map((r) => (
+              <A
+                key={r.session.id}
+                href={`/sessions/${r.session.id}`}
+                style={[
+                  s.row,
+                  {
+                    gap: 16,
+                    marginHorizontal: -20,
+                    paddingHorizontal: 20,
+                    paddingVertical: 20,
+                    minHeight: 88,
+                    borderBottomWidth: 1,
+                    borderColor: c.hairline,
+                  },
+                ]}
+              >
+                <Heading size={30} style={{ width: 36 }}>
+                  {r.session.session_date.slice(-2)}
+                </Heading>
+                <View style={{ flex: 1 }}>
+                  <T size={16} weight={700}>
+                    {gym(r.session.gym_id)}
+                  </T>
+                  <T color={c["ink-muted"]}>
+                    {r.session.duration_minutes} min ·{" "}
+                    {r.loaded && !duplicateRouteIds(r.attempts).size
+                      ? `${r.attempts.length} routes · ${r.attempts.filter((a) => a.result === "send" || a.result === "flash").length} finishes`
+                      : "Summary unavailable"}
+                  </T>
+                </View>
+                <Chevron />
+              </A>
+            ))}
+          </View>
+        ))}
+        {months.size > limit ? (
+          <Button variant="dark" onPress={() => setLimit((v) => v + 3)}>
+            Show earlier visits
+          </Button>
+        ) : null}
+        <A href="/climbs" style={[s.between, { gap: 12, paddingVertical: 16 }]}>
+          <View>
+            <T size={16} weight={700}>
+              Your climbs
+            </T>
+            <T color={c["ink-muted"]}>Routes and projects across visits</T>
+          </View>
+          <Chevron />
+        </A>
+      </View>
+    </Screen>
+  );
 }

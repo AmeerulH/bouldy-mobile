@@ -1,12 +1,96 @@
-import { SlideTextButton } from '../../components/slide-text-button';
-import { useState } from 'react';
-import { View,ScrollView,useWindowDimensions } from 'react-native';
-import { router,useLocalSearchParams } from 'expo-router';
-import { Brand,Hold,Heading,T,A,Button,Field,Feedback } from '../../components/primitives';
-import { useAuth } from '../../platform/auth';
-import { colors as c } from '../../theme/colors';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-export default function Login(){const a=useAuth();const params=useLocalSearchParams<{error?:string}>();const [email,setEmail]=useState(''),[password,setPassword]=useState(''),[error,setError]=useState(params.error??''),[pending,setPending]=useState(false);const {width}=useWindowDimensions(),insets=useSafeAreaInsets();
- async function login(){setPending(true);setError('');try{const out=await a.command('login',{email,password});if(out.destination==='/')router.replace('/');else if(out.destination)setError(new URL(out.destination,'http://local').searchParams.get('error')??'');}catch(e){setError((e as Error).message);}finally{setPending(false);}}
- return <ScrollView automaticallyAdjustKeyboardInsets keyboardShouldPersistTaps="handled" contentContainerStyle={{flexGrow:1,gap:26,paddingHorizontal:24,paddingTop:36+insets.top,paddingBottom:36+insets.bottom,backgroundColor:c.bg}}><View><Brand/><View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between',gap:8,marginTop:30}}><View style={{flexShrink:1}}><Heading size={36} style={{lineHeight:34.2,letterSpacing:-.72}}>{'Back for\nanother try.'}</Heading><T color={c['ink-muted']} style={{marginTop:12,lineHeight:24,maxWidth:234}}>Your projects, sends and small wins. All here.</T></View><Hold colour="red" size={width<=360?72:100} style={{transform:[{rotate:'-14deg'}]}}/></View></View>{error?<Feedback>{error}</Feedback>:null}<View style={{gap:16}}><Field label="Email" value={email} onChangeText={setEmail} keyboardType="email-address" autoCapitalize="none" autoComplete="email" editable={!pending}/><Field label="Password" value={password} onChangeText={setPassword} secureTextEntry autoComplete="current-password" editable={!pending} onSubmitEditing={login}/><Button onPress={login} pending={pending} pendingLabel="Logging in" style={{marginTop:8}}>Log in</Button></View><View style={{flexDirection:'row',justifyContent:'center',gap:4}}><T color={c['ink-muted']}>New to Bouldy?</T><SlideTextButton href="/signup" text="Sign up" hoverText="Let’s go"/></View><A href="/welcome" color={c['ink-muted']} textStyle={{fontFamily:'Geist-400',fontSize:12,lineHeight:16,textAlign:'center',textDecorationLine:'underline'}}>Meet Bouldy</A></ScrollView>;
+import { Screen } from "../../components/screen";
+import { TaskFooter } from "../../components/task-footer";
+import { useState } from "react";
+import { View } from "react-native";
+import { router, useLocalSearchParams } from "expo-router";
+import {
+  Brand,
+  Heading,
+  T,
+  Button,
+  Field,
+  Feedback,
+} from "../../components/primitives";
+import { useAuth } from "../../platform/auth";
+import { colors as c } from "../../theme/colors";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+export default function Login() {
+  const a = useAuth();
+  const params = useLocalSearchParams<{ error?: string }>();
+  const [email, setEmail] = useState(""),
+    [password, setPassword] = useState(""),
+    [error, setError] = useState(params.error ?? ""),
+    [pending, setPending] = useState(false);
+  const insets = useSafeAreaInsets();
+  async function login() {
+    setPending(true);
+    setError("");
+    try {
+      const out = await a.command("login", { email, password });
+      if (out.destination === "/") router.replace("/");
+      else if (out.destination)
+        setError(
+          new URL(out.destination, "http://local").searchParams.get("error") ??
+            "",
+        );
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setPending(false);
+    }
+  }
+  return (
+    <View
+      style={{
+        flex: 1,
+        paddingTop: insets.top,
+        paddingBottom: insets.bottom,
+        backgroundColor: c.bg,
+      }}
+    >
+      <Screen
+        back="/welcome"
+        label="Welcome"
+        footer={
+          <TaskFooter>
+            <Button onPress={login} pending={pending} pendingLabel="Logging in">
+              Log in
+            </Button>
+            <Button variant="dark" onPress={() => router.replace("/signup")}>
+              Create account
+            </Button>
+          </TaskFooter>
+        }
+      >
+        <View style={{ padding: 20, gap: 24 }}>
+          <Brand />
+          <View style={{ gap: 8 }}>
+            <Heading size={36}>Welcome back.</Heading>
+            <T size={16} color={c["ink-muted"]}>
+              Your climbs are right where you left them.
+            </T>
+          </View>
+          {error ? <Feedback>{error}</Feedback> : null}
+          <Field
+            label="Email"
+            value={email}
+            onChangeText={setEmail}
+            keyboardType="email-address"
+            autoCapitalize="none"
+            autoComplete="email"
+            editable={!pending}
+          />
+          <Field
+            label="Password"
+            value={password}
+            onChangeText={setPassword}
+            secureTextEntry
+            autoComplete="current-password"
+            editable={!pending}
+            onSubmitEditing={login}
+          />
+        </View>
+      </Screen>
+    </View>
+  );
 }

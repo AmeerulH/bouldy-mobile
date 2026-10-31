@@ -1,0 +1,96 @@
+{
+  "checked_at_utc": "2026-10-31T08:34:11.619018+00:00",
+  "client_date": "2026-10-31",
+  "scope": "Native root/loading/safe-area background and native sheet width only; preserve browser phone canvas and existing approved redesign.",
+  "root_cause": "Native frame inherited web maxWidth430; fonts-loading frame also lacked the material background.",
+  "method": "Actual Root render with platform/font hooks stubbed, followed by width constraint arithmetic; not a Yoga/native screenshot assertion.",
+  "before_at_440": [
+    {
+      "platform": "ios",
+      "state": "fonts-loading",
+      "viewport": 440,
+      "frameWidth": 430,
+      "sideGap": 5,
+      "background": null
+    },
+    {
+      "platform": "ios",
+      "state": "loaded",
+      "viewport": 440,
+      "frameWidth": 430,
+      "sideGap": 5,
+      "background": "#f5f1e8"
+    },
+    {
+      "platform": "android",
+      "state": "fonts-loading",
+      "viewport": 440,
+      "frameWidth": 430,
+      "sideGap": 5,
+      "background": null
+    },
+    {
+      "platform": "android",
+      "state": "loaded",
+      "viewport": 440,
+      "frameWidth": 430,
+      "sideGap": 5,
+      "background": "#f5f1e8"
+    },
+    {
+      "platform": "web",
+      "state": "fonts-loading",
+      "viewport": 440,
+      "frameWidth": 430,
+      "sideGap": 5,
+      "background": null
+    },
+    {
+      "platform": "web",
+      "state": "loaded",
+      "viewport": 440,
+      "frameWidth": 430,
+      "sideGap": 5,
+      "background": "#f5f1e8"
+    }
+  ],
+  "checked_viewports": [
+    375,
+    402,
+    430,
+    440,
+    460,
+    1024
+  ],
+  "native_after_all_rows_have_zero_gap": true,
+  "web_after_all_rows_keep_cap": true,
+  "loading_and_loaded_background": "#f5f1e8",
+  "owner_phone_confirmation": {
+    "platform": "Physical iPhone / Expo Go",
+    "result": "Yes, the sides now fill correctly"
+  },
+  "checks": {
+    "lint": "pass",
+    "typecheck": "pass",
+    "tests": {
+      "passed": 78,
+      "failed": 0
+    },
+    "layout_detector": [],
+    "native_metro_bundle": {
+      "manifest": "ok",
+      "platform": "ios",
+      "bundle_status": 200,
+      "bundle_bytes": 9608744,
+      "note": "Metro development bundle compilation; not a signed binary or physical-device visual verification."
+    }
+  },
+  "unrelated_preexisting_modified_files_preserved": 64,
+  "limits": [
+    "Device Hub display timed out",
+    "No new Android or native sheet interaction/visual check",
+    "No full web/PWA or release acceptance"
+  ],
+  "production_record_writes": 0,
+  "commit_push_deploy": "none"
+}

@@ -20,9 +20,9 @@ Community, opt-in discovery, shared beta and rankings are longer-term product di
 
 ## Operating Context
 
-The main destinations are Home, Explore, Sessions, Gyms and You. Sessions and Climbs are related journal views. Short interactions use sheets; long route forms use pushed pages. The app stays a phone-width experience on wider browsers.
+The main destinations are Home, Explore, Sessions and You. Sessions and Climbs are related journal views. Short interactions use sheets; long route forms use pushed pages. The app stays a phone-width experience on wider browsers.
 
-The existing Next.js repository at `../bouldy-web` is preserved as the migration reference. This repository is `bouldy-mobile`; its published source is [AmeerulH/bouldy-mobile](https://github.com/AmeerulH/bouldy-mobile). Product work is tracked in the [Bouldy Task Board](https://app.notion.com/p/4b6c2168a8ab47289704a345a3ae239c); view links and working conventions are in [the project guide](docs/PROJECT_GUIDE.md).
+The old Next.js repository at `../bouldy-web` is deprecated by owner direction (31 October 2026); do not develop there. The approved v35 design review in `../bouldy-design-review` is the visual reference. This repository is `bouldy-mobile`; its published source is [AmeerulH/bouldy-mobile](https://github.com/AmeerulH/bouldy-mobile). Product work is tracked in the [Bouldy Task Board](https://app.notion.com/p/4b6c2168a8ab47289704a345a3ae239c); view links and working conventions are in [the project guide](docs/PROJECT_GUIDE.md).
 
 ## Capabilities and Constraints
 
@@ -38,7 +38,7 @@ The existing Next.js repository at `../bouldy-web` is preserved as the migration
 
 ## Brand Commitments
 
-Keep the name Bouldy, Bolt B mark, local climbing-hold artwork, established voice and current copy. Preserve the existing “The Climber’s Logbook” direction from the source design record. [DESIGN.md](DESIGN.md) records the implemented visual system; this migration remains implementation, not redesign.
+Keep the name Bouldy, Bolt B mark, local climbing-hold artwork, established voice and current copy. Preserve the existing “The Climber’s Logbook” direction from the source design record. [DESIGN.md](DESIGN.md) records the implemented visual system; the owner has now approved the v35 native redesign. Keep the established identity while applying its cream surfaces and focused task flows.
 
 ## Evidence on Hand
 

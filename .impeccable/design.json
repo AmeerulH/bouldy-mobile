@@ -82,7 +82,7 @@
       "bg": {
         "role": "neutral",
         "displayName": "Bg",
-        "canonical": "#fafafa",
+        "canonical": "#f5f1e8",
         "tonalRamp": [
           "#0b0b0b",
           "#252525",
@@ -112,7 +112,7 @@
       "ink-muted": {
         "role": "neutral",
         "displayName": "Ink Muted",
-        "canonical": "#4e4c4d",
+        "canonical": "#605b53",
         "tonalRamp": [
           "#0c0b0b",
           "#262425",
@@ -127,7 +127,7 @@
       "ink-faint": {
         "role": "neutral",
         "displayName": "Ink Faint",
-        "canonical": "#706e6e",
+        "canonical": "#736d63",
         "tonalRamp": [
           "#0c0b0b",
           "#262525",
@@ -142,7 +142,7 @@
       "hairline": {
         "role": "neutral",
         "displayName": "Hairline",
-        "canonical": "#d6d3d4",
+        "canonical": "#ddd6c9",
         "tonalRamp": [
           "#0c0b0b",
           "#272425",
@@ -424,7 +424,16 @@
         "name": "phone-canvas-cap",
         "value": "430px"
       }
-    ]
+    ],
+    "approvedNativeRedesign": {
+      "revision": "v35",
+      "approvedAt": "2026-10-31",
+      "reference": "https://bouldy-design-review.elatedbread66.chatgpt.site",
+      "target": "bouldy-mobile",
+      "deprecated": "bouldy-web",
+      "validation": "docs/redesign/HANDOFF.md",
+      "note": "Runtime design updated; historical specimen layout is not native parity evidence."
+    }
   },
   "components": [
     {
@@ -484,7 +493,7 @@
     }
   ],
   "narrative": {
-    "northStar": "The Climber’s Logbook",
+    "northStar": "The Climber\u2019s Logbook",
     "overview": "This records the existing visual direction, not a new proposal. Bouldy feels like a compact personal logbook used between attempts: direct, easy to scan and specific to climbing. Condensed gym-signage headings sit above calm interface text. Detailed hold artwork and the Bolt B mark provide identity without turning records into decoration.\n\nThe canonical [migration specification](docs/REACT_NATIVE_MIGRATION_SPEC.md) governs exact parity. This document describes the current Expo implementation, checked against the preserved [source design](docs/SOURCE_DESIGN.md), theme modules and [Android fixture captures](docs/screenshots/android/README.md) on 29 October 2026. Captures establish visual evidence, not accepted parity. Any difference between source, code and this record must be reported and resolved rather than silently redesigned.",
     "keyCharacteristics": [
       "A light phone canvas with restrained dark summaries and one action accent.",

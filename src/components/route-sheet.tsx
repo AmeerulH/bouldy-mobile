@@ -1,24 +1,278 @@
-import { Pressable } from './pressable';
-import { semantic as sc } from '../theme/semantic-colors';
-import { useState } from 'react';
-import { View } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
-import { useAuth } from '../platform/auth';
-import { Sheet } from './sheet';
-import { T,Hold,Result,Button,A,Feedback,Field,Icon } from './primitives';
-import { AttemptNote } from './attempt-note';
-import type { RouteState } from '../features/session-state';
-import { colors as c } from '../theme/colors';
-import { s } from '../theme/styles';
-export function RouteSheet({state,sessionId,ended,error,open,close,log,onSaved}: {state:RouteState;sessionId:number;ended:boolean;error?:string;open:boolean;close:()=>void;log:(state:RouteState,intent:string)=>Promise<void>;onSaved:(message:string)=>void}){
- const {route,attempt,ambiguous,previous}=state;const auth=useAuth();const [correcting,setCorrecting]=useState(false),[result,setResult]=useState(attempt?.result??'project'),[count,setCount]=useState(String(attempt?.num_attempts??1)),[correctionError,setCorrectionError]=useState('');const [pending,setPending]=useState('');const completed=attempt?.result==='flash'||attempt?.result==='send';const loggable=!ended&&route.status==='active'&&!completed&&!ambiguous;const flashAllowed=previous.complete&&!previous.ambiguous&&!previous.tried;const intents=['attempt',attempt||!flashAllowed?'send':'flash',...(route.is_competition?['zone']:[])];
- return <Sheet title={`${route.grade} · ${route.colour||'Route'}`} open={open} close={close}><View style={{gap:16}}>{error?<Feedback>{error}</Feedback>:null}<View style={[s.row,{gap:12}]}><Hold colour={route.colour} name={route.route_name} size={56}/><View style={{flex:1}}><T size={16} weight={600} style={{lineHeight:22}}>{route.route_name}</T><T size={12} color={c['ink-muted']} style={{marginTop:4,lineHeight:20}}>{[route.wall,route.setter?`Set by ${route.setter}`:null,route.status==='retired'?'Retired route':null].filter(Boolean).join(' · ')||'No wall or setter recorded'}</T></View></View>{route.styles.length?<View style={{flexDirection:'row',flexWrap:'wrap',gap:6,marginTop:-4}}>{route.styles.map(style=><View key={style} style={{borderRadius:999,backgroundColor:sc.neutral,paddingHorizontal:10,paddingVertical:4}}><T size={12} weight={600} color={c['ink-muted']}>{style}</T></View>)}</View>:null}
- <View style={{flexDirection:'row',gap:12,paddingVertical:12,borderTopWidth:1,borderBottomWidth:1,borderColor:c.hairline}}><View style={{flex:1}}><T size={12} weight={600} color={c['ink-muted']}>{ended?'This visit':'Today'}</T><View style={[s.row,{marginTop:4,gap:8}]}><T display weight={700} size={24}>{ambiguous?'—':attempt?.num_attempts??0}</T>{attempt&&!ambiguous?<Result result={attempt.result}/>:null}</View></View><View style={{flex:1}}><T size={12} weight={600} color={c['ink-muted']}>Earlier visits</T><View style={[s.row,{marginTop:4,gap:6,alignItems:'baseline'}]}><T display weight={700} size={24}>{previous.total??'—'}</T><T size={12} weight={600} color={c['ink-muted']}>{previous.total===null?'unavailable':previous.sent?'sent before':previous.tried?'tries':'new to you'}</T></View></View></View>
- {ambiguous?<T color={c['accent-strong']} style={{lineHeight:24}}>Conflicting logs for this route. Review the source records in route history; logging and corrections are paused.</T>:null}
- {loggable?<View style={{flexDirection:'row',gap:8}}>{intents.map(intent=><Button key={intent} pending={pending===intent} pendingLabel="Saving" variant={intent==='flash'?'flash':intent==='send'?'dark':'neutral'} style={{flex:1,borderRadius:12,paddingHorizontal:12}} onPress={async()=>{setPending(intent);try{await log(state,intent);}finally{setPending('');}}}>{intent==='flash'?'⚡ Flash':intent==='send'?'Sent':intent==='zone'?'Zone':'+1 try'}</Button>)}</View>:null}
- {loggable&&!attempt?<T size={12} color={c['ink-muted']} style={{lineHeight:20,marginTop:-8}}>{flashAllowed?'Flash is only offered on your first ever try.':previous.complete?"You've tried this before, so a first-go send counts as Sent.":'Flash is unavailable until your full history loads.'}</T>:null}
- {!ended&&completed?<T color={c['ink-muted']}>Route complete. Use Correct this log to change the result.</T>:null}
- {attempt&&!ended&&!ambiguous?<View style={[s.line,{paddingTop:4}]}><Pressable accessibilityRole="button" accessibilityState={{expanded:correcting}} onPress={()=>{setCount(String(attempt.num_attempts));setResult(attempt.result);setCorrecting(!correcting);}} style={[s.between,{minHeight:44}]}><T weight={600}>Correct this log</T><Icon name="down" size={16}/></Pressable>{correcting?<View style={{gap:12,paddingTop:8,paddingBottom:4}}><View style={{flexDirection:'row',gap:12}}><View style={{flex:1,gap:6}}><T size={12} weight={600}>Result</T><Picker accessibilityLabel="Result" selectedValue={result} onValueChange={setResult} style={{minHeight:44,borderWidth:1,borderColor:c.hairline,borderRadius:12,paddingHorizontal:12,fontFamily:'Geist-500',fontSize:14,color:c.ink,backgroundColor:c.bg}}>{[['flash','⚡ Flash'],['zone','Zone'],['send','Send'],['project','In progress']].filter(([r])=>(r!=='zone'||route.is_competition||attempt.result==='zone')&&(r!=='flash'||flashAllowed||attempt.result==='flash')).map(([value,label])=><Picker.Item key={value} value={value} label={label}/>)}</Picker></View><View style={{flex:1}}><Field label="Attempts" value={count} onChangeText={setCount} keyboardType="number-pad"/></View></View><T size={12} color={c['ink-muted']} style={{lineHeight:20}}>A flash is always one attempt. Corrections don&apos;t add another try.</T>{correctionError?<Feedback>{correctionError}</Feedback>:null}<Button variant="dark" pending={pending==='correction'} pendingLabel="Saving correction" onPress={async()=>{setPending('correction');try{const out=await auth.command('correctAttempt',{session_id:sessionId,route_id:route.id,attempt_id:attempt.id,result,num_attempts:count});if(out.destination?.includes('error='))setCorrectionError(new URL(out.destination,'http://local').searchParams.get('error')??'');else{setCorrecting(false);close();onSaved('Route log corrected.');}}catch(e){setCorrectionError((e as Error).message);}finally{setPending('');}}}>Save correction</Button></View>:null}</View>:null}
- {attempt&&!ambiguous?<AttemptNote key={attempt.id} attemptId={attempt.id} sessionId={sessionId} notes={attempt.notes} inline onSaved={onSaved}/>:null}
- <A href={`/routes/${route.id}?from=${sessionId}`} style={[s.line,{minHeight:48,paddingTop:4,justifyContent:'center'}]} color={c.ink}><View style={s.between}><T weight={600}>Your route history</T><T>›</T></View></A></View></Sheet>;
+import { useState, useRef } from "react";
+import { View } from "react-native";
+import { Picker } from "@react-native-picker/picker";
+import { Sheet } from "./sheet";
+import {
+  T,
+  Hold,
+  Result,
+  Button,
+  A,
+  Feedback,
+  Field,
+  Chevron,
+} from "./primitives";
+import { useAuth } from "../platform/auth";
+import type { RouteState } from "../features/session-state";
+import type { AttemptResult } from "../data/types";
+import { colors as c } from "../theme/colors";
+import { s } from "../theme/styles";
+export function RouteSheet({
+  state,
+  sessionId,
+  ended,
+  error,
+  open,
+  close,
+  log,
+  onSaved,
+}: {
+  state: RouteState;
+  sessionId: number;
+  ended: boolean;
+  error?: string;
+  open: boolean;
+  close: () => void;
+  log: (state: RouteState, intent: string) => Promise<void>;
+  onSaved: (message: string) => void;
+}) {
+  const { route, attempt, ambiguous, previous } = state,
+    auth = useAuth(),
+    [correcting, setCorrecting] = useState(false),
+    [result, setResult] = useState<AttemptResult>(attempt?.result ?? "project"),
+    [count, setCount] = useState(String(attempt?.num_attempts ?? 1)),
+    [draft, setDraft] = useState(attempt?.notes ?? ""),
+    [issue, setIssue] = useState(""),
+    [pending, setPending] = useState(""),
+    busy = useRef(false),
+    completed = attempt?.result === "send" || attempt?.result === "flash",
+    loggable = !ended && route.status === "active" && !completed && !ambiguous,
+    flash = previous.complete && !previous.ambiguous && !previous.tried;
+  async function save(correction = false) {
+    if (!attempt || busy.current) return;
+    busy.current = true;
+    setPending(correction ? "correction" : "note");
+    setIssue("");
+    try {
+      const out = await auth.command(
+        correction ? "correctAttempt" : "saveAttemptNote",
+        correction
+          ? {
+              session_id: sessionId,
+              route_id: route.id,
+              attempt_id: attempt.id,
+              result,
+              num_attempts: count,
+            }
+          : { session_id: sessionId, attempt_id: attempt.id, notes: draft },
+      );
+      const message = out.destination
+        ? new URL(out.destination, "http://local").searchParams.get("error")
+        : out.status === "error"
+          ? out.message
+          : null;
+      if (message) setIssue(message);
+      else {
+        if (correction) setCorrecting(false);
+        onSaved(
+          correction
+            ? "Route log corrected."
+            : (out.message ?? "Private note saved."),
+        );
+      }
+    } catch (e) {
+      setIssue((e as Error).message);
+    } finally {
+      busy.current = false;
+      setPending("");
+    }
+  }
+  return (
+    <Sheet
+      title={`${route.grade} · ${route.colour || "Route"}`}
+      open={open}
+      close={close}
+      footer={
+        attempt && !ambiguous ? (
+          <>
+            <Button
+              pending={pending === "note"}
+              pendingLabel="Saving note"
+              onPress={() => void save()}
+            >
+              Save note
+            </Button>
+            {!ended ? (
+              <Button
+                variant="dark"
+                onPress={() => {
+                  setIssue("");
+                  setResult(attempt.result);
+                  setCount(String(attempt.num_attempts));
+                  setCorrecting(true);
+                }}
+              >
+                Correct count or result
+              </Button>
+            ) : null}
+          </>
+        ) : undefined
+      }
+    >
+      <View style={{ gap: 20 }}>
+        {error || issue ? <Feedback>{error || issue}</Feedback> : null}
+        <View style={[s.row, { gap: 16 }]}>
+          <Hold colour={route.colour} size={56} />
+          <View style={{ flex: 1 }}>
+            <T size={17} weight={700}>
+              {route.route_name}
+            </T>
+            <T color={c["ink-muted"]}>
+              {route.wall || "Wall unrecorded"}
+              {route.status === "retired" ? " · Retired" : ""}
+            </T>
+          </View>
+        </View>
+        <View style={[s.row, { gap: 12, paddingVertical: 12 }]}>
+          <T display size={36} weight={800}>
+            {ambiguous ? "—" : (attempt?.num_attempts ?? 0)}
+          </T>
+          <T color={c["ink-muted"]}>tries this visit</T>
+          {attempt && !ambiguous ? <Result result={attempt.result} /> : null}
+        </View>
+        {ambiguous ? (
+          <Feedback>
+            Conflicting logs. Review route history; logging and corrections are
+            paused.
+          </Feedback>
+        ) : null}
+        {loggable ? (
+          <View style={[s.row, { gap: 8 }]}>
+            {[
+              "attempt",
+              "send",
+              ...(!attempt && flash ? ["flash"] : []),
+              ...(route.is_competition ? ["zone"] : []),
+            ].map((intent) => (
+              <Button
+                key={intent}
+                variant="neutral"
+                style={{ flex: 1, paddingHorizontal: 8 }}
+                pending={pending === intent}
+                pendingLabel=""
+                onPress={async () => {
+                  setPending(intent);
+                  try {
+                    await log(state, intent);
+                  } finally {
+                    setPending("");
+                  }
+                }}
+              >
+                {intent === "attempt"
+                  ? "+1 try"
+                  : intent === "send"
+                    ? "Sent"
+                    : intent === "flash"
+                      ? "Flash"
+                      : "Zone"}
+              </Button>
+            ))}
+          </View>
+        ) : null}
+        <T size={12} color={c["ink-muted"]}>
+          Count every try with +1. Sent keeps this count. Flash means a
+          first-ever-try finish.
+        </T>
+        {attempt && !ambiguous ? (
+          <>
+            <Field
+              label="Your private note"
+              value={draft}
+              onChangeText={setDraft}
+              multiline
+              editable={!pending}
+              style={{ minHeight: 120, textAlignVertical: "top" }}
+            />
+            <T size={12} color={c["ink-muted"]}>
+              Only you can see this note. Notes never change your try count.
+            </T>
+          </>
+        ) : null}
+        <A
+          href={`/routes/${route.id}?from=${sessionId}`}
+          style={[s.between, { minHeight: 64, gap: 12 }]}
+        >
+          <View>
+            <T weight={700}>Your route history</T>
+            <T color={c["ink-muted"]}>
+              {previous.total === null
+                ? "Earlier visits unavailable"
+                : `${previous.total} tries on earlier visits`}
+            </T>
+          </View>
+          <Chevron />
+        </A>
+      </View>
+      <Sheet
+        title="Correct count or result"
+        open={open && correcting}
+        close={() => {
+          setCorrecting(false);
+          setIssue("");
+        }}
+        footer={
+          <Button
+            pending={pending === "correction"}
+            pendingLabel="Saving correction"
+            onPress={() => void save(true)}
+          >
+            Save correction
+          </Button>
+        }
+      >
+        <View style={{ gap: 16 }}>
+          <T>
+            A correction changes your existing log. It doesn’t add another try.
+          </T>
+          <Field
+            label="Tries this visit"
+            value={count}
+            onChangeText={setCount}
+            keyboardType="number-pad"
+          />
+          <T weight={600}>Result</T>
+          <Picker
+            selectedValue={result}
+            onValueChange={setResult}
+            accessibilityLabel="Corrected result"
+            itemStyle={{ color: c.ink, fontFamily: "Geist-500" }}
+          >
+            {(
+              [
+                ["project", "In progress"],
+                ["send", "Sent"],
+                ["flash", "Flash"],
+                ["zone", "Zone"],
+              ] as const
+            )
+              .filter(
+                ([v]) =>
+                  (v !== "flash" || flash || attempt?.result === "flash") &&
+                  (v !== "zone" ||
+                    route.is_competition ||
+                    attempt?.result === "zone"),
+              )
+              .map(([value, label]) => (
+                <Picker.Item key={value} value={value} label={label} />
+              ))}
+          </Picker>
+          <T size={12} color={c["ink-muted"]}>
+            A flash is always one try.
+          </T>
+          {issue ? <Feedback>{issue}</Feedback> : null}
+        </View>
+      </Sheet>
+    </Sheet>
+  );
 }

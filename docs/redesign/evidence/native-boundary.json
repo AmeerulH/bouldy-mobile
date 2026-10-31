@@ -1,0 +1,12 @@
+{
+  "dist/review/native/_expo/static/js/ios/entry-4116bdb068d32eb68860d02d90a38b05.hbc": {
+    "BOULDY_ADMIN_USER_IDS": false,
+    "BOULDY_LOCAL_API": false,
+    "walkthrough-sample": false
+  },
+  "dist/review/native/_expo/static/js/android/entry-d78cf196d3494229939ba122f1d379f9.hbc": {
+    "BOULDY_ADMIN_USER_IDS": false,
+    "BOULDY_LOCAL_API": false,
+    "walkthrough-sample": false
+  }
+}

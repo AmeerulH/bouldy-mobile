@@ -6,7 +6,7 @@ let fixture;const origin='http://localhost:8081';let commandRequest,snapshotRequ
 before(async()=>{fixture=spawn(process.execPath,['scripts/fixture-api.cjs'],{env:{...process.env,FIXTURE_PORT:'4012'},stdio:'ignore'});await new Promise((resolve,reject)=>{fixture.on('error',reject);const poll=setInterval(async()=>{try{await fetch('http://127.0.0.1:4012/__state');clearInterval(poll);resolve();}catch{}},50);setTimeout(()=>{clearInterval(poll);reject(new Error('fixture failed to start'));},5000).unref();});({commandRequest,snapshotRequest}=await import('../src/server/http.ts'));});
 after(()=>fixture?.kill());
 async function control(scenario='normal'){await fetch('http://127.0.0.1:4012/__control',{method:'POST',body:JSON.stringify({reset:true,scenario})});}
-beforeEach(()=>control());
+beforeEach(()=>{process.env.BOULDY_ADMIN_USER_IDS='1';return control();});
 const state=async()=>await (await fetch('http://127.0.0.1:4012/__state')).json();
 const post=(command,fields={},headers={})=>commandRequest(new Request(origin+'/api/command',{method:'POST',headers:{'Content-Type':'application/json',Origin:origin,Cookie:'bouldy_token=walkthrough-sample',...headers},body:JSON.stringify({command,fields})}));
 const log=(fields={})=>post('logAttempt',{session_id:3,route_id:11,intent:'attempt',attempt_id:31,...fields});
@@ -20,7 +20,7 @@ test('notes patch notes only; failed note retains supplied draft',async()=>{cons
 test('failed attempt stays in affected sheet and never writes',async()=>{await control('attempt-error');const out=await (await log()).json();assert.match(out.destination,/sheet=route-11&error=/);assert.equal(out.replace,true);assert.deepEqual((await state()).writes,[]);});
 test('expired identity returns 401 and clears cookie; resource errors remain distinct',async()=>{await control('expired');const res=await snapshotRequest(new Request(origin+'/api/snapshot?view=home',{headers:{Cookie:'bouldy_token=walkthrough-sample'}}));assert.equal(res.status,401);assert.match(res.headers.get('set-cookie'),/Max-Age=0/);});
 test('adapter accepts no arbitrary proxy URL or unknown command',async()=>{assert.equal((await post('proxy',{url:'https://attacker.test'})).status,400);assert.equal((await snapshotRequest(new Request(origin+'/api/snapshot?view=https://attacker.test',{headers:{Cookie:'bouldy_token=walkthrough-sample'}}))).status,400);});
-test('end session preserves positive-duration convention and journal destination',async()=>{const out=await(await post('endSession',{session_id:3,duration_minutes:0})).json();assert.equal(out.destination,'/sessions');assert.equal((await state()).sessions.find(s=>s.id===3).duration_minutes,1);});
+test('finish rejects invalid duration without a write and opens the completed visit',async()=>{for(const value of [0,-1,1441,'abc']){const out=await(await post('endSession',{session_id:3,duration_minutes:value})).json();assert.match(out.destination,/error=/);assert.deepEqual((await state()).writes,[]);}const out=await(await post('endSession',{session_id:3,duration_minutes:119})).json();assert.equal(out.destination,'/sessions/3');assert.equal((await state()).sessions.find(s=>s.id===3).duration_minutes,119);});
 test('correction updates the aggregate without adding a try and completed correction is blocked',async()=>{const res=await post('correctAttempt',{session_id:3,route_id:11,attempt_id:31,result:'send',num_attempts:1});assert.match((await res.json()).destination,/notice=/);const a=(await state()).attempts.find(a=>a.id===31);assert.equal(a.num_attempts,1);assert.equal(a.result,'send');await control();const out=await(await post('correctAttempt',{session_id:2,route_id:11,attempt_id:23,result:'send',num_attempts:1})).json();assert.match(out.destination,/error=/);assert.deepEqual((await state()).writes,[]);});
 test('application boundary rejects a foreign session even if an upstream returns it; 403 does not clear login',async()=>{await control('foreign-session');const write=await log();assert.equal(write.status,403);assert.equal(write.headers.get('set-cookie'),null);const read=await snapshotRequest(new Request(origin+'/api/snapshot?view=session&id=3',{headers:{Cookie:'bouldy_token=walkthrough-sample'}}));assert.equal(read.status,403);assert.deepEqual((await state()).writes,[]);});
 test('JSON size bound is enforced without trusting Content-Length',async()=>{const req=new Request(origin+'/api/command',{method:'POST',headers:{'Content-Type':'application/json',Origin:origin},body:JSON.stringify({command:'logout',fields:{notes:'x'.repeat(1048576)}})});assert.equal((await commandRequest(req)).status,413);assert.deepEqual((await state()).writes,[]);});
@@ -52,12 +52,12 @@ test('new commands retain authentication and exact-origin protection',async()=>{
  assert.deepEqual((await state()).writes,[]);
 });
 test('start session derives owner and UTC date on the server and opens the created session',async()=>{
- const date=new Date().toISOString().slice(0,10);const out=await(await post('startSession',{gym_id:2,user_id:999,session_date:'1900-01-01',duration_minutes:999})).json();
+ await control('empty');const date='2026-01-01';const out=await(await post('startSession',{gym_id:2,user_id:999,session_date:date,duration_minutes:999})).json();
  const s=await state(),created=s.sessions.find(s=>s.id===100);assert.equal(out.destination,'/sessions/100');
  assert.deepEqual(created,{id:100,notes:null,user_id:1,gym_id:2,session_date:date,duration_minutes:0});assert.deepEqual(s.writes,['/sessions/']);
 });
 test('invalid gym and failed session creation return to Gyms without mutation/retry',async()=>{
- let out=await(await post('startSession',{gym_id:0})).json();assert.equal(new URL(out.destination,origin).searchParams.get('error'),'Choose a gym before starting a session.');assert.deepEqual((await state()).writes,[]);
+ let out=await(await post('startSession',{gym_id:0})).json();assert.equal(new URL(out.destination,origin).searchParams.get('error'),'Choose a gym and valid visit date.');assert.deepEqual((await state()).writes,[]);
  await control('session-error');out=await(await post('startSession',{gym_id:1})).json();assert.equal(new URL(out.destination,origin).searchParams.get('error'),'Could not start this sample session. Try again.');assert.deepEqual((await state()).writes,[]);
 });
 test('Add gym trims input, returns sheet errors with replace, and succeeds with the original notice',async()=>{
@@ -124,3 +124,7 @@ test('foreign journal rows cannot cross the application boundary into Climbs or 
  }
  assert.deepEqual((await state()).writes,[]);
 });
+
+test('active session resumes without creating another, and failed reads block creation',async()=>{let out=await(await post('startSession',{gym_id:2})).json();assert.equal(out.destination,'/sessions/3');assert.deepEqual((await state()).writes,[]);await control('unavailable');out=await(await post('startSession',{gym_id:2})).json();assert.match(out.destination,/error=/);assert.deepEqual((await state()).writes,[]);});
+test('catalogue defaults to deny; unverified email grants nothing',async()=>{delete process.env.BOULDY_ADMIN_USER_IDS;process.env.BOULDY_ADMIN_EMAILS='climber@example.test';for(const command of ['addGym','addRoute','editRoute'])assert.equal((await post(command,routeFields)).status,403);assert.equal((await snapshotRequest(new Request(origin+'/api/snapshot?view=gyms',{headers:{Cookie:'bouldy_token=walkthrough-sample'}}))).status,403);assert.deepEqual((await state()).writes,[]);});
+test('invalid and future past-visit dates never write',async()=>{await control('empty');for(const date of ['2026-02-30','2099-01-01','not-a-date']){const out=await(await post('startSession',{gym_id:1,session_date:date})).json();assert.match(out.destination,/error=/);}assert.deepEqual((await state()).writes,[]);});

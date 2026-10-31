@@ -5,16 +5,16 @@ import { pageTransition, tabSwipeDestination } from '../src/features/page-motion
 test('same path and query-only changes never create a page entrance', () => {
   assert.equal(pageTransition('/sessions/3', '/sessions/3'), null);
 });
-test('push/pop and adjacent tabs retain source direction, distance and timing', () => {
+test('pushed screens retain direction while main tab switches stay quiet', () => {
   assert.deepEqual(pageTransition('/sessions', '/sessions/3'), { distance: 28, duration: 260 });
   assert.deepEqual(pageTransition('/sessions/3', '/sessions'), { distance: -28, duration: 260 });
-  assert.deepEqual(pageTransition('/sessions', '/climbs'), { distance: 18, duration: 220 });
-  assert.deepEqual(pageTransition('/sessions', '/'), { distance: -18, duration: 220 });
+  assert.deepEqual(pageTransition('/sessions', '/climbs'), { distance: 28, duration: 260 });
+  assert.equal(pageTransition('/sessions', '/'), null);
   assert.deepEqual(pageTransition('/login', '/welcome'), { distance: 18, duration: 220 });
 });
 test('tab swipes respect browser edges, 90px travel, 2:1 intent and sequence boundaries', () => {
   const start = { x: 200, y: 300 };
-  assert.equal(tabSwipeDestination('/sessions', start, { x: 110, y: 345 }, 390), '/climbs');
+  assert.equal(tabSwipeDestination('/sessions', start, { x: 110, y: 345 }, 390), '/profile');
   assert.equal(tabSwipeDestination('/sessions', start, { x: 111, y: 300 }, 390), null);
   assert.equal(tabSwipeDestination('/sessions', start, { x: 110, y: 346 }, 390), null);
   assert.equal(tabSwipeDestination('/', { x: 27, y: 300 }, { x: 150, y: 300 }, 390), null);

@@ -1,5 +1,26 @@
 # Bouldy migration progress
 
+## Redesign and UI-fix publication — 31 October 2026
+
+The owner authorised pushing the current approved native redesign and the latest UI fixes to GitHub main, with further UI work deferred. This supersedes the local/uncommitted-only restriction for this publication. Native frames/sheets now fill the device; the owner confirmed the white side strips disappeared on physical iPhone/Expo Go. Planned subpage headers now use 12-unit separation both between the eyebrow/badge and above the title; the obsolete compressed title leading is removed in favour of the shared heading metrics. The header change compiles in the iOS development bundle; a new physical-device visual confirmation of that specific header was not collected.
+
+Fresh publication checks: lint, TypeScript, 78/78 tests, web/client/server/middleware export and iOS/Android Hermes/assets exports pass. Expo compatibility/Doctor retain the known RN0.88.0 vs recommended0.88.1 mismatch (Doctor19/20). Forty exported client/native files contain no selected server-only admin/fixture markers; this is a scoped boundary scan, not a comprehensive security verdict. Outputs: `dist/redesign-publication-20261031/{web,native}` (ignored). Evidence: `docs/redesign/evidence/publication-*`.
+
+The Git commit and remote main ref identify the published checkpoint. No site deployment, production record mutation, signing/store release or deprecated-source edit is included. Existing unaccepted device/keyboard/sheet/PWA/release gates remain open in the redesign handoff. Metro is paused for exports and restored afterward in live-API LAN mode. Earlier local-only and runtime-session statements below describe their original checkpoints.
+
+## Native edge-to-edge width fix — 31 October 2026
+
+The owner reported white strips on a physical iPhone in Expo Go. Root loading/loaded views and native sheets still inherited the browser's 430-unit maximum width. The actual Root render/style check reproduces a five-unit gap on each side at a 440-unit viewport. Native frames now fill the window; the 430-unit cap applies only to web. Loading and outer safe-area backgrounds use the approved cream. Native sheets also fill the available width; their height/corners, inner content padding and web sheet cap are unchanged.
+
+The owner reloaded/refreshed Expo Go and explicitly confirmed: “Yes, the sides now fill correctly.” Fresh lint, TypeScript and 78/78 tests pass; Metro served a freshly compiled iOS bundle (HTTP200). Impeccable layout scan returns no findings. The rendered-style matrix covers 375/402/430/440/460/1024 widths, iOS/Android/web and loading/loaded branches; it is constraint arithmetic with hook stubs, not a native layout-engine or screenshot test. Device Hub still reports display connection timeout. Physical Android/sheet interaction and wider release acceptance were not repeated. Evidence: `docs/redesign/evidence/native-width-fix.json` and matching check logs. Unrelated redesign work is preserved. No commit, push, deployment or production-record mutation.
+
+## Approved native redesign — 31 October 2026 (current)
+
+The owner deprecated bouldy-web and directed all new work here. Branch `codex/approved-native-redesign` implements the approved v35 cream/limestone four-tab experience, focused pages, live-session list, nested correction sheets, HH:MM finish, semantic floating feedback, cold-only skeletons/process-memory cache and server-ID-gated catalogue. Prior one-for-one visual restrictions are superseded for this approved redesign; security and journal correctness remain binding.
+
+See [docs/redesign/HANDOFF.md](docs/redesign/HANDOFF.md) for exact implementation, current validation, native evidence, limitations and continuation. Native Welcome/Login rendered in iOS Expo Go. Shared Expo browser fixture flows passed; native interaction acceptance remains open because Device Hub could not connect its display. The implementation was initially local/uncommitted; see the publication checkpoint above for the later authorised GitHub publication. No deployment, real record write or release. Earlier migration results below are historical and are not fresh acceptance evidence for this redesign.
+
+
 Updated 29 October 2026. **All 27 original routes are implemented locally (24 product, one alias, two development), with all 11 commands and shared web/PWA output. Android Expo Go testing now works. Three Android bugs were fixed, 75/75 tests and fresh exports pass, and the requested gallery contains 195 Android screenshots. Full migration acceptance remains OPEN: fresh browser/installed-PWA, post-fix iOS, full three-platform visual/state/motion/account, physical-device and release checks. No release/cutover is authorised.**
 
 ## Product/design/quality documentation — 29 October 2026

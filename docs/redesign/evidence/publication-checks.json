@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-31",
+  "checked_at_utc": "2026-10-31T08:38:11.328580+00:00",
+  "checks": [
+    {
+      "name": "publication-lint",
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "exit_code": 0,
+      "log": "docs/redesign/evidence/publication-lint.log"
+    },
+    {
+      "name": "publication-typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exit_code": 0,
+      "log": "docs/redesign/evidence/publication-typecheck.log"
+    },
+    {
+      "name": "publication-tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0,
+      "log": "docs/redesign/evidence/publication-tests.log"
+    },
+    {
+      "name": "publication-expo-check",
+      "command": [
+        "npx",
+        "expo",
+        "install",
+        "--check"
+      ],
+      "exit_code": 1,
+      "log": "docs/redesign/evidence/publication-expo-check.log"
+    },
+    {
+      "name": "publication-expo-doctor",
+      "command": [
+        "npx",
+        "expo-doctor"
+      ],
+      "exit_code": 1,
+      "log": "docs/redesign/evidence/publication-expo-doctor.log"
+    },
+    {
+      "name": "publication-web-export",
+      "command": [
+        "npm",
+        "run",
+        "build",
+        "--",
+        "--output-dir",
+        "dist/redesign-publication-20261031/web"
+      ],
+      "exit_code": 0,
+      "log": "docs/redesign/evidence/publication-web-export.log"
+    },
+    {
+      "name": "publication-native-export",
+      "command": [
+        "npm",
+        "run",
+        "export:native",
+        "--",
+        "--output-dir",
+        "dist/redesign-publication-20261031/native"
+      ],
+      "exit_code": 0,
+      "log": "docs/redesign/evidence/publication-native-export.log"
+    }
+  ]
+}

@@ -1,16 +1,191 @@
-import { View,useWindowDimensions } from 'react-native';
-import { Brand,Hold,Heading,T,A } from '../../components/primitives';
-import { Screen,Waiting } from '../../components/screen';
-import { useSnapshot } from '../../data/snapshot';
-import { summarizeJournal,duplicateRouteIds } from '../../domain/journal-summary';
-import { colors as c } from '../../theme/colors';
-import { s } from '../../theme/styles';
-const date=(v:string)=>new Intl.DateTimeFormat('en-MY',{day:'numeric',month:'short'}).format(new Date(`${v}T12:00:00`));
-export default function Home(){const {data:d,error}=useSnapshot();const {width}=useWindowDimensions();if(!d)return <Screen><Waiting error={error}/></Screen>;const summary=summarizeJournal(d.journal),activity=d.journal.records,latest=activity[0];const gym=(id:number)=>d.gyms?.find(g=>g.id===id)?.name??'Unknown gym';
- return <Screen><View style={[s.page,{paddingTop:24,gap:28}]}><View style={{gap:12}}><Brand/><View style={[s.row,{justifyContent:'space-between',gap:12,paddingTop:16,paddingBottom:4}]}><View style={{flex:1}}><T color={c['ink-muted']} lines={1} style={{marginBottom:12}}>Good to see you, {d.user.username}.</T><Heading size={48} style={{lineHeight:43.2,letterSpacing:-1.44}}>{'Keep\nshowing up.'}</Heading></View><Hold colour="red" size={width<=360?70:96} style={{transform:[{rotate:'-12deg'}]}}/></View></View>
- {!summary.reliable||!d.gyms?<T color={c['accent-tint-ink']}>Some journal data could not be loaded. <A href="/">Try again</A></T>:null}
- <View style={s.panel}>{latest?<><View style={[s.between,{alignItems:'flex-start',gap:12}]}><View style={{flex:1}}><T size={12} weight={500} color={c['panel-ink-muted']} style={{letterSpacing:1.44}}>LAST SESSION</T><Heading color={c['panel-ink']} style={{marginTop:8}}>{gym(latest.session.gym_id)}</Heading><T color={c['panel-ink-muted']} style={{marginTop:8}}>{date(latest.session.session_date)}{latest.session.duration_minutes>0?` · ${latest.session.duration_minutes} min`:' · In progress'}</T></View><T size={12} weight={500} color={c['panel-ink-muted']}>{latest.loaded?`${latest.attempts.length} ${latest.attempts.length===1?'route':'routes'}`:'Routes unavailable'}</T></View><View style={[s.between,{marginTop:20,borderTopWidth:1,borderColor:c['panel-track'],paddingTop:16,alignItems:'flex-end'}]}><View style={[s.row,{gap:20}]}>{['Sends','Flashes'].map((label,i)=><View key={label}><T display size={24} weight={700} color={i?c.accent:c['panel-ink']}>{i?'⚡ ':''}{latest.loaded&&!duplicateRouteIds(latest.attempts).size?latest.attempts.filter(a=>i?a.result==='flash':a.result==='send'||a.result==='flash').length:'—'}</T><T size={12} color={c['panel-ink-muted']} style={{marginTop:4}}>{label}</T></View>)}</View><A href={`/sessions/${latest.session.id}`} color={c['panel-ink']} textStyle={{textDecorationLine:'underline'}}>Open</A></View></>:<><T size={12} weight={500} color={c['panel-ink-muted']} style={{letterSpacing:1.44}}>YOUR CLIMBING LOG</T><Heading color={c['panel-ink']} style={{marginTop:8}}>{d.journal.sessionsLoaded?'Your next session starts here.':'Your journal is unavailable.'}</Heading><T color={c['panel-ink-muted']} style={{marginTop:12,lineHeight:24}}>Pick a gym, log the routes you try, and build a history worth returning to.</T></>}</View>
- <A href="/gyms" color={c['accent-ink']} style={[s.button,{minHeight:52,backgroundColor:c.accent}]} textStyle={{fontFamily:'Geist-700'}}>Start a session</A>
- <View><View style={s.between}><Heading>Your progress</Heading><T size={12} color={c['ink-muted']}>All time</T></View><View style={{flexDirection:'row',marginTop:16,borderTopWidth:1,borderBottomWidth:1,borderColor:c.hairline,paddingVertical:16}}>{[['Sessions',summary.sessions],['Sends',summary.sends],['Flashes',summary.flashes],['Gyms',summary.gyms]].map(([label,value],i)=><View key={label} style={{flex:1,paddingHorizontal:i?8:0,borderLeftWidth:i?1:0,borderColor:c.hairline}}><T display size={24} weight={700}>{label==='Flashes'&&typeof value==='number'&&value>0?'⚡ ':''}{value??'—'}</T><T size={12} color={c['ink-muted']} style={{marginTop:6}}>{label}</T></View>)}</View></View>
- <View><View style={s.between}><Heading>Recent sessions</Heading>{activity.length?<A href="/sessions" textStyle={{textDecorationLine:'underline'}}>See all</A>:null}</View>{activity.length?<View style={{marginTop:16,borderTopWidth:1,borderColor:c.hairline}}>{activity.slice(0,3).map(({session,attempts,loaded})=><A key={session.id} href={`/sessions/${session.id}`} style={{borderBottomWidth:1,borderColor:c.hairline,paddingVertical:16}} color={c.ink}><View style={s.between}><View style={{flex:1}}><Heading size={18} style={{fontFamily:'BarlowCondensed-700'}}>{gym(session.gym_id)}</Heading><T color={c['ink-muted']} style={{marginTop:6}}>{date(session.session_date)}</T></View><T weight={600}>{loaded&&!duplicateRouteIds(attempts).size?`${attempts.filter(a=>a.result==='send'||a.result==='flash').length} sends`:'Summary unavailable'}{loaded&&!duplicateRouteIds(attempts).size&&attempts.some(a=>a.result==='flash')?' · ⚡':''}</T></View></A>)}</View>:<T color={c['ink-muted']} style={{marginTop:16,lineHeight:24}}>{d.journal.sessionsLoaded?'No sessions yet. Start at a gym and your climbing story will show up here.':'Your sessions could not be loaded. Try again above.'}</T>}</View></View></Screen>;
+import { View } from "react-native";
+import { Brand, Heading, T, A, Chevron } from "../../components/primitives";
+import { Screen, Waiting } from "../../components/screen";
+import { TaskFooter } from "../../components/task-footer";
+import { EmptyState } from "../../components/empty-state";
+import { useSnapshot } from "../../data/snapshot";
+import {
+  duplicateRouteIds,
+  journalComplete,
+} from "../../domain/journal-summary";
+import { colors as c } from "../../theme/colors";
+import { s } from "../../theme/styles";
+export default function Home() {
+  const { data: d, error } = useSnapshot();
+  if (!d)
+    return (
+      <Screen>
+        <Waiting error={error} />
+      </Screen>
+    );
+  const now = new Date(),
+    month = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`,
+    active = d.journal.records.find((r) => r.session.duration_minutes === 0),
+    completed = d.journal.records.filter((r) => r.session.duration_minutes > 0),
+    recent = completed[0],
+    monthly = completed.filter((r) => r.session.session_date.startsWith(month)),
+    reliable =
+      journalComplete(d.journal) &&
+      monthly.every((r) => !duplicateRouteIds(r.attempts).size),
+    finishes = monthly.reduce(
+      (sum, r) =>
+        sum +
+        r.attempts.filter((a) => a.result === "send" || a.result === "flash")
+          .length,
+      0,
+    ),
+    minutes = monthly.reduce((sum, r) => sum + r.session.duration_minutes, 0),
+    empty = d.journal.sessionsLoaded && !d.journal.records.length;
+  const gym = (id: number) =>
+      d.gyms?.find((g) => g.id === id)?.name ?? "Gym name unavailable",
+    target = active ? `/sessions/${active.session.id}` : "/sessions/new";
+  return (
+    <Screen
+      footer={
+        <TaskFooter>
+          <A
+            href={target}
+            style={[s.button, { backgroundColor: c.accent }]}
+            color={c["accent-ink"]}
+          >
+            {active
+              ? "Resume session"
+              : empty
+                ? "Start your first session"
+                : "Start session"}
+          </A>
+        </TaskFooter>
+      }
+    >
+      <View style={[s.page, { flexGrow: 1, gap: 20 }]}>
+        <Brand />
+        {empty ? (
+          <EmptyState title="Your first move.">
+            A journal that grows with you. Choose your gym, find a route and
+            record your tries. That’s your first entry.
+          </EmptyState>
+        ) : (
+          <>
+            <View style={{ gap: 8 }}>
+              <Heading size={36}>Good to see you, {d.user.username}.</Heading>
+              <T size={16} color={c["ink-muted"]}>
+                {active
+                  ? "Your session is waiting for you."
+                  : "A little progress, every visit."}
+              </T>
+            </View>
+            {!reliable ? (
+              <T color={c["accent-strong"]}>
+                Some history is unavailable. Totals may be incomplete.
+              </T>
+            ) : null}
+            <View style={s.panel}>
+              <Heading color={c["panel-ink"]}>This month</Heading>
+              <View style={[s.row, { gap: 16, marginTop: 20 }]}>
+                {[
+                  [String(monthly.length), "visits"],
+                  [reliable ? String(finishes) : "—", "finishes"],
+                  [`${Math.round(minutes / 6) / 10}h`, "climbing"],
+                ].map(([value, label]) => (
+                  <View key={label} style={{ flex: 1 }}>
+                    <Heading size={40} color={c["panel-ink"]} style={{textTransform:"none"}}>
+                      {value}
+                    </Heading>
+                    <T color={c["panel-ink-muted"]}>{label}</T>
+                  </View>
+                ))}
+              </View>
+              <T
+                size={12}
+                color={c["panel-ink-muted"]}
+                style={{ marginTop: 20 }}
+              >
+                Finishes include first-try finishes.
+              </T>
+            </View>
+            {active ? (
+              <A href={target} style={[s.panel, s.between, { gap: 12 }]}>
+                <View style={{ flex: 1 }}>
+                  <T size={16} weight={700} color={c["panel-ink"]}>
+                    Climbing now
+                  </T>
+                  <T color={c["panel-ink-muted"]}>
+                    {gym(active.session.gym_id)}
+                  </T>
+                </View>
+                <Chevron />
+              </A>
+            ) : null}
+            {recent ? (
+              <>
+                <View style={s.between}>
+                  <Heading>Last visit</Heading>
+                  <A href="/sessions" color={c.ink}>
+                    All visits
+                  </A>
+                </View>
+                <A
+                  href={`/sessions/${recent.session.id}`}
+                  style={[s.between, { gap: 12, paddingBottom: 20 }]}
+                >
+                  <View
+                    style={{
+                      backgroundColor: c.panel,
+                      borderRadius: 8,
+                      padding: 10,
+                      alignItems: "center",
+                    }}
+                  >
+                    <T size={12} color={c["panel-ink"]}>
+                      {new Intl.DateTimeFormat("en", { month: "short" })
+                        .format(
+                          new Date(`${recent.session.session_date}T12:00:00`),
+                        )
+                        .toUpperCase()}
+                    </T>
+                    <Heading size={30} color={c["panel-ink"]}>
+                      {recent.session.session_date.slice(-2)}
+                    </Heading>
+                  </View>
+                  <View style={{ flex: 1 }}>
+                    <T size={16} weight={700}>
+                      {gym(recent.session.gym_id)}
+                    </T>
+                    <T color={c["ink-muted"]}>
+                      {recent.session.duration_minutes} min ·{" "}
+                      {recent.loaded
+                        ? `${recent.attempts.length} routes`
+                        : "Routes unavailable"}
+                    </T>
+                  </View>
+                  <Chevron />
+                </A>
+              </>
+            ) : null}
+            <A
+              href="/climbs"
+              style={[
+                s.between,
+                {
+                  gap: 12,
+                  borderTopWidth: 1,
+                  borderColor: c.hairline,
+                  marginHorizontal: -20,
+                  padding: 20,
+                },
+              ]}
+            >
+              <View style={{ flex: 1 }}>
+                <T size={16} weight={700}>
+                  See your climbing progress
+                </T>
+                <T color={c["ink-muted"]}>Your routes, across visits</T>
+              </View>
+              <Chevron />
+            </A>
+          </>
+        )}
+      </View>
+    </Screen>
+  );
 }

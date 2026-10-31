@@ -1,6 +1,14 @@
-# Bouldy React Native migration
+# Bouldy mobile app
 
 React Native + Expo SDK 58 / React Native 0.88 / React 19.3 / Expo Router 58, with React Native Web and a trusted application API adapter in this repository. All 24 source product screens, the history alias, both original development routes and all 11 commands now have local implementations. Full migration acceptance remains open; this has not been released as a replacement. Read [MIGRATION_PROGRESS.md](MIGRATION_PROGRESS.md) before continuing. Public repository: [AmeerulH/bouldy-mobile](https://github.com/AmeerulH/bouldy-mobile).
+
+## Approved native redesign — 31 October 2026
+
+Active development is **this Expo repository**. `../bouldy-web` is deprecated and must not be edited. The owner approved the v35 design board at https://bouldy-design-review.elatedbread66.chatgpt.site. Native implementation and remaining validation are recorded in [the redesign handoff](docs/redesign/HANDOFF.md). Earlier one-for-one visual migration instructions are historical for this redesign; journal/auth/ownership safeguards remain binding.
+
+The owner authorised publishing the approved redesign and current width/header fixes to GitHub main on 31 October. Native width is edge-to-edge; browser preview retains its phone canvas. Final lint/typecheck, 78 tests and web/native exports pass; the existing React Native patch mismatch and remaining device/PWA/release gates remain documented in the handoff. Source publication is not a site deployment or store release.
+
+For Expo Go on your physical iPhone, use the same Wi-Fi, sign into the same Expo account in the CLI and Expo Go, then run `npm run start:phone` and scan the QR code. This uses the **real API**, advertises the Mac’s LAN address for the trusted adapter, and keeps Metro running. A standalone binary still requires a hosted HTTPS adapter and signing; no release is implied.
 
 ## Project context
 

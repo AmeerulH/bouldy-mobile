@@ -20,7 +20,8 @@
     "export:native": "expo export --platform ios --platform android",
     "fixture": "node scripts/fixture-api.cjs",
     "test:e2e": "playwright test",
-    "prebuild": "node scripts/prepare-pwa.cjs"
+    "prebuild": "node scripts/prepare-pwa.cjs",
+    "start:phone": "node scripts/start-preview.cjs live --lan"
   },
   "dependencies": {
     "@react-native-picker/picker": "2.11.4",

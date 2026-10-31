@@ -1,7 +1,7 @@
 // Source OKLCH rasterised in Chromium sRGB canvas; native values are measured, not selected.
 export const semantic = {
-  "neutral": "#eceaeb",
-  "rail": "#f0eeee",
+  "neutral": "#e7e0d4",
+  "rail": "#eee8dc",
   "flashBg": "#c8f2c8",
   "flashInk": "#004b00",
   "sendBg": "#cfe7ff",

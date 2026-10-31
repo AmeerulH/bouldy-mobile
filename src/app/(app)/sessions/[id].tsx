@@ -1,29 +1,245 @@
-import { Pressable } from '../../../components/pressable';
-import { semantic as sc } from '../../../theme/semantic-colors';
-import { useState } from 'react';
-import { View } from 'react-native';
-import { useLocalSearchParams } from 'expo-router';
-import { T,Heading,Hold,Result,Button,A,Feedback,Field } from '../../../components/primitives';
-import { Screen,Waiting,ScrollAnchor } from '../../../components/screen';
-import { RouteSheet } from '../../../components/route-sheet';
-import { RouteBrowser } from '../../../components/route-browser';
-import { useSnackbar } from '../../../components/snackbar';
-import { Sheet } from '../../../components/sheet';
-import { useSnapshot } from '../../../data/snapshot';
-import { useAuth } from '../../../platform/auth';
-import { useSheetNavigation } from '../../../platform/sheet-navigation';
-import { routeStates,statusText,type RouteState } from '../../../features/session-state';
-import { duplicateRouteIds,journalComplete } from '../../../domain/journal-summary';
-import { colors as c } from '../../../theme/colors';
-import { s } from '../../../theme/styles';
-export default function Session(){const {id}=useLocalSearchParams<{id:string}>();const nav=useSheetNavigation(),auth=useAuth(),showSnackbar=useSnackbar();const {data:d,error}=useSnapshot('session',id);const [pending,setPending]=useState<number|null>(null),[localError,setLocalError]=useState(''),[duration,setDuration]=useState('60'),[ending,setEnding]=useState(false);
- if(!d)return <Screen back="/sessions"><Waiting error={error} page="session"/></Screen>;
- const ended=d.session.duration_minutes>0,logged=new Set(d.attempts.map(a=>a.route_id)),byId=new Map(d.gymRoutes.map(r=>[r.id,r]));for(const r of d.routes??[])if(r.gym_id===d.session.gym_id)byId.set(r.id,r);
- const states=routeStates([...byId.values()].filter(r=>ended?logged.has(r.id):r.status==='active'||logged.has(r.id)),d.attempts,d.journal,d.session.id,ended),sends=d.attempts.filter(a=>a.result==='send'||a.result==='flash').length,flashes=d.attempts.filter(a=>a.result==='flash').length,duplicates=duplicateRouteIds(d.attempts);
- const items=states.map(state=>{const {attempt,previous,ambiguous}=state,completed=attempt?.result==='send'||attempt?.result==='flash';return {state,pinned:!ended&&logged.has(state.route.id),status:ended?attempt?.result==='flash'?'flash':attempt?.result==='send'?'sent':'progress':completed||previous.sent?'sent':attempt||ambiguous||previous.tried?'project':'new'};});
- async function log(state:RouteState,intent:string){setPending(state.route.id);setLocalError('');try{const out=await auth.command('logAttempt',{session_id:Number(id),route_id:state.route.id,intent,...(state.attempt?{attempt_id:state.attempt.id}:{})});if(out.destination)nav.apply(out.destination);}catch(e){setLocalError((e as Error).message);nav.open(`route-${state.route.id}`);}finally{setPending(null);}}
- const row=(state:RouteState)=>{const {route,attempt,ambiguous}=state,complete=attempt?.result==='send'||attempt?.result==='flash';return <ScrollAnchor id={`route-${route.id}`}><View style={[s.row,{gap:8}]}><Pressable accessibilityRole="button" accessibilityLabel={`${route.grade}, ${route.route_name}`} onPress={()=>nav.open(`route-${route.id}`)} style={[s.row,{flex:1,gap:12,minHeight:64,paddingVertical:10}]}><Hold colour={route.colour} name={route.route_name}/><View style={{flex:1}}><View style={[s.row,{alignItems:'baseline',gap:8}]}><Heading size={20}>{route.grade}</Heading><T size={12} weight={600} color={c['ink-muted']}>{route.colour||'Colour unrecorded'}</T></View><T weight={600} lines={1} style={{marginTop:2}}>{route.route_name}</T><T size={12} color={c['ink-muted']} lines={1}>{statusText(state,ended)}</T></View></Pressable>{complete&&attempt?<Result result={attempt.result}/>:null}{!ended&&route.status==='active'&&!complete&&!ambiguous?<Button variant="neutral" pending={pending===route.id} pendingLabel="" accessibilityLabel={`Log a try on ${route.grade} ${route.route_name}`} onPress={()=>void log(state,'attempt')} style={{minHeight:44,minWidth:56,paddingHorizontal:12}} labelStyle={{fontFamily:'BarlowCondensed-700',fontSize:18,lineHeight:18}}>+1</Button>:null}</View></ScrollAnchor>;};
- return <View style={{flex:1}}><Screen back="/sessions"><View style={s.page}><View style={[s.between,{alignItems:'flex-start',gap:12}]}><View style={{flex:1}}><Heading size={30} style={{lineHeight:27,letterSpacing:-.9}}>{d.gym.name}</Heading><T color={c['ink-muted']} style={{marginTop:8}}>{d.session.session_date}</T></View><View style={{borderRadius:999,paddingHorizontal:12,paddingVertical:8,backgroundColor:ended?sc.flashBg:c['accent-tint']}}><T size={12} weight={700} color={ended?sc.flashInk:c['accent-tint-ink']}>{ended?'Complete':'Live session'}</T></View></View>{nav.error&&!nav.sheet?<Feedback>{nav.error}</Feedback>:null}<View style={s.panel}><View style={[s.between,{alignItems:'flex-end',gap:16}]}><View><T size={12} weight={500} color={c['panel-ink-muted']} style={{letterSpacing:1.44}}>{ended?'THIS VISIT':"TODAY'S LOG"}</T><Heading size={30} color={c['panel-ink']} style={{marginTop:8}}>{logged.size} {logged.size===1?'route':'routes'}</Heading></View><T color={c['panel-ink-muted']}>{ended?`${d.session.duration_minutes} min`:'Still climbing'}</T></View><View style={[s.row,{gap:24,borderTopWidth:1,borderColor:c['panel-track'],marginTop:20,paddingTop:16}]}>{['Sends','Flashes'].map((label,i)=><View key={label}><T display size={24} weight={700} color={i?c.accent:c['panel-ink']}>{i?'⚡ ':''}{duplicates.size?'—':i?flashes:sends}</T><T size={12} color={c['panel-ink-muted']} style={{marginTop:4}}>{label}</T></View>)}</View></View>{!journalComplete(d.journal)?<Feedback>Earlier visits could not all be loaded. Project suggestions and lifetime flash eligibility are unavailable.</Feedback>:null}<View><View style={[s.between,{alignItems:'flex-end',gap:12}]}><View style={{flex:1}}><T color={c['ink-muted']}>{ended?'Logged this visit':`${items.length} routes at ${d.gym.name}`}</T><Heading style={{marginTop:4}}>{ended?'Session review':'Route log'}</Heading></View>{!ended?<A href={`/sessions/${id}/routes/new`} style={[s.button,{minHeight:44,paddingHorizontal:16,borderRadius:999,backgroundColor:c['accent-tint']}]} color={c['accent-tint-ink']}>+ Add route</A>:null}</View>{items.length?<View style={{marginTop:12}}><RouteBrowser items={items} renderRow={row} ended={ended} storageKey={`session-${id}`} openFilters={()=>nav.open('route-filters')} filtersOpen={nav.sheet==='route-filters'} closeFilters={nav.close}/></View>:<T color={c['ink-muted']} style={{marginTop:16,lineHeight:24}}>{ended?'No routes were logged in this visit.':'No active routes are listed for this gym yet. Add one to start logging it.'}</T>}</View>{ended?<A href="/sessions" style={[s.button,{backgroundColor:c.accent}]} color={c['accent-ink']}>Back to sessions</A>:<Button variant="dark" onPress={()=>nav.open('end-session')}>End session</Button>}</View></Screen>
- {states.map(state=><RouteSheet key={state.route.id} state={state} sessionId={d.session.id} ended={ended} error={nav.sheet===`route-${state.route.id}`?nav.error||localError:undefined} open={nav.sheet===`route-${state.route.id}`} close={nav.close} log={log} onSaved={showSnackbar}/>)}
- <Sheet title="End session" open={!ended&&nav.sheet==='end-session'} close={nav.close}><View style={{gap:16}}>{nav.sheet==='end-session'&&nav.error?<Feedback>{nav.error}</Feedback>:null}<T color={c['ink-muted']} style={{lineHeight:24}}>{sends} {sends===1?'send':'sends'} logged so far. Ending locks the session length.</T><Field label="Session length (minutes)" value={duration} onChangeText={setDuration} keyboardType="number-pad"/><Button pending={ending} pendingLabel="Ending session" variant="dark" onPress={async()=>{setEnding(true);try{const out=await auth.command('endSession',{session_id:d.session.id,duration_minutes:duration});if(out.destination)nav.apply(out.destination);}finally{setEnding(false);}}}>End session</Button></View></Sheet></View>;
+import { useRef, useState } from "react";
+import { View } from "react-native";
+import { useLocalSearchParams } from "expo-router";
+import {
+  Heading,
+  T,
+  IconButton,
+  Button,
+  Feedback,
+} from "../../../components/primitives";
+import { Screen, Waiting } from "../../../components/screen";
+import { Surface } from "../../../components/surface";
+import { RouteSheet } from "../../../components/route-sheet";
+import { SessionRouteList } from "../../../components/session-route-list";
+import { DurationPicker } from "../../../components/duration-picker";
+import { Sheet } from "../../../components/sheet";
+import { useSnackbar } from "../../../components/snackbar";
+import { useSnapshot } from "../../../data/snapshot";
+import { useAuth } from "../../../platform/auth";
+import { useSheetNavigation } from "../../../platform/sheet-navigation";
+import { routeStates, type RouteState } from "../../../features/session-state";
+import {
+  duplicateRouteIds,
+  journalComplete,
+} from "../../../domain/journal-summary";
+import { colors as c } from "../../../theme/colors";
+import { s } from "../../../theme/styles";
+export default function Session() {
+  const { id } = useLocalSearchParams<{ id: string }>(),
+    nav = useSheetNavigation(),
+    auth = useAuth(),
+    snackbar = useSnackbar(),
+    { data: d, error } = useSnapshot("session", id),
+    [pending, setPending] = useState<number | null>(null),
+    busy = useRef(false),
+    [issue, setIssue] = useState(""),
+    [duration, setDuration] = useState(60),
+    [ending, setEnding] = useState(false);
+  if (!d)
+    return (
+      <Screen back="/sessions">
+        <Waiting error={error} page="session" />
+      </Screen>
+    );
+  const ended = d.session.duration_minutes > 0,
+    logged = new Set(d.attempts.map((a) => a.route_id)),
+    byId = new Map(d.gymRoutes.map((r) => [r.id, r]));
+  for (const r of d.routes ?? [])
+    if (r.gym_id === d.session.gym_id) byId.set(r.id, r);
+  const states = routeStates(
+      [...byId.values()].filter((r) =>
+        ended ? logged.has(r.id) : r.status === "active" || logged.has(r.id),
+      ),
+      d.attempts,
+      d.journal,
+      d.session.id,
+      ended,
+    ),
+    duplicates = duplicateRouteIds(d.attempts),
+    sends = d.attempts.filter(
+      (a) => a.result === "send" || a.result === "flash",
+    ).length,
+    selected = states.find((state) => nav.sheet === `route-${state.route.id}`);
+  async function log(state: RouteState, intent: string) {
+    if (busy.current) return;
+    busy.current = true;
+    setPending(state.route.id);
+    setIssue("");
+    try {
+      const out = await auth.command("logAttempt", {
+        session_id: Number(id),
+        route_id: state.route.id,
+        intent,
+        ...(state.attempt ? { attempt_id: state.attempt.id } : {}),
+      });
+      if (out.destination) {
+        const url = new URL(out.destination, "http://local"),
+          message = url.searchParams.get("error");
+        if (message) {
+          setIssue(message);
+          nav.open(`route-${state.route.id}`);
+          snackbar(message, "error");
+        } else {
+          const notice = url.searchParams.get("notice");
+          if (notice) snackbar(notice);
+        }
+      }
+    } catch (e) {
+      setIssue((e as Error).message);
+      snackbar((e as Error).message, "error");
+    } finally {
+      busy.current = false;
+      setPending(null);
+    }
+  }
+  async function finish() {
+    if (ending) return;
+    if (duration < 1) {
+      setIssue("Choose a duration of at least one minute.");
+      return;
+    }
+    setEnding(true);
+    setIssue("");
+    try {
+      const out = await auth.command("endSession", {
+        session_id: Number(id),
+        duration_minutes: duration,
+      });
+      if (out.destination) {
+        const message = new URL(
+          out.destination,
+          "http://local",
+        ).searchParams.get("error");
+        if (message) setIssue(message);
+        else {
+          nav.close();
+          snackbar("Visit saved. A little further.");
+        }
+      }
+    } catch (e) {
+      setIssue((e as Error).message);
+    } finally {
+      setEnding(false);
+    }
+  }
+  return (
+    <Surface>
+      <View
+        style={{
+          paddingHorizontal: 20,
+          paddingTop: 12,
+          paddingBottom: 12,
+          gap: 16,
+          borderBottomWidth: 1,
+          borderColor: c.hairline,
+        }}
+      >
+        <View style={s.between}>
+          <IconButton href="/sessions" name="back" label="Back to sessions" />
+          <View style={[s.row, { gap: 8 }]}>
+            {!ended ? (
+              <>
+                <IconButton
+                  name="help"
+                  label="How to log a climb"
+                  onPress={() => nav.open("logging-help")}
+                />
+                <Button onPress={() => nav.open("end-session")}>Finish</Button>
+              </>
+            ) : null}
+          </View>
+        </View>
+        <View>
+          <Heading size={30}>{d.gym.name}</Heading>
+          <T color={c["ink-muted"]}>
+            {ended ? "Completed visit" : "Climbing now"}
+          </T>
+        </View>
+        <View style={s.between}>
+          <T>
+            {logged.size} routes　{duplicates.size ? "—" : sends} finishes
+          </T>
+          <T color={c["ink-muted"]}>
+            {ended
+              ? `${d.session.duration_minutes} min`
+              : d.session.session_date}
+          </T>
+        </View>
+        {!journalComplete(d.journal) ? (
+          <T size={12} color={c["accent-strong"]}>
+            Some earlier visits are unavailable. Flash eligibility is paused.
+          </T>
+        ) : null}
+      </View>
+      <SessionRouteList
+        states={states}
+        sessionId={Number(id)}
+        ended={ended}
+        pending={pending}
+        open={(routeId) => {
+          setIssue("");
+          nav.open(`route-${routeId}`);
+        }}
+        log={log}
+      />
+      {selected ? (
+        <RouteSheet
+          key={selected.route.id}
+          state={selected}
+          sessionId={Number(id)}
+          ended={ended}
+          error={issue || nav.error}
+          open
+          close={nav.close}
+          log={log}
+          onSaved={snackbar}
+        />
+      ) : null}
+      <Sheet
+        title="Finish this visit?"
+        open={!ended && nav.sheet === "end-session"}
+        close={nav.close}
+        footer={
+          <Button
+            pending={ending}
+            pendingLabel="Finishing visit"
+            onPress={() => void finish()}
+          >
+            Finish and keep climbs
+          </Button>
+        }
+      >
+        <View style={{ gap: 16 }}>
+          <T>
+            {logged.size} routes logged. Your climbs and notes will stay in your
+            journal.
+          </T>
+          <DurationPicker value={duration} onChange={setDuration} />
+          {issue || nav.error ? (
+            <Feedback>{issue || nav.error}</Feedback>
+          ) : null}
+        </View>
+      </Sheet>
+      <Sheet
+        title="Every try counts"
+        open={nav.sheet === "logging-help"}
+        close={nav.close}
+      >
+        <View style={{ gap: 16 }}>
+          <T>
+            Use +1 for each physical try. Sent records a finish and keeps your
+            try count.
+          </T>
+          <T>
+            Flash is a finish on your first-ever try, offered only when your
+            complete route history confirms it.
+          </T>
+          <T>
+            Tap a route to add a private note or correct its count and result.
+          </T>
+        </View>
+      </Sheet>
+    </Surface>
+  );
 }

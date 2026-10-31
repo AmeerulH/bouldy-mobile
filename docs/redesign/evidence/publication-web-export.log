@@ -1,0 +1,123 @@
+
+> bouldy-mobile@0.1.0 prebuild
+> node scripts/prepare-pwa.cjs
+
+Prepared public-only PWA fallback b28d63fbff178eb5
+
+> bouldy-mobile@0.1.0 build
+> expo export --platform web --output-dir dist/redesign-publication-20261031/web
+
+Using src/app as the root directory for Expo Router.
+Starting Metro Bundler
+
+Server rendering is enabled. Learn more: https://docs.expo.dev/router/web/server-rendering/
+| (node:81343) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:81343) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+λ Bundled 818ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1467 modules)
+Web Bundled 1222ms node_modules/expo-router/entry.js (1316 modules)
+λ Bundled 2ms src/app/+middleware.ts (1 module)
+λ Bundled 3ms src/app/api/command+api.ts (1 module)
+λ Bundled 2ms src/app/api/identity+api.ts (1 module)
+λ Bundled 2ms src/app/api/snapshot+api.ts (1 module)
+λ Bundled 17ms node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js (1 module)
+
+› Assets (48):
+assets/fonts/BarlowCondensed-600.4cff15f6ad865e6e6c504cff84fea39b.ttf (36KB)
+assets/fonts/BarlowCondensed-700.3cf9e5d752a9a2ddb2f35ae5699879e2.ttf (36KB)
+assets/fonts/BarlowCondensed-800.b2a55f55c9ead8d20615fb35d4ffe12c.ttf (36KB)
+assets/fonts/Geist-400.f049497563dc07e2b6405b4a962b48e1.ttf (32KB)
+assets/fonts/Geist-500.abeb007cda2e298d17123d224afe92e2.ttf (32KB)
+assets/fonts/Geist-600.5a0cc592c98f8a6cc868ab7250c1bc1d.ttf (32KB)
+assets/fonts/Geist-700.86de62fb9db18500779d01e4cd5e0775.ttf (32KB)
+assets/fonts/Geist-800.ef6a4e4fd2e64f3de3d4d9c00a7d08d5.ttf (32KB)
+assets/fonts/GeistMono-400.a857fe9f310883750be0605cdda63f05.ttf (21KB)
+assets/source/brand/bolt-b.adfd8212a99da8d92f956c0fc6e9f983.svg (440B)
+assets/source/brand/proposals/bolt-b.acad51d39050eb2fe423595b833aa154.svg (451B)
+assets/source/brand/proposals/crux.bf737481cf627257a36bafb0ff9cd527.svg (397B)
+assets/source/brand/proposals/three-moves.b764bc9987c68622c841d059be6c4a88.svg (589B)
+assets/source/route-holds/black.624951c6b543acf00f49aeb7674c33dd.svg (1.5KB)
+assets/source/route-holds/blue-triangle.dea641ffeb496ffb07f34870b50edc31.svg (1.5KB)
+assets/source/route-holds/blue.ff79933ca2682e87849f20c75d1da664.svg (1.5KB)
+assets/source/route-holds/brown.8980e5d8920abedc098d4b746299f770.svg (1.4KB)
+assets/source/route-holds/green.66a028dac752a2d0c199cab2c7e911bb.svg (1.5KB)
+assets/source/route-holds/grey.79cc7b3af3afbd3c965cc4f4433a293f.svg (1.4KB)
+assets/source/route-holds/mint.18740e605abea9ce6cce791ec22189b4.svg (1.4KB)
+assets/source/route-holds/orange.507dba4905d36945dceed404faf8b39a.svg (1.5KB)
+assets/source/route-holds/pink.fd624ffc2bf3dc934d63740fd35e2148.svg (1.4KB)
+assets/source/route-holds/purple.49fbf997e2f2038c55be51efdd943058.svg (1.5KB)
+assets/source/route-holds/red.41e2f603b69dbc5500b83be809a64a97.svg (1.6KB)
+assets/source/route-holds/teal.d716e84ea47101a3bbe0076e2730c042.svg (1.4KB)
+assets/source/route-holds/transparent.8337f302ee7bdb05e9ca9b3accb60263.svg (1.5KB)
+assets/source/route-holds/white.3f2f05eacb82c4148daee01689aecdea.svg (1.5KB)
+assets/source/route-holds/yellow.74eb806472127872954a6274e5c3efb8.svg (1.5KB)
+assets/textures/limestone-grain.79f33ed2eb71dc7faf5efabf4217d77d.webp (273KB)
+assets/textures/limestone-rock.d967989b4670919604ac94d4880a8900.webp (188KB)
+node_modules/expo-router/assets/arrow_down.017bc6ba3fc25503e5eb5e53826d48a8.png (9.5KB)
+node_modules/expo-router/assets/error.d1ea1496f9057eb392d5bbf3732a61b7.png (469B)
+node_modules/expo-router/assets/file.19eeb73b9593a38f8e9f418337fc7d10.png (138B)
+node_modules/expo-router/assets/forward.d8b800c443b8972542883e0b9de2bdc6.png (188B)
+node_modules/expo-router/assets/pkg.ab19f4cbc543357183a20571f68380a3.png (364B)
+node_modules/expo-router/assets/react-navigation/elements/back-icon-mask.0a328cd9c1afd0afe8e3b1ec5165b1b4.png (653B)
+node_modules/expo-router/assets/react-navigation/elements/back-icon.35ba0eaec5a4f5ed12ca16fabeae451d.png (207B)
+node_modules/expo-router/assets/react-navigation/elements/clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55.png (4 variations | 425B)
+node_modules/expo-router/assets/react-navigation/elements/close-icon.808e1b1b9b53114ec2838071a7e6daa7.png (4 variations | 235B)
+node_modules/expo-router/assets/react-navigation/elements/search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png (928B)
+node_modules/expo-router/assets/sitemap.412dd9275b6b48ad28f5e3d81bb1f626.png (465B)
+node_modules/expo-router/assets/unmatched.20e71bdf79e3a97bf55fd9e164041578.png (4.8KB)
+
+› web bundles (40):
+_expo/server/render.js (2.7MB)
+_expo/server/render.js.map (3.6MB)
+_expo/static/css/global-76677deba5eac4777c15cd8e4ce1d10b.css (1.3KB)
+_expo/static/js/web/__common-333850bab895ce184358fa845769f62f.js (906KB)
+_expo/static/js/web/__expo-metro-runtime-ed4c1cfa6193d76fc294130e42bd1916.js (3.5KB)
+_expo/static/js/web/_layout-8becd20a37f161ae97aea3355cf8845b.js (2.5KB)
+_expo/static/js/web/_layout-9cfebcce12cfe440a84b2f5d873d8e14.js (32KB)
+_expo/static/js/web/_layout-b4e6122dab5f168ee7fbf40bc95a4091.js (448B)
+_expo/static/js/web/_layout-effb19fd54af626875db3c06bcafbf0d.js (697B)
+_expo/static/js/web/[id]-0e30f5829c344e2491dd33eb06c5a7fd.js (6.2KB)
+_expo/static/js/web/[id]-2e985239792a7e2ce0137360515e3c65.js (3.8KB)
+_expo/static/js/web/[id]-a22b25c40a14ae880ff2727027407539.js (19KB)
+_expo/static/js/web/+not-found-ef8f94b34337f7b8333b822c75036ef6.js (203B)
+_expo/static/js/web/beta-e86eb9f18fbae4692a6e9fd4505af0aa.js (1.6KB)
+_expo/static/js/web/brand-preview-6fc4be43a20f445f9bd83ce2596cbf64.js (1KB)
+_expo/static/js/web/challenges-7f7258f879e9923e0ab57b8e049a3e63.js (1KB)
+_expo/static/js/web/climbers-893a25f4adc0ef08772fd85866feecb0.js (994B)
+_expo/static/js/web/climbs-7ddd8724285f3bf890e7b8c4f012d785.js (4.4KB)
+_expo/static/js/web/component-preview-5110a7c360dbafce3cd8b8750338a475.js (3.2KB)
+_expo/static/js/web/edit-19730eda4d73ba5c9e0db1e37e12bdf2.js (834B)
+_expo/static/js/web/edit-25d8b2ee2728cc532b366230d8aea20e.js (265B)
+_expo/static/js/web/entry-367b1bb2be81532fc908ebb7a92acf57.js (1.1MB)
+_expo/static/js/web/feed-2eaf3db23a97751f6a1819d5781fb52e.js (999B)
+_expo/static/js/web/groups-29da880fb08934a188c2901dfecc3db3.js (964B)
+_expo/static/js/web/history-f05156fd6d17997520616e85704f9917.js (265B)
+_expo/static/js/web/index-091b124943ef60a7abc1606c458c9aba.js (3.6KB)
+_expo/static/js/web/index-2638aa9735bb4cc571449ad948b7de81.js (2.6KB)
+_expo/static/js/web/index-62f4b4be5a67a9e8351917c8c16bfddf.js (4KB)
+_expo/static/js/web/index-69e11924dbdba1796fb4d5d1d420dc69.js (2.6KB)
+_expo/static/js/web/index-9e00e6788dc38b175df1896d754993cb.js (4.5KB)
+_expo/static/js/web/leaderboards-5e6ffff94923b78227441ea2a73b580f.js (1.1KB)
+_expo/static/js/web/loading-preview-44b5b4b9325337236f1b46d9b48fbf24.js (412B)
+_expo/static/js/web/login-a25311fb6f59c540b1da3d366967a90c.js (1.9KB)
+_expo/static/js/web/new-00ce5eefd1bb3a6cfca248cdadaf8283.js (268B)
+_expo/static/js/web/new-228d80bf1e35523a8e11b41bd850054d.js (3.5KB)
+_expo/static/js/web/new-37575add06b95eaf9815f943f417d245.js (264B)
+_expo/static/js/web/privacy-008bc821ee7073abb663e4c0b394c538.js (846B)
+_expo/static/js/web/public-0f7050f3a98d4440e080245878f85fe6.js (853B)
+_expo/static/js/web/signup-5178173796af56716a325ec5837d5833.js (2.2KB)
+_expo/static/js/web/welcome-c5bbec5e8063ac622f370f148f4653ce.js (1.3KB)
+
+› Files (1):
+_expo/routes.json (16KB)
+
+› API routes (3):
+/api/command (26KB) (source map (32KB))
+/api/identity (26KB) (source map (32KB))
+/api/snapshot (26KB) (source map (32KB))
+
+› Middleware:
+/middleware (6.7KB) (source map (6.5KB))
+
+Exported: dist/redesign-publication-20261031/web

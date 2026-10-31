@@ -1,0 +1,130 @@
+
+> bouldy-mobile@0.1.0 test
+> node --test tests/*.test.mjs
+
+(node:75139) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/server/http.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ cookie login never returns bearer; SameSite/HttpOnly 30-day cookie (199.313667ms)
+✔ native login receives credential only without browser Origin/cookie (10.837417ms)
+✔ cookie writes reject cross-origin, missing origin and non-JSON (8.400792ms)
+✔ +1 changes only today; Send adds no try; saved history totals seven (30.332083ms)
+✔ first try creates one aggregate project; genuine Flash has one try (20.750875ms)
+✔ stale IDs, duplicate logs, completed visits and unavailable lifetime history block writes (12.734542ms)
+✔ notes patch notes only; failed note retains supplied draft (7.934333ms)
+✔ failed attempt stays in affected sheet and never writes (3.41825ms)
+✔ expired identity returns 401 and clears cookie; resource errors remain distinct (1.594542ms)
+✔ adapter accepts no arbitrary proxy URL or unknown command (1.1045ms)
+✔ finish rejects invalid duration without a write and opens the completed visit (9.064333ms)
+✔ correction updates the aggregate without adding a try and completed correction is blocked (5.805875ms)
+✔ application boundary rejects a foreign session even if an upstream returns it; 403 does not clear login (3.874625ms)
+✔ JSON size bound is enforced without trusting Content-Length (3.226208ms)
+✔ signup preserves registration then login, trims fields and keeps browser token HTTP-only (3.805834ms)
+✔ native signup returns a credential through the same boundary as login; optional grade is omitted (1.912167ms)
+✔ signup validation and registration/login failures preserve source errors with no automatic retry (4.227541ms)
+✔ new commands retain authentication and exact-origin protection (1.057542ms)
+✔ start session derives owner and UTC date on the server and opens the created session (3.521042ms)
+✔ invalid gym and failed session creation return to Gyms without mutation/retry (5.005416ms)
+✔ Add gym trims input, returns sheet errors with replace, and succeeds with the original notice (6.699167ms)
+✔ gym reads are protected and independent of an unavailable journal; empty/missing states remain explicit (4.953791ms)
+✔ add route preserves gym grades, colour case, UTC date and deduplicated allowlisted styles (3.178459ms)
+✔ route validation and failures return to the originating form without a write or retry (4.256792ms)
+✔ session route creation rejects foreign, completed or wrong-gym context before a write (12.124625ms)
+✔ edit route preserves ID, retirement/date metadata and attempts; a foreign gym blocks updates (4.630167ms)
+✔ route form reads reject retired/mismatched routes and foreign sessions (7.151291ms)
+✔ only repeated style strings may cross the command boundary as arrays (0.861666ms)
+✔ Climbs/Profile return only validated private journal reads, with partial route/name handling (5.787708ms)
+✔ Beta remains read-only, supports retired IDs, and validates missing resources (3.210875ms)
+✔ foreign journal rows cannot cross the application boundary into Climbs or Profile (7.4575ms)
+✔ active session resumes without creating another, and failed reads block creation (5.287333ms)
+✔ catalogue defaults to deny; unverified email grants nothing (2.402541ms)
+✔ invalid and future past-visit dates never write (3.465583ms)
+(node:75140) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/features/climbs.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ collection preserves best result, visits and tries across visits without merging reset IDs (3.383584ms)
+✔ partial and duplicate journals never invent confirmed totals; best observed result is preserved (0.182458ms)
+✔ missing routes trigger a warning; identical grades at different gyms remain separate entries (0.133458ms)
+✔ empty loaded and unavailable collections retain separate uncertainty (0.285833ms)
+✔ all bundled weights have distinct native PostScript identities and match provenance (8.3875ms)
+(node:75142) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/platform/identity-session.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ startup restores validated identity and resume invalidates reads without hiding the screen (1.063291ms)
+✔ expired identity on resume clears credentials and private filters (0.379667ms)
+✔ resume network and resource failures keep mounted data; startup failure exposes retry (0.219959ms)
+✔ late identity success cannot restore an explicitly logged-out account (0.139208ms)
+✔ old account expiry cannot clear the credential of a newer login (1.237584ms)
+✔ credential deletion finishes before a rapid subsequent login save (1.062625ms)
+✔ cancelled hydration and superseded account generations cannot update identity (0.139291ms)
+✔ failed credential deletion keeps access closed and surfaces storage failure (0.405625ms)
+(node:75143) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/domain/journal-summary.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ four old plus two new tries remain separate and total six (0.633041ms)
+✔ duplicate records remain visible but cannot inflate a total (3.854ms)
+✔ failed reads do not become empty visits or proof of no send (0.166875ms)
+✔ reset route IDs stay distinct regardless of grade or colour (0.085833ms)
+✔ empty and unavailable journals are different states (0.069167ms)
+(node:75144) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/app/+middleware.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ legacy history returns a server redirect to the original journal destination (38.888ms)
+✔ all development catalogues return branded, uncached 404 documents in production (3.088583ms)
+✔ middleware does not intercept normal product or API requests (0.183459ms)
+(node:75145) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/features/page-motion.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ same path and query-only changes never create a page entrance (0.497542ms)
+✔ pushed screens retain direction while main tab switches stay quiet (4.466333ms)
+✔ tab swipes respect browser edges, 90px travel, 2:1 intent and sequence boundaries (0.418042ms)
+✔ native controls and rails exclude only their own touch sequence (5.002375ms)
+✔ modified browser presses retain native browser navigation without a loading overlay (10.55525ms)
+✔ worker installs only generic public assets and never forces draft-discarding activation (35.77225ms)
+✔ API reads/writes, private bundles and cross-origin URLs bypass service-worker handling (2.708458ms)
+✔ navigation reads the network without caching private content; network failure shows generic fallback (3.561334ms)
+(node:75148) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/platform/route-filters.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ native filter restore applies nonempty saved values once, then leaves URL-controlled state alone (0.711083ms)
+✔ Clear all does not restore empty saved values or repeatedly dispatch SET_PARAMS (1.173292ms)
+✔ clearing the last search term stays cleared across rerenders and route return (0.539167ms)
+✔ account lifecycle clearing removes native filter memory (0.0805ms)
+(node:75149) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/domain/route-grades.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ V grades sort by number, with VB first (0.974084ms)
+✔ Font grades sort by number, letter, then plus (0.105125ms)
+✔ grades without a number sort alphabetically after numbered grades (10.644792ms)
+✔ grade keys ignore case and surrounding space (0.136708ms)
+✔ every search term must match somewhere (0.187125ms)
+(node:75150) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/features/session-state.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ sheet model separates four earlier tries from two today (0.775ms)
+✔ unknown prior history never creates a project suggestion or Flash proof (0.09275ms)
+✔ duplicate current records remain ambiguous without picking a mutable record (0.094334ms)
+✔ retired completed visit retains recorded status and no live project flag (0.083458ms)
+(node:75151) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/src/features/sheet-drag.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/Ambassador/Desktop/Ameerul/Work/bouldy/bouldy-mobile/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ sheet distance retains the first move even when native translation resets to zero on activation (0.502625ms)
+✔ source dismissal is strictly greater than 80 and upward movement never drags or closes (0.081459ms)
+ℹ tests 78
+ℹ suites 0
+ℹ pass 78
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 498.250583
