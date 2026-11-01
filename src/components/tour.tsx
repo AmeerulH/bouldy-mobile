@@ -13,21 +13,19 @@ import {
 import {
   BackHandler,
   Platform,
-  StyleSheet,
   View,
   type StyleProp,
   type ViewStyle,
 } from "react-native";
 import { router, usePathname } from "expo-router";
-import Svg, { Path, Rect } from "react-native-svg";
-import { Button, Heading, IconButton, T } from "./primitives";
-import { LevelChips } from "./learn";
+import type Animated from "react-native-reanimated";
+import { TourOverlay, type Box } from "./tour-overlay";
 import { APP_TOUR, guideById, type Guide } from "../content/guides";
 import { markGuideDone } from "../domain/learn-progress";
 import { useLearnState } from "../platform/learn-state";
-import { colors as c } from "../theme/colors";
+import { useReducedMotion } from "../platform/reduced-motion";
+import { motion } from "../theme/motion";
 
-type Box = { x: number; y: number; w: number; h: number };
 type Api = {
   start: (guideId: string) => void;
   stop: () => void;
@@ -65,42 +63,27 @@ export function TourTarget({
   );
 }
 
-const PAD = 8,
-  RADIUS = 14,
-  GAP = 12,
-  MARGIN = 16;
-
-function dimPath(w: number, h: number, hole: Box | null) {
-  const outer = `M0 0H${w}V${h}H0Z`;
-  if (!hole) return outer;
-  const { x, y, w: hw, h: hh } = hole,
-    r = Math.min(RADIUS, hw / 2, hh / 2);
-  return (
-    `${outer}M${x + r} ${y}H${x + hw - r}A${r} ${r} 0 0 1 ${x + hw} ${y + r}` +
-    `V${y + hh - r}A${r} ${r} 0 0 1 ${x + hw - r} ${y + hh}H${x + r}` +
-    `A${r} ${r} 0 0 1 ${x} ${y + hh - r}V${y + r}A${r} ${r} 0 0 1 ${x + r} ${y}Z`
-  );
-}
-
 export function TourProvider({ children }: { children: ReactNode }) {
   const learn = useLearnState(),
     pathname = usePathname(),
     targets = useRef(
       new Map<string, RefObject<ComponentRef<typeof View> | null>>(),
     ),
-    overlay = useRef<ComponentRef<typeof View>>(null),
+    overlay = useRef<ComponentRef<typeof Animated.View>>(null),
     [run, setRun] = useState<{ guide: Guide; index: number } | null>(null),
     [measured, setMeasured] = useState<{ key: string; box: Box | null } | null>(
       null,
     ),
-    [size, setSize] = useState({ w: 0, h: 0 }),
-    stepKey = run ? `${run.guide.id}:${run.index}` : "",
+    [leaving, setLeaving] = useState<typeof run>(null),
+    // Keep the last run mounted briefly so the scrim and card can animate out.
+    shown = run ?? leaving,
+    exiting = !run && !!leaving,
+    stepKey = shown ? `${shown.guide.id}:${shown.index}` : "",
     // A measurement only applies to the step it was taken for.
     hole = measured?.key === stepKey ? measured.box : null,
-    step = run?.guide.steps[run.index],
+    step = shown?.guide.steps[shown.index],
     // Hold the card back until its target is found or the search gives up, so it never jumps.
-    ready = !step?.target || measured?.key === stepKey,
-    last = !!run && run.index === run.guide.steps.length - 1;
+    ready = !step?.target || measured?.key === stepKey;
 
   // Bumped when the wanted target mounts, so a slow screen is picked up the moment it renders.
   const wanted = useRef<string | undefined>(undefined),
@@ -116,21 +99,39 @@ export function TourProvider({ children }: { children: ReactNode }) {
 
   const start = useCallback((guideId: string) => {
     const guide = guideById(guideId);
-    if (guide) setRun({ guide, index: 0 });
+    if (guide) {
+      setLeaving(null);
+      setRun({ guide, index: 0 });
+    }
   }, []);
+
+  const reduced = useReducedMotion();
+  // Unmount the exiting overlay once its fade has played.
+  useEffect(() => {
+    if (!leaving) return;
+    const timer = setTimeout(
+      () => setLeaving(null),
+      reduced ? 0 : motion.tourScrimOutMs,
+    );
+    return () => clearTimeout(timer);
+  }, [leaving, reduced]);
+  const end = useCallback(() => {
+    setLeaving(run);
+    setRun(null);
+  }, [run]);
 
   const stop = useCallback(() => {
     if (run?.guide.id === APP_TOUR)
       void learn.update((st) => ({ ...st, prompted: true }));
-    setRun(null);
-  }, [run, learn]);
+    end();
+  }, [run, learn, end]);
 
   const finish = useCallback(() => {
     if (!run) return;
     void learn.update((st) => markGuideDone(st, run.guide.id));
-    setRun(null);
+    end();
     router.navigate("/learn" as never);
-  }, [run, learn]);
+  }, [run, learn, end]);
 
   const go = (delta: number) =>
     setRun((r) =>
@@ -220,149 +221,30 @@ export function TourProvider({ children }: { children: ReactNode }) {
     return () => sub.remove();
   }, [run, stop]);
 
+  const last = !!run && run.index === run.guide.steps.length - 1;
   const api = useMemo(
     () => ({ start, stop, active: run?.guide.id ?? null, register }),
     [start, stop, run?.guide.id, register],
   );
 
-  const box = hole
-      ? {
-          x: Math.max(0, hole.x - PAD),
-          y: Math.max(0, hole.y - PAD),
-          w: hole.w + PAD * 2,
-          h: hole.h + PAD * 2,
-        }
-      : null,
-    cardWidth = Math.min(size.w - MARGIN * 2, 360),
-    below = box ? box.y + box.h / 2 < size.h / 2 : false,
-    placement: ViewStyle = box
-      ? {
-          position: "absolute",
-          width: cardWidth,
-          left: Math.max(
-            MARGIN,
-            Math.min(
-              box.x + box.w / 2 - cardWidth / 2,
-              size.w - cardWidth - MARGIN,
-            ),
-          ),
-          ...(below
-            ? { top: box.y + box.h + GAP }
-            : { bottom: size.h - box.y + GAP }),
-        }
-      : { width: cardWidth, alignSelf: "center" };
-
   return (
     <Context.Provider value={api}>
       <View style={{ flex: 1 }}>
         {children}
-        {run && step ? (
-          <View
-            ref={overlay}
-            onLayout={(e) =>
-              setSize({
-                w: e.nativeEvent.layout.width,
-                h: e.nativeEvent.layout.height,
-              })
-            }
-            // Swallow touches so the screen underneath cannot be used mid-guide.
-            onStartShouldSetResponder={() => true}
-            accessibilityViewIsModal
-            style={[
-              StyleSheet.absoluteFill,
-              { zIndex: 100, elevation: 100, justifyContent: "center" },
-            ]}
-          >
-            {size.w > 0 ? (
-              <Svg
-                width={size.w}
-                height={size.h}
-                pointerEvents="none"
-                style={StyleSheet.absoluteFill}
-              >
-                <Path
-                  d={dimPath(size.w, size.h, box)}
-                  fill="rgba(13,13,13,0.72)"
-                  fillRule="evenodd"
-                />
-                {box ? (
-                  <Rect
-                    x={box.x}
-                    y={box.y}
-                    width={box.w}
-                    height={box.h}
-                    rx={RADIUS}
-                    fill="none"
-                    stroke={c.bg}
-                    strokeWidth={2}
-                  />
-                ) : null}
-              </Svg>
-            ) : null}
-            <View
-              accessibilityLiveRegion="polite"
-              style={[
-                {
-                  backgroundColor: c.bg,
-                  borderRadius: 16,
-                  padding: 20,
-                  gap: 12,
-                  opacity: ready ? 1 : 0,
-                },
-                placement,
-              ]}
-            >
-              <View
-                style={{
-                  flexDirection: "row",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <View
-                  style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    gap: 12,
-                  }}
-                >
-                  {run.index > 0 ? (
-                    <IconButton
-                      name="back"
-                      label="Previous step"
-                      onPress={() => go(-1)}
-                    />
-                  ) : null}
-                  <T size={13} weight={600} color={c["ink-muted"]}>
-                    {`${run.index + 1} of ${run.guide.steps.length}`}
-                  </T>
-                </View>
-                <IconButton name="close" label="Close guide" onPress={stop} />
-              </View>
-              <Heading size={28} style={{ lineHeight: 30 }}>
-                {step.title}
-              </Heading>
-              <T size={16} style={{ lineHeight: 24 }} color={c["ink-muted"]}>
-                {step.body}
-              </T>
-              {step.choice === "level" ? (
-                <View style={{ gap: 8 }}>
-                  <T size={13} weight={600}>
-                    How much climbing have you done?
-                  </T>
-                  <LevelChips
-                    level={learn.state.level}
-                    onChange={(level) =>
-                      void learn.update((st) => ({ ...st, level }))
-                    }
-                  />
-                </View>
-              ) : null}
-              <Button onPress={last ? finish : () => go(1)}>
-                {last ? "Done" : "Next"}
-              </Button>
-            </View>
-          </View>
+        {shown && step ? (
+          <TourOverlay
+            overlayRef={overlay}
+            guide={shown.guide}
+            index={shown.index}
+            hole={hole}
+            ready={ready}
+            exiting={exiting}
+            level={learn.state.level}
+            onLevel={(level) => void learn.update((st) => ({ ...st, level }))}
+            onBack={() => go(-1)}
+            onNext={() => (last ? finish() : go(1))}
+            onClose={stop}
+          />
         ) : null}
       </View>
     </Context.Provider>

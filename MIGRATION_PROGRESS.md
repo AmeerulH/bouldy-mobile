@@ -263,3 +263,5 @@ See README for commands and synthetic fixture login. At the 29 October continuat
 ## Exact next step / continuation
 
 Use this current progress section and `remaining-*` evidence; do not repeat starter/spec/document discovery. All original route implementations are present. Verify live processes, preserve legacy fixture data, then close the six remaining acceptance gates above: Android SDK/device execution, authorised fresh browser/PWA QA, matched visual/state/motion/control checks, approved backend-account equivalence, dependency review/remediation and finally authorised release prerequisites. Do not treat the user's local implementation instruction as M2/M6 acceptance or release/cutover permission. Fresh enhanced fixtures run on 4012 during tests; live 4010 predates enhanced fault scenarios. Keep changes local/uncommitted/unpushed, preview available and source untouched.
+
+- Guide motion (2 November 2026): animated scrim, gliding spotlight cut-out, origin-aware card entrance and progress segments in `tour-overlay.tsx`; reduced motion falls back to fades. Verified on web only.
