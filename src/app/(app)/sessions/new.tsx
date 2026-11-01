@@ -2,7 +2,11 @@ import { useState, useRef } from "react";
 import { View } from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
 import { Pressable } from "../../../components/pressable";
-import { reportFrom, reportFromDestination, useActionError } from "../../../components/error-sheet";
+import {
+  reportFrom,
+  reportFromDestination,
+  useActionError,
+} from "../../../components/error-sheet";
 import { Screen, Waiting } from "../../../components/screen";
 import {
   Heading,
@@ -16,6 +20,7 @@ import {
 import { TaskFooter } from "../../../components/task-footer";
 import { useSnapshot } from "../../../data/snapshot";
 import { useAuth } from "../../../platform/auth";
+import { TourTarget } from "../../../components/tour";
 import { colors as c } from "../../../theme/colors";
 import { s } from "../../../theme/styles";
 
@@ -96,15 +101,17 @@ export default function NewSession() {
       }
     >
       <View style={s.page}>
-        <Heading size={36}>
-          {active.length > 1
-            ? `${active.length} sessions are open`
-            : active.length
-              ? "A session is already open"
-              : past
-                ? "Record a past visit"
-                : "Where are you climbing?"}
-        </Heading>
+        <TourTarget id="new-title">
+          <Heading size={36}>
+            {active.length > 1
+              ? `${active.length} sessions are open`
+              : active.length
+                ? "A session is already open"
+                : past
+                  ? "Record a past visit"
+                  : "Where are you climbing?"}
+          </Heading>
+        </TourTarget>
         {active.length ? (
           <>
             <T size={16} color={c["ink-muted"]}>

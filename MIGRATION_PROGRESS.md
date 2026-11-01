@@ -1,12 +1,14 @@
 # Bouldy migration progress
 
-## Learn hub: tour, lessons, glossary and goals — 31 October 2026
+## Learn hub: interactive guides, lessons, glossary and goals — 1 November 2026
 
-Owner requested a guided tour, lessons, glossary and goals for new and existing users. Branch `feat/learn-hub` adds `/learn` (hub), `/learn/tour` (11 steps, tab bar hidden), `/learn/lessons` and `/learn/lessons/[id]` (9 lessons, ordered by chosen level), `/learn/glossary` (31 searchable terms) and `/learn/goals` (9 goals derived from the journal; unknown history shows "Can’t confirm yet", never a false to-do or done). Profile's disabled "Learn & glossary" row now opens `/learn`; Home shows a dismissible tour offer for users with history and opens the tour once for a loaded journal with no sessions, plus a "Learn and goals" row.
+Owner asked for a real guided tour (react-joyride style) and revisitable guides. react-joyride is DOM-only, so `src/components/tour.tsx` provides one cross-platform engine: `TourProvider` (mounted in `src/app/(app)/_layout.tsx`) dims the screen with an SVG cut-out around a `TourTarget`, navigates to each step's route, waits for the target to render and falls back to a centred card if it never does. Guides are plain data in `src/content/guides.ts`: Tour of Bouldy (9 steps), Log your first session (6) and Read your progress (3). Guides only explain and navigate; they never write records. The hub at `/learn` lists guides (replayable, with Done badges), your level, goals, lessons and glossary. A loaded journal with no sessions auto-starts the tour once; users with history get a dismissible Home offer.
 
-Only the level, tour completion/skip and lesson ticks are stored, device-locally per user id (`localStorage` on web, SecureStore on native). No backend change; progress does not sync across devices. Goal completion is never stored.
+Rules added to `DESIGN.md`: at most two buttons per action area, the secondary is the dark button, and Back is a header icon (in the guide card it sits beside the step count). Lesson footers and the Home offer card were changed to match.
 
-Observed: Node 24.11.1 lint (0 errors, 3 pre-existing test warnings), typecheck, 97 tests (new `tests/learn.test.mjs`), web export and native export pass. In fixture mode on web (localhost) the existing-user offer, Not now, hub, level selection, tour step 1 and goals and glossary pages rendered correctly. Not observed: auto-open for an empty journal, lesson detail, tour steps 2 to 11, native iOS/Android, screen reader, text scaling, reduced motion. Those acceptance rows remain OPEN. Lesson and glossary copy awaits owner review.
+Only the level, finished guides, the app-tour prompted flag and lesson ticks are stored, per user id on the device (`localStorage` on web, SecureStore on native). No backend change. Goal completion is never stored.
+
+Observed on web (localhost, fixture mode, Node 24.11.1): lint 0 errors, typecheck, 98 tests, auto-start for an empty journal, level choice, header back icon, spotlight on Home's primary action, cross-screen navigation with a slow screen on Log your first session (Sessions then Start a session), and a card hold-back so it never jumps. Not observed: other steps, native iOS/Android, screen reader, text scaling, reduced motion, small-screen card placement. Those rows remain OPEN. Copy awaits owner review.
 
 ## UI fixes publication authorised — 31 October 2026
 

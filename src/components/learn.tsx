@@ -18,7 +18,12 @@ export function LearnHeader({
 }) {
   return (
     <View style={{ gap: 12 }}>
-      <T size={12} weight={700} color={c["ink-muted"]} style={{ letterSpacing: 1.44, textTransform: "uppercase" }}>
+      <T
+        size={12}
+        weight={700}
+        color={c["ink-muted"]}
+        style={{ letterSpacing: 1.44, textTransform: "uppercase" }}
+      >
         {eyebrow}
       </T>
       <Heading size={36} style={{ letterSpacing: -1.08 }}>
@@ -33,36 +38,35 @@ export function LearnHeader({
   );
 }
 
-/** Full-width hairline row, matching the Profile and Explore lists. */
+/** Full-width hairline row, matching the Profile and Explore lists. Link or action. */
 export function LearnRow({
   href,
+  onPress,
   title,
   hint,
   trailing,
   label,
 }: {
-  href: string;
+  href?: string;
+  onPress?: () => void;
   title: string;
   hint?: string;
   trailing?: ReactNode;
   label?: string;
 }) {
-  return (
-    <A
-      href={href}
-      accessibilityLabel={label}
-      style={[
-        s.row,
-        {
-          minHeight: 72,
-          gap: 12,
-          paddingHorizontal: 20,
-          paddingVertical: 14,
-          borderBottomWidth: 1,
-          borderColor: c.hairline,
-        },
-      ]}
-    >
+  const style = [
+    s.row,
+    {
+      minHeight: 72,
+      gap: 12,
+      paddingHorizontal: 20,
+      paddingVertical: 14,
+      borderBottomWidth: 1,
+      borderColor: c.hairline,
+    },
+  ];
+  const body = (
+    <>
       <View style={{ flex: 1, gap: 2 }}>
         <T size={16} weight={700}>
           {title}
@@ -75,7 +79,24 @@ export function LearnRow({
       </View>
       {trailing}
       <Chevron />
+    </>
+  );
+  return href ? (
+    <A href={href} accessibilityLabel={label} style={style}>
+      {body}
     </A>
+  ) : (
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      onPress={onPress}
+      style={({ pressed }) => [
+        style,
+        { backgroundColor: pressed ? c.pressed : "transparent" },
+      ]}
+    >
+      {body}
+    </Pressable>
   );
 }
 

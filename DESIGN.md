@@ -131,7 +131,7 @@ Source snapshot: `55b51d8` (31 October 2026). The structured tokens below descri
 - Live session: fixed header/back/help/Finish button, search and grade chips; only the virtualized FlatList scrolls.20-record batches expand on reaching the end. This is incremental rendering of fetched data, not backend pagination.
 - Route: full-row detail target and independent sibling +1/Sent/eligible Flash controls. A finish preserves try count. Route sheet contains private note and fixed Save note/Correct count or result actions. Correction opens a nested sheet and returns to the original with its draft retained.
 - Finish: scrolling native hours/minutes selectors, one Finish and keep climbs action. No redundant Keep climbing or forced-leave sheet. Completed visits show only actually logged routes.
-- You: dark rounded hero with an initial avatar, name/email and faint Bolt B artwork; settings sit directly beneath it, without detached separator bands. Catalogue administrators see the Manage gyms row; ordinary accounts do not. The admin Gyms page lists catalogue entries and add/edit actions behind the existing server-ID allowlist. Logout remains adjacent to settings, without the removed separator below it. A Learn & guide row opens `/learn`: guided tour, lessons, glossary and journal-derived goals, using hairline rows, one dark panel hero and pill chips. The tour hides the tab bar and uses a fixed task footer; goal state uses a mark plus text, never colour alone.
+- You: dark rounded hero with an initial avatar, name/email and faint Bolt B artwork; settings sit directly beneath it, without detached separator bands. Catalogue administrators see the Manage gyms row; ordinary accounts do not. The admin Gyms page lists catalogue entries and add/edit actions behind the existing server-ID allowlist. Logout remains adjacent to settings, without the removed separator below it. A Learn & guide row opens `/learn`: guides (spotlight walkthroughs of the real screens), your level, goals, lessons and glossary, using hairline rows and one dark panel hero. Guide spotlights use a dark scrim with a cream-ringed cut-out and a cream card; goal state uses a mark plus text, never colour alone.
 
 ## Motion, loading and feedback
 
@@ -151,6 +151,8 @@ Source snapshot: `55b51d8` (31 October 2026). The structured tokens below descri
 - **Do** fill the native device width while preserving the browser phone canvas.
 - **Do** use shared controls, explicit error recovery, account-safe state and reduced motion.
 - **Do** record exact commits and platforms when accepting behaviour.
+
+- **Do** use at most two buttons per action area. The main action is red; a second is the dark button, never plain text or a soft tint. Back is a header icon, not a footer button.
 
 ### Don't:
 

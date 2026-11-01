@@ -32,8 +32,9 @@ export default function Lesson() {
       label="Lessons"
       footer={
         <TaskFooter>
+          {/* Two buttons at most: the main action is red, the other is dark. */}
           <Button
-            variant={done ? "neutral" : "primary"}
+            variant={done ? "dark" : "primary"}
             onPress={() => void update((st) => toggleLesson(st, lesson.id))}
           >
             {done ? "Done. Mark as not done" : "Mark as done"}
@@ -41,8 +42,8 @@ export default function Lesson() {
           {next ? (
             <A
               href={`/learn/lessons/${next.id}`}
-              style={[s.button, { backgroundColor: c["accent-tint"] }]}
-              color={c["accent-tint-ink"]}
+              style={[s.button, { backgroundColor: done ? c.accent : c.panel }]}
+              color={done ? c["accent-ink"] : c["panel-ink"]}
             >
               {`Next: ${next.title}`}
             </A>
@@ -60,7 +61,12 @@ export default function Lesson() {
           <View key={section.heading} style={{ gap: 10 }}>
             <Heading size={24}>{section.heading}</Heading>
             {section.body.map((text) => (
-              <T key={text} size={16} color={c["ink-muted"]} style={{ lineHeight: 24, maxWidth: 520 }}>
+              <T
+                key={text}
+                size={16}
+                color={c["ink-muted"]}
+                style={{ lineHeight: 24, maxWidth: 520 }}
+              >
                 {text}
               </T>
             ))}

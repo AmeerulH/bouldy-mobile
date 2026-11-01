@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { View } from "react-native";
-import { router } from "expo-router";
 import { Image } from "expo-image";
 import {
   Brand,
@@ -20,6 +19,8 @@ import {
   duplicateRouteIds,
   journalComplete,
 } from "../../domain/journal-summary";
+import { TourTarget, useTour } from "../../components/tour";
+import { APP_TOUR } from "../../content/guides";
 import { tourEntry } from "../../domain/learn-progress";
 import { useLearnState } from "../../platform/learn-state";
 import { colors as c } from "../../theme/colors";
@@ -27,15 +28,16 @@ import { s } from "../../theme/styles";
 export default function Home() {
   const { data: d, error } = useSnapshot(),
     learn = useLearnState(),
+    tour = useTour(),
     entry = d && learn.ready ? tourEntry(learn.state, d.journal) : "none",
     opened = useRef(false);
   // A brand-new journal opens the tour once; skipping records that it was offered.
   useEffect(() => {
     if (entry === "auto" && !opened.current) {
       opened.current = true;
-      router.push("/learn/tour");
+      tour.start(APP_TOUR);
     }
-  }, [entry]);
+  }, [entry, tour]);
   if (!d)
     return (
       <Screen footer={<SkeletonFooter />}>
@@ -67,17 +69,19 @@ export default function Home() {
     <Screen
       footer={
         <TaskFooter>
-          <A
-            href={target}
-            style={[s.button, { backgroundColor: c.accent }]}
-            color={c["accent-ink"]}
-          >
-            {active
-              ? "Resume session"
-              : empty
-                ? "Start your first session"
-                : "Start session"}
-          </A>
+          <TourTarget id="home-action">
+            <A
+              href={target}
+              style={[s.button, { backgroundColor: c.accent }]}
+              color={c["accent-ink"]}
+            >
+              {active
+                ? "Resume session"
+                : empty
+                  ? "Start your first session"
+                  : "Start session"}
+            </A>
+          </TourTarget>
         </TaskFooter>
       }
     >
@@ -114,11 +118,11 @@ export default function Home() {
                   Two minutes to see how Bouldy works, plus lessons and goals.
                 </T>
                 <View style={[s.row, { gap: 8 }]}>
-                  <Button onPress={() => router.push("/learn/tour")}>
+                  <Button onPress={() => tour.start(APP_TOUR)}>
                     Take the tour
                   </Button>
                   <Button
-                    variant="plain"
+                    variant="dark"
                     onPress={() =>
                       void learn.update((st) => ({ ...st, prompted: true }))
                     }
@@ -133,6 +137,7 @@ export default function Home() {
                 Some history is unavailable. Totals may be incomplete.
               </T>
             ) : null}
+            <TourTarget id="home-month">
             <View style={[s.panel, { overflow: "hidden" }]}>
               <Image
                 source={require("../../../assets/source/brand/bolt-b.svg")}
@@ -171,6 +176,7 @@ export default function Home() {
                 Finishes include first-try finishes.
               </T>
             </View>
+            </TourTarget>
             {active ? (
               <A
                 href={target}

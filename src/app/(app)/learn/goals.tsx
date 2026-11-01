@@ -1,13 +1,22 @@
 import { View } from "react-native";
 import { A, T } from "../../../components/primitives";
 import { Screen, Waiting } from "../../../components/screen";
+import { TourTarget } from "../../../components/tour";
 import { LearnHeader, StatusMark } from "../../../components/learn";
 import { useSnapshot } from "../../../data/snapshot";
-import { evaluateGoals, goalsDone, type Goal } from "../../../domain/learn-goals";
+import {
+  evaluateGoals,
+  goalsDone,
+  type Goal,
+} from "../../../domain/learn-goals";
 import { colors as c } from "../../../theme/colors";
 import { s } from "../../../theme/styles";
 
-const statusText = { done: "Done", todo: "To do", unknown: "Can’t confirm yet" } as const;
+const statusText = {
+  done: "Done",
+  todo: "To do",
+  unknown: "Can’t confirm yet",
+} as const;
 
 function GoalRow({ goal }: { goal: Goal }) {
   const style = [
@@ -84,11 +93,19 @@ export default function Goals() {
           title="Goals"
           summary="Checked against your real journal. More goals arrive as Bouldy grows."
         />
-        <View style={{ marginHorizontal: -20, borderTopWidth: 1, borderColor: c.hairline }}>
-          {goals.map((goal) => (
-            <GoalRow key={goal.id} goal={goal} />
-          ))}
-        </View>
+        <TourTarget id="goals-list">
+          <View
+            style={{
+              marginHorizontal: -20,
+              borderTopWidth: 1,
+              borderColor: c.hairline,
+            }}
+          >
+            {goals.map((goal) => (
+              <GoalRow key={goal.id} goal={goal} />
+            ))}
+          </View>
+        </TourTarget>
       </View>
     </Screen>
   );

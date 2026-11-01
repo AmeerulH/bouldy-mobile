@@ -1,3 +1,4 @@
+import { APP_TOUR } from "../content/guides.ts";
 import type { Journal } from "./journal-summary.ts";
 import type {
   GlossaryCategory,
@@ -8,15 +9,16 @@ import type {
 
 export type LearnState = {
   level: Level | null;
-  tourDone: boolean;
-  /** The user skipped or declined the tour; never prompt automatically again. */
+  /** Ids of guides the person has finished. */
+  guidesDone: string[];
+  /** The person skipped or declined the app tour; never prompt automatically again. */
   prompted: boolean;
   lessonsDone: string[];
 };
 
 export const emptyLearnState: LearnState = {
   level: null,
-  tourDone: false,
+  guidesDone: [],
   prompted: false,
   lessonsDone: [],
 };
@@ -29,14 +31,20 @@ export function parseLearnState(raw: string | null): LearnState {
   try {
     const v = JSON.parse(raw) as Partial<LearnState> | null;
     if (!v || typeof v !== "object") return emptyLearnState;
+    const ids = (list: unknown) =>
+      Array.isArray(list)
+        ? list.filter((id): id is string => typeof id === "string")
+        : [];
     return {
       level:
         v.level === "beginner" || v.level === "experienced" ? v.level : null,
-      tourDone: v.tourDone === true,
+      // Earlier builds stored a single tourDone flag.
+      guidesDone: [
+        ...ids(v.guidesDone),
+        ...((v as { tourDone?: unknown }).tourDone === true ? [APP_TOUR] : []),
+      ].filter((id, i, all) => all.indexOf(id) === i),
       prompted: v.prompted === true,
-      lessonsDone: Array.isArray(v.lessonsDone)
-        ? v.lessonsDone.filter((id): id is string => typeof id === "string")
-        : [],
+      lessonsDone: ids(v.lessonsDone),
     };
   } catch {
     return emptyLearnState;
@@ -51,7 +59,7 @@ export type TourEntry = "auto" | "offer" | "none";
  * none: already handled, or history is not known yet (never guess).
  */
 export function tourEntry(state: LearnState, journal: Journal): TourEntry {
-  if (state.tourDone || state.prompted || !journal.sessionsLoaded) return "none";
+  if (state.guidesDone.includes(APP_TOUR) || state.prompted || !journal.sessionsLoaded) return "none";
   return journal.records.length === 0 ? "auto" : "offer";
 }
 
@@ -89,4 +97,10 @@ export function toggleLesson(state: LearnState, id: string): LearnState {
       ? state.lessonsDone.filter((x) => x !== id)
       : [...state.lessonsDone, id],
   };
+}
+
+export function markGuideDone(state: LearnState, id: string): LearnState {
+  return state.guidesDone.includes(id)
+    ? state
+    : { ...state, guidesDone: [...state.guidesDone, id] };
 }

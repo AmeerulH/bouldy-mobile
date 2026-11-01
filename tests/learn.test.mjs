@@ -8,9 +8,11 @@ import {
   parseLearnState,
   searchGlossary,
   toggleLesson,
+  markGuideDone,
   tourEntry,
 } from "../src/domain/learn-progress.ts";
-import { glossary, lessons, tourSteps } from "../src/content/learn.ts";
+import { glossary, lessons } from "../src/content/learn.ts";
+import { guides, guideById, APP_TOUR } from "../src/content/guides.ts";
 
 const session = (id, duration = 60, gym = 1, date = "2026-10-03") => ({ id, user_id: 1, gym_id: gym, session_date: date, duration_minutes: duration, notes: null });
 const attempt = (id, route, result = "project", notes = null) => ({ id, session_id: 1, route_id: route, num_attempts: 1, result, notes });
@@ -70,7 +72,7 @@ test("tour entry: empty journal auto-opens, history offers, handled or unknown s
   assert.equal(tourEntry(emptyLearnState, journal([])), "auto");
   assert.equal(tourEntry(emptyLearnState, journal([record(session(1))])), "offer");
   assert.equal(tourEntry({ ...emptyLearnState, prompted: true }, journal([])), "none");
-  assert.equal(tourEntry({ ...emptyLearnState, tourDone: true }, journal([])), "none");
+  assert.equal(tourEntry({ ...emptyLearnState, guidesDone: ["app-tour"] }, journal([])), "none");
   assert.equal(tourEntry(emptyLearnState, journal([], false)), "none");
 });
 
@@ -78,9 +80,11 @@ test("stored state parses tolerantly and is keyed per user", () => {
   assert.deepEqual(parseLearnState(null), emptyLearnState);
   assert.deepEqual(parseLearnState("not json"), emptyLearnState);
   assert.deepEqual(parseLearnState("42"), emptyLearnState);
-  const state = parseLearnState(JSON.stringify({ level: "beginner", tourDone: true, lessonsDone: ["a", 3] }));
+  const state = parseLearnState(JSON.stringify({ level: "beginner", guidesDone: ["app-tour"], lessonsDone: ["a", 3] }));
   assert.equal(state.level, "beginner");
-  assert.equal(state.tourDone, true);
+  assert.deepEqual(state.guidesDone, ["app-tour"]);
+  assert.deepEqual(parseLearnState(JSON.stringify({ tourDone: true })).guidesDone, [APP_TOUR]);
+  assert.deepEqual(parseLearnState(JSON.stringify({ tourDone: true, guidesDone: [APP_TOUR] })).guidesDone, [APP_TOUR]);
   assert.deepEqual(state.lessonsDone, ["a"]);
   assert.equal(parseLearnState(JSON.stringify({ level: "pro" })).level, null);
   assert.notEqual(learnKey(1), learnKey(2));
@@ -109,6 +113,27 @@ test("glossary search filters by text and category, sorted A to Z", () => {
 });
 
 test("content has unique ids and no em dashes", () => {
-  for (const list of [tourSteps, lessons, glossary]) assert.equal(new Set(list.map((x) => x.id)).size, list.length);
-  assert.ok(!JSON.stringify({ tourSteps, lessons, glossary }).includes("\u2014"));
+  for (const list of [guides, lessons, glossary]) assert.equal(new Set(list.map((x) => x.id)).size, list.length);
+  assert.ok(!JSON.stringify({ guides, lessons, glossary }).includes("\u2014"));
+});
+
+test("guides are well formed and mark done once", () => {
+  assert.ok(guideById(APP_TOUR));
+  for (const guide of guides) {
+    assert.ok(guide.steps.length >= 3);
+    assert.equal(new Set(guide.steps.map((s) => s.id)).size, guide.steps.length);
+    for (const step of guide.steps) {
+      if (step.route) assert.match(step.route, /^\//);
+      assert.ok(step.title && step.body);
+    }
+    // A step with a target must say which screen it lives on, unless an earlier step did.
+    let route = null;
+    for (const step of guide.steps) {
+      route = step.route ?? route;
+      if (step.target) assert.ok(route, `${guide.id}/${step.id} has a target but no route`);
+    }
+  }
+  const once = markGuideDone(emptyLearnState, "progress");
+  assert.deepEqual(once.guidesDone, ["progress"]);
+  assert.equal(markGuideDone(once, "progress"), once);
 });
