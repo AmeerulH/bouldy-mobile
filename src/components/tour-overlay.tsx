@@ -268,7 +268,8 @@ export function TourOverlay({
               }),
         }
       : { width: cardWidth, alignSelf: "center" },
-    interactive = !!step.expect && !!box,
+    // Only the exact control is open, and only until the action is done.
+    interactive = !!step.expect && !met && !!hole,
     // The scrim fades in (200ms) and out faster (150ms). Reduced motion keeps the fade only.
     scrim: Motion = {
       animationName: exiting
@@ -309,9 +310,6 @@ export function TourOverlay({
           h: e.nativeEvent.layout.height,
         })
       }
-      // Swallow touches so the practice screen cannot be used mid-guide, except the
-      // highlighted control on a step that asks the user to try it.
-      onStartShouldSetResponder={() => !interactive}
       accessibilityViewIsModal
       style={[
         StyleSheet.absoluteFill,
@@ -328,22 +326,22 @@ export function TourOverlay({
           onPractice={onPractice}
         />
       </View>
-      {interactive && box ? (
-        <>
-          {[
-            { left: 0, top: 0, width: size.w, height: box.y },
-            { left: 0, top: box.y + box.h, width: size.w, bottom: 0 },
-            { left: 0, top: box.y, width: box.x, height: box.h },
-            { left: box.x + box.w, top: box.y, right: 0, height: box.h },
-          ].map((area, i) => (
-            <View
-              key={i}
-              onStartShouldSetResponder={() => true}
-              style={[{ position: "absolute" }, area]}
-            />
-          ))}
-        </>
-      ) : null}
+      {/* Real views, not a responder, so presses cannot reach the practice screen on any platform. */}
+      {(interactive && hole
+        ? [
+            { left: 0, top: 0, width: size.w, height: hole.y },
+            { left: 0, top: hole.y + hole.h, width: size.w, bottom: 0 },
+            { left: 0, top: hole.y, width: hole.x, height: hole.h },
+            { left: hole.x + hole.w, top: hole.y, right: 0, height: hole.h },
+          ]
+        : [{ left: 0, top: 0, right: 0, bottom: 0 }]
+      ).map((area, i) => (
+        <View
+          key={i}
+          onStartShouldSetResponder={() => true}
+          style={[{ position: "absolute" }, area]}
+        />
+      ))}
       {size.w > 0 ? (
         <Spotlight w={size.w} h={size.h} box={box} reduced={reduced} />
       ) : null}
