@@ -98,15 +98,25 @@ function Frame({
   footer,
   children,
   scroll = true,
+  bar = true,
 }: {
-  tab: (typeof tabs)[number][0];
+  tab?: (typeof tabs)[number][0];
   footer?: ReactNode;
   children: ReactNode;
   scroll?: boolean;
+  /** Root screens keep the bar. Nested practice pages are full screen, like the app. */
+  bar?: boolean;
 }) {
   const insets = useSafeAreaInsets();
   return (
-    <View style={{ flex: 1, backgroundColor: c.bg, paddingTop: insets.top }}>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: c.bg,
+        paddingTop: insets.top,
+        paddingBottom: bar ? 0 : insets.bottom,
+      }}
+    >
       <View
         style={{
           paddingHorizontal: 20,
@@ -131,42 +141,47 @@ function Frame({
         <View style={{ flex: 1 }}>{children}</View>
       )}
       {footer}
-      <TourTarget id="demo-tabs">
-        <View
-          style={{
-            flexDirection: "row",
-            borderTopWidth: 1,
-            borderColor: c.hairline,
-            paddingTop: 8,
-            paddingBottom: Math.max(8, insets.bottom),
-            backgroundColor: c.bg,
-          }}
-        >
-          {tabs.map(([label, icon]) => {
-            const active = label === tab;
-            return (
-              <View
-                key={label}
-                style={{
-                  flex: 1,
-                  alignItems: "center",
-                  gap: 4,
-                  paddingVertical: 6,
-                }}
-              >
-                <Icon name={icon} color={active ? c.accent : c["ink-faint"]} />
-                <T
-                  size={11}
-                  weight={500}
-                  color={active ? c.accent : c["ink-faint"]}
+      {bar ? (
+        <TourTarget id="demo-tabs">
+          <View
+            style={{
+              flexDirection: "row",
+              borderTopWidth: 1,
+              borderColor: c.hairline,
+              paddingTop: 8,
+              paddingBottom: Math.max(8, insets.bottom),
+              backgroundColor: c.bg,
+            }}
+          >
+            {tabs.map(([label, icon]) => {
+              const active = label === tab;
+              return (
+                <View
+                  key={label}
+                  style={{
+                    flex: 1,
+                    alignItems: "center",
+                    gap: 4,
+                    paddingVertical: 6,
+                  }}
                 >
-                  {label}
-                </T>
-              </View>
-            );
-          })}
-        </View>
-      </TourTarget>
+                  <Icon
+                    name={icon}
+                    color={active ? c.accent : c["ink-faint"]}
+                  />
+                  <T
+                    size={11}
+                    weight={500}
+                    color={active ? c.accent : c["ink-faint"]}
+                  >
+                    {label}
+                  </T>
+                </View>
+              );
+            })}
+          </View>
+        </TourTarget>
+      ) : null}
     </View>
   );
 }
@@ -353,7 +368,7 @@ function Sessions() {
 function Gym() {
   return (
     <Frame
-      tab="Sessions"
+      bar={false}
       footer={
         <Footer>
           <TourTarget id="demo-gym-start">
@@ -404,7 +419,7 @@ const Stat = ({ value, label }: { value: string; label: string }) => (
 
 function Climbs() {
   return (
-    <Frame tab="Sessions">
+    <Frame bar={false}>
       <View style={[s.page, { paddingTop: 24 }]}>
         <TourTarget id="demo-climbs-title">
           <View>
@@ -518,7 +533,7 @@ const goalRows: [string, string, "done" | "todo"][] = [
 
 function Goals() {
   return (
-    <Frame tab="Profile">
+    <Frame bar={false}>
       <View style={[s.page, { paddingTop: 24 }]}>
         <PageTitle>Goals</PageTitle>
         <TourTarget id="demo-goals">
@@ -663,7 +678,7 @@ function Practice({
       (a) => a.result === "send" || a.result === "flash",
     ).length;
   return (
-    <Frame tab="Sessions" scroll={false}>
+    <Frame bar={false} scroll={false}>
       <View style={{ flex: 1 }}>
         <View style={{ paddingHorizontal: 20, paddingTop: 12, gap: 6 }}>
           <View style={s.between}>

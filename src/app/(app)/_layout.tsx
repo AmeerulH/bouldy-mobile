@@ -18,29 +18,43 @@ import {
   PageSkeleton,
   skeletonPageForPath,
 } from "../../components/page-skeleton";
+import { showsTabBar } from "../../features/tab-bar";
 export default function Layout() {
   const startNavigation = useNavigationStart(),
     a = useAuth(),
     path = usePathname(),
     insets = useSafeAreaInsets();
-  if (a.hydrationError) return <AppError retry={a.retry} />;
   if (!a.ready)
     return (
       <View style={{ flex: 1, paddingTop: insets.top, backgroundColor: c.bg }}>
         <PageSkeleton page={skeletonPageForPath(path) ?? "home"} />
       </View>
     );
-  if (!a.user) return <Redirect href="/welcome" />;
+  // A known session stays in the app. Only a failed check with no session shows the error.
+  if (!a.user)
+    return a.hydrationError ? (
+      <AppError retry={a.retry} />
+    ) : (
+      <Redirect href="/welcome" />
+    );
   const tabs = [
     ["/", "Home", "home"],
     ["/explore", "Explore", "explore"],
     ["/sessions", "Sessions", "sessions"],
     ["/profile", "Profile", "profile"],
   ] as const;
+  const showTabs = showsTabBar(path);
   return (
     <ErrorSheetProvider>
       <TourProvider>
-        <View style={{ flex: 1, paddingTop: insets.top }}>
+        <View
+          style={{
+            flex: 1,
+            paddingTop: insets.top,
+            // Root screens let the tab bar clear the home indicator. Nested pages keep that gap without the bar.
+            paddingBottom: showTabs ? 0 : insets.bottom,
+          }}
+        >
           {__DEV__ && process.env.EXPO_PUBLIC_FIXTURE_PREVIEW === "1" ? (
             <View
               style={{
@@ -58,7 +72,7 @@ export default function Layout() {
           <PageMotion>
             <Stack screenOptions={{ headerShown: false, animation: "none" }} />
           </PageMotion>
-          {!/\/routes\/new$|\/routes\/[^/]+\/edit$/.test(path) ? (
+          {showTabs ? (
             <View
               accessibilityRole="tablist"
               style={{
@@ -79,12 +93,7 @@ export default function Layout() {
                 </Surface>
               </View>
               {tabs.map(([href, label, icon]) => {
-                const active =
-                  href === "/"
-                    ? path === "/"
-                    : path.startsWith(href) ||
-                      (href === "/sessions" && path === "/climbs") ||
-                      (href === "/profile" && path.startsWith("/learn"));
+                const active = path === href;
                 return (
                   <Link key={href} href={href} asChild>
                     <Pressable

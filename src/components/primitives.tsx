@@ -1,6 +1,7 @@
 import { Pressable } from "./pressable";
 import React, { useState, type ReactNode } from "react";
 import {
+  Platform,
   Text,
   TextInput,
   View,
@@ -163,13 +164,20 @@ export function PageTitle({
   children: ReactNode;
   size?: number;
 }) {
+  const mark = Math.round(size * 0.9);
   return (
     <View style={[s.row, { gap: 10 }]}>
       <Image
         source={require("../../assets/source/brand/bolt-b.svg")}
         accessibilityElementsHidden
         importantForAccessibility="no"
-        style={{ width: Math.round(size * 0.9), height: Math.round(size * 0.9) }}
+        style={{
+          width: mark,
+          height: mark,
+          // Barlow's caps sit at the top of this tight line on iOS. A centered mark reads low.
+          transform:
+            Platform.OS === "ios" ? [{ translateY: -size * 0.1 }] : undefined,
+        }}
       />
       <Heading
         size={size}

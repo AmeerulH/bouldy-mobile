@@ -78,7 +78,7 @@ export const guides: Guide[] = [
         scene: "home",
         target: "demo-tabs",
         title: "Four places to go",
-        body: "Home, Explore, Sessions and Profile. The red one is where you are now.",
+        body: "Home, Explore, Sessions and Profile. The highlighted item in the nav bar is where you are now.",
       },
       {
         id: "sessions-title",

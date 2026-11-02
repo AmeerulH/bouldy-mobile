@@ -3,7 +3,6 @@ import { Pressable } from './pressable';
 import { useRef, useState } from 'react';
 import { KeyboardAvoidingView, Platform,  View, useWindowDimensions } from 'react-native';
 import { Redirect, router, useLocalSearchParams } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAuth } from '../platform/auth';
 import { useSnapshot } from '../data/snapshot';
 import type { Route } from '../data/types';
@@ -26,7 +25,7 @@ export function RouteEditor({ kind }: { kind: 'gym' | 'session' | 'edit' }) {
 }
 
 export function RouteForm({ gymId, sessionId, route, back, backLabel, subtitle, initialError, demo = false }: { gymId: number; sessionId?: number; route?: Route; back: string; backLabel: string; subtitle: string; initialError?: string; demo?: boolean }) {
-  const auth = useAuth(), report = useActionError(), insets = useSafeAreaInsets(), busy = useRef(false), { width } = useWindowDimensions();
+  const auth = useAuth(), report = useActionError(), busy = useRef(false), { width } = useWindowDimensions();
   const colourWidth = (Math.min(width, 430) - 64) / 4;
   const [colour, setColour] = useState(normaliseRouteColour(route?.colour) ?? ''), [grade, setGrade] = useState(route?.grade ?? '');
   const [wall, setWall] = useState(route?.wall ?? ''), [name, setName] = useState(route?.route_name ?? ''), [setter, setSetter] = useState(route?.setter ?? '');
@@ -64,5 +63,5 @@ export function RouteForm({ gymId, sessionId, route, back, backLabel, subtitle, 
     })}</View></View> : null}</View>
     <View style={{ gap: 16, borderTopWidth: 1, borderColor: c.hairline, paddingTop: 16 }}><Field label="Route name" value={name} onChangeText={setName} placeholder="e.g. Red Horizon" editable={!pending} /><Field label="Setter" value={setter} onChangeText={setSetter} placeholder="Optional" editable={!pending} onSubmitEditing={() => void save()} /></View>
     <View style={{ borderWidth: 1, borderColor: c.hairline, borderRadius: 12, padding: 12 }}><T weight={600}>Competition route</T><T size={12} color={c['ink-muted']} style={{ marginTop: 4, lineHeight: 20 }}>Coming soon. Once the gym can mark a route as a comp route, Zone will appear in its session log.</T></View>
-  </View></Screen><View style={{ borderTopWidth: 1, borderColor: c.hairline, backgroundColor: c.bg, paddingTop: 12, paddingHorizontal: 20, paddingBottom: Math.max(12, insets.bottom) }}><Button pending={pending} pendingLabel={route ? 'Saving route' : 'Adding route'} onPress={() => void save()}>{route ? 'Save route' : 'Add route'}</Button></View></KeyboardAvoidingView>;
+  </View></Screen><View style={{ borderTopWidth: 1, borderColor: c.hairline, backgroundColor: c.bg, paddingTop: 12, paddingHorizontal: 20, paddingBottom: 12 }}><Button pending={pending} pendingLabel={route ? 'Saving route' : 'Adding route'} onPress={() => void save()}>{route ? 'Save route' : 'Add route'}</Button></View></KeyboardAvoidingView>;
 }
