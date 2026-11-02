@@ -1,9 +1,11 @@
 import type { ReactNode } from "react";
 import { View, type DimensionValue, type ViewStyle } from "react-native";
+import Animated from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { BouldyLoader } from "./bouldy-loader";
 import { LoadingPatience } from "./page-loader";
 import { T } from "./primitives";
+import { useReducedMotion } from "../platform/reduced-motion";
 import { colors as c } from "../theme/colors";
 
 // Source-derived geometry; remaining variants stay open in the parity register.
@@ -47,8 +49,9 @@ function Bone({
   style?: ViewStyle;
   dark?: boolean;
 }) {
+  const reduced = useReducedMotion();
   return (
-    <View
+    <Animated.View
       style={[
         {
           height,
@@ -57,6 +60,19 @@ function Bone({
           backgroundColor: dark ? c["panel-track"] : c.neutral,
         },
         style,
+        // A slow pulse says "loading" without drawing the eye. Every bone starts together, so
+        // the whole page breathes as one. Reduced motion keeps the bones still.
+        reduced
+          ? undefined
+          : {
+              animationName: {
+                "0%, 100%": { opacity: 1 },
+                "50%": { opacity: 0.45 },
+              },
+              animationDuration: "1500ms",
+              animationTimingFunction: "ease-in-out",
+              animationIterationCount: "infinite",
+            },
       ]}
     />
   );

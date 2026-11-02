@@ -150,7 +150,6 @@ export default function Profile() {
             ["edit", "Edit profile"],
             ["profile", "Change name"],
             ["lock", "Change password"],
-            ["book", "Learn & glossary"],
           ].map(([icon, label]) => (
             <View
               key={label}
@@ -180,6 +179,31 @@ export default function Profile() {
               </T>
             </View>
           ))}
+          <A
+            href="/learn"
+            accessibilityLabel="Learn and guide. Tour, lessons, glossary and goals"
+            style={[
+              s.row,
+              {
+                minHeight: 72,
+                padding: 20,
+                gap: 16,
+                borderBottomWidth: 1,
+                borderColor: c.hairline,
+              },
+            ]}
+          >
+            <Icon name="book" color={c.ink} size={24} />
+            <View style={{ flex: 1 }}>
+              <T size={17} weight={600}>
+                Learn & guide
+              </T>
+              <T size={12} color={c["ink-muted"]}>
+                Tour, lessons, glossary and goals
+              </T>
+            </View>
+            <Icon name="next" size={20} />
+          </A>
           <Pressable
             accessibilityRole="button"
             accessibilityState={{ busy: pending, disabled: pending }}

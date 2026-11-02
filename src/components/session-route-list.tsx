@@ -1,14 +1,28 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { View, FlatList, TextInput, ScrollView } from "react-native";
 import { Pressable } from "./pressable";
 import { T, Heading, Hold, Button, Icon, Chevron } from "./primitives";
 import { EmptyState } from "./empty-state";
+import { LogActionButton, type LogKind } from "./log-action-button";
+import { CompleteBadge } from "./complete-badge";
+import { TourTarget } from "./tour-context";
 import { useAuth } from "../platform/auth";
 import { useRouteFilters } from "../platform/route-filters";
 import { compareGrades, gradeKey, matchesQuery } from "../domain/route-grades";
 import { statusText, type RouteState } from "../features/session-state";
 import { colors as c } from "../theme/colors";
 import { s } from "../theme/styles";
+function Mark({
+  on,
+  id,
+  children,
+}: {
+  on: boolean;
+  id: string;
+  children: ReactNode;
+}) {
+  return on ? <TourTarget id={id}>{children}</TourTarget> : <>{children}</>;
+}
 export function SessionRouteList({
   states,
   sessionId,
@@ -16,13 +30,16 @@ export function SessionRouteList({
   pending,
   open,
   log,
+  practice = false,
 }: {
   states: RouteState[];
   sessionId: number;
   ended: boolean;
-  pending: number | null;
+  pending: { id: number; intent: string } | null;
   open: (id: number) => void;
   log: (state: RouteState, intent: string) => Promise<void>;
+  /** Practice screens: mark the parts a guide step can spotlight. */
+  practice?: boolean;
 }) {
   const auth = useAuth(),
     { filters, set } = useRouteFilters(`${auth.user?.id}:session-${sessionId}`),
@@ -37,6 +54,7 @@ export function SessionRouteList({
     );
   return (
     <View style={{ flex: 1, minHeight: 0 }}>
+      <Mark on={practice} id="demo-filters">
       <View
         style={{
           paddingHorizontal: 20,
@@ -119,6 +137,7 @@ export function SessionRouteList({
           Tap a route for notes & details
         </T>
       </View>
+      </Mark>
       <FlatList
         data={visible.slice(0, limit)}
         keyExtractor={(state) => String(state.route.id)}
@@ -159,6 +178,7 @@ export function SessionRouteList({
               !previous.ambiguous &&
               !previous.tried;
           return (
+            <Mark on={practice} id={`demo-row-${route.id}`}>
             <View
               style={[
                 s.row,
@@ -202,65 +222,43 @@ export function SessionRouteList({
               </View>
               {canLog ? (
                 <View style={[s.row, { gap: 4 }]}>
-                  <Button
-                    pending={pending === route.id}
-                    pendingLabel=""
-                    accessibilityLabel={`Add try on ${route.route_name}`}
-                    variant="neutral"
-                    style={{
-                      width: 44,
-                      minHeight: 44,
-                      paddingHorizontal: 0,
-                      backgroundColor: "transparent",
-                      borderWidth: 1,
-                      borderColor: c.hairline,
-                    }}
-                    onPress={() => void log(state, "attempt")}
-                  >
-                    +1
-                  </Button>
-                  {flash ? (
-                    <Button
-                      pending={pending === route.id}
-                      pendingLabel=""
-                      accessibilityLabel={`Flash ${route.route_name}`}
-                      variant="neutral"
-                      style={{
-                        width: 44,
-                        minHeight: 44,
-                        paddingHorizontal: 0,
-                        backgroundColor: "transparent",
-                        borderWidth: 1,
-                        borderColor: c.hairline,
-                      }}
-                      onPress={() => void log(state, "flash")}
+                  {(
+                    [
+                      ["try", "attempt", `Add try on ${route.route_name}`],
+                      ...(flash
+                        ? [["flash", "flash", `Flash ${route.route_name}`]]
+                        : []),
+                      // A tick means "topped it", so it only appears once there is a try to top it after.
+                      ...(attempt
+                        ? [["send", "send", `Mark ${route.route_name} sent`]]
+                        : []),
+                    ] as [LogKind, string, string][]
+                  ).map(([kind, intent, label]) => (
+                    <Mark
+                      key={kind}
+                      on={practice}
+                      id={`demo-${route.id}-${kind}`}
                     >
-                      <Icon name="flash" color={c.ink} />
-                    </Button>
-                  ) : null}
-                  <Button
-                    pending={pending === route.id}
-                    pendingLabel=""
-                    accessibilityLabel={`Mark ${route.route_name} sent`}
-                    variant="neutral"
-                    style={{
-                      width: 44,
-                      minHeight: 44,
-                      paddingHorizontal: 0,
-                      backgroundColor: "transparent",
-                      borderWidth: 1,
-                      borderColor: c.hairline,
-                    }}
-                    onPress={() => void log(state, "send")}
-                  >
-                    <Icon name="check" color={c.ink} />
-                  </Button>
+                    <LogActionButton
+                      kind={kind}
+                      label={label}
+                      playing={
+                        pending?.id === route.id && pending.intent === intent
+                      }
+                      disabled={!!pending}
+                      onPress={() => void log(state, intent)}
+                    />
+                    </Mark>
+                  ))}
                 </View>
+              ) : complete && attempt ? (
+                <CompleteBadge result={attempt.result as "flash" | "send"} />
               ) : null}
               <View pointerEvents="none">
                 <Chevron />
               </View>
             </View>
+            </Mark>
           );
         }}
       />

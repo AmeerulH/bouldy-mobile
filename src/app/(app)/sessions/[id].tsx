@@ -32,7 +32,7 @@ export default function Session() {
     auth = useAuth(),
     snackbar = useSnackbar(),
     { data: d, error } = useSnapshot("session", id),
-    [pending, setPending] = useState<number | null>(null),
+    [pending, setPending] = useState<{ id: number; intent: string } | null>(null),
     busy = useRef(false),
     report = useActionError(),
     [issue, setIssue] = useState(""),
@@ -66,7 +66,7 @@ export default function Session() {
   async function log(state: RouteState, intent: string) {
     if (busy.current) return;
     busy.current = true;
-    setPending(state.route.id);
+    setPending({ id: state.route.id, intent });
     setIssue("");
     try {
       const out = await auth.command("logAttempt", {

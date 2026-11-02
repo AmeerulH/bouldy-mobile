@@ -1,6 +1,7 @@
 import { Pressable } from "./pressable";
 import React, { useState, type ReactNode } from "react";
 import {
+  Platform,
   Text,
   TextInput,
   View,
@@ -163,13 +164,20 @@ export function PageTitle({
   children: ReactNode;
   size?: number;
 }) {
+  const mark = Math.round(size * 0.9);
   return (
     <View style={[s.row, { gap: 10 }]}>
       <Image
         source={require("../../assets/source/brand/bolt-b.svg")}
         accessibilityElementsHidden
         importantForAccessibility="no"
-        style={{ width: Math.round(size * 0.9), height: Math.round(size * 0.9) }}
+        style={{
+          width: mark,
+          height: mark,
+          // Barlow's caps sit at the top of this tight line on iOS. A centered mark reads low.
+          transform:
+            Platform.OS === "ios" ? [{ translateY: -size * 0.1 }] : undefined,
+        }}
       />
       <Heading
         size={size}
@@ -233,6 +241,7 @@ export function Button({
   children,
   onPress,
   pending = false,
+  disabled = false,
   pendingLabel = "Saving",
   variant = "primary",
   style,
@@ -242,6 +251,8 @@ export function Button({
   children: ReactNode;
   onPress: () => void;
   pending?: boolean;
+  /** Not available yet; shown muted and ignores presses. */
+  disabled?: boolean;
   pendingLabel?: string;
   variant?: "primary" | "dark" | "soft" | "neutral" | "flash" | "plain";
   style?: StyleProp<ViewStyle>;
@@ -276,8 +287,8 @@ export function Button({
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={accessibilityLabel}
-      accessibilityState={{ busy: pending, disabled: pending }}
-      disabled={pending}
+      accessibilityState={{ busy: pending, disabled: pending || disabled }}
+      disabled={pending || disabled}
       onPress={(event) => {
         event.stopPropagation();
         onPress();
@@ -286,7 +297,7 @@ export function Button({
         s.button,
         {
           backgroundColor: bg,
-          opacity: pending ? 0.72 : 1,
+          opacity: pending ? 0.72 : disabled ? 0.4 : 1,
           transform: [
             { translateY: pressed ? 1 : 0 },
             { scale: pressed ? 0.985 : 1 },

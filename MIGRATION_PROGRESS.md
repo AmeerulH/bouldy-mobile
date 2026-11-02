@@ -1,5 +1,15 @@
 # Bouldy migration progress
 
+## Learn hub: interactive guides, lessons, glossary and goals — 1 November 2026
+
+Owner asked for a real guided tour (react-joyride style) and revisitable guides. react-joyride is DOM-only, so `src/components/tour.tsx` provides one cross-platform engine: `TourProvider` (mounted in `src/app/(app)/_layout.tsx`) dims the screen with an SVG cut-out around a `TourTarget`, navigates to each step's route, waits for the target to render and falls back to a centred card if it never does. Guides are plain data in `src/content/guides.ts`: Tour of Bouldy (9 steps), Log your first session (6) and Read your progress (3). Guides only explain and navigate; they never write records. The hub at `/learn` lists guides (replayable, with Done badges), your level, goals, lessons and glossary. A loaded journal with no sessions auto-starts the tour once; users with history get a dismissible Home offer.
+
+Rules added to `DESIGN.md`: at most two buttons per action area, the secondary is the dark button, and Back is a header icon (in the guide card it sits beside the step count). Lesson footers and the Home offer card were changed to match.
+
+Only the level, finished guides, the app-tour prompted flag and lesson ticks are stored, per user id on the device (`localStorage` on web, SecureStore on native). No backend change. Goal completion is never stored.
+
+Observed on web (localhost, fixture mode, Node 24.11.1): lint 0 errors, typecheck, 98 tests, auto-start for an empty journal, level choice, header back icon, spotlight on Home's primary action, cross-screen navigation with a slow screen on Log your first session (Sessions then Start a session), and a card hold-back so it never jumps. Not observed: other steps, native iOS/Android, screen reader, text scaling, reduced motion, small-screen card placement. Those rows remain OPEN. Copy awaits owner review.
+
 ## UI fixes publication authorised — 31 October 2026
 
 Owner explicitly authorised committing/pushing the cream input/autofill fix and removal of Explore's final personal-history shortcut, with their design/progress documentation and previously recorded live-deployment evidence. Main is connected to Vercel, so this publication may automatically deploy the replacement site. Fresh publication checks and hosted status must be reported from their actual results; the Git commit and remote main identify this checkpoint. No backend-record writes, signing or old-repo edits are included. Earlier local/uncommitted statements below describe the preparation checkpoints before this authorisation.
@@ -253,3 +263,7 @@ See README for commands and synthetic fixture login. At the 29 October continuat
 ## Exact next step / continuation
 
 Use this current progress section and `remaining-*` evidence; do not repeat starter/spec/document discovery. All original route implementations are present. Verify live processes, preserve legacy fixture data, then close the six remaining acceptance gates above: Android SDK/device execution, authorised fresh browser/PWA QA, matched visual/state/motion/control checks, approved backend-account equivalence, dependency review/remediation and finally authorised release prerequisites. Do not treat the user's local implementation instruction as M2/M6 acceptance or release/cutover permission. Fresh enhanced fixtures run on 4012 during tests; live 4010 predates enhanced fault scenarios. Keep changes local/uncommitted/unpushed, preview available and source untouched.
+
+- Guide motion (2 November 2026): animated scrim, gliding spotlight cut-out, origin-aware card entrance and progress segments in `tour-overlay.tsx`; reduced motion falls back to fades. Verified on web only.
+
+- Guides on sample data (2 November 2026): guides render practice screens (`tour-demo.tsx`, `content/demo.ts`) instead of navigating real screens, so they never wait on data. The first-session guide is now 12 steps with interactive +1, flash and send practice, a mark key, notes and corrections. Verified on web in fixture mode only.

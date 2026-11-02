@@ -3,7 +3,7 @@ import { Screen } from "../../components/screen";
 import { TaskFooter } from "../../components/task-footer";
 import { useState } from "react";
 import { View } from "react-native";
-import { router, useLocalSearchParams } from "expo-router";
+import { Redirect, router, useLocalSearchParams } from "expo-router";
 import {
   Brand,
   Heading,
@@ -40,6 +40,7 @@ export default function Login() {
       setPending(false);
     }
   }
+  if (a.ready && a.user) return <Redirect href="/" />;
   return (
     <View
       style={{
