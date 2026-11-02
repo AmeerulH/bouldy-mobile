@@ -194,7 +194,7 @@ export function TourProvider({ children }: { children: ReactNode }) {
   const practice = useCallback(async (state: RouteState, intent: string) => {
     setPending({ id: state.route.id, intent });
     // A short wait stands in for saving, so the pressed button's feedback is visible.
-    await new Promise((resolve) => setTimeout(resolve, 650));
+    await new Promise((resolve) => setTimeout(resolve, 1400));
     setAttempts((a) => demoLog(a, state.route.id, intent));
     setPending(null);
   }, []);

@@ -5,6 +5,7 @@ import Animated, {
 } from "react-native-reanimated";
 import type { ViewStyle } from "react-native";
 import { Pressable } from "./pressable";
+import { ButtonSpinner } from "./button-spinner";
 import { Icon, T } from "./primitives";
 import { useReducedMotion } from "../platform/reduced-motion";
 import { colors as c } from "../theme/colors";
@@ -14,6 +15,8 @@ export type LogKind = "try" | "flash" | "send";
 type Motion = Partial<CSSAnimationProperties<ViewStyle>>;
 
 // While a log is in flight the button itself plays: a charge that says what is being recorded.
+// Two quick plays of the tap animation before the spinner takes over.
+const burstMs = 600;
 const tone = {
     try: { bg: c.pressed, ring: c["ink-muted"], ink: c.ink },
     flash: { bg: "#ffe45c", ring: "#f2b705", ink: "#3a2a00" },
@@ -30,9 +33,9 @@ const icon: Record<LogKind, Motion> = {
       "50%": { transform: [{ scale: 1.15 }, { rotate: "10deg" }] },
       "100%": { transform: [{ scale: 1 }, { rotate: "0deg" }] },
     },
-    animationDuration: "420ms",
+    animationDuration: "300ms",
     animationTimingFunction: curve,
-    animationIterationCount: "infinite",
+    animationIterationCount: 2,
   },
   // Tick: pops in from small.
   send: {
@@ -41,9 +44,9 @@ const icon: Record<LogKind, Motion> = {
       "60%": { transform: [{ scale: 1.2 }] },
       "100%": { transform: [{ scale: 1 }] },
     },
-    animationDuration: "380ms",
+    animationDuration: "300ms",
     animationTimingFunction: curve,
-    animationIterationCount: "infinite",
+    animationIterationCount: 2,
   },
   try: {
     animationName: {
@@ -51,9 +54,9 @@ const icon: Record<LogKind, Motion> = {
       "40%": { transform: [{ scale: 1.3 }] },
       "100%": { transform: [{ scale: 1 }] },
     },
-    animationDuration: "380ms",
+    animationDuration: "300ms",
     animationTimingFunction: curve,
-    animationIterationCount: "infinite",
+    animationIterationCount: 2,
   },
 };
 
@@ -135,14 +138,47 @@ export function LogActionButton({
               },
               animationDuration: "600ms",
               animationTimingFunction: curve,
-              animationIterationCount: "infinite",
             },
           ]}
         />
       ) : null}
-      <Animated.View style={playing && !reduced ? icon[kind] : undefined}>
-        {glyph}
+      {/* Tap feedback plays twice, then hands over to the spinner for as long as saving takes. */}
+      <Animated.View
+        style={
+          playing
+            ? reduced
+              ? { opacity: 0 }
+              : {
+                  animationName: { to: { opacity: 0 } },
+                  animationDuration: "120ms",
+                  animationDelay: `${burstMs}ms`,
+                  animationFillMode: "forwards",
+                }
+            : undefined
+        }
+      >
+        <Animated.View style={playing && !reduced ? icon[kind] : undefined}>
+          {glyph}
+        </Animated.View>
       </Animated.View>
+      {playing ? (
+        <Animated.View
+          pointerEvents="none"
+          style={[
+            { position: "absolute" },
+            reduced
+              ? undefined
+              : {
+                  animationName: { from: { opacity: 0 } },
+                  animationDuration: "120ms",
+                  animationDelay: `${burstMs}ms`,
+                  animationFillMode: "backwards",
+                },
+          ]}
+        >
+          <ButtonSpinner color={t.ink} />
+        </Animated.View>
+      ) : null}
     </Pressable>
   );
 }
