@@ -228,7 +228,10 @@ export function SessionRouteList({
                       ...(flash
                         ? [["flash", "flash", `Flash ${route.route_name}`]]
                         : []),
-                      ["send", "send", `Mark ${route.route_name} sent`],
+                      // A tick means "topped it", so it only appears once there is a try to top it after.
+                      ...(attempt
+                        ? [["send", "send", `Mark ${route.route_name} sent`]]
+                        : []),
                     ] as [LogKind, string, string][]
                   ).map(([kind, intent, label]) => (
                     <Mark
