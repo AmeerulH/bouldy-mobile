@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { View } from "react-native";
+import { useReducedMotion } from "react-native-reanimated";
 import { T } from "./primitives";
 import { colors as c } from "../theme/colors";
 
@@ -22,15 +23,18 @@ function Wheel({
   value: number;
   onChange: (value: number) => void;
 }) {
-  const list = useRef<HTMLDivElement>(null),
+  const calm = useReducedMotion(),
+    list = useRef<HTMLDivElement>(null),
     settle = useRef<ReturnType<typeof setTimeout>>(undefined);
   // Follow the value when it changes from outside (first open, or the other wheel).
   useEffect(() => {
     const el = list.current;
     if (el && Math.round(el.scrollTop / ROW) !== value)
-      el.scrollTo({ top: value * ROW });
-  }, [value]);
+      el.scrollTo({ top: value * ROW, behavior: calm ? "auto" : "smooth" });
+  }, [value, calm]);
   useEffect(() => () => clearTimeout(settle.current), []);
+  // The row nearest the centre while scrolling, so rows can ease in and out of focus.
+  const [live, setLive] = useState(value);
   const select = (next: number) =>
     onChange(Math.max(0, Math.min(count - 1, next)));
   return (
@@ -66,6 +70,7 @@ function Wheel({
           aria-valuetext={two(value)}
           onScroll={(event) => {
             const top = event.currentTarget.scrollTop;
+            setLive(Math.max(0, Math.min(count - 1, Math.round(top / ROW))));
             clearTimeout(settle.current);
             // Wait for the snap to land so the value does not flicker while spinning.
             settle.current = setTimeout(() => {
@@ -94,11 +99,10 @@ function Wheel({
               "linear-gradient(transparent, #000 28%, #000 72%, transparent)",
             maskImage:
               "linear-gradient(transparent, #000 28%, #000 72%, transparent)",
-            paddingTop: PAD,
-            paddingBottom: PAD,
-            boxSizing: "content-box",
+            boxSizing: "border-box",
           }}
         >
+          <div style={{ height: PAD, flexShrink: 0 }} />
           {Array.from({ length: count }, (_, n) => (
             <div
               key={n}
@@ -115,14 +119,21 @@ function Wheel({
                 fontSize: 22,
                 color: c.ink,
                 fontVariantNumeric: "tabular-nums",
+                // Rows ease toward the centre: larger and darker as they arrive.
+                opacity: Math.max(0.35, 1 - Math.abs(n - live) * 0.3),
+                transform: `scale(${Math.max(0.82, 1 - Math.abs(n - live) * 0.08)})`,
+                transition: calm
+                  ? "none"
+                  : "opacity 140ms cubic-bezier(0.23, 1, 0.32, 1), transform 140ms cubic-bezier(0.23, 1, 0.32, 1)",
               }}
             >
               {two(n)}
             </div>
           ))}
+          <div style={{ height: PAD, flexShrink: 0 }} />
         </div>
       </div>
-      <T style={{ textAlign: "center" }} color={c["ink-muted"]}>
+      <T style={{ textAlign: "center", marginTop: 4 }} color={c["ink-muted"]}>
         {label.toLowerCase()}
       </T>
     </View>
@@ -155,7 +166,7 @@ export function DurationPicker({
           value={hours}
           onChange={(h) => onChange(h * 60 + minutes)}
         />
-        <T size={24} style={{ marginBottom: 24 }}>
+        <T size={24} style={{ marginBottom: 28 }}>
           :
         </T>
         <Wheel
