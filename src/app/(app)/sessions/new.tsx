@@ -20,7 +20,6 @@ import {
 import { TaskFooter } from "../../../components/task-footer";
 import { useSnapshot } from "../../../data/snapshot";
 import { useAuth } from "../../../platform/auth";
-import { TourTarget } from "../../../components/tour";
 import { colors as c } from "../../../theme/colors";
 import { s } from "../../../theme/styles";
 
@@ -101,17 +100,15 @@ export default function NewSession() {
       }
     >
       <View style={s.page}>
-        <TourTarget id="new-title">
-          <Heading size={36}>
-            {active.length > 1
-              ? `${active.length} sessions are open`
-              : active.length
-                ? "A session is already open"
-                : past
-                  ? "Record a past visit"
-                  : "Where are you climbing?"}
-          </Heading>
-        </TourTarget>
+        <Heading size={36}>
+          {active.length > 1
+            ? `${active.length} sessions are open`
+            : active.length
+              ? "A session is already open"
+              : past
+                ? "Record a past visit"
+                : "Where are you climbing?"}
+        </Heading>
         {active.length ? (
           <>
             <T size={16} color={c["ink-muted"]}>

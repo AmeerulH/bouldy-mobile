@@ -13,6 +13,9 @@ import {
 } from "../src/domain/learn-progress.ts";
 import { glossary, lessons } from "../src/content/learn.ts";
 import { guides, guideById, APP_TOUR } from "../src/content/guides.ts";
+import { demoLog, demoMet } from "../src/content/demo.ts";
+
+const scenes = ["home", "sessions", "gym", "practice", "climbs", "explore", "profile", "goals"];
 
 const session = (id, duration = 60, gym = 1, date = "2026-10-03") => ({ id, user_id: 1, gym_id: gym, session_date: date, duration_minutes: duration, notes: null });
 const attempt = (id, route, result = "project", notes = null) => ({ id, session_id: 1, route_id: route, num_attempts: 1, result, notes });
@@ -123,17 +126,37 @@ test("guides are well formed and mark done once", () => {
     assert.ok(guide.steps.length >= 3);
     assert.equal(new Set(guide.steps.map((s) => s.id)).size, guide.steps.length);
     for (const step of guide.steps) {
-      if (step.route) assert.match(step.route, /^\//);
       assert.ok(step.title && step.body);
-    }
-    // A step with a target must say which screen it lives on, unless an earlier step did.
-    let route = null;
-    for (const step of guide.steps) {
-      route = step.route ?? route;
-      if (step.target) assert.ok(route, `${guide.id}/${step.id} has a target but no route`);
+      assert.ok(scenes.includes(step.scene), `${guide.id}/${step.id} has an unknown scene`);
+      // Targets live on the practice screens, so they are all demo targets.
+      if (step.target) assert.match(step.target, /^demo-/);
+      // A practice action must point at the button it asks for.
+      if (step.expect) {
+        assert.equal(step.scene, "practice");
+        assert.equal(step.target, `demo-${step.expect.route}-${step.expect.kind}`);
+        assert.ok(step.done);
+      }
     }
   }
   const once = markGuideDone(emptyLearnState, "progress");
   assert.deepEqual(once.guidesDone, ["progress"]);
   assert.equal(markGuideDone(once, "progress"), once);
+});
+
+test("practice logging follows the real rules and unlocks each step", () => {
+  const steps = guideById("first-session").steps.filter((s) => s.expect);
+  let log = {};
+  assert.ok(steps.every((s) => !demoMet(s, log)));
+  log = demoLog(log, 1, "attempt");
+  assert.equal(log[1].num_attempts, 1);
+  assert.ok(demoMet(steps[0], log) && !demoMet(steps[2], log));
+  log = demoLog(log, 2, "flash");
+  assert.equal(log[2].result, "flash");
+  assert.ok(demoMet(steps[1], log));
+  // A send keeps the tries already counted.
+  log = demoLog(log, 1, "send");
+  assert.equal(log[1].result, "send");
+  assert.equal(log[1].num_attempts, 1);
+  assert.ok(steps.every((s) => demoMet(s, log)));
+  assert.ok(demoMet(undefined, {}));
 });

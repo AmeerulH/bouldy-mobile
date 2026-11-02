@@ -1,7 +1,6 @@
 import { View } from "react-native";
 import { A, T } from "../../../components/primitives";
 import { Screen, Waiting } from "../../../components/screen";
-import { TourTarget } from "../../../components/tour";
 import { LearnHeader, StatusMark } from "../../../components/learn";
 import { useSnapshot } from "../../../data/snapshot";
 import {
@@ -93,19 +92,17 @@ export default function Goals() {
           title="Goals"
           summary="Checked against your real journal. More goals arrive as Bouldy grows."
         />
-        <TourTarget id="goals-list">
-          <View
-            style={{
-              marginHorizontal: -20,
-              borderTopWidth: 1,
-              borderColor: c.hairline,
-            }}
-          >
-            {goals.map((goal) => (
-              <GoalRow key={goal.id} goal={goal} />
-            ))}
-          </View>
-        </TourTarget>
+        <View
+          style={{
+            marginHorizontal: -20,
+            borderTopWidth: 1,
+            borderColor: c.hairline,
+          }}
+        >
+          {goals.map((goal) => (
+            <GoalRow key={goal.id} goal={goal} />
+          ))}
+        </View>
       </View>
     </Screen>
   );

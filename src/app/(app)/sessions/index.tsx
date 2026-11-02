@@ -20,7 +20,6 @@ import {
   duplicateRouteIds,
   type JournalRecord,
 } from "../../../domain/journal-summary";
-import { TourTarget } from "../../../components/tour";
 import { colors as c } from "../../../theme/colors";
 import { s } from "../../../theme/styles";
 
@@ -56,38 +55,34 @@ export default function Sessions() {
     <Screen
       footer={
         <TaskFooter>
-          <TourTarget id="sessions-actions">
-            <View style={[s.row, { gap: 12 }]}>
-              <A
-                href="/sessions/new?past=1"
-                style={[s.button, { flex: 1, backgroundColor: c.panel }]}
-                color={c["panel-ink"]}
-              >
-                Record a past visit
-              </A>
-              <A
-                href="/sessions/new"
-                accessibilityLabel="Start session"
-                style={{
-                  width: 48,
-                  height: 48,
-                  borderRadius: 24,
-                  backgroundColor: c.accent,
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Icon name="plus" color={c["accent-ink"]} size={22} />
-              </A>
-            </View>
-          </TourTarget>
+          <View style={[s.row, { gap: 12 }]}>
+            <A
+              href="/sessions/new?past=1"
+              style={[s.button, { flex: 1, backgroundColor: c.panel }]}
+              color={c["panel-ink"]}
+            >
+              Record a past visit
+            </A>
+            <A
+              href="/sessions/new"
+              accessibilityLabel="Start session"
+              style={{
+                width: 48,
+                height: 48,
+                borderRadius: 24,
+                backgroundColor: c.accent,
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Icon name="plus" color={c["accent-ink"]} size={22} />
+            </A>
+          </View>
         </TaskFooter>
       }
     >
       <View style={[s.page, { flexGrow: 1 }]}>
-        <TourTarget id="sessions-title">
-          <PageTitle>Sessions</PageTitle>
-        </TourTarget>
+        <PageTitle>Sessions</PageTitle>
         {active.length ? (
           <View style={{ gap: 8 }}>
             {active.map((r) => {

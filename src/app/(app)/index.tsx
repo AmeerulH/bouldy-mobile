@@ -19,7 +19,7 @@ import {
   duplicateRouteIds,
   journalComplete,
 } from "../../domain/journal-summary";
-import { TourTarget, useTour } from "../../components/tour";
+import { useTour } from "../../components/tour";
 import { APP_TOUR } from "../../content/guides";
 import { tourEntry } from "../../domain/learn-progress";
 import { useLearnState } from "../../platform/learn-state";
@@ -69,19 +69,17 @@ export default function Home() {
     <Screen
       footer={
         <TaskFooter>
-          <TourTarget id="home-action">
-            <A
-              href={target}
-              style={[s.button, { backgroundColor: c.accent }]}
-              color={c["accent-ink"]}
-            >
-              {active
-                ? "Resume session"
-                : empty
-                  ? "Start your first session"
-                  : "Start session"}
-            </A>
-          </TourTarget>
+          <A
+            href={target}
+            style={[s.button, { backgroundColor: c.accent }]}
+            color={c["accent-ink"]}
+          >
+            {active
+              ? "Resume session"
+              : empty
+                ? "Start your first session"
+                : "Start session"}
+          </A>
         </TaskFooter>
       }
     >
@@ -137,7 +135,6 @@ export default function Home() {
                 Some history is unavailable. Totals may be incomplete.
               </T>
             ) : null}
-            <TourTarget id="home-month">
             <View style={[s.panel, { overflow: "hidden" }]}>
               <Image
                 source={require("../../../assets/source/brand/bolt-b.svg")}
@@ -176,7 +173,6 @@ export default function Home() {
                 Finishes include first-try finishes.
               </T>
             </View>
-            </TourTarget>
             {active ? (
               <A
                 href={target}

@@ -13,7 +13,7 @@ import { useAuth } from "../../platform/auth";
 import { T, Icon } from "../../components/primitives";
 import { colors as c } from "../../theme/colors";
 import { ErrorSheetProvider } from "../../components/error-sheet";
-import { TourProvider, TourTarget } from "../../components/tour";
+import { TourProvider } from "../../components/tour";
 import {
   PageSkeleton,
   skeletonPageForPath,
@@ -59,79 +59,77 @@ export default function Layout() {
             <Stack screenOptions={{ headerShown: false, animation: "none" }} />
           </PageMotion>
           {!/\/routes\/new$|\/routes\/[^/]+\/edit$/.test(path) ? (
-            <TourTarget id="tabs">
+            <View
+              accessibilityRole="tablist"
+              style={{
+                flexDirection: "row",
+                borderTopWidth: 1,
+                borderColor: c.hairline,
+                paddingTop: 8,
+                paddingBottom: Math.max(8, insets.bottom),
+                backgroundColor: c.bg,
+              }}
+            >
               <View
-                accessibilityRole="tablist"
-                style={{
-                  flexDirection: "row",
-                  borderTopWidth: 1,
-                  borderColor: c.hairline,
-                  paddingTop: 8,
-                  paddingBottom: Math.max(8, insets.bottom),
-                  backgroundColor: c.bg,
-                }}
+                pointerEvents="none"
+                style={{ position: "absolute", inset: 0 }}
               >
-                <View
-                  pointerEvents="none"
-                  style={{ position: "absolute", inset: 0 }}
-                >
-                  <Surface rock>
-                    <View />
-                  </Surface>
-                </View>
-                {tabs.map(([href, label, icon]) => {
-                  const active =
-                    href === "/"
-                      ? path === "/"
-                      : path.startsWith(href) ||
-                        (href === "/sessions" && path === "/climbs") ||
-                        (href === "/profile" && path.startsWith("/learn"));
-                  return (
-                    <Link key={href} href={href} asChild>
-                      <Pressable
-                        onPress={(event) => {
-                          if (navigationPressAllowed(event))
-                            startNavigation(href);
-                        }}
-                        accessibilityRole="tab"
-                        accessibilityState={{ selected: active }}
-                        style={{
-                          flex: 1,
-                          alignItems: "center",
-                          gap: 4,
-                          paddingVertical: 6,
-                        }}
-                      >
-                        <Icon
-                          name={icon}
-                          color={active ? c.accent : c["ink-faint"]}
-                        />
-                        <T
-                          size={11}
-                          weight={500}
-                          color={active ? c.accent : c["ink-faint"]}
-                          style={{ lineHeight: 16.5 }}
-                        >
-                          {label}
-                        </T>
-                        {active ? (
-                          <View
-                            style={{
-                              position: "absolute",
-                              bottom: 0,
-                              width: 18,
-                              height: 2,
-                              borderRadius: 2,
-                              backgroundColor: c.accent,
-                            }}
-                          />
-                        ) : null}
-                      </Pressable>
-                    </Link>
-                  );
-                })}
+                <Surface rock>
+                  <View />
+                </Surface>
               </View>
-            </TourTarget>
+              {tabs.map(([href, label, icon]) => {
+                const active =
+                  href === "/"
+                    ? path === "/"
+                    : path.startsWith(href) ||
+                      (href === "/sessions" && path === "/climbs") ||
+                      (href === "/profile" && path.startsWith("/learn"));
+                return (
+                  <Link key={href} href={href} asChild>
+                    <Pressable
+                      onPress={(event) => {
+                        if (navigationPressAllowed(event))
+                          startNavigation(href);
+                      }}
+                      accessibilityRole="tab"
+                      accessibilityState={{ selected: active }}
+                      style={{
+                        flex: 1,
+                        alignItems: "center",
+                        gap: 4,
+                        paddingVertical: 6,
+                      }}
+                    >
+                      <Icon
+                        name={icon}
+                        color={active ? c.accent : c["ink-faint"]}
+                      />
+                      <T
+                        size={11}
+                        weight={500}
+                        color={active ? c.accent : c["ink-faint"]}
+                        style={{ lineHeight: 16.5 }}
+                      >
+                        {label}
+                      </T>
+                      {active ? (
+                        <View
+                          style={{
+                            position: "absolute",
+                            bottom: 0,
+                            width: 18,
+                            height: 2,
+                            borderRadius: 2,
+                            backgroundColor: c.accent,
+                          }}
+                        />
+                      ) : null}
+                    </Pressable>
+                  </Link>
+                );
+              })}
+            </View>
           ) : null}
         </View>
       </TourProvider>

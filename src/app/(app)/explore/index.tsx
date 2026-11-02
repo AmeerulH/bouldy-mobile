@@ -1,7 +1,6 @@
 import { View } from "react-native";
 import { A, Heading, Icon, PageTitle, T } from "../../../components/primitives";
 import { Screen } from "../../../components/screen";
-import { TourTarget } from "../../../components/tour";
 import { colors as c } from "../../../theme/colors";
 import { s } from "../../../theme/styles";
 const groups = [
@@ -46,15 +45,13 @@ export default function Explore() {
     <Screen>
       <View style={[s.page, { gap: 28, paddingTop: 24 }]}>
         <PageTitle>Explore</PageTitle>
-        <TourTarget id="explore-status">
-          <View accessibilityLabel="Status" style={s.panel}>
-            <Heading color={c["panel-ink"]}>Climb with others.</Heading>
-            <T color={c["panel-ink"]} style={{ marginTop: 8, lineHeight: 24 }}>
-              The community side of Bouldy is being built. Your journal stays
-              private until sharing exists and you choose it.
-            </T>
-          </View>
-        </TourTarget>
+        <View accessibilityLabel="Status" style={s.panel}>
+          <Heading color={c["panel-ink"]}>Climb with others.</Heading>
+          <T color={c["panel-ink"]} style={{ marginTop: 8, lineHeight: 24 }}>
+            The community side of Bouldy is being built. Your journal stays
+            private until sharing exists and you choose it.
+          </T>
+        </View>
         {groups.map((group) => (
           <View key={group.heading}>
             <Heading>{group.heading}</Heading>

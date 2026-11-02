@@ -233,6 +233,7 @@ export function Button({
   children,
   onPress,
   pending = false,
+  disabled = false,
   pendingLabel = "Saving",
   variant = "primary",
   style,
@@ -242,6 +243,8 @@ export function Button({
   children: ReactNode;
   onPress: () => void;
   pending?: boolean;
+  /** Not available yet; shown muted and ignores presses. */
+  disabled?: boolean;
   pendingLabel?: string;
   variant?: "primary" | "dark" | "soft" | "neutral" | "flash" | "plain";
   style?: StyleProp<ViewStyle>;
@@ -276,8 +279,8 @@ export function Button({
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={accessibilityLabel}
-      accessibilityState={{ busy: pending, disabled: pending }}
-      disabled={pending}
+      accessibilityState={{ busy: pending, disabled: pending || disabled }}
+      disabled={pending || disabled}
       onPress={(event) => {
         event.stopPropagation();
         onPress();
@@ -286,7 +289,7 @@ export function Button({
         s.button,
         {
           backgroundColor: bg,
-          opacity: pending ? 0.72 : 1,
+          opacity: pending ? 0.72 : disabled ? 0.4 : 1,
           transform: [
             { translateY: pressed ? 1 : 0 },
             { scale: pressed ? 0.985 : 1 },

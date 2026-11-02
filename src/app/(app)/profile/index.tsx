@@ -10,7 +10,6 @@ import { Heading, Icon, T, A } from "../../../components/primitives";
 import { Screen, Waiting } from "../../../components/screen";
 import { useSnapshot } from "../../../data/snapshot";
 import { useAuth } from "../../../platform/auth";
-import { TourTarget } from "../../../components/tour";
 import { colors as c } from "../../../theme/colors";
 import { s } from "../../../theme/styles";
 export default function Profile() {
@@ -180,33 +179,31 @@ export default function Profile() {
               </T>
             </View>
           ))}
-          <TourTarget id="profile-learn">
-            <A
-              href="/learn"
-              accessibilityLabel="Learn and guide. Tour, lessons, glossary and goals"
-              style={[
-                s.row,
-                {
-                  minHeight: 72,
-                  padding: 20,
-                  gap: 16,
-                  borderBottomWidth: 1,
-                  borderColor: c.hairline,
-                },
-              ]}
-            >
-              <Icon name="book" color={c.ink} size={24} />
-              <View style={{ flex: 1 }}>
-                <T size={17} weight={600}>
-                  Learn & guide
-                </T>
-                <T size={12} color={c["ink-muted"]}>
-                  Tour, lessons, glossary and goals
-                </T>
-              </View>
-              <Icon name="next" size={20} />
-            </A>
-          </TourTarget>
+          <A
+            href="/learn"
+            accessibilityLabel="Learn and guide. Tour, lessons, glossary and goals"
+            style={[
+              s.row,
+              {
+                minHeight: 72,
+                padding: 20,
+                gap: 16,
+                borderBottomWidth: 1,
+                borderColor: c.hairline,
+              },
+            ]}
+          >
+            <Icon name="book" color={c.ink} size={24} />
+            <View style={{ flex: 1 }}>
+              <T size={17} weight={600}>
+                Learn & guide
+              </T>
+              <T size={12} color={c["ink-muted"]}>
+                Tour, lessons, glossary and goals
+              </T>
+            </View>
+            <Icon name="next" size={20} />
+          </A>
           <Pressable
             accessibilityRole="button"
             accessibilityState={{ busy: pending, disabled: pending }}

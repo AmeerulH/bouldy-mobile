@@ -1,7 +1,5 @@
 import {
-  createContext,
   useCallback,
-  useContext,
   useEffect,
   useMemo,
   useRef,
@@ -10,68 +8,34 @@ import {
   type ReactNode,
   type RefObject,
 } from "react";
-import {
-  BackHandler,
-  Platform,
-  View,
-  type StyleProp,
-  type ViewStyle,
-} from "react-native";
-import { router, usePathname } from "expo-router";
+import { BackHandler, Platform, View } from "react-native";
+import { router } from "expo-router";
 import type Animated from "react-native-reanimated";
+import { TourContext, type TourApi } from "./tour-context";
 import { TourOverlay, type Box } from "./tour-overlay";
 import { APP_TOUR, guideById, type Guide } from "../content/guides";
+import { demoLog, demoMet, type DemoAttempts } from "../content/demo";
+import type { RouteState } from "../features/session-state";
 import { markGuideDone } from "../domain/learn-progress";
 import { useLearnState } from "../platform/learn-state";
 import { useReducedMotion } from "../platform/reduced-motion";
 import { motion } from "../theme/motion";
 
-type Api = {
-  start: (guideId: string) => void;
-  stop: () => void;
-  active: string | null;
-  register: (
-    id: string,
-    ref: RefObject<ComponentRef<typeof View> | null>,
-  ) => () => void;
-};
-const Context = createContext<Api>({
-  start: () => {},
-  stop: () => {},
-  active: null,
-  register: () => () => {},
-});
-export const useTour = () => useContext(Context);
-
-/** Marks an element a guide step can spotlight. Adds one wrapper View and no styling. */
-export function TourTarget({
-  id,
-  children,
-  style,
-}: {
-  id: string;
-  children: ReactNode;
-  style?: StyleProp<ViewStyle>;
-}) {
-  const { register } = useContext(Context),
-    ref = useRef<ComponentRef<typeof View>>(null);
-  useEffect(() => register(id, ref), [id, register]);
-  return (
-    <View ref={ref} collapsable={false} style={style}>
-      {children}
-    </View>
-  );
-}
+export { TourTarget, useTour } from "./tour-context";
 
 export function TourProvider({ children }: { children: ReactNode }) {
   const learn = useLearnState(),
-    pathname = usePathname(),
     targets = useRef(
       new Map<string, RefObject<ComponentRef<typeof View> | null>>(),
     ),
     overlay = useRef<ComponentRef<typeof Animated.View>>(null),
     [run, setRun] = useState<{ guide: Guide; index: number } | null>(null),
     [measured, setMeasured] = useState<{ key: string; box: Box | null } | null>(
+      null,
+    ),
+    // Practice taps on the sample screens. Never saved, reset whenever a guide starts.
+    [attempts, setAttempts] = useState<DemoAttempts>({}),
+    [pending, setPending] = useState<{ id: number; intent: string } | null>(
       null,
     ),
     [leaving, setLeaving] = useState<typeof run>(null),
@@ -83,13 +47,15 @@ export function TourProvider({ children }: { children: ReactNode }) {
     hole = measured?.key === stepKey ? measured.box : null,
     step = shown?.guide.steps[shown.index],
     // Hold the card back until its target is found or the search gives up, so it never jumps.
-    ready = !step?.target || measured?.key === stepKey;
+    ready = !step?.target || measured?.key === stepKey,
+    // Re-measure when a practice action lands: the row's buttons rearrange around the target.
+    met = demoMet(step, attempts);
 
   // Bumped when the wanted target mounts, so a slow screen is picked up the moment it renders.
   const wanted = useRef<string | undefined>(undefined),
     [arrivals, setArrivals] = useState(0);
 
-  const register = useCallback<Api["register"]>((id, ref) => {
+  const register = useCallback<TourApi["register"]>((id, ref) => {
     targets.current.set(id, ref);
     if (wanted.current === id) setArrivals((n) => n + 1);
     return () => {
@@ -101,6 +67,8 @@ export function TourProvider({ children }: { children: ReactNode }) {
     const guide = guideById(guideId);
     if (guide) {
       setLeaving(null);
+      setAttempts({});
+      setPending(null);
       setRun({ guide, index: 0 });
     }
   }, []);
@@ -146,7 +114,7 @@ export function TourProvider({ children }: { children: ReactNode }) {
         : r,
     );
 
-  // Show the step's screen, then spotlight its target once it has laid out.
+  // Spotlight the step's target once the practice screen has laid out.
   // A missing or off-screen target falls back to a centred card, never a dead end.
   const guideId = run?.guide.id,
     index = run?.index;
@@ -154,9 +122,11 @@ export function TourProvider({ children }: { children: ReactNode }) {
     if (!guideId || index === undefined) return;
     const current = guideById(guideId)?.steps[index];
     if (!current) return;
-    if (current.route && current.route !== pathname)
-      router.navigate(current.route as never);
-    const id = current.target;
+    // Once a practice action lands, its button may be gone, so show the whole route row.
+    const id =
+      current.expect && met
+        ? `demo-row-${current.expect.route}`
+        : current.target;
     wanted.current = id;
     if (!id) return;
     let cancelled = false,
@@ -203,7 +173,7 @@ export function TourProvider({ children }: { children: ReactNode }) {
       cancelled = true;
       clearTimeout(timer);
     };
-  }, [guideId, index, pathname, arrivals]);
+  }, [guideId, index, arrivals, met]);
 
   useEffect(() => {
     if (!run) return;
@@ -221,6 +191,13 @@ export function TourProvider({ children }: { children: ReactNode }) {
     return () => sub.remove();
   }, [run, stop]);
 
+  const practice = useCallback(async (state: RouteState, intent: string) => {
+    setPending({ id: state.route.id, intent });
+    // A short wait stands in for saving, so the pressed button's feedback is visible.
+    await new Promise((resolve) => setTimeout(resolve, 650));
+    setAttempts((a) => demoLog(a, state.route.id, intent));
+    setPending(null);
+  }, []);
   const last = !!run && run.index === run.guide.steps.length - 1;
   const api = useMemo(
     () => ({ start, stop, active: run?.guide.id ?? null, register }),
@@ -228,7 +205,7 @@ export function TourProvider({ children }: { children: ReactNode }) {
   );
 
   return (
-    <Context.Provider value={api}>
+    <TourContext.Provider value={api}>
       <View style={{ flex: 1 }}>
         {children}
         {shown && step ? (
@@ -238,6 +215,10 @@ export function TourProvider({ children }: { children: ReactNode }) {
             index={shown.index}
             hole={hole}
             ready={ready}
+            attempts={attempts}
+            pending={pending}
+            onPractice={practice}
+            met={met}
             exiting={exiting}
             level={learn.state.level}
             onLevel={(level) => void learn.update((st) => ({ ...st, level }))}
@@ -247,6 +228,6 @@ export function TourProvider({ children }: { children: ReactNode }) {
           />
         ) : null}
       </View>
-    </Context.Provider>
+    </TourContext.Provider>
   );
 }

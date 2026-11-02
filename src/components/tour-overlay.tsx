@@ -9,9 +9,12 @@ import Animated, {
   type CSSAnimationProperties,
 } from "react-native-reanimated";
 import Svg, { Path, Rect } from "react-native-svg";
-import { Button, Heading, IconButton, T } from "./primitives";
+import { Button, Heading, Icon, IconButton, T } from "./primitives";
+import { DemoStage } from "./tour-demo";
 import { LevelChips } from "./learn";
-import type { Guide } from "../content/guides";
+import type { Guide, Mark } from "../content/guides";
+import type { DemoAttempts } from "../content/demo";
+import type { RouteState } from "../features/session-state";
 import type { Level } from "../content/learn";
 import { useReducedMotion } from "../platform/reduced-motion";
 import { colors as c } from "../theme/colors";
@@ -153,12 +156,43 @@ function Progress({
   );
 }
 
+/** One mark from a route row, drawn the way it looks in the list. */
+function MarkGlyph({ mark }: { mark: Mark }) {
+  return (
+    <View
+      style={{
+        width: 36,
+        height: 36,
+        borderRadius: 18,
+        borderWidth: 1,
+        borderColor: c.hairline,
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      {mark === "try" ? (
+        <T weight={700}>+1</T>
+      ) : (
+        <Icon
+          name={mark === "send" ? "check" : mark === "flash" ? "flash" : "next"}
+          color={c.ink}
+          size={18}
+        />
+      )}
+    </View>
+  );
+}
+
 export function TourOverlay({
   overlayRef,
   guide,
   index,
   hole,
   ready,
+  attempts,
+  pending,
+  onPractice,
+  met,
   exiting,
   level,
   onLevel,
@@ -171,6 +205,11 @@ export function TourOverlay({
   index: number;
   hole: Box | null;
   ready: boolean;
+  attempts: DemoAttempts;
+  pending: { id: number; intent: string } | null;
+  onPractice: (state: RouteState, intent: string) => Promise<void>;
+  /** The step's practice action is done (or it has none). */
+  met: boolean;
   exiting: boolean;
   level: Level | null;
   onLevel: (level: Level) => void;
@@ -180,6 +219,10 @@ export function TourOverlay({
 }) {
   const reduced = useReducedMotion(),
     [size, setSize] = useState({ w: 0, h: 0 }),
+    [measuredCard, setMeasuredCard] = useState({ key: "", h: 0 }),
+    cardKey = `${guide.id}:${index}`,
+    // The card's own height, once laid out, decides which side of the spotlight it fits on.
+    cardH = measuredCard.key === cardKey ? measuredCard.h : 0,
     step = guide.steps[index],
     last = index === guide.steps.length - 1,
     box = hole
@@ -191,7 +234,14 @@ export function TourOverlay({
         }
       : null,
     cardWidth = Math.min(size.w - MARGIN * 2, 360),
-    below = box ? box.y + box.h / 2 < size.h / 2 : false,
+    spaceBelow = box ? size.h - (box.y + box.h) - GAP - MARGIN : 0,
+    spaceAbove = box ? box.y - GAP - MARGIN : 0,
+    below = box
+      ? cardH
+        ? spaceBelow >= cardH ||
+          (spaceAbove < cardH && spaceBelow >= spaceAbove)
+        : box.y + box.h / 2 < size.h / 2
+      : false,
     placement: ViewStyle = box
       ? {
           position: "absolute",
@@ -204,10 +254,21 @@ export function TourOverlay({
             ),
           ),
           ...(below
-            ? { top: box.y + box.h + GAP }
-            : { bottom: size.h - box.y + GAP }),
+            ? {
+                top: Math.min(
+                  box.y + box.h + GAP,
+                  cardH ? size.h - cardH - MARGIN : Infinity,
+                ),
+              }
+            : {
+                bottom: Math.min(
+                  size.h - box.y + GAP,
+                  cardH ? size.h - cardH - MARGIN : Infinity,
+                ),
+              }),
         }
       : { width: cardWidth, alignSelf: "center" },
+    interactive = !!step.expect && !!box,
     // The scrim fades in (200ms) and out faster (150ms). Reduced motion keeps the fade only.
     scrim: Motion = {
       animationName: exiting
@@ -248,8 +309,9 @@ export function TourOverlay({
           h: e.nativeEvent.layout.height,
         })
       }
-      // Swallow touches so the screen underneath cannot be used mid-guide.
-      onStartShouldSetResponder={() => true}
+      // Swallow touches so the practice screen cannot be used mid-guide, except the
+      // highlighted control on a step that asks the user to try it.
+      onStartShouldSetResponder={() => !interactive}
       accessibilityViewIsModal
       style={[
         StyleSheet.absoluteFill,
@@ -257,13 +319,41 @@ export function TourOverlay({
         scrim,
       ]}
     >
+      <View style={StyleSheet.absoluteFill}>
+        <DemoStage
+          scene={step.scene}
+          sheet={!!step.sheet}
+          attempts={attempts}
+          pending={pending}
+          onPractice={onPractice}
+        />
+      </View>
+      {interactive && box ? (
+        <>
+          {[
+            { left: 0, top: 0, width: size.w, height: box.y },
+            { left: 0, top: box.y + box.h, width: size.w, bottom: 0 },
+            { left: 0, top: box.y, width: box.x, height: box.h },
+            { left: box.x + box.w, top: box.y, right: 0, height: box.h },
+          ].map((area, i) => (
+            <View
+              key={i}
+              onStartShouldSetResponder={() => true}
+              style={[{ position: "absolute" }, area]}
+            />
+          ))}
+        </>
+      ) : null}
       {size.w > 0 ? (
         <Spotlight w={size.w} h={size.h} box={box} reduced={reduced} />
       ) : null}
       {ready ? (
         // Keyed by step so every step replays the entrance with its new position.
         <Animated.View
-          key={`${guide.id}:${index}`}
+          key={cardKey}
+          onLayout={(e) =>
+            setMeasuredCard({ key: cardKey, h: e.nativeEvent.layout.height })
+          }
           accessibilityLiveRegion="polite"
           style={[
             {
@@ -315,6 +405,37 @@ export function TourOverlay({
           <T size={16} style={{ lineHeight: 24 }} color={c["ink-muted"]}>
             {step.body}
           </T>
+          {step.legend ? (
+            <View style={{ gap: 10 }}>
+              {step.legend.map((item) => (
+                <View
+                  key={item.mark}
+                  style={{
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: 12,
+                  }}
+                >
+                  <MarkGlyph mark={item.mark} />
+                  <View style={{ flex: 1 }}>
+                    <T weight={700}>{item.title}</T>
+                    <T size={14} color={c["ink-muted"]}>
+                      {item.text}
+                    </T>
+                  </View>
+                </View>
+              ))}
+            </View>
+          ) : null}
+          {step.expect ? (
+            <View accessibilityLiveRegion="polite">
+              <T weight={600} color={met ? c.ink : c.accent}>
+                {met
+                  ? (step.done ?? "Done.")
+                  : "Tap the highlighted button to continue."}
+              </T>
+            </View>
+          ) : null}
           {step.choice === "level" ? (
             <View style={{ gap: 8 }}>
               <T size={13} weight={600}>
@@ -323,7 +444,9 @@ export function TourOverlay({
               <LevelChips level={level} onChange={onLevel} />
             </View>
           ) : null}
-          <Button onPress={onNext}>{last ? "Done" : "Next"}</Button>
+          <Button onPress={onNext} disabled={!met}>
+            {last ? "Done" : "Next"}
+          </Button>
         </Animated.View>
       ) : null}
     </Animated.View>
